@@ -1,0 +1,26 @@
+### Phân bổ thời gian:
+```
+┌─────────────────────────────────────────────────────────┐
+│ TUẦN 1 (Ngày 1-7): DATA FOUNDATION                     │
+│ ├─ Ngày 1-2: Setup môi trường + Parse 2 văn bản đầu    │
+│ ├─ Ngày 3-5: Parse 6 văn bản còn lại                   │
+│ └─ Ngày 6-7: Validation + Cấu trúc hoá data            │
+│                                                         │
+│ TUẦN 2 (Ngày 8-14): RAG PIPELINE CORE                  │
+│ ├─ Ngày 8-9: Chunking strategy + Embedding             │
+│ ├─ Ngày 10-11: Vector DB setup + Indexing              │
+│ ├─ Ngày 12-13: Retrieval pipeline                      │
+│ └─ Ngày 14: Testing retrieval quality                  │
+│                                                         │
+│ TUẦN 3 (Ngày 15-21): GENERATION & INTEGRATION          │
+│ ├─ Ngày 15-16: Gemini integration + Prompt engineering │
+│ ├─ Ngày 17-18: Verification layer                      │
+│ ├─ Ngày 19-20: End-to-end pipeline testing             │
+│ └─ Ngày 21: Semantic caching                           │
+│                                                         │
+│ TUẦN 4 (Ngày 22-30): POLISH & DEPLOYMENT               │
+│ ├─ Ngày 22-24: UI/UX (Simple Streamlit app)            │
+│ ├─ Ngày 25-26: Test cases + Evaluation                 │
+│ ├─ Ngày 27-28: Bug fixes + Optimization                │
+│ └─ Ngày 29-30: Documentation + Demo preparation        │
+└─────────────────────────────────────────────────────────┘

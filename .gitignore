@@ -1,0 +1,172 @@
+# ==========================================
+# TaxAI 2026 - Git Ignore Configuration
+# ==========================================
+
+# -------------------------------
+# ENVIRONMENT & SECRETS
+# -------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+credentials.json
+
+# -------------------------------
+# PYTHON
+# -------------------------------
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+taxai_env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# -------------------------------
+# DATA FILES
+# -------------------------------
+# Raw data (PDFs too large for Git)
+data/raw/*.pdf
+data/raw/*.docx
+data/raw/*.xlsx
+
+# Processed data
+data/parsed/**/*.json
+data/processed/
+data/cache/
+data/vector_db/
+data/knowledge_base/*.json
+
+# Keep directory structure (but ignore contents)
+!data/raw/.gitkeep
+!data/parsed/.gitkeep
+!data/processed/.gitkeep
+
+# -------------------------------
+# LOGS
+# -------------------------------
+logs/
+*.log
+log/
+audit/
+
+# Keep logs directory
+!logs/.gitkeep
+
+# -------------------------------
+# IDE / EDITOR
+# -------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# -------------------------------
+# OS
+# -------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# -------------------------------
+# TEMPORARY FILES
+# -------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# -------------------------------
+# MODEL & EMBEDDINGS
+# -------------------------------
+# Large model files (if any)
+*.pkl
+*.joblib
+*.h5
+*.pb
+
+# Embedding cache (regeneratable)
+embeddings/
+*.npy
+*.npz
+
+# -------------------------------
+# MISC
+# -------------------------------
+# Debug artifacts
+debug/
+*.debug
+
+# Backup files
+backup/
+*.backup
+
+# Testing artifacts
+.hypothesis/

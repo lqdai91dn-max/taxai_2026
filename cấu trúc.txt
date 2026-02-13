@@ -1,0 +1,69 @@
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 1: LEGAL DOCUMENT FOUNDATION                     │
+│ ├─ Parser chuẩn hóa                │
+│ ├─ Version Resolution Engine     │
+│ ├─ Effective Date Resolver        │
+│ └─ Consolidated Law Builder      │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 2: STRUCTURED KNOWLEDGE                           │
+│ ├─ Legal-aware chunking            │
+│ ├─ Metadata tagging: tax-specific │
+│ ├─ Numeric extraction            │
+│ ├─ Cross-reference resolution       │
+│ └─ Legal graph linking                  │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 3: INTELLIGENT RETRIEVAL                         │
+│ ├─ Query understanding               │
+│ ├─ Metadata filtering first      │
+│ ├─ Hybrid search: BM25 + Vector           │
+│ ├─ Cross-encoder re-ranker           │
+│ └─ Confidence scoring             │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 4: QUERY ROUTING & EXECUTION                     │
+│ ├─ Query classifier              │
+│ │   ├─ Calculation queries → Deterministic Engine      │
+│ │   ├─ Explanation queries → LLM Reasoning             │
+│ │   └─ Hybrid queries → Combined approach              │
+│ │                                                       │
+│ ├─ Deterministic Tax Engine   │
+│ │   ├─ Progressive tax calculator                      │
+│ │   ├─ Household business % engine                     │
+│ │   ├─ Deduction rule enforcement                      │
+│ │   └─ Threshold validator                             │
+│ │                                                       │
+│ └─ LLM Legal Reasoning                     │
+│     ├─ Structured reasoning template                   │
+│     ├─ Source-only answering policy                    │
+│     ├─ Hallucination guard                             │
+│     └─ Citation generator                              │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 5: VERIFICATION & QUALITY CONTROL                │
+│ ├─ Post-generation verification     │
+│ ├─ Citation validation                     │
+│ ├─ Fact consistency check           │
+│ └─ Confidence scoring               │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 6: CACHING & OPTIMIZATION                        │
+│ ├─ Semantic caching               │
+│ ├─ Query result cache                     │
+│ └─ Embedding cache                  │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ LAYER 7: AUDIT & CONTINUOUS LEARNING                    │
+│ ├─ Query log                                            │
+│ ├─ Retrieved clause log                                 │
+│ ├─ Confidence log                                       │
+│ ├─ User feedback system                                 │
+│ └─ Expert override mechanism                            │
+└─────────────────────────────────────────────────────────┘

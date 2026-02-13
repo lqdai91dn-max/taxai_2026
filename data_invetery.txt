@@ -1,0 +1,17 @@
+TỔNG CỘNG: 10 văn bản pháp luật
+├─ Luật: 2 văn bản
+│  ├─ 109-2025-QH15 (Luật Thuế TNCN 2006 - sửa đổi)
+│  └─ 149-2025-QH15 (Ngưỡng doanh thu GTGT)
+│
+├─ Nghị quyết: 2 văn bản  
+│  ├─ 110/2025/UBTVQH15 (GTGC - Giảm trừ gia cảnh)
+│  └─ 198/2025/QH15 (Khai tử thuế khoán, chính sách ưu đãi)
+│
+├─ Nghị định: 4 văn bản
+│  ├─ 20/2026/NĐ-CP (Hướng dẫn NQ 198 - Ưu đãi thuế)
+│  ├─ 117/2025/NĐ-CP (Quản lý thuế TMĐT - Sàn khai thay)
+│  ├─ 373/2025/NĐ-CP (Quyết toán thuế TNCN)
+│  └─ 310/2025/NĐ-CP (Xử phạt vi phạm - Chế tài)
+│
+└─ Thông tư: 1 văn bản
+   └─ 152/2025/TT-BTC (Chế độ kế toán hộ KD)

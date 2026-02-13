@@ -1,0 +1,78 @@
+taxai_2026/
+├── data/
+│   ├── raw/                          # PDF gốc
+│   │   ├── 109_2025_QH15.pdf
+│   │   ├── 110_2025_UBTVQH15.pdf
+│   │   ├── 149_2025_QH15.pdf
+│   │   ├── 198_2025_QH15.pdf
+│   │   ├── 20_2026_NDCP.pdf
+│   │   ├── 117_2025_NDCP.pdf
+│   │   ├── 373_2025_NDCP.pdf
+│   │   ├── 310_2025_NDCP.pdf
+│   │   └── 152_2025_TTBTC.pdf
+│   │
+│   ├── parsed/                        # JSON sau parse
+│   │   └── documents/
+│   │
+│   ├── processed/                     # Sau enrichment
+│   │   ├── chunks/
+│   │   ├── metadata/
+│   │   └── numeric_data/
+│   │
+│   └── knowledge_base/                # Final knowledge graph
+│       ├── versions.json
+│       ├── consolidated.json
+│       └── graph.json
+│
+├── src/
+│   ├── parsing/
+│   │   ├── __init__.py
+│   │   ├── pdf_parser.py             # LAYER 1: Core parser
+│   │   ├── structure_detector.py     # Detect Điều/Khoản/Điểm
+│   │   ├── table_extractor.py        # Extract tables
+│   │   ├── version_resolver.py       # ⭐ Version Resolution Engine
+│   │   ├── effective_date_resolver.py # ⭐ Effective Date logic
+│   │   └── validator.py              # Validate parsed data
+│   │
+│   ├── processing/
+│   │   ├── __init__.py
+│   │   ├── metadata_tagger.py        # ⭐ Tax-specific metadata
+│   │   ├── numeric_extractor.py      # ⭐ Extract numbers/rates
+│   │   ├── chunker.py                # Legal-aware chunking
+│   │   ├── cross_ref_resolver.py     # Resolve references
+│   │   └── graph_builder.py          # Build knowledge graph
+│   │
+│   ├── retrieval/
+│   │   ├── __init__.py
+│   │   ├── hybrid_retriever.py
+│   │   └── reranker.py
+│   │
+│   ├── generation/
+│   │   ├── __init__.py
+│   │   ├── query_router.py           # ⭐ Route to tax engine vs LLM
+│   │   ├── tax_engine.py             # ⭐ Deterministic calculations
+│   │   ├── gemini_client.py
+│   │   └── verifier.py
+│   │
+│   └── utils/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── helpers.py
+│       └── logger.py
+│
+├── tests/
+│   ├── test_parser.py
+│   ├── test_version_resolver.py
+│   └── test_numeric_extractor.py
+│
+├── notebooks/
+│   ├── 01_parsing_exploration.ipynb
+│   └── 02_data_validation.ipynb
+│
+├── logs/
+│   └── (auto-generated)
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
