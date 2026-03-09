@@ -1,0 +1,44 @@
+{
+  "total_documents": 2,
+  "total_chunks": 197,
+  "documents": [
+    {
+      "document_id": "109_2025_QH15",
+      "chunks": 139,
+      "stats": {
+        "total": 139,
+        "by_type": {
+          "dieu": 29,
+          "khoan": 110,
+          "diem": 0
+        },
+        "size": {
+          "min_chars": 20,
+          "max_chars": 3975,
+          "avg_chars": 386.7913669064748,
+          "avg_tokens": 96.35971223021583
+        },
+        "with_references": 41
+      }
+    },
+    {
+      "document_id": "117_2025_NDCP",
+      "chunks": 58,
+      "stats": {
+        "total": 58,
+        "by_type": {
+          "dieu": 13,
+          "khoan": 45,
+          "diem": 0
+        },
+        "size": {
+          "min_chars": 56,
+          "max_chars": 14680,
+          "avg_chars": 959.051724137931,
+          "avg_tokens": 239.43103448275863
+        },
+        "with_references": 6
+      }
+    }
+  ]
+}

@@ -1,26 +1,211 @@
-### Phân bổ thời gian:
-```
-┌─────────────────────────────────────────────────────────┐
-│ TUẦN 1 (Ngày 1-7): DATA FOUNDATION                     │
-│ ├─ Ngày 1-2: Setup môi trường + Parse 2 văn bản đầu    │
-│ ├─ Ngày 3-5: Parse 6 văn bản còn lại                   │
-│ └─ Ngày 6-7: Validation + Cấu trúc hoá data            │
-│                                                         │
-│ TUẦN 2 (Ngày 8-14): RAG PIPELINE CORE                  │
-│ ├─ Ngày 8-9: Chunking strategy + Embedding             │
-│ ├─ Ngày 10-11: Vector DB setup + Indexing              │
-│ ├─ Ngày 12-13: Retrieval pipeline                      │
-│ └─ Ngày 14: Testing retrieval quality                  │
-│                                                         │
-│ TUẦN 3 (Ngày 15-21): GENERATION & INTEGRATION          │
-│ ├─ Ngày 15-16: Gemini integration + Prompt engineering │
-│ ├─ Ngày 17-18: Verification layer                      │
-│ ├─ Ngày 19-20: End-to-end pipeline testing             │
-│ └─ Ngày 21: Semantic caching                           │
-│                                                         │
-│ TUẦN 4 (Ngày 22-30): POLISH & DEPLOYMENT               │
-│ ├─ Ngày 22-24: UI/UX (Simple Streamlit app)            │
-│ ├─ Ngày 25-26: Test cases + Evaluation                 │
-│ ├─ Ngày 27-28: Bug fixes + Optimization                │
-│ └─ Ngày 29-30: Documentation + Demo preparation        │
-└─────────────────────────────────────────────────────────┘
+ KẾ HOẠCH THỜI GIAN BIỂU DỰ ÁN - LEGAL DOCUMENT PARSER🎯 TỔNG QUANDự án: TaxAI 2026 - Enterprise Legal Document Parser & RAG System
+Mục tiêu: Xây dựng hệ thống parse, index và truy vấn văn bản pháp luật Việt Nam
+Thời gian dự kiến: 4-6 tuần
+Trạng thái hiện tại: Tuần 1 - Hoàn thành 70% Parser Core📊 CÁC GIAI ĐOẠN CHÍNH🔵 GIAI ĐOẠN 1: PARSING ENGINE (Tuần 1-2)Tuần 1: Core Parser ✅ 70% HOÀN THÀNHĐã hoàn thành:
+
+✅ State Machine Architecture (6 modules)
+✅ Hierarchy parsing (Phần → Điều → Khoản → Điểm)
+✅ Lead-in & Trailing text detection
+✅ Reference detection (internal/external/self)
+✅ Breadcrumb generation
+✅ JSON output chuẩn research
+Còn lại (2-3 ngày):
+
+ Day 1-2: Bug Fixes & Testing
+
+ Fix title extraction (1 giờ)
+ Fix OCR mistakes (2 giờ)
+ Fix external references regex (1 giờ)
+ Test với 109_2025_QH15.pdf mới (30 phút)
+ Test với 117_2025_NDCP.pdf (30 phút)
+ Validate JSON output (1 giờ)
+
+
+
+ Day 3: Quality Assurance
+
+ Parse 5-10 văn bản khác nhau (3 giờ)
+ Kiểm tra accuracy (2 giờ)
+ Fix edge cases phát hiện (2 giờ)
+ Tạo test suite tự động (1 giờ)
+
+
+Deliverable Tuần 1:
+
+✅ Parser engine hoàn chỉnh
+✅ Accuracy ≥ 95%
+✅ 10+ văn bản test thành công
+Tuần 2: Parser Enhancement
+ Day 1-2: Advanced Features
+
+ Table extraction nâng cao (Điều 9 tax brackets) (4 giờ)
+ Formula parsing (1 + 2 + 3... patterns) (3 giờ)
+ Nested structure handling (Tiết con) (2 giờ)
+ Performance optimization (2 giờ)
+
+
+
+ Day 3-4: Batch Processing
+
+ Batch parser cho nhiều files (3 giờ)
+ Progress tracking & logging (2 giờ)
+ Error recovery & retry logic (2 giờ)
+ Output organization (folders by type) (1 giờ)
+
+
+
+ Day 5: Documentation
+
+ API documentation (2 giờ)
+ User guide (2 giờ)
+ Code comments cleanup (1 giờ)
+
+
+Deliverable Tuần 2:
+
+✅ Parser với advanced features
+✅ Batch processing 100+ documents
+✅ Complete documentation
+🟢 GIAI ĐOẠN 2: CHUNKING & EMBEDDING (Tuần 3)Tuần 3: Vector Database Setup
+ Day 1: Chunking Strategy
+
+ Design chunking algorithm (2 giờ)
+ Implement hierarchical chunking (3 giờ)
+
+Chunk by Điều
+Chunk by Khoản
+Chunk by Điểm
+
+
+ Add breadcrumb to chunks (1 giờ)
+ Test chunk quality (2 giờ)
+
+
+
+ Day 2-3: Embedding
+
+ Setup embedding model (Vietnamese) (2 giờ)
+ Test embedding models:
+
+ OpenAI text-embedding-3-small
+ OpenAI text-embedding-3-large
+ Vietnamese-specific models
+
+
+ Batch embed all chunks (3 giờ)
+ Quality testing (2 giờ)
+
+
+
+ Day 4-5: Vector Database
+
+ Setup Pinecone/Weaviate/Qdrant (2 giờ)
+ Design index structure (1 giờ)
+ Upload all embeddings (2 giờ)
+ Test search quality (3 giờ)
+ Optimize search parameters (2 giờ)
+
+
+Deliverable Tuần 3:
+
+✅ 100+ documents chunked
+✅ Vector database với 10,000+ chunks
+✅ Search accuracy ≥ 90%
+🟡 GIAI ĐOẠN 3: RAG SYSTEM (Tuần 4)Tuần 4: RAG Implementation
+ Day 1-2: Retrieval System
+
+ Implement hybrid search (vector + keyword) (3 giờ)
+ Add filtering (by document type, date) (2 giờ)
+ Implement re-ranking (2 giờ)
+ Test retrieval accuracy (3 giờ)
+
+
+
+ Day 3-4: LLM Integration
+
+ Setup LLM (Claude/GPT-4) (1 giờ)
+ Design prompt templates (2 giờ)
+ Implement context assembly (2 giờ)
+ Add citation generation (2 giờ)
+ Test answer quality (3 giờ)
+
+
+
+ Day 5: System Integration
+
+ Connect all components (2 giờ)
+ Add error handling (2 giờ)
+ Performance optimization (2 giờ)
+ End-to-end testing (2 giờ)
+
+
+Deliverable Tuần 4:
+
+✅ Full RAG pipeline working
+✅ Answer accuracy ≥ 85%
+✅ Response time < 5s
+🔴 GIAI ĐOẠN 4: CHATBOT & UI (Tuần 5)Tuần 5: User Interface
+ Day 1-2: Backend API
+
+ FastAPI setup (1 giờ)
+ Query endpoint (2 giờ)
+ Conversation history (2 giờ)
+ Rate limiting & auth (2 giờ)
+ API testing (2 giờ)
+
+
+
+ Day 3-4: Frontend
+
+ Chat interface (Streamlit/React) (4 giờ)
+ Display citations (2 giờ)
+ Show source documents (2 giờ)
+ Add feedback mechanism (1 giờ)
+
+
+
+ Day 5: Polish & Testing
+
+ UI/UX improvements (3 giờ)
+ User testing (3 giờ)
+ Bug fixes (2 giờ)
+
+
+Deliverable Tuần 5:
+
+✅ Working chatbot UI
+✅ Complete user flow
+✅ Beta version ready
+🟣 GIAI ĐOẠN 5: DEPLOYMENT & MONITORING (Tuần 6)Tuần 6: Production Ready
+ Day 1-2: Deployment
+
+ Docker setup (2 giờ)
+ Cloud deployment (AWS/GCP) (3 giờ)
+ CI/CD pipeline (2 giờ)
+ Load testing (2 giờ)
+
+
+
+ Day 3-4: Monitoring
+
+ Setup logging (1 giờ)
+ Add metrics (accuracy, latency) (2 giờ)
+ Error tracking (Sentry) (1 giờ)
+ Dashboard (Grafana) (2 giờ)
+ Alerts setup (1 giờ)
+
+
+
+ Day 5: Documentation & Handoff
+
+ System documentation (2 giờ)
+ Deployment guide (2 giờ)
+ Maintenance guide (2 giờ)
+ Team training (2 giờ)
+
+
+Deliverable Tuần 6:
+
+✅ Production system deployed
+✅ Monitoring dashboard
+✅ Complete documentation

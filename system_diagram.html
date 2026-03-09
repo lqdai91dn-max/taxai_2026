@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaxAI 2026 — System Architecture & State Machine</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0a0e1a;
+    --bg2: #0f1529;
+    --bg3: #151c35;
+    --border: #1e2d5a;
+    --blue: #3b82f6;
+    --cyan: #06b6d4;
+    --green: #10b981;
+    --yellow: #f59e0b;
+    --red: #ef4444;
+    --purple: #8b5cf6;
+    --orange: #f97316;
+    --text: #e2e8f0;
+    --text2: #94a3b8;
+    --text3: #64748b;
+    --done: #10b981;
+    --wip: #f59e0b;
+    --todo: #475569;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ---- HEADER ---- */
+  header {
+    padding: 32px 48px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg2);
+  }
+
+  .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .logo span { color: var(--cyan); }
+
+  .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text2);
+  }
+
+  .badge {
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-green { background: rgba(16,185,129,.15); color: var(--green); border: 1px solid rgba(16,185,129,.3); }
+  .badge-yellow { background: rgba(245,158,11,.15); color: var(--yellow); border: 1px solid rgba(245,158,11,.3); }
+  .badge-gray { background: rgba(71,85,105,.2); color: var(--text3); border: 1px solid rgba(71,85,105,.3); }
+
+  /* ---- MAIN LAYOUT ---- */
+  main {
+    padding: 32px 48px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  section { margin-bottom: 56px; }
+
+  .section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ---- REVIEW CARDS ---- */
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .review-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .review-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .card-green::before { background: var(--green); }
+  .card-yellow::before { background: var(--yellow); }
+  .card-red::before { background: var(--red); }
+  .card-blue::before { background: var(--blue); }
+  .card-purple::before { background: var(--purple); }
+  .card-cyan::before { background: var(--cyan); }
+
+  .review-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .review-card ul {
+    list-style: none;
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: var(--text2);
+  }
+
+  .review-card ul li::before {
+    margin-right: 6px;
+  }
+
+  .pro li::before { content: '✓'; color: var(--green); }
+  .warn li::before { content: '⚠'; color: var(--yellow); }
+  .fix li::before { content: '→'; color: var(--red); }
+  .note li::before { content: '·'; color: var(--text3); }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: rgba(59,130,246,.1);
+    color: var(--cyan);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* ---- STATE MACHINE ---- */
+  .sm-container {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    overflow-x: auto;
+  }
+
+  .sm-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 900px;
+  }
+
+  /* Pipeline phases */
+  .pipeline {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 48px;
+  }
+
+  .phase-block {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .phase-block + .phase-block {
+    margin-left: -1px;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .phase-block:first-child { border-radius: 8px 0 0 8px; }
+
+  .phase-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: var(--text3);
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .phase-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text3);
+  }
+
+  .phase-name {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .phase-sub {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .phase-items {
+    margin-top: 12px;
+    font-size: 11.5px;
+    color: var(--text2);
+    line-height: 1.8;
+  }
+
+  .phase-items li { list-style: none; }
+  .phase-items li::before { content: '▸ '; color: var(--text3); }
+
+  /* State machine diagram */
+  .sm-diagram {
+    position: relative;
+  }
+
+  .sm-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    margin-bottom: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  /* Parser state machine SVG wrapper */
+  .svg-wrap {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    overflow-x: auto;
+  }
+
+  svg text { font-family: 'JetBrains Mono', monospace; }
+
+  /* ---- ISSUES TABLE ---- */
+  .issues-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+
+  .issues-table th {
+    text-align: left;
+    padding: 10px 16px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    color: var(--text3);
+    text-transform: uppercase;
+  }
+
+  .issues-table td {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.6;
+    color: var(--text2);
+  }
+
+  .issues-table tr:hover td { background: rgba(30,45,90,.3); }
+
+  .sev-high { color: var(--red); font-weight: 700; }
+  .sev-med { color: var(--yellow); font-weight: 700; }
+  .sev-low { color: var(--green); font-weight: 700; }
+
+  /* ---- ROADMAP ---- */
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+
+  .week-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .week-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text3);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  .week-name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .week-tasks {
+    font-size: 11px;
+    color: var(--text2);
+    line-height: 1.9;
+    list-style: none;
+  }
+
+  .week-tasks li::before { content: '→ '; color: var(--text3); }
+
+  .week-done { border-color: rgba(16,185,129,.3); }
+  .week-done .week-label { color: var(--green); }
+  .week-current { border-color: rgba(245,158,11,.4); box-shadow: 0 0 0 1px rgba(245,158,11,.15); }
+  .week-current .week-label { color: var(--yellow); }
+
+  .progress-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 0 0 8px 8px;
+    background: var(--border);
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease;
+  }
+
+  /* ---- LEGEND ---- */
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: var(--text2);
+    margin-bottom: 16px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ---- TECH STACK ---- */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .tech-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+
+  .tech-card h4 {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px 0;
+    color: var(--text2);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Tax<span>AI</span> 2026 <span style="color:var(--text3);font-size:14px;">— System Architecture Review</span></div>
+  <div class="meta">
+    <span>Cập nhật: 2026-03-01</span>
+    <span class="badge badge-yellow">60% hoàn thành</span>
+    <span class="badge badge-green">Phase 1–2 ✓</span>
+    <span class="badge badge-gray">Phase 3–5 pending</span>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 1. REVIEW ===== -->
+<section>
+  <div class="section-title">01 — Nhận xét & Đánh giá</div>
+
+  <div class="review-grid">
+    <div class="review-card card-green">
+      <h3 style="color:var(--green)">✦ Điểm mạnh</h3>
+      <ul class="pro">
+        <li>State machine architecture rất chuyên nghiệp cho legal text</li>
+        <li>Hierarchical tree (Phần→Chương→Điều→Khoản→Điểm) đúng chuẩn</li>
+        <li><code>breadcrumb</code> tự động — RAG-ready từ đầu</li>
+        <li>Migration pdfplumber đúng hướng, text quality 99.9%</li>
+        <li>Chunking strategy 3 levels (Điều/Khoản/Điểm) hợp lý</li>
+        <li>Reference detection (internal/external/self) rất tốt</li>
+        <li>Code structure tách module rõ ràng, dễ maintain</li>
+      </ul>
+    </div>
+
+    <div class="review-card card-yellow">
+      <h3 style="color:var(--yellow)">⚠ Cần chú ý</h3>
+      <ul class="warn">
+        <li><code>document_type="Luật"</code> hardcode trong <code>parse_text()</code></li>
+        <li>Token estimate = chars/4 — sai cho tiếng Việt (nên /3)</li>
+        <li>Chưa có <code>Version Resolution Engine</code> (văn bản sửa đổi)</li>
+        <li>Table extraction chỉ là framework, chưa fine-tune</li>
+        <li>Chưa handle Nghị định số doanh thu hộ kinh doanh (Điều 9 tax brackets)</li>
+        <li>9 văn bản nhưng chỉ test 2 — edge cases chưa rõ</li>
+      </ul>
+    </div>
+
+    <div class="review-card card-red">
+      <h3 style="color:var(--red)">✕ Bug cần fix ngay</h3>
+      <ul class="fix">
+        <li><code>parser_core.py</code>: hardcode <code>"Luật"</code> thay vì <code>self.document_type</code></li>
+        <li><code>_handle_phan/_handle_chuong</code>: breadcrumb dùng <code>f"Luật {self.document_number}"</code> → sai với Nghị định</li>
+        <li>Khoản không có Điều → silently skip, không log warning</li>
+        <li>Điểm không có Khoản → silently skip, không log warning</li>
+        <li><code>chunk_type='dieu'</code>: children_text được thêm 2 lần (line 115 + 123)</li>
+      </ul>
+    </div>
+
+    <div class="review-card card-blue">
+      <h3 style="color:var(--blue)">◈ Kỹ thuật đang dùng</h3>
+      <ul class="note">
+        <li>PDF: pdfplumber (digital) + Tesseract (scanned)</li>
+        <li>Parser: Stack-based state machine</li>
+        <li>Chunking: Hierarchical 3-level với metadata</li>
+        <li>References: Regex-based detection</li>
+        <li>Output: JSON tree structure</li>
+        <li>Planned: ChromaDB + Vietnamese SBERT</li>
+        <li>Planned: RAG + Claude API</li>
+      </ul>
+    </div>
+
+    <div class="review-card card-purple">
+      <h3 style="color:var(--purple)">◆ Khuyến nghị nâng cấp</h3>
+      <ul class="note">
+        <li>Thêm <code>Hybrid Search</code> = BM25 + Vector (quan trọng cho luật)</li>
+        <li>Metadata filter trước khi search (doc_type, effective_date)</li>
+        <li>Deterministic engine riêng cho tính thuế (không dùng LLM)</li>
+        <li>Semantic cache để tiết kiệm API cost (Gemini API)</li>
+        <li>Confidence score cho mỗi câu trả lời</li>
+        <li>Citation generator tự động trích dẫn điều khoản</li>
+      </ul>
+    </div>
+
+    <div class="review-card card-cyan">
+      <h3 style="color:var(--cyan)">◉ Đánh giá tổng thể</h3>
+      <ul class="note">
+        <li>Kiến trúc: <strong style="color:var(--green)">8.5/10</strong> — Production-grade</li>
+        <li>Code quality: <strong style="color:var(--green)">8/10</strong> — Clean, modular</li>
+        <li>RAG-readiness: <strong style="color:var(--yellow)">7/10</strong> — Cần embedding + hybrid search</li>
+        <li>Phạm vi đề tài: <strong style="color:var(--green)">9/10</strong> — Đúng thực tế 2026</li>
+        <li>Độ phức tạp: <strong style="color:var(--yellow)">Vừa phải</strong> — Phù hợp tốt nghiệp</li>
+        <li>Khả năng hoàn thành 6 tuần: <strong style="color:var(--green)">Cao</strong> ✓</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. STATE MACHINE ===== -->
+<section>
+  <div class="section-title">02 — State Machine: PDF Parser (Full Flow)</div>
+
+  <div class="svg-wrap">
+    <svg width="1400" height="700" viewBox="0 0 1400 700" style="display:block;margin:0 auto;">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+        </marker>
+        <marker id="arr-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+        </marker>
+        <marker id="arr-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+        </marker>
+        <marker id="arr-yellow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#f59e0b"/>
+        </marker>
+        <marker id="arr-cyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#06b6d4"/>
+        </marker>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Background grid -->
+      <rect width="1400" height="700" fill="#0f1529" rx="4"/>
+
+      <!-- === ROW 1: Input → SmartPDFHelper === -->
+      <!-- START -->
+      <rect x="20" y="30" width="80" height="40" rx="20" fill="#1e2d5a" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="60" y="54" text-anchor="middle" fill="#94a3b8" font-size="11">START</text>
+
+      <line x1="100" y1="50" x2="140" y2="50" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- PDF Input -->
+      <rect x="140" y="22" width="130" height="56" rx="6" fill="#151c35" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="205" y="44" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="700">PDF Input</text>
+      <text x="205" y="60" text-anchor="middle" fill="#64748b" font-size="10">109.pdf / 117.pdf</text>
+      <text x="205" y="72" text-anchor="middle" fill="#64748b" font-size="10">9 documents total</text>
+
+      <line x1="270" y1="50" x2="310" y2="50" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- detect_pdf_type -->
+      <rect x="310" y="22" width="140" height="56" rx="6" fill="#151c35" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="380" y="44" text-anchor="middle" fill="#06b6d4" font-size="12" font-weight="700">detect_pdf_type()</text>
+      <text x="380" y="60" text-anchor="middle" fill="#64748b" font-size="10">Check text density</text>
+      <text x="380" y="72" text-anchor="middle" fill="#64748b" font-size="10">first 3 pages</text>
+
+      <!-- Decision diamond -->
+      <polygon points="510,50 550,22 590,50 550,78" fill="#151c35" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="550" y="46" text-anchor="middle" fill="#f59e0b" font-size="10">pdf_type</text>
+      <text x="550" y="60" text-anchor="middle" fill="#f59e0b" font-size="10">?</text>
+      <line x1="450" y1="50" x2="510" y2="50" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- digital branch -->
+      <line x1="590" y1="50" x2="650" y2="50" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+      <text x="620" y="44" text-anchor="middle" fill="#10b981" font-size="9">digital</text>
+      <rect x="650" y="22" width="130" height="56" rx="6" fill="#151c35" stroke="#10b981" stroke-width="1.5"/>
+      <text x="715" y="44" text-anchor="middle" fill="#10b981" font-size="11" font-weight="700">pdfplumber</text>
+      <text x="715" y="60" text-anchor="middle" fill="#64748b" font-size="10">extract_text()</text>
+      <text x="715" y="72" text-anchor="middle" fill="#64748b" font-size="10">+ extract_tables()</text>
+
+      <!-- scanned_pure branch -->
+      <line x1="550" y1="78" x2="550" y2="130" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arr-red)"/>
+      <text x="560" y="112" text-anchor="start" fill="#ef4444" font-size="9">scanned_pure</text>
+      <rect x="490" y="130" width="120" height="44" rx="6" fill="#151c35" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="550" y="148" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">Tesseract OCR</text>
+      <text x="550" y="164" text-anchor="middle" fill="#64748b" font-size="10">pytesseract</text>
+
+      <!-- scanned_ocr -->
+      <line x1="550" y1="22" x2="550" y2="0" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- merge to clean_legal_text -->
+      <line x1="780" y1="50" x2="850" y2="50" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+      <line x1="550" y1="174" x2="550" y2="200" stroke="#ef4444" stroke-width="1.5"/>
+      <line x1="550" y1="200" x2="870" y2="200" stroke="#475569" stroke-width="1.5"/>
+      <line x1="870" y1="200" x2="870" y2="76" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- clean_legal_text -->
+      <rect x="850" y="22" width="140" height="56" rx="6" fill="#151c35" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="920" y="42" text-anchor="middle" fill="#8b5cf6" font-size="12" font-weight="700">clean_legal_text()</text>
+      <text x="920" y="56" text-anchor="middle" fill="#64748b" font-size="10">Remove pg numbers</text>
+      <text x="920" y="68" text-anchor="middle" fill="#64748b" font-size="10">Normalize spacing</text>
+
+      <!-- === ROW 2: State Machine Parser === -->
+      <line x1="990" y1="50" x2="1040" y2="50" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="1040" y="22" width="160" height="56" rx="6" fill="#151c35" stroke="#f97316" stroke-width="2"/>
+      <text x="1120" y="40" text-anchor="middle" fill="#f97316" font-size="12" font-weight="700">StateMachineParser</text>
+      <text x="1120" y="56" text-anchor="middle" fill="#64748b" font-size="10">.parse_text(text)</text>
+      <text x="1120" y="68" text-anchor="middle" fill="#94a3b8" font-size="10">↓ main entry point</text>
+
+      <!-- === ROW 3: State machine internals === -->
+      <!-- Line loop indicator -->
+      <line x1="1040" y1="78" x2="1040" y2="250" stroke="#f97316" stroke-width="1.5"/>
+      <line x1="1040" y1="250" x2="200" y2="250" stroke="#475569" stroke-width="1.5"/>
+      <text x="620" y="244" text-anchor="middle" fill="#64748b" font-size="10">for line in lines:</text>
+
+      <!-- detect_line_type -->
+      <rect x="160" y="270" width="150" height="56" rx="6" fill="#151c35" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="235" y="290" text-anchor="middle" fill="#06b6d4" font-size="12" font-weight="700">detect_line_type()</text>
+      <text x="235" y="306" text-anchor="middle" fill="#64748b" font-size="10">IndentationChecker</text>
+      <text x="235" y="318" text-anchor="middle" fill="#64748b" font-size="10">Regex pattern match</text>
+      <line x1="200" y1="250" x2="200" y2="270" stroke="#475569" stroke-width="1.5"/>
+      <line x1="200" y1="270" x2="235" y2="270" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- Decision: line_type -->
+      <polygon points="370,298 430,270 490,298 430,326" fill="#151c35" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="430" y="294" text-anchor="middle" fill="#f59e0b" font-size="10">line_type</text>
+      <text x="430" y="308" text-anchor="middle" fill="#f59e0b" font-size="10">?</text>
+      <line x1="310" y1="298" x2="370" y2="298" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- Branches -->
+      <!-- phan -->
+      <line x1="430" y1="270" x2="430" y2="240" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arr)"/>
+      <rect x="390" y="210" width="80" height="30" rx="4" fill="#151c35" stroke="#94a3b8" stroke-width="1"/>
+      <text x="430" y="228" text-anchor="middle" fill="#94a3b8" font-size="10">phan/chuong</text>
+      <text x="430" y="200" text-anchor="middle" fill="#64748b" font-size="9">→ root_nodes</text>
+
+      <!-- dieu -->
+      <line x1="490" y1="298" x2="560" y2="298" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-cyan)"/>
+      <text x="525" y="292" text-anchor="middle" fill="#64748b" font-size="9">dieu</text>
+      <rect x="560" y="270" width="110" height="56" rx="4" fill="#151c35" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="615" y="290" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="700">_handle_dieu()</text>
+      <text x="615" y="306" text-anchor="middle" fill="#64748b" font-size="10">NodeBuilder</text>
+      <text x="615" y="318" text-anchor="middle" fill="#64748b" font-size="10">.create_node()</text>
+
+      <!-- khoan -->
+      <line x1="430" y1="326" x2="430" y2="400" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+      <text x="440" y="366" fill="#64748b" font-size="9">khoan</text>
+      <rect x="370" y="400" width="110" height="56" rx="4" fill="#151c35" stroke="#10b981" stroke-width="1.5"/>
+      <text x="425" y="420" text-anchor="middle" fill="#10b981" font-size="11" font-weight="700">_handle_khoan()</text>
+      <text x="425" y="436" text-anchor="middle" fill="#64748b" font-size="10">check current_dieu</text>
+      <text x="425" y="448" text-anchor="middle" fill="#ef4444" font-size="10">⚠ skip if no Điều</text>
+
+      <!-- diem -->
+      <line x1="490" y1="326" x2="560" y2="400" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="530" y="370" fill="#64748b" font-size="9">diem</text>
+      <rect x="560" y="400" width="110" height="56" rx="4" fill="#151c35" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="615" y="420" text-anchor="middle" fill="#8b5cf6" font-size="11" font-weight="700">_handle_diem()</text>
+      <text x="615" y="436" text-anchor="middle" fill="#64748b" font-size="10">check current_khoan</text>
+      <text x="615" y="448" text-anchor="middle" fill="#ef4444" font-size="10">⚠ skip if no Khoản</text>
+
+      <!-- text -->
+      <line x1="370" y1="298" x2="260" y2="400" stroke="#f97316" stroke-width="1.5" marker-end="url(#arr)"/>
+      <text x="290" y="360" fill="#64748b" font-size="9">text</text>
+      <rect x="160" y="400" width="140" height="70" rx="4" fill="#151c35" stroke="#f97316" stroke-width="1.5"/>
+      <text x="230" y="420" text-anchor="middle" fill="#f97316" font-size="11" font-weight="700">_handle_text()</text>
+
+      <!-- classify_text_block decision -->
+      <polygon points="230,440 265,425 300,440 265,455" fill="#151c35" stroke="#f59e0b" stroke-width="1"/>
+      <text x="265" y="443" text-anchor="middle" fill="#f59e0b" font-size="9">classify</text>
+      <line x1="230" y1="428" x2="230" y2="440" stroke="#f59e0b" stroke-width="1"/>
+
+      <!-- lead_in -->
+      <line x1="265" y1="455" x2="265" y2="500" stroke="#475569" stroke-width="1" marker-end="url(#arr)"/>
+      <rect x="210" y="500" width="70" height="26" rx="3" fill="#151c35" stroke="#06b6d4" stroke-width="1"/>
+      <text x="245" y="516" text-anchor="middle" fill="#06b6d4" font-size="10">lead_in</text>
+
+      <!-- trailing -->
+      <line x1="300" y1="440" x2="360" y2="440" stroke="#475569" stroke-width="1" marker-end="url(#arr)"/>
+      <rect x="360" y="427" width="70" height="26" rx="3" fill="#151c35" stroke="#f97316" stroke-width="1"/>
+      <text x="395" y="443" text-anchor="middle" fill="#f97316" font-size="10">trailing</text>
+
+      <!-- continuation -->
+      <line x1="265" y1="425" x2="265" y2="380" stroke="#475569" stroke-width="1" marker-end="url(#arr)"/>
+      <rect x="210" y="357" width="80" height="26" rx="3" fill="#151c35" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="250" y="373" text-anchor="middle" fill="#8b5cf6" font-size="10">continuation</text>
+
+      <!-- === ROW 4: NodeBuilder → stack → LegalDocument === -->
+      <!-- Stack state -->
+      <rect x="750" y="270" width="200" height="110" rx="6" fill="#151c35" stroke="#f97316" stroke-width="1.5"/>
+      <text x="850" y="290" text-anchor="middle" fill="#f97316" font-size="12" font-weight="700">ParserState (Stack)</text>
+      <text x="850" y="308" text-anchor="middle" fill="#64748b" font-size="10">current_phan / chuong</text>
+      <text x="850" y="324" text-anchor="middle" fill="#64748b" font-size="10">current_dieu / khoan</text>
+      <text x="850" y="340" text-anchor="middle" fill="#64748b" font-size="10">current_diem / tiet</text>
+      <text x="850" y="356" text-anchor="middle" fill="#10b981" font-size="10">→ .push(node, level)</text>
+      <text x="850" y="372" text-anchor="middle" fill="#10b981" font-size="10">→ .get_current_node()</text>
+
+      <line x1="670" y1="298" x2="750" y2="298" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="535" y1="428" x2="760" y2="350" stroke="#10b981" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="670" y1="428" x2="760" y2="380" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- ReferenceDetector -->
+      <rect x="1000" y="270" width="160" height="80" rx="6" fill="#151c35" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="1080" y="292" text-anchor="middle" fill="#06b6d4" font-size="12" font-weight="700">ReferenceDetector</text>
+      <text x="1080" y="308" text-anchor="middle" fill="#64748b" font-size="10">internal: Khoản X Điều Y</text>
+      <text x="1080" y="322" text-anchor="middle" fill="#64748b" font-size="10">external: Luật Chứng khoán</text>
+      <text x="1080" y="336" text-anchor="middle" fill="#64748b" font-size="10">self: Điều này, khoản này</text>
+      <line x1="950" y1="298" x2="1000" y2="298" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr-cyan)"/>
+
+      <!-- Output -->
+      <rect x="1000" y="400" width="160" height="60" rx="6" fill="#151c35" stroke="#10b981" stroke-width="2"/>
+      <text x="1080" y="424" text-anchor="middle" fill="#10b981" font-size="12" font-weight="700">LegalDocument</text>
+      <text x="1080" y="440" text-anchor="middle" fill="#64748b" font-size="10">.to_dict() → JSON</text>
+      <text x="1080" y="454" text-anchor="middle" fill="#64748b" font-size="10">198/89 nodes</text>
+      <line x1="1080" y1="350" x2="1080" y2="400" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+
+      <!-- === ROW 5: Chunker === -->
+      <line x1="1080" y1="460" x2="1080" y2="520" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-green)"/>
+      <rect x="990" y="520" width="180" height="60" rx="6" fill="#151c35" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="1080" y="542" text-anchor="middle" fill="#8b5cf6" font-size="12" font-weight="700">LegalDocumentChunker</text>
+      <text x="1080" y="558" text-anchor="middle" fill="#64748b" font-size="10">Điều + Khoản chunks</text>
+      <text x="1080" y="572" text-anchor="middle" fill="#64748b" font-size="10">197 chunks total</text>
+
+      <!-- Chunker output -->
+      <line x1="1080" y1="580" x2="1080" y2="630" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arr)"/>
+      <rect x="990" y="630" width="180" height="50" rx="6" fill="#151c35" stroke="#f59e0b" stroke-width="2"/>
+      <text x="1080" y="650" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="700">chunks.json</text>
+      <text x="1080" y="666" text-anchor="middle" fill="#64748b" font-size="10">chunk_id, breadcrumb, refs</text>
+
+      <!-- PENDING phases -->
+      <rect x="700" y="520" width="140" height="50" rx="6" fill="#151c35" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="770" y="542" text-anchor="middle" fill="#475569" font-size="12">Phase 3</text>
+      <text x="770" y="558" text-anchor="middle" fill="#475569" font-size="10">Embedding + ChromaDB</text>
+
+      <rect x="530" y="520" width="140" height="50" rx="6" fill="#151c35" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="600" y="542" text-anchor="middle" fill="#475569" font-size="12">Phase 4</text>
+      <text x="600" y="558" text-anchor="middle" fill="#475569" font-size="10">RAG + LLM</text>
+
+      <rect x="360" y="520" width="140" height="50" rx="6" fill="#151c35" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="430" y="542" text-anchor="middle" fill="#475569" font-size="12">Phase 5</text>
+      <text x="430" y="558" text-anchor="middle" fill="#475569" font-size="10">Demo Interface</text>
+
+      <line x1="990" y1="655" x2="840" y2="655" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+      <line x1="700" y1="545" x2="670" y2="545" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+      <!-- Bug annotations -->
+      <rect x="1160" y="40" width="220" height="100" rx="6" fill="rgba(239,68,68,.06)" stroke="rgba(239,68,68,.4)" stroke-width="1"/>
+      <text x="1175" y="58" fill="#ef4444" font-size="10" font-weight="700">⚠ BUGS TO FIX</text>
+      <text x="1175" y="74" fill="#94a3b8" font-size="10">① parse_text(): "Luật" hardcode</text>
+      <text x="1175" y="88" fill="#94a3b8" font-size="10">② breadcrumb dùng "Luật" thay</text>
+      <text x="1175" y="100" fill="#94a3b8" font-size="10">   vì document_type</text>
+      <text x="1175" y="114" fill="#94a3b8" font-size="10">③ dieu chunk: children 2 lần</text>
+      <text x="1175" y="128" fill="#94a3b8" font-size="10">④ skip silent khi thiếu parent</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 3. ISSUES ===== -->
+<section>
+  <div class="section-title">03 — Logic Gaps & Lỗ hổng phát hiện</div>
+
+  <table class="issues-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Vị trí</th>
+        <th>Vấn đề</th>
+        <th>Mức độ</th>
+        <th>Fix đề xuất</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>01</code></td>
+        <td><code>parser_core.py</code> dòng ~parse_text()</td>
+        <td><code>document_type="Luật"</code> hardcode. Khi parse Nghị định 117 → output sai loại văn bản</td>
+        <td class="sev-high">HIGH</td>
+        <td>Thay bằng <code>document_type=self.document_type</code></td>
+      </tr>
+      <tr>
+        <td><code>02</code></td>
+        <td><code>parser_core.py</code> <code>_handle_phan/chuong/dieu</code></td>
+        <td>Tất cả breadcrumb root đều dùng <code>f"Luật {self.document_number}"</code> → Sai với Nghị định, Thông tư</td>
+        <td class="sev-high">HIGH</td>
+        <td>Thay bằng <code>f"{self.document_type} {self.document_number}"</code> ở tất cả handlers</td>
+      </tr>
+      <tr>
+        <td><code>03</code></td>
+        <td><code>chunker.py</code> dòng ~115–123</td>
+        <td>Điều chunk: <code>children_text</code> được append 2 lần — một lần vào <code>content</code>, một lần vào <code>dieu_chunk(content=...)</code></td>
+        <td class="sev-med">MED</td>
+        <td>Chọn 1 trong 2, bỏ append thừa trong phần tạo <code>dieu_chunk</code></td>
+      </tr>
+      <tr>
+        <td><code>04</code></td>
+        <td><code>parser_core.py</code> <code>_handle_khoan/_handle_diem</code></td>
+        <td>Silent skip khi thiếu parent node — không log, không tracking → debug rất khó</td>
+        <td class="sev-med">MED</td>
+        <td>Thêm <code>logger.warning(f"Khoản {index} không có Điều — bỏ qua dòng {line_num}")</code></td>
+      </tr>
+      <tr>
+        <td><code>05</code></td>
+        <td><code>chunker.py</code> <code>__post_init__</code></td>
+        <td>Token estimate = <code>chars / 4</code> — chuẩn cho tiếng Anh, tiếng Việt nên dùng <code>/ 3</code> (Unicode chars dài hơn)</td>
+        <td class="sev-low">LOW</td>
+        <td>Đổi thành <code>self.token_estimate = self.char_count // 3</code></td>
+      </tr>
+      <tr>
+        <td><code>06</code></td>
+        <td><code>indentation_checker.py</code> <code>_is_valid_khoan_number()</code></td>
+        <td>Pattern <code>r'^\d{4}\s'</code> loại bỏ năm 2025/2026 nhưng có thể loại bỏ Khoản 2025 (hiếm nhưng possible)</td>
+        <td class="sev-low">LOW</td>
+        <td>Thêm max số Khoản hợp lệ: <code>int(num) <= 100</code></td>
+      </tr>
+      <tr>
+        <td><code>07</code></td>
+        <td><code>reference_detector.py</code></td>
+        <td>External references dùng regex phức tạp — có thể match sai "Luật Đầu tư" trong câu dài, lấy thêm text thừa</td>
+        <td class="sev-low">LOW</td>
+        <td>Thêm max length cho law name: <code>{1,40}</code> thay vì <code>{1,50}</code></td>
+      </tr>
+      <tr>
+        <td><code>08</code></td>
+        <td>Toàn bộ pipeline</td>
+        <td>9 văn bản nhưng chỉ test 2 — edge cases: Thông tư (có Điều nhưng không có Chương), văn bản sửa đổi bổ sung</td>
+        <td class="sev-med">MED</td>
+        <td>Thêm <code>parse_all_documents.py</code> batch test 9 files, validate JSON schema</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== 4. ROADMAP ===== -->
+<section>
+  <div class="section-title">04 — Kế hoạch 6 tuần (Tối ưu hoá)</div>
+
+  <div class="roadmap">
+    <div class="week-card week-done">
+      <div class="week-label">TUẦN 1–2 ✓ DONE</div>
+      <div class="week-name" style="color:var(--green)">PDF Parser + Chunking</div>
+      <ul class="week-tasks">
+        <li>pdfplumber migration</li>
+        <li>State machine v4</li>
+        <li>Hierarchical chunking</li>
+        <li>197 chunks ready</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--green)"></div></div>
+    </div>
+
+    <div class="week-card week-current">
+      <div class="week-label">TUẦN 3 ← HIỆN TẠI</div>
+      <div class="week-name" style="color:var(--yellow)">Fix Bugs + Embedding</div>
+      <ul class="week-tasks">
+        <li>Fix 5 bugs trên</li>
+        <li>Test 9 văn bản</li>
+        <li>Vietnamese SBERT</li>
+        <li>ChromaDB setup</li>
+        <li>Hybrid: BM25 + Vector</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:30%;background:var(--yellow)"></div></div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-label">TUẦN 4</div>
+      <div class="week-name" style="color:var(--blue)">RAG Pipeline</div>
+      <ul class="week-tasks">
+        <li>Retrieval + Reranker</li>
+        <li>Deterministic tax calc</li>
+        <li>Claude/Gemini API</li>
+        <li>Prompt engineering</li>
+        <li>Citation generator</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--blue)"></div></div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-label">TUẦN 5</div>
+      <div class="week-name" style="color:var(--purple)">UI + Evaluation</div>
+      <ul class="week-tasks">
+        <li>Streamlit chatbot</li>
+        <li>FastAPI backend</li>
+        <li>2 user flows</li>
+        <li>Accuracy test ≥85%</li>
+        <li>Demo beta ready</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--purple)"></div></div>
+    </div>
+
+    <div class="week-card">
+      <div class="week-label">TUẦN 6</div>
+      <div class="week-name" style="color:var(--cyan)">Polish + Thesis</div>
+      <ul class="week-tasks">
+        <li>Semantic caching</li>
+        <li>Confidence scoring</li>
+        <li>Documentation</li>
+        <li>Thesis Chapter 3–4</li>
+        <li>Final demo prep</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--cyan)"></div></div>
+    </div>
+
+    <div class="week-card" style="border-color:rgba(16,185,129,.2)">
+      <div class="week-label">MỤC TIÊU CUỐI</div>
+      <div class="week-name" style="color:var(--green)">Done Criteria</div>
+      <ul class="week-tasks">
+        <li>9/9 docs parsed</li>
+        <li>Accuracy ≥85%</li>
+        <li>Response &lt;5s</li>
+        <li>2 use cases demo</li>
+        <li>Thesis complete</li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--green)"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. TECH STACK ===== -->
+<section>
+  <div class="section-title">05 — Tech Stack Khuyến nghị</div>
+
+  <div class="tech-grid">
+    <div class="tech-card">
+      <h4>PDF & Parse</h4>
+      <div class="tech-item"><span>pdfplumber</span><span class="badge badge-green">✓ dùng</span></div>
+      <div class="tech-item"><span>pytesseract</span><span class="badge badge-green">✓ dùng</span></div>
+      <div class="tech-item"><span>State Machine v4</span><span class="badge badge-green">✓ done</span></div>
+    </div>
+    <div class="tech-card">
+      <h4>Embedding & Search</h4>
+      <div class="tech-item"><span>vietnamese-sbert</span><span class="badge badge-yellow">⏳ tuần 3</span></div>
+      <div class="tech-item"><span>ChromaDB</span><span class="badge badge-yellow">⏳ tuần 3</span></div>
+      <div class="tech-item"><span>BM25 (rank_bm25)</span><span class="badge badge-yellow">⏳ thêm mới</span></div>
+    </div>
+    <div class="tech-card">
+      <h4>RAG & LLM</h4>
+      <div class="tech-item"><span>Claude Sonnet / Gemini</span><span class="badge badge-gray">tuần 4</span></div>
+      <div class="tech-item"><span>Cross-encoder reranker</span><span class="badge badge-gray">tuần 4</span></div>
+      <div class="tech-item"><span>Deterministic Tax Calc</span><span class="badge badge-gray">tuần 4</span></div>
+    </div>
+    <div class="tech-card">
+      <h4>UI & Deploy</h4>
+      <div class="tech-item"><span>Streamlit</span><span class="badge badge-gray">tuần 5</span></div>
+      <div class="tech-item"><span>FastAPI</span><span class="badge badge-gray">tuần 5</span></div>
+      <div class="tech-item"><span>Semantic Cache</span><span class="badge badge-gray">tuần 6</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>

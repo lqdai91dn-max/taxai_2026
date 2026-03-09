@@ -1057,7 +1057,7 @@ class LegalHierarchyResolver:
 
 
 # ==========================================
-# DOCUMENT REGISTRY (ALL 10 DOCUMENTS)
+# DOCUMENT REGISTRY (ALL 9 DOCUMENTS)
 # ==========================================
 
 DOCUMENT_REGISTRY: Dict[str, LegalDocument] = {
