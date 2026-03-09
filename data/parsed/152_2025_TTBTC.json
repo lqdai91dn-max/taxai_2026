@@ -1,0 +1,1122 @@
+{
+  "metadata": {
+    "document_id": "152_2025_TTBTC",
+    "document_type": "Thông tư",
+    "document_number": "152/2025/TT-BTC",
+    "title": "Hướng dẫn kế toán cho các hộ kinh doanh, cá nhân kinh doanh",
+    "issue_date": "2025-12-31",
+    "effective_date": "2026-01-01"
+  },
+  "data": [
+    {
+      "node_id": "doc_152_2025_TTBTC_chuong_I",
+      "node_type": "Chương",
+      "node_index": "I",
+      "title": "",
+      "content": "",
+      "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_1",
+          "node_type": "Điều",
+          "node_index": "1",
+          "title": "Phạm vi điều chỉnh và đối tượng áp dụng",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 1: Phạm vi điều chỉnh và đối tượng áp dụng",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_1_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Thông tư này hướng dẫn việc ghi sổ kế toán của các hộ kinh doanh, cá nhân kinh doanh.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 1: Phạm vi điều chỉnh và đối tượng áp dụng > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_1_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Đối tượng áp dụng Thông tư này là hộ kinh doanh, cá nhân kinh doanh.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 1: Phạm vi điều chỉnh và đối tượng áp dụng > Khoản 2",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_2",
+          "node_type": "Điều",
+          "node_index": "2",
+          "title": "Tổ chức công tác kế toán",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 2: Tổ chức công tác kế toán",
+          "references": [],
+          "children": [],
+          "lead_in_text": "Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán hoặc bố trí người làm kế toán hoặc thuê dịch vụ làm kế toán cho hộ kinh doanh, cá nhân kinh doanh theo quy định của pháp luật. Người đại diện hộ kinh doanh, cá nhân kinh doanh có thể bố trí cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, vợ, chồng, con đẻ, con nuôi, anh, chị, em ruột của mình làm kế toán cho hộ kinh doanh, cá nhân kinh doanh hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán cho hộ kinh doanh, cá nhân kinh doanh."
+        },
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_3",
+          "node_type": "Điều",
+          "node_index": "3",
+          "title": "Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh được lựa chọn lưu trữ các tài liệu kế toán (hóa đơn, chứng từ kế toán, sổ kế toán,...) trên phương tiện điện tử hoặc bằng bản giấy.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Thời hạn lưu trữ tài liệu kế toán của hộ kinh doanh, cá nhân kinh doanh tối thiểu là 05 năm, đối với thời hạn lưu trữ hóa đơn thì thực hiện theo quy định của pháp luật về thuế.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Ngoài các sổ kế toán hướng dẫn tại Thông tư này, hộ kinh doanh, cá nhân kinh doanh có thể bổ sung thêm các sổ kế toán hoặc sửa đổi lại biểu mẫu các sổ kế toán cho phù hợp với nhu cầu của đơn vị. Sổ kế toán được mở thêm hoặc sửa đổi lại biểu mẫu vẫn phải ghi rõ tên sổ; ngày, tháng, năm lập sổ; họ tên và chữ ký, đóng dấu (nếu có) của người đại diện hộ kinh doanh, cá nhân kinh doanh.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_4",
+              "node_type": "Khoản",
+              "node_index": "4",
+              "title": null,
+              "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh sử dụng hóa đơn điện tử mà được hệ thống thông tin quản lý thuế của cơ quan thuế hỗ trợ xác định số thuế giá trị gia tăng (GTGT), thuế thu nhập cá nhân (TNCN), các loại thuế khác phải nộp (nếu có) và thông báo cho người nộp thuế thì hộ kinh doanh, cá nhân kinh doanh sử dụng các mẫu sổ kế toán hướng dẫn tại Thông tư này để theo dõi, đối chiếu với số thuế phải nộp theo thông báo của cơ quan thuế.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 4",
+              "references": [],
+              "children": []
+            }
+          ]
+        }
+      ],
+      "lead_in_text": "QUY ĐỊNH CHUNG"
+    },
+    {
+      "node_id": "doc_152_2025_TTBTC_chuong_II",
+      "node_type": "Chương",
+      "node_index": "II",
+      "title": "",
+      "content": "",
+      "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_II_muc_1",
+          "node_type": "Mục",
+          "node_index": "1",
+          "title": "",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_II_muc_1_dieu_4",
+              "node_type": "Điều",
+              "node_index": "4",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "content": "",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_152_2025_TTBTC_chuong_II_muc_1_dieu_4_khoan_1",
+                  "node_type": "Khoản",
+                  "node_index": "1",
+                  "title": null,
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân"
+            }
+          ],
+          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG KHÔNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, KHÔNG PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN"
+        },
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2",
+          "node_type": "Mục",
+          "node_index": "2",
+          "title": "",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2",
+          "references": [
+            {
+              "text_match": "tại Điều 5",
+              "target_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5"
+            },
+            {
+              "text_match": "Điều 6",
+              "target_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6"
+            }
+          ],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5",
+              "node_type": "Điều",
+              "node_index": "5",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "content": "",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_1",
+                  "node_type": "Khoản",
+                  "node_index": "1",
+                  "title": null,
+                  "content": "Chứng từ kế toán sử dụng là Hóa đơn và các chứng từ khác làm căn cứ để xác định và kê khai doanh thu theo quy định của pháp luật về thuế.",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2",
+                  "node_type": "Khoản",
+                  "node_index": "2",
+                  "title": null,
+                  "content": "Sổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a- HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu"
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6",
+              "node_type": "Điều",
+              "node_index": "6",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "content": "",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_1",
+                  "node_type": "Khoản",
+                  "node_index": "1",
+                  "title": null,
+                  "content": "Chứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2",
+                  "node_type": "Khoản",
+                  "node_index": "2",
+                  "title": null,
+                  "content": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b- HKD)",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+            }
+          ],
+          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN Hộ kinh doanh, cá nhân kinh doanh căn cứ vào phương pháp nộp thuế GTGT, thuế TNCN để thực hiện kế toán theo một trong các trường hợp quy định tại Điều 5 hoặc Điều 6 Thông tư này, cụ thể như sau:"
+        },
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_II_muc_3",
+          "node_type": "Mục",
+          "node_index": "3",
+          "title": "",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 3",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_II_muc_3_dieu_7",
+              "node_type": "Điều",
+              "node_index": "7",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "content": "",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 3 > Điều 7: Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "references": [],
+              "children": [],
+              "lead_in_text": "có hoạt động thuộc diện chịu các loại thuế khác Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động thuộc diện chịu các loại thuế khác (thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường, thuế sử dụng đất) thì sử dụng thêm sổ theo dõi nghĩa vụ thuế khác (Mẫu số S3a-HKD) như sau"
+            }
+          ],
+          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH CÓ HOẠT ĐỘNG THUỘC DIỆN CHỊU CÁC LOẠI THUẾ KHÁC"
+        }
+      ],
+      "lead_in_text": "QUY ĐỊNH CỤ THỂ"
+    },
+    {
+      "node_id": "doc_152_2025_TTBTC_chuong_III",
+      "node_type": "Chương",
+      "node_index": "III",
+      "title": "",
+      "content": "",
+      "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_152_2025_TTBTC_chuong_III_dieu_8",
+          "node_type": "Điều",
+          "node_index": "8",
+          "title": "Hiệu lực thi hành",
+          "content": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_III_dieu_8_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Thông tư này có hiệu lực thi hành kể từ ngày 01/01/2026.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_III_dieu_8_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Thông tư số 88/2021/TT-BTC ngày 11/10/2021 của Bộ trưởng Bộ Tài chính hướng dẫn chế độ kế toán cho các hộ kinh doanh, cá nhân kinh doanh hết hiệu lực kể từ ngày Thông tư này có hiệu lực thi hành.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành > Khoản 2",
+              "references": [
+                {
+                  "text_match": "Thông tư số 88/2021/TT-BTC",
+                  "target_id": "external_thong_tu_88_2021_tt_btc"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_III_dieu_8_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Ủy ban nhân dân, Sở Tài chính, Thuế các Tỉnh, Thành phố trực thuộc Trung ương có trách nhiệm triển khai hướng dẫn các hộ kinh doanh, cá nhân kinh doanh thực hiện Thông tư này.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành > Khoản 3",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_152_2025_TTBTC_chuong_III_dieu_8_khoan_4",
+              "node_type": "Khoản",
+              "node_index": "4",
+              "title": null,
+              "content": "Trong quá trình thực hiện nếu có vướng mắc, đề nghị phản ánh về Bộ Tài chính để nghiên cứu giải quyết./.",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành > Khoản 4",
+              "references": [],
+              "children": []
+            }
+          ]
+        }
+      ],
+      "lead_in_text": "TỔ CHỨC THỰC HIỆN"
+    }
+  ],
+  "pdf_metadata": {
+    "pdf_type": "digital",
+    "total_pages": 19,
+    "text_length": 18716,
+    "tables_found": 11,
+    "extraction_method": "pdfplumber"
+  },
+  "tables": [
+    {
+      "table_index": 0,
+      "headers": [
+        "Ngày tháng",
+        "Diễn giải",
+        "Số tiền"
+      ],
+      "rows": [
+        [
+          "A",
+          "B",
+          "1"
+        ]
+      ],
+      "row_count": 1,
+      "col_count": 3,
+      "extraction_strategy": "lines",
+      "page_number": 3
+    },
+    {
+      "table_index": 1,
+      "headers": [
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "Tổng cộng",
+          ""
+        ]
+      ],
+      "row_count": 1,
+      "col_count": 3,
+      "extraction_strategy": "lines",
+      "page_number": 4
+    },
+    {
+      "table_index": 2,
+      "headers": [
+        "Chứng từ",
+        "",
+        "Diễn giải",
+        "Số tiền"
+      ],
+      "rows": [
+        [
+          "Số hiệu",
+          "Ngày, tháng",
+          "",
+          ""
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "1"
+        ],
+        [
+          "",
+          "",
+          "1. Ngành nghề ....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "......",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (1)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế TNCN",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2. Ngành nghề ....",
+          ""
+        ],
+        [
+          "",
+          "",
+          ".....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (2)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế TNCN",
+          ""
+        ],
+        [
+          "",
+          "",
+          "3. Ngành nghề ....",
+          ""
+        ],
+        [
+          "",
+          "",
+          ".....",
+          ""
+        ]
+      ],
+      "row_count": 14,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 5
+    },
+    {
+      "table_index": 3,
+      "headers": [
+        "",
+        "",
+        "Tổng cộng (3)",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế TNCN",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng số thuế GTGT phải nộp",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng số thuế TNCN phải nộp",
+          ""
+        ]
+      ],
+      "row_count": 4,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 6
+    },
+    {
+      "table_index": 4,
+      "headers": [
+        "STT",
+        "Tên sổ kế toán",
+        "Ký hiệu"
+      ],
+      "rows": [
+        [
+          "1",
+          "Sổ doanh thu bán hàng hóa, dịch vụ",
+          "Mẫu số S2b- HKD"
+        ],
+        [
+          "2",
+          "Sổ chi tiết doanh thu, chi phí",
+          "Mẫu số S2c- HKD"
+        ],
+        [
+          "3",
+          "Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa",
+          "Mẫu số S2d- HKD"
+        ],
+        [
+          "4",
+          "Sổ chi tiết tiền",
+          "Mẫu số S2e- HKD"
+        ]
+      ],
+      "row_count": 4,
+      "col_count": 3,
+      "extraction_strategy": "lines",
+      "page_number": 7
+    },
+    {
+      "table_index": 5,
+      "headers": [
+        "Số hiệu",
+        "Ngày, tháng",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "A",
+          "B",
+          "C",
+          "1"
+        ],
+        [
+          "",
+          "",
+          "1. Ngành nghề ....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "......",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (1)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2. Ngành nghề….",
+          ""
+        ],
+        [
+          "",
+          "",
+          ".....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (2)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "3. Ngành nghề ....",
+          ""
+        ],
+        [
+          "",
+          "",
+          ".....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (3)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "4. Ngành nghề….",
+          ""
+        ],
+        [
+          "",
+          "",
+          "......",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (4)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "5. Ngành nghề....",
+          ""
+        ],
+        [
+          "",
+          "",
+          "......",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng cộng (5)",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Thuế GTGT",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng số thuế GTGT phải nộp",
+          ""
+        ]
+      ],
+      "row_count": 22,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 8
+    },
+    {
+      "table_index": 6,
+      "headers": [
+        "Chứng từ",
+        "",
+        "Diễn giải",
+        "Số tiền"
+      ],
+      "rows": [
+        [
+          "Số hiệu",
+          "Ngày, tháng",
+          "",
+          ""
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "1"
+        ],
+        [
+          "",
+          "",
+          "1. Doanh thu bán hàng hóa, dịch vụ",
+          ""
+        ],
+        [
+          "",
+          "",
+          "2. Chi phí hợp lý",
+          ""
+        ]
+      ],
+      "row_count": 4,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 9
+    },
+    {
+      "table_index": 7,
+      "headers": [
+        "",
+        "",
+        "a) Chi phí nguyên liệu, vật liệu, nhiên liệu, năng lượng, hàng hóa sử dụng vào sản xuất, kinh doanh.",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "b) Chi phí tiền lương, tiền công, các khoản phụ cấp, bảo hiểm bắt buộc và các khoản chi trả cho người lao động có đóng bảo hiểm bắt buộc theo quy định; chi phí tiền lương, tiền công, các khoản phụ cấp và các khoản chi trả cho người lao động dưới 01 tháng.",
+          ""
+        ],
+        [
+          "",
+          "",
+          "c) Chi phí khấu hao tài sản cố định phục vụ cho hoạt động sản xuất, kinh doanh theo chế độ quản lý, sử dụng và trích khấu hao tài sản cố định (nếu có).",
+          ""
+        ],
+        [
+          "",
+          "",
+          "d) Chi phí dịch vụ mua ngoài như điện, nước, điện thoại, internet, vận chuyển, thuê tài sản, sửa chữa, bảo dưỡng.",
+          ""
+        ],
+        [
+          "",
+          "",
+          "đ) Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của tổ chức tín dụng theo lãi suất thực tế. Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của đối tượng không phải là tổ chức tín dụng không vượt quá mức quy định tại Bộ luật Dân sự.",
+          ""
+        ],
+        [
+          "",
+          "",
+          "e) Các khoản chi khác phục vụ trực tiếp hoạt động sản xuất, kinh doanh...",
+          ""
+        ],
+        [
+          "",
+          "",
+          "3. Chênh lệch {(3) = (1) - (2)}",
+          ""
+        ],
+        [
+          "",
+          "",
+          "4. Tổng số thuế TNCN phải nộp {(4) = (3) x thuế suất}",
+          ""
+        ]
+      ],
+      "row_count": 7,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 10
+    },
+    {
+      "table_index": 8,
+      "headers": [
+        "Chứng từ",
+        "",
+        "Diễ n giải",
+        "Đơ n vị tín h",
+        "Đơ n giá",
+        "Nhập",
+        "",
+        "Xuất",
+        "",
+        "Tồn",
+        "",
+        "Gh i ch ú"
+      ],
+      "rows": [
+        [
+          "Số hiệ u",
+          "Ngày , thán g",
+          "",
+          "",
+          "",
+          "Số lượn g",
+          "Thàn h tiền",
+          "Số lượn g",
+          "Thàn h tiền",
+          "Số lượn g",
+          "Thàn h tiền",
+          ""
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "D",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        [
+          "",
+          "",
+          "Số dư đầu kỳ",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Cộn g phát sinh tron g kỳ",
+          "X",
+          "X",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Số dư cuối kỳ",
+          "",
+          "",
+          "X",
+          "X",
+          "X",
+          "X",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_count": 5,
+      "col_count": 12,
+      "extraction_strategy": "lines",
+      "page_number": 12
+    },
+    {
+      "table_index": 9,
+      "headers": [
+        "Chứng từ",
+        "",
+        "Diễn giải",
+        "Số tiền",
+        ""
+      ],
+      "rows": [
+        [
+          "Số hiệu",
+          "Ngày tháng",
+          "",
+          "Thu/Gửi vào",
+          "Chi/Rút ra"
+        ],
+        [
+          "A",
+          "B",
+          "C",
+          "1",
+          "2"
+        ],
+        [
+          "",
+          "",
+          "Tiền mặt",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tiền mặt đầu kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "....",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "....",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng tiền thu vào trong kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng tiền chi ra trong kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tiền mặt tồn cuối kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tiền gửi không kỳ hạn",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Ngân hàng....",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tiền gửi đầu kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "....",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "....",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng gửi vào trong kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tổng tiền rút ra trong kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Tiền gửi cuối kỳ",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "Ngân hàng...",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "....",
+          "",
+          ""
+        ]
+      ],
+      "row_count": 19,
+      "col_count": 5,
+      "extraction_strategy": "lines",
+      "page_number": 14
+    },
+    {
+      "table_index": 10,
+      "headers": [
+        "Ngà y thán g ghi sổ",
+        "Diễ n giả i",
+        "Lượ ng hàng hóa, dịch vụ chịu thuế",
+        "Mứ c thu ế tuy ệt đối",
+        "Giá tính thuế/ 01 đơn vị hàng hóa, dịch vụ",
+        "Thu ế suấ t",
+        "Các loại thuế khác",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt",
+          "",
+          "",
+          "Thuế bảo vệ môi trườ ng",
+          "Thuế tài nguy ên",
+          "Thu ế sử dụn g đất"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Áp dụng phươ ng pháp tính thuế theo tỷ lệ %",
+          "Áp dụng phươ ng pháp tính thuế tuyệt đối (nếu có)",
+          "Số thu ế ph ải nộ p",
+          "",
+          "",
+          ""
+        ],
+        [
+          "A",
+          "B",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        [
+          "Tổng cộng",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_count": 4,
+      "col_count": 12,
+      "extraction_strategy": "lines",
+      "page_number": 16
+    }
+  ]
+}
