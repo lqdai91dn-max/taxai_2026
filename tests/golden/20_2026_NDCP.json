@@ -1823,13 +1823,6 @@
       "lead_in_text": "TỜ KHAI XÁC ĐỊNH HỘ KINH DOANH, CÁ NHÂN KINH DOANH VÀ ĐĂNG KÝ THAM GIA KHÓA ĐÀO TẠO QUẢN TRỊ DOANH NGHIỆP (Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) Mẫu 1. Áp dụng với hộ kinh doanh Tên hộ kinh doanh: …………………………………………………………… ……………… Mã số hộ kinh doanh/Mã số thuế: ………………………………………………………….. Địa chỉ trụ sở chính: …………………………………………………………… …………….. Xã/phường: …………………………………… Tỉnh/thành phố: ………………………….. Tên chủ hộ kinh doanh: …………………………………………………………… ………… Điện thoại: …………………………… Email: ……………………………….. Lĩnh vực sản xuất, kinh doanh chính: ……………………………………….………………. Số lao động tham gia bảo hiểm xã hội bình quân năm: …….…………….……………….. □ Quản trị doanh nghiệp cơ bản □ Quản trị doanh nghiệp chuyên sâu Mã định Điện Chức Tên Hình Họ và Năm TT danh cá thoại danh, chuyên thức đào tên sinh nhân/Căn liên vị trí đề đào tạo (trực 1... HỘ KINH DOANH CAM KẾT và chịu trách nhiệm trước pháp luật. Nam. 1 Hộ kinh doanh có thể cung cấp 01 số điện thoại của bộ phận hành chính, nhân sự làm đầu mối liên hệ. Mẫu 2. Áp dụng với cá nhân kinh doanh Tên cá nhân kinh doanh: ……………………………………………..………………….. Giới tính:...……………………………………… Năm sinh: ……………………………. Mã số thuế: ……………………………………………..………………… ……………….. Địa chỉ nơi cư trú: …………………………………………………………..……… ……… Xã/phường: ……………..……………………… Tỉnh/thành phố: ………………………. Điện thoại: ………………………………………. Email: …………………………………. chính: ……………………………………………..……………… □ Quản trị doanh nghiệp cơ bản □ Quản trị doanh nghiệp chuyên sâu - Tên chuyên đề đào tạo, hình thức đào tạo (trực tuyến, trực tiếp, trực tuyến kết hợp trực tiếp): TÔI CAM KẾT kinh doanh. Nam."
     }
   ],
-  "pdf_metadata": {
-    "pdf_type": "digital",
-    "total_pages": 28,
-    "text_length": 43544,
-    "tables_found": 2,
-    "extraction_method": "pdfplumber"
-  },
   "tables": [
     {
       "table_index": 0,
@@ -1941,6 +1934,5 @@
       "extraction_strategy": "lines",
       "page_number": 27
     }
-  ],
-  "parser_version": "7.0"
+  ]
 }

@@ -28,6 +28,19 @@ from typing import List, Tuple, Optional
 from dataclasses import dataclass
 
 
+# Trailing phrases thường gặp sau tên Luật — cần loại bỏ khi normalize
+_LAW_TRAILING_RE = re.compile(
+    r'\s+và\s+(?:các\s+)?(?:văn\s+bản|quy\s+định)(?:\s+\S+)*',
+    re.IGNORECASE | re.UNICODE,
+)
+
+
+def _clean_law_name(name: str) -> str:
+    """Strip trailing phrases như 'và các văn bản hướng dẫn' từ tên luật đã match."""
+    name = _LAW_TRAILING_RE.sub('', name)
+    return name.rstrip(' ,').strip()
+
+
 def _slugify(text: str) -> str:
     """
     Chuyển tên văn bản pháp luật thành ASCII slug an toàn cho ID.
@@ -111,7 +124,13 @@ class ReferenceMatch:
         """
         if self.ref_type == "external":
             if self.target_document:
-                return f"external_{_slugify(self.target_document)}"
+                base = f"external_{_slugify(self.target_document)}"
+                # Bug 1+2 fix: nếu external ref có target_dieu (từ context merge),
+                # thêm vào ID để phân biệt "NĐ108 Điều 14" với chỉ "NĐ108".
+                if self.target_dieu:
+                    base += f"_dieu_{self.target_dieu}"
+                    base += self._build_sub_path()
+                return base
             return "external_unknown"
 
         if self.ref_type == "self":
@@ -197,10 +216,22 @@ class ReferenceDetector:
         )
         
         # Pattern 3: External legal documents
-        # Only capture law name, not full sentence
+        # Bug 3 fix: cho phép dấu phẩy trong tên luật (VD: "Luật Khoa học, công nghệ...")
+        # và tăng giới hạn độ dài lên 120 ký tự.
+        # _clean_law_name() sẽ strip trailing phrases như "và các văn bản hướng dẫn".
+        # Bug 3 fix: dùng \w (Unicode word chars) thay vì hardcode Vietnamese chars.
+        # \w với re.UNICODE matches tất cả chữ tiếng Việt bao gồm à, á, ã...
+        # Cho phép `,` bên trong tên luật (VD: "Luật Khoa học, công nghệ và đổi mới sáng tạo")
+        # _clean_law_name() xử lý trailing phrases như "và các văn bản hướng dẫn".
+        # First char: uppercase A-Z hoặc Đ để loại "Luật này", "Luật trên"...
+        # Continuation: \w (Unicode — covers all Vietnamese accented chars) + \s + comma.
+        # Stop at "và Luật X" để tránh merge 2 luật khác nhau trong cùng câu.
+        # _clean_law_name() xử lý trailing "và các văn bản hướng dẫn...".
         self.external_laws = re.compile(
-            r'(?:theo\s+quy\s+định\s+của\s+)?(Luật\s+[A-ZẮẰẲẴẠĂÂẤẦẨẪẬÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÉÈẺẼẸÊẾỀỂỄỆÚÙỦŨỤƯỨỪỬỮỰÍÌỈĨỊÝỲỶỸỴĐ][a-zắằẳẵạăâấầẩẫậóòỏõọôốồổỗộơớờởỡợéèẻẽẹêếềểễệúùủũụưứừửữựíìỉĩịýỳỷỹỵđ\s]{1,50})(?=\s|;|,|\.|$)',
-            re.UNICODE
+            r'(?:theo\s+quy\s+định\s+của\s+)?'
+            r'(Luật\s+[A-ZĐ](?:(?!\s+và\s+Luật\s+[A-ZĐ])[\w\s,]){2,120})'
+            r'(?=\s|;|\.|$)',
+            re.UNICODE,
         )
         
         self.external_decrees = re.compile(
@@ -238,29 +269,28 @@ class ReferenceDetector:
             >>> refs[0].target_khoan
             '2'
         """
-        references = []
-        
-        # Find internal references
-        references.extend(self._find_internal_references(text))
-        
-        # Find self-references
-        references.extend(self._find_self_references(text, current_dieu))
-        
-        # Find external references
-        references.extend(self._find_external_references(text))
-        
-        # Sort by position
+        internal_refs = self._find_internal_references(text)
+        self_refs = self._find_self_references(text, current_dieu)
+        external_refs = self._find_external_references(text)
+
+        # Bug 1+2 fix: upgrade "Điều X" → external khi ngay sau đó là tên văn bản ngoài.
+        # VD: "Điều 14 Nghị định 108" → external_nghi_dinh_108_nd_cp_dieu_14
+        #     "Điều 28, Điều 29 Nghị định 108" → cả 2 external với NĐ108
+        internal_refs, external_refs = self._resolve_external_context(
+            internal_refs, external_refs, text
+        )
+
+        references = internal_refs + self_refs + external_refs
         references.sort(key=lambda r: r.start_pos)
-        
+
         # Remove duplicates (same position)
         unique_refs = []
-        seen_positions = set()
-        
+        seen_positions: set = set()
         for ref in references:
             if ref.start_pos not in seen_positions:
                 unique_refs.append(ref)
                 seen_positions.add(ref.start_pos)
-        
+
         return unique_refs
     
     def _find_internal_references(self, text: str) -> List[ReferenceMatch]:
@@ -284,6 +314,74 @@ class ReferenceDetector:
         
         return refs
     
+    def _resolve_external_context(
+        self,
+        internal_refs: List['ReferenceMatch'],
+        external_refs: List['ReferenceMatch'],
+        text: str,
+        window: int = 120,
+    ) -> Tuple[List['ReferenceMatch'], List['ReferenceMatch']]:
+        """
+        Khi "Điều X" xuất hiện ngay trước tên văn bản ngoài (trong vòng `window` ký tự,
+        không có '.' hay 'này' ngăn cách), upgrade thành external ref với doc context đó.
+
+        Nguyên tắc:
+          - Lấy external ref GẦN NHẤT sau internal ref (break ở ref đầu tiên hợp lệ).
+          - Một external ref có thể được dùng bởi nhiều internal ref (VD: "Điều 28, Điều 29 NĐ108").
+          - External ref đã được merge sẽ KHÔNG xuất hiện như standalone reference nữa.
+          - Không upgrade nếu gap_text chứa '.' (sentence boundary) hoặc 'này' (self-ref signal).
+
+        VD:
+            "Điều 14 Nghị định 108/2024"          → external_nghi_dinh_108_..._dieu_14
+            "Điều 28, Điều 29 Nghị định 108/2024" → cả 2 external với NĐ108
+            "Điều 5 của Luật này"                 → không upgrade ('này' trong gap)
+            "Điều 5. Sau đó Nghị định 108"        → không upgrade ('.' trong gap)
+        """
+        if not external_refs:
+            return internal_refs, external_refs
+
+        # Sort external refs by start_pos để tìm kiếm tuần tự
+        sorted_ext = sorted(enumerate(external_refs), key=lambda x: x[1].start_pos)
+        consumed_ext: set = set()
+        upgraded: List[ReferenceMatch] = []
+
+        for iref in internal_refs:
+            matched_ext_idx = None
+
+            for orig_idx, eref in sorted_ext:
+                if eref.start_pos < iref.end_pos:
+                    continue
+                gap = eref.start_pos - iref.end_pos
+                if gap > window:
+                    break
+                gap_text = text[iref.end_pos:eref.start_pos]
+                # Không upgrade nếu có sentence boundary hoặc self-ref signal
+                if '.' in gap_text or '\n' in gap_text or 'này' in gap_text:
+                    continue
+                matched_ext_idx = orig_idx
+                break  # Lấy external ref gần nhất hợp lệ
+
+            if matched_ext_idx is not None:
+                eref = external_refs[matched_ext_idx]
+                consumed_ext.add(matched_ext_idx)
+                upgraded.append(ReferenceMatch(
+                    text_match=iref.text_match,
+                    ref_type="external",
+                    target_dieu=iref.target_dieu,
+                    target_khoan=iref.target_khoan,
+                    target_diem=iref.target_diem,
+                    target_document=eref.target_document,
+                    start_pos=iref.start_pos,
+                    end_pos=iref.end_pos,
+                ))
+            else:
+                upgraded.append(iref)
+
+        remaining_external = [
+            e for i, e in enumerate(external_refs) if i not in consumed_ext
+        ]
+        return upgraded, remaining_external
+
     def _find_self_references(
         self, 
         text: str, 
@@ -319,14 +417,17 @@ class ReferenceDetector:
         
         # Find law references
         for match in self.external_laws.finditer(text):
-            law_name = match.group(1).strip()
-            
+            # Bug 3 fix: strip trailing "và các văn bản hướng dẫn..." từ tên luật
+            law_name = _clean_law_name(match.group(1).strip())
+            if not law_name:
+                continue
+
             refs.append(ReferenceMatch(
                 text_match=match.group(0),
                 ref_type="external",
                 target_document=law_name,
                 start_pos=match.start(),
-                end_pos=match.end()
+                end_pos=match.end(),
             ))
         
         # Find decree/circular references

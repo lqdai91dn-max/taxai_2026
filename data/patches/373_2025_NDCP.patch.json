@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "doc_id": "373_2025_NDCP",
+  "pdf_sha256": "628e5bab1a409ef1525163363d9d2969e7579c43b8f470de90b6670538a747a2",
+  "description": "Bug A (2026-03): Phụ lục II bị detect nhầm từ mid-sentence page-break tại Điều 10 Khoản 7. Dòng 'Phụ lục II kèm theo Thông tư số 80/2021/TT-BTC...' xuất hiện đầu dòng do page break nên bị parser nhầm thành Phụ lục header. Fix tổng quát đã được add vào indentation_checker.py (check 'kèm theo'). Patch này đảm bảo Khoản 7 luôn có content đầy đủ và false node không tồn tại. Idempotency: add_node(khoan_8, khoan_9) giữ chúng đúng vị trí trong dieu_10 ngay cả khi regression tạo ra phu_luc_II và steal chúng làm children — sau đó remove_node(phu_luc_II) mới xóa false node.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_373_2025_NDCP_phu_luc_I_khoan_7",
+      "field": "content",
+      "value": "Ban hành Mẫu số 01/LNCN-DK tại Phụ lục I kèm theo Nghị định này và bãi bỏ các Mẫu số 01/LNCN-PSC, Mẫu số 01/LNCN-VSP tại Phụ lục II kèm theo Thông tư số 80/2021/TT-BTC ngày 29 tháng 9 năm 2021 của Bộ Tài chính."
+    },
+    {
+      "op": "add_reference",
+      "node_id": "doc_373_2025_NDCP_phu_luc_I_khoan_7",
+      "reference": {
+        "text_match": "Thông tư số 80/2021/TT-BTC",
+        "target_id": "external_thong_tu_80_2021_tt_btc"
+      }
+    },
+    {
+      "op": "add_node",
+      "parent_id": "doc_373_2025_NDCP_dieu_10",
+      "after": "doc_373_2025_NDCP_phu_luc_I_khoan_7",
+      "node": {
+        "node_id": "doc_373_2025_NDCP_phu_luc_I_khoan_8",
+        "node_type": "khoản",
+        "content": "Ban hành Mẫu số 02/PTHU-DK tại Phụ lục I kèm theo Nghị định này và bãi bỏ các Mẫu số 02/PTHU-DK, Mẫu số 03/PTHU-DK tại Phụ lục II kèm theo Thông tư số 80/2021/TT-BTC ngày 29 tháng 9 năm 2021 của Bộ Tài chính.",
+        "children": []
+      }
+    },
+    {
+      "op": "add_node",
+      "parent_id": "doc_373_2025_NDCP_dieu_10",
+      "after": "doc_373_2025_NDCP_phu_luc_I_khoan_8",
+      "node": {
+        "node_id": "doc_373_2025_NDCP_phu_luc_I_khoan_9",
+        "node_type": "khoản",
+        "content": "Ban hành các Mẫu số 02/LNCN-DK, Mẫu số 02-1/PL-DK tại Phụ lục I kèm theo Nghị định này và bãi bỏ các Mẫu số 02/LNCN-PSC, Mẫu số 02/LNCN-VSP, Mẫu số 02-1/PL-DK tại Phụ lục II kèm theo Thông tư số 80/2021/TT-BTC ngày 29 tháng 9 năm 2021 của Bộ Tài chính.",
+        "children": []
+      }
+    },
+    {
+      "op": "remove_node",
+      "node_id": "doc_373_2025_NDCP_phu_luc_II"
+    }
+  ]
+}

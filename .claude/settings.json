@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(python -m src.parsing.pdf_parser data/raw/20_2026_NDCP.pdf)",
+      "Bash(python -m src.parsing.pdf_parser data/raw/109_2025_QH15.pdf)",
+      "Bash(python -m pytest tests/test_parser_regression.py -v)",
+      "Bash(.venv/Scripts/pytest tests/test_parser_regression.py -v --ignore-glob=\"*reparse*\" -k \"not reparse\")",
+      "Bash(pytest tests/test_parser_regression.py -v)"
     ]
   }
 }

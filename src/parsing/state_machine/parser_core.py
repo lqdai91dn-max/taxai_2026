@@ -767,10 +767,17 @@ class StateMachineParser:
         Finalize parsing - Post-processing
 
         Tasks:
+            0. Fix Điều title continuations (PDF line-wrap → lead_in nhầm)
             1. Merge content + lead_in + trailing cho leaf nodes (không có children)
             2. Build dieu_index (two-pass) để resolve reference target_id đúng
             3. Detect references in all nodes với dieu_index
         """
+        # Pass 0: fix Điều title bị cắt ngang do PDF line-wrap
+        # Khi Điều title quá dài → PDF wrap → dòng tiếp theo vào lead_in_text
+        # Heuristic: lead_in của Điều KHÔNG kết thúc bằng ':' → là title continuation
+        # (Lead-in thực sự luôn kết thúc bằng ':' như "Nghị định này quy định:")
+        self._fix_dieu_title_continuations(self.root_nodes)
+
         # Pass 1: merge text fields cho leaf nodes
         # Leaf node = không có children → content, lead_in, trailing đều là
         # phần của cùng 1 câu/đoạn, cần nối liền để embedding không bị cụt câu
@@ -782,6 +789,87 @@ class StateMachineParser:
 
         # Pass 3: detect references, dùng dieu_index để resolve đúng path
         self._detect_all_references(self.root_nodes, dieu_index)
+
+    def _fix_dieu_title_continuations(self, nodes: List[LegalNode]) -> None:
+        """
+        Sửa lỗi title Điều bị cắt ngang do PDF line-wrap.
+
+        Vấn đề: Khi title Điều dài, PDF xuống dòng → dòng tiếp theo của title
+        bị parser gán vào lead_in_text (vì đây là text đầu tiên trước Khoản con).
+
+        Heuristic phân biệt:
+        - Lead-in thực sự (intro trước danh sách Khoản): luôn kết thúc bằng ':'
+          VD: "Nghị định này quy định:"
+        - Title continuation (PDF line-wrap): KHÔNG kết thúc bằng ':'
+          VD: "phải khấu trừ", "thương mại điện tử thuộc đối tượng..."
+
+        Fix: nếu Điều.lead_in_text không kết thúc bằng ':', nối vào title
+        và cập nhật breadcrumb của Điều + toàn bộ descendants.
+        """
+        for node in nodes:
+            # Chỉ áp dụng fix cho Điều CÓ children (Khoản/Điểm).
+            # Điều không có children (VD: Điều điều khoản cuối như "Hiệu lực thi hành")
+            # có lead_in_text là body content thực sự, không phải title continuation.
+            if node.node_type == "Điều" and node.lead_in_text and node.children:
+                lead_in = node.lead_in_text.strip()
+                if lead_in and not lead_in.endswith(':'):
+                    # Build old label để thay thế trong breadcrumb descendants
+                    old_label = f"Điều {node.node_index}: {node.title}" \
+                        if node.title else f"Điều {node.node_index}"
+
+                    # Normalize \n in lead_in (PDF line-wrap tạo ra nhiều dòng
+                    # trong lead_in_text, tất cả đều là continuation của title)
+                    lead_in_clean = re.sub(r'\s*\n\s*', ' ', lead_in).strip()
+
+                    # Append lead_in vào title
+                    if node.title:
+                        node.title = (node.title.strip() + " " + lead_in_clean).strip()
+                    else:
+                        node.title = lead_in_clean
+                    node.lead_in_text = ""
+
+                    # Cập nhật breadcrumb của chính Điều này
+                    new_label = f"Điều {node.node_index}: {node.title}"
+                    if old_label in node.breadcrumb:
+                        node.breadcrumb = node.breadcrumb.replace(
+                            old_label, new_label, 1
+                        )
+
+                    # Cập nhật breadcrumb của tất cả descendants
+                    if node.children:
+                        self._update_descendant_breadcrumbs(
+                            node.children, old_label, new_label
+                        )
+
+                    logger.debug(
+                        f"📝 Fixed Điều {node.node_index} title: "
+                        f"appended '{lead_in[:40]}...'"
+                    )
+
+            # Đệ quy vào children (Khoản/Điểm không có lead_in title nhưng
+            # cần xử lý các Điều lồng nhau nếu có — defensive)
+            if node.children:
+                self._fix_dieu_title_continuations(node.children)
+
+    def _update_descendant_breadcrumbs(
+        self,
+        nodes: List[LegalNode],
+        old_label: str,
+        new_label: str
+    ) -> None:
+        """
+        Cập nhật đệ quy breadcrumb của tất cả descendants khi label cha thay đổi.
+
+        Args:
+            nodes: Danh sách nodes cần cập nhật
+            old_label: Label cũ (VD: "Điều 5: Thời điểm...ngắn")
+            new_label: Label mới (VD: "Điều 5: Thời điểm...đầy đủ")
+        """
+        for node in nodes:
+            if old_label in node.breadcrumb:
+                node.breadcrumb = node.breadcrumb.replace(old_label, new_label, 1)
+            if node.children:
+                self._update_descendant_breadcrumbs(node.children, old_label, new_label)
 
     def _merge_leaf_content(self, nodes: List[LegalNode]) -> None:
         """
@@ -795,6 +883,18 @@ class StateMachineParser:
         """
         for node in nodes:
             if node.children:
+                # Với parent node: nếu content bị cắt giữa chừng (không kết thúc bằng
+                # dấu câu) và có lead_in_text → nối content vào lead_in_text để tạo câu
+                # hoàn chỉnh. Xảy ra khi PDF wrap dòng giữa chừng trong Khoản/Điểm.
+                if node.content and node.lead_in_text:
+                    stripped = node.content.strip()
+                    if stripped and stripped[-1] not in '.?!:;':
+                        node.lead_in_text = stripped + " " + node.lead_in_text.strip()
+                        node.content = ""
+                        logger.debug(
+                            f"🔗 Merged partial content into lead_in for "
+                            f"{node.node_id} ({len(stripped)} chars)"
+                        )
                 # Recurse — xử lý children trước
                 self._merge_leaf_content(node.children)
             else:

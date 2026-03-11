@@ -59,6 +59,11 @@ def clean_legal_text(text: str) -> str:
     # VD: 'e' + combining circumflex → 'ê' (một code point)
     text = unicodedata.normalize('NFC', text)
 
+    # Normalize hyphenated breaks trong legal references
+    # VD: "NĐ-\nCP" → "NĐ-CP", "TT- BKHĐT" → "TT-BKHĐT" (cả line-break và space)
+    # \s+ để xử lý cả \n, space thừa do PDF layout (pdfplumber đôi khi insert space)
+    text = re.sub(r'([A-ZĐ])-\s+([A-ZĐ])', r'\1-\2', text)
+
     # Remove page numbers
     text = re.sub(r'\n\s*[-\']*\s*\d{1,3}\s*\n', '\n', text)
     text = re.sub(r'^\s*\d{1,3}\s*$', '', text, flags=re.MULTILINE)

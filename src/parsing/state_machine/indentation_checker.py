@@ -117,7 +117,12 @@ class IndentationChecker:
         match = self.patterns['phu_luc'].match(line)
         if match:
             idx = match.group(1) if match.group(1) else '1'
-            return ("phu_luc", idx, match.group(2) if match.group(2) else "")
+            content = match.group(2) if match.group(2) else ""
+            # Reject mid-sentence references: "Phụ lục II kèm theo Thông tư..."
+            # A real Phụ lục header never starts with "kèm theo"
+            if 'kèm theo' in content.lower():
+                return ("text", None, line)
+            return ("phu_luc", idx, content)
 
         # Check Điều
         match = self.patterns['dieu'].match(line)
@@ -178,9 +183,9 @@ class IndentationChecker:
             if re.match(pattern, line, re.IGNORECASE):
                 return False
 
-        # Phải có nội dung đủ dài sau số
+        # Phải có nội dung đủ dài sau số (>= 4 chars để chấp nhận "Khai thuế" = 9 chars)
         match = re.match(r'^\d+\.\s*(.+)$', line)
-        if match and len(match.group(1)) < 10:
+        if match and len(match.group(1)) < 4:
             return False
 
         return True

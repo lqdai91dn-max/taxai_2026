@@ -1,4 +1,12 @@
 20_2026_NDCP:  9 node
+373_2025_NDCP
+
 109-2025-QH15 29 articles
 152_2025_TTBTC: 3 
-python -m src.parsing.pdf_parser data\raw\20_2026_NDCP.pdf
+117_2025_NDCP
+
+
+python -m src.parsing.pdf_parser data\raw\109_2025_QH15.pdf
+
+lưu ý không fix không làm giảm chất lượng các file đã parse,
+ làm tăng thì được

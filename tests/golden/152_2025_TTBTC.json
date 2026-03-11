@@ -333,13 +333,6 @@
       "lead_in_text": "TỔ CHỨC THỰC HIỆN"
     }
   ],
-  "pdf_metadata": {
-    "pdf_type": "digital",
-    "total_pages": 19,
-    "text_length": 18716,
-    "tables_found": 7,
-    "extraction_method": "pdfplumber"
-  },
   "tables": [
     {
       "table_index": 0,

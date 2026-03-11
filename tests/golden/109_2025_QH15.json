@@ -2188,13 +2188,5 @@
       "lead_in_text": "ĐIÊU KHOẢN THỊ HÀNH"
     }
   ],
-  "pdf_metadata": {
-    "pdf_type": "digital",
-    "total_pages": 15,
-    "text_length": 29586,
-    "tables_found": 0,
-    "extraction_method": "pdfplumber"
-  },
-  "tables": [],
-  "parser_version": "7.0"
+  "tables": []
 }

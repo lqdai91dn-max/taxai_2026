@@ -67,7 +67,8 @@ data/raw/*.docx
 data/raw/*.xlsx
 
 # Processed data
-data/parsed/**/*.json
+data/parsed/cache/
+data/parsed/tmp/
 data/processed/
 data/cache/
 data/vector_db/
