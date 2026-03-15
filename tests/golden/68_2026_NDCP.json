@@ -1,0 +1,2146 @@
+{
+  "metadata": {
+    "document_id": "68_2026_NDCP",
+    "document_type": "Nghị định",
+    "document_number": "68/2026/NĐ-CP",
+    "title": "Quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+    "issue_date": "2026-03-05",
+    "effective_date": "2026-03-14"
+  },
+  "data": [
+    {
+      "node_id": "doc_68_2026_NDCP_chuong_I",
+      "node_type": "Chương",
+      "node_index": "I",
+      "title": "QUY ĐỊNH CHUNG",
+      "content": "",
+      "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_1",
+          "node_type": "Điều",
+          "node_index": "1",
+          "title": "Phạm vi điều chỉnh",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 1: Phạm vi điều chỉnh",
+          "references": [],
+          "children": [],
+          "lead_in_text": "Nghị định này quy định về chính sách thuế: thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác; khai thuế, tính thuế, nộp thuế, quyết toán thuế, xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa; phạm vi trách nhiệm, cách thức các chủ quản nền tảng thương mại điện tử, nền tảng số khác thực hiện khấu trừ, kê khai thay và nộp thay số thuế đã khấu trừ của hộ kinh doanh, cá nhân kinh doanh; trách nhiệm khai thay, nộp thuế thay của tổ chức trong các trường hợp: hợp tác kinh doanh với hộ kinh doanh, cá nhân kinh doanh, ký hợp đồng với hộ kinh doanh, cá nhân kinh doanh làm đại lý bán đúng giá đối với xổ số, bảo hiểm, bán hàng đa cấp; sử dụng hóa đơn điện tử; trách nhiệm của tổ chức, cá nhân có liên quan."
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_2",
+          "node_type": "Điều",
+          "node_index": "2",
+          "title": "Đối tượng áp dụng",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 2: Đối tượng áp dụng",
+          "references": [],
+          "children": [],
+          "lead_in_text": "CHÍNH SÁCH THUẾ ĐỐI VỚI HỘ KINH DOANH, CÁ NHÂN KINH DOANH"
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_3",
+          "node_type": "Điều",
+          "node_index": "3",
+          "title": "Thuế giá trị gia tăng",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 3: Thuế giá trị gia tăng",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_3_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế giá trị gia tăng.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 3: Thuế giá trị gia tăng > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_3_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm trên 500 triệu đồng thuộc đối tượng chịu thuế giá trị gia tăng và áp dụng phương pháp tính trực tiếp theo doanh thu bằng tỷ lệ % nhân (x) doanh thu. Tỷ lệ % và doanh thu tính thuế thực hiện theo quy định của Luật Thuế giá trị gia tăng số 48/2024/QH15 và các văn bản hướng dẫn thi hành.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 3: Thuế giá trị gia tăng > Khoản 2",
+              "references": [
+                {
+                  "text_match": "theo quy định của Luật Thuế giá trị gia tăng số",
+                  "target_id": "external_luat_thue_gia_tri_gia_tang_so"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4",
+          "node_type": "Điều",
+          "node_index": "4",
+          "title": "Thuế thu nhập cá nhân",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Cá nhân cư trú có hoạt động sản xuất, kinh doanh, bao gồm cả cá nhân đăng ký thành lập hộ kinh doanh hoặc người được các thành viên hộ gia đình ủy quyền làm người đại diện hộ kinh doanh (sau đây gọi là cá nhân kinh doanh) có mức doanh thu năm từ 500 triệu đồng trở xuống không phải nộp thuế thu nhập cá nhân.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Cá nhân kinh doanh có doanh thu năm trên mức doanh thu quy định tại khoản 1 Điều này thực hiện nộp thuế theo quy định tại Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 2",
+              "references": [
+                {
+                  "text_match": "theo quy định tại Điều 7",
+                  "target_id": "external_luat_thue_thu_nhap_ca_nhan_so_dieu_7"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Đối với cá nhân kinh doanh nộp thuế thu nhập cá nhân theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15, trường hợp cá nhân có nhiều ngành, nghề kinh doanh áp dụng các mức thuế suất thuế thu nhập cá nhân khác nhau hoặc có nhiều địa điểm kinh doanh thì cá nhân được áp dụng mức trừ 500 triệu đồng trước khi tính thuế thu nhập cá nhân đối với một hoặc một số ngành, nghề kinh doanh hoặc địa điểm kinh doanh do cá nhân lựa chọn theo phương án có lợi nhất, nhưng tổng mức trừ không vượt quá 500 triệu đồng trong một năm đối với doanh thu của toàn bộ hoạt động kinh doanh quy định tại khoản này. Trường hợp doanh thu từ ngành, nghề kinh doanh hoặc địa điểm kinh doanh được lựa chọn chưa trừ đủ 500 triệu đồng, cá nhân được trừ tiếp mức chưa trừ hết vào doanh thu của một hoặc một số ngành, nghề kinh doanh hoặc địa điểm kinh doanh khác cho đến khi tổng mức trừ đủ 500 triệu đồng.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 3",
+              "references": [
+                {
+                  "text_match": "theo quy định tại khoản 3 Điều 7",
+                  "target_id": "external_luat_thue_thu_nhap_ca_nhan_so_dieu_7_khoan_3"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_4",
+              "node_type": "Khoản",
+              "node_index": "4",
+              "title": null,
+              "content": "",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 4",
+              "references": [
+                {
+                  "text_match": "theo quy định tại khoản 4 Điều 7",
+                  "target_id": "external_luat_thue_thu_nhap_ca_nhan_so_dieu_7_khoan_4"
+                }
+              ],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_4_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Trường hợp cá nhân có nhiều bất động sản cho thuê ở các địa điểm khác nhau, cá nhân được trừ 500 triệu đồng trước khi tính thuế thu nhập cá nhân đối với một hoặc một số hợp đồng cho thuê bất động sản do cá nhân lựa chọn nhưng tổng mức được trừ không quá 500 triệu đồng một năm đối với tất cả hợp đồng cho thuê bất động sản. Trường hợp hợp đồng cho thuê bất động sản được lựa chọn chưa trừ đủ 500 triệu đồng, cá nhân được tiếp tục lựa chọn các hợp đồng cho thuê bất động sản khác để được trừ tiếp cho đến khi trừ đủ 500 triệu đồng;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 4 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_4_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp cá nhân có nhiều bất động sản cho thuê ở các địa điểm khác nhau và có quy định bên đi thuê khai thay, nộp thay thuế, khi lựa chọn hợp đồng cho thuê bất động sản để áp dụng mức được trừ khi tính thuế thu nhập cá nhân, cá nhân cho thuê bất động sản và bên đi thuê phải quy định rõ trong hợp đồng cho thuê bất động sản nội dung khai thay, nộp thay thuế và số tiền được trừ khi tính thuế thu nhập cá nhân. Trường hợp hợp đồng cho thuê bất động sản có quy định khai thay, nộp thay thuế nhưng chưa trừ đủ 500 triệu đồng thì cá nhân được tiếp tục lựa chọn các hợp đồng cho thuê bất động sản khác để tiếp tục được trừ cho đến khi trừ đủ 500 triệu đồng.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 4 > Điểm b",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "Đối với cá nhân cho thuê bất động sản nộp thuế thu nhập cá nhân theo quy định tại khoản 4 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15:"
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_5",
+              "node_type": "Khoản",
+              "node_index": "5",
+              "title": null,
+              "content": "Phương pháp tính thuế",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 5",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_5_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại khoản 3 Điều 7",
+                      "target_id": "external_luat_thue_thu_nhap_ca_nhan_so_dieu_7_khoan_3"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_5_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại khoản 2 Điều 7",
+                      "target_id": "external_luat_thue_thu_nhap_ca_nhan_so_dieu_7_khoan_2"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_5_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 Nghị định này;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm c",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại Điều 5",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_5"
+                    },
+                    {
+                      "text_match": "Điều 6",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_6"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_5_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng. Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm d",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5",
+          "node_type": "Điều",
+          "node_index": "5",
+          "title": "Doanh thu để xác định thuế thu nhập cá nhân",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Doanh thu đối với một số trường hợp được quy định cụ thể như sau:",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Đối với hoạt động gia công hàng hóa là tiền thu về hoạt động gia công bao gồm cả tiền công, chi phí về nhiên liệu, động lực, vật liệu phụ và chi phí khác phục vụ cho việc gia công hàng hóa;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp bán hàng hóa, cung cấp dịch vụ theo phương thức trả góp, trả chậm là tiền bán hàng hóa, dịch vụ trả tiền một lần, không bao gồm tiền lãi trả góp, tiền lãi trả chậm;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Trường hợp giao hàng hóa cho các đại lý là tổng số tiền bán hàng hóa;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Trường hợp nhận làm đại lý bán hàng đúng giá quy định của bên giao đại lý là tiền hoa hồng được hưởng theo hợp đồng đại lý;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Đối với hoạt động cho thuê tài sản là số tiền bên thuê trả từng kỳ theo hợp đồng thuê. Trường hợp bên thuê trả tiền trước cho nhiều năm thì doanh thu để tính thu nhập chịu thuế được phân bổ cho số năm trả tiền trước hoặc được xác định theo doanh thu trả tiền một lần;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm đ",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Đối với hoạt động kinh doanh dịch vụ khác mà khách hàng trả tiền trước cho nhiều năm thì doanh thu để tính thu nhập chịu thuế được phân bổ cho số năm trả tiền trước hoặc xác định theo doanh thu trả tiền một lần;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm e",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_g",
+                  "node_type": "Điểm",
+                  "node_index": "g",
+                  "title": null,
+                  "content": "Đối với hoạt động vận tải là toàn bộ doanh thu vận chuyển hành khách, hàng hóa, hành lý phát sinh trong kỳ tính thuế;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm g",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_2_diem_h",
+                  "node_type": "Điểm",
+                  "node_index": "h",
+                  "title": null,
+                  "content": "Đối với hoạt động xây dựng, lắp đặt là giá trị công trình, giá trị hạng mục công trình hoặc giá trị khối lượng công trình xây dựng, lắp đặt ng hiệm thu, bao gồm cả giá trị nguyên vật liệu, máy móc, thiết bị; trường hợp xây dựng, lắp đặt không bao thầu nguyên vật liệu, máy móc, thiết bị là số tiền từ hoạt động xây dựng, lắp đặt không bao gồm giá trị nguyên vật liệu, máy móc, thiết bị.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 2 > Điểm h",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Thời điểm xác định doanh thu",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 3",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_3_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Đối với hoạt động bán hàng hoá là thời điểm chuyển giao quyền sở hữu, quyền sử dụng hàng hoá cho người mua;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 3 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_5_khoan_3_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Đối với hoạt động cung ứng dịch vụ là thời điểm hoàn thành việc cung ứng dịch vụ hoặc hoàn thành từng phần việc cung ứng dịch vụ cho người mua, trừ các hoạt động cung ứng dịch vụ nêu tại khoản 2 Điều này.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 3 > Điểm b",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6",
+          "node_type": "Điều",
+          "node_index": "6",
+          "title": "Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Chi phí nguyên liệu, vật liệu, nhiên liệu, năng lượng, hàng hóa sử dụng vào sản xuất, kinh doanh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Chi phí tiền lương, tiền công, tiền thưởng, các khoản phụ cấp, bảo hiểm bắt buộc và các khoản chi trả cho người lao động có đóng bảo hiểm bắt buộc theo quy định; chi phí tiền lương, tiền công, các khoản phụ cấp và các khoản chi trả cho người lao động dưới 01 tháng;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Chi phí khấu hao tài sản cố định phục vụ cho hoạt động sản xuất, kinh doanh. Mức trích khấu hao tài sản cố định được tính vào chi phí hợp lý theo quy định về chế độ quản lý, sử dụng và trích khấu hao tài sản cố định áp dụng đối với doanh ng hiệp. Trường hợp tài sản cố định đã khấu hao hết giá trị nhưng vẫn tiếp tục được sử dụng cho sản xuất, kinh doanh thì không được trích khấu hao;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Chi phí dịch vụ mua ngoài như điện, nước, điện thoại, in ter net, vận chuyển, thuê tài sản, sửa chữa, bảo dưỡng có hóa đơn, chứng từ theo quy định của pháp luật;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của tổ chức tín dụng theo lãi suất thực tế. Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của đối tượng không phải là tổ chức tín dụng không vượt quá mức quy định tại Bộ luật Dân sự;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm đ",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_1_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Các khoản chi khác phục vụ trực tiếp hoạt động sản xuất, kinh doanh.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 1 > Điểm e",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "Các khoản chi được trừ là các khoản chi phí thực tế phát sinh liên quan đến hoạt động sản xuất, kinh doanh, có đủ hóa đơn, chứng từ theo quy định của pháp luật về hóa đơn, chứng từ, pháp luật về kế toán và chứng từ thanh toán không dùng tiền mặt đối với các khoản thanh toán từng lần có giá trị từ 05 triệu đồng trở lên theo pháp luật về thuế giá trị gia tăng, cụ thể như sau:"
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Các khoản chi không được trừ khi xác định thu nhập tính thuế:",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Khoản chi không liên quan đến hoạt động sản xuất, kinh doanh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Các khoản chi không có đủ hóa đơn, chứng từ theo quy định của pháp luật;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Khoản tiền lương, tiền công và các khoản chi có tính chất tiền lương của cá nhân kinh doanh, nhóm cá nhân kinh doanh, các thành viên trong hộ kinh doanh trừ các khoản đóng góp bảo hiểm bắt buộc; khoản tiền lương, tiền công và các khoản chi có tính chất tiền lương đã tính vào chi phí nhưng thực tế không chi trả hoặc không có chứng từ thanh toán;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Phần chi khấu hao tài sản cố định vượt mức quy định hoặc khấu hao đối với tài sản cố định không sử dụng cho hoạt động sản xuất, kinh doanh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Các khoản chi phạt vi phạm hành chính, phạt vi phạm hợp đồng, tiền bồi thường do lỗi của cá nhân kinh doanh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm đ",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Đất ở và công trình phục vụ sinh hoạt trên đất, xe ô tô và các tài sản đăng ký sở hữu hoặc đăng ký sử dụng mang tên cá nhân, trừ xe ô tô và các tài sản đăng ký sở hữu hoặc đăng ký sử dụng với mục đích kinh doanh vận tải, du lịch;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm e",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_I_dieu_6_khoan_2_diem_g",
+                  "node_type": "Điểm",
+                  "node_index": "g",
+                  "title": null,
+                  "content": "Các khoản chi phí phục vụ nhu cầu cá nhân, gia đình. Cá nhân kinh doanh có trách nhiệm theo dõi riêng chi phí phục vụ hoạt động kinh doanh và chi phí phục vụ nhu cầu cá nhân, gia đình.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 6: Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân > Khoản 2 > Điểm g",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_I_dieu_7",
+          "node_type": "Điều",
+          "node_index": "7",
+          "title": "Các khoản thuế khác",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 7: Các khoản thuế khác",
+          "references": [],
+          "children": [],
+          "lead_in_text": "Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng chịu thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường theo quy định của pháp luật thuế thì việc xác định nghĩa vụ thuế được thực hiện theo quy định của pháp luật về từng loại thuế tương ứng."
+        }
+      ]
+    },
+    {
+      "node_id": "doc_68_2026_NDCP_chuong_III",
+      "node_type": "Chương",
+      "node_index": "III",
+      "title": "KHAI THUẾ, TÍNH THUẾ, NỘP THUẾ, KHẤU TRỪ THUẾ, SỬ DỤNG HÓA ĐƠN ĐIỆN TỬ, XỬ LÝ TIỀN THUẾ, TIỀN CHẬM NỘP, TIỀN PHẠT NỘP THỪA",
+      "content": "",
+      "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8",
+          "node_type": "Điều",
+          "node_index": "8",
+          "title": "Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Khai thuế, tính thuế giá trị gia tăng, thuế thu nhập cá nhân",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_1_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ từ 500 triệu đồng trở xuống thì hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế phát sinh trong năm với cơ quan thuế chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo. Trường hợp hộ kinh doanh, cá nhân kinh doanh phát sinh doanh thu thực tế trên 500 triệu đồng trong năm thì thực hiện khai thuế, nộp thuế kể từ quý phát sinh doanh thu trên 500 triệu đồng. Số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp xác định theo quy định tại Điều 3, Điều 4 Nghị định này;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm a",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại Điều 3",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_3"
+                    },
+                    {
+                      "text_match": "Điều 4",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_4"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_1_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ trên 500 triệu đồng bao gồm cả doanh thu đã được tổ chức, cá nhân khấu trừ, khai thay, nộp thay thì tính thuế giá trị gia tăng, thuế thu nhập cá nhân theo quy định tại Điều 3, Điều 4 Nghị định này. Việc kê khai, nộp thuế thực hiện theo quy định tại Điều 10 Nghị định này. Trường hợp hộ kinh doanh, cá nhân kinh doanh sử dụng hóa đơn điện tử có mã của cơ quan thuế, hoá đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế, Hệ thống thông tin quản lý thuế tự động tạo lập tờ khai thuế để hỗ trợ hộ kinh doanh, cá nhân kinh doanh trong việc khai thuế, tính thuế giá trị gia tăng, thuế thu nhập cá nhân trên cơ sở dữ liệu hóa đơn điện tử, cơ sở dữ liệu quản lý thuế và các nguồn cơ sở dữ liệu khác mà cơ quan thuế có được từ cơ quan nhà nước khác, tổ chức, cá nhân cung cấp. Việc hỗ trợ của cơ quan thuế không thay thế trách nhiệm khai thuế và xác định số thuế phải nộp của hộ kinh doanh, cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh chịu trách nhiệm trước pháp luật về tính trung thực, chính xác của hồ sơ khai thuế.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm b",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại Điều 3",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_3"
+                    },
+                    {
+                      "text_match": "Điều 4",
+                      "target_id": "doc_68_2026_NDCP_chuong_I_dieu_4"
+                    },
+                    {
+                      "text_match": "theo quy định tại Điều 10",
+                      "target_id": "doc_68_2026_NDCP_chuong_III_dieu_10"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Khai thuế, tính thuế đối với các loại thuế khác Hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế phải nộp theo quy định của pháp luật về thuế và thực hiện khai thuế, nộp thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Thời hạn nộp hồ sơ khai thuế, nộp thuế",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Trường hợp khai thuế theo quý thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày cuối cùng của tháng đầu tiên của quý tiếp theo;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp khai thuế theo tháng thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày thứ 20 của tháng tiếp theo tháng phát sinh nghĩa vụ thuế trừ trường hợp khai thuế theo quy định tại khoản 1 Điều 18 Nghị định này;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm b",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại khoản 1 Điều 18",
+                      "target_id": "doc_68_2026_NDCP_chuong_III_dieu_18_khoan_1"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Trường hợp khai quyết toán thuế thu nhập cá nhân theo năm thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày 31 tháng 3 của năm dương lịch tiếp theo;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Trường hợp cá nhân trực tiếp khai thuế đối với hoạt động cho thuê bất động sản thì cá nhân được lựa chọn khai thuế hai lần trong năm tính thuế hoặc khai thuế một lần theo năm tính thuế. Trường hợp khai thuế hai lần trong năm tính thuế, thời hạn nộp hồ sơ khai thuế lần thứ nhất chậm nhất là ngày 31 tháng 7 của năm tính thuế và lần thứ hai chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo năm tính thuế. Trường hợp khai thuế một lần theo năm tính thuế, thời hạn nộp hồ sơ khai thuế chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo năm tính thuế;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Trường hợp tổ chức thuê bất động sản của cá nhân mà trong hợp đồng thuê bất động sản có thỏa thuận bên đi thuê là người khai thuế thay, nộp thuế thay thì tổ chức thực hiện khai thuế thay, nộp thuế thay cho cá nhân. Thời hạn nộp hồ sơ khai thuế xác định theo kỳ thanh toán tiền thuê bất động sản. Trường hợp cá nhân cho cá nhân thuê bất động sản thì cá nhân cho thuê bất động sản phải trực tiếp khai thuế;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm đ",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Thời hạn nộp thuế chậm nhất là ngày cuối cùng của thời hạn nộp hồ sơ khai thuế. Trường hợp khai bổ sung hồ sơ khai thuế, thời hạn nộp thuế là thời hạn nộp hồ sơ khai thuế của kỳ tính thuế có sai, sót.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm e",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4",
+              "node_type": "Khoản",
+              "node_index": "4",
+              "title": null,
+              "content": "Địa điểm khai thuế, nộp thuế",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử. Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê. Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Thông báo địa điểm kinh doanh",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm đ",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5",
+              "node_type": "Khoản",
+              "node_index": "5",
+              "title": null,
+              "content": "Sử dụng hóa đơn điện tử",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Hộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng hằng năm từ 01 tỷ đồng trở lên thì phải áp dụng hóa đơn điện tử có mã của cơ quan thuế, hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế theo quy định tại khoản 8 Điều 1 Nghị định số 70/2025/NĐ-CP Trường hợp hộ kinh doanh, cá nhân kinh doanh có nhiều địa điểm kinh doanh thì sử dụng mã số thuế của hộ kinh doanh, cá nhân kinh doanh cho tất cả các cửa hàng và phải ghi rõ địa chỉ của từng địa điểm kinh doanh trên hóa đơn;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm a",
+                  "references": [
+                    {
+                      "text_match": "theo quy định tại khoản 8 Điều 1",
+                      "target_id": "external_nghi_dinh_70_2025_nd_cp_dieu_1_khoan_8"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Hộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trên 500 triệu đồng và dưới 01 tỷ đồng không bắt buộc sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp đáp ứng điều kiện và có nhu cầu sử dụng hóa đơn điện tử thì đăng ký sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp hộ kinh doanh, cá nhân kinh doanh không đăng ký sử dụng hóa đơn điện tử, có nhu cầu sử dụng hóa đơn điện tử thì thực hiện khai và nộp thuế trước khi được cơ quan thuế cấp hóa đơn điện tử có mã của cơ quan thuế theo từng lần phát sinh giao dịch bán hàng hóa, cung cấp dịch vụ;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh tại Điều 9 Nghị định này hoặc hộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trước chưa đến 01 tỷ đồng nhưng trong năm tính thuế có doanh thu tính thuế giá trị gia tăng từ 01 tỷ đồng trở lên thì phải áp dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Hộ kinh doanh, cá nhân kinh doanh đăng ký sử dụng hóa đơn điện tử trong thời gian 30 ngày kể từ ngày cuối cùng của kỳ tính thuế có doanh thu tính thuế giá trị gia tăng lũy kế từ 01 tỷ đồng trở lên.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c",
+                  "references": [
+                    {
+                      "text_match": "tại Điều 9",
+                      "target_id": "doc_68_2026_NDCP_chuong_III_dieu_9"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6",
+              "node_type": "Khoản",
+              "node_index": "6",
+              "title": null,
+              "content": "Tạm ngừng, chấm dứt hoạt động kinh doanh",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Hộ kinh doanh thuộc đối tượng phải đăng ký kinh doanh theo quy định của pháp luật về đăng ký doanh ng hiệp thì thực hiện thủ tục tạm ngừng hoạt động kinh doanh theo quy định tại Nghị định số 168/2025/NĐ-CP ngày 30 tháng 6 năm 2025 của Chính phủ về đăng ký doanh ng hiệp;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6 > Điểm a",
+                  "references": [
+                    {
+                      "text_match": "Nghị định số 168/2025/NĐ-CP",
+                      "target_id": "external_nghi_dinh_168_2025_nd_cp"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp không phải đăng ký kinh doanh theo quy định của pháp luật về đăng ký doanh ng hiệp nhưng đã đăng ký thuế với cơ quan thuế thì người nộp thuế gửi thông báo đến cơ quan quản lý thuế quản lý trực tiếp để cập nhật tình trạng “tạm ngừng kinh doanh” theo quy định của Bộ Tài chính;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Trong thời gian tạm ngừng hoạt động, hộ kinh doanh, cá nhân kinh doanh không phải nộp hồ sơ khai thuế, trừ trường hợp tạm ngừng không trọn tháng nếu khai thuế theo tháng hoặc tạm ngừng không trọn quý nếu khai thuế theo quý;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh chấm dứt hoạt động kinh doanh trong năm thì hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế lũy kế từ đầu năm đến thời điểm chấm dứt hoạt động cùng hồ sơ chấm dứt hoạt động.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6 > Điểm d",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_9",
+          "node_type": "Điều",
+          "node_index": "9",
+          "title": "Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_9_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh bắt đầu hoạt động sản xuất, kinh doanh trong 06 tháng đầu năm nếu có doanh thu thực tế từ 500 triệu đồng trở xuống thì thực hiện thông báo doanh thu thực tế phát sinh kể từ khi bắt đầu hoạt động sản xuất, kinh doanh đến hết ngày 30 tháng 6 với cơ quan thuế quản lý trực tiếp chậm nhất là ngày 31 tháng 7 và thông báo doanh thu thực tế phát sinh trong 06 tháng cuối năm chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo. Trường hợp hộ kinh doanh, cá nhân kinh doanh bắt đầu hoạt động sản xuất, kinh doanh trong 06 tháng cuối năm nếu có doanh thu thực tế từ 500 triệu đồng trở xuống thì thực hiện thông báo doanh thu thực tế phát sinh chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_9_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh mới bắt đầu hoạt động sản xuất, kinh doanh, khi có doanh thu lũy kế trên 500 triệu đồng thì thực hiện khai thuế theo quý theo quy định tại Điều 10 Nghị định này kể từ quý phát sinh doanh thu trên 500 triệu đồng.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 2",
+              "references": [
+                {
+                  "text_match": "theo quy định tại Điều 10",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_10"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_9_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Từ năm tiếp theo, hộ kinh doanh, cá nhân kinh doanh nếu có doanh thu thực tế phát sinh từ 500 triệu đồng trở xuống thực hiện thông báo doanh thu theo quy định tại Điều 8 Nghị định này; trường hợp có doanh thu thực tế phát sinh trên 500 triệu đồng thì thực hiện khai thuế theo quy định tại Điều 10 Nghị định này.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 3",
+              "references": [
+                {
+                  "text_match": "theo quy định tại Điều 8",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_8"
+                },
+                {
+                  "text_match": "theo quy định tại Điều 10",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_10"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_10",
+          "node_type": "Điều",
+          "node_index": "10",
+          "title": "Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Khai thuế, nộp thuế giá trị gia tăng",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 1",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_1_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Trường hợp có doanh thu năm từ 50 tỷ đồng trở xuống thực hiện khai thuế, nộp thuế giá trị gia tăng theo quý;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 1 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_1_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Trường hợp có doanh thu năm trên 50 tỷ đồng thực hiện khai thuế, nộp thuế giá trị gia tăng theo tháng.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 1 > Điểm b",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Khai thuế, nộp thuế thu nhập cá nhân",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_11",
+          "node_type": "Điều",
+          "node_index": "11",
+          "title": "Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm tự kê khai, nộp thuế theo quy định tại Điều 8, Điều 9, Điều 10 Nghị định này.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+              "references": [
+                {
+                  "text_match": "theo quy định tại Điều 8",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_8"
+                },
+                {
+                  "text_match": "Điều 9",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_9"
+                },
+                {
+                  "text_match": "Điều 10",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_10"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số hoặc vừa có hoạt động kinh doanh tại địa điểm kinh doanh cố định vừa có kinh doanh trên nền tảng thương mại điện tử, nền tảng số nếu có doanh thu năm tổng hợp trên 03 tỷ đồng hoặc có doanh thu năm trên 500 triệu đồng và lựa chọn khai thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh thực hiện tổng hợp doanh thu để khai quyết toán thuế thu nhập cá nhân theo năm. Số thuế thu nhập cá nhân đã được chủ quản nền tảng thương mại điện tử, nền tảng số khấu trừ, nộp thay được trừ khi xác định số thuế thu nhập cá nhân phải nộp.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_4",
+              "node_type": "Khoản",
+              "node_index": "4",
+              "title": null,
+              "content": "Cá nhân không cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm tự kê khai, nộp thuế theo quy định tại Nghị định năm với cơ quan thuế, không phải thực hiện quyết toán thuế thu nhập cá nhân theo quy định tại Điều 8, Điều 10 Nghị định này.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 4",
+              "references": [
+                {
+                  "text_match": "theo quy định tại Điều 8",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_8"
+                },
+                {
+                  "text_match": "Điều 10",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_10"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_5",
+              "node_type": "Khoản",
+              "node_index": "5",
+              "title": null,
+              "content": "Hồ sơ khai thuế đối với hộ kinh doanh, cá nhân kinh doanh tại khoản 2, khoản 3 Điều này thực hiện theo quy định của Bộ trưởng Bộ Tài chính.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_12",
+          "node_type": "Điều",
+          "node_index": "12",
+          "title": "Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_12_khoan_5",
+              "node_type": "Khoản",
+              "node_index": "5",
+              "title": null,
+              "content": "Nơi nộp hồ sơ hoàn thuế là cơ quan thuế nơi nộp hồ sơ khai thuế. Trường hợp hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số đã được chủ quản nền tảng thương mại điện tử, nền tảng số thực hiện khấu trừ, nộp thuế thay hoặc chỉ có hoạt động kinh doanh khác đã được tổ chức khác khấu trừ, khai thay, nộp thuế thay thì cơ quan tiếp nhận và giải quyết hồ sơ hoàn thuế là cơ quan thuế quản lý nơi chủ hộ kinh doanh, cá nhân kinh doanh cư trú.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 5",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_13",
+          "node_type": "Điều",
+          "node_index": "13",
+          "title": "Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 13: Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_14",
+          "node_type": "Điều",
+          "node_index": "14",
+          "title": "Trách nhiệm của tổ chức, cá nhân khai thay, nộp thay, khấu trừ thuế",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 14: Trách nhiệm của tổ chức, cá nhân khai thay, nộp thay, khấu trừ thuế",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_14_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Kê khai đầy đủ, chính xác, đúng thời hạn doanh thu và số thuế phải nộp; nộp thuế vào ngân sách nhà nước theo quy định.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 14: Trách nhiệm của tổ chức, cá nhân khai thay, nộp thay, khấu trừ thuế > Khoản 1",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_14_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Chịu trách nhiệm trước pháp luật về hành vi chậm kê khai, chậm nộp, kê khai sai, khấu trừ hoặc nộp thuế không đúng quy định theo quy định của Luật Quản lý thuế.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 14: Trách nhiệm của tổ chức, cá nhân khai thay, nộp thay, khấu trừ thuế > Khoản 2",
+              "references": [
+                {
+                  "text_match": "theo quy định của Luật Quản lý thuế",
+                  "target_id": "external_luat_quan_ly_thue"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_14_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Trường hợp tổ chức, cá nhân khai thuế thay, nộp thuế thay cho cá nhân không thực hiện hoặc thực hiện không đúng quy định của pháp luật thuế và pháp luật khác có liên quan thì bị xử lý theo quy định của Luật Quản lý thuế.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 14: Trách nhiệm của tổ chức, cá nhân khai thay, nộp thay, khấu trừ thuế > Khoản 3",
+              "references": [
+                {
+                  "text_match": "theo quy định của Luật Quản lý thuế",
+                  "target_id": "external_luat_quan_ly_thue"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15",
+          "node_type": "Điều",
+          "node_index": "15",
+          "title": "Trách nhiệm của Ủy ban nhân dân các cấp",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "Trách nhiệm của Ủy ban nhân dân cấp tỉnh",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Chỉ đạo các sở, ban, ngành và Ủy ban nhân dân cấp xã thực hiện đầy đủ các quy định của pháp luật về đăng ký kinh doanh, quản lý hộ kinh doanh, cá nhân kinh doanh và cung cấp thông tin cho cơ quan thuế theo quy định;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Chỉ đạo Sở Tài chính, các cơ quan cấp phép chuyên ngành và các đơn vị liên quan thiết lập, cập nhật và chia sẻ cơ sở dữ liệu hộ kinh doanh, cá nhân kinh doanh với cơ quan thuế; bảo đảm kết nối đồng bộ, chính xác giữa dữ liệu đăng ký kinh doanh và cơ sở dữ liệu thuế;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Chỉ đạo cơ quan quản lý thị trường, công an, tài chính, thông tin và truyền thông, nội vụ và các cơ quan chuyên môn trực thuộc phối hợp với cơ quan thuế trong kiểm tra, giám sát hoạt động kinh doanh; phòng, chống thất thu thuế; xử lý các hành vi vi phạm pháp luật về thuế và hoạt động kinh doanh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Bảo đảm nguồn lực, cơ sở hạ tầng kỹ thuật để triển khai hóa đơn điện tử, chứng từ điện tử đối với hộ kinh doanh, cá nhân kinh doanh trên địa bàn; chỉ đạo cơ quan chuyên môn hỗ trợ, hướng dẫn người nộp thuế sử dụng hóa đơn điện tử;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_1_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Đôn đốc Ủy ban nhân dân cấp xã thực hiện rà soát, nắm chắc tình hình hoạt động của hộ kinh doanh, cá nhân kinh doanh trên địa bàn; bảo đảm việc cung cấp thông tin đầy đủ, kịp thời, đúng thực tế cho cơ quan thuế.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm đ",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Trách nhiệm của Ủy ban nhân dân cấp xã",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_2_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Phối hợp với cơ quan thuế, quản lý thị trường, công an và các cơ quan liên quan trong việc kiểm tra, phát hiện, ngăn chặn và xử lý hành vi không đăng ký kinh doanh, kinh doanh không khai thuế, trốn thuế;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_2_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Định kỳ báo cáo Ủy ban nhân dân cấp tỉnh thông qua đầu mối do tỉnh quy định về tình hình hộ kinh doanh, cá nhân kinh doanh trên địa bàn; đề xuất biện pháp tăng cường quản lý, xử lý vướng mắc phát sinh;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm e",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_15_khoan_2_diem_g",
+                  "node_type": "Điểm",
+                  "node_index": "g",
+                  "title": null,
+                  "content": "Thực hiện các nhiệm vụ khác theo chỉ đạo của Ủy ban nhân dân cấp tỉnh và theo quy định của pháp luật để hỗ trợ công tác quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm g",
+                  "references": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16",
+          "node_type": "Điều",
+          "node_index": "16",
+          "title": "Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1",
+              "node_type": "Khoản",
+              "node_index": "1",
+              "title": null,
+              "content": "",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+              "references": [],
+              "children": [
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_a",
+                  "node_type": "Điểm",
+                  "node_index": "a",
+                  "title": null,
+                  "content": "Cung cấp đầy đủ, kịp thời thông tin, hướng dẫn chính sách thuế, thủ tục đăng ký, kê khai, nộp thuế bằng các hình thức phù hợp;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm a",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_b",
+                  "node_type": "Điểm",
+                  "node_index": "b",
+                  "title": null,
+                  "content": "Hướng dẫn sử dụng các ứng dụng, nền tảng kê khai, nộp thuế điện tử;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm b",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_c",
+                  "node_type": "Điểm",
+                  "node_index": "c",
+                  "title": null,
+                  "content": "Thiết lập các kênh hỗ trợ người nộp thuế như đường dây nóng, bộ phận tư vấn trực tiếp, phản hồi trực tuyến;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm c",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_d",
+                  "node_type": "Điểm",
+                  "node_index": "d",
+                  "title": null,
+                  "content": "Công khai quy trình, thời hạn giải quyết hồ sơ, biểu mẫu, tỷ lệ tính thuế, thuế suất, mức phạt (nếu có) để người nộp thuế dễ theo dõi và thực hiện;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm d",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_đ",
+                  "node_type": "Điểm",
+                  "node_index": "đ",
+                  "title": null,
+                  "content": "Kịp thời tiếp nhận và xử lý các ý kiến, phản ánh, vướng mắc từ hộ kinh doanh, cá nhân kinh doanh theo đúng thời hạn quy định;",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm đ",
+                  "references": [],
+                  "children": []
+                },
+                {
+                  "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_1_diem_e",
+                  "node_type": "Điểm",
+                  "node_index": "e",
+                  "title": null,
+                  "content": "Trường hợp kiểm tra, làm việc trực tiếp, cơ quan thuế phải thông báo trước, tránh gây ảnh hưởng đến hoạt động bình thường của hộ kinh doanh, cá nhân kinh doanh.",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm e",
+                  "references": [],
+                  "children": []
+                }
+              ],
+              "lead_in_text": "Cơ quan thuế có trách nhiệm hỗ trợ và tạo điều kiện thuận lợi cho hộ kinh doanh, cá nhân kinh doanh"
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Cơ quan thuế có trách nhiệm thực hiện quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh theo nguyên tắc minh bạch thông tin, thuận tiện, không làm phát sinh thêm thủ tục, giấy tờ ngoài quy định của pháp luật.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_16_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Cơ quan thuế có trách nhiệm kiểm tra, giám sát việc thực hiện nhiệm vụ hỗ trợ người nộp thuế trong nội bộ ngành; kịp thời chấn chỉnh, xử lý trường hợp cán bộ gây phiền hà, sách nhiễu hoặc thực hiện không đúng quy định, không được yêu cầu hộ kinh doanh, cá nhân kinh doanh cung cấp lại thông tin, hồ sơ đã có trong hệ thống hoặc đã được cơ quan khác xác nhận.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 16: Trách nhiệm của cơ quan thuế trong quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_17",
+          "node_type": "Điều",
+          "node_index": "17",
+          "title": "Trách nhiệm thi hành",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 17: Trách nhiệm thi hành",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_17_khoan_5",
+              "node_type": "Khoản",
+              "node_index": "5",
+              "title": null,
+              "content": "Đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế theo phương pháp khoán từ năm 2025 trở về trước và đã được xác định mức thuế khoán (bao gồm cả trường hợp hộ kinh doanh, cá nhân kinh doanh có thay đổi về quy mô sản xuất kinh doanh dẫn đến doanh thu khoán thuế thay đổi từ 50% trở lên) theo quy định của Luật Quản lý thuế số 38/2019/QH14 và các văn bản hướng dẫn thi hành, khi chuyển sang thực hiện kê khai thuế kể từ ngày 01 tháng 01 năm 2026, cơ quan thuế không sử dụng doanh thu khai thuế năm 2026 để xác định lại nghĩa vụ thuế các năm trước, không xử phạt vi phạm hành chính đối với các nghĩa vụ thuế đã thực hiện theo phương pháp khoán, trừ trường hợp cơ quan thuế, cơ quan nhà nước có thẩm quyền phát hiện hộ kinh doanh, cá nhân kinh doanh có hành vi che giấu doanh thu dẫn đến thiếu số thuế phải nộp.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 17: Trách nhiệm thi hành > Khoản 5",
+              "references": [
+                {
+                  "text_match": "theo quy định của Luật Quản lý thuế số",
+                  "target_id": "external_luat_quan_ly_thue_so"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_18",
+          "node_type": "Điều",
+          "node_index": "18",
+          "title": "Điều khoản chuyển tiếp",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 18: Điều khoản chuyển tiếp",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_18_khoan_2",
+              "node_type": "Khoản",
+              "node_index": "2",
+              "title": null,
+              "content": "Tờ khai khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số thuế đã khấu trừ của hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số tiền nộp thuế của chủ quản nền tảng thương mại điện tử, chứng từ khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử tiếp tục thực hiện theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân.",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 18: Điều khoản chuyển tiếp > Khoản 2",
+              "references": [
+                {
+                  "text_match": "Nghị định số 117/2025/NĐ-CP",
+                  "target_id": "external_nghi_dinh_117_2025_nd_cp"
+                }
+              ],
+              "children": []
+            },
+            {
+              "node_id": "doc_68_2026_NDCP_chuong_III_dieu_18_khoan_3",
+              "node_type": "Khoản",
+              "node_index": "3",
+              "title": null,
+              "content": "Đối với các hợp đồng cho thuê bất động sản phát sinh trước thời điểm ngày 01 tháng 01 năm 2026 và thời hạn còn lại của hợp đồng trên 06 tháng nếu đã nộp thuế giá trị gia tăng, thu nhập cá nhân thì được điều chỉnh mức doanh thu không chịu thuế giá trị gia tăng theo quy định tại khoản 1 Điều 3, mức doanh thu không phải nộp thuế thu nhập cá nhân quy định tại khoản 1 Điều 4 Nghị định này, trường hợp mức doanh thu còn lại trên 500 triệu đồng thì thực hiện nộp thuế theo quy định tại Nghị định này và được xử lý tiền thuế đã nộp theo quy định tại Điều 12 Nghị định này (nếu có).",
+              "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 18: Điều khoản chuyển tiếp > Khoản 3",
+              "references": [
+                {
+                  "text_match": "theo quy định tại khoản 1 Điều 3",
+                  "target_id": "doc_68_2026_NDCP_chuong_I_dieu_3_khoan_1"
+                },
+                {
+                  "text_match": "tại khoản 1 Điều 4",
+                  "target_id": "doc_68_2026_NDCP_chuong_I_dieu_4_khoan_1"
+                },
+                {
+                  "text_match": "theo quy định tại Điều 12",
+                  "target_id": "doc_68_2026_NDCP_chuong_III_dieu_12"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_68_2026_NDCP_chuong_III_dieu_19",
+          "node_type": "Điều",
+          "node_index": "19",
+          "title": "Hiệu lực thi hành",
+          "content": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 19: Hiệu lực thi hành",
+          "references": [],
+          "children": []
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_index": 0,
+      "headers": [
+        "1. Người nộp thuế là hộ kinh doanh, cá nhân kinh doanh."
+      ],
+      "rows": [
+        [
+          "2. Cơ quan thuế các cấp và công chức thuế."
+        ],
+        [
+          "3. Các cơ quan, tổ chức, cá nhân khác có liên quan đến việc thực hiện"
+        ],
+        [
+          "nghĩa vụ thuế của hộ kinh doanh, cá nhân kinh doanh."
+        ],
+        [
+          "Chương II"
+        ]
+      ],
+      "row_count": 4,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 2
+    },
+    {
+      "table_index": 1,
+      "headers": [
+        "1. Doanh thu là toàn bộ tiền bán hàng, tiền gia công, tiền cung ứng dịch"
+      ],
+      "rows": [
+        [
+          "vụ kể cả trợ giá, phụ thu, phụ trội mà hộ kinh doanh, cá nhân kinh doanh được"
+        ],
+        [
+          "hưởng, không phân biệt đã thu được tiền hay chưa thu được tiền; bao gồm cả"
+        ],
+        [
+          "các khoản thưởng được nhận, khoản được nhận từ hỗ trợ đạt doanh số, khuyến"
+        ],
+        [
+          "mại, chiết khấu thanh toán, khoản hỗ trợ được nhận bằng tiền hoặc không bằng"
+        ],
+        [
+          "tiền, các khoản bồi thường vi phạm hợp đồng, bồi thường khác liên quan đến"
+        ],
+        [
+          "hoạt động kinh doanh, doanh thu khác mà cá nhân kinh doanh được nhận không"
+        ],
+        [
+          "phân biệt đã thu được tiền hay chưa thu được tiền, không bao gồm chiết khấu"
+        ],
+        [
+          "thương mại, giảm giá hàng bán và giá trị hàng bán bị trả lại."
+        ]
+      ],
+      "row_count": 8,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 4
+    },
+    {
+      "table_index": 2,
+      "headers": [
+        "Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở"
+      ],
+      "rows": [
+        [
+          "chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý"
+        ],
+        [
+          "trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày"
+        ],
+        [
+          "làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ"
+        ],
+        [
+          "trưởng Bộ Tài chính quy định."
+        ],
+        [
+          "Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm"
+        ],
+        [
+          "ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông"
+        ],
+        [
+          "báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh"
+        ],
+        [
+          "doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng,"
+        ],
+        [
+          "chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính."
+        ]
+      ],
+      "row_count": 9,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 9
+    },
+    {
+      "table_index": 3,
+      "headers": [
+        "",
+        "sửa đổi, bổ sung một số điều của"
+      ],
+      "rows": [
+        [
+          "Nghị định số 123/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy",
+          ""
+        ],
+        [
+          "định về hóa đơn, chứng từ.",
+          ""
+        ]
+      ],
+      "row_count": 2,
+      "col_count": 2,
+      "extraction_strategy": "lines",
+      "page_number": 9
+    },
+    {
+      "table_index": 4,
+      "headers": [
+        "7. Tổ chức thuê bất động sản của cá nhân mà trong hợp đồng thuê bất động"
+      ],
+      "rows": [
+        [
+          "sản có thỏa thuận bên đi thuê là người khai thuế thay, nộp thuế thay; tổ chức"
+        ],
+        [
+          "hợp tác kinh doanh với hộ kinh doanh, cá nhân kinh doanh, tổ chức ký hợp"
+        ],
+        [
+          "đồng với hộ kinh doanh, cá nhân kinh doanh làm đại lý bán đúng giá đối với"
+        ],
+        [
+          "xổ số, bảo hiểm, bán hàng đa cấp có trách nhiệm khai thuế thay, nộp thuế thay"
+        ],
+        [
+          "cho cá nhân khi chi trả thu nhập cho cá nhân. Hồ sơ khai thuế thay, nộp thuế"
+        ],
+        [
+          "thay thực hiện theo quy định của Bộ trưởng Bộ Tài chính."
+        ]
+      ],
+      "row_count": 6,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 11
+    },
+    {
+      "table_index": 5,
+      "headers": [
+        "a) Hộ kinh doanh, cá nhân kinh doanh lựa chọn nộp thuế thu nhập cá nhân"
+      ],
+      "rows": [
+        [
+          "theo phương pháp thuế suất nhân (x) doanh thu tính thuế thực hiện khai, nộp"
+        ],
+        [
+          "thuế thu nhập cá nhân theo quý cùng thời hạn khai, nộp thuế giá trị gia tăng;"
+        ],
+        [
+          "b) Hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập"
+        ],
+        [
+          "cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thực hiện khai"
+        ],
+        [
+          "tạm nộp thuế thu nhập cá nhân theo tháng, quý trên cùng hồ sơ khai thuế giá trị"
+        ],
+        [
+          "gia tăng. Số thuế thu nhập cá nhân tạm nộp bằng thuế suất nhân (x) doanh thu"
+        ],
+        [
+          "tính thuế của tháng, quý và khai quyết toán thuế thu nhập cá nhân theo năm."
+        ],
+        [
+          "Trường hợp số thuế thu nhập cá nhân đã tạm nộp ít hơn số thuế đã khai tạm"
+        ],
+        [
+          "nộp, số thuế tạm nộp ít hơn số thuế phải nộp khi quyết toán thì hộ kinh doanh,"
+        ],
+        [
+          "cá nhân kinh doanh thực hiện nộp bổ sung và không phải tính tiền chậm nộp."
+        ],
+        [
+          "Trường hợp số thuế thu nhập cá nhân tạm nộp nhiều hơn số thuế phải nộp khi"
+        ],
+        [
+          "quyết toán thì thực hiện thủ tục xử lý tiền thuế nộp thừa theo quy định tại"
+        ],
+        [
+          "Điều 12 Nghị định này."
+        ]
+      ],
+      "row_count": 13,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 12
+    },
+    {
+      "table_index": 6,
+      "headers": [
+        "",
+        "Chủ quản nền tảng thương mại điện tử, nền tảng số khác trong nước",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "hoặc nước ngoài có chức năng đặt hàng trực tuyến và chức năng thanh toán có",
+          "",
+          "",
+          ""
+        ],
+        [
+          "trách nhiệm",
+          "",
+          "thực hiện khấu trừ, khai thay và nộp thay số thuế đã khấu trừ đ",
+          "ối"
+        ],
+        [
+          "với mỗi giao dịch cung cấp hàng hóa, dịch vụ của hộ kinh doanh, cá nhân kinh",
+          "",
+          "",
+          ""
+        ],
+        [
+          "doanh theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2025 của Chính phủ quy định quản lý thuế đối với hoạt động kinh doanh trên",
+          "",
+          "",
+          ""
+        ],
+        [
+          "nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân.",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_count": 6,
+      "col_count": 4,
+      "extraction_strategy": "lines",
+      "page_number": 12
+    },
+    {
+      "table_index": 7,
+      "headers": [
+        "",
+        "quy định quản"
+      ],
+      "rows": [
+        [
+          "lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng",
+          ""
+        ],
+        [
+          "số của hộ, cá nhân",
+          ""
+        ]
+      ],
+      "row_count": 2,
+      "col_count": 2,
+      "extraction_strategy": "lines",
+      "page_number": 12
+    },
+    {
+      "table_index": 8,
+      "headers": [
+        "1. Trường hợp hộ kinh doanh, cá nhân kinh doanh đã được tổ chức quy"
+      ],
+      "rows": [
+        [
+          "định tại khoản 1 Điều 11 Nghị định này hoặc tổ chức, cá nhân khác thực hiện"
+        ],
+        [
+          "khấu trừ và nộp thuế thay số thuế giá trị gia tăng và thuế thu nhập cá nhân đối"
+        ],
+        [
+          "với các giao dịch phát sinh trong năm nhưng có doanh thu thực tế phát sinh của"
+        ],
+        [
+          "năm từ 500 triệu đồng trở xuống thì thực hiện thủ tục bù trừ, hoàn trả, hoàn trả"
+        ],
+        [
+          "kiêm bù trừ thu ngân sách theo quy định của pháp luật quản lý thuế đối với số"
+        ],
+        [
+          "thuế nộp thừa."
+        ],
+        [
+          "2. Trường hợp hộ kinh doanh, cá nhân kinh doanh đã nộp thuế giá trị gia"
+        ],
+        [
+          "tăng, thuế thu nhập cá nhân đối với hoạt động kinh doanh nhưng có doanh thu"
+        ],
+        [
+          "thực tế phát sinh của năm từ 500 triệu đồng trở xuống thì thực hiện xử lý bù"
+        ],
+        [
+          "trừ, hoàn trả, hoàn trả kiêm bù trừ thu ngân sách theo quy định của pháp luật"
+        ],
+        [
+          "quản lý thuế đối với số thuế nộp thừa."
+        ],
+        [
+          "3. Trường hợp hộ kinh doanh, cá nhân kinh doanh có số tiền thuế, tiền"
+        ],
+        [
+          "chậm nộp, tiền phạt đã nộp hoặc được các tổ chức, cá nhân đã khấu trừ, nộp"
+        ],
+        [
+          "thay lớn hơn số tiền thuế, tiền chậm nộp, tiền phạt phải nộp thì thực hiện xử lý"
+        ],
+        [
+          "bù trừ, hoàn trả, hoàn trả kiêm bù trừ thu ngân sách theo quy định của pháp luật"
+        ],
+        [
+          "quản lý thuế đối với số thuế nộp thừa."
+        ],
+        [
+          "4. Hồ sơ đề nghị xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa, thẩm"
+        ],
+        [
+          "quyền, trách nhiệm tiếp nhận, giải quyết trình tự, thủ tục thực hiện theo quy"
+        ],
+        [
+          "định của Bộ trưởng Bộ Tài chính."
+        ]
+      ],
+      "row_count": 19,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 13
+    },
+    {
+      "table_index": 9,
+      "headers": [
+        ""
+      ],
+      "rows": [
+        [
+          "Chương IV"
+        ],
+        [
+          "TRÁCH NHIỆM VÀ TỔ CHỨC THI HÀNH"
+        ]
+      ],
+      "row_count": 2,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 13
+    },
+    {
+      "table_index": 10,
+      "headers": [
+        "1. Hộ kinh doanh, cá nhân kinh doanh có quyền yêu cầu cơ quan thuế"
+      ],
+      "rows": [
+        [
+          "hướng dẫn, giải đáp thắc mắc, hỗ trợ về khai thuế, tính thuế và nộp thuế."
+        ],
+        [
+          "2. Hộ kinh doanh, cá nhân kinh doanh có các quyền của người nộp thuế"
+        ],
+        [
+          "theo quy định pháp luật về quản lý thuế."
+        ],
+        [
+          "3. Hộ kinh doanh, cá nhân kinh doanh tự kê khai đầy đủ, chính xác doanh"
+        ],
+        [
+          "thu phát sinh từ hoạt động sản xuất, kinh doanh để xác định số thuế phải nộp"
+        ],
+        [
+          "theo quy định của pháp luật thuế và tự chịu trách nhiệm trước pháp luật về nội"
+        ],
+        [
+          "dung đã kê khai."
+        ],
+        [
+          "4. Hộ kinh doanh, cá nhân kinh doanh thực hiện thông báo cho cơ quan"
+        ],
+        [
+          "thuế theo phương thức điện tử tất cả các số tài khoản mở tại tổ chức cung ứng"
+        ],
+        [
+          "dịch vụ thanh toán, số hiệu ví điện tử mở tại tổ chức cung ứng dịch vụ trung"
+        ],
+        [
+          "gian thanh toán liên quan đến sản xuất, kinh doanh."
+        ],
+        [
+          "5. Hộ kinh doanh, cá nhân kinh doanh có trách nhiệm sử dụng sổ kế toán"
+        ],
+        [
+          "theo quy định của pháp luật kế toán và hướng dẫn của Bộ trưởng Bộ Tài chính;"
+        ],
+        [
+          "sử dụng hóa đơn theo quy định."
+        ],
+        [
+          "6. Hộ kinh doanh, cá nhân kinh doanh có trách nhiệm cung cấp sổ kế toán,"
+        ],
+        [
+          "hóa đơn, phần mềm quản lý bán hàng, tài liệu liên quan theo yêu cầu của cơ"
+        ],
+        [
+          "quan thuế khi kiểm tra thuế."
+        ],
+        [
+          "7. Hộ kinh doanh, cá nhân kinh doanh cư trú có hoạt động kinh doanh trên"
+        ],
+        [
+          "nền tảng thương mại điện tử có trách nhiệm kê khai và nộp thuế tiêu thụ đặc"
+        ],
+        [
+          "biệt, thuế bảo vệ môi trường, thuế tài nguyên, phí bảo vệ môi trường và các"
+        ],
+        [
+          "khoản thu khác phải nộp ngân sách nhà nước do cơ quan thuế quản lý thu theo"
+        ],
+        [
+          "quy định của pháp luật về thuế, pháp luật về quản lý thuế và pháp luật khác có"
+        ],
+        [
+          "liên quan."
+        ],
+        [
+          "8. Hộ kinh doanh, cá nhân kinh doanh có hoạt động kinh doanh trên nền"
+        ],
+        [
+          "tảng thương mại điện tử có trách nhiệm cung cấp đầy đủ, chính xác cho chủ"
+        ],
+        [
+          "quản nền tảng thương mại điện tử thông tin mã số thuế hoặc số định danh cá"
+        ],
+        [
+          "nhân đối với công dân Việt Nam; số hộ chiếu hoặc thông tin định danh do cơ"
+        ],
+        [
+          "quan có thẩm quyền nước ngoài cấp đối với công dân nước ngoài và thông tin,"
+        ],
+        [
+          "tài liệu liên quan đến việc xác định nghĩa vụ thuế phải nộp, các thông tin bắt"
+        ],
+        [
+          "buộc đối với người bán theo quy định của pháp luật về thương mại điện tử."
+        ],
+        [
+          "a) Phối hợp với cơ quan thuế để rà soát, thu thập và cập nhật danh sách hộ"
+        ],
+        [
+          "kinh doanh, cá nhân kinh doanh đang hoạt động trên địa bàn; phát hiện và thông"
+        ],
+        [
+          "báo kịp thời cho cơ quan thuế các trường hợp: bắt đầu kinh doanh, tạm ngừng,"
+        ],
+        [
+          "chấm dứt hoạt động, thay đổi ngành nghề, địa điểm kinh doanh trên địa bàn,"
+        ],
+        [
+          "kinh doanh không đăng ký, kinh doanh trái phép, ngoài địa điểm được cấp phép;"
+        ],
+        [
+          "b) Phối hợp với cơ quan thuế trong việc tổ chức tuyên truyền, phổ biến"
+        ],
+        [
+          "chính sách pháp luật về thuế đến người dân, hộ kinh doanh và cá nhân kinh"
+        ],
+        [
+          "doanh. Hỗ trợ công tác tuyên truyền lưu động, niêm yết thông tin, hướng dẫn"
+        ],
+        [
+          "người nộp thuế thực hiện kê khai, nộp thuế đúng quy định. Phản ánh các khó"
+        ],
+        [
+          "khăn, vướng mắc của người dân liên quan đến chính sách thuế đến cơ quan thuế"
+        ],
+        [
+          "để cùng phối hợp giải quyết;"
+        ],
+        [
+          "c) Chỉ đạo các cơ quan chuyên môn, cơ quan có liên quan trên địa bàn"
+        ],
+        [
+          "phối hợp và hỗ trợ cơ quan thuế theo thẩm quyền trong việc phát hiện, xác minh"
+        ],
+        [
+          "và xử lý các hành vi vi phạm pháp luật thuế của hộ kinh doanh, cá nhân kinh"
+        ],
+        [
+          "doanh khi có yêu cầu của cơ quan thuế; bao gồm việc xác minh thông tin người"
+        ],
+        [
+          "nộp thuế, địa chỉ kinh doanh, quy mô hoạt động kinh doanh, số lượng hộ kinh"
+        ],
+        [
+          "doanh, cá nhân kinh doanh, doanh thu, phối hợp lập biên bản vi phạm và cung"
+        ],
+        [
+          "cấp hồ sơ, tài liệu liên quan trên địa bàn theo quy định của pháp luật quản lý"
+        ],
+        [
+          "thuế và pháp luật có liên quan;"
+        ]
+      ],
+      "row_count": 49,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 16
+    },
+    {
+      "table_index": 11,
+      "headers": [
+        "đ) Kiểm tra, giám sát và xử lý đối với các hộ kinh doanh, cá nhân kinh"
+      ],
+      "rows": [
+        [
+          "doanh hoạt động kinh doanh tại các địa điểm kinh doanh trái phép, hoạt động"
+        ],
+        [
+          "tại địa điểm kinh doanh không đủ điều kiện theo quy định của pháp luật;"
+        ],
+        [
+          "1. Bộ trưởng, Thủ trưởng cơ quan ngang bộ căn cứ chức năng, nhiệm vụ"
+        ],
+        [
+          "được giao có trách nhiệm triển khai thực hiện Nghị định này."
+        ],
+        [
+          "2. Bộ Công Thương có trách nhiệm triển khai các giải pháp để quản lý"
+        ],
+        [
+          "toàn bộ hoạt động kinh doanh thương mại điện tử và phối hợp với Bộ Tài chính"
+        ],
+        [
+          "triển khai các giải pháp hỗ trợ chủ quản nền tảng thương mại điện tử, nền tảng"
+        ],
+        [
+          "số khác thuộc đối tượng khấu trừ, khai thay, nộp thuế thay thực hiện theo quy định"
+        ],
+        [
+          "tại Nghị định này."
+        ],
+        [
+          "3. Bộ Tài chính có trách nhiệm hướng dẫn, tổ chức triển khai các giải pháp"
+        ],
+        [
+          "hỗ trợ chủ quản nền tảng thương mại điện tử, nền tảng số khác thuộc đối tượng"
+        ],
+        [
+          "khấu trừ, khai thay, nộp thuế thay theo quy định tại Nghị định này."
+        ],
+        [
+          "4. Cơ quan thuế thực hiện rà soát cơ sở dữ liệu của hộ kinh doanh, cá nhân"
+        ],
+        [
+          "kinh doanh của năm 2025 để hướng dẫn:"
+        ],
+        [
+          "a) Hộ kinh doanh, cá nhân kinh doanh đã thực hiện nộp thuế theo phương"
+        ],
+        [
+          "pháp khoán hoặc phương pháp kê khai trong năm 2025 có mức doanh thu trên"
+        ],
+        [
+          "500 triệu đồng thực hiện kê khai, nộp thuế của năm 2026 theo quy định tại Điều"
+        ],
+        [
+          "10 Nghị định này;"
+        ],
+        [
+          "b) Hộ kinh doanh, cá nhân kinh doanh đã nộp thuế theo phương pháp"
+        ],
+        [
+          "khoán hoặc phương pháp kê khai trong năm 2025, có doanh thu từ 500 triệu"
+        ],
+        [
+          "đồng trở xuống thực hiện thông báo doanh thu của năm 2026 theo quy định tại"
+        ],
+        [
+          "điểm a khoản 1 Điều 8 Nghị định này."
+        ],
+        [
+          "Chương V"
+        ],
+        [
+          "ĐIỀU KHOẢN THI HÀNH"
+        ]
+      ],
+      "row_count": 24,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 18
+    },
+    {
+      "table_index": 12,
+      "headers": [
+        "1. Trường hợp khai thuế theo tháng thì hồ sơ khai thuế tháng 1, tháng 2,"
+      ],
+      "rows": [
+        [
+          "tháng 3 năm 2026 gửi cho cơ quan thuế quản lý trực tiếp chậm nhất là ngày 20"
+        ],
+        [
+          "tháng 4 năm 2026; các quy định về khai bổ sung hồ sơ khai thuế, gia hạn nộp"
+        ],
+        [
+          "hồ sơ khai thuế, gia hạn nộp thuế, trường hợp tổ chức, cá nhân khai thuế thay,"
+        ],
+        [
+          "nộp thuế thay cho cá nhân và các nội dung quản lý thuế khác tiếp tục thực hiện"
+        ],
+        [
+          "theo quy định tại Luật Quản lý thuế số 38/2019/QH14, Nghị định số"
+        ],
+        [
+          "126/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định chi tiết"
+        ],
+        [
+          "một số điều của Luật Quản lý thuế và các văn bản hướng dẫn thực hiện cho đến"
+        ],
+        [
+          "khi có văn bản thay thế."
+        ]
+      ],
+      "row_count": 8,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 18
+    },
+    {
+      "table_index": 13,
+      "headers": [
+        "4. Đối với hộ kinh doanh, cá nhân kinh doanh trong năm 2025 nộp thuế"
+      ],
+      "rows": [
+        [
+          "theo phương pháp khoán hoặc phương pháp kê khai, có mức doanh thu từ 03"
+        ],
+        [
+          "tỷ đồng trở lên hoặc từ năm 2026 lựa chọn nộp thuế thu nhập cá nhân theo"
+        ],
+        [
+          "phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân"
+        ],
+        [
+          "kinh doanh thực hiện xác định, ghi nhận giá trị hàng tồn kho, máy móc, thiết bị"
+        ],
+        [
+          "đang phục vụ hoạt động sản xuất, kinh doanh tại thời điểm ngày 31 tháng 12"
+        ],
+        [
+          "năm 2025 để làm căn cứ xác định chi phí được trừ khi tính thuế thu nhập cá"
+        ],
+        [
+          "nhân cho kỳ tính thuế năm 2026. Hộ kinh doanh, cá nhân kinh doanh lập Bảng"
+        ],
+        [
+          "kê hàng tồn kho, máy móc, thiết bị theo mẫu do Bộ trưởng Bộ Tài chính quy"
+        ],
+        [
+          "định, lưu giữ tại hộ kinh doanh, cá nhân kinh doanh và gửi 01 bản cho cơ quan"
+        ],
+        [
+          "thuế quản lý trực tiếp bằng phương thức điện tử cùng hồ sơ khai thuế quý I năm"
+        ],
+        [
+          "2026 đối với trường hợp khai thuế theo quý hoặc chậm nhất là ngày 20 tháng 4"
+        ],
+        [
+          "năm 2026 đối với trường hợp khai thuế theo tháng. Cơ quan thuế tiếp nhận"
+        ],
+        [
+          "thông tin để phục vụ công tác quản lý thuế. Việc tiếp nhận bảng kê của cơ quan"
+        ],
+        [
+          "thuế không có giá trị pháp lý trong việc xác nhận hoặc hợp thức hóa nguồn gốc,"
+        ],
+        [
+          "xuất xứ hàng hóa. Hộ kinh doanh, cá nhân kinh doanh chịu trách nhiệm trước"
+        ],
+        [
+          "pháp luật về tính trung thực, chính xác và đầy đủ của thông tin tại Bảng kê,"
+        ],
+        [
+          "trường hợp phát hiện vi phạm pháp luật thì xử lý theo quy định của pháp luật"
+        ],
+        [
+          "có liên quan."
+        ]
+      ],
+      "row_count": 18,
+      "col_count": 1,
+      "extraction_strategy": "lines",
+      "page_number": 19
+    }
+  ]
+}

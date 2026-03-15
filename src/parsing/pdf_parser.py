@@ -57,8 +57,8 @@ class PDFParser:
         result = parser.parse("data/raw/109_2025_QH15.pdf")
     """
 
-    def __init__(self):
-        self._pipeline = ParsePipeline()
+    def __init__(self, use_gemini: bool = False, gemini_model: str = "gemini-2.5-pro"):
+        self._pipeline = ParsePipeline(use_gemini=use_gemini, gemini_model=gemini_model)
 
     def parse(
         self,
@@ -80,7 +80,10 @@ class PDFParser:
         pdf_path = Path(pdf_path)
 
         if not pdf_path.exists():
-            raise FileNotFoundError(f"PDF not found: {pdf_path}")
+            raise FileNotFoundError(f"File not found: {pdf_path}")
+
+        if pdf_path.suffix.lower() not in (".pdf", ".docx", ".doc"):
+            raise ValueError(f"Unsupported file type: {pdf_path.suffix} (expected .pdf, .docx, or .doc)")
 
         logger.info(f"📄 Parsing: {pdf_path.name}")
 

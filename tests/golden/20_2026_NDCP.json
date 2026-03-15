@@ -4,15 +4,15 @@
     "document_type": "Nghị định",
     "document_number": "20/2026/NĐ-CP",
     "title": "Quy định chi tiết và hướng dẫn thi hành một số điều của Nghị quyết số 198/2025/QH15 ngày 17 tháng 5 năm 2025 của Quốc hội về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân",
-    "issue_date": "2026-01-15",
-    "effective_date": "2026-03-11"
+    "issue_date": "2025-05-17",
+    "effective_date": "2026-03-14"
   },
   "data": [
     {
       "node_id": "doc_20_2026_NDCP_chuong_I",
       "node_type": "Chương",
       "node_index": "I",
-      "title": "",
+      "title": "QUY ĐỊNH CHUNG",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương I",
       "references": [],
@@ -58,7 +58,7 @@
           "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương I > Điều 2: Đối tượng áp dụng",
           "references": [],
           "children": [],
-          "lead_in_text": "Nghị định này áp dụng đối với doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh và tổ chức, cá nhân khác có liên quan."
+          "lead_in_text": "Nghị định này áp dụng đối với doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh và tổ chức, cá nhân khác có liên quan."
         },
         {
           "node_id": "doc_20_2026_NDCP_chuong_I_dieu_3",
@@ -74,7 +74,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Doanh nghiệp công nghiệp hỗ trợ là doanh nghiệp hoạt động trong các ngành công nghiệp sản xuất, gia công nguyên liệu, phụ liệu, vật liệu, linh kiện và phụ tùng để cung cấp cho sản xuất sản phẩm hoàn chỉnh.",
+              "content": "Doanh ng hiệp công ng hiệp hỗ trợ là doanh ng hiệp hoạt động trong các ngành công ng hiệp sản xuất, gia công nguyên liệu, phụ liệu, vật liệu, linh kiện và phụ tùng để cung cấp cho sản xuất sản phẩm hoàn chỉnh.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương I > Điều 3: Giải thích từ ngữ > Khoản 1",
               "references": [],
               "children": []
@@ -84,12 +84,12 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, doanh nghiệp vừa được xác định theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn.",
+              "content": "Doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ, doanh ng hiệp vừa được xác định theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương I > Điều 3: Giải thích từ ngữ > Khoản 2",
               "references": [
                 {
-                  "text_match": "theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn",
-                  "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua"
+                  "text_match": "theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn",
+                  "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua"
                 }
               ],
               "children": []
@@ -99,7 +99,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo là trung tâm hỗ trợ khởi nghiệp sáng tạo, trung tâm đổi mới sáng tạo, tổ chức có hoạt động hỗ trợ đổi mới sáng tạo hoặc hỗ trợ hoạt động khởi nghiệp sáng tạo theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
+              "content": "Tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo là trung tâm hỗ trợ khởi ng hiệp sáng tạo, trung tâm đổi mới sáng tạo, tổ chức có hoạt động hỗ trợ đổi mới sáng tạo hoặc hỗ trợ hoạt động khởi ng hiệp sáng tạo theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương I > Điều 3: Giải thích từ ngữ > Khoản 3",
               "references": [
                 {
@@ -136,14 +136,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "QUY ĐỊNH CHUNG"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_chuong_II",
       "node_type": "Chương",
       "node_index": "II",
-      "title": "",
+      "title": "HỖ TRỢ TIẾP CẬN ĐẤT ĐAI, MẶT BẰNG SẢN XUẤT KINH DOANH",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II",
       "references": [],
@@ -152,9 +151,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_II_dieu_4",
           "node_type": "Điều",
           "node_index": "4",
-          "title": "Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công nghiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15",
+          "title": "Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công nghiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15",
           "references": [],
           "children": [
             {
@@ -162,8 +161,8 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Ủy ban nhân dân cấp tỉnh thực hiện công bố công khai thông tin trên cổng thông tin, trang tin điện tử của cơ quan mình về nguyên tắc, tiêu chí, định mức hỗ trợ đầu tư, nội dung hỗ trợ theo quy định tại khoản 1, 3 Điều 7 Nghị quyết số 198/2025/QH15; diện tích quỹ đất từng khu công nghiệp, vườn ươm công nghệ dành cho doanh nghiệp công nghệ cao thuộc khu vực kinh tế tư nhân, doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo thuê, thuê lại theo quy định tại khoản 2, khoản 4 Điều 7 Nghị quyết số 198/2025/QH15.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công nghiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 1",
+              "content": "Ủy ban nhân dân cấp tỉnh thực hiện công bố công khai thông tin trên cổng thông tin, trang tin điện tử của cơ quan mình về nguyên tắc, tiêu chí, định mức hỗ trợ đầu tư, nội dung hỗ trợ theo quy định tại khoản 1, 3 Điều 7 Nghị quyết số 198/2025/QH15; diện tích quỹ đất từng khu công ng hiệp, vườn ươm công nghệ dành cho doanh ng hiệp công nghệ cao thuộc khu vực kinh tế tư nhân, doanh ng hiệp nhỏ và vừa, doanh ng hiệp khởi ng hiệp sáng tạo thuê, thuê lại theo quy định tại khoản 2, khoản 4 Điều 7 Nghị quyết số 198/2025/QH15.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 1",
               "references": [
                 {
                   "text_match": "Điều 7",
@@ -181,8 +180,8 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Chủ đầu tư không được tính vốn, kinh phí hỗ trợ từ Nhà nước vào tổng vốn đầu tư của dự án đầu tư xây dựng và kinh doanh kết cấu hạ tầng khu công nghiệp, vườn ươm công nghệ và có trách nhiệm duy tu, bảo dưỡng, quản lý công trình kết cấu hạ tầng này sau khi được nghiệm thu, bàn giao từ chủ đầu tư công trình hoặc từ cơ quan nhà nước có thẩm quyền. Hình thức, trình tự, thủ tục hỗ trợ vốn đầu tư xây dựng hệ thống kết cấu hạ tầng khu công nghiệp, vườn ươm công nghệ thực hiện theo quy định của pháp luật về ngân sách nhà nước, pháp luật về đầu tư công, quy định của Ủy ban nhân dân cấp tỉnh và quy định khác của pháp luật có liên quan.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công nghiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2",
+              "content": "Chủ đầu tư không được tính vốn, kinh phí hỗ trợ từ Nhà nước vào tổng vốn đầu tư của dự án đầu tư xây dựng và kinh doanh kết cấu hạ tầng khu công ng hiệp, vườn ươm công nghệ và có trách nhiệm duy tu, bảo dưỡng, quản lý công trình kết cấu hạ tầng này sau khi được ng hiệm thu, bàn giao từ chủ đầu tư công trình hoặc từ cơ quan nhà nước có thẩm quyền. Hình thức, trình tự, thủ tục hỗ trợ vốn đầu tư xây dựng hệ thống kết cấu hạ tầng khu công ng hiệp, vườn ươm công nghệ thực hiện theo quy định của pháp luật về ngân sách nhà nước, pháp luật về đầu tư công, quy định của Ủy ban nhân dân cấp tỉnh và quy định khác của pháp luật có liên quan.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2",
               "references": [],
               "children": []
             },
@@ -191,8 +190,8 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Trường hợp khu công nghiệp được phân kỳ đầu tư theo các giai đoạn thì diện tích đất khu công nghiệp quy định tại khoản 4 Điều 7 Nghị quyết số 198/2025/QH15 được xác định theo từng giai đoạn. Sau thời hạn 02 năm kể từ ngày hoàn thành đầu tư xây dựng hệ thống kết cấu hạ tầng của từng giai đoạn mà không có doanh nghiệp công nghệ cao thuộc khu vực kinh tế tư nhân, doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo thuê, thuê lại thì chủ đầu tư kinh doanh hạ tầng khu công nghiệp được quyền cho các doanh nghiệp khác thuê, thuê lại.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công nghiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3",
+              "content": "Trường hợp khu công ng hiệp được phân kỳ đầu tư theo các giai đoạn thì diện tích đất khu công ng hiệp quy định tại khoản 4 Điều 7 Nghị quyết số 198/2025/QH15 được xác định theo từng giai đoạn. Sau thời hạn 02 năm kể từ ngày hoàn thành đầu tư xây dựng hệ thống kết cấu hạ tầng của từng giai đoạn mà không có doanh ng hiệp công nghệ cao thuộc khu vực kinh tế tư nhân, doanh ng hiệp nhỏ và vừa, doanh ng hiệp khởi ng hiệp sáng tạo thuê, thuê lại thì chủ đầu tư kinh doanh hạ tầng khu công ng hiệp được quyền cho các doanh ng hiệp khác thuê, thuê lại.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 4: Hỗ trợ đầu tư kết cấu hạ tầng, sử dụng quỹ đất tại khu công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 1, 2, 3, 4, 5 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3",
               "references": [
                 {
                   "text_match": "tại khoản 4 Điều 7",
@@ -207,9 +206,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_II_dieu_5",
           "node_type": "Điều",
           "node_index": "5",
-          "title": "Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15",
+          "title": "Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15",
           "references": [],
           "children": [
             {
@@ -218,7 +217,7 @@
               "node_index": "1",
               "title": null,
               "content": "Ủy ban nhân dân cấp tỉnh công khai thông tin trên cổng thông tin, trang thông tin điện tử của cơ quan mình về mức giảm tiền thuê lại đất theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 dành cho các đối tượng quy định tại khoản 3 Điều này.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 1",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 1",
               "references": [
                 {
                   "text_match": "theo quy định tại khoản 6 Điều 7",
@@ -232,8 +231,8 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2",
+              "content": "Đối tượng và điều kiện hoàn trả: Chủ đầu tư dự án đầu tư và kinh doanh kết cấu hạ tầng khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ (sau đây gọi là chủ đầu tư) được hoàn trả khoản hỗ trợ đã giảm tiền thuê lại đất khi đáp ứng đầy đủ các điều kiện sau:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2",
               "references": [],
               "children": [
                 {
@@ -241,8 +240,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Có quỹ đất dành cho doanh nghiệp quy định tại khoản 3 Điều này thuê lại đất theo quyết định của Ủy ban nhân dân cấp tỉnh;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm a",
+                  "content": "Có quỹ đất dành cho doanh ng hiệp quy định tại khoản 3 Điều này thuê lại đất theo quyết định của Ủy ban nhân dân cấp tỉnh;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -251,8 +250,8 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Đã ký hợp đồng cho thuê đất với doanh nghiệp quy định tại khoản 3 Điều này, trong đó bao gồm thông tin giá cho thuê lại đất đã được giảm theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm b",
+                  "content": "Đã ký hợp đồng cho thuê đất với doanh ng hiệp quy định tại khoản 3 Điều này, trong đó bao gồm thông tin giá cho thuê lại đất đã được giảm theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm b",
                   "references": [
                     {
                       "text_match": "theo quy định tại khoản 6 Điều 7",
@@ -266,21 +265,20 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Đã được doanh nghiệp quy định tại khoản 3 Điều này thanh toán tiền thuê lại đất theo hợp đồng trong năm đề nghị hoàn trả. Thời điểm chủ đầu tư đề nghị hoàn trả tiền thuê lại đất không quá 12 tháng kể từ thời điểm các bên thực hiện thanh toán tiền thuê lại đất theo hợp đồng cho thuê đất đã ký.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm c",
+                  "content": "Đã được doanh ng hiệp quy định tại khoản 3 Điều này thanh toán tiền thuê lại đất theo hợp đồng trong năm đề nghị hoàn trả. Thời điểm chủ đầu tư đề nghị hoàn trả tiền thuê lại đất không quá 12 tháng kể từ thời điểm các bên thực hiện thanh toán tiền thuê lại đất theo hợp đồng cho thuê đất đã ký.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 2 > Điểm c",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Đối tượng và điều kiện hoàn trả: Chủ đầu tư dự án đầu tư và kinh doanh kết cấu hạ tầng khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ (sau đây gọi là chủ đầu tư) được hoàn trả khoản hỗ trợ đã giảm tiền thuê lại đất khi đáp ứng đầy đủ các điều kiện sau:"
+              ]
             },
             {
               "node_id": "doc_20_2026_NDCP_chuong_II_dieu_5_khoan_3",
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3",
+              "content": "Đối tượng hỗ trợ: Các doanh ng hiệp thuê lại đất trong khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ (sau đây gọi là doanh ng hiệp được hỗ trợ) bao gồm:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3",
               "references": [],
               "children": [
                 {
@@ -288,8 +286,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Doanh nghiệp được cấp Giấy chứng nhận doanh nghiệp công nghệ cao theo quy định của pháp luật công nghệ cao và thuộc loại hình kinh tế tư nhân theo quy định của pháp luật về thống kê;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm a",
+                  "content": "Doanh ng hiệp được cấp Giấy chứng nhận doanh ng hiệp công nghệ cao theo quy định của pháp luật công nghệ cao và thuộc loại hình kinh tế tư nhân theo quy định của pháp luật về thống kê;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -298,12 +296,12 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Doanh nghiệp nhỏ và vừa theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm b",
+                  "content": "Doanh ng hiệp nhỏ và vừa theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm b",
                   "references": [
                     {
-                      "text_match": "theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn",
-                      "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua"
+                      "text_match": "theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn",
+                      "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua"
                     }
                   ],
                   "children": []
@@ -313,8 +311,8 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Doanh nghiệp khởi nghiệp sáng tạo được công nhận theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm c",
+                  "content": "Doanh ng hiệp khởi ng hiệp sáng tạo được công nhận theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 3 > Điểm c",
                   "references": [
                     {
                       "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn",
@@ -323,8 +321,7 @@
                   ],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Đối tượng hỗ trợ: Các doanh nghiệp thuê lại đất trong khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ (sau đây gọi là doanh nghiệp được hỗ trợ) bao gồm:"
+              ]
             },
             {
               "node_id": "doc_20_2026_NDCP_chuong_II_dieu_5_khoan_4",
@@ -332,7 +329,7 @@
               "node_index": "4",
               "title": null,
               "content": "Hình thức hoàn trả:",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4",
               "references": [],
               "children": [
                 {
@@ -340,8 +337,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thanh toán bù trừ vào số tiền thuê đất mà chủ đầu tư phải nộp trong năm đối với trường hợp chủ đầu tư trả tiền thuê đất hàng năm và chưa thực hiện nghĩa vụ nộp tiền thuê đất này. Trường hợp khoản giảm tiền thuê lại đất cho doanh nghiệp lớn hơn số tiền thuê đất mà chủ đầu tư phải nộp trong năm thì chủ đầu tư được hoàn trả từ nguồn ngân sách nhà nước đối với khoản chênh lệch này;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4 > Điểm a",
+                  "content": "Thanh toán bù trừ vào số tiền thuê đất mà chủ đầu tư phải nộp trong năm đối với trường hợp chủ đầu tư trả tiền thuê đất hàng năm và chưa thực hiện nghĩa vụ nộp tiền thuê đất này. Trường hợp khoản giảm tiền thuê lại đất cho doanh ng hiệp lớn hơn số tiền thuê đất mà chủ đầu tư phải nộp trong năm thì chủ đầu tư được hoàn trả từ nguồn ngân sách nhà nước đối với khoản chênh lệch này;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -351,7 +348,7 @@
                   "node_index": "b",
                   "title": null,
                   "content": "Hoàn trả từ nguồn ngân sách nhà nước đối với trường hợp chủ đầu tư đã nộp đủ tiền thuê đất hoặc được Nhà nước miễn toàn bộ tiền thuê đất cho cả thời hạn thuê.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4 > Điểm b",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 4 > Điểm b",
                   "references": [],
                   "children": []
                 }
@@ -363,7 +360,7 @@
               "node_index": "5",
               "title": null,
               "content": "Nguồn vốn thực hiện: Bố trí từ nguồn ngân sách trung ương và ngân sách địa phương, tương ứng với tỷ lệ phần trăm (%) phân chia tiền thuê đất giữa các cấp ngân sách theo quy định của Luật Ngân sách nhà nước và các văn bản hướng dẫn.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 5",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 5",
               "references": [
                 {
                   "text_match": "theo quy định của Luật Ngân sách nhà nước và các văn bản hướng dẫn",
@@ -378,7 +375,7 @@
               "node_index": "6",
               "title": null,
               "content": "Trình tự, thủ tục hoàn trả:",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6",
               "references": [],
               "children": [
                 {
@@ -387,7 +384,7 @@
                   "node_index": "a",
                   "title": null,
                   "content": "Chủ đầu tư gửi Sở Tài chính 01 bộ hồ sơ theo quy định tại khoản 7 Điều này trực tiếp hoặc qua dịch vụ bưu chính hoặc nộp trực tuyến trên Cổng dịch vụ công quốc gia;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm a",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -397,7 +394,7 @@
                   "node_index": "b",
                   "title": null,
                   "content": "Trường hợp hồ sơ chưa hợp lệ, trong thời hạn 03 ngày làm việc (theo dấu công văn đến hoặc theo xác nhận ngày đến trên cổng thông tin nhận hồ sơ trực tuyến), Sở Tài chính thông báo trực tiếp (hoặc qua dịch vụ bưu chính hoặc trực tuyến) cho chủ đầu tư để hoàn thiện hồ sơ;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm b",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -406,8 +403,8 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Trong thời hạn 07 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ nộp trực tiếp, qua dịch vụ bưu chính hoặc nộp trực tuyến, Sở Tài chính thẩm định hồ sơ, báo cáo Ủy ban nhân dân cấp tỉnh xem xét quyết định việc hoàn trả khoản tiền đã giảm tiền thuê lại đất cho doanh nghiệp. Thời gian mà chủ đầu tư hoàn thiện hồ sơ không tính vào thời hạn quy định tại điểm này;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm c",
+                  "content": "Trong thời hạn 07 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ nộp trực tiếp, qua dịch vụ bưu chính hoặc nộp trực tuyến, Sở Tài chính thẩm định hồ sơ, báo cáo Ủy ban nhân dân cấp tỉnh xem xét quyết định việc hoàn trả khoản tiền đã giảm tiền thuê lại đất cho doanh ng hiệp. Thời gian mà chủ đầu tư hoàn thiện hồ sơ không tính vào thời hạn quy định tại điểm này;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm c",
                   "references": [],
                   "children": []
                 },
@@ -417,7 +414,7 @@
                   "node_index": "d",
                   "title": null,
                   "content": "Trong thời hạn 03 ngày làm việc kể từ ngày nhận được báo cáo của Sở Tài chính, Ủy ban nhân dân cấp tỉnh ban hành quyết định chấp thuận số tiền, hình thức hoàn trả và gửi Sở Tài chính để thông báo kết quả giải quyết thủ tục hành chính cho chủ đầu tư. Sở Tài chính căn cứ quyết định của Ủy ban nhân dân cấp tỉnh phối hợp với Kho bạc Nhà nước khu vực hoàn trả từ ngân sách nhà nước hoặc thông báo với Thuế tỉnh, thành phố để thanh toán bù trừ;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm d",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm d",
                   "references": [],
                   "children": []
                 },
@@ -427,7 +424,7 @@
                   "node_index": "đ",
                   "title": null,
                   "content": "Trường hợp thanh toán bù trừ vào tiền thuê đất phải nộp trong năm, trong thời hạn 02 ngày làm việc kể từ ngày nhận được quyết định chấp thuận của Ủy ban nhân dân cấp tỉnh, Thuế tỉnh, thành phố hạch toán, theo dõi số tiền thuê đất mà chủ đầu tư phải nộp theo quy định của pháp luật về quản lý thuế;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm đ",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm đ",
                   "references": [],
                   "children": []
                 },
@@ -437,7 +434,7 @@
                   "node_index": "e",
                   "title": null,
                   "content": "Trường hợp hoàn trả từ ngân sách nhà nước, trong thời hạn 03 ngày làm việc kể từ ngày nhận được văn bản chấp thuận của Ủy ban nhân dân cấp tỉnh, Kho bạc nhà nước hoàn trả vào tài khoản của chủ đầu tư theo quy định của pháp luật về ngân sách nhà nước.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm e",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 6 > Điểm e",
                   "references": [],
                   "children": []
                 }
@@ -449,7 +446,7 @@
               "node_index": "7",
               "title": null,
               "content": "Hồ sơ đề nghị hoàn trả bao gồm:",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7",
               "references": [],
               "children": [
                 {
@@ -457,8 +454,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Văn bản đề nghị hoàn trả khoản tiền đã giảm tiền thuê lại đất cho doanh nghiệp được hỗ trợ (Phụ lục I);",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm a",
+                  "content": "Văn bản đề nghị hoàn trả khoản tiền đã giảm tiền thuê lại đất cho doanh ng hiệp được hỗ trợ (Phụ lục I);",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -467,15 +464,15 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Giấy xác nhận thông tin của doanh nghiệp thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ (Phụ lục II) và các giấy tờ sau: b1) Giấy chứng nhận doanh nghiệp công nghệ cao (bản sao) theo quy định của Luật Công nghệ cao và các văn bản hướng dẫn nếu doanh nghiệp thuộc đối tượng quy định tại điểm a khoản 3 Điều này; b2) Giấy công nhận doanh nghiệp khởi nghiệp sáng tạo (bản sao) theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn nếu doanh nghiệp thuộc đối tượng quy định tại điểm c khoản 3 Điều này;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm b",
+                  "content": "Giấy xác nhận thông tin của doanh ng hiệp thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ (Phụ lục II) và các giấy tờ sau: b1) Giấy chứng nhận doanh ng hiệp công nghệ cao (bản sao) theo quy định của Luật Công nghệ cao và các văn bản hướng dẫn nếu doanh ng hiệp thuộc đối tượng quy định tại điểm a khoản 3 Điều này; b2) Giấy công nhận doanh ng hiệp khởi ng hiệp sáng tạo (bản sao) theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn nếu doanh ng hiệp thuộc đối tượng quy định tại điểm c khoản 3 Điều này;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm b",
                   "references": [
                     {
-                      "text_match": "theo quy định của Luật Công nghệ cao và các văn bản hướng dẫn nếu doanh nghiệp thuộc đối tượng quy định tại điểm a khoản 3 Điều này",
+                      "text_match": "theo quy định của Luật Công nghệ cao và các văn bản hướng dẫn nếu doanh ng hiệp thuộc đối tượng quy định tại điểm a khoản 3 Điều này",
                       "target_id": "external_luat_cong_nghe_cao"
                     },
                     {
-                      "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn nếu doanh nghiệp thuộc đối tượng quy định tại điểm c",
+                      "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn nếu doanh ng hiệp thuộc đối tượng quy định tại điểm c",
                       "target_id": "external_luat_khoa_hoc_cong_nghe_va_doi_moi_sang_tao"
                     }
                   ],
@@ -486,8 +483,8 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Hợp đồng thuê đất giữa chủ đầu tư với doanh nghiệp được hỗ trợ theo quy định tại điểm b khoản 2 Điều này (Bản sao có chứng thực);",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm c",
+                  "content": "Hợp đồng thuê đất giữa chủ đầu tư với doanh ng hiệp được hỗ trợ theo quy định tại điểm b khoản 2 Điều này (Bản sao có chứng thực);",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm c",
                   "references": [],
                   "children": []
                 },
@@ -496,8 +493,8 @@
                   "node_type": "Điểm",
                   "node_index": "d",
                   "title": null,
-                  "content": "Hóa đơn, chứng từ hoặc giấy tờ chứng minh doanh nghiệp được hỗ trợ đã thanh toán tiền thuê lại đất cho chủ đầu tư trong năm mà chủ đầu tư đề nghị hoàn trả (bản sao); bản sao hóa đơn, chứng từ hoặc giấy tờ chứng minh chủ đầu tư đã thanh toán tiền thuê đất, bản sao thông báo nộp tiền về tiền thuê đất của cơ quan thuế (nếu có);",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm d",
+                  "content": "Hóa đơn, chứng từ hoặc giấy tờ chứng minh doanh ng hiệp được hỗ trợ đã thanh toán tiền thuê lại đất cho chủ đầu tư trong năm mà chủ đầu tư đề nghị hoàn trả (bản sao); bản sao hóa đơn, chứng từ hoặc giấy tờ chứng minh chủ đầu tư đã thanh toán tiền thuê đất, bản sao thông báo nộp tiền về tiền thuê đất của cơ quan thuế (nếu có);",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm d",
                   "references": [],
                   "children": []
                 },
@@ -507,7 +504,7 @@
                   "node_index": "đ",
                   "title": null,
                   "content": "Trường hợp hồ sơ nộp theo hình thức trực tuyến thì các văn bản quy định theo điểm a, b, c, d khoản này nộp dưới hình thức văn bản điện tử. Hồ sơ điện tử có giá trị pháp lý tương đương hồ sơ giấy theo quy định của pháp luật về giao dịch điện tử.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm đ",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 7 > Điểm đ",
                   "references": [],
                   "children": []
                 }
@@ -518,8 +515,8 @@
               "node_type": "Khoản",
               "node_index": "8",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8",
+              "content": "Trong thời gian 05 năm được hỗ trợ giảm tiền thuê lại đất theo quy định của Nghị quyết số 198/2025/QH15 và Nghị định này, doanh ng hiệp được hỗ trợ phải hoàn trả vào ngân sách nhà nước toàn bộ số tiền đã được hỗ trợ trong các trường hợp sau:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8",
               "references": [
                 {
                   "text_match": "Nghị quyết số 198/2025/QH15",
@@ -532,8 +529,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Vi phạm pháp luật về đầu tư, pháp luật về đất đai và pháp luật khác có liên quan dẫn đến thuộc trường hợp chấm dứt dự án đầu tư theo pháp luật về đầu tư hoặc trường hợp bị thu hồi đất theo quy định của pháp luật về đất đai; thời hạn hoàn trả chậm nhất là 01 tháng kể từ ngày bị chấm dứt hoạt động dự án đầu tư hoặc cơ quan có thẩm quyền ban hành quyết định thu hồi đất do vi phạm quy định của pháp luật; Trong trường hợp này, cơ quan có thẩm quyền gửi quyết định chấm dứt hoạt động dự án đầu tư và quyết định thu hồi đất đến Sở Tài chính, Thuế tỉnh, thành phố để theo dõi, thực hiện việc thu hồi tiền thuê lại đất đã hỗ trợ cho doanh nghiệp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm a",
+                  "content": "Vi phạm pháp luật về đầu tư, pháp luật về đất đai và pháp luật khác có liên quan dẫn đến thuộc trường hợp chấm dứt dự án đầu tư theo pháp luật về đầu tư hoặc trường hợp bị thu hồi đất theo quy định của pháp luật về đất đai; thời hạn hoàn trả chậm nhất là 01 tháng kể từ ngày bị chấm dứt hoạt động dự án đầu tư hoặc cơ quan có thẩm quyền ban hành quyết định thu hồi đất do vi phạm quy định của pháp luật; Trong trường hợp này, cơ quan có thẩm quyền gửi quyết định chấm dứt hoạt động dự án đầu tư và quyết định thu hồi đất đến Sở Tài chính, Thuế tỉnh, thành phố để theo dõi, thực hiện việc thu hồi tiền thuê lại đất đã hỗ trợ cho doanh ng hiệp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -542,8 +539,8 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Chuyển nhượng quyền sử dụng đất hoặc chuyển nhượng quyền sử dụng đất gắn với tài sản trên đất cho nhà đầu tư, doanh nghiệp khác không thuộc đối tượng được hỗ trợ tiền thuê lại đất; thời hạn hoàn trả chậm nhất là 01 tháng kể từ ngày hợp đồng chuyển nhượng được các bên ký kết theo quy định của pháp luật về dân sự và quy định khác của pháp luật có liên quan. Trong trường hợp này, doanh nghiệp được hỗ trợ, chủ đầu tư dự án đầu tư xây dựng và kinh doanh kết cấu hạ tầng khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ có trách nhiệm gửi thông tin và tài liệu có liên quan đến Sở Tài chính, Thuế tỉnh, thành phố để theo dõi, thực hiện việc thu hồi tiền thuê lại đất đã hỗ trợ cho doanh nghiệp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm b",
+                  "content": "Chuyển nhượng quyền sử dụng đất hoặc chuyển nhượng quyền sử dụng đất gắn với tài sản trên đất cho nhà đầu tư, doanh ng hiệp khác không thuộc đối tượng được hỗ trợ tiền thuê lại đất; thời hạn hoàn trả chậm nhất là 01 tháng kể từ ngày hợp đồng chuyển nhượng được các bên ký kết theo quy định của pháp luật về dân sự và quy định khác của pháp luật có liên quan. Trong trường hợp này, doanh ng hiệp được hỗ trợ, chủ đầu tư dự án đầu tư xây dựng và kinh doanh kết cấu hạ tầng khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ có trách nhiệm gửi thông tin và tài liệu có liên quan đến Sở Tài chính, Thuế tỉnh, thành phố để theo dõi, thực hiện việc thu hồi tiền thuê lại đất đã hỗ trợ cho doanh ng hiệp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -552,21 +549,20 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Trường hợp quá thời hạn 01 tháng quy định tại điểm a, b khoản này, doanh nghiệp phải nộp tiền chậm nộp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan tương ứng với số tiền thuê lại đất đã được hỗ trợ.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm c",
+                  "content": "Trường hợp quá thời hạn 01 tháng quy định tại điểm a, b khoản này, doanh ng hiệp phải nộp tiền chậm nộp theo quy định của pháp luật về quản lý thuế và pháp luật có liên quan tương ứng với số tiền thuê lại đất đã được hỗ trợ.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 8 > Điểm c",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Trong thời gian 05 năm được hỗ trợ giảm tiền thuê lại đất theo quy định của Nghị quyết số 198/2025/QH15 và Nghị định này, doanh nghiệp được hỗ trợ phải hoàn trả vào ngân sách nhà nước toàn bộ số tiền đã được hỗ trợ trong các trường hợp sau:"
+              ]
             },
             {
               "node_id": "doc_20_2026_NDCP_chuong_II_dieu_5_khoan_9",
               "node_type": "Khoản",
               "node_index": "9",
               "title": null,
-              "content": "Trường hợp doanh nghiệp đã được hỗ trợ giảm tiền thuê lại đất theo quy định tại Điều này nhưng sau đó qua thanh tra, kiểm tra, kiểm toán, cơ quan có chức năng thanh tra, kiểm tra, kiểm toán phát hiện doanh nghiệp không thuộc trường hợp được hỗ trợ giảm tiền thuê lại đất theo quy định tại Điều này thì doanh nghiệp phải hoàn trả ngân sách nhà nước số tiền thuê lại đất đã được hỗ trợ và tiền chậm nộp theo quy định của pháp luật về quản lý thuế tương ứng với số tiền thuê lại đất đã được hỗ trợ. Thời gian tính tiền chậm nộp tính từ thời điểm được hỗ trợ tiền thuê lại đất đến thời điểm cơ quan nhà nước có thẩm quyền quyết định thu hồi số tiền thuê lại đất đã được hỗ trợ.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 9",
+              "content": "Trường hợp doanh ng hiệp đã được hỗ trợ giảm tiền thuê lại đất theo quy định tại Điều này nhưng sau đó qua thanh tra, kiểm tra, kiểm toán, cơ quan có chức năng thanh tra, kiểm tra, kiểm toán phát hiện doanh ng hiệp không thuộc trường hợp được hỗ trợ giảm tiền thuê lại đất theo quy định tại Điều này thì doanh ng hiệp phải hoàn trả ngân sách nhà nước số tiền thuê lại đất đã được hỗ trợ và tiền chậm nộp theo quy định của pháp luật về quản lý thuế tương ứng với số tiền thuê lại đất đã được hỗ trợ. Thời gian tính tiền chậm nộp tính từ thời điểm được hỗ trợ tiền thuê lại đất đến thời điểm cơ quan nhà nước có thẩm quyền quyết định thu hồi số tiền thuê lại đất đã được hỗ trợ.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 5: Hoàn trả khoản hỗ trợ giảm tiền thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ theo quy định tại khoản 6 Điều 7 Nghị quyết số 198/2025/QH15 > Khoản 9",
               "references": [],
               "children": []
             }
@@ -609,7 +605,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Đối tượng được hỗ trợ thuê nhà, đất là tài sản công là các doanh nghiệp nhỏ và vừa, doanh nghiệp công nghiệp hỗ trợ, doanh nghiệp đổi mới sáng tạo. Doanh nghiệp đổi mới sáng tạo quy định tại Điều này là doanh nghiệp khởi nghiệp sáng tạo được công nhận theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
+              "content": "Đối tượng được hỗ trợ thuê nhà, đất là tài sản công là các doanh ng hiệp nhỏ và vừa, doanh ng hiệp công ng hiệp hỗ trợ, doanh ng hiệp đổi mới sáng tạo. Doanh ng hiệp đổi mới sáng tạo quy định tại Điều này là doanh ng hiệp khởi ng hiệp sáng tạo được công nhận theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 6: Hỗ trợ thuê nhà, đất là tài sản công > Khoản 2",
               "references": [
                 {
@@ -707,7 +703,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Trong trường hợp có nhiều doanh nghiệp đăng ký thuê nhà, việc lựa chọn đối tượng cho thuê được thực hiện theo nguyên tắc quy định tại khoản 5 Điều 14 Nghị định số 108/2024/NĐ-CP;",
+                  "content": "Trong trường hợp có nhiều doanh ng hiệp đăng ký thuê nhà, việc lựa chọn đối tượng cho thuê được thực hiện theo nguyên tắc quy định tại khoản 5 Điều 14 Nghị định số 108/2024/NĐ-CP;",
                   "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương II > Điều 6: Hỗ trợ thuê nhà, đất là tài sản công > Khoản 4 > Điểm b",
                   "references": [
                     {
@@ -786,14 +782,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "HỖ TRỢ TIẾP CẬN ĐẤT ĐAI, MẶT BẰNG SẢN XUẤT KINH DOANH"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_chuong_III",
       "node_type": "Chương",
       "node_index": "III",
-      "title": "",
+      "title": "ƯU ĐÃI VỀ THUẾ",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III",
       "references": [],
@@ -802,9 +797,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_III_dieu_7",
           "node_type": "Điều",
           "node_index": "7",
-          "title": "Miễn, giảm thuế thu nhập doanh nghiệp",
+          "title": "Miễn, giảm thuế thu nhập doanh ng hiệp",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp",
           "references": [],
           "children": [
             {
@@ -812,12 +807,12 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1",
+              "content": "Công ty quản lý quỹ đầu tư khởi ng hiệp sáng tạo theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa, doanh ng hiệp khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo có thu nhập từ hoạt động khởi ng hiệp sáng tạo, đổi mới sáng tạo theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 1",
               "references": [
                 {
-                  "text_match": "theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo",
-                  "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua_doanh_nghiep_khoi_nghiep_sang_tao_to_chuc_trung_gian_ho_tro_khoi_nghiep_doi_moi_sang_tao"
+                  "text_match": "theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa, doanh ng hiệp khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng",
+                  "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua_doanh_ng_hiep_khoi_ng_hiep_sang_tao_to_chuc_trung_gian_ho_tro_khoi_ng_hiep_doi_moi_sang"
                 },
                 {
                   "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng",
@@ -830,8 +825,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Được miễn thuế, giảm thuế thu nhập doanh nghiệp trong thời hạn theo quy định tại khoản 1 Điều 10 Nghị quyết số 198/2025/QH15;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a",
+                  "content": "Được miễn thuế, giảm thuế thu nhập doanh ng hiệp trong thời hạn theo quy định tại khoản 1 Điều 10 Nghị quyết số 198/2025/QH15;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 1 > Điểm a",
                   "references": [
                     {
                       "text_match": "theo quy định tại khoản 1 Điều 10",
@@ -845,8 +840,8 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Thời gian miễn thuế, giảm thuế đối với thu nhập tại khoản này được tính liên tục từ năm đầu tiên có thu nhập chịu thuế từ hoạt động khởi nghiệp sáng tạo, đổi mới sáng tạo; trường hợp không có thu nhập chịu thuế trong 03 năm đầu kể từ năm đầu tiên có doanh thu từ hoạt động khởi nghiệp sáng tạo, đổi mới sáng tạo thì thời gian miễn thuế, giảm thuế được tính từ năm thứ tư;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm b",
+                  "content": "Thời gian miễn thuế, giảm thuế đối với thu nhập tại khoản này được tính liên tục từ năm đầu tiên có thu nhập chịu thuế từ hoạt động khởi ng hiệp sáng tạo, đổi mới sáng tạo; trường hợp không có thu nhập chịu thuế trong 03 năm đầu kể từ năm đầu tiên có doanh thu từ hoạt động khởi ng hiệp sáng tạo, đổi mới sáng tạo thì thời gian miễn thuế, giảm thuế được tính từ năm thứ tư;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 1 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -855,21 +850,20 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Phải hạch toán riêng thu nhập từ hoạt động khởi nghiệp sáng tạo, đổi mới sáng tạo được miễn thuế, giảm thuế tại khoản này với thu nhập từ hoạt động sản xuất, kinh doanh không được ưu đãi thuế khác. Trường hợp không hạch toán riêng được thì phần thu nhập từ hoạt động được ưu đãi thuế được xác định bằng (=) tổng thu nhập chịu thuế nhân (x) với tỷ lệ phần trăm (%) doanh thu hoặc chi phí được trừ của hoạt động sản xuất, kinh doanh được ưu đãi thuế so với tổng doanh thu hoặc tổng chi phí được trừ của doanh nghiệp khởi nghiệp sáng tạo, công ty quản lý quỹ đầu tư khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo trong kỳ tính thuế. Trường hợp có khoản doanh thu hoặc chi phí được trừ không thể hạch toán riêng được thì khoản doanh thu hoặc chi phí được trừ đó xác định theo tỷ lệ giữa doanh thu hoặc chi phí được trừ của hoạt động sản xuất, kinh doanh hưởng ưu đãi thuế trên tổng doanh thu hoặc chi phí được trừ của doanh nghiệp khởi nghiệp sáng tạo, công ty quản lý quỹ đầu tư khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm c",
+                  "content": "Phải hạch toán riêng thu nhập từ hoạt động khởi ng hiệp sáng tạo, đổi mới sáng tạo được miễn thuế, giảm thuế tại khoản này với thu nhập từ hoạt động sản xuất, kinh doanh không được ưu đãi thuế khác. Trường hợp không hạch toán riêng được thì phần thu nhập từ hoạt động được ưu đãi thuế được xác định bằng (=) tổng thu nhập chịu thuế nhân (x) với tỷ lệ phần trăm (%) doanh thu hoặc chi phí được trừ của hoạt động sản xuất, kinh doanh được ưu đãi thuế so với tổng doanh thu hoặc tổng chi phí được trừ của doanh ng hiệp khởi ng hiệp sáng tạo, công ty quản lý quỹ đầu tư khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo trong kỳ tính thuế. Trường hợp có khoản doanh thu hoặc chi phí được trừ không thể hạch toán riêng được thì khoản doanh thu hoặc chi phí được trừ đó xác định theo tỷ lệ giữa doanh thu hoặc chi phí được trừ của hoạt động sản xuất, kinh doanh hưởng ưu đãi thuế trên tổng doanh thu hoặc chi phí được trừ của doanh ng hiệp khởi ng hiệp sáng tạo, công ty quản lý quỹ đầu tư khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 1 > Điểm c",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Công ty quản lý quỹ đầu tư khởi nghiệp sáng tạo theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo có thu nhập từ hoạt động khởi nghiệp sáng tạo, đổi mới sáng tạo theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn:"
+              ]
             },
             {
               "node_id": "doc_20_2026_NDCP_chuong_III_dieu_7_khoan_2",
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 2",
+              "content": "Doanh ng hiệp có thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh ng hiệp khởi ng hiệp sáng tạo:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 2",
               "references": [],
               "children": [
                 {
@@ -877,8 +871,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Được miễn thuế thu nhập doanh nghiệp đối với khoản thu nhập này;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 2 > Điểm a",
+                  "content": "Được miễn thuế thu nhập doanh ng hiệp đối với khoản thu nhập này;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -887,8 +881,8 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp quy định tại khoản này là thu nhập có được từ chuyển nhượng một phần hoặc toàn bộ cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh nghiệp khởi nghiệp sáng tạo (bao gồm cả trường hợp bán doanh nghiệp), trừ thu nhập từ chuyển nhượng cổ phiếu, quyền mua cổ phiếu của công ty đại chúng, tổ chức niêm yết, đăng ký giao dịch theo quy định của pháp luật về chứng khoán;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 2 > Điểm b",
+                  "content": "Thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp quy định tại khoản này là thu nhập có được từ chuyển nhượng một phần hoặc toàn bộ cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh ng hiệp khởi ng hiệp sáng tạo (bao gồm cả trường hợp bán doanh ng hiệp), trừ thu nhập từ chuyển nhượng cổ phiếu, quyền mua cổ phiếu của công ty đại chúng, tổ chức niêm yết, đăng ký giao dịch theo quy định của pháp luật về chứng khoán;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 2 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -897,21 +891,20 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Trường hợp bán toàn bộ công ty trách nhiệm hữu hạn một thành viên do tổ chức làm chủ sở hữu dưới hình thức chuyển nhượng vốn có gắn với bất động sản thì kê khai và nộp thuế thu nhập doanh nghiệp theo hoạt động chuyển nhượng bất động sản.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 2 > Điểm c",
+                  "content": "Trường hợp bán toàn bộ công ty trách nhiệm hữu hạn một thành viên do tổ chức làm chủ sở hữu dưới hình thức chuyển nhượng vốn có gắn với bất động sản thì kê khai và nộp thuế thu nhập doanh ng hiệp theo hoạt động chuyển nhượng bất động sản.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 2 > Điểm c",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Doanh nghiệp có thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh nghiệp khởi nghiệp sáng tạo:"
+              ]
             },
             {
               "node_id": "doc_20_2026_NDCP_chuong_III_dieu_7_khoan_3",
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Doanh nghiệp nhỏ và vừa đăng ký kinh doanh lần đầu:",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 3",
+              "content": "Doanh ng hiệp nhỏ và vừa đăng ký kinh doanh lần đầu:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 3",
               "references": [],
               "children": [
                 {
@@ -919,8 +912,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Được miễn thuế thu nhập doanh nghiệp trong 03 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu. Thời gian miễn thuế được tính liên tục từ năm đầu tiên được cấp Giấy chứng nhận đăng ký doanh nghiệp lần đầu. Trường hợp Giấy chứng nhận đăng ký doanh nghiệp được cấp trước thời điểm Nghị quyết số 198/2025/QH15 có hiệu lực thi hành mà còn thời gian áp dụng ưu đãi thì doanh nghiệp được hưởng ưu đãi theo quy định tại khoản này cho thời gian còn lại;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 3 > Điểm a",
+                  "content": "Được miễn thuế thu nhập doanh ng hiệp trong 03 năm kể từ khi được cấp Giấy chứng nhận đăng ký doanh ng hiệp lần đầu. Thời gian miễn thuế được tính liên tục từ năm đầu tiên được cấp Giấy chứng nhận đăng ký doanh ng hiệp lần đầu. Trường hợp Giấy chứng nhận đăng ký doanh ng hiệp được cấp trước thời điểm Nghị quyết số 198/2025/QH15 có hiệu lực thi hành mà còn thời gian áp dụng ưu đãi thì doanh ng hiệp được hưởng ưu đãi theo quy định tại khoản này cho thời gian còn lại;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 3 > Điểm a",
                   "references": [
                     {
                       "text_match": "Nghị quyết số 198/2025/QH15",
@@ -934,12 +927,12 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Quy định ưu đãi tại khoản này không áp dụng đối với: b1) Doanh nghiệp thành lập mới do sáp nhập, hợp nhất, chia, tách, chuyển đổi chủ sở hữu, chuyển đổi loại hình doanh nghiệp; b2) Doanh nghiệp thành lập mới mà người đại diện theo pháp luật (trừ trường hợp người đại diện theo pháp luật không phải là thành viên góp vốn), thành viên hợp danh hoặc người có số vốn góp cao nhất đã tham gia hoạt động kinh doanh với vai trò là người đại diện theo pháp luật, thành viên hợp danh hoặc người có số vốn góp cao nhất trong các doanh nghiệp đang hoạt động hoặc đã giải thể nhưng chưa được 12 tháng tính từ thời điểm giải thể doanh nghiệp cũ đến thời điểm thành lập doanh nghiệp mới; b3) Thu nhập quy định tại khoản 3 Điều 18 Luật Thuế thu nhập doanh nghiệp số 67/2025/QH15.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 3 > Điểm b",
+                  "content": "Quy định ưu đãi tại khoản này không áp dụng đối với: b1) Doanh ng hiệp thành lập mới do sáp nhập, hợp nhất, chia, tách, chuyển đổi chủ sở hữu, chuyển đổi loại hình doanh ng hiệp; b2) Doanh ng hiệp thành lập mới mà người đại diện theo pháp luật (trừ trường hợp người đại diện theo pháp luật không phải là thành viên góp vốn), thành viên hợp danh hoặc người có số vốn góp cao nhất đã tham gia hoạt động kinh doanh với vai trò là người đại diện theo pháp luật, thành viên hợp danh hoặc người có số vốn góp cao nhất trong các doanh ng hiệp đang hoạt động hoặc đã giải thể nhưng chưa được 12 tháng tính từ thời điểm giải thể doanh ng hiệp cũ đến thời điểm thành lập doanh ng hiệp mới; b3) Thu nhập quy định tại khoản 3 Điều 18 Luật Thuế thu nhập doanh ng hiệp số 67/2025/QH15.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 3 > Điểm b",
                   "references": [
                     {
                       "text_match": "tại khoản 3 Điều 18",
-                      "target_id": "external_luat_thue_thu_nhap_doanh_nghiep_so_dieu_18_khoan_3"
+                      "target_id": "external_luat_thue_thu_nhap_doanh_ng_hiep_so_dieu_18_khoan_3"
                     }
                   ],
                   "children": []
@@ -951,8 +944,8 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Trong cùng một thời gian, nếu doanh nghiệp khởi nghiệp sáng tạo, công ty quản lý quỹ đầu tư khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo, doanh nghiệp nhỏ và vừa có khoản thu nhập được hưởng miễn thuế, giảm thuế theo quy định tại khoản 1 và khoản 3 Điều này vừa được hưởng miễn thuế, giảm thuế khác với quy định tại Nghị định này thì được lựa chọn hưởng miễn thuế, giảm thuế có lợi nhất và thực hiện ổn định, không thay đổi trong thời gian miễn thuế, giảm thuế.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 4",
+              "content": "Trong cùng một thời gian, nếu doanh ng hiệp khởi ng hiệp sáng tạo, công ty quản lý quỹ đầu tư khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo, doanh ng hiệp nhỏ và vừa có khoản thu nhập được hưởng miễn thuế, giảm thuế theo quy định tại khoản 1 và khoản 3 Điều này vừa được hưởng miễn thuế, giảm thuế khác với quy định tại Nghị định này thì được lựa chọn hưởng miễn thuế, giảm thuế có lợi nhất và thực hiện ổn định, không thay đổi trong thời gian miễn thuế, giảm thuế.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 4",
               "references": [],
               "children": []
             },
@@ -961,8 +954,8 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Trường hợp trong kỳ tính thuế đầu tiên mà doanh nghiệp khởi nghiệp sáng tạo, công ty quản lý quỹ đầu tư khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo, doanh nghiệp nhỏ và vừa quy định tại khoản 1 và khoản 3 Điều này có thời gian hoạt động sản xuất, kinh doanh được miễn thuế, giảm thuế dưới 12 tháng thì được lựa chọn hưởng miễn thuế, giảm thuế theo quy định tại Nghị định này ngay từ kỳ tính thuế đầu tiên đó hoặc đăng ký với cơ quan thuế thời gian bắt đầu được miễn thuế, giảm thuế từ kỳ tính thuế tiếp theo.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 5",
+              "content": "Trường hợp trong kỳ tính thuế đầu tiên mà doanh ng hiệp khởi ng hiệp sáng tạo, công ty quản lý quỹ đầu tư khởi ng hiệp sáng tạo, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo, doanh ng hiệp nhỏ và vừa quy định tại khoản 1 và khoản 3 Điều này có thời gian hoạt động sản xuất, kinh doanh được miễn thuế, giảm thuế dưới 12 tháng thì được lựa chọn hưởng miễn thuế, giảm thuế theo quy định tại Nghị định này ngay từ kỳ tính thuế đầu tiên đó hoặc đăng ký với cơ quan thuế thời gian bắt đầu được miễn thuế, giảm thuế từ kỳ tính thuế tiếp theo.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh ng hiệp > Khoản 5",
               "references": [],
               "children": []
             }
@@ -982,7 +975,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Cá nhân có thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh nghiệp khởi nghiệp sáng tạo được miễn thuế thu nhập cá nhân đối với khoản thu nhập này. Thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp quy định tại khoản này là thu nhập có được từ chuyển nhượng một phần hoặc toàn bộ cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh nghiệp khởi nghiệp sáng tạo (bao gồm cả trường hợp bán doanh nghiệp), trừ thu nhập từ chuyển nhượng cổ phiếu, quyền mua cổ phiếu của công ty đại chúng, tổ chức niêm yết, đăng ký giao dịch theo quy định của pháp luật về chứng khoán. Trường hợp bán toàn bộ doanh nghiệp do cá nhân làm chủ sở hữu dưới hình thức chuyển nhượng vốn có gắn với bất động sản thì kê khai và nộp thuế thu nhập cá nhân theo hoạt động chuyển nhượng bất động sản.",
+              "content": "Cá nhân có thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh ng hiệp khởi ng hiệp sáng tạo được miễn thuế thu nhập cá nhân đối với khoản thu nhập này. Thu nhập từ chuyển nhượng cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp quy định tại khoản này là thu nhập có được từ chuyển nhượng một phần hoặc toàn bộ cổ phần, phần vốn góp, quyền góp vốn, quyền mua cổ phần, quyền mua phần vốn góp vào doanh ng hiệp khởi ng hiệp sáng tạo (bao gồm cả trường hợp bán doanh ng hiệp), trừ thu nhập từ chuyển nhượng cổ phiếu, quyền mua cổ phiếu của công ty đại chúng, tổ chức niêm yết, đăng ký giao dịch theo quy định của pháp luật về chứng khoán. Trường hợp bán toàn bộ doanh ng hiệp do cá nhân làm chủ sở hữu dưới hình thức chuyển nhượng vốn có gắn với bất động sản thì kê khai và nộp thuế thu nhập cá nhân theo hoạt động chuyển nhượng bất động sản.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 8: Miễn, giảm thuế thu nhập cá nhân > Khoản 1",
               "references": [],
               "children": []
@@ -992,7 +985,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Cá nhân là chuyên gia, nhà khoa học theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn có thu nhập từ tiền lương, tiền công nhận được từ doanh nghiệp khởi nghiệp sáng tạo, trung tâm nghiên cứu và phát triển, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo được miễn thuế trong thời hạn 02 năm (24 tháng liên tục) và giảm 50% số thuế phải nộp trong 04 năm (48 tháng liên tục) tiếp theo đối với khoản thu nhập này. Thời gian miễn, giảm thuế tính liên tục kể từ tháng phát sinh thu nhập được miễn, giảm thuế. Trường hợp phát sinh thu nhập trong tháng thì thời gian tính miễn, giảm thuế được tính đủ tháng. Trường hợp cá nhân vừa có thu nhập từ tiền lương, tiền công được miễn, giảm thuế theo quy định tại khoản này vừa có thu nhập từ tiền lương, tiền công khác thì số thuế thu nhập cá nhân được miễn, giảm theo quy định tại khoản này được xác định như sau: Thu nhập được miễn thuế từ tiền lương, Số thuế TNCN tiền công tại khoản Số thuế tính trên tổng này được miễn thu nhập từ = x trong kỳ tiền lương, Tổng thu nhập chịu tính thuế tiền công trong thuế từ tiền lương, kỳ tính thuế tiền công trong kỳ tính thuế Số thuế Thu nhập được TNCN tính giảm thuế từ tiền Số thuế trên tổng lương, tiền công được giảm = thu nhập từ tại khoản này x trong kỳ 50% x tiền lương, Tổng thu nhập tính thuế tiền công chịu thuế từ tiền trong kỳ lương, tiền công tính thuế trong kỳ tính thuế",
+              "content": "Cá nhân là chuyên gia, nhà khoa học theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn có thu nhập từ tiền lương, tiền công nhận được từ doanh ng hiệp khởi ng hiệp sáng tạo, trung tâm ng hiên cứu và phát triển, tổ chức trung gian hỗ trợ khởi ng hiệp đổi mới sáng tạo được miễn thuế trong thời hạn 02 năm (24 tháng liên tục) và giảm 50% số thuế phải nộp trong 04 năm (48 tháng liên tục) tiếp theo đối với khoản thu nhập này. Thời gian miễn, giảm thuế tính liên tục kể từ tháng phát sinh thu nhập được miễn, giảm thuế. Trường hợp phát sinh thu nhập trong tháng thì thời gian tính miễn, giảm thuế được tính đủ tháng. Trường hợp cá nhân vừa có thu nhập từ tiền lương, tiền công được miễn, giảm thuế theo quy định tại khoản này vừa có thu nhập từ tiền lương, tiền công khác thì số thuế thu nhập cá nhân được miễn, giảm theo quy định tại khoản này được xác định như sau:",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 8: Miễn, giảm thuế thu nhập cá nhân > Khoản 2",
               "references": [
                 {
@@ -1004,14 +997,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "ƯU ĐÃI VỀ THUẾ"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_chuong_IV",
       "node_type": "Chương",
       "node_index": "IV",
-      "title": "",
+      "title": "HỖ TRỢ KHOA HỌC, CÔNG NGHỆ, ĐỔI MỚI SÁNG TẠO, CHUYỂN ĐỔI SỐ VÀ ĐÀO TẠO NHÂN LỰC",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV",
       "references": [],
@@ -1020,9 +1012,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_9",
           "node_type": "Điều",
           "node_index": "9",
-          "title": "Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số",
+          "title": "Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số",
           "references": [],
           "children": [
             {
@@ -1030,8 +1022,8 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Doanh nghiệp được trích tối đa 20% thu nhập tính thuế thu nhập doanh nghiệp để lập Quỹ phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số. Quỹ phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số là Quỹ phát triển khoa học và công nghệ của doanh nghiệp theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn. Việc trích lập quỹ được thực hiện theo quy định của pháp luật về thuế thu nhập doanh nghiệp.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 1",
+              "content": "Doanh ng hiệp được trích tối đa 20% thu nhập tính thuế thu nhập doanh ng hiệp để lập Quỹ phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số. Quỹ phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số là Quỹ phát triển khoa học và công nghệ của doanh ng hiệp theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn. Việc trích lập quỹ được thực hiện theo quy định của pháp luật về thuế thu nhập doanh ng hiệp.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 1",
               "references": [
                 {
                   "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn",
@@ -1045,8 +1037,8 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2",
+              "content": "Doanh ng hiệp được tính vào chi phí được trừ khi xác định thu nhập chịu thuế thu nhập doanh ng hiệp đối với:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2",
               "references": [],
               "children": [
                 {
@@ -1054,12 +1046,12 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Khoản chi phí đào tạo và đào tạo lại nhân lực của doanh nghiệp lớn cho doanh nghiệp nhỏ và vừa tham gia chuỗi. Chi phí đào tạo và đào tạo lại nhân lực của doanh nghiệp được xác định theo quy định của Bộ luật Lao động và các văn bản hướng dẫn. Doanh nghiệp nhỏ và vừa tham gia chuỗi của doanh nghiệp lớn là doanh nghiệp nhỏ và vừa có hợp đồng hợp tác ký kết với doanh nghiệp lớn theo quy định về hợp đồng tại Bộ luật Dân sự và các văn bản hướng dẫn. Doanh nghiệp lớn được xác định là doanh nghiệp không phải là doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, doanh nghiệp vừa theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2 > Điểm a",
+                  "content": "Khoản chi phí đào tạo và đào tạo lại nhân lực của doanh ng hiệp lớn cho doanh ng hiệp nhỏ và vừa tham gia chuỗi. Chi phí đào tạo và đào tạo lại nhân lực của doanh ng hiệp được xác định theo quy định của Bộ luật Lao động và các văn bản hướng dẫn. Doanh ng hiệp nhỏ và vừa tham gia chuỗi của doanh ng hiệp lớn là doanh ng hiệp nhỏ và vừa có hợp đồng hợp tác ký kết với doanh ng hiệp lớn theo quy định về hợp đồng tại Bộ luật Dân sự và các văn bản hướng dẫn. Doanh ng hiệp lớn được xác định là doanh ng hiệp không phải là doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ, doanh ng hiệp vừa theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2 > Điểm a",
                   "references": [
                     {
-                      "text_match": "theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa và các văn bản hướng dẫn",
-                      "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua"
+                      "text_match": "theo quy định của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và các văn bản hướng dẫn",
+                      "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua"
                     }
                   ],
                   "children": []
@@ -1069,18 +1061,17 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Khoản chi cho hoạt động nghiên cứu và phát triển của doanh nghiệp được thực hiện theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn đối với hoạt động nghiên cứu khoa học và phát triển công nghệ và được tính bằng 200% chi phí thực tế của hoạt động này tại doanh nghiệp.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ nghiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2 > Điểm b",
+                  "content": "Khoản chi cho hoạt động ng hiên cứu và phát triển của doanh ng hiệp được thực hiện theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn đối với hoạt động ng hiên cứu khoa học và phát triển công nghệ và được tính bằng 200% chi phí thực tế của hoạt động này tại doanh ng hiệp.",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 9: Hỗ trợ ng hiên cứu, phát triển và ứng dụng khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số > Khoản 2 > Điểm b",
                   "references": [
                     {
-                      "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn đối với hoạt động nghiên cứu khoa học và phát triển công",
+                      "text_match": "theo quy định của Luật Khoa học, công nghệ và đổi mới sáng tạo và các văn bản hướng dẫn đối với hoạt động ng hiên cứu khoa học và phát triển",
                       "target_id": "external_luat_khoa_hoc_cong_nghe_va_doi_moi_sang_tao"
                     }
                   ],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Doanh nghiệp được tính vào chi phí được trừ khi xác định thu nhập chịu thuế thu nhập doanh nghiệp đối với:"
+              ]
             }
           ]
         },
@@ -1088,77 +1079,77 @@
           "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10",
           "node_type": "Điều",
           "node_index": "10",
-          "title": "Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+          "title": "Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
           "references": [],
           "children": [
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_1",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_1",
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Nhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số mà doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh sử dụng.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
+              "content": "Nhà nước cung cấp miễn phí cho doanh ng hiệp nhỏ, doanh ng hiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số mà doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh sử dụng.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
               "references": [],
               "children": []
             },
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_2",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_2",
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Bộ Tài chính chịu trách nhiệm tổ chức thuê, mua sắm sản phẩm, dịch vụ các nền tảng số, phần mềm kế toán bảo đảm công khai, minh bạch, phù hợp với khả năng cân đối của ngân sách nhà nước và đáp ứng quy định tại khoản 3 và khoản 4 Điều này để thực hiện quy định tại khoản 1 Điều này. Nội dung thuê, mua sắm sản phẩm, dịch vụ bao gồm cả dịch vụ quản lý, vận hành, sửa chữa, nâng cấp các nền tảng số, phần mềm kế toán đáp ứng yêu cầu quản lý và chuyên môn, nghiệp vụ về kế toán theo các chế độ kế toán được ban hành trong quá trình thuê, mua sắm sản phẩm, dịch vụ. Việc thuê, mua sắm sản phẩm, dịch vụ được thực hiện theo quy định của pháp luật về công nghệ thông tin, pháp luật về đấu thầu, pháp luật về ngân sách nhà nước và pháp luật khác có liên quan.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 2",
+              "content": "Bộ Tài chính chịu trách nhiệm tổ chức thuê, mua sắm sản phẩm, dịch vụ các nền tảng số, phần mềm kế toán bảo đảm công khai, minh bạch, phù hợp với khả năng cân đối của ngân sách nhà nước và đáp ứng quy định tại khoản 3 và khoản 4 Điều này để thực hiện quy định tại khoản 1 Điều này. Nội dung thuê, mua sắm sản phẩm, dịch vụ bao gồm cả dịch vụ quản lý, vận hành, sửa chữa, nâng cấp các nền tảng số, phần mềm kế toán đáp ứng yêu cầu quản lý và chuyên môn, ng hiệp vụ về kế toán theo các chế độ kế toán được ban hành trong quá trình thuê, mua sắm sản phẩm, dịch vụ. Việc thuê, mua sắm sản phẩm, dịch vụ được thực hiện theo quy định của pháp luật về công nghệ thông tin, pháp luật về đấu thầu, pháp luật về ngân sách nhà nước và pháp luật khác có liên quan.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 2",
               "references": [],
               "children": []
             },
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_3",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_3",
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
               "content": "Nhà cung cấp sản phẩm, dịch vụ các nền tảng số, phần mềm kế toán không được có hành vi hạn chế cạnh tranh, hành vi cạnh tranh không lành mạnh theo quy định của pháp luật về cạnh tranh.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 3",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 3",
               "references": [],
               "children": []
             },
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4",
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4",
+              "content": "Phần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, ng hiệp vụ về kế toán như sau:",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4",
               "references": [],
               "children": [
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_a",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_a",
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Các quy trình, nghiệp vụ kế toán được thiết lập trên phần mềm phải đảm bảo tuân thủ các quy định của pháp luật kế toán, pháp luật thuế và pháp luật khác có liên quan, không làm thay đổi bản chất, nguyên tắc, phương pháp kế toán và thông tin, số liệu trình bày trên sổ kế toán và báo cáo tài chính theo quy định;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm a",
+                  "content": "Các quy trình, ng hiệp vụ kế toán được thiết lập trên phần mềm phải đảm bảo tuân thủ các quy định của pháp luật kế toán, pháp luật thuế và pháp luật khác có liên quan, không làm thay đổi bản chất, nguyên tắc, phương pháp kế toán và thông tin, số liệu trình bày trên sổ kế toán và báo cáo tài chính theo quy định;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm a",
                   "references": [],
                   "children": []
                 },
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_b",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_b",
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
                   "content": "Việc xử lý các quy trình kế toán, các thông tin, số liệu liên quan đến nhau phải đảm bảo chính xác, phù hợp, không trùng lắp. Khi sửa chữa phải lưu lại dấu vết các nội dung đã ghi sổ kế toán theo trình tự thời gian;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm b",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm b",
                   "references": [],
                   "children": []
                 },
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_c",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_c",
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Thông tin, dữ liệu trên phần mềm kế toán phải bảo mật, an toàn và tuân thủ các quy định của pháp luật về bảo mật, an toàn, an ninh thông tin. Phần mềm phải đảm bảo cung cấp chức năng lưu trữ, sao lưu dữ liệu kế toán của doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh trên mô hình dịch vụ điện toán đám mây, đáp ứng thời gian lưu trữ tối thiểu theo quy định của Luật Kế toán và các văn bản hướng dẫn. Hệ thống thông tin được thiết lập có khả năng cảnh báo hoặc ngăn chặn việc can thiệp có chủ ý làm thay đổi thông tin, số liệu đã ghi sổ kế toán;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm c",
+                  "content": "Thông tin, dữ liệu trên phần mềm kế toán phải bảo mật, an toàn và tuân thủ các quy định của pháp luật về bảo mật, an toàn, an ninh thông tin. Phần mềm phải đảm bảo cung cấp chức năng lưu trữ, sao lưu dữ liệu kế toán của doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh trên mô hình dịch vụ điện toán đám mây, đáp ứng thời gian lưu trữ tối thiểu theo quy định của Luật Kế toán và các văn bản hướng dẫn. Hệ thống thông tin được thiết lập có khả năng cảnh báo hoặc ngăn chặn việc can thiệp có chủ ý làm thay đổi thông tin, số liệu đã ghi sổ kế toán;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm c",
                   "references": [
                     {
                       "text_match": "theo quy định của Luật Kế toán và các văn bản hướng dẫn",
@@ -1168,55 +1159,54 @@
                   "children": []
                 },
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_d",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_d",
                   "node_type": "Điểm",
                   "node_index": "d",
                   "title": null,
                   "content": "Cung cấp đầy đủ, kịp thời thông tin và dữ liệu đầu ra theo yêu cầu của cơ quan có thẩm quyền và các bên sử dụng dữ liệu, thông tin;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm d",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm d",
                   "references": [],
                   "children": []
                 },
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_đ",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_đ",
                   "node_type": "Điểm",
                   "node_index": "đ",
                   "title": null,
                   "content": "Có khả năng nâng cấp, sửa đổi, bổ sung phù hợp với những thay đổi của pháp luật kế toán, thuế và pháp luật khác có liên quan;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm đ",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm đ",
                   "references": [],
                   "children": []
                 },
                 {
-                  "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_4_diem_e",
+                  "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_e",
                   "node_type": "Điểm",
                   "node_index": "e",
                   "title": null,
                   "content": "Có khả năng kết nối hoặc sẵn sàng kết nối thuế với các phần mềm có liên quan khi thực hiện công tác kế toán (phần mềm hóa đơn điện tử, chữ ký số...).",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Phần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, nghiệp vụ về kế toán như sau:"
+              ]
             },
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_5",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_5",
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh được cung cấp tài khoản và sử dụng các phần mềm miễn phí trên nền tảng số theo quy định tại khoản 1 Điều này khi có nhu cầu. Bộ Tài chính hướng dẫn quy trình, thủ tục cung cấp, quản lý, vận hành nền tảng số, phần mềm kế toán cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
+              "content": "Doanh ng hiệp nhỏ, doanh ng hiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh được cung cấp tài khoản và sử dụng các phần mềm miễn phí trên nền tảng số theo quy định tại khoản 1 Điều này khi có nhu cầu. Bộ Tài chính hướng dẫn quy trình, thủ tục cung cấp, quản lý, vận hành nền tảng số, phần mềm kế toán cho doanh ng hiệp nhỏ, doanh ng hiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
               "references": [],
               "children": []
             },
             {
-              "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_khoan_6",
+              "node_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_6",
               "node_type": "Khoản",
               "node_index": "6",
               "title": null,
               "content": "Việc tổ chức lập dự toán, thẩm định, phê duyệt chi phí hỗ trợ và lập báo cáo quyết toán hàng năm theo quy định của pháp luật hiện hành, đảm bảo sử dụng hiệu quả, minh bạch, công khai nguồn ngân sách và các nguồn lực huy động.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 6",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 6",
               "references": [],
               "children": []
             }
@@ -1226,9 +1216,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_IV_dieu_11",
           "node_type": "Điều",
           "node_index": "11",
-          "title": "Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh",
+          "title": "Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh",
           "references": [],
           "children": [
             {
@@ -1236,8 +1226,8 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Ngân sách nhà nước hỗ trợ 100% tổng chi phí của khóa đào tạo quản trị doanh nghiệp (bao gồm cả quản trị kế toán, thuế, nhân sự) cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+              "content": "Ngân sách nhà nước hỗ trợ 100% tổng chi phí của khóa đào tạo quản trị doanh ng hiệp (bao gồm cả quản trị kế toán, thuế, nhân sự) cho doanh ng hiệp nhỏ, doanh ng hiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
               "references": [],
               "children": []
             },
@@ -1247,7 +1237,7 @@
               "node_index": "2",
               "title": null,
               "content": "Đối tượng hỗ trợ:",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
               "references": [],
               "children": [
                 {
@@ -1255,8 +1245,8 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm a",
+                  "content": "Doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -1265,8 +1255,8 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Hộ kinh doanh được xác định theo quy định của pháp luật về đăng ký doanh nghiệp;",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm b",
+                  "content": "Hộ kinh doanh được xác định theo quy định của pháp luật về đăng ký doanh ng hiệp;",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -1276,7 +1266,7 @@
                   "node_index": "c",
                   "title": null,
                   "content": "Cá nhân kinh doanh được xác định theo quy định tại khoản 3 Điều 3 Nghị quyết số 198/2025/QH15.",
-                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm c",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 2 > Điểm c",
                   "references": [
                     {
                       "text_match": "theo quy định tại khoản 3 Điều 3",
@@ -1292,20 +1282,20 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Nguyên tắc hỗ trợ: Thực hiện theo quy định tại Điều 5 Luật Hỗ trợ doanh nghiệp nhỏ và vừa, Điều 4 Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ doanh nghiệp nhỏ và vừa.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+              "content": "Nguyên tắc hỗ trợ: Thực hiện theo quy định tại Điều 5 Luật Hỗ trợ doanh ng hiệp nhỏ và vừa, Điều 4 Nghị định số 80/2021/NĐ-CP ngày 26 tháng 8 năm 2021 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
               "references": [
                 {
                   "text_match": "theo quy định tại Điều 5",
-                  "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua_dieu_4_nghi_dinh_so_dieu_5"
+                  "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua_dieu_4_nghi_dinh_so_dieu_5"
                 },
                 {
                   "text_match": "Điều 4",
                   "target_id": "external_nghi_dinh_80_2021_nd_cp_dieu_4"
                 },
                 {
-                  "text_match": "Luật Hỗ trợ doanh nghiệp nhỏ và vừa",
-                  "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua"
+                  "text_match": "Luật Hỗ trợ doanh ng hiệp nhỏ và vừa",
+                  "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua"
                 }
               ],
               "children": []
@@ -1316,7 +1306,7 @@
               "node_index": "4",
               "title": null,
               "content": "Cơ quan hỗ trợ: Thực hiện theo quy định tại Nghị định số 80/2021/NĐ-CP, các văn bản hướng dẫn thi hành; Ủy ban nhân dân xã, phường, đặc khu thuộc cấp tỉnh và các đơn vị trực thuộc.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 4",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 4",
               "references": [
                 {
                   "text_match": "Nghị định số 80/2021/NĐ-CP",
@@ -1330,8 +1320,8 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Việc tổ chức các khóa đào tạo thực hiện theo quy định tại khoản 1, khoản 2 và khoản 3 Điều 14 Nghị định số 80/2021/NĐ-CP và các văn bản hướng dẫn thi hành, ngoại trừ quy định về mức hỗ trợ tối đa 70% tổng chi phí của khóa đào tạo quy định tại điểm a khoản 1 và điểm a khoản 3 Điều 14 Nghị định số 80/2021/NĐ-CP. Mức hỗ trợ cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh được áp dụng theo quy định tại khoản 1 Điều này.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
+              "content": "Việc tổ chức các khóa đào tạo thực hiện theo quy định tại khoản 1, khoản 2 và khoản 3 Điều 14 Nghị định số 80/2021/NĐ-CP và các văn bản hướng dẫn thi hành, ngoại trừ quy định về mức hỗ trợ tối đa 70% tổng chi phí của khóa đào tạo quy định tại điểm a khoản 1 và điểm a khoản 3 Điều 14 Nghị định số 80/2021/NĐ-CP. Mức hỗ trợ cho doanh ng hiệp nhỏ, doanh ng hiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh được áp dụng theo quy định tại khoản 1 Điều này.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
               "references": [
                 {
                   "text_match": "khoản 3 Điều 14",
@@ -1349,8 +1339,8 @@
               "node_type": "Khoản",
               "node_index": "6",
               "title": null,
-              "content": "Quy trình hỗ trợ cho doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh, cá nhân kinh doanh thực hiện theo quy định tại khoản 1, khoản 2, khoản 4 và khoản 5 Điều 32 Nghị định số 80/2021/NĐ-CP và các văn bản hướng dẫn thi hành. Tờ khai đề xuất nhu cầu hỗ trợ của hộ kinh doanh, cá nhân kinh doanh thực hiện theo mẫu quy định tại Phụ lục III ban hành kèm theo Nghị định này.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 6",
+              "content": "Quy trình hỗ trợ cho doanh ng hiệp siêu nhỏ, doanh ng hiệp nhỏ, hộ kinh doanh, cá nhân kinh doanh thực hiện theo quy định tại khoản 1, khoản 2, khoản 4 và khoản 5 Điều 32 Nghị định số 80/2021/NĐ-CP và các văn bản hướng dẫn thi hành. Tờ khai đề xuất nhu cầu hỗ trợ của hộ kinh doanh, cá nhân kinh doanh thực hiện theo mẫu quy định tại Phụ lục III ban hành kèm theo Nghị định này.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh ng hiệp, kế toán, thuế, nhân sự cho doanh ng hiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 6",
               "references": [
                 {
                   "text_match": "khoản 5 Điều 32",
@@ -1361,14 +1351,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "HỖ TRỢ KHOA HỌC, CÔNG NGHỆ, ĐỔI MỚI SÁNG TẠO, CHUYỂN ĐỔI SỐ VÀ ĐÀO TẠO NHÂN LỰC"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_chuong_V",
       "node_type": "Chương",
       "node_index": "V",
-      "title": "",
+      "title": "TỔ CHỨC THỰC HIỆN",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V",
       "references": [],
@@ -1411,12 +1400,12 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Định kỳ trước ngày 25 tháng 12 hằng năm, báo cáo Chính phủ kết quả triển khai thực hiện các chính sách hỗ trợ quy định tại Nghị định này, tổng hợp chung trong báo cáo tình hình triển khai Luật Hỗ trợ doanh nghiệp nhỏ và vừa và tình hình triển khai Nghị quyết 68-NQ/TW ngày 04 tháng 5 năm 2025 của Bộ Chính trị về phát triển kinh tế tư nhân;",
+                  "content": "Định kỳ trước ngày 25 tháng 12 hằng năm, báo cáo Chính phủ kết quả triển khai thực hiện các chính sách hỗ trợ quy định tại Nghị định này, tổng hợp chung trong báo cáo tình hình triển khai Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và tình hình triển khai Nghị quyết 68-NQ/TW ngày 04 tháng 5 năm 2025 của Bộ Chính trị về phát triển kinh tế tư nhân;",
                   "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 12: Trách nhiệm của các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ > Khoản 1 > Điểm b",
                   "references": [
                     {
-                      "text_match": "Luật Hỗ trợ doanh nghiệp nhỏ và vừa và tình hình triển khai Nghị quyết",
-                      "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua_va_tinh_hinh_trien_khai_nghi_quyet"
+                      "text_match": "Luật Hỗ trợ doanh ng hiệp nhỏ và vừa và tình hình triển khai Nghị quyết",
+                      "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua_va_tinh_hinh_trien_khai_nghi_quyet"
                     }
                   ],
                   "children": []
@@ -1438,7 +1427,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
+              "content": "Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ trong phạm vi nhiệm vụ, quyền hạn của mình, có trách nhiệm:",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 12: Trách nhiệm của các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ > Khoản 2",
               "references": [],
               "children": [
@@ -1462,8 +1451,7 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ trong phạm vi nhiệm vụ, quyền hạn của mình, có trách nhiệm:"
+              ]
             }
           ]
         },
@@ -1491,7 +1479,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Căn cứ khả năng cân đối của địa phương, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh phân bổ dự toán ngân sách địa phương để hỗ trợ doanh nghiệp, hộ kinh doanh và cá nhân hằng năm trên địa bàn.",
+              "content": "Căn cứ khả năng cân đối của địa phương, Ủy ban nhân dân cấp tỉnh trình Hội đồng nhân dân cấp tỉnh phân bổ dự toán ngân sách địa phương để hỗ trợ doanh ng hiệp, hộ kinh doanh và cá nhân hằng năm trên địa bàn.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 13: Trách nhiệm của Ủy ban nhân dân cấp tỉnh > Khoản 2",
               "references": [],
               "children": []
@@ -1501,7 +1489,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Căn cứ nhu cầu thực tế và khả năng bố trí của ngân sách địa phương, xây dựng kế hoạch và dự toán đề xuất ngân sách trung ương bổ sung có mục tiêu cho địa phương để hỗ trợ doanh nghiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này, gửi Bộ Tài chính tổng hợp, báo cáo cấp có thẩm quyền.",
+              "content": "Căn cứ nhu cầu thực tế và khả năng bố trí của ngân sách địa phương, xây dựng kế hoạch và dự toán đề xuất ngân sách trung ương bổ sung có mục tiêu cho địa phương để hỗ trợ doanh ng hiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này, gửi Bộ Tài chính tổng hợp, báo cáo cấp có thẩm quyền.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 13: Trách nhiệm của Ủy ban nhân dân cấp tỉnh > Khoản 3",
               "references": [],
               "children": []
@@ -1532,9 +1520,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_V_dieu_14",
           "node_type": "Điều",
           "node_index": "14",
-          "title": "Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh nghiệp",
+          "title": "Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh ng hiệp",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh nghiệp",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh ng hiệp",
           "references": [],
           "children": [
             {
@@ -1542,8 +1530,8 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Phối hợp với bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ, Ủy ban nhân dân cấp tỉnh thực hiện các hoạt động hỗ trợ doanh nghiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh nghiệp > Khoản 1",
+              "content": "Phối hợp với bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ, Ủy ban nhân dân cấp tỉnh thực hiện các hoạt động hỗ trợ doanh ng hiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh ng hiệp > Khoản 1",
               "references": [],
               "children": []
             },
@@ -1552,8 +1540,8 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Huy động các nguồn lực để thực hiện hỗ trợ doanh nghiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh nghiệp > Khoản 2",
+              "content": "Huy động các nguồn lực để thực hiện hỗ trợ doanh ng hiệp, hộ kinh doanh và cá nhân kinh doanh theo quy định tại Nghị định này.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 14: Trách nhiệm của các tổ chức chính trị - xã hội, tổ chức hội, hiệp hội doanh ng hiệp > Khoản 2",
               "references": [],
               "children": []
             }
@@ -1563,9 +1551,9 @@
           "node_id": "doc_20_2026_NDCP_chuong_V_dieu_15",
           "node_type": "Điều",
           "node_index": "15",
-          "title": "Trách nhiệm của doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh",
+          "title": "Trách nhiệm của doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh",
           "content": "",
-          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh",
           "references": [],
           "children": [
             {
@@ -1573,8 +1561,8 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Cung cấp thông tin, tài liệu về doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh kịp thời, đầy đủ, chính xác theo yêu cầu của cơ quan, tổ chức hỗ trợ và chịu trách nhiệm trước pháp luật về thông tin, tài liệu đã cung cấp.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+              "content": "Cung cấp thông tin, tài liệu về doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh kịp thời, đầy đủ, chính xác theo yêu cầu của cơ quan, tổ chức hỗ trợ và chịu trách nhiệm trước pháp luật về thông tin, tài liệu đã cung cấp.",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
               "references": [],
               "children": []
             },
@@ -1584,7 +1572,7 @@
               "node_index": "2",
               "title": null,
               "content": "Tuân thủ quy định của pháp luật; thực hiện các nghĩa vụ đối với Nhà nước.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
               "references": [],
               "children": []
             },
@@ -1594,20 +1582,19 @@
               "node_index": "3",
               "title": null,
               "content": "Thực hiện đúng cam kết với cơ quan, tổ chức hỗ trợ. Bố trí nguồn lực đối ứng để tiếp nhận, phối hợp và tổ chức thực hiện có hiệu quả nguồn lực hỗ trợ.",
-              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+              "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương V > Điều 15: Trách nhiệm của doanh ng hiệp, hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
               "references": [],
               "children": []
             }
           ]
         }
-      ],
-      "lead_in_text": "TỔ CHỨC THỰC HIỆN"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_chuong_VI",
       "node_type": "Chương",
       "node_index": "VI",
-      "title": "",
+      "title": "ĐIỀU KHOẢN THI HÀNH",
       "content": "",
       "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương VI",
       "references": [],
@@ -1682,7 +1669,7 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Các nội dung về thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân không quy định tại Nghị định này thì thực hiện theo quy định của pháp luật hiện hành về thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân và quản lý thuế.",
+              "content": "Các nội dung về thuế thu nhập doanh ng hiệp, thuế thu nhập cá nhân không quy định tại Nghị định này thì thực hiện theo quy định của pháp luật hiện hành về thuế thu nhập doanh ng hiệp, thuế thu nhập cá nhân và quản lý thuế.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương VI > Điều 16: Hiệu lực thi hành > Khoản 4",
               "references": [],
               "children": []
@@ -1692,7 +1679,7 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Việc miễn thu phí, lệ phí quy định tại khoản 8 Điều 10 Nghị quyết số 198/2025/QH15 áp dụng cho tất cả các tổ chức, cá nhân, doanh nghiệp nếu phải cấp lại, cấp đổi các loại giấy tờ khi thực hiện sắp xếp, tổ chức lại bộ máy nhà nước theo quy định của pháp luật.",
+              "content": "Việc miễn thu phí, lệ phí quy định tại khoản 8 Điều 10 Nghị quyết số 198/2025/QH15 áp dụng cho tất cả các tổ chức, cá nhân, doanh ng hiệp nếu phải cấp lại, cấp đổi các loại giấy tờ khi thực hiện sắp xếp, tổ chức lại bộ máy nhà nước theo quy định của pháp luật.",
               "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương VI > Điều 16: Hiệu lực thi hành > Khoản 5",
               "references": [
                 {
@@ -1733,10 +1720,9 @@
           "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương VI > Điều 17: Trách nhiệm thi hành",
           "references": [],
           "children": [],
-          "lead_in_text": "Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân cấp tỉnh và các cơ quan, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này./. - Lưu: VT, ĐMDN (2b)."
+          "lead_in_text": "Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân cấp tỉnh và các cơ quan, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này./."
         }
-      ],
-      "lead_in_text": "ĐIỀU KHOẢN THI HÀNH"
+      ]
     },
     {
       "node_id": "doc_20_2026_NDCP_phu_luc_I",
@@ -1756,7 +1742,7 @@
         }
       ],
       "children": [],
-      "lead_in_text": "ĐỀ NGHỊ HOÀN TRẢ KHOẢN HỖ TRỢ GIẢM TIỀN THUÊ LẠI ĐẤT (Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) TÊN DOANH CỘNG HÒA XÃ HỘI CHỦ NGHĨA NGHIỆP … VIỆT NAM __________ Độc lập - Tự do - Hạnh phúc V/v hoàn trả khoản hỗ ______________________ trợ giảm tiền ……., ngày … tháng … năm …… thuê lại đất Kính gửi: Sở Tài chính tỉnh, thành phố Căn cứ Nghị quyết số 198/2025/QH15 ngày 17/5/2025 của Quốc hội về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân. Căn cứ Nghị định số 20/2026/NĐ-CP ngày 15/01/2026 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Nghị quyết số 198/2025/QH15. Căn cứ Quyết định số.... ngày.... của Ủy ban nhân dân tỉnh, thành phố... về việc hỗ trợ tiền thuê lại đất trong khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ. Tên chủ đầu tư1: ……………………… Mã số doanh nghiệp: …………………………. Địa chỉ trụ sở chính: …………………………… Điện thoại: ………………………… Email: ………. Tài khoản số: …………….. tại ngân hàng: …………….. giảm cho doanh nghiệp được hỗ trợ thuê đất, thuê lại đất trong khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ như sau: (liệt kê theo từng khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ của chủ đầu tư) 1.1. Tên khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ:.... - Số tiền đề nghị hoàn trả:…...VNĐ (kèm theo Bảng kê khai đề nghị hoàn trả khoản hỗ trợ giảm tiền thuê lại đất); - Hình thức hoàn trả: của chủ đầu tư: ………….. VNĐ. của chủ đầu tư: …………..VNĐ. văn bản, tài liệu và thông tin đã cung cấp để thực hiện thủ tục hoàn trả tiền thuê lại đất; hoàn trả ngân sách nhà nước và chịu trách nhiệm trước pháp luật trong trường hợp kê khai không chính xác, trung thực. 1 Là doanh nghiệp đầu tư, kinh doanh kết cấu hạ tầng KCN, CCN, VƯCN. BẢNG KÊ KHAI ĐỀ NGHỊ HOÀN TRẢ KHOẢN HỖ TRỢ GIẢM TIỀN THUÊ LẠI ĐẤT NĂM...... (Kèm theo Đề nghị hoàn trả tiền hỗ trợ thuê lại đất) Đơn vị: triệu đồng trả trong năm: Ghi chú: - Doanh nghiệp công nghệ cao thuộc loại hình kinh tế tư nhân; - Doanh nghiệp nhỏ và vừa; - Doanh nghiệp khởi nghiệp sáng tạo. công bố/m2/năm) x (100% - (Mức giảm tiền thuê lại đất tính theo % theo quyết định của UBND cấp tỉnh)). (Mức giảm tiền thuê lại đất tính theo % theo quyết định của UBND cấp tỉnh). 2 Theo tên dự án được ghi tại Quyết định chấp thuận chủ trương đầu tư, Giấy chứng nhận đăng ký đầu tư hoặc các văn bản khác có giá trị tương đương đã được cấp cho chủ đầu tư."
+      "lead_in_text": "ĐỀ NGHỊ HOÀN TRẢ KHOẢN HỖ TRỢ GIẢM TIỀN THUÊ LẠI ĐẤT (Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) Kính gửi: Sở Tài chính tỉnh, thành phố Căn cứ Nghị quyết số 198/2025/QH15 ngày 17/5/2025 của Quốc hội về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân. Căn cứ Nghị định số 20/2026/NĐ-CP ngày 15/01/2026 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Nghị quyết số 198/2025/QH15. Căn cứ Quyết định số.... ngày.... của Ủy ban nhân dân tỉnh, thành phố... về việc hỗ trợ tiền thuê lại đất trong khu công ng hiệp, cụm công ng hiệp và vườn ươm công nghệ. Tên chủ đầu tư1: ……………………… Mã số doanh ng hiệp: …………………………. Địa chỉ trụ sở chính: …………………………… Điện thoại: ………………………… Email: ………. Tài khoản số: …………….. tại ngân hàng: …………….. 1.1. Tên khu công ng hiệp, cụm công ng hiệp và vườn ươm công ng hệ:.... - Số tiền đề nghị hoàn trả:…...VNĐ (kèm theo Bảng kê khai đề nghị hoàn trả khoản hỗ trợ giảm tiền thuê lại đất); - Hình thức hoàn trả: 1 Là doanh ng hiệp đầu tư, kinh doanh kết cấu hạ tầng KCN, CCN, VƯCN. BẢNG KÊ KHAI ĐỀ NGHỊ HOÀN TRẢ KHOẢN HỖ TRỢ GIẢM TIỀN THUÊ LẠI ĐẤT NĂM...... (Kèm theo Đề nghị hoàn trả tiền hỗ trợ thuê lại đất) Đơn vị: triệu đồng Ghi chú: - Doanh ng hiệp công nghệ cao thuộc loại hình kinh tế tư nhân; - Doanh ng hiệp nhỏ và vừa; - Doanh ng hiệp khởi ng hiệp sáng tạo. 2 Theo tên dự án được ghi tại Quyết định chấp thuận chủ trương đầu tư, Giấy chứng nhận đăng ký đầu tư hoặc các văn bản khác có giá trị tương đương đã được cấp cho chủ đầu tư."
     },
     {
       "node_id": "doc_20_2026_NDCP_phu_luc_II",
@@ -1779,20 +1765,16 @@
           "target_id": "external_luat_cong_nghe_cao"
         },
         {
-          "text_match": "Thông tư số 07/2025/TT-BKHĐT",
-          "target_id": "external_thong_tu_07_2025_tt_bkhdt"
-        },
-        {
-          "text_match": "Luật Hỗ trợ doanh nghiệp nhỏ và vừa",
-          "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua"
+          "text_match": "Luật Hỗ trợ doanh ng hiệp nhỏ và vừa",
+          "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua"
         },
         {
           "text_match": "Nghị định số 80/2021/NĐ-CP",
           "target_id": "external_nghi_dinh_80_2021_nd_cp"
         },
         {
-          "text_match": "Luật Hỗ trợ doanh nghiệp nhỏ và vừa hoặc văn bản sửa đổi, bổ sung, thay thế",
-          "target_id": "external_luat_ho_tro_doanh_nghiep_nho_va_vua_hoac_van_ban_sua_doi_bo_sung_thay_the"
+          "text_match": "Luật Hỗ trợ doanh ng hiệp nhỏ và vừa hoặc văn bản sửa đổi, bổ sung, thay thế",
+          "target_id": "external_luat_ho_tro_doanh_ng_hiep_nho_va_vua_hoac_van_ban_sua_doi_bo_sung_thay_the"
         },
         {
           "text_match": "Luật Khoa học công nghệ và đổi mới sáng tạo, Nghị định số",
@@ -1804,7 +1786,7 @@
         }
       ],
       "children": [],
-      "lead_in_text": "(Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc...., ngày....tháng.... năm GIẤY XÁC NHẬN THÔNG TIN CỦA DOANH NGHIỆP THUÊ LẠI ĐẤT TẠI KHU CÔNG NGHIỆP, CỤM CÔNG NGHIỆP, VƯỜN ƯƠM CÔNG NGHỆ Căn cứ Nghị quyết số 198/2025/QH15 ngày 17/5/2025 của Quốc hội về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân. Căn cứ Nghị định số 20/2026/NĐ-CP ngày 15/01/2026 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Nghị quyết số 198/2025/QH15.. Căn cứ Quyết định số.... ngày.... của Ủy ban nhân dân tỉnh, thành phố... về việc hỗ trợ tiền thuê lại đất trong khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ. Căn cứ Hợp đồng số …. ký ngày ……….. Tên doanh nghiệp1: ………………………….. Mã số doanh nghiệp: ………………………… Địa chỉ trụ sở chính: …………………………. Điện thoại: …………...….. Email: ……………. Doanh nghiệp thuộc loại hình sau (tự xác nhận, tích vào ô dưới đây): □ Doanh nghiệp công nghệ cao thuộc loại hình kinh tế tư nhân2; □ Doanh nghiệp nhỏ và vừa3; □ Doanh nghiệp khởi nghiệp sáng tạo4. Doanh nghiệp đã được chủ đầu tư: (tên chủ đầu tư) ………………….. giảm tiền thuê lại đất khu công nghiệp, cụm công nghiệp và vườn ươm công nghệ như sau: - Tên khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ: …………………. - Địa chỉ: ……………………………………………………………………. - Diện tích thuê đất (được giảm giá): …………. m2. - Thời gian thuê: ……………(tháng), từ ngày …../…./…. đến …./…./…. - Giá thuê (sau khi giảm): …………………………VNĐ/m2. Doanh nghiệp xin cam kết về tính chính xác, trung thực về thông tin đã cung cấp và chịu trách nhiệm trước pháp luật. - Lưu: (Ký, ghi rõ họ tên, chức vụ) 1 Doanh nghiệp thuê lại đất tại khu công nghiệp, cụm công nghiệp, vườn ươm công nghệ. 2 Theo Luật Công nghệ cao và các văn bản hướng dẫn; pháp luật về thống kê (Thông tư số 07/2025/TT-BKHĐT ngày 13/02/2025 hoặc văn bản sửa đổi, bổ sung thay thế, quy định phân loại thống kê theo loại hình kinh tế). 3 Theo Luật Hỗ trợ doanh nghiệp nhỏ và vừa; Nghị định số 80/2021/NĐ-CP ngày 26/8/2021 quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ doanh nghiệp nhỏ và vừa hoặc văn bản sửa đổi, bổ sung, thay thế. 4 Theo Luật Khoa học công nghệ và đổi mới sáng tạo, Nghị định số 268/2025/NĐ-CP ngày 14/10/2025 hoặc văn bản sửa đổi, bổ sung, thay thế."
+      "lead_in_text": "(Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc...., ngày.... tháng.... năm GIẤY XÁC NHẬN THÔNG TIN CỦA DOANH NG HIỆP THUÊ LẠI ĐẤT TẠI KHU CÔNG NG HIỆP, CỤM CÔNG NG HIỆP, VƯỜN ƯƠM CÔNG NGHỆ Căn cứ Nghị quyết số 198/2025/QH15 ngày 17/5/2025 của Quốc hội về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân. Căn cứ Nghị định số 20/2026/NĐ-CP ngày 15/01/2026 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Nghị quyết số 198/2025/QH15.. Căn cứ Quyết định số.... ngày.... của Ủy ban nhân dân tỉnh, thành phố... về việc hỗ trợ tiền thuê lại đất trong khu công ng hiệp, cụm công ng hiệp và vườn ươm công nghệ. Căn cứ Hợp đồng số …. ký ngày ……….. Tên doanh ng hiệp1: ………………………….. Mã số doanh ng hiệp: ………………………… Địa chỉ trụ sở chính: …………………………. Điện thoại: …………...….. Email: ……………. Doanh ng hiệp thuộc loại hình sau (tự xác nhận, tích vào ô dưới đây): □ Doanh ng hiệp công nghệ cao thuộc loại hình kinh tế tư nhân2; □ Doanh ng hiệp nhỏ và vừa3; □ Doanh ng hiệp khởi ng hiệp sáng tạo4. Doanh ng hiệp đã được chủ đầu tư: (tên chủ đầu tư) ………………….. giảm tiền thuê lại đất khu công ng hiệp, cụm công ng hiệp và vườn ươm công nghệ như sau: - Tên khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ: …………………. - Địa chỉ: ……………………………………………………………………. - Diện tích thuê đất (được giảm giá): …………. m2. - Thời gian thuê: ……………( tháng), từ ngày …../…./…. đến …./…./…. - Giá thuê (sau khi giảm): …………………………VNĐ/m2. Doanh ng hiệp xin cam kết về tính chính xác, trung thực về thông tin đã cung cấp và chịu trách nhiệm trước pháp luật. 1 Doanh ng hiệp thuê lại đất tại khu công ng hiệp, cụm công ng hiệp, vườn ươm công nghệ. 2 Theo Luật Công nghệ cao và các văn bản hướng dẫn; pháp luật về thống kê (T hông tư số 07/2025/TT-BKHĐT ngày 13/02/2025 hoặc văn bản sửa đổi, bổ sung thay thế, quy định phân loại thống kê theo loại hình kinh tế). 3 Theo Luật Hỗ trợ doanh ng hiệp nhỏ và vừa; Nghị định số 80/2021/NĐ-CP ngày 26/8/2021 quy định chi tiết và hướng dẫn thi hành một số điều của Luật Hỗ trợ doanh ng hiệp nhỏ và vừa hoặc văn bản sửa đổi, bổ sung, thay thế. 4 Theo Luật Khoa học công nghệ và đổi mới sáng tạo, Nghị định số 268/2025/NĐ-CP ngày 14/10/2025 hoặc văn bản sửa đổi, bổ sung, thay thế."
     },
     {
       "node_id": "doc_20_2026_NDCP_phu_luc_III",
@@ -1820,12 +1802,58 @@
         }
       ],
       "children": [],
-      "lead_in_text": "TỜ KHAI XÁC ĐỊNH HỘ KINH DOANH, CÁ NHÂN KINH DOANH VÀ ĐĂNG KÝ THAM GIA KHÓA ĐÀO TẠO QUẢN TRỊ DOANH NGHIỆP (Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) Mẫu 1. Áp dụng với hộ kinh doanh Tên hộ kinh doanh: …………………………………………………………… ……………… Mã số hộ kinh doanh/Mã số thuế: ………………………………………………………….. Địa chỉ trụ sở chính: …………………………………………………………… …………….. Xã/phường: …………………………………… Tỉnh/thành phố: ………………………….. Tên chủ hộ kinh doanh: …………………………………………………………… ………… Điện thoại: …………………………… Email: ……………………………….. Lĩnh vực sản xuất, kinh doanh chính: ……………………………………….………………. Số lao động tham gia bảo hiểm xã hội bình quân năm: …….…………….……………….. □ Quản trị doanh nghiệp cơ bản □ Quản trị doanh nghiệp chuyên sâu Mã định Điện Chức Tên Hình Họ và Năm TT danh cá thoại danh, chuyên thức đào tên sinh nhân/Căn liên vị trí đề đào tạo (trực 1... HỘ KINH DOANH CAM KẾT và chịu trách nhiệm trước pháp luật. Nam. 1 Hộ kinh doanh có thể cung cấp 01 số điện thoại của bộ phận hành chính, nhân sự làm đầu mối liên hệ. Mẫu 2. Áp dụng với cá nhân kinh doanh Tên cá nhân kinh doanh: ……………………………………………..………………….. Giới tính:...……………………………………… Năm sinh: ……………………………. Mã số thuế: ……………………………………………..………………… ……………….. Địa chỉ nơi cư trú: …………………………………………………………..……… ……… Xã/phường: ……………..……………………… Tỉnh/thành phố: ………………………. Điện thoại: ………………………………………. Email: …………………………………. chính: ……………………………………………..……………… □ Quản trị doanh nghiệp cơ bản □ Quản trị doanh nghiệp chuyên sâu - Tên chuyên đề đào tạo, hình thức đào tạo (trực tuyến, trực tiếp, trực tuyến kết hợp trực tiếp): TÔI CAM KẾT kinh doanh. Nam."
+      "lead_in_text": "TỜ KHAI XÁC ĐỊNH HỘ KINH DOANH, CÁ NHÂN KINH DOANH VÀ ĐĂNG KÝ THAM GIA KHÓA ĐÀO TẠO QUẢN TRỊ DOANH NG HIỆP (Kèm theo Nghị định số 20/2026/NĐ-CP ngày 15 tháng 01 năm 2026 của Chính phủ) Mẫu 1. Áp dụng với hộ kinh doanh Tên hộ kinh doanh: …………………………………………………………………………… Mã số hộ kinh doanh/ Mã số thuế: ………………………………………………………….. Địa chỉ trụ sở chính: ………………………………………………………………………….. Xã/ phường: …………………………………… Tỉnh/ thành phố: ………………………….. Tên chủ hộ kinh doanh: ……………………………………………………………………… Điện thoại: …………………………… Email: ……………………………….. Lĩnh vực sản xuất, kinh doanh chính: ……………………………………….………………. Số lao động tham gia bảo hiểm xã hội bình quân năm: …….…………….……………….. □ Quản trị doanh ng hiệp cơ bản □ Quản trị doanh ng hiệp chuyên sâu HỘ KINH DOANH CAM KẾT 1 Hộ kinh doanh có thể cung cấp 01 số điện thoại của bộ phận hành chính, nhân sự làm đầu mối liên hệ. Mẫu 2. Áp dụng với cá nhân kinh doanh Tên cá nhân kinh doanh: ……………………………………………..………………….. Giới tính:...……………………………………… Năm sinh: ……………………………. Mã số thuế: ……………………………………………..………………………………….. Địa chỉ nơi cư trú: …………………………………………………………..……………… Xã/ phường: ……………..……………………… Tỉnh/ thành phố: ………………………. Điện thoại: ………………………………………. Email: …………………………………. □ Quản trị doanh ng hiệp cơ bản □ Quản trị doanh ng hiệp chuyên sâu - Tên chuyên đề đào tạo, hình thức đào tạo (trực tuyến, trực tiếp, trực tuyến kết hợp trực tiếp): TÔI CAM KẾT"
     }
   ],
   "tables": [
     {
       "table_index": 0,
+      "headers": [
+        "Số thuế được miễn trong kỳ tính thuế",
+        "=",
+        "Số thuế TNCN tính trên tổng thu nhập từ tiền lương, tiền công trong kỳ tính thuế",
+        "x",
+        "Thu nhập được miễn thuế từ tiền lương, tiền công tại khoản này"
+      ],
+      "rows": [
+        [
+          "Số thuế được miễn trong kỳ tính thuế",
+          "=",
+          "Số thuế TNCN tính trên tổng thu nhập từ tiền lương, tiền công trong kỳ tính thuế",
+          "x",
+          "Tổng thu nhập chịu thuế từ tiền lương, tiền công trong kỳ tính thuế"
+        ]
+      ],
+      "row_count": 1,
+      "col_count": 5,
+      "page_number": 0,
+      "extraction_strategy": "docx"
+    },
+    {
+      "table_index": 1,
+      "headers": [
+        "Số thuế được giảm trong kỳ tính thuế",
+        "=     50% x",
+        "Số thuế TNCN tính trên tổng thu nhập từ tiền lương, tiền công trong kỳ tính thuế",
+        "x",
+        "Thu nhập được giảm thuế từ tiền lương, tiền công tại khoản này"
+      ],
+      "rows": [
+        [
+          "Số thuế được giảm trong kỳ tính thuế",
+          "=     50% x",
+          "Số thuế TNCN tính trên tổng thu nhập từ tiền lương, tiền công trong kỳ tính thuế",
+          "x",
+          "Tổng thu nhập chịu thuế từ tiền lương, tiền công trong kỳ tính thuế"
+        ]
+      ],
+      "row_count": 1,
+      "col_count": 5,
+      "page_number": 0,
+      "extraction_strategy": "docx"
+    },
+    {
+      "table_index": 2,
       "headers": [
         "STT",
         "Tên doanh nghiệp",
@@ -1854,14 +1882,14 @@
         [
           "I",
           "Tên KCN, CCN, Vườn ươm công nghệ2",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2",
+          "Tên KCN, CCN, Vườn ươm công nghệ2"
         ],
         [
           "1",
@@ -1890,11 +1918,11 @@
         [
           "",
           "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
-          "",
-          "",
-          "",
-          "",
-          "",
+          "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
+          "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
+          "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
+          "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
+          "Tổng cộng số tiền chủ đầu tư đề nghị Nhà nước hoàn trả trong năm:",
           "",
           "",
           ""
@@ -1902,20 +1930,20 @@
       ],
       "row_count": 5,
       "col_count": 10,
-      "extraction_strategy": "lines",
-      "page_number": 22
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
-      "table_index": 1,
+      "table_index": 3,
       "headers": [
-        "",
-        "",
-        "",
-        "cước công dân",
-        "lạc của học viên1",
-        "hiện tại",
-        "tạo đăng ký tham gia",
-        "tuyến, trực tiếp, trực tuyến kết hợp trực tiếp)"
+        "TT",
+        "Họ và tên",
+        "Năm sinh",
+        "Mã định danh cá nhân/Căn cước công dân",
+        "Điện thoại liên lạc của học viên1",
+        "Chức danh, vị trí hiện tại",
+        "Tên chuyên đề đào tạo đăng ký tham gia",
+        "Hình thức đào tạo (trực tuyến, trực tiếp, trực tuyến kết hợp trực tiếp)"
       ],
       "rows": [
         [
@@ -1931,8 +1959,8 @@
       ],
       "row_count": 1,
       "col_count": 8,
-      "extraction_strategy": "lines",
-      "page_number": 27
+      "page_number": 0,
+      "extraction_strategy": "docx"
     }
   ]
 }

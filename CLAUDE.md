@@ -85,6 +85,7 @@ pytest tests/test_parser_regression.py -v -m reparse
 | `set_field` | Gán giá trị cho field của node | ✅ |
 | `remove_node` | Xóa node khỏi cây | ✅ (no-op nếu không có) |
 | `add_reference` | Thêm reference | ✅ (no-op nếu đã có) |
+| `add_table` | Thêm structured table vào top-level `tables` | ✅ (no-op nếu cùng page_number + headers) |
 
 ### Sau khi tạo patch:
 
@@ -121,14 +122,30 @@ Chạy FAST + REPARSE test
 
 ## Documents đã parse thành công (baseline)
 
-| Document | root_count | total_nodes | max_depth | tables |
-|---|---|---|---|---|
-| 109_2025_QH15 | 4 Chương | 203 | 4 | 0 |
-| 117_2025_NDCP | 4 Chương | 91 | 5 | 10 |
-| 152_2025_TTBTC | 3 Chương | 29 | 4 | 11 |
-| 20_2026_NDCP | 9 (Chương+Phụ lục) | 141 | 4 | 2 |
-| 373_2025_NDCP | 13 Điều | 65 | 4 | 15 |
-| 310_2025_NDCP | 4 Điều | 130 | 3 | 0 |
+Source: D=docx, P=pdf+pdfplumber, G=pdf+Gemini 2.5 Pro
+
+**Type A — Văn bản pháp luật (có Điều/Khoản):**
+
+| Document | Source | root_count | total_nodes | max_depth | tables |
+|---|---|---|---|---|---|
+| 109_2025_QH15 | D | 4 Chương | 203 | 4 | 2 |
+| 117_2025_NDCP | D | 5 (Chương+Phụ lục) | 92 | 5 | 10 |
+| 152_2025_TTBTC | D | 3 Chương | 29 | 4 | 9 |
+| 20_2026_NDCP | D | 9 (Chương+Phụ lục) | 141 | 4 | 4 |
+| 373_2025_NDCP | D | 15 (Điều+Phụ lục) | 67 | 4 | 16 |
+| 310_2025_NDCP | D | 4 Điều | 130 | 3 | 0 |
+| 110_2025_UBTVQH15 | D | 2 Điều | 4 | 2 | 0 |
+| 149_2025_QH15 | D | 2 Điều | 7 | 3 | 0 |
+| 198_2025_QH15 | D | 7 Chương | 97 | 4 | 0 |
+| 68_2026_NDCP | G | 5 Chương | 159 | 4 | 14 |
+| 18_2026_TTBTC | G (scan) | 6 Điều | 29 | 3 | 0 |
+
+**Type B — Văn bản hướng dẫn (không có Điều/Khoản, dùng cho chatbot context):**
+
+| Document | Source | Ghi chú |
+|---|---|---|
+| 1296_CTNVT | G | Công văn hướng dẫn quyết toán thuế TNCN |
+| So_Tay_HKD | G | Sổ tay HKD — 26 tables, guidance content |
 
 ---
 
@@ -136,7 +153,10 @@ Chạy FAST + REPARSE test
 
 | Patch file | Doc | Bug | Ngày |
 |---|---|---|---|
-| `373_2025_NDCP.patch.json` | 373_2025_NDCP | Bug A: false Phụ lục II từ page-break mid-sentence | 2026-03-11 |
+| `373_2025_NDCP.patch.json` | 373_2025_NDCP | Bug A: false Phụ lục II từ page-break mid-sentence; Bug B: phu_luc_1 Arabic × 3 duplicates | 2026-03-11 |
+| `109_2025_QH15.patch.json` | 109_2025_QH15 | Bug A: thuế suất 59%→5% (Điều 22). Bug B: pdfplumber drop spaces. Bug C: dính chữ. Bug D: số bị split. Bug E: sai dấu Điêu/thuê. Bug F: page artifact. Bug G: add_table biểu thuế lũy tiến | 2026-03-12 |
+| `310_2025_NDCP.patch.json` | 310_2025_NDCP | Bug: validator reclassify amendment node duplicates thành WARNING | 2026-03-13 |
+| `18_2026_TTBTC.patch.json` | 18_2026_TTBTC | Bug: duplicate Khoản 3 — set node_index="5" | 2026-03-13 |
 
 ---
 

@@ -1,0 +1,5862 @@
+[
+  {
+    "id": 1,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu gì?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Phương pháp tính thuế đối với HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Kê khai tỷ lệ % hoặc Lợi nhuận",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Kê khai tỷ lệ % hoặc Lợi nhuận",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 2,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Doanh thu của quán phở một năm bao nhiêu thì được miễn không phải nộp thuế GTGT và TNCN?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Mức doanh thu không chịu thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "500 triệu",
+      "500.000.000 VND"
+    ],
+    "expected_value": {
+      "amount_vnd": 500000000,
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "500.000.000 VND",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 3,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tiệm làm tóc của tôi doanh thu 1 tỷ/năm thì nộp thuế GTGT và TNCN theo tỷ lệ bao nhiêu phần trăm?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Biểu tỷ lệ thuế áp dụng cho Dịch vụ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "5%",
+      "2%",
+      "70 triệu",
+      "50 triệu",
+      "20 triệu",
+      "70.000.000"
+    ],
+    "expected_value": {
+      "amount_vnd": 70000000,
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "70.000.000 VND (5% GTGT, 2% TNCN)",
+    "expected_doc_number": "68/2026/NĐ-CP",
+    "discrepancy_note": "annotation says 70M (5%GTGT+2%TNCN on full revenue). Calculator uses 15%×(DT-500M) for TNCN. Revenue method rates (per 68/2026): GTGT 5% + TNCN 2% on FULL revenue."
+  },
+  {
+    "id": 4,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi muốn nộp thuế theo lợi nhuận (doanh thu trừ chi phí) thay vì nộp theo % doanh thu thì có được không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Điều kiện nộp thuế theo lợi nhuận"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép nếu tự nguyện thực hiện chế độ kế toán",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép nếu tự nguyện thực hiện chế độ kế toán",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 5,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi mở 3 cửa hàng ở 3 quận khác nhau thì cái mức miễn thuế 500 triệu tính gộp hay tính cho từng cửa hàng?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Nguyên tắc xác định ngưỡng doanh thu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "500 triệu"
+    ],
+    "expected_value": {
+      "text": "Tính gộp tổng doanh thu tất cả các cửa hàng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tính gộp tổng doanh thu tất cả các cửa hàng",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 6,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh của tôi doanh thu 4 tỷ thì bắt buộc phải nộp thuế theo lợi nhuận đúng không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Đối tượng áp dụng nộp thuế lợi nhuận"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "3 tỷ"
+    ],
+    "expected_value": {
+      "text": "Bắt buộc đối với doanh thu từ 3 tỷ đồng trở lên",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bắt buộc đối với doanh thu từ 3 tỷ đồng trở lên",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 7,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi cho thuê nhà nguyên căn 1 tháng 30 triệu thì đóng thuế như thế nào theo luật mới?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế cho thuê tài sản"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "miễn",
+      "500 triệu"
+    ],
+    "expected_value": {
+      "text": "10% (5% GTGT, 5% TNCN)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Miễn cả TNCN và GTGT (doanh thu 360 triệu/năm < ngưỡng 500 triệu theo luật mới)",
+    "expected_doc_number": "68/2026/NĐ-CP",
+    "discrepancy_note": "Thuê tài sản: 10% total (5%GTGT+5%TNCN) — matches, no discrepancy.",
+    "expected_doc_id": "109_2025_QH15"
+  },
+  {
+    "id": 8,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tiệm vàng của tôi doanh thu trên 50 tỷ thì thuế suất TNCN áp dụng là bao nhiêu phần trăm?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thuế suất phân phối, cung cấp hàng hóa"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "20%",
+      "50 tỷ",
+      "0.5%",
+      "0.5"
+    ],
+    "expected_value": {
+      "text": "0.5% TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "0.5% TNCN",
+    "expected_doc_number": "68/2026/NĐ-CP",
+    "discrepancy_note": "Phân phối/cung cấp hàng hóa: TNCN 0.5% — annotation confirms."
+  },
+  {
+    "id": 9,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Đang nộp thuế theo lợi nhuận (doanh thu trên 3 tỷ), sang năm tôi muốn đổi lại nộp theo % doanh thu thì có được phép không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thay đổi phương pháp tính thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "3 tỷ"
+    ],
+    "expected_value": {
+      "text": "Không được phép (doanh thu > 3 tỷ bắt buộc nộp lợi nhuận)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được phép (doanh thu > 3 tỷ bắt buộc nộp lợi nhuận)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 10,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh nộp thuế theo tỷ lệ % doanh thu (dưới 3 tỷ) thì phải mở những loại sổ sách kế toán nào?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Danh mục sổ kế toán"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "S1a-HKD",
+      "S2b-HKD"
+    ],
+    "expected_value": {
+      "text": "S1a-HKD, S2b-HKD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "S1a-HKD, S2b-HKD",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 11,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Mức giảm trừ gia cảnh cho bản thân và người phụ thuộc năm 2026 là bao nhiêu vậy AI?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "110_2025_UBTVQH15"
+    ],
+    "expected_articles": [
+      "Toàn văn Nghị quyết"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "15,5 triệu",
+      "6,2 triệu",
+      "110"
+    ],
+    "expected_value": {
+      "source": "tool_computed"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "[Phụ thuộc vào mức quy định của NQ 110]",
+    "expected_doc_number": "110/2025/UBTVQH15"
+  },
+  {
+    "id": 12,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Lương thực lãnh của tôi 20 triệu/tháng, tôi đang nuôi 1 con nhỏ thì có bị trừ thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Biểu thuế lũy tiến từng phần"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tncn_progressive"
+    ],
+    "key_facts": [
+      "miễn",
+      "15,5 triệu",
+      "6,2 triệu"
+    ],
+    "expected_value": {
+      "source": "tool_computed"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "[Tính theo Tool]",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 13,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Bố mẹ tôi hết tuổi lao động nhưng có lương hưu 4 triệu/tháng thì tôi có được đăng ký làm người phụ thuộc không?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Điều kiện xác định người phụ thuộc"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "người phụ thuộc",
+      "giảm trừ gia cảnh"
+    ],
+    "expected_value": {
+      "text": "Không được (lương hưu > mức quy định)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được (lương hưu > mức quy định)",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 14,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi làm 2 công ty, 1 chỗ ký hợp đồng chính thức, 1 chỗ làm freelance bên ngoài thì cuối năm quyết toán thuế TNCN ở đâu?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Nơi nộp hồ sơ quyết toán"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế nơi cư trú hoặc cty chính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế nơi cư trú hoặc cty chính",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 15,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi mới trúng vé số Vietlott 50 triệu thì bị trừ bao nhiêu tiền thuế?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thuế đối với thu nhập trúng thưởng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tncn_progressive"
+    ],
+    "key_facts": [
+      "4.000.000 VND"
+    ],
+    "expected_value": {
+      "amount_vnd": 4000000,
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "4.000.000 VND",
+    "expected_doc_number": "109/2025/QH15",
+    "discrepancy_note": "Tiền trúng thưởng: 4M = (100M−10M)×10%? or 200M×2%=4M. Verify Luật 109."
+  },
+  {
+    "id": 16,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi bán mảnh đất ở quê giá 2 tỷ thì thuế TNCN phải nộp tính làm sao?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thuế chuyển nhượng bất động sản"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tncn_progressive"
+    ],
+    "key_facts": [
+      "2%",
+      "40.000.000 VND",
+      "2 tỷ"
+    ],
+    "expected_value": {
+      "amount_vnd": 40000000,
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "40.000.000 VND (2% x 2 tỷ)",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 17,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi bán cổ phần trong một công ty khởi nghiệp sáng tạo (start-up) thì có được miễn thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "198_2025_QH15"
+    ],
+    "expected_articles": [
+      "Ưu đãi thuế khởi nghiệp sáng tạo"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được miễn thuế TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được miễn thuế TNCN",
+    "expected_doc_number": "198/2025/QH15"
+  },
+  {
+    "id": 18,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tiền gửi tiết kiệm ngân hàng sinh lãi hàng tháng của cá nhân có bị tính thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thu nhập được miễn thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tiền lãi tiết kiệm không chịu thuế TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tiền lãi tiết kiệm không chịu thuế TNCN",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 19,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi làm chuyên gia cho dự án ODA viện trợ không hoàn lại thì lương của tôi có bị thu thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thu nhập từ viện trợ ODA"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không chịu thuế TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không chịu thuế TNCN",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 20,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi làm shipper công nghệ bị trừ thuế mỗi đơn, nhưng tổng thu nhập cả năm chỉ có 100 triệu thì có được hoàn thuế lại không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Quyết toán và hoàn thuế TNCN"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "khấu trừ và nộp thuế thay"
+    ],
+    "expected_value": {
+      "text": "Được hoàn lại nếu tự quyết toán",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được hoàn lại nếu tự quyết toán",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 21,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bán hàng trên Shopee, Tiktok bây giờ sàn tự thu thuế luôn hay tôi vẫn phải tự đi khai nộp?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Trách nhiệm khấu trừ thuế TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Sàn tự động khấu trừ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Sàn tự động khấu trừ",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 22,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bán quần áo, sàn Shopee sẽ trừ thuế của tôi theo tỷ lệ bao nhiêu % trên mỗi đơn hàng?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế TMĐT hàng hóa"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "1%",
+      "0,5%",
+      "1.5%",
+      "0.5%",
+      "1.5",
+      "0.5"
+    ],
+    "expected_value": {
+      "text": "1.5% (1% GTGT + 0.5% TNCN)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "1.5% (1% GTGT + 0.5% TNCN)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 23,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bán hàng order qua Facebook cá nhân, khách chuyển khoản thẳng cho tôi chứ không qua sàn, vậy ai sẽ là người nộp thuế?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Giao dịch không qua chức năng sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Người bán tự khai và nộp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Người bán tự khai và nộp",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 24,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi vừa bán tạp hóa tại nhà (đã nộp thuế), vừa bán thêm trên Tiktok thì cuối năm tính thuế gộp lại kiểu gì?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Khai thuế tổng hợp"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Khai gộp nếu tổng doanh thu chịu thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Khai gộp nếu tổng doanh thu chịu thuế",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 25,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Nếu sàn TMĐT không xác định được sản phẩm tôi bán là hàng hóa hay dịch vụ thì họ trừ thuế tôi mức cao nhất là bao nhiêu?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ sàn khấu trừ khi không xác định"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "5%",
+      "2%",
+      "7%"
+    ],
+    "expected_value": {
+      "text": "7% (Mức cao nhất của Dịch vụ)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "7% (Mức cao nhất của Dịch vụ)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 26,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Nếu tổng doanh thu bán hàng Shopee của tôi cả năm chỉ được 300 triệu mà đã bị sàn trừ thuế hàng ngày rồi, tiền đó tính sao?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử lý thuế khấu trừ thừa"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "500 triệu đồng"
+    ],
+    "expected_value": {
+      "text": "Làm thủ tục đề nghị hoàn thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Làm thủ tục đề nghị hoàn thuế",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 27,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi là cá nhân nước ngoài bán hàng trên sàn TMĐT Việt Nam thì tỷ lệ thuế sàn trừ của tôi có khác người Việt không?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Áp dụng tỷ lệ thuế cá nhân nước ngoài"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "1%",
+      "5%"
+    ],
+    "expected_value": {
+      "text": "1% (Hàng hóa) hoặc 5% (Dịch vụ)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "1% (Hàng hóa) hoặc 5% (Dịch vụ)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 28,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Mã số định danh trên sàn TMĐT để khấu trừ thuế có phải là số Căn cước công dân của tôi không?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Mã định danh khấu trừ sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Mã số thuế hoặc Số CCCD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Mã số thuế hoặc Số CCCD",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 29,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Sàn thương mại điện tử tự trừ thuế tôi rồi thì tôi có cần điền thông tin đó vào tờ khai thuế ở phường nữa không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Trách nhiệm khai lại"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không phải khai lại phần sàn đã thu",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không phải khai lại phần sàn đã thu",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 30,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi muốn xin hoàn lại tiền thuế mà sàn TMĐT đã trừ lố của tôi (doanh thu năm < 500 triệu) thì dùng mẫu đơn nào?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Biểu mẫu hoàn thuế TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "03",
+      "03/CNKD"
+    ],
+    "expected_value": {
+      "text": "03/CNKD-TMĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "03/CNKD-TMĐT",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 31,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Hộ kinh doanh của tôi doanh thu dưới 500 triệu/năm thì khỏi đóng thuế, nhưng có phải nộp tờ khai báo cáo hàng tháng không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khoản 1 Điều 4"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "01",
+      "01/TKN"
+    ],
+    "expected_value": {
+      "text": "01/TKN-CNKD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/TKN-CNKD",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 32,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Doanh thu tiệm tôi khoảng 2 tỷ/năm thì kỳ hạn kê khai thuế GTGT, TNCN là theo tháng hay theo quý?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Kỳ kê khai thuế HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "500 triệu đồng",
+      "kê khai, nộp thuế kể từ quý",
+      "3 tỷ đồng"
+    ],
+    "expected_value": {
+      "text": "Kê khai theo quý",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Kê khai theo quý",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 33,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Tháng này quán tôi nghỉ sửa chữa không bán hàng, không có doanh thu thì có cần nộp tờ khai thuế không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Nghĩa vụ khai thuế không phát sinh"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Vẫn phải nộp tờ khai (bằng 0)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Vẫn phải nộp tờ khai (bằng 0)",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 34,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Tôi mới mở cửa hàng vào tháng 8 năm 2026, dự kiến doanh thu năm đầu dưới 500tr thì hạn chót nộp thông báo doanh thu là ngày nào?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Thời hạn nộp thông báo doanh thu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cùng với Tờ khai thuế đầu tiên",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cùng với Tờ khai thuế đầu tiên",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 35,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Đáng lẽ tiệm tôi doanh thu trên 50 tỷ phải khai thuế theo tháng mà tôi lỡ khai theo quý thì xử lý thế nào?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Xử lý khai sai kỳ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "trên 50 tỷ đồng",
+      "theo tháng"
+    ],
+    "expected_value": {
+      "text": "Nộp lại theo tháng và tính chậm nộp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Nộp lại theo tháng và tính chậm nộp",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 36,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Doanh thu đạt mức bao nhiêu một năm thì hộ kinh doanh bắt buộc phải dùng hóa đơn điện tử?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Quy định sử dụng Hóa đơn điện tử"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "01 tỷ đồng trở lên",
+      "phải áp dụng hóa đơn điện tử",
+      "500 triệu đồng"
+    ],
+    "expected_value": {
+      "text": "Bắt buộc đối với nộp thuế theo lợi nhuận / xuất lẻ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bắt buộc đối với nộp thuế theo lợi nhuận / xuất lẻ",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 37,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Cửa hàng tôi kinh doanh ăn uống dùng máy tính tiền, nó có tự động gửi dữ liệu hóa đơn lên cơ quan thuế không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Kết nối dữ liệu máy tính tiền"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tự động gửi lên cơ quan thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tự động gửi lên cơ quan thuế",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 38,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Nhà nước có cung cấp phần mềm kế toán, khai thuế nào miễn phí cho hộ kinh doanh nhỏ xài không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "198_2025_QH15"
+    ],
+    "expected_articles": [
+      "Khoản 3 Điều 12"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có hỗ trợ phần mềm miễn phí",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có hỗ trợ phần mềm miễn phí",
+    "expected_doc_number": "198/2025/QH15"
+  },
+  {
+    "id": 39,
+    "topic": "Miễn giảm thuế",
+    "question": "Nghe nói luật mới cho phép giảm 20% mức tỷ lệ thuế GTGT cho hộ kinh doanh, vậy tôi bán gạo có được giảm không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Miễn giảm thuế GTGT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "miễn/không"
+    ],
+    "expected_value": {
+      "text": "Không (Gạo thuộc diện miễn/không chịu GTGT)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không (Gạo thuộc diện miễn/không chịu GTGT)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 40,
+    "topic": "Miễn giảm thuế",
+    "question": "Tôi bán rượu bia và thuốc lá ở tiệm tạp hóa thì phần doanh thu này có được giảm 20% thuế GTGT không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Loại trừ giảm thuế GTGT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "thuế giá trị gia tăng",
+      "500 triệu đồng",
+      "không chịu thuế"
+    ],
+    "expected_value": {
+      "text": "Thuốc lá, rượu bia không được giảm",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Thuốc lá, rượu bia không được giảm",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 41,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi kinh doanh dịch vụ vũ trường, karaoke thì ngoài thuế GTGT, TNCN tôi còn phải nộp thêm thuế gì?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Thuế tiêu thụ đặc biệt"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/TTĐB"
+    ],
+    "expected_value": {
+      "text": "Phải nộp thuế TTĐB (Mẫu 01/TTĐB)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phải nộp thuế TTĐB (Mẫu 01/TTĐB)",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 42,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh có được ủy quyền cho người khác hoặc đại lý thuế làm thủ tục hoàn thuế thay mình không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Quyền ủy quyền thủ tục thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép ủy quyền",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép ủy quyền",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 43,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là chuyên gia AI làm việc trong doanh nghiệp khởi nghiệp sáng tạo thì có được miễn giảm thuế TNCN tiền lương không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "198_2025_QH15"
+    ],
+    "expected_articles": [
+      "Ưu đãi thuế TNCN chuyên gia"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "50%",
+      "50"
+    ],
+    "expected_value": {
+      "text": "Được giảm 50% hoặc miễn",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được giảm 50% hoặc miễn",
+    "expected_doc_number": "198/2025/QH15"
+  },
+  {
+    "id": 44,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Doanh thu tôi có 400 triệu một năm (dưới ngưỡng chịu thuế) thì có được phép đăng ký xuất hóa đơn điện tử từng lần phát sinh để giao cho khách không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Cấp hóa đơn điện tử từng lần"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "dưới 500 triệu đồng",
+      "có nhu cầu sử dụng hóa đơn điện tử",
+      "cấp hóa đơn điện tử có mã"
+    ],
+    "expected_value": {
+      "text": "Được phép cấp từng lần",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép cấp từng lần",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 45,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh ghi chép Sổ doanh thu bán hàng hóa (Mẫu S1a-HKD) có bắt buộc phải ghi từng ngày hay được ghi gộp định kỳ?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Hướng dẫn ghi Sổ S1a-HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "từ/hóa"
+    ],
+    "expected_value": {
+      "text": "Ghi theo từng chứng từ/hóa đơn phát sinh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Ghi theo từng chứng từ/hóa đơn phát sinh",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 46,
+    "topic": "Hiệu lực pháp luật",
+    "question": "Chính xác thì ngày tháng năm nào luật mới bắt đầu chính thức bãi bỏ phương pháp thuế khoán đối với hộ kinh doanh?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Hiệu lực thi hành"
+    ],
+    "expected_tools": [
+      "check_doc_validity",
+      "get_article_with_amendments"
+    ],
+    "key_facts": [
+      "01",
+      "2026",
+      "01/01"
+    ],
+    "expected_value": {
+      "text": "Ngày 01/01/2026",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Ngày 01/01/2026",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 47,
+    "topic": "Hiệu lực pháp luật",
+    "question": "Năm 2025 tôi đang đóng thuế khoán, vậy đầu năm 2026 cơ quan thuế có tự động chuyển đổi cho tôi sang kê khai không hay tôi phải tự làm?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Điều 8 Điều khoản chuyển tiếp"
+    ],
+    "expected_tools": [
+      "check_doc_validity",
+      "get_article_with_amendments"
+    ],
+    "key_facts": [
+      "01",
+      "01/BK"
+    ],
+    "expected_value": {
+      "text": "Tự khai chuyển đổi Mẫu 01/BK-HTK",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tự khai chuyển đổi Mẫu 01/BK-HTK",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 48,
+    "topic": "Xử phạt vi phạm",
+    "question": "Các khoản nợ thuế khoán từ năm 2025 trở về trước có bị cơ quan thuế truy thu lại khi áp dụng phương pháp kê khai mới năm 2026 không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Xử lý nợ thuế cũ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Vẫn bị truy thu",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Vẫn bị truy thu",
+    "expected_doc_number": "Luật Quản lý thuế",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 49,
+    "topic": "Hiệu lực pháp luật",
+    "question": "Tôi muốn đọc bản gốc về quy định quản lý thuế trên sàn thương mại điện tử thì tìm Nghị định số mấy?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Căn cứ pháp lý TMĐT"
+    ],
+    "expected_tools": [
+      "check_doc_validity",
+      "get_article_with_amendments"
+    ],
+    "key_facts": [
+      "117",
+      "2025",
+      "117/2025",
+      "NĐ-CP"
+    ],
+    "expected_value": {
+      "text": "Nghị định số 117/2025/NĐ-CP",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Nghị định số 117/2025/NĐ-CP",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 50,
+    "topic": "Xử phạt vi phạm",
+    "question": "Hộ kinh doanh năm 2025 nộp thuế khoán có doanh thu giấu diếm, sang 2026 khai thật doanh thu cao vọt lên thì có bị cơ quan thuế phạt ngược lại năm 2025 không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt hành vi trốn thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có khả năng bị phạt truy thu",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có khả năng bị phạt truy thu",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 51,
+    "topic": "Kế toán HKD",
+    "question": "Năm 2025 tôi nộp thuế khoán, sang 2026 lên nộp thuế theo lợi nhuận thì phải lập Bảng kê hàng tồn kho, máy móc theo mẫu số mấy để được tính vào chi phí?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khoản 3 Điều 8"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "01",
+      "01/BK"
+    ],
+    "expected_value": {
+      "text": "Mẫu 01/BK-HTK",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Mẫu 01/BK-HTK",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 52,
+    "topic": "Kế toán HKD",
+    "question": "Tôi nộp thuế theo lợi nhuận khai thuế theo tháng, vậy hạn chót nộp Bảng kê hàng tồn kho (Mẫu 01/BK-HTK) cho cơ quan thuế là ngày nào?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khoản 3 Điều 8"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Nộp cùng tờ khai tháng đầu tiên",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Nộp cùng tờ khai tháng đầu tiên",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 53,
+    "topic": "Kế toán HKD",
+    "question": "Trong sổ chi phí (Mẫu S2c-HKD), khoản tiền tôi bị công an phạt vi phạm giao thông khi đi giao hàng có được tính là chi phí hợp lý để trừ thuế TNCN không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Chi phí hợp lý HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được tính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được tính",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 54,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Vừa cho thuê nhà mặt tiền, vừa bán trà sữa ở một địa chỉ khác thì tôi làm chung 1 tờ khai thuế hay phải tách riêng gửi cơ quan thuế 2 nơi?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khai thuế khác địa bàn quản lý"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Phải tách riêng 2 tờ khai",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phải tách riêng 2 tờ khai",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 55,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi nộp thuế theo phương pháp lợi nhuận (doanh thu trừ chi phí), nhưng tháng này quán vắng khách bị lỗ thì có phải nộp thuế TNCN không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Phương pháp nộp thuế lợi nhuận"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Lỗ thì không nộp TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Lỗ thì không nộp TNCN",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 56,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi làm đại lý bảo hiểm nhân thọ, thu nhập chỉ nhận hoa hồng từ công ty bảo hiểm thì tôi tự đi khai thuế hay công ty bảo hiểm sẽ trừ luôn?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Điểm c Khoản 2 Điều 4"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/XSBHĐC"
+    ],
+    "expected_value": {
+      "text": "Công ty bảo hiểm khai thay (Mẫu 01/XSBHĐC)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Công ty bảo hiểm khai thay (Mẫu 01/XSBHĐC)",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 57,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Sàn Tiktok Shop đã khấu trừ thuế của tôi, vậy tôi có được sàn cấp cho 'Chứng từ khấu trừ thuế' (Mẫu 01/CTKT-TMĐT) để làm bằng chứng không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Chứng từ khấu trừ thuế TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/CTKT"
+    ],
+    "expected_value": {
+      "text": "Cấp Mẫu 01/CTKT-TMĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cấp Mẫu 01/CTKT-TMĐT",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 58,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bị Shopee trừ thừa tiền thuế (doanh thu năm dưới 500tr), giờ tôi nộp Văn bản xin hoàn thuế (Mẫu 03/CNKD-TMĐT) cho Chi cục thuế quản lý nơi nào?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Nơi nhận hồ sơ hoàn thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế quản lý trực tiếp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế quản lý trực tiếp",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 59,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Khách mua quần áo trên Lazada rồi ấn trả hàng hoàn tiền (giao dịch bị hủy), vậy doanh thu đó có bị sàn tính để trừ thuế không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xác định doanh thu tính thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Giao dịch hủy không tính thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Giao dịch hủy không tính thuế",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 60,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi dùng thẻ CCCD của mẹ để đăng ký mở shop trên Tiktok, vậy sàn sẽ khai thuế và nộp thuế thay dưới tên mã số thuế của tôi hay mẹ tôi?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Quản lý thuế định danh"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tính cho người đứng tên CCCD (Mẹ)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tính cho người đứng tên CCCD (Mẹ)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 61,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh mới thành lập nộp thuế theo phương pháp kê khai dùng Tờ khai thuế mẫu số mấy?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Tờ khai HKD mới thành lập"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/CNKD"
+    ],
+    "expected_value": {
+      "text": "01/CNKD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/CNKD",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 62,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tờ khai thuế đối với hộ kinh doanh trên nền tảng thương mại điện tử áp dụng mẫu số mấy theo quy định mới?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tờ khai thuế cá nhân TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "02",
+      "02/CNKD"
+    ],
+    "expected_value": {
+      "text": "02/CNKD-TMĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "02/CNKD-TMĐT",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 63,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Lương thực nhận 30 triệu, tôi được giảm trừ bản thân 15.5 triệu, nuôi 2 con nhỏ được giảm trừ 12.4 triệu nữa. Theo bậc lũy tiến tôi đóng TNCN bao nhiêu?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Lũy tiến từng phần TNCN"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tncn_progressive"
+    ],
+    "key_facts": [
+      "4,98 triệu",
+      "5%"
+    ],
+    "expected_value": {
+      "source": "tool_computed"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "[Tính theo Tool]",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 64,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh nộp thuế theo tỷ lệ % doanh thu có bắt buộc phải mở tài khoản ngân hàng mang tên 'Hộ kinh doanh' không hay dùng tài khoản cá nhân chủ hộ cũng được?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Điểm d Khoản 1 Điều 4"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "01",
+      "01/BK"
+    ],
+    "expected_value": {
+      "text": "Dùng tài khoản cá nhân nộp Mẫu 01/BK-STK",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Dùng tài khoản cá nhân nộp Mẫu 01/BK-STK",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 65,
+    "topic": "Kế toán HKD",
+    "question": "Xe ô tô đứng tên cá nhân tôi (chủ hộ kinh doanh) dùng để đi lại sinh hoạt gia đình thì có được trích khấu hao vào chi phí quán ăn (nộp thuế theo lợi nhuận) không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Chi phí được trừ (Khấu hao)"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được tính chi phí",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được tính chi phí",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 66,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi bán chứng chỉ quỹ mở đầu tư sau khi giữ liên tục 3 năm thì có được miễn thuế TNCN chuyển nhượng vốn không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Miễn thuế chuyển nhượng vốn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được miễn",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được miễn",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 67,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Khoản tiền bồi thường bảo hiểm nhân thọ tôi nhận được khi gặp tai nạn có bị tính thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thu nhập bồi thường bảo hiểm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Miễn thuế TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Miễn thuế TNCN",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 68,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là người Việt Nam làm việc tại cơ quan đại diện của Liên hợp quốc tại Việt Nam, tôi có phải nộp thuế TNCN cho khoản lương này không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Lương từ tổ chức quốc tế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không chịu thuế TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không chịu thuế TNCN",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 69,
+    "topic": "Kế toán HKD",
+    "question": "Lãi suất vay tiền người thân (không phải ngân hàng) để nhập hàng có được tính là chi phí hợp lý của hộ kinh doanh nộp thuế theo lợi nhuận không?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chi phí lãi vay hợp lý"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có (nếu không vượt trần luật định)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có (nếu không vượt trần luật định)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 70,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Khi xuất hóa đơn điện tử cho mặt hàng được giảm 20% thuế GTGT, hộ kinh doanh phải ghi dòng chữ chú thích như thế nào trên hóa đơn cho hợp lệ?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Ghi chú trên Hóa đơn điện tử"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "20%",
+      "20"
+    ],
+    "expected_value": {
+      "text": "\"Đã giảm 20% mức tỷ lệ %...",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "\"Đã giảm 20% mức tỷ lệ %...",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 71,
+    "topic": "Miễn giảm thuế",
+    "question": "Mặt hàng nước ngọt có gas (hàm lượng đường trên 5g/100ml) do hộ kinh doanh bán lẻ có thuộc diện được giảm 20% thuế GTGT không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Mặt hàng loại trừ giảm thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "03 tỷ đồng",
+      "thuế suất 0,5%",
+      "Thuế thu nhập cá nhân"
+    ],
+    "expected_value": {
+      "text": "Không được giảm",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được giảm",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 72,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Chủ hộ kinh doanh tự trả lương cho bản thân mình quản lý cửa hàng thì khoản tiền lương này có được tính vào chi phí hợp lý trừ thuế TNCN không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tiền lương chủ HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được tính vào chi phí",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được tính vào chi phí",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 73,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Hộ kinh doanh có doanh thu 1.5 tỷ năm 2025, vậy sang năm 2026 thì nộp hồ sơ khai thuế GTGT theo chu kỳ tháng hay quý?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Kỳ khai thuế HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "doanh thu trên 500 triệu đồng",
+      "doanh thu từ 03 tỷ đồng trở lên",
+      "năm 2025"
+    ],
+    "expected_value": {
+      "text": "Khai theo quý",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Khai theo quý",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 74,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi bị tai nạn giao thông tốn kém rất nhiều tiền chữa trị nội trú, năm nay tôi có được làm đơn xin giảm thuế TNCN từ tiền lương không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Giảm thuế TNCN"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 75,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi làm xưởng mộc, có bao thầu luôn nguyên vật liệu đóng tủ cho khách thì tỷ lệ tính thuế GTGT và TNCN áp dụng là bao nhiêu?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế sản xuất bao thầu NVL"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "3%",
+      "1.5%",
+      "1.5"
+    ],
+    "expected_value": {
+      "text": "3% GTGT, 1.5% TNCN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "3% GTGT, 1.5% TNCN",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 76,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Tôi chuẩn bị mở cửa hàng kinh doanh đầu năm 2026, nghe nói nhà nước bỏ lệ phí môn bài rồi thì tôi có cần làm tờ khai môn bài nữa không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Miễn lệ phí môn bài"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được miễn",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được miễn",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 77,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Nếu năm 2026 tôi chọn tính thuế theo lợi nhuận, nhưng cuối năm tính lại doanh thu chỉ đạt 2.5 tỷ (dưới 3 tỷ), tôi có bị ép phải quay lại đóng thuế theo tỷ lệ % không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Điều kiện chuyển phương pháp"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "ổn định phương pháp tính thuế",
+      "03 tỷ đồng",
+      "02"
+    ],
+    "expected_value": {
+      "text": "Không bị ép, vẫn nộp lợi nhuận",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không bị ép, vẫn nộp lợi nhuận",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 78,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Hộ kinh doanh bán lẻ thuốc tây bắt buộc dùng hóa đơn điện tử khởi tạo từ máy tính tiền thì việc kết nối dữ liệu với cơ quan thuế thực hiện theo phương thức nào?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Máy tính tiền HĐĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Chuyển dữ liệu điện tử",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Chuyển dữ liệu điện tử",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 79,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Bán hàng online lâu lâu mới bán 1 đơn (không thường xuyên) thì cá nhân được lựa chọn kê khai thuế theo tháng hay kê khai theo từng lần phát sinh?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Kỳ khai thuế online không thường xuyên"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Khai theo từng lần phát sinh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Khai theo từng lần phát sinh",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 80,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Doanh thu để sàn TMĐT tính thuế cho tôi là tính trên giá trị tiền hàng tôi nhận được hay cộng luôn cả tiền ship giao hàng thu hộ?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Doanh thu tính thuế sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "ship/thu"
+    ],
+    "expected_value": {
+      "text": "Bao gồm cả phí ship/thu hộ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bao gồm cả phí ship/thu hộ",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 81,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Vợ tôi đứng tên giấy phép hộ kinh doanh, nhưng tài khoản ngân hàng nhận tiền của khách lại là tên tôi. Vậy khi khai báo thuế tôi điền mã số thuế của ai?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Xác định nghĩa vụ thuế cá nhân"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Khai theo MST vợ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Khai theo MST vợ",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 82,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Tháng sau tôi có việc bận muốn tạm ngừng kinh doanh 3 tháng thì nộp thông báo Mẫu số 01/TB-ĐĐKD cho Chi cục thuế hay Ủy ban nhân dân phường?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khoản 1 Điều 3"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "01",
+      "01/TB"
+    ],
+    "expected_value": {
+      "text": "01/TB-ĐĐKD nộp cơ quan thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/TB-ĐĐKD nộp cơ quan thuế",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 83,
+    "topic": "Xử phạt vi phạm",
+    "question": "Tôi là hộ kinh doanh bán hàng mà cố tình không xuất hóa đơn điện tử cho khách, nếu bị phát hiện thì mức phạt tiền vi phạm hành chính là bao nhiêu?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt không lập hóa đơn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "8 triệu"
+    ],
+    "expected_value": {
+      "text": "Phạt 4-8 triệu đồng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phạt 4-8 triệu đồng",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 84,
+    "topic": "Xử phạt vi phạm",
+    "question": "Cửa hàng tôi bị cháy làm mất máy tính chứa dữ liệu hóa đơn chưa gửi cơ quan thuế, giờ tôi khai báo mất thì có bị phạt tiền không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt mất/cháy hóa đơn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tùy thời gian khai báo có thể miễn phạt",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tùy thời gian khai báo có thể miễn phạt",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 85,
+    "topic": "Xử phạt vi phạm",
+    "question": "Tôi mới đổi thẻ Căn cước công dân mới (12 số) nhưng quên chưa cập nhật thay đổi thông tin trên mã số thuế cá nhân thì có bị cơ quan thuế phạt tiền không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt chậm thay đổi thông tin"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có phạt",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có phạt",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 86,
+    "topic": "Xử phạt vi phạm",
+    "question": "Tôi nộp chậm hồ sơ khai thuế điện tử 2 ngày so với hạn chót, cơ quan thuế sẽ gửi Biên bản vi phạm hành chính điện tử cho tôi qua kênh nào?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Giao nhận biên bản VPHC"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cổng thông tin điện tử",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cổng thông tin điện tử",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 87,
+    "topic": "Xử phạt vi phạm",
+    "question": "Hộ kinh doanh tính sai doanh thu vào tờ khai dẫn đến nộp thiếu số tiền thuế, nếu bị phát hiện tự nguyện nộp bù thì có bị quy vào tội trốn thuế không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Hành vi trốn thuế vs Khai sai"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Là hành vi khai sai",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Là hành vi khai sai",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 88,
+    "topic": "Xử phạt vi phạm",
+    "question": "Tôi vừa bị phạt vì lỗi chậm nộp hồ sơ khai thuế, dẫn đến tiền thuế nộp chậm luôn. Vậy tôi bị phạt cả 2 lỗi (chậm hồ sơ + tính tiền chậm nộp) đúng không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Áp dụng chế tài kép"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "chậm nộp hồ sơ",
+      "tiền chậm nộp"
+    ],
+    "expected_value": {
+      "text": "Bị phạt cả hai lỗi",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bị phạt cả hai lỗi",
+    "expected_doc_number": "310/2025/NĐ-CP",
+    "expected_doc_id": "310_2025_NDCP"
+  },
+  {
+    "id": 89,
+    "topic": "Thủ tục hoàn thuế",
+    "question": "Tôi lỡ nộp thừa 5 triệu tiền thuế TNCN từ kinh doanh năm ngoái, số tiền này tôi có được tự động cấn trừ vào số thuế phải nộp của năm nay không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Cấn trừ thuế nộp thừa"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "nộp thừa được bù trừ",
+      "05 năm"
+    ],
+    "expected_value": {
+      "text": "Có thể tự động bù trừ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có thể tự động bù trừ",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 90,
+    "topic": "Thủ tục hành chính",
+    "question": "Đang làm hộ kinh doanh, tôi muốn chuyển đổi lên thành Doanh nghiệp nhỏ và vừa thì có được kế thừa các nghĩa vụ thuế cũ không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "198_2025_QH15"
+    ],
+    "expected_articles": [
+      "Chuyển đổi loại hình HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Kế thừa nghĩa vụ thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Kế thừa nghĩa vụ thuế",
+    "expected_doc_number": "198/2025/QH15"
+  },
+  {
+    "id": 91,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh có doanh thu 6 tỷ/năm (nộp thuế theo lợi nhuận) thì bắt buộc phải lập sổ sách kế toán theo quy định của Thông tư số mấy của Bộ Tài chính?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Quy định sổ sách kế toán HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "152",
+      "2025",
+      "152/2025",
+      "TT-BTC"
+    ],
+    "expected_value": {
+      "text": "Thông tư 152/2025/TT-BTC",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Thông tư 152/2025/TT-BTC",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 92,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh mua hàng hóa dưới 200.000 đồng của nông dân không có hóa đơn thì dùng Bảng kê mẫu nào để được tính vào chi phí hợp lý?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Mua hàng không hóa đơn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Bảng kê thu mua hàng nông sản",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bảng kê thu mua hàng nông sản",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 93,
+    "topic": "Thủ tục hành chính",
+    "question": "Những hành vi vi phạm hóa đơn xảy ra năm 2025 mà đến năm 2026 tôi mới khiếu nại thì cơ quan thuế giải quyết theo luật cũ hay luật mới?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Áp dụng luật xử phạt"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Luật có lợi hơn (Luật mới)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Luật có lợi hơn (Luật mới)",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 94,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh lỡ ghi sai doanh thu vào Sổ doanh thu bán hàng (Mẫu S2b-HKD) thì có được dùng bút bi gạch xóa sửa lại không hay phải lập sổ mới?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Sửa chữa sổ kế toán"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Gạch ngang chữ sai, không dùng bút bi xóa",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Gạch ngang chữ sai, không dùng bút bi xóa",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 95,
+    "topic": "Bất khả kháng",
+    "question": "Cửa hàng của tôi bị thiệt hại nặng do lũ lụt, tôi muốn làm đơn đề nghị gia hạn nộp thuế thì cần cung cấp văn bản xác nhận của cơ quan chức năng nào?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Hồ sơ gia hạn nộp thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "UBND/Công"
+    ],
+    "expected_value": {
+      "text": "Xác nhận của UBND/Công an",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Xác nhận của UBND/Công an",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 96,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Các nền tảng mạng xã hội như Facebook, Youtube có trách nhiệm phải cung cấp thông tin tài khoản, doanh thu của người bán cho cơ quan thuế không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Trách nhiệm cung cấp thông tin"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có trách nhiệm cung cấp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có trách nhiệm cung cấp",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 97,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tiền thuế mà các sàn TMĐT khấu trừ của người bán hàng ngày (Shopee, Lazada) sẽ được sàn nộp gộp vào ngân sách nhà nước theo chu kỳ tháng hay quý?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Chu kỳ sàn nộp thuế thay"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Theo tháng hoặc quý",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Theo tháng hoặc quý",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 98,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Nếu cá nhân kinh doanh nhiều ngành nghề có tỷ lệ thuế khác nhau thì mức trừ 500 triệu miễn thuế được phân bổ thế nào cho có lợi nhất?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Áp dụng mức miễn thuế 500tr"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "500 triệu đồng"
+    ],
+    "expected_value": {
+      "text": "Trừ vào ngành có thuế suất cao nhất",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Trừ vào ngành có thuế suất cao nhất",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 99,
+    "topic": "Xử phạt vi phạm",
+    "question": "Nếu tôi khai khống chi phí dẫn đến được hoàn thuế cao hơn thực tế, thì ngoài việc phải trả lại tiền, tôi còn bị phạt hành chính thêm bao nhiêu %?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt vi phạm hoàn thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "20%",
+      "20"
+    ],
+    "expected_value": {
+      "text": "Phạt 20% số tiền cao hơn",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phạt 20% số tiền cao hơn",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 100,
+    "topic": "Thuế tài sản",
+    "question": "Tôi là cá nhân muốn xin hoàn trả lại tiền thuế sử dụng đất phi nông nghiệp đã nộp lố thì áp dụng tờ khai mẫu số mấy?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Mẫu biểu hoàn thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/TK"
+    ],
+    "expected_value": {
+      "text": "01/TK-SDDPNN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/TK-SDDPNN",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 101,
+    "topic": "Kế toán HKD",
+    "question": "Trên Mẫu S2b-HKD (Sổ doanh thu bán hàng hóa, dịch vụ), Cột 1 'Số tiền' dùng để ghi thông tin gì? Ghi theo từng hóa đơn hay định kỳ?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Hướng dẫn Mẫu S2b-HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "đơn/chứng"
+    ],
+    "expected_value": {
+      "text": "Ghi từng hóa đơn/chứng từ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Ghi từng hóa đơn/chứng từ",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 102,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Trường hợp hộ kinh doanh có doanh thu 500 triệu - 3 tỷ đang áp dụng nộp theo tỷ lệ % nhưng tự ý đổi sang nộp lợi nhuận giữa năm thì có được không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thay đổi phương pháp tính thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "năm",
+      "ổn định phương pháp tính thuế",
+      "500 triệu đồng"
+    ],
+    "expected_value": {
+      "text": "Chuyển đổi từ ngày 1/1 năm sau",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Chuyển đổi từ ngày 1/1 năm sau",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 103,
+    "topic": "Kế toán HKD",
+    "question": "Sổ chi tiết tiền (Mẫu S2e-HKD) của hộ kinh doanh có được phép gộp chung tiền mặt tại quỹ và tiền gửi ngân hàng vào cùng 1 cột không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Sổ quỹ tiền mặt và ngân hàng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không gộp chung",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không gộp chung",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 104,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Chi phí mua phần mềm quản lý bán hàng (như KiotViet) có được xem là chi phí dịch vụ mua ngoài hợp lệ để trừ thuế lợi nhuận HKD không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chi phí quản lý HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được tính là chi phí hợp lý",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được tính là chi phí hợp lý",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 105,
+    "topic": "Kế toán HKD",
+    "question": "Cá nhân kinh doanh có được phép thuê người ngoài, hoặc nhờ vợ/chồng mình làm kế toán ghi sổ sách cho hộ kinh doanh của mình không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Trách nhiệm kế toán HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được thuê kế toán",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được thuê kế toán",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 106,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Cá nhân kinh doanh trên sàn TMĐT nộp thuế bằng ngoại tệ (USD) thì khi lên tờ khai phải quy đổi sang VND theo tỷ giá nào?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ giá quy đổi thuế TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tỷ giá mua vào của NHTM",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tỷ giá mua vào của NHTM",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 107,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh của tôi làm dịch vụ thiết kế đồ họa, viết phần mềm trên máy tính thì tỷ lệ tính thuế GTGT và TNCN tổng cộng là bao nhiêu %?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế sản xuất phần mềm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "7%",
+      "5%",
+      "2%"
+    ],
+    "expected_value": {
+      "text": "7% (5% GTGT, 2% TNCN)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "7% (5% GTGT, 2% TNCN)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 108,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh nộp thuế theo phương pháp khoán thì có được xuất hóa đơn điện tử không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Cấp Hóa đơn điện tử hộ khoán"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cấp lẻ từng lần phát sinh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cấp lẻ từng lần phát sinh",
+    "expected_doc_number": "123/2020/NĐ-CP",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 109,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bán hàng livestream trên Facebook cá nhân, vậy Facebook có tự động trừ thuế tôi giống Tiktok không hay tôi phải tự đi khai?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Thuế MXH không chức năng TT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "02",
+      "02/CNKD"
+    ],
+    "expected_value": {
+      "text": "Tự kê khai (Mẫu 02/CNKD-TMĐT)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tự kê khai (Mẫu 02/CNKD-TMĐT)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 110,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi vừa bán bún bò tại nhà, vừa đăng ký bán thêm trên GrabFood. Cuối năm doanh thu cả 2 nơi trên 3 tỷ thì quyết toán thuế TNCN gộp chung vào mẫu nào?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khai quyết toán nhiều nguồn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "02",
+      "02/CNKD",
+      "TNCN-QTT"
+    ],
+    "expected_value": {
+      "text": "02/CNKD-TNCN-QTT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "02/CNKD-TNCN-QTT",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 111,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tổ chức quản lý sàn TMĐT (như Shopee) dùng tờ khai mẫu số mấy để nộp phần thuế đã khấu trừ của người bán lên cơ quan nhà nước?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Mẫu tờ khai sàn khấu trừ thay"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/CNKD"
+    ],
+    "expected_value": {
+      "text": "01/CNKD-TMĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/CNKD-TMĐT",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 112,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Cá nhân người nước ngoài bán hàng trên Lazada Việt Nam nhưng không cư trú tại VN thì sàn áp dụng khấu trừ thuế TNCN theo tỷ lệ bao nhiêu?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ TNCN cá nhân không cư trú"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "1%",
+      "5%"
+    ],
+    "expected_value": {
+      "text": "1% (Hàng hóa), 5% (Dịch vụ)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "1% (Hàng hóa), 5% (Dịch vụ)",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 113,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tiền thuế TNCN mà Shopee đã trừ của tôi trong năm được xử lý thế nào khi tôi tự đi nộp hồ sơ quyết toán thuế TNCN tổng hợp vào cuối năm?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Khấu trừ thuế TNCN cuối năm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được cấn trừ số đã nộp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được cấn trừ số đã nộp",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 114,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là đại lý bán hàng đa cấp cho Amway, công ty đã trừ thuế thu nhập cá nhân của tôi thì công ty phải nộp Bảng kê chi tiết theo mẫu nào?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Bảng kê thuế đa cấp"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/BK"
+    ],
+    "expected_value": {
+      "text": "01/BK-XSBHĐC",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/BK-XSBHĐC",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 115,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh lỡ chọn kỳ khai thuế theo Quý, giờ phát hiện doanh thu trên 50 tỷ bắt buộc khai theo Tháng thì nộp lại hồ sơ có bị tính tiền chậm nộp không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Phạt chậm nộp do đổi kỳ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "tiền chậm nộp",
+      "0,03%"
+    ],
+    "expected_value": {
+      "text": "Có bị tính tiền chậm nộp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có bị tính tiền chậm nộp",
+    "expected_doc_number": "310/2025/NĐ-CP",
+    "expected_doc_id": "108_2025_QH15"
+  },
+  {
+    "id": 116,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Cá nhân nhận thừa kế là một mảnh đất từ bố mẹ ruột thì có phải nộp thuế TNCN từ nhận thừa kế bất động sản không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Thuế TNCN nhận thừa kế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Miễn thuế (hàng thừa kế thứ 1)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Miễn thuế (hàng thừa kế thứ 1)",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 117,
+    "topic": "Bất khả kháng",
+    "question": "Kho hàng của hộ kinh doanh bị hỏa hoạn cháy rụi. Trong thời gian khắc phục hậu quả, nếu tôi nộp chậm hồ sơ khai thuế thì có bị tính là vi phạm phạt tiền không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tình tiết bất khả kháng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không bị xử phạt",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không bị xử phạt",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 118,
+    "topic": "Xử phạt vi phạm",
+    "question": "Hộ kinh doanh bị cơ quan thuế phạt do khai sai thuế, nếu đã chủ động nộp đủ số tiền phạt vào ngân sách rồi thì có bị bêu tên công khai trên báo không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Công khai thông tin vi phạm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không bêu tên",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không bêu tên",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 119,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tôi hợp tác chạy xe công nghệ (Grab, Be), thu nhập chia sẻ theo cuốc xe thì tôi tự đi khai thuế hay công ty Grab sẽ khai và nộp thuế thay tôi?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Thuế đối tác xe công nghệ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Hãng xe kê khai và nộp thay",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Hãng xe kê khai và nộp thay",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 120,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Cá nhân chạy xe ôm công nghệ có được áp dụng mức giảm trừ gia cảnh (15.5 triệu/tháng) khi tính thuế TNCN từ hoạt động chạy xe không?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Giảm trừ gia cảnh xe công nghệ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "thu nhập từ tiền lương, tiền công",
+      "15,5 triệu đồng/tháng",
+      "6,2 triệu đồng/ tháng"
+    ],
+    "expected_value": {
+      "text": "Không áp dụng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không áp dụng",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 121,
+    "topic": "Thuế tài sản",
+    "question": "Hộ gia đình tôi có mảnh đất ở lấn chiếm (chưa có sổ đỏ), khi tính thuế sử dụng đất phi nông nghiệp thì diện tích lấn chiếm nhân với mức thuế suất bao nhiêu %?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Thuế suất đất lấn chiếm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "0.15%",
+      "0.15"
+    ],
+    "expected_value": {
+      "text": "0.15%",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "0.15%",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 122,
+    "topic": "Thuế tài sản",
+    "question": "Khi kê khai thuế đất ở đối với nhà chung cư nhiều tầng, nếu không tự điền hệ số phân bổ thì cơ quan thuế tính hệ số này mặc định là bao nhiêu?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Hệ số phân bổ chung cư"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Mặc định là 1",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Mặc định là 1",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 123,
+    "topic": "Thủ tục hành chính",
+    "question": "Sổ tay hướng dẫn thuế cho Hộ kinh doanh khuyến nghị người dân cài đặt ứng dụng nào trên điện thoại để tra cứu và nộp thuế điện tử?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "So_Tay_HKD"
+    ],
+    "expected_articles": [
+      "Ứng dụng nộp thuế điện tử"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "eTax Mobile",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "eTax Mobile",
+    "expected_doc_number": "Cẩm nang Thuế"
+  },
+  {
+    "id": 124,
+    "topic": "Thủ tục hành chính",
+    "question": "Cá nhân nộp hồ sơ khai thuế đất đai, khi có thông tin liên thông từ cơ sở dữ liệu quốc gia về dân cư thì có phải nộp kèm bản sao CCCD giấy nữa không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Nộp bản sao CCCD giấy"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không cần thiết",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không cần thiết",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 125,
+    "topic": "Thủ tục hành chính",
+    "question": "Hộ kinh doanh nộp thuế điện tử qua app ngân hàng (Mobile Banking), chứng từ giao dịch trên app có được xem là chứng từ nộp thuế hợp lệ không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Chứng từ nộp thuế app bank"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Hợp lệ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Hợp lệ",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 126,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh có doanh thu dưới 500 triệu đồng (không nộp thuế) thì có bắt buộc phải lưu trữ sổ sách kế toán và chứng từ mua bán trong bao nhiêu năm?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Lưu trữ sổ sách HKD <500tr"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "500 triệu đồng",
+      "thông báo doanh thu"
+    ],
+    "expected_value": {
+      "text": "Miễn sổ sách phức tạp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Miễn sổ sách phức tạp",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 127,
+    "topic": "Thủ tục hoàn thuế",
+    "question": "Văn bản đề nghị hoàn trả khoản thu ngân sách nhà nước nộp thừa của cá nhân kinh doanh được quy định dùng mẫu số mấy?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Văn bản đề nghị hoàn trả"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/HT"
+    ],
+    "expected_value": {
+      "text": "01/HT-NSNN",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/HT-NSNN",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 128,
+    "topic": "Thuế tài sản",
+    "question": "Tờ khai thuế sử dụng đất phi nông nghiệp đối với hộ gia đình, cá nhân (Mẫu 01/TK-SDDPNN) nộp cho cơ quan thuế hay nộp cho UBND phường?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Nơi nộp tờ khai thuế đất"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế hoặc Bộ phận một cửa",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế hoặc Bộ phận một cửa",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 129,
+    "topic": "Thuế tài sản",
+    "question": "Trong Tờ khai thuế đất ở chung cư, diện tích đất tính thuế của tôi được xác định bằng diện tích căn hộ nhân với hệ số gì?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tính thuế chung cư"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Diện tích x Hệ số phân bổ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Diện tích x Hệ số phân bổ",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 130,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Cá nhân cho thuê mặt bằng đặt trạm phát sóng BTS với giá 100 triệu/năm thì nộp thuế GTGT và TNCN tổng cộng là bao nhiêu phần trăm?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Cho thuê tài sản"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "miễn",
+      "500 triệu",
+      "10%",
+      "5%",
+      "10"
+    ],
+    "expected_value": {
+      "text": "10% (5% GTGT, 5% TNCN)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "10% (5% GTGT, 5% TNCN)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 131,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh bị cơ quan thuế cưỡng chế nợ thuế bằng biện pháp 'ngừng sử dụng hóa đơn' thì có được xuất hóa đơn lẻ từng lần phát sinh không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Cưỡng chế xuất hóa đơn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được xuất lẻ từng lần",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được xuất lẻ từng lần",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 132,
+    "topic": "Kế toán HKD",
+    "question": "Theo sổ kế toán S2b-HKD, khi hộ kinh doanh xuất vật liệu ra để sử dụng thì cột 'Đơn giá' xuất kho tính theo phương pháp nào?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Cột đơn giá xuất kho S2b"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "danh/bình"
+    ],
+    "expected_value": {
+      "text": "Tính theo đích danh/bình quân",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tính theo đích danh/bình quân",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 133,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Doanh thu năm 2025 của tôi là 400 triệu. Đầu năm 2026 tôi nộp Thông báo doanh thu, nhưng đến tháng 9/2026 doanh thu đột nhiên vượt 500 triệu thì tháng 10 tôi có phải khai thuế không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Chuyển đổi trạng thái khai thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "10"
+    ],
+    "expected_value": {
+      "text": "Phải nộp hồ sơ khai thuế T10",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phải nộp hồ sơ khai thuế T10",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 134,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là cá nhân có nhà cho thuê, người đi thuê là một Công ty TNHH. Trong hợp đồng ghi rõ công ty sẽ nộp thuế thay tôi. Vậy tôi có cần nộp tờ khai thuế cho thuê nhà nữa không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Nghĩa vụ khai thuế cho thuê nhà"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không cần khai (Cty khai thay)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không cần khai (Cty khai thay)",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 135,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh nộp thuế theo lợi nhuận có được phép đưa khoản chi bồi thường do giao hàng trễ cho khách (có hợp đồng) vào chi phí hợp lý không?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chi phí hợp lý nộp phạt HĐ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được tính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được tính",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 136,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tôi bán hàng trên cả Shopee và Tiktok. Tôi có quyền ủy nhiệm cho 2 sàn này tự lập hóa đơn điện tử giao cho khách hàng thay cho tôi được không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Ủy nhiệm lập HĐĐT cho sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 137,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Sàn TMĐT thực hiện khấu trừ thuế của tôi, lỡ sàn chây ỳ không nộp số tiền đó lên Kho bạc Nhà nước thì tôi có bị cơ quan thuế đòi nợ không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Căn cứ khấu trừ thuế TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Theo từng giao dịch thành công",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Theo từng giao dịch thành công",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 138,
+    "topic": "Xử phạt vi phạm",
+    "question": "Hộ kinh doanh bị phát hiện không đăng ký thành lập mà vẫn mở cửa bán hàng thu tiền thì công an hay cơ quan thuế sẽ xử phạt hành vi này?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử lý không ĐKKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế hoặc UBND",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế hoặc UBND",
+    "expected_doc_number": "310/2025/NĐ-CP"
+  },
+  {
+    "id": 139,
+    "topic": "Kế toán HKD",
+    "question": "Trong sổ S2d-HKD (Sổ chi tiết vật liệu), nếu tôi mua hàng của nông dân không có hóa đơn GTGT thì phần chứng từ ghi số hiệu của bảng kê nào?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Ghi chú sổ S2d-HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Bảng kê thu mua",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bảng kê thu mua",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 140,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Trường hợp cá nhân ủy quyền quyết toán thuế TNCN cho công ty, nếu cá nhân đó đổi thẻ CCCD 12 số thì công ty có trách nhiệm thông báo cho cơ quan thuế không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Thông báo thay đổi CCCD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Công ty phải thông báo",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Công ty phải thông báo",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 141,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Chủ hộ kinh doanh (nộp thuế lợi nhuận) tự chi trả bảo hiểm y tế tự nguyện cho bản thân mình thì khoản chi này có được tính vào chi phí được trừ không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tính chi phí BHYT chủ HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được tính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được tính",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 142,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Chủ hộ kinh doanh có bắt buộc phải trả lương cho người nhà (vợ/con) phụ giúp bán hàng để được tính vào chi phí hợp lý không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Lương người nhà tính chi phí"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Phải có HĐLĐ và chứng từ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phải có HĐLĐ và chứng từ",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 143,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Chứng từ khấu trừ thuế TMĐT (Mẫu 01/CTKT-TMĐT) do sàn cấp cho cá nhân kinh doanh là bản giấy hay bản điện tử?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Định dạng Mẫu 01/CTKT-TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Bản điện tử",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bản điện tử",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 144,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Trường hợp hộ kinh doanh có nhiều cửa hàng cùng ở một quận, thì nộp chung 1 tờ khai tổng hợp hay phải nộp 3 tờ khai riêng cho Chi cục thuế quận đó?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Khai thuế nhiều cửa hàng 1 quận"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Nộp 1 tờ khai tổng hợp",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Nộp 1 tờ khai tổng hợp",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 145,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Năm 2026 tôi chọn tính thuế theo lợi nhuận (khai sổ sách). Nếu cơ quan thuế kiểm tra thấy sổ sách lộn xộn, họ có quyền ấn định lại số thuế tôi phải nộp không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Quyền ấn định thuế của CQT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có quyền ấn định",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có quyền ấn định",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 146,
+    "topic": "Kế toán HKD",
+    "question": "Phần mềm kế toán miễn phí do Nhà nước cung cấp cho hộ kinh doanh có bắt buộc phải tích hợp tính năng xuất hóa đơn điện tử và chữ ký số không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "198_2025_QH15"
+    ],
+    "expected_articles": [
+      "Tích hợp chữ ký số trên PM free"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có",
+    "expected_doc_number": "198/2025/QH15"
+  },
+  {
+    "id": 147,
+    "topic": "Thủ tục hành chính",
+    "question": "Cửa hàng tôi có doanh thu 6 tỷ/năm (nộp lợi nhuận), nếu cơ quan thuế muốn kiểm tra trực tiếp tại cửa hàng thì họ có phải thông báo trước cho tôi không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thông báo trước khi kiểm tra"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "trước khi cơ quan hải quan thông báo",
+      "kiểm tra trực tiếp"
+    ],
+    "expected_value": {
+      "text": "Có văn bản",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có văn bản",
+    "expected_doc_number": "Luật Quản lý thuế",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 148,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Sàn TMĐT nộp thuế thay cho người bán theo Mẫu Bảng kê chi tiết 01-1/BK-CNKD-TMĐT. Trong bảng này, cột 08 'Nhóm ngành nghề' gồm mấy loại để phân loại mức thuế?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Mẫu 01-1/BK-CNKD-TMĐT cột 08"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "3 loại",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "3 loại",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 149,
+    "topic": "Thủ tục hành chính",
+    "question": "Mã số thuế của cá nhân kinh doanh hiện nay có được dùng chung để làm mã số của Hộ kinh doanh khi đăng ký thành lập không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Sử dụng chung MST"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 150,
+    "topic": "Thuế tài sản",
+    "question": "Khi nộp tờ khai thuế đất ở, người nộp thuế có cần tự tính ra số tiền thuế phải nộp không hay chỉ cần khai thông tin diện tích, vị trí để cơ quan thuế tự tính?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Tự tính thuế đất"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế tính, NNT khai",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế tính, NNT khai",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 151,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Cá nhân không cư trú (người nước ngoài) có hoạt động bán hàng qua livestream trên nền tảng không có chức năng thanh toán tại Việt Nam thì nộp thuế theo mẫu tờ khai nào?",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Nộp tờ khai cá nhân không cư trú"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "02",
+      "02/CNKD"
+    ],
+    "expected_value": {
+      "text": "02/CNKD-TMĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "02/CNKD-TMĐT",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 152,
+    "topic": "Kế toán HKD",
+    "question": "Hộ kinh doanh mua nguyên vật liệu trị giá dưới 200.000 đồng không lấy hóa đơn điện tử thì có được tự lập phiếu chi để tính vào chi phí sổ sách (S2c-HKD) không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Lập phiếu chi thay hóa đơn <200k"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép kèm Bảng kê",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép kèm Bảng kê",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 153,
+    "topic": "Thủ tục hành chính",
+    "question": "Chủ hộ kinh doanh lén lút mở một tài khoản ngân hàng cá nhân mới để nhận tiền khách chuyển khoản mà không khai báo với cơ quan thuế thì có vi phạm luật không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chuyển khoản trốn doanh thu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Vi phạm pháp luật thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Vi phạm pháp luật thuế",
+    "expected_doc_number": "Luật Quản lý thuế",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 154,
+    "topic": "Kế toán HKD",
+    "question": "Tờ thông báo nộp tiền lệ phí trước bạ khi cá nhân mua xe tải chở hàng đăng ký biển số do cơ quan thuế cấp có mã hiệu mẫu số mấy?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Thông báo nộp LPTB"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "01",
+      "01/TB"
+    ],
+    "expected_value": {
+      "text": "01/TB-LPTB",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/TB-LPTB",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 155,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Tiệm sửa xe máy của tôi mua phụ tùng về thay cho khách (có tính chung vào tiền công). Vậy tôi khai thuế theo tỷ lệ ngành dịch vụ (2%) hay ngành phân phối hàng hóa (0.5%)?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế sửa xe + phụ tùng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "3%",
+      "7%"
+    ],
+    "expected_value": {
+      "text": "7% (nếu không bóc tách)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "7% (nếu không bóc tách)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 156,
+    "topic": "Thuế tài sản",
+    "question": "Thời điểm tính tiền thuế sử dụng đất phi nông nghiệp hằng năm của hộ gia đình được chốt vào ngày tháng nào trong năm?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Thời điểm xác định thuế đất"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/01"
+    ],
+    "expected_value": {
+      "text": "01/01 hàng năm",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/01 hàng năm",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 157,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Bán hàng hóa là sản phẩm trồng trọt, chăn nuôi do cá nhân tự sản xuất ra và bán trực tiếp thì có phải chịu thuế GTGT và TNCN không?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thuế nông sản tự trồng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không chịu thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không chịu thuế",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 158,
+    "topic": "Kế toán HKD",
+    "question": "Sổ doanh thu bán hàng hóa (Mẫu S1a-HKD) dành cho hộ kinh doanh doanh thu dưới 500 triệu có bắt buộc phải đóng dấu giáp lai của cơ quan thuế không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Đóng dấu giáp lai sổ HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "S1a-HKD",
+      "500 triệu đồng"
+    ],
+    "expected_value": {
+      "text": "Không bắt buộc với sổ điện tử",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không bắt buộc với sổ điện tử",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 159,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Phí vệ sinh an toàn thực phẩm mà hộ kinh doanh phải nộp hàng năm cho phường có được cộng vào chi phí vận hành (khi tính thuế lợi nhuận) không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chi phí phạt VPHC ATTP"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được tính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được tính",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 160,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Cá nhân cung cấp nội dung số (Youtuber, Tiktoker) nhận tiền từ Google, Tiktok thì tỷ lệ thuế phải nộp (GTGT + TNCN) tổng cộng là 7% đúng không?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": true,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế Youtuber"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article",
+      "calculate_tax_hkd"
+    ],
+    "key_facts": [
+      "7%",
+      "5%",
+      "2%"
+    ],
+    "expected_value": {
+      "text": "7% (5% GTGT, 2% TNCN)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "7% (5% GTGT, 2% TNCN)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 161,
+    "topic": "Kế toán HKD",
+    "question": "Trên Mẫu S2b-HKD của hộ kinh doanh (nộp thuế theo %), Cột ghi 'Tiền thuế GTGT' có mục đích gì khi hộ này không được khấu trừ thuế đầu vào?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Mục đích Cột GTGT Mẫu S2b"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Lên Báo cáo quản lý",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Lên Báo cáo quản lý",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 162,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Hộ kinh doanh trên Shopee bị sàn khấu trừ thuế, cuối tháng sàn xuất chứng từ khấu trừ tổng cho cả tháng hay xuất lẻ từng giao dịch một?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Chu kỳ xuất CTKT-TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Tổng theo tháng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tổng theo tháng",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 163,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Đại lý xổ số kiến thiết nhận hoa hồng thì kỳ kê khai thuế TNCN áp dụng theo tháng hay theo từng lần phát sinh lĩnh thưởng?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Kỳ khai thuế đại lý xổ số"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Theo tháng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Theo tháng",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 164,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Hộ kinh doanh nộp thuế theo tỷ lệ % (dưới 3 tỷ) thì cuối năm có cần làm hồ sơ Quyết toán thuế TNCN giống như người làm công ăn lương không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Hồ sơ quyết toán HKD nộp %"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "theo tỷ lệ % trên doanh thu",
+      "không cần làm"
+    ],
+    "expected_value": {
+      "text": "Không cần làm",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không cần làm",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 165,
+    "topic": "Xử phạt vi phạm",
+    "question": "Nếu hộ kinh doanh nộp chậm tiền thuế, mức tính tiền chậm nộp hiện tại là bao nhiêu phần trăm (%) trên 1 ngày chậm nộp?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Điều về xử lý chậm nộp tiền thuế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "0,03%",
+      "0.03%",
+      "0.03"
+    ],
+    "expected_value": {
+      "text": "0.03%/ngày",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "0.03%/ngày",
+    "expected_doc_number": "310/2025/NĐ-CP",
+    "expected_doc_id": "108_2025_QH15"
+  },
+  {
+    "id": 166,
+    "topic": "Xử phạt vi phạm",
+    "question": "Cá nhân kinh doanh lỡ khai sai mã ngành nghề dẫn đến nộp thiếu thuế, khi bị phát hiện sẽ bị phạt 20% trên số thuế khai thiếu đúng không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Xử phạt khai sai dẫn đến thiếu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "20%",
+      "khai sai",
+      "thiếu thuế"
+    ],
+    "expected_value": {
+      "text": "20% số thuế thiếu",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "20% số thuế thiếu",
+    "expected_doc_number": "310/2025/NĐ-CP",
+    "expected_doc_id": "108_2025_QH15"
+  },
+  {
+    "id": 167,
+    "topic": "Thủ tục hành chính",
+    "question": "Biểu mẫu Thông báo về việc hộ kinh doanh, cá nhân kinh doanh tạm ngừng hoạt động do cơ quan thuế tiếp nhận (qua liên thông) có mã hiệu số mấy?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Thông báo tạm ngừng hđ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "01",
+      "01/TB"
+    ],
+    "expected_value": {
+      "text": "01/TB-ĐĐKD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/TB-ĐĐKD",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 168,
+    "topic": "Thủ tục hành chính",
+    "question": "Tôi đang nợ thuế bị cưỡng chế trích tiền từ tài khoản ngân hàng, nay tôi đã nộp đủ thì Quyết định chấm dứt cưỡng chế nợ thuế dùng mẫu nào?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "QĐ chấm dứt cưỡng chế"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "08",
+      "08/CC"
+    ],
+    "expected_value": {
+      "text": "08/CC",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "08/CC",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 169,
+    "topic": "Thủ tục hành chính",
+    "question": "Trong văn bản đề nghị gia hạn nộp thuế do bị hỏa hoạn, cá nhân kinh doanh có cần nộp kèm biên bản xác nhận thiệt hại của cơ quan công an không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Gia hạn nộp thuế hỏa hoạn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [
+      "an/UBND"
+    ],
+    "expected_value": {
+      "text": "Cần biên bản công an/UBND",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cần biên bản công an/UBND",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 170,
+    "topic": "Kế toán HKD",
+    "question": "Chủ hộ kinh doanh dùng ví điện tử Momo để thanh toán tiền mua nguyên vật liệu cho xưởng, sao kê Momo có được tính là chứng từ thanh toán hợp lệ không?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Chứng từ ví điện tử"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Hợp lệ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Hợp lệ",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 171,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Sàn thương mại điện tử khấu trừ thuế của tôi, lỡ sàn chây ỳ không nộp số tiền đó lên Kho bạc Nhà nước thì tôi có bị cơ quan thuế đòi nợ không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Sàn TMĐT nộp trễ tiền trừ thay"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "NNT không bị phạt",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "NNT không bị phạt",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 172,
+    "topic": "Thuế tài sản",
+    "question": "Hộ gia đình có 2 mảnh đất ở trong cùng 1 tỉnh thì nộp tờ khai thuế đất đai tổng hợp tại Chi cục thuế nơi có mảnh đất nào?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Nơi nộp tờ khai tổng hợp 2 đất"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế quản lý phần đất",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế quản lý phần đất",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 173,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Hộ kinh doanh nộp thuế theo lợi nhuận có được chuyển lỗ của năm nay sang năm sau để bù trừ thu nhập tính thuế không?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chuyển lỗ đối với HKD lợi nhuận"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 174,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là cá nhân có tiền ảo (crypto) sinh lời trên sàn quốc tế và rút về ngân hàng VN, pháp luật thuế hiện hành có đánh thuế TNCN khoản này không?",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "expected_articles": [
+      "Đánh thuế TNCN Crypto"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "vốn/tài"
+    ],
+    "expected_value": {
+      "text": "Tính thuế từ chuyển nhượng vốn/tài sản",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Tính thuế từ chuyển nhượng vốn/tài sản",
+    "expected_doc_number": "109/2025/QH15"
+  },
+  {
+    "id": 175,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Năm 2025 đang nộp thuế khoán, nếu chuyển sang kê khai từ 1/1/2026 thì những hóa đơn giấy do cơ quan thuế cấp lẻ trước đây chưa dùng hết phải xử lý thế nào?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Xử lý hóa đơn giấy còn tồn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Thực hiện thủ tục hủy",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Thực hiện thủ tục hủy",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 176,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Cá nhân bán tài sản cá nhân (thanh lý tivi, tủ lạnh cũ của gia đình) trên sàn thương mại điện tử (Chợ Tốt) có bị sàn khấu trừ thuế % không?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Khấu trừ bán tài sản cá nhân"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không khấu trừ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không khấu trừ",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 177,
+    "topic": "Thuế tài sản",
+    "question": "Diện tích đất lấn chiếm phi nông nghiệp có được áp dụng mức giảm trừ hay hạn mức khi tính thuế đất không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Giảm trừ đất lấn chiếm"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không áp dụng",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không áp dụng",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 178,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Cá nhân kinh doanh không thường xuyên (như xe ôm truyền thống thỉnh thoảng chở hàng) nếu muốn xin cấp hóa đơn điện tử từng lần thì nộp mẫu tờ khai nào?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Cấp Hóa đơn từng lần mẫu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [
+      "01",
+      "01/ĐN"
+    ],
+    "expected_value": {
+      "text": "01/ĐN-HĐĐT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "01/ĐN-HĐĐT",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 179,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Tờ khai thuế đối với cá nhân kinh doanh TMĐT (Mẫu 02/CNKD-TMĐT) nộp cho cơ quan thuế trực tiếp quản lý hay nộp qua Cổng thông tin điện tử của Tổng cục Thuế?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Cổng nộp Tờ khai 02/CNKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cổng TTĐT Tổng cục Thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cổng TTĐT Tổng cục Thuế",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 180,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Doanh thu để tính thuế của cá nhân làm affiliate (tiếp thị liên kết) trên Tiktok được xếp vào nhóm ngành nghề dịch vụ (7%) hay đại lý (5%)?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Tỷ lệ thuế Affiliate Tiktok"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "7%"
+    ],
+    "expected_value": {
+      "text": "7%",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "7%",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 181,
+    "topic": "Nghĩa vụ kê khai",
+    "question": "Hộ kinh doanh chỉ bán hàng 3 ngày Tết (bán hoa mai, đào) thì kê khai thuế theo năm, theo tháng hay theo từng lần phát sinh?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Kê khai kinh doanh thời vụ Tết"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "evaluate_tax_obligation"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Từng lần phát sinh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Từng lần phát sinh",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 182,
+    "topic": "Xử phạt vi phạm",
+    "question": "Hành vi người bán cố tình cung cấp sai mã số định danh cá nhân cho Sàn TMĐT để trốn tránh việc khấu trừ thuế sẽ bị xử phạt như thế nào?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Cung cấp sai định danh cho sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Xử phạt VPHC",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Xử phạt VPHC",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 183,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Cá nhân kinh doanh mua bán phế liệu (thu gom ve chai) thì có phải đăng ký mã số thuế và nộp tờ khai định kỳ không nếu doanh thu dưới 500tr?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Mở MST thu gom ve chai"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01",
+      "01/TKN"
+    ],
+    "expected_value": {
+      "text": "Cần thiết (nộp 01/TKN-CNKD)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cần thiết (nộp 01/TKN-CNKD)",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 184,
+    "topic": "Thủ tục hành chính",
+    "question": "Cá nhân có thể ủy quyền cho Đại lý thuế ký tên thay trên Văn bản đề nghị hoàn thuế TNCN được không?",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Đại lý thuế ký văn bản hoàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Được phép",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Được phép",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 185,
+    "topic": "Thuế tài sản",
+    "question": "Thông báo yêu cầu cung cấp thông tin để xác định nghĩa vụ tài chính về đất đai (Mẫu 01/CCTT-ĐĐTCQ) thường do cơ quan thuế gửi cho ai?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "373_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Đối tượng nhận Mẫu 01/CCTT-ĐĐTCQ"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan TNMT",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan TNMT",
+    "expected_doc_number": "373/2025/NĐ-CP"
+  },
+  {
+    "id": 186,
+    "topic": "Kế toán HKD",
+    "question": "Để được đưa chi phí mua hàng từ nông dân vào chi phí (đối với HKD nộp thuế lợi nhuận), Bảng kê thu mua hàng hóa nông sản có cần chữ ký của người nông dân không?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Chữ ký nông dân trên bảng kê"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không bắt buộc nếu có CCCD",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không bắt buộc nếu có CCCD",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 187,
+    "topic": "Thuế thu nhập cá nhân",
+    "question": "Tôi là cá nhân cư trú có thu nhập từ YouTube nước ngoài chuyển về, tôi phải nộp hồ sơ tự khai thuế TNCN tại Chi cục thuế nơi tôi thường trú hay tạm trú?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "109_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Nộp hồ sơ Youtube"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cơ quan thuế nơi thường trú",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cơ quan thuế nơi thường trú",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 188,
+    "topic": "Thủ tục hành chính",
+    "question": "Cơ quan đăng ký kinh doanh cấp xã có trách nhiệm gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế trong thời gian bao nhiêu ngày làm việc?",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC"
+    ],
+    "expected_articles": [
+      "Thời hạn liên thông ĐKKD xã"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Trong vòng 3 ngày làm việc",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Trong vòng 3 ngày làm việc",
+    "expected_doc_number": "18/2026/TT-BTC"
+  },
+  {
+    "id": 189,
+    "topic": "Kế toán HKD",
+    "question": "Theo Sổ kế toán S2b-HKD (Dành cho hộ nộp %), hộ kinh doanh có bắt buộc phải in sổ ra giấy để ký tên hay được lưu trữ hoàn toàn bằng file Excel/Phần mềm?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Lưu trữ sổ S2b-HKD điện tử"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Chấp nhận file Excel",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Chấp nhận file Excel",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 190,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Cá nhân kinh doanh phòng trọ cho thuê có được lấy hóa đơn tiền điện, tiền nước hàng tháng trừ vào doanh thu trước khi tính thuế TNCN không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Hóa đơn điện trừ vào doanh thu"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có (Nếu HKD đứng tên đồng hồ)",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có (Nếu HKD đứng tên đồng hồ)",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 191,
+    "topic": "Hiệu lực pháp luật",
+    "question": "Việc bãi bỏ phương pháp thuế khoán từ ngày 01/01/2026 có áp dụng luôn cho các cá nhân kinh doanh xe ôm truyền thống tại các bến xe không?",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Phạm vi bãi bỏ thuế khoán"
+    ],
+    "expected_tools": [
+      "check_doc_validity",
+      "get_article_with_amendments"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Áp dụng cho mọi cá nhân kinh doanh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Áp dụng cho mọi cá nhân kinh doanh",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 192,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Năm 2026, hộ kinh doanh đang chọn nộp thuế theo tỷ lệ % nếu phát hiện doanh thu vượt quá 3 tỷ vào tháng 10 thì có phải chuyển ngay sang nộp lợi nhuận từ tháng 11 không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Chuyển phương pháp do vượt mốc"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "doanh thu trên 03 tỷ đồng",
+      "ổn định phương pháp tính thuế",
+      "trong 02"
+    ],
+    "expected_value": {
+      "text": "Áp dụng vào năm tài chính sau",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Áp dụng vào năm tài chính sau",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 193,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Chủ quản sàn TMĐT khi khấu trừ thuế của người bán sẽ nộp Tờ khai Mẫu 01/CNKD-TMĐT. Mã chỉ tiêu trên tờ khai này yêu cầu khai loại hàng hóa dịch vụ gì?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Mã chỉ tiêu Mẫu 01/CNKD-TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "hóa/Dịch"
+    ],
+    "expected_value": {
+      "text": "Hàng hóa/Dịch vụ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Hàng hóa/Dịch vụ",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 194,
+    "topic": "Kế toán HKD",
+    "question": "Chi phí tiền thuê mặt bằng trả trước 1 năm có được chia đều phân bổ vào các tháng trên sổ kế toán chi phí của Hộ kinh doanh nộp thuế lợi nhuận không?",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Phân bổ tiền thuê mặt bằng"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Bắt buộc phân bổ",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Bắt buộc phân bổ",
+    "expected_doc_number": "152/2025/TT-BTC"
+  },
+  {
+    "id": 195,
+    "topic": "Xử phạt vi phạm",
+    "question": "Nếu Sàn TMĐT kê khai sai số thuế khấu trừ của tôi, dẫn đến tôi bị phạt tiền chậm nộp, thì Sàn TMĐT có trách nhiệm bồi thường khoản tiền phạt đó cho tôi không?",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Trách nhiệm bồi thường của sàn"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "bồi thường",
+      "sàn",
+      "có"
+    ],
+    "expected_value": {
+      "text": "Có",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có",
+    "expected_doc_number": "117/2025/NĐ-CP",
+    "expected_doc_id": "117_2025_NDCP"
+  },
+  {
+    "id": 196,
+    "topic": "Thuế thương mại điện tử",
+    "question": "Trường hợp một gian hàng trên Shopee bán cả quần áo (hàng hóa) và gói thẻ thành viên (dịch vụ), sàn sẽ tính tỷ lệ khấu trừ thuế gộp hay phải bóc tách riêng từng món?",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP"
+    ],
+    "expected_articles": [
+      "Gộp HH/DV trên TMĐT"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [
+      "01 tỷ đồng"
+    ],
+    "expected_value": {
+      "text": "Phải bóc tách hoặc tính mức cao nhất",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Phải bóc tách hoặc tính mức cao nhất",
+    "expected_doc_number": "117/2025/NĐ-CP"
+  },
+  {
+    "id": 197,
+    "topic": "Thủ tục hành chính",
+    "question": "Khi cơ quan thuế kiểm tra hoạt động của hộ kinh doanh tại cửa hàng, đoàn kiểm tra có được phép thu giữ máy tính cá nhân của chủ hộ kinh doanh không?",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Thẩm quyền đoàn kiểm tra"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Không được thu giữ máy tính",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Không được thu giữ máy tính",
+    "expected_doc_number": "Luật Quản lý thuế",
+    "source_doc_not_in_dataset": true
+  },
+  {
+    "id": 198,
+    "topic": "Thuế hộ kinh doanh",
+    "question": "Chủ hộ kinh doanh bị ốm phải nằm viện điều trị dài ngày (1 tháng), cửa hàng tạm đóng cửa thì có được miễn nộp thuế khoán của tháng đó không (áp dụng trước 2026)?",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "expected_articles": [
+      "Miễn thuế do ốm đau/nằm viện"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_article"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Có",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Có",
+    "expected_doc_number": "68/2026/NĐ-CP"
+  },
+  {
+    "id": 199,
+    "topic": "Thủ tục hành chính",
+    "question": "Sổ tay thuế có hướng dẫn quét mã QR để tra cứu thông tin hỗ trợ nộp thuế. Mã QR này liên kết trực tiếp tới Cổng thông tin điện tử của cơ quan nào?",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "So_Tay_HKD"
+    ],
+    "expected_articles": [
+      "QR Code liên kết"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Cổng TTĐT Tổng cục Thuế",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Cổng TTĐT Tổng cục Thuế",
+    "expected_doc_number": "Cẩm nang Thuế"
+  },
+  {
+    "id": 200,
+    "topic": "Kế toán HKD",
+    "question": "Dòng cuối cùng của Mẫu sổ S1a-HKD (Sổ doanh thu dành cho hộ dưới 500tr) quy định phải có chữ ký, ghi rõ họ tên của ai để xác nhận số liệu?",
+    "user_type": "accountant",
+    "difficulty": "easy",
+    "needs_calculation": false,
+    "needs_law_retrieval": true,
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC"
+    ],
+    "expected_articles": [
+      "Chữ ký Sổ S1a-HKD"
+    ],
+    "expected_tools": [
+      "search_legal_docs",
+      "get_guidance"
+    ],
+    "key_facts": [],
+    "expected_value": {
+      "text": "Chủ hộ kinh doanh",
+      "source": "annotation"
+    },
+    "annotation_status": "verified",
+    "annotation_value": "Chủ hộ kinh doanh",
+    "expected_doc_number": "152/2025/TT-BTC"
+  }
+]

@@ -34,10 +34,48 @@ _LAW_TRAILING_RE = re.compile(
     re.IGNORECASE | re.UNICODE,
 )
 
+# Clause-stop patterns dùng để phát hiện kết thúc tên luật.
+# Viết ở dạng KHÔNG DẤU (no-accent) để khớp cả khi text bị OCR lỗi.
+# VD: "Luật Thủ đô, nghị quyêt..." → strip_accents → "Luat Thu do, nghi quyet..."
+#     pattern ",\s+nghi\s+quyet" → match → cắt tại dấu phẩy
+_LAW_CLAUSE_STOP_RE_NOACCENT = re.compile(
+    r'(?:'
+    # Prepositions / conjunctions that safely signal end-of-law-name context.
+    # Note: 'khi' / 'de' / 'ma' removed — too short, false-positives on words like
+    # 'khi' inside "vũ khí" (stripped → "vu khi"), "để lại" (stripped → "de lai").
+    r'\s+(?:trong|theo|ve\s+viec|doi\s+voi|nham\s+muc|duoc\s+ap)\b'
+    r'|,\s+(?:mua|ban|ky|cap|thi\s+hanh|nham|hoac\s+la'            # verbs after comma
+    r'|nghi\s+quyet|van\s+ban|quyet\s+dinh|giai\s+phap'            # doc-type nouns after comma
+    r'|quy\s+dinh|huong\s+dan)\b'                                   # other clause starters
+    r')',
+    re.IGNORECASE,   # ASCII-only after stripping accents
+)
+
+
+def _strip_accents(text: str) -> str:
+    """Bỏ dấu tiếng Việt để matching accent-insensitive.
+
+    Biến 'nghị quyêt' và 'nghị quyết' đều thành 'nghi quyet'
+    → dùng cho _LAW_CLAUSE_STOP_RE_NOACCENT để tránh lỗi OCR drop tone.
+    """
+    nfd = unicodedata.normalize('NFD', text)
+    base = ''.join(c for c in nfd if unicodedata.category(c) != 'Mn')
+    return base.replace('đ', 'd').replace('Đ', 'D')
+
 
 def _clean_law_name(name: str) -> str:
-    """Strip trailing phrases như 'và các văn bản hướng dẫn' từ tên luật đã match."""
+    """Strip trailing phrases như 'và các văn bản hướng dẫn' và clause starters từ tên luật.
+
+    Dùng accent-insensitive matching để không bị ảnh hưởng bởi lỗi OCR
+    (VD: 'quyêt' thay vì 'quyết' vẫn được detect và cắt đúng chỗ).
+    """
+    # 1. Strip "và các văn bản hướng dẫn..."
     name = _LAW_TRAILING_RE.sub('', name)
+    # 2. Detect clause-stop trên bản stripped-accent, cắt trên bản gốc
+    name_noaccent = _strip_accents(name)
+    m = _LAW_CLAUSE_STOP_RE_NOACCENT.search(name_noaccent)
+    if m:
+        name = name[:m.start()]
     return name.rstrip(' ,').strip()
 
 

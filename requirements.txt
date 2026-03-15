@@ -19,8 +19,12 @@ sentence-transformers==2.2.2
 chromadb==0.4.22
 faiss-cpu==1.7.4
 
+# Graph DB
+neo4j>=5.0.0
+
 # LLM
-google-generativeai==0.3.2
+google-generativeai==0.3.2  # deprecated — dùng google-genai thay thế
+google-genai>=1.65.0
 
 # Backend
 fastapi==0.108.0

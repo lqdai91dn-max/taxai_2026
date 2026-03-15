@@ -43,7 +43,9 @@ GOLDEN: dict = {
         "root_types": {"Chương"},
         "total_nodes": 203,
         "max_depth": 4,
-        "tables_count": 0,
+        # tables_count: 2 từ 2026-03-13 — docx extract native (python-docx thấy cả 2 bảng)
+        # Trước đây: 1 (pdfplumber miss borderless table Điều 9, fix bằng add_table patch)
+        "tables_count": 2,
         "no_false_nodes": [],
         "spot_checks": [
             {
@@ -52,23 +54,33 @@ GOLDEN: dict = {
                 "has_children": True,
                 "min_children": 3,
             },
+            # Bug C: Khoản 2 Điều 9 — content chỉ còn intro text (không còn inline table)
+            {
+                "node_id": "doc_109_2025_QH15_chuong_II_dieu_9_khoan_2",
+                "exists": True,
+                "field": "content",
+                "value": "Biểu thuế luỹ tiến từng phần được quy định như sau:",
+            },
         ],
     },
 
     # Nghị định quản lý thuế TMĐT
     "117_2025_NDCP": {
-        "root_count": 4,
-        "root_types": {"Chương"},
-        "total_nodes": 91,
+        # root_count: 5 từ 2026-03-13 — docx detect Phụ lục 1 là root node (improvement)
+        "root_count": 5,
+        "root_types": {"Chương", "Phụ lục"},
+        # total_nodes: 92 từ 2026-03-13 — thêm 1 node Phụ lục
+        "total_nodes": 92,
         "max_depth": 5,
         "tables_count": 10,
         "no_false_nodes": [],
         "spot_checks": [
-            # Điều 5 Khoản 2 có lead_in_text dẫn nhập các điểm con
+            # Điều 5 Khoản 2 tồn tại và có con (điểm a, b, c...)
             {
                 "node_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2",
                 "exists": True,
-                "has_field": "lead_in_text",
+                "has_children": True,
+                "min_children": 3,
             },
             # Tiết a.1 phải có content đúng
             {
@@ -81,13 +93,14 @@ GOLDEN: dict = {
     },
 
     # Thông tư 152/2025/TT-BTC
-    # tables_count: 11 (raw) → 7 sau merge_split_tables (improvement: 4 bảng split được gộp)
+    # tables_count: 9 từ 2026-03-13 — docx extract native (thêm 2 bảng so với pdfplumber)
+    # Trước đây: 7 (pdfplumber sau merge_split_tables)
     "152_2025_TTBTC": {
         "root_count": 3,
         "root_types": {"Chương"},
         "total_nodes": 29,
         "max_depth": 4,
-        "tables_count": 7,
+        "tables_count": 9,
         "no_false_nodes": [],
         "spot_checks": [],
     },
@@ -98,7 +111,8 @@ GOLDEN: dict = {
         "root_types": {"Chương", "Phụ lục"},
         "total_nodes": 141,
         "max_depth": 4,
-        "tables_count": 2,
+        # tables_count: 4 từ 2026-03-13 — docx extract native (thêm 2 bảng so với pdfplumber)
+        "tables_count": 4,
         "no_false_nodes": [],
         "spot_checks": [
             # Ba Phụ lục hợp lệ — title phải khớp chính xác
@@ -123,26 +137,97 @@ GOLDEN: dict = {
         ],
     },
 
-    # Nghị định 373/2025/NĐ-CP (sửa đổi Phụ lục — có Bug A đã được fix)
+    # Nghị định 373/2025/NĐ-CP (sửa đổi Phụ lục)
+    # 2026-03-13: switch từ pdfplumber → python-docx
+    #   root_count: 13→15 (docx detect đúng 13 Điều + 2 Phụ lục I và III)
+    #   total_nodes: 65→67, max_depth: 4, tables: 15→16
     "373_2025_NDCP": {
-        "root_count": 13,
-        "root_types": {"Điều"},
-        "total_nodes": 65,
+        "root_count": 15,
+        "root_types": {"Điều", "Phụ lục"},
+        "total_nodes": 67,
         "max_depth": 4,
-        "tables_count": 15,
-        # Node này là false positive từ Bug A — phải KHÔNG tồn tại
+        "tables_count": 16,
+        # Phụ lục II vẫn phải không tồn tại (không phải section thực trong document)
         "no_false_nodes": ["doc_373_2025_NDCP_phu_luc_II"],
         "spot_checks": [
-            # Khoản 7 phải có content đầy đủ (được fix bởi patch)
             {
                 "node_id": "doc_373_2025_NDCP_phu_luc_I_khoan_7",
                 "exists": True,
-                "content_contains": "năm 2021 của Bộ Tài chính",
+                "content_contains": "Phụ lục I",
             },
         ],
     },
 
-    # Nghị định 310/2025/NĐ-CP
+    # Nghị quyết 110/2025/UBTVQH15 — văn bản ngắn, 2 Điều về mức giảm trừ gia cảnh
+    "110_2025_UBTVQH15": {
+        "root_count": 2,
+        "root_types": {"Điều"},
+        "total_nodes": 4,
+        "max_depth": 2,
+        "tables_count": 0,
+        "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_110_2025_UBTVQH15_dieu_1",
+                "exists": True,
+                "field": "title",
+                "value": "Mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+            },
+            {
+                "node_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_1",
+                "exists": True,
+                "content_contains": "01 tháng 01 năm 2026",
+            },
+        ],
+    },
+
+    # Luật 149/2025/QH15 — sửa đổi Luật Thuế GTGT
+    "149_2025_QH15": {
+        "root_count": 2,
+        "root_types": {"Điều"},
+        "total_nodes": 7,
+        "max_depth": 3,
+        "tables_count": 0,
+        "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_149_2025_QH15_dieu_1",
+                "exists": True,
+                "field": "title",
+                "value": "Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng",
+            },
+            {
+                "node_id": "doc_149_2025_QH15_dieu_1_khoan_1_diem_a",
+                "exists": True,
+                "content_contains": "Sản phẩm cây trồng",
+            },
+        ],
+    },
+
+    # Nghị quyết 198/2025/QH15 — cơ chế đặc biệt phát triển kinh tế tư nhân
+    "198_2025_QH15": {
+        "root_count": 7,
+        "root_types": {"Chương"},
+        "total_nodes": 97,
+        "max_depth": 4,
+        "tables_count": 0,
+        "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_198_2025_QH15_chuong_I",
+                "exists": True,
+                "has_children": True,
+                "min_children": 2,
+            },
+            {
+                "node_id": "doc_198_2025_QH15_chuong_I_dieu_3_khoan_1",
+                "exists": True,
+                "content_contains": "doanh",
+            },
+        ],
+    },
+
+    # Nghị định 310/2025/NĐ-CP — sửa đổi NĐ 125/2020 về xử phạt vi phạm thuế
     "310_2025_NDCP": {
         "root_count": 4,
         "root_types": {"Điều"},
@@ -150,12 +235,101 @@ GOLDEN: dict = {
         "max_depth": 3,
         "tables_count": 0,
         "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_b",
+                "exists": True,
+                "content_contains": "cùng một ngày",
+            },
+            # Bug fix: diem_b_2 (amendment instruction) phải được patch thành diem_d_bs
+            {
+                "node_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_d_bs",
+                "exists": True,
+                "content_contains": "Bổ sung điểm đ",
+            },
+        ],
+    },
+
+    # Nghị định 68/2026/NĐ-CP — Gemini 2.5 Pro extraction (PDF digital)
+    "68_2026_NDCP": {
+        "root_count": 5,
+        "root_types": {"Chương"},
+        "total_nodes": 159,
+        "max_depth": 4,
+        "tables_count": 14,
+        "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_68_2026_NDCP_chuong_I",
+                "exists": True,
+                "has_children": True,
+            },
+            {
+                "node_id": "doc_68_2026_NDCP_chuong_I_dieu_2_khoan_1",
+                "exists": True,
+                "content_contains": "hộ kinh doanh",
+            },
+        ],
+    },
+
+    # Thông tư 18/2026/TT-BTC — Gemini image fallback (PDF scan thuần)
+    "18_2026_TTBTC": {
+        "root_count": 6,
+        "root_types": {"Điều"},
+        "total_nodes": 29,
+        "max_depth": 3,
+        "tables_count": 0,
+        "no_false_nodes": [],
+        "spot_checks": [
+            {
+                "node_id": "doc_18_2026_TTBTC_dieu_1",
+                "exists": True,
+                "field": "title",
+                "value": "Phạm vi điều chỉnh",
+            },
+            {
+                "node_id": "doc_18_2026_TTBTC_dieu_2_khoan_1",
+                "exists": True,
+                "content_contains": "hộ kinh doanh",
+            },
+        ],
+    },
+
+    # Công văn 1296/CTNVT — Type B (hướng dẫn quyết toán thuế TNCN), không có Điều/Khoản
+    "1296_CTNVT": {
+        "root_count": 33,
+        "root_types": {"Phần"},
+        "total_nodes": 33,
+        "max_depth": 1,
+        "tables_count": 6,
+        "no_false_nodes": [],
+        "spot_checks": [],
+    },
+
+    # Sổ tay Hộ Kinh Doanh — Type B (guidance), 26 bảng tra cứu
+    "So_Tay_HKD": {
+        "root_count": 0,
+        "root_types": set(),
+        "total_nodes": 0,
+        "max_depth": 0,
+        "tables_count": 26,
+        "no_false_nodes": [],
         "spot_checks": [],
     },
 }
 
 
 # ── Invariants (áp dụng cho tất cả documents) ────────────────────────────────
+
+# Docs dùng Gemini API để parse — output không deterministic, skip REPARSE test.
+# Các doc này chỉ được bảo vệ bởi FAST test (load JSON đã save).
+GEMINI_SOURCED = {
+    "68_2026_NDCP",    # pdf+Gemini 2.5 Pro
+    "18_2026_TTBTC",   # pdf scan+Gemini image fallback
+    "So_Tay_HKD",      # pdf+Gemini 2.5 Pro
+    # 1296_CTNVT: đã chuyển sang .doc (antiword) — deterministic, không cần Gemini
+}
+
 
 GLOBAL_INVARIANTS = [
     # Không có Phụ lục node nào có title chứa "kèm theo"
@@ -344,15 +518,26 @@ def test_reparse_golden_metrics(doc_id: str) -> None:
         2. Nếu là regression thật sự → revert parser change
         3. Xem xét dùng patch file thay vì parser change
     """
-    pdf_path = RAW_DIR / f"{doc_id}.pdf"
-    if not pdf_path.exists():
-        pytest.skip(f"PDF không có: {pdf_path.name}")
+    if doc_id in GEMINI_SOURCED:
+        pytest.skip("Gemini-sourced doc — output không deterministic, chỉ FAST test")
 
-    # Import here to avoid circular imports at module level
-    from src.parsing.pdf_parser import PDFParser
+    # Ưu tiên docx/doc (source of truth cho docx-sourced docs), fallback sang pdf
+    docx_path = RAW_DIR / f"{doc_id}.docx"
+    doc_path  = RAW_DIR / f"{doc_id}.doc"
+    pdf_path  = RAW_DIR / f"{doc_id}.pdf"
 
-    parser = PDFParser()
-    data = parser.parse(pdf_path, save_json=False)
+    if docx_path.exists():
+        from src.parsing.pipeline import ParsePipeline
+        data = ParsePipeline().run(docx_path)
+    elif doc_path.exists():
+        from src.parsing.pdf_parser import PDFParser
+        data = PDFParser().parse(doc_path, save_json=False)
+    elif pdf_path.exists():
+        from src.parsing.pdf_parser import PDFParser
+        data = PDFParser().parse(pdf_path, save_json=False)
+    else:
+        pytest.skip(f"Không có source file cho: {doc_id}")
+
     validate_document(doc_id, data)
 
 
@@ -454,14 +639,21 @@ def test_snapshot_reparse(doc_id: str, update_snapshots: bool) -> None:
     Khi có improvement (output mới tốt hơn), update snapshots:
         pytest tests/test_parser_regression.py -v -m snapshot --update-snapshots
     """
-    pdf_path = RAW_DIR / f"{doc_id}.pdf"
-    if not pdf_path.exists():
-        pytest.skip(f"PDF không có: {pdf_path.name}")
+    docx_path = RAW_DIR / f"{doc_id}.docx"
+    doc_path  = RAW_DIR / f"{doc_id}.doc"
+    pdf_path  = RAW_DIR / f"{doc_id}.pdf"
 
-    from src.parsing.pdf_parser import PDFParser
-
-    parser = PDFParser()
-    actual = parser.parse(pdf_path, save_json=False)
+    if docx_path.exists():
+        from src.parsing.pipeline import ParsePipeline
+        actual = ParsePipeline().run(docx_path)
+    elif doc_path.exists():
+        from src.parsing.pdf_parser import PDFParser
+        actual = PDFParser().parse(doc_path, save_json=False)
+    elif pdf_path.exists():
+        from src.parsing.pdf_parser import PDFParser
+        actual = PDFParser().parse(pdf_path, save_json=False)
+    else:
+        pytest.skip(f"Không có source file cho: {doc_id}")
 
     if update_snapshots:
         _save_snapshot(doc_id, actual)

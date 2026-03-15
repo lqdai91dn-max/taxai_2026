@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "document_id": "LQT_38_2019",
+    "document_type": "Luật",
+    "document_number": "38/2019/QH14",
+    "title": "Luật Quản lý thuế số 38/2019/QH14",
+    "issue_date": "2019-06-13",
+    "effective_date": "2020-07-01",
+    "hierarchy_rank": 1,
+    "status": "superseded",
+    "expiry_date": "2026-06-30",
+    "superseded_by": "108_2025_QH15"
+  },
+  "data": [
+    {
+      "node_id": "doc_LQT_38_2019_dieu_59",
+      "node_type": "Điều",
+      "node_index": "59",
+      "title": "Tiền chậm nộp thuế",
+      "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 59: Tiền chậm nộp thuế",
+      "content": "Tiền chậm nộp thuế",
+      "lead_in_text": "Người nộp thuế chậm nộp tiền thuế so với thời hạn quy định, thời hạn gia hạn nộp thuế, thời hạn ghi trong thông báo của cơ quan quản lý thuế, thời hạn trong quyết định xử lý của cơ quan quản lý thuế thì phải nộp đủ tiền thuế và tiền chậm nộp theo mức 0,03%/ngày tính trên số tiền thuế chậm nộp.",
+      "children": [
+        {
+          "node_id": "doc_LQT_38_2019_dieu_59_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 59 > Khoản 1",
+          "content": "Người nộp thuế chậm nộp tiền thuế so với thời hạn quy định, thời hạn gia hạn nộp thuế, thời hạn ghi trong thông báo của cơ quan quản lý thuế, thời hạn trong quyết định xử lý của cơ quan quản lý thuế thì phải nộp đủ tiền thuế và tiền chậm nộp theo mức 0,03%/ngày tính trên số tiền thuế chậm nộp.",
+          "lead_in_text": null,
+          "children": []
+        },
+        {
+          "node_id": "doc_LQT_38_2019_dieu_59_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 59 > Khoản 2",
+          "content": "Số ngày chậm nộp tiền thuế bao gồm cả ngày lễ, ngày nghỉ theo chế độ quy định và được tính từ ngày tiếp theo ngày cuối của thời hạn nộp thuế, thời hạn gia hạn nộp thuế đến ngày người nộp thuế nộp tiền thuế vào ngân sách nhà nước.",
+          "lead_in_text": null,
+          "children": []
+        },
+        {
+          "node_id": "doc_LQT_38_2019_dieu_59_khoan_3",
+          "node_type": "Khoản",
+          "node_index": "3",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 59 > Khoản 3",
+          "content": "Trường hợp sau khi hết thời hạn nộp hồ sơ khai thuế, người nộp thuế khai bổ sung hồ sơ khai thuế làm tăng số tiền thuế phải nộp thì tính tiền chậm nộp đối với số tiền thuế phải nộp tăng thêm kể từ ngày hết thời hạn nộp thuế của kỳ tính thuế có sai, sót đến ngày người nộp thuế nộp số tiền thuế tăng thêm vào ngân sách nhà nước.",
+          "lead_in_text": null,
+          "children": []
+        },
+        {
+          "node_id": "doc_LQT_38_2019_dieu_59_khoan_4",
+          "node_type": "Khoản",
+          "node_index": "4",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 59 > Khoản 4",
+          "content": "Không tính tiền chậm nộp trong thời gian gia hạn nộp thuế. Không tính tiền chậm nộp đối với trường hợp người nộp thuế được cơ quan quản lý thuế giải quyết không tính tiền chậm nộp theo quy định tại Điều 62 của Luật này.",
+          "lead_in_text": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_LQT_38_2019_dieu_141",
+      "node_type": "Điều",
+      "node_index": "141",
+      "title": "Xử phạt đối với hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn",
+      "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 141: Xử phạt khai sai thiếu thuế",
+      "content": "Người nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn thì bị xử phạt 20% tính trên số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn quy định và bị tính tiền chậm nộp theo quy định tại Điều 59 của Luật này.",
+      "lead_in_text": null,
+      "children": [
+        {
+          "node_id": "doc_LQT_38_2019_dieu_141_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 141 > Khoản 1",
+          "content": "Người nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn thì bị xử phạt 20% tính trên số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn quy định.",
+          "lead_in_text": null,
+          "children": []
+        },
+        {
+          "node_id": "doc_LQT_38_2019_dieu_141_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 141 > Khoản 2",
+          "content": "Hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp bao gồm: khai sai căn cứ tính thuế hoặc số tiền thuế được khấu trừ; khai sai dẫn đến thiếu số tiền thuế phải nộp nhưng không thuộc các trường hợp quy định tại Điều 143 của Luật này.",
+          "lead_in_text": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_LQT_38_2019_dieu_143",
+      "node_type": "Điều",
+      "node_index": "143",
+      "title": "Xử phạt đối với hành vi trốn thuế",
+      "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 143: Xử phạt trốn thuế",
+      "content": "Người nộp thuế có hành vi trốn thuế thì bị xử phạt từ 01 lần đến 03 lần số tiền thuế trốn. Người nộp thuế tự nguyện khai báo trước khi cơ quan có thẩm quyền phát hiện hành vi trốn thuế thì bị xử phạt 01 lần số tiền thuế trốn.",
+      "lead_in_text": null,
+      "children": []
+    },
+    {
+      "node_id": "doc_LQT_38_2019_dieu_11",
+      "node_type": "Điều",
+      "node_index": "11",
+      "title": "Trách nhiệm hoàn trả tiền thuế nộp thừa, tiền phạt nộp thừa",
+      "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 11",
+      "content": "Tổ chức, cá nhân khấu trừ, thu, nộp thuế thay, kê khai sai gây ra thiệt hại cho người nộp thuế thì phải bồi thường thiệt hại theo quy định của pháp luật dân sự. Sàn thương mại điện tử nếu kê khai sai số thuế khấu trừ dẫn đến người nộp thuế bị phạt tiền chậm nộp thì sàn có trách nhiệm bồi thường khoản tiền phạt đó cho người nộp thuế.",
+      "lead_in_text": null,
+      "children": []
+    },
+    {
+      "node_id": "doc_LQT_38_2019_dieu_62",
+      "node_type": "Điều",
+      "node_index": "62",
+      "title": "Không tính tiền chậm nộp",
+      "breadcrumb": "Luật Quản lý thuế 38/2019/QH14 > Điều 62: Không tính tiền chậm nộp",
+      "content": "Không tính tiền chậm nộp trong thời gian gia hạn nộp thuế. Không tính tiền chậm nộp trong trường hợp người nộp thuế cung cấp đúng, đầy đủ thông tin trong hồ sơ khai thuế và cơ quan quản lý thuế có hướng dẫn sai. Người nộp thuế không tính tiền chậm nộp trong trường hợp người nộp thuế khai, nộp đúng số tiền thuế theo quyết định, thông báo của cơ quan quản lý thuế.",
+      "lead_in_text": null,
+      "children": []
+    }
+  ],
+  "pdf_metadata": {},
+  "tables": [],
+  "parser_version": "manual_v1"
+}

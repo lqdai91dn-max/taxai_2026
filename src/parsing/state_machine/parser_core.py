@@ -807,6 +807,19 @@ class StateMachineParser:
         và cập nhật breadcrumb của Điều + toàn bộ descendants.
         """
         for node in nodes:
+            # Fix Chương / Mục: title nằm trên dòng riêng sau "Chương I" → vào lead_in_text
+            # Chương/Mục không bao giờ có lead-in content thực sự (text trước Điều con).
+            # Nếu node không có title nhưng có lead_in_text → đó là title bị đẩy xuống.
+            if node.node_type in ("Chương", "Mục") and node.lead_in_text and not node.title:
+                title_text = re.sub(r'\s*\n\s*', ' ', node.lead_in_text.strip()).strip()
+                if title_text:
+                    node.title = title_text
+                    node.lead_in_text = ""
+                    logger.debug(
+                        f"📝 Fixed {node.node_type} {node.node_index} title from lead_in: "
+                        f"'{title_text[:60]}'"
+                    )
+
             # Chỉ áp dụng fix cho Điều CÓ children (Khoản/Điểm).
             # Điều không có children (VD: Điều điều khoản cuối như "Hiệu lực thi hành")
             # có lead_in_text là body content thực sự, không phải title continuation.

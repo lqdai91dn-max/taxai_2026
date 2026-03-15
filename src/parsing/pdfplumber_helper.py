@@ -22,6 +22,7 @@ import pdfplumber
 from pathlib import Path
 from typing import Tuple, List, Dict, Any, Optional
 import re
+from src.parsing.text_normalizer import fix_merged_words
 
 # OCR support (optional - for pure scanned PDFs)
 try:
@@ -58,6 +59,11 @@ def clean_legal_text(text: str) -> str:
     # Unicode NFC normalization — gộp ký tự decomposed từ embedded fonts
     # VD: 'e' + combining circumflex → 'ê' (một code point)
     text = unicodedata.normalize('NFC', text)
+
+    # Fix merged words (OCR space-drop): "cánhân" → "cá nhân"
+    # Root cause: some embedded fonts have zero advance-width for space glyph
+    # → pdfplumber can't infer inter-word boundaries → syllables merge.
+    text = fix_merged_words(text)
 
     # Normalize hyphenated breaks trong legal references
     # VD: "NĐ-\nCP" → "NĐ-CP", "TT- BKHĐT" → "TT-BKHĐT" (cả line-break và space)

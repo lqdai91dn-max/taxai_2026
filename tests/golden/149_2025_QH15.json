@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "document_id": "149_2025_QH15",
+    "document_type": "Luật",
+    "document_number": "149/2025/QH15",
+    "title": "SỬA ĐỔI, BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT THUẾ GIÁ TRỊ GIA TĂNG",
+    "issue_date": "2026-01-01",
+    "effective_date": "2026-01-01"
+  },
+  "data": [
+    {
+      "node_id": "doc_149_2025_QH15_dieu_1",
+      "node_type": "Điều",
+      "node_index": "1",
+      "title": "Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng",
+      "content": "",
+      "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_149_2025_QH15_dieu_1_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Sửa đổi, bổ sung một số khoản của Điều 5 như sau:",
+          "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng > Khoản 1",
+          "references": [
+            {
+              "text_match": "Điều 5",
+              "target_id": "external_dieu_5"
+            }
+          ],
+          "children": [
+            {
+              "node_id": "doc_149_2025_QH15_dieu_1_khoan_1_diem_a",
+              "node_type": "Điểm",
+              "node_index": "a",
+              "title": null,
+              "content": "Sửa đổi, bổ sung khoản 1 như sau: “1. Sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường của tổ chức, cá nhân tự sản xuất, đánh bắt bán ra và ở khâu nhập khẩu. Doanh ng hiệp, hợp tác xã, liên hiệp hợp tác xã mua sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường bán cho doanh ng hiệp, hợp tác xã, liên hiệp hợp tác xã khác thì không phải kê khai, tính nộp thuế giá trị gia tăng nhưng được khấu trừ thuế giá trị gia tăng đầu vào.”;",
+              "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng > Khoản 1 > Điểm a",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_149_2025_QH15_dieu_1_khoan_1_diem_b",
+              "node_type": "Điểm",
+              "node_index": "b",
+              "title": null,
+              "content": "Sửa đổi, bổ sung khoản 25 như sau: “25. Hàng hóa, dịch vụ của hộ, cá nhân sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống; tài sản của tổ chức, cá nhân không kinh doanh, không phải là người nộp thuế giá trị gia tăng bán ra; hàng dự trữ quốc gia do cơ quan dự trữ quốc gia bán ra; các khoản thu phí, lệ phí theo quy định của pháp luật về phí và lệ phí.”.",
+              "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng > Khoản 1 > Điểm b",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_149_2025_QH15_dieu_1_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Sửa đổi, bổ sung khoản 5 Điều 9 như sau: “5. Phế phẩm, phụ phẩm, phế liệu được thu hồi trong quá trình sản xuất thì áp dụng mức thuế suất của mặt hàng phế phẩm, phụ phẩm, phế liệu đó.”.",
+          "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng > Khoản 2",
+          "references": [
+            {
+              "text_match": "khoản 5 Điều 9",
+              "target_id": "external_dieu_9_khoan_5"
+            }
+          ],
+          "children": []
+        },
+        {
+          "node_id": "doc_149_2025_QH15_dieu_1_khoan_3",
+          "node_type": "Khoản",
+          "node_index": "3",
+          "title": null,
+          "content": "Bãi bỏ khoản 3 Điều 12 và điểm c khoản 9 Điều 15.",
+          "breadcrumb": "Luật 149/2025/QH15 > Điều 1: Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng > Khoản 3",
+          "references": [
+            {
+              "text_match": "khoản 3 Điều 12",
+              "target_id": "external_dieu_12_khoan_3"
+            },
+            {
+              "text_match": "điểm c khoản 9 Điều 15",
+              "target_id": "external_dieu_15_khoan_9_diem_c"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_149_2025_QH15_dieu_2",
+      "node_type": "Điều",
+      "node_index": "2",
+      "title": "Hiệu lực thi hành",
+      "content": "",
+      "breadcrumb": "Luật 149/2025/QH15 > Điều 2: Hiệu lực thi hành",
+      "references": [],
+      "children": [],
+      "lead_in_text": "Luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026. Luật này được Quốc hội nước Cộng hoà xã hội chủ nghĩa Việt Nam khóa XV, Kỳ họp thứ 10 thông qua ngày 11 tháng 12 năm 2025."
+    }
+  ],
+  "tables": []
+}

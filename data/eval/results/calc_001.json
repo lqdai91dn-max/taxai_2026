@@ -1,0 +1,2082 @@
+{
+  "report": {
+    "summary": {
+      "total": 18,
+      "passed": 4,
+      "pass_rate": 0.222,
+      "avg_score": 0.262,
+      "errors": 9,
+      "annotated": 18,
+      "verified": 18,
+      "timestamp": "2026-03-14T16:21:08.155099"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 18,
+        "avg": 0.194,
+        "note": "Ground-truth check khi có expected_value; fallback tool-output check"
+      },
+      "tier2_citation": {
+        "applicable": 18,
+        "avg": 0.406,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 18,
+        "avg": 0.256,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 18,
+        "avg": 0.194,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế hộ kinh doanh": {
+        "total": 6,
+        "passed": 2,
+        "pass_rate": 0.333,
+        "avg_score": 0.337
+      },
+      "Thuế thu nhập cá nhân": {
+        "total": 4,
+        "passed": 2,
+        "pass_rate": 0.5,
+        "avg_score": 0.625
+      },
+      "Thuế thương mại điện tử": {
+        "total": 4,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.05
+      },
+      "Thuế tài sản": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.0
+      },
+      "Xử phạt vi phạm": {
+        "total": 3,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 6,
+        "avg_score": 0.137
+      },
+      "hard": {
+        "count": 3,
+        "avg_score": 0.042
+      },
+      "medium": {
+        "count": 9,
+        "avg_score": 0.419
+      }
+    },
+    "latency_ms": {
+      "min": 1951,
+      "max": 26210,
+      "avg": 8112,
+      "p50": 4498,
+      "p95": 20394
+    },
+    "failed_questions": [
+      {
+        "id": 15,
+        "question": "Tôi mới trúng vé số Vietlott 50 triệu thì bị trừ bao nhiêu tiền thuế?",
+        "score": 0.25,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "PASS — 3 tham chiếu pháp luật + 17 sources",
+        "t3": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "error": null
+      },
+      {
+        "id": 16,
+        "question": "Tôi bán mảnh đất ở quê giá 2 tỷ thì thuế TNCN phải nộp tính làm sao?",
+        "score": 0.5,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "PASS — 4 tham chiếu pháp luật + 6 sources",
+        "t3": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "error": null
+      },
+      {
+        "id": 22,
+        "question": "Tôi bán quần áo, sàn Shopee sẽ trừ thuế của tôi theo tỷ lệ bao nhiêu % trên mỗi ",
+        "score": 0.075,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer không có tham chiếu pháp luật nào",
+        "t3": "PARTIAL — không gọi tool nào nhưng có answer",
+        "error": null
+      },
+      {
+        "id": 27,
+        "question": "Tôi là cá nhân nước ngoài bán hàng trên sàn TMĐT Việt Nam thì tỷ lệ thuế sàn trừ",
+        "score": 0.125,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "PARTIAL — có 9 sources nhưng answer không trích dẫn rõ ràng",
+        "t3": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "error": null
+      },
+      {
+        "id": 75,
+        "question": "Tôi làm xưởng mộc, có bao thầu luôn nguyên vật liệu đóng tủ cho khách thì tỷ lệ ",
+        "score": 0.525,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "PASS — 2 tham chiếu pháp luật trong text",
+        "t3": "PARTIAL — không gọi tool nào nhưng có answer",
+        "error": null
+      },
+      {
+        "id": 99,
+        "question": "Nếu tôi khai khống chi phí dẫn đến được hoàn thuế cao hơn thực tế, thì ngoài việ",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+      },
+      {
+        "id": 107,
+        "question": "Hộ kinh doanh của tôi làm dịch vụ thiết kế đồ họa, viết phần mềm trên máy tính t",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 112,
+        "question": "Cá nhân người nước ngoài bán hàng trên Lazada Việt Nam nhưng không cư trú tại VN",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 121,
+        "question": "Hộ gia đình tôi có mảnh đất ở lấn chiếm (chưa có sổ đỏ), khi tính thuế sử dụng đ",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 130,
+        "question": "Cá nhân cho thuê mặt bằng đặt trạm phát sóng BTS với giá 100 triệu/năm thì nộp t",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 155,
+        "question": "Tiệm sửa xe máy của tôi mua phụ tùng về thay cho khách (có tính chung vào tiền c",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 160,
+        "question": "Cá nhân cung cấp nội dung số (Youtuber, Tiktoker) nhận tiền từ Google, Tiktok th",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 165,
+        "question": "Nếu hộ kinh doanh nộp chậm tiền thuế, mức tính tiền chậm nộp hiện tại là bao nhi",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      },
+      {
+        "id": 166,
+        "question": "Cá nhân kinh doanh lỡ khai sai mã ngành nghề dẫn đến nộp thiếu thuế, khi bị phát",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "[Errno 11001] getaddrinfo failed"
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 3,
+      "question": "Tiệm làm tóc của tôi doanh thu 1 tỷ/năm thì nộp thuế GTGT và TNCN theo tỷ lệ bao nhiêu phần trăm?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Đối với tiệm làm tóc có doanh thu 1 tỷ đồng/năm, bạn sẽ nộp thuế GTGT và thuế TNCN như sau:\n\n*   **Thuế GTGT:** 5% trên doanh thu, tương ứng **50.000.000 VND**.\n*   **Thuế TNCN:** 2% trên doanh thu, tương ứng **20.000.000 VND**.\n\nTổng số thuế phải nộp là **70.000.000 VND**.\n\n**Căn cứ pháp lý:**\nTheo Nghị định 68/2026/NĐ-CP về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "annual_revenue": 1000000000,
+            "business_category": "services"
+          },
+          "result": {
+            "annual_revenue": 1000000000,
+            "business_category": "services",
+            "exempt": false,
+            "gtgt_rate": 0.05,
+            "gtgt_payable": 50000000,
+            "tncn_rate": 0.02,
+            "tncn_base": 1000000000,
+            "tncn_payable": 20000000,
+            "total_tax": 70000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Dịch vụ, xây dựng không bao thầu nguyên vật liệu",
+                "formula": "1,000,000,000 × 5.0% = 50,000,000 VND",
+                "value": 50000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — PP tỷ lệ % doanh thu | Dịch vụ — TNCN 2%",
+                "formula": "1,000,000,000 × 2.0% = 20,000,000 VND",
+                "value": 20000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % TNCN theo nhóm ngành nghề (PP doanh thu)"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 1000 triệu đồng | GTGT: 50.00 triệu (5.0%) | TNCN: 20.00 triệu (2.0% × toàn bộ doanh thu) | Tổng: 70.00 triệu đồng."
+          }
+        }
+      ],
+      "latency_ms": 3699,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tax_hkd, 1/1 ground-truth numbers khớp",
+        "details": {
+          "tool": "calculate_tax_hkd",
+          "matched": [
+            70000000
+          ],
+          "gt": [
+            70000000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 2 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 2
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd"
+          ],
+          "matching": [
+            "calculate_tax_hkd"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 3/7 key facts, thiếu: ['15%', '50 triệu', '75 triệu', '125 triệu']",
+        "details": {
+          "matched": [
+            "5%",
+            "2%",
+            "70.000.000 VND"
+          ],
+          "missing": [
+            "15%",
+            "50 triệu",
+            "75 triệu",
+            "125 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 7,
+      "question": "Tôi cho thuê nhà nguyên căn 1 tháng 30 triệu thì đóng thuế như thế nào theo luật mới?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Với doanh thu cho thuê nhà 30 triệu đồng/tháng, tương đương 360 triệu đồng/năm, bạn sẽ đóng các loại thuế sau:\n\n*   **Thuế GTGT (Giá trị gia tăng):** 18.000.000 VND\n*   **Thuế TNCN (Thu nhập cá nhân):** Miễn thuế\n\n**Tổng số thuế phải nộp là 18.000.000 VND.**\n\n**Căn cứ pháp lý:**\n\n*   Theo Nghị định 68/2026/NĐ-CP, doanh thu từ hoạt động cho thuê bất động sản dưới 500 triệu đồng/năm được miễn thuế TNCN.\n*   Thuế suất thuế GTGT đối với hoạt động cho thuê bất động sản là 5.0% trên doanh thu.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "business_category": "real_estate",
+            "annual_revenue": 360000000
+          },
+          "result": {
+            "annual_revenue": 360000000,
+            "business_category": "real_estate",
+            "exempt": true,
+            "gtgt_rate": 0.05,
+            "gtgt_payable": 18000000,
+            "tncn_rate": 0.0,
+            "tncn_base": 0,
+            "tncn_payable": 0,
+            "total_tax": 18000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Cho thuê bất động sản",
+                "formula": "360,000,000 × 5.0% = 18,000,000 VND",
+                "value": 18000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — miễn vì doanh thu ≤500 triệu/năm",
+                "formula": "Doanh thu 360,000,000 ≤ 500,000,000 → miễn",
+                "value": 0,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng doanh thu miễn thuế TNCN: 500 triệu đồng/năm"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 360 triệu đồng ≤ 500 triệu → miễn thuế TNCN. Chỉ nộp GTGT: 18.00 triệu đồng (5.0% × doanh thu)."
+          }
+        }
+      ],
+      "latency_ms": 3672,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tax_hkd, số từ tool output xuất hiện trong answer",
+        "details": {
+          "tool": "calculate_tax_hkd",
+          "matched": [
+            18000000,
+            18000000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 2 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 2
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd"
+          ],
+          "matching": [
+            "calculate_tax_hkd"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 2/5 key facts, thiếu: ['10%', '5%', '10']",
+        "details": {
+          "matched": [
+            "miễn",
+            "500 triệu"
+          ],
+          "missing": [
+            "10%",
+            "5%",
+            "10"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 12,
+      "question": "Lương thực lãnh của tôi 20 triệu/tháng, tôi đang nuôi 1 con nhỏ thì có bị trừ thuế TNCN không?",
+      "topic": "Thuế thu nhập cá nhân",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Với mức lương thực lãnh 20 triệu đồng/tháng và nuôi 1 con nhỏ, bạn sẽ không phải nộp thuế thu nhập cá nhân (TNCN).\n\nCụ thể:\n*   **Tổng thu nhập năm:** 20.000.000 VNĐ/tháng × 12 tháng = 240.000.000 VNĐ.\n*   **Tổng giảm trừ gia cảnh năm:**\n    *   Bản thân: 15.500.000 VNĐ/tháng × 12 tháng = 186.000.000 VNĐ.\n    *   1 người phụ thuộc: 6.200.000 VNĐ/tháng × 12 tháng = 74.400.000 VNĐ.\n    *   Tổng cộng giảm trừ: 186.000.000 VNĐ + 74.400.000 VNĐ = 260.400.000 VNĐ.\n    (Theo Luật Thuế thu nhập cá nhân 109/2025/QH15, Điều 19)\n*   **Thu nhập tính thuế năm:** 240.000.000 VNĐ (thu nhập) - 260.400.000 VNĐ (giảm trừ) = -20.400.000 VNĐ.\n\nVì thu nhập tính thuế của bạn là số âm, bạn không có thu nhập chịu thuế và do đó không phải nộp thuế TNCN.\n\n**Lưu ý:** Mức giảm trừ gia cảnh 15.500.000 VNĐ/tháng cho bản thân và 6.200.000 VNĐ/tháng cho mỗi người phụ thuộc sẽ có hiệu lực từ ngày 01/07/2026 theo Luật 109/2025/QH15. Trước ngày này, áp dụng mức cũ là 11.000.000 VNĐ/tháng cho bản thân và 4.400.000 VNĐ/tháng cho mỗi người phụ thuộc.",
+      "tool_calls": [
+        {
+          "tool": "calculate_deduction",
+          "args": {
+            "dependents": 1,
+            "months": 12
+          },
+          "result": {
+            "dependents": 1,
+            "months": 12,
+            "personal_deduction_monthly": 15500000,
+            "dependent_deduction_per_person": 6200000,
+            "dependent_deduction_total_monthly": 6200000,
+            "total_deduction_monthly": 21700000,
+            "total_deduction_annual": 260400000,
+            "old_law_annual": 184800000,
+            "increase_vs_old_law": 75600000,
+            "citation": {
+              "doc_id": "109_2025_QH15",
+              "doc_number": "109/2025/QH15",
+              "title": "Luật Thuế Thu nhập cá nhân",
+              "effective_date": "2026-07-01",
+              "note": "Mức giảm trừ gia cảnh mới theo Luật 109/2025/QH15"
+            },
+            "warning": "Mức 15.5 triệu/tháng (bản thân) và 6.2 triệu/tháng (người phụ thuộc) áp dụng từ 01/07/2026 theo Luật 109/2025/QH15. Trước ngày này áp dụng mức cũ: 11 triệu/tháng và 4.4 triệu/tháng.",
+            "summary": "12 tháng | Bản thân: 15.5M/tháng + 1 người phụ thuộc × 6.2M | Tổng giảm trừ năm: 260.4 triệu đồng"
+          }
+        }
+      ],
+      "latency_ms": 5849,
+      "error": null,
+      "tier1": {
+        "score": 0.5,
+        "reason": "PARTIAL — gọi calculate_deduction nhưng số không khớp chính xác với tool output",
+        "details": {
+          "tool": "calculate_deduction",
+          "tool_numbers": [],
+          "answer_numbers": [
+            20000000,
+            240000000,
+            15500000,
+            186000000,
+            6200000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Luật T",
+            "109/2025/Q",
+            "Điều 19",
+            "109/2025/Q"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_deduction'} phù hợp với topic 'Thuế thu nhập cá nhân'",
+        "details": {
+          "tools_used": [
+            "calculate_deduction"
+          ],
+          "matching": [
+            "calculate_deduction"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 3/3 key facts có trong answer",
+        "details": {
+          "matched": [
+            "miễn",
+            "15,5 triệu",
+            "6,2 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 15,
+      "question": "Tôi mới trúng vé số Vietlott 50 triệu thì bị trừ bao nhiêu tiền thuế?",
+      "topic": "Thuế thu nhập cá nhân",
+      "difficulty": "easy",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Theo quy định hiện hành về thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng (trước khi Luật 109/2025/QH15 có hiệu lực), bạn sẽ phải nộp thuế như sau:\n\n1.  **Ngưỡng chịu thuế:** Phần thu nhập từ trúng thưởng trên 10 triệu đồng/lần trúng thưởng sẽ phải chịu thuế.\n2.  **Thu nhập tính thuế:** 50.000.000 VNĐ - 10.000.000 VNĐ = 40.000.000 VNĐ.\n3.  **Thuế suất:** 10%.\n4.  **Số tiền thuế phải nộp:** 40.000.000 VNĐ × 10% = 4.000.000 VNĐ.\n\nVậy, bạn sẽ bị trừ 4.000.000 VNĐ tiền thuế.\n\n**Căn cứ pháp lý:** Quy định về thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng theo các văn bản pháp luật hiện hành (trước ngày 01/07/2026).\n\n**Lưu ý:** Luật Thuế thu nhập cá nhân số 109/2025/QH15 sẽ có hiệu lực từ ngày 01/07/2026. Tuy nhiên, tại thời điểm hiện tại (2026-03-14), luật này chưa có hiệu lực.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thuế thu nhập cá nhân trúng thưởng vé số"
+          },
+          "result": {
+            "query": "thuế thu nhập cá nhân trúng thưởng vé số",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_15_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "snippet": "Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "score": 0.016091,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a",
+                "snippet": "Phương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                "score": 0.014054,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2",
+                "snippet": "Khai thuế, nộp thuế thu nhập cá nhân",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_III_dieu_24_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "snippet": "Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_14_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "snippet": "Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "109_2025_QH15"
+          },
+          "result": {
+            "doc_id": "109_2025_QH15",
+            "found": true,
+            "doc_number": "109/2025/QH15",
+            "doc_type": "Luật",
+            "title": "THUẾ THU NHẬP CÁ NHÂN",
+            "status": "pending",
+            "valid_from": "2026-07-01",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [
+              {
+                "doc_id": "110_2025_UBTVQH15",
+                "doc_number": "110/2025/UBTVQH15",
+                "title": "Về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân ỦY BAN THƯỜNG VỤ Q",
+                "rel_type": "AMENDS",
+                "note": "NQ 110 điều chỉnh mức giảm trừ gia cảnh thuế TNCN — liên quan trực tiếp Luật 109",
+                "effective_date": "2026-01-01"
+              }
+            ],
+            "message": "Văn bản chưa có hiệu lực tại 2026-03-14. Hiệu lực từ: 2026-07-01."
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "top_k": 10,
+            "query": "thuế thu nhập cá nhân trúng thưởng"
+          },
+          "result": {
+            "query": "thuế thu nhập cá nhân trúng thưởng",
+            "total_found": 10,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_15_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "snippet": "Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "score": 0.016163,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_III_dieu_26_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 26: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng",
+                "snippet": "Điều 26: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng\nThuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng của cá nhân không cư trú được xác định bằng phần giá trị vượt trên 20 triệu đồng theo từng lần trúng thưởng, nhận thừa kế, quà tặng tại Việt Nam nhân (x) với thuế suất 10%.",
+                "score": 0.014621,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 26: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_2_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2 > Điểm a",
+                "snippet": "Khai thuế, nộp thuế thu nhập cá nhân\nHộ kinh doanh, cá nhân kinh doanh lựa chọn nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thực hiện khai, nộp thuế thu nhập cá nhân theo quý cùng thời hạn khai, nộp thuế giá trị gia tăng;",
+                "score": 0.014312,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_15_khoan_1_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng > Khoản 1",
+                "snippet": "Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 10%.",
+                "score": 0.013054,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a",
+                "snippet": "Phương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                "score": 0.012987,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2_diem_b_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2 > Điểm b",
+                "snippet": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:\nTỷ lệ % để tính thuế thu nhập cá nhân",
+                "score": 0.012922,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_18_khoan_1_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 18: Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng > Khoản 1",
+                "snippet": "Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 10%.",
+                "score": 0.011575,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 18: Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+                "snippet": "Phương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động ",
+                "score": 0.011569,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2",
+                "snippet": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:",
+                "score": 0.011417,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2",
+                "snippet": "Khai thuế, nộp thuế thu nhập cá nhân",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng > Khoản 2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "top_k": 5,
+            "query": "thu nhập chịu thuế trúng thưởng"
+          },
+          "result": {
+            "query": "thu nhập chịu thuế trúng thưởng",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_15_khoan_3_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng > Khoản 3",
+                "snippet": "Thời điểm xác định thu nhập tính thuế từ trúng thưởng là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế.",
+                "score": 0.015823,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_15_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "snippet": "Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng",
+                "score": 0.015768,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_6_diem_a_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6 > Điểm a",
+                "snippet": "Thu nhập từ trúng thưởng, bao gồm:\nTrúng thưởng xổ số;",
+                "score": 0.015056,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_6_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6",
+                "snippet": "Thu nhập từ trúng thưởng, bao gồm:",
+                "score": 0.014412,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_1_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 1: Phạm vi điều chỉnh",
+                "snippet": "Điều 1: Phạm vi điều chỉnh\nLuật này quy định về người nộp thuế, thu nhập chịu thuế, thu nhập được miễn thuế, giảm thuế và căn cứ tính thuế thu nhập cá nhân.",
+                "score": 0.014255,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 1: Phạm vi điều chỉnh"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 26210,
+      "error": null,
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": [
+            "search_legal_docs",
+            "check_doc_validity",
+            "search_legal_docs",
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 3 tham chiếu pháp luật + 17 sources",
+        "details": {
+          "legal_refs": [
+            "109/2025/Q",
+            "Luật T",
+            "109/2025/Q"
+          ],
+          "source_count": 17
+        }
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "details": {
+          "tools_used": [
+            "search_legal_docs",
+            "check_doc_validity"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['4.000.000 VND']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "4.000.000 VND"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 16,
+      "question": "Tôi bán mảnh đất ở quê giá 2 tỷ thì thuế TNCN phải nộp tính làm sao?",
+      "topic": "Thuế thu nhập cá nhân",
+      "difficulty": "easy",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Hiện tại, Luật Thuế thu nhập cá nhân 109/2025/QH15 liên quan đến thu nhập từ chuyển nhượng bất động sản sẽ có hiệu lực từ ngày 01/07/2026. Do đó, tại thời điểm hiện tại (14/03/2026), việc tính thuế TNCN đối với chuyển nhượng bất động sản vẫn áp dụng theo các quy định hiện hành trước Luật 109/2025/QH15.\n\nTheo quy định hiện hành, thuế TNCN từ chuyển nhượng bất động sản được tính theo công thức:\n\n**Thuế TNCN phải nộp = Giá chuyển nhượng x Thuế suất 2%**\n\nTrong trường hợp của bạn:\n*   Giá chuyển nhượng mảnh đất là 2 tỷ đồng (2.000.000.000 VND).\n*   Thuế suất áp dụng là 2%.\n\nVậy, số thuế TNCN bạn phải nộp là:\n2.000.000.000 VND x 2% = 40.000.000 VND\n\n**Lưu ý:**\n*   Mức thuế suất 2% này áp dụng trên giá chuyển nhượng thực tế hoặc giá theo bảng giá đất của Ủy ban nhân dân cấp tỉnh tại thời điểm chuyển nhượng, tùy theo giá nào cao hơn.\n*   Luật 109/2025/QH15 sẽ có những thay đổi về thuế TNCN nói chung, bao gồm cả thu nhập từ chuyển nhượng bất động sản, nhưng sẽ chỉ có hiệu lực từ ngày 01/07/2026.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thuế TNCN chuyển nhượng bất động sản"
+          },
+          "result": {
+            "query": "thuế TNCN chuyển nhượng bất động sản",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_d_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nCác khoản thu nhập khác nhận được từ chuyển nhượng bất động sản dưới mọi hình thức.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_14_khoan_2_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2",
+                "snippet": "Thời điểm xác định thu nhập tính thuế từ chuyển nhượng bất động sản là thời điểm hợp đồng chuyển nhượng có hiệu lực theo quy định của pháp luật hoặc thời điểm đăng ký quyền sử dụng, quyền sở hữu bất động sản.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:",
+                "score": 0.015523,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_b_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền sở hữu hoặc sử dụng nhà ở;",
+                "score": 0.015223,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_c_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền thuê đất, quyền thuê mặt nước;",
+                "score": 0.015117,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "109_2025_QH15"
+          },
+          "result": {
+            "doc_id": "109_2025_QH15",
+            "found": true,
+            "doc_number": "109/2025/QH15",
+            "doc_type": "Luật",
+            "title": "THUẾ THU NHẬP CÁ NHÂN",
+            "status": "pending",
+            "valid_from": "2026-07-01",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [
+              {
+                "doc_id": "110_2025_UBTVQH15",
+                "doc_number": "110/2025/UBTVQH15",
+                "title": "Về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân ỦY BAN THƯỜNG VỤ Q",
+                "rel_type": "AMENDS",
+                "note": "NQ 110 điều chỉnh mức giảm trừ gia cảnh thuế TNCN — liên quan trực tiếp Luật 109",
+                "effective_date": "2026-01-01"
+              }
+            ],
+            "message": "Văn bản chưa có hiệu lực tại 2026-03-14. Hiệu lực từ: 2026-07-01."
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thuế TNCN chuyển nhượng bất động sản hiện hành"
+          },
+          "result": {
+            "query": "thuế TNCN chuyển nhượng bất động sản hiện hành",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_d_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nCác khoản thu nhập khác nhận được từ chuyển nhượng bất động sản dưới mọi hình thức.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_14_khoan_2_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2",
+                "snippet": "Thời điểm xác định thu nhập tính thuế từ chuyển nhượng bất động sản là thời điểm hợp đồng chuyển nhượng có hiệu lực theo quy định của pháp luật hoặc thời điểm đăng ký quyền sử dụng, quyền sở hữu bất động sản.",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_b_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền sở hữu hoặc sử dụng nhà ở;",
+                "score": 0.015223,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_c_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền thuê đất, quyền thuê mặt nước;",
+                "score": 0.015117,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:",
+                "score": 0.015018,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thuế TNCN chuyển nhượng bất động sản"
+          },
+          "result": {
+            "query": "thuế TNCN chuyển nhượng bất động sản",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_d_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nCác khoản thu nhập khác nhận được từ chuyển nhượng bất động sản dưới mọi hình thức.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_14_khoan_2_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2",
+                "snippet": "Thời điểm xác định thu nhập tính thuế từ chuyển nhượng bất động sản là thời điểm hợp đồng chuyển nhượng có hiệu lực theo quy định của pháp luật hoặc thời điểm đăng ký quyền sử dụng, quyền sở hữu bất động sản.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:",
+                "score": 0.015523,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_b_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền sở hữu hoặc sử dụng nhà ở;",
+                "score": 0.015223,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_c_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c",
+                "snippet": "Thu nhập từ chuyển nhượng bất động sản, bao gồm:\nThu nhập từ chuyển nhượng quyền thuê đất, quyền thuê mặt nước;",
+                "score": 0.015117,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 11668,
+      "error": null,
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": [
+            "search_legal_docs",
+            "check_doc_validity",
+            "search_legal_docs",
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 6 sources",
+        "details": {
+          "legal_refs": [
+            "Luật T",
+            "109/2025/Q",
+            "109/2025/Q",
+            "109/2025/Q"
+          ],
+          "source_count": 6
+        }
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "details": {
+          "tools_used": [
+            "search_legal_docs",
+            "check_doc_validity"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 3/3 key facts có trong answer",
+        "details": {
+          "matched": [
+            "2%",
+            "40.000.000 VND",
+            "2 tỷ"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 22,
+      "question": "Tôi bán quần áo, sàn Shopee sẽ trừ thuế của tôi theo tỷ lệ bao nhiêu % trên mỗi đơn hàng?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "easy",
+      "user_type": "online_seller",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Để xác định tỷ lệ thuế mà Shopee sẽ trừ trên mỗi đơn hàng, tôi cần biết doanh thu ước tính trong năm của bạn là bao nhiêu.\n\nBạn có thể cung cấp doanh thu dự kiến hàng năm của mình không?",
+      "tool_calls": [],
+      "latency_ms": 1951,
+      "error": null,
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer không có tham chiếu pháp luật nào",
+        "details": {
+          "answer_preview": "Để xác định tỷ lệ thuế mà Shopee sẽ trừ trên mỗi đơn hàng, tôi cần biết doanh thu ước tính trong năm"
+        }
+      },
+      "tier3": {
+        "score": 0.3,
+        "reason": "PARTIAL — không gọi tool nào nhưng có answer",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/6 key facts, thiếu: ['1%', '0,5%', '1.5%', '0.5%', '1.5', '0.5']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "1%",
+            "0,5%",
+            "1.5%",
+            "0.5%",
+            "1.5",
+            "0.5"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 27,
+      "question": "Tôi là cá nhân nước ngoài bán hàng trên sàn TMĐT Việt Nam thì tỷ lệ thuế sàn trừ của tôi có khác người Việt không?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "hard",
+      "user_type": "online_seller",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Xin lỗi, tôi cần thêm thông tin để trả lời câu hỏi này đầy đủ. Vui lòng thử hỏi chi tiết hơn.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "tỷ lệ thuế cá nhân nước ngoài bán hàng trên sàn TMĐT Việt Nam"
+          },
+          "result": {
+            "query": "tỷ lệ thuế cá nhân nước ngoài bán hàng trên sàn TMĐT Việt Nam",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2_diem_b_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2 > Điểm b",
+                "snippet": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:\nTỷ lệ % để tính thuế thu nhập cá nhân",
+                "score": 0.013387,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_17_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 17: Thuế thu nhập cá nhân đối với thu nhập từ nhượng quyền thương mại",
+                "snippet": "Điều 17: Thuế thu nhập cá nhân đối với thu nhập từ nhượng quyền thương mại",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 17: Thuế thu nhập cá nhân đối với thu nhập từ nhượng quyền thương mại"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_2_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2",
+                "snippet": "Hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân đối với trường hợp tổ chức, cá nhân khấu trừ khai thuế thay, nộp thuế thay",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_III_dieu_20_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 20: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh",
+                "snippet": "Điều 20: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 20: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_III_dieu_24_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "snippet": "Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "117_2025_NDCP"
+          },
+          "result": {
+            "doc_id": "117_2025_NDCP",
+            "found": true,
+            "doc_number": "117/2025/NĐ-CP",
+            "doc_type": "Nghị định",
+            "title": "Quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của",
+            "status": "valid",
+            "valid_from": "2025-07-01",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [],
+            "message": "Văn bản đang có hiệu lực tại 2026-03-14."
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2_diem_b"
+          },
+          "result": {
+            "article_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2_diem_b",
+            "found": false
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_117_2025_NDCP_chuong_III_dieu_9"
+          },
+          "result": {
+            "article_id": "doc_117_2025_NDCP_chuong_III_dieu_9",
+            "found": true,
+            "doc_id": "117_2025_NDCP",
+            "title": "Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán",
+            "content": "",
+            "full_text": "Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán\nCá nhân không cư trú có hoạt động kinh doanh trên nền tảng thương ...",
+            "clause_count": 4,
+            "point_count": 6,
+            "clauses": [
+              {
+                "id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_1",
+                "index": "1",
+                "content": "Cá nhân không cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử không có chức năng thanh toán trực tiếp thực hiện nộp thuế giá trị gia tăng và thuế thu nhập cá nhân đối với hàng hóa, dịch vụ kinh doanh trên nền tảng thương mại điện tử theo tỷ lệ phần trăm (%) trên doanh thu theo quy định của Luật Thuế giá trị gia tăng, Luật Thuế thu nhập cá nhân."
+              },
+              {
+                "id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_2",
+                "index": "2",
+                "content": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:"
+              },
+              {
+                "id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_3",
+                "index": "3",
+                "content": "Khai thuế"
+              },
+              {
+                "id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_4",
+                "index": "4",
+                "content": "Thủ tục khai thuế, nộp thuế"
+              }
+            ],
+            "citation": {
+              "doc_id": "117_2025_NDCP",
+              "article_id": "doc_117_2025_NDCP_chuong_III_dieu_9",
+              "title": "Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán"
+            }
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "109_2025_QH15"
+          },
+          "result": {
+            "doc_id": "109_2025_QH15",
+            "found": true,
+            "doc_number": "109/2025/QH15",
+            "doc_type": "Luật",
+            "title": "THUẾ THU NHẬP CÁ NHÂN",
+            "status": "pending",
+            "valid_from": "2026-07-01",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [
+              {
+                "doc_id": "110_2025_UBTVQH15",
+                "doc_number": "110/2025/UBTVQH15",
+                "title": "Về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân ỦY BAN THƯỜNG VỤ Q",
+                "rel_type": "AMENDS",
+                "note": "NQ 110 điều chỉnh mức giảm trừ gia cảnh thuế TNCN — liên quan trực tiếp Luật 109",
+                "effective_date": "2026-01-01"
+              }
+            ],
+            "message": "Văn bản chưa có hiệu lực tại 2026-03-14. Hiệu lực từ: 2026-07-01."
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_109_2025_QH15_chuong_III_dieu_20"
+          },
+          "result": {
+            "article_id": "doc_109_2025_QH15_chuong_III_dieu_20",
+            "found": true,
+            "doc_id": "109_2025_QH15",
+            "title": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh",
+            "content": "",
+            "full_text": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh\nThuế thu nhập cá nhân đối với thu nhập từ kinh doanh của cá nhân không cư trú được xác định bằng doanh thu từ hoạt động kinh doanh quy định tại kho...",
+            "clause_count": 3,
+            "point_count": 5,
+            "clauses": [
+              {
+                "id": "doc_109_2025_QH15_chuong_III_dieu_20_khoan_1",
+                "index": "1",
+                "content": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh của cá nhân không cư trú được xác định bằng doanh thu từ hoạt động kinh doanh quy định tại khoản 2 Điều này nhân (x) với thuế suất quy định tại khoản 3 Điều này."
+              },
+              {
+                "id": "doc_109_2025_QH15_chuong_III_dieu_20_khoan_2",
+                "index": "2",
+                "content": "Doanh thu là toàn bộ tiền bán hàng, tiền gia công, tiền cung ứng dịch vụ kể cả trợ giá, phụ thu, phụ trội mà cá nhân được hưởng, không phân biệt đã thu được tiền hay chưa thu được tiền, bao gồm cả chi phí do bên mua hàng hoá, dịch vụ trả thay cho cá nhân không cư trú mà không được hoàn trả. Trường hợp thoả thuận hợp đồng không bao gồm thuế thu nhập cá nhân thì doanh thu tính thuế phải quy đổi là toàn bộ số tiền mà cá nhân không cư trú nhận được dưới bất kỳ hình thức nào từ việc cung cấp hàng hoá, dịch vụ tại Việt Nam không phụ thuộc vào địa điểm tiến hành các hoạt động kinh doanh."
+              },
+              {
+                "id": "doc_109_2025_QH15_chuong_III_dieu_20_khoan_3",
+                "index": "3",
+                "content": "Thuế suất:"
+              }
+            ],
+            "citation": {
+              "doc_id": "109_2025_QH15",
+              "article_id": "doc_109_2025_QH15_chuong_III_dieu_20",
+              "title": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh"
+            }
+          }
+        }
+      ],
+      "latency_ms": 11669,
+      "error": null,
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": [
+            "search_legal_docs",
+            "check_doc_validity",
+            "get_article",
+            "get_article",
+            "check_doc_validity",
+            "get_article"
+          ]
+        }
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — có 9 sources nhưng answer không trích dẫn rõ ràng",
+        "details": {
+          "source_count": 9
+        }
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "details": {
+          "tools_used": [
+            "get_article",
+            "search_legal_docs",
+            "check_doc_validity"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/2 key facts, thiếu: ['1%', '5%']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "1%",
+            "5%"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 63,
+      "question": "Lương thực nhận 30 triệu, tôi được giảm trừ bản thân 15.5 triệu, nuôi 2 con nhỏ được giảm trừ 12.4 triệu nữa. Theo bậc lũy tiến tôi đóng TNCN bao nhiêu?",
+      "topic": "Thuế thu nhập cá nhân",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Với thu nhập tính thuế cả năm là 25.200.000 VNĐ, số thuế TNCN bạn phải nộp là **1.260.000 VNĐ**.\n\n**Căn cứ pháp lý:**\nTheo Luật Thuế Thu nhập cá nhân số 109/2025/QH15 (có hiệu lực từ 01/07/2026), thu nhập tính thuế của bạn thuộc Bậc 1 (≤ 120 triệu VNĐ/năm) với thuế suất 5%.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tncn_progressive",
+          "args": {
+            "annual_taxable_income": 25200000
+          },
+          "result": {
+            "annual_taxable_income": 25200000,
+            "tax_payable": 1260000,
+            "effective_rate": 0.05,
+            "effective_rate_pct": "5.00%",
+            "brackets": [
+              {
+                "bracket": 1,
+                "income_range": "Bậc 1: ≤120 triệu/năm",
+                "rate": 0.05,
+                "rate_pct": "5%",
+                "taxable_in_bracket": 25200000,
+                "tax_in_bracket": 1260000,
+                "formula": "25,200,000 × 5% = 1,260,000 VND"
+              }
+            ],
+            "citation": {
+              "doc_id": "109_2025_QH15",
+              "doc_number": "109/2025/QH15",
+              "title": "Luật Thuế Thu nhập cá nhân",
+              "effective_date": "2026-07-01"
+            },
+            "summary": "Thu nhập tính thuế: 25.2 triệu đồng/năm\nThuế phải nộp: 1.260 triệu đồng (5.00% thuế suất hiệu dụng)\nChi tiết từng bậc:\n  Bậc 1: ≤120 triệu/năm (5%): 25.2 triệu × 5% = 1.260 triệu"
+          }
+        }
+      ],
+      "latency_ms": 3791,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tncn_progressive, số từ tool output xuất hiện trong answer",
+        "details": {
+          "tool": "calculate_tncn_progressive",
+          "matched": [
+            1260000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Luật T",
+            "109/2025/Q"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tncn_progressive'} phù hợp với topic 'Thuế thu nhập cá nhân'",
+        "details": {
+          "tools_used": [
+            "calculate_tncn_progressive"
+          ],
+          "matching": [
+            "calculate_tncn_progressive"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 1/2 key facts, thiếu: ['4,98 triệu']",
+        "details": {
+          "matched": [
+            "5%"
+          ],
+          "missing": [
+            "4,98 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 75,
+      "question": "Tôi làm xưởng mộc, có bao thầu luôn nguyên vật liệu đóng tủ cho khách thì tỷ lệ tính thuế GTGT và TNCN áp dụng là bao nhiêu?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Đối với hoạt động xưởng mộc có bao thầu nguyên vật liệu đóng tủ, hoạt động này được xếp vào nhóm ngành sản xuất.\n\nTheo Nghị định 68/2026/NĐ-CP, tỷ lệ tính thuế áp dụng cho hộ kinh doanh trong lĩnh vực sản xuất là:\n*   **Thuế giá trị gia tăng (GTGT): 3%**\n*   **Thuế thu nhập cá nhân (TNCN): 1.5%**\n\nĐể tính toán số tiền thuế cụ thể bạn phải nộp, tôi cần biết doanh thu ước tính trong năm của bạn.",
+      "tool_calls": [],
+      "latency_ms": 4498,
+      "error": null,
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.8,
+        "reason": "PASS — 2 tham chiếu pháp luật trong text",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 0.3,
+        "reason": "PARTIAL — không gọi tool nào nhưng có answer",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 3/3 key facts có trong answer",
+        "details": {
+          "matched": [
+            "3%",
+            "1.5%",
+            "1.5"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 99,
+      "question": "Nếu tôi khai khống chi phí dẫn đến được hoàn thuế cao hơn thực tế, thì ngoài việc phải trả lại tiền, tôi còn bị phạt hành chính thêm bao nhiêu %?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "medium",
+      "user_type": "accountant",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 25797,
+      "error": "[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "20%",
+            "20"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 107,
+      "question": "Hộ kinh doanh của tôi làm dịch vụ thiết kế đồ họa, viết phần mềm trên máy tính thì tỷ lệ tính thuế GTGT và TNCN tổng cộng là bao nhiêu %?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 11137,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "7%",
+            "5%",
+            "2%"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 112,
+      "question": "Cá nhân người nước ngoài bán hàng trên Lazada Việt Nam nhưng không cư trú tại VN thì sàn áp dụng khấu trừ thuế TNCN theo tỷ lệ bao nhiêu?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "hard",
+      "user_type": "online_seller",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 11145,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "1%",
+            "5%"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 121,
+      "question": "Hộ gia đình tôi có mảnh đất ở lấn chiếm (chưa có sổ đỏ), khi tính thuế sử dụng đất phi nông nghiệp thì diện tích lấn chiếm nhân với mức thuế suất bao nhiêu %?",
+      "topic": "Thuế tài sản",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 1,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "0.15%",
+            "0.15"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 130,
+      "question": "Cá nhân cho thuê mặt bằng đặt trạm phát sóng BTS với giá 100 triệu/năm thì nộp thuế GTGT và TNCN tổng cộng là bao nhiêu phần trăm?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 1,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "miễn",
+            "500 triệu",
+            "10%",
+            "5%",
+            "10"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 155,
+      "question": "Tiệm sửa xe máy của tôi mua phụ tùng về thay cho khách (có tính chung vào tiền công). Vậy tôi khai thuế theo tỷ lệ ngành dịch vụ (2%) hay ngành phân phối hàng hóa (0.5%)?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 1,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "3%",
+            "7%"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 160,
+      "question": "Cá nhân cung cấp nội dung số (Youtuber, Tiktoker) nhận tiền từ Google, Tiktok thì tỷ lệ thuế phải nộp (GTGT + TNCN) tổng cộng là 7% đúng không?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "hard",
+      "user_type": "online_seller",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 1,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "7%",
+            "5%",
+            "2%"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 165,
+      "question": "Nếu hộ kinh doanh nộp chậm tiền thuế, mức tính tiền chậm nộp hiện tại là bao nhiêu phần trăm (%) trên 1 ngày chậm nộp?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 2,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "0,03%",
+            "0.03%",
+            "0.03"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 166,
+      "question": "Cá nhân kinh doanh lỡ khai sai mã ngành nghề dẫn đến nộp thiếu thuế, khi bị phát hiện sẽ bị phạt 20% trên số thuế khai thiếu đúng không?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "medium",
+      "user_type": "accountant",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 2,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "20%",
+            "20"
+          ]
+        }
+      }
+    }
+  ]
+}

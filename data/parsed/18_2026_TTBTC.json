@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "document_id": "18_2026_TTBTC",
+    "document_type": "Thông tư",
+    "document_number": "18/2026/TT-BTC",
+    "title": "Quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+    "issue_date": "2026-03-05",
+    "effective_date": "2026-03-05",
+    "status": "active"
+  },
+  "data": [
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_1",
+      "node_type": "Điều",
+      "node_index": "1",
+      "title": "Phạm vi điều chỉnh",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 1: Phạm vi điều chỉnh",
+      "references": [
+        {
+          "text_match": "tại khoản 4 Điều 13",
+          "target_id": "external_luat_quan_ly_thue_dieu_8_dieu_11_dieu_12_nghi_dinh_so_dieu_13_khoan_4"
+        },
+        {
+          "text_match": "Điều 8",
+          "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_8"
+        },
+        {
+          "text_match": "Điều 11",
+          "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_11"
+        },
+        {
+          "text_match": "Điều 12",
+          "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_12"
+        }
+      ],
+      "children": [],
+      "lead_in_text": "Thông tư này quy định chi tiết về hồ sơ, thủ tục thông báo doanh thu, kê khai thuế, nộp thuế, hoàn thuế, thông báo địa điểm kinh doanh, tạm ngừng, chấm dứt hoạt động kinh doanh đối với hộ kinh doanh, cá nhân kinh doanh tại khoản 4 Điều 13 Luật Quản lý thuế, Điều 8, Điều 11, Điều 12 Nghị định số 68/2026/NĐ-CP ngày 05 tháng 3 năm 2026 của Chính phủ quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh."
+    },
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_2",
+      "node_type": "Điều",
+      "node_index": "2",
+      "title": "Đối tượng áp dụng",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_2_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Người nộp thuế là hộ kinh doanh, cá nhân kinh doanh.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng > Khoản 1",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_2_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Cơ quan thuế các cấp và công chức thuế.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng > Khoản 2",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_2_khoan_3",
+          "node_type": "Khoản",
+          "node_index": "3",
+          "title": null,
+          "content": "Các cơ quan, tổ chức, cá nhân khác có liên quan đến việc thực hiện nghĩa vụ thuế của hộ kinh doanh, cá nhân kinh doanh.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng > Khoản 3",
+          "references": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_3",
+      "node_type": "Điều",
+      "node_index": "3",
+      "title": "Thông báo địa điểm kinh doanh",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 3: Thông báo địa điểm kinh doanh",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_3_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc thành lập địa điểm kinh doanh, thay đổi thông tin, tạm ngừng kinh doanh, chấm dứt hoạt động địa điểm kinh doanh đến cơ quan thuế quản lý trụ sở kinh doanh quy định tại điểm d khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP theo Mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 3: Thông báo địa điểm kinh doanh > Khoản 1",
+          "references": [
+            {
+              "text_match": "tại điểm d khoản 4 Điều 8",
+              "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_8_khoan_4_diem_d"
+            }
+          ],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_3_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Cơ quan thuế gửi thông báo cho người nộp thuế biết theo Mẫu số 02/TB-ĐĐKD ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 3: Thông báo địa điểm kinh doanh > Khoản 2",
+          "references": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_4",
+      "node_type": "Điều",
+      "node_index": "4",
+      "title": "Hồ sơ thông báo doanh thu, kê khai thuế",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Hồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_a",
+              "node_type": "Điểm",
+              "node_index": "a",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân (bao gồm cả hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh) thông báo doanh thu thực tế phát sinh trong năm và kê khai các loại thuế khác theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm a",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_b",
+              "node_type": "Điểm",
+              "node_index": "b",
+              "title": null,
+              "content": "Đối với hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế, hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác là Tờ khai theo Mẫu số 01/CNKD ban hành kèm theo Thông tư này.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_c",
+              "node_type": "Điểm",
+              "node_index": "c",
+              "title": null,
+              "content": "Đối với hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất - Hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác trong năm là Tờ khai theo Mẫu số 01/CNKD ban hành kèm theo Thông tư này. - Hồ sơ khai quyết toán thuế thu nhập cá nhân là Tờ khai quyết toán thuế thu nhập cá nhân theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm c",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_d",
+              "node_type": "Điểm",
+              "node_index": "d",
+              "title": null,
+              "content": "Hộ kinh doanh, cá nhân kinh doanh đang hoạt động thuộc đối tượng quy định tại điểm b khoản 4 Điều 17 Nghị định số 68/2026/NĐ-CP gửi Thông báo số tài khoản/ số hiệu ví điện tử theo Mẫu số 01/BK-STK ban hành kèm theo Thông tư này chậm nhất là ngày 20 tháng 4 năm 2026. Hộ kinh doanh, cá nhân kinh doanh đang hoạt động thuộc đối tượng quy định tại điểm a khoản 4 Điều 17 Nghị định số 68/2026/NĐ-CP gửi Thông báo số tài khoản/ số hiệu ví điện tử theo Mẫu số 01/BK-STK ban hành kèm theo Thông tư này kèm theo Tờ khai thuế đầu tiên của năm 2026. Hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh gửi Thông báo số tài khoản/ số hiệu ví điện tử theo mẫu số 01/BK-STK ban hành kèm theo Thông tư này kèm theo Thông báo doanh thu hoặc Tờ khai thuế đầu tiên của năm 2026. Hộ kinh doanh, cá nhân kinh doanh khi thay đổi thông tin số tài khoản/ số hiệu ví điện tử thì thông báo cho cơ quan thuế theo quy định của pháp luật quản lý thuế.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm d",
+              "references": [
+                {
+                  "text_match": "tại điểm b khoản 4 Điều 17",
+                  "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_17_khoan_4_diem_b"
+                },
+                {
+                  "text_match": "tại điểm a khoản 4 Điều 17",
+                  "target_id": "external_nghi_dinh_68_2026_nd_cp_dieu_17_khoan_4_diem_a"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân đối với trường hợp tổ chức, cá nhân khấu trừ khai thuế thay, nộp thuế thay",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2",
+          "references": [],
+          "children": [
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_2_diem_a",
+              "node_type": "Điểm",
+              "node_index": "a",
+              "title": null,
+              "content": "Đối với tổ chức khai thuế thay, nộp thuế thay cho cá nhân hợp tác kinh doanh với tổ chức là Tờ khai theo Mẫu số 01/TCKT và Phụ lục Bảng kê chi tiết hộ kinh doanh, cá nhân kinh doanh theo Mẫu số 01/BK-KTHTKD ban hành kèm theo Thông tư này.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2 > Điểm a",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_2_diem_b",
+              "node_type": "Điểm",
+              "node_index": "b",
+              "title": null,
+              "content": "Đối với tổ chức khai thuế thay, nộp thuế thay cho cá nhân cho thuê bất động sản, trừ hoạt động kinh doanh lưu trú là Tờ khai theo Mẫu số 01/TCKT và Phụ lục Bảng kê chi tiết cá nhân cho thuê bất động sản theo Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2 > Điểm b",
+              "references": [],
+              "children": []
+            },
+            {
+              "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_2_diem_c",
+              "node_type": "Điểm",
+              "node_index": "c",
+              "title": null,
+              "content": "Đối với doanh ng hiệp xổ số, bảo hiểm, bán hàng đa cấp trả tiền hoa hồng cho cá nhân trực tiếp ký hợp đồng làm đại lý bán đúng giá; doanh ng hiệp bảo hiểm trả phí tích lũy bảo hiểm nhân thọ, bảo hiểm không bắt buộc khác, hồ sơ gồm: - Tờ khai theo Mẫu số 01/XSBHĐC ban hành kèm theo Thông tư này; - Phụ lục Bảng kê chi tiết cá nhân có phát sinh doanh thu từ hoạt động đại lý xổ số, đại lý bảo hiểm, bán hàng đa cấp theo Mẫu số 01/BK-XSBHĐC ban hành kèm theo Thông tư này và gửi kèm theo Tờ khai thuế của tháng/ quý cuối cùng trong năm tính thuế.",
+              "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2 > Điểm c",
+              "references": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_3",
+          "node_type": "Khoản",
+          "node_index": "3",
+          "title": null,
+          "content": "Đối với cá nhân trực tiếp ký hợp đồng làm đại lý xổ số, đại lý bảo hiểm, đại lý bán hàng đa cấp, hoạt động kinh doanh khác chưa khấu trừ, nộp thuế trong năm là Tờ khai thuế năm theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 3",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_4_khoan_4",
+          "node_type": "Khoản",
+          "node_index": "4",
+          "title": null,
+          "content": "Đối với cá nhân cho thuê bất động sản trực tiếp khai thuế với cơ quan thuế là Tờ khai thuế đối với hoạt động cho thuê bất động sản theo Mẫu số 01/BĐS và Phụ lục Bảng kê chi tiết bất động sản theo Mẫu số 01/BK-BĐS ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 4",
+          "references": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_5",
+      "node_type": "Điều",
+      "node_index": "5",
+      "title": "Hồ sơ đề nghị hoàn thuế nộp thừa",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_5_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa > Khoản 1",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_5_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/QTT-TNCN-CNKD ban hành kèm theo Thông tư này.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa > Khoản 2",
+          "references": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "node_id": "doc_18_2026_TTBTC_dieu_6",
+      "node_type": "Điều",
+      "node_index": "6",
+      "title": "Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa",
+      "content": "",
+      "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Cơ quan thuế tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa của hộ kinh doanh, cá nhân kinh doanh theo quy định của pháp luật về quản lý thuế.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa > Khoản 1",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Cơ quan thuế ban hành Quyết định hoàn thuế hoặc Quyết định hoàn thuế kiêm bù trừ thu ngân sách nhà nước theo quy định.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa > Khoản 2",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_3",
+          "node_type": "Khoản",
+          "node_index": "3",
+          "title": null,
+          "content": "Cơ quan thuế gửi Lệnh hoàn trả khoản thu ngân sách nhà nước hoặc Lệnh hoàn trả kiêm bù trừ khoản thu ngân sách nhà nước cho Kho bạc Nhà nước quản lý địa bàn tương ứng với cơ quan thuế ban hành Lệnh hoàn trả để thực hiện hạch toán hoàn trả và chuyển chứng từ cho Kho bạc Nhà nước nơi có khoản thu ngân sách nhà nước được bù trừ để hạch toán thu ngân sách nhà nước theo quy định để thực hiện hoàn thuế cho người nộp thuế. kinh doanh, cá nhân kinh doanh.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa > Khoản 3",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_3_2",
+          "node_type": "Khoản",
+          "node_index": "5",
+          "title": null,
+          "content": "Trường hợp các văn bản quy phạm pháp luật quy định viện dẫn tại Thông tư này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo văn bản được sửa đổi, bổ sung hoặc thay thế đó.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa > Khoản 3",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_4",
+          "node_type": "Khoản",
+          "node_index": "4",
+          "title": null,
+          "content": "Trong quá trình thực hiện, nếu có khó khăn, vướng mắc, đề nghị các đơn vị, cơ sở kinh doanh phản ánh kịp thời về Bộ Tài chính để được giải quyết.",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 6: Tiếp nhận, phân loại, giải quyết hồ sơ hoàn thuế nộp thừa > Khoản 4",
+          "references": [],
+          "children": []
+        }
+      ]
+    }
+  ],
+  "pdf_metadata": {
+    "pdf_type": "gemini_extracted",
+    "total_pages": 6,
+    "text_length": 8483,
+    "tables_found": 0,
+    "extraction_method": "gemini/gemini-2.5-pro",
+    "cache_used": true
+  },
+  "tables": [],
+  "parser_version": "7.0"
+}

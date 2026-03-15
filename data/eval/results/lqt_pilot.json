@@ -1,0 +1,776 @@
+{
+  "report": {
+    "summary": {
+      "total": 7,
+      "passed": 4,
+      "pass_rate": 0.571,
+      "avg_score": 0.668,
+      "errors": 1,
+      "annotated": 7,
+      "verified": 7,
+      "timestamp": "2026-03-15T07:00:53.711270"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 2,
+        "avg": 0.5,
+        "note": "Ground-truth check khi có expected_value; fallback tool-output check"
+      },
+      "tier2_citation": {
+        "applicable": 7,
+        "avg": 0.757,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 7,
+        "avg": 0.757,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 5,
+        "avg": 0.4,
+        "note": "Key facts check (N/A cho 2 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế hộ kinh doanh": {
+        "total": 7,
+        "passed": 4,
+        "pass_rate": 0.571,
+        "avg_score": 0.668
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 2,
+        "avg_score": 0.916
+      },
+      "hard": {
+        "count": 1,
+        "avg_score": 1.0
+      },
+      "medium": {
+        "count": 4,
+        "avg_score": 0.461
+      }
+    },
+    "latency_ms": {
+      "min": 1739,
+      "max": 10473,
+      "avg": 4534,
+      "p50": 3648,
+      "p95": 9049
+    },
+    "failed_questions": [
+      {
+        "id": 4,
+        "question": "Tôi muốn nộp thuế theo lợi nhuận (doanh thu trừ chi phí) thay vì nộp theo % doan",
+        "score": 0.3,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — answer có từ khóa pháp lý nhưng thiếu citation cụ thể",
+        "t3": "PARTIAL — không gọi tool nào nhưng có answer",
+        "error": null
+      },
+      {
+        "id": 6,
+        "question": "Hộ kinh doanh của tôi doanh thu 4 tỷ thì bắt buộc phải nộp thuế theo lợi nhuận đ",
+        "score": 0.667,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PASS — 2 tham chiếu pháp luật + 1 sources",
+        "t3": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "error": null
+      },
+      {
+        "id": 7,
+        "question": "Tôi cho thuê nhà nguyên căn 1 tháng 30 triệu thì đóng thuế như thế nào theo luật",
+        "score": 0.0,
+        "t1": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "'NoneType' object has no attribute 'parts'"
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 1,
+      "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu gì?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Theo Nghị định 68/2026/NĐ-CP, từ năm 2026, hộ kinh doanh bán tạp hóa (phân phối, cung cấp hàng hóa) sẽ tính thuế theo phương pháp tỷ lệ phần trăm trên doanh thu, thay vì \"thuế khoán\" trước đây.\n\nCụ thể:\n*   **Nếu doanh thu từ 500 triệu đồng trở xuống/năm:** Bạn sẽ được miễn thuế GTGT và thuế TNCN.\n*   **Nếu doanh thu trên 500 triệu đồng/năm:** Bạn sẽ phải nộp thuế GTGT và thuế TNCN theo tỷ lệ.\n\n**Ví dụ:** Với doanh thu bán tạp hóa là 600 triệu đồng/năm, số thuế bạn phải nộp sẽ là:\n\n*   **Thuế GTGT:** 600.000.000 VNĐ × 1.0% = **6.000.000 VNĐ**\n    *   Căn cứ: Khoản 2 Điều 4 Nghị định 68/2026/NĐ-CP.\n*   **Thuế TNCN:** 600.000.000 VNĐ × 0.5% = **3.000.000 VNĐ**\n    *   Căn cứ: Khoản 2 Điều 4 Nghị định 68/2026/NĐ-CP.\n\n**Tổng cộng số thuế phải nộp là 9.000.000 VNĐ.**\n\n**Lưu ý:** Nghị định 68/2026/NĐ-CP có hiệu lực từ ngày 05/03/2026.",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 500000000
+          },
+          "result": {
+            "annual_revenue": 500000000,
+            "is_exempt": true,
+            "tax_method": "none",
+            "tax_method_desc": "Miễn — không áp dụng phương pháp nào",
+            "filing_frequency": "exempt",
+            "filing_desc": "Miễn kê khai — doanh thu ≤ 500 triệu",
+            "einvoice_required": "optional",
+            "einvoice_desc": "Khuyến khích HĐĐT (doanh thu 500M – dưới 1 tỷ)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Miễn thuế GTGT và TNCN",
+                "condition": "Doanh thu 500.0 triệu ≤ 500 triệu/năm",
+                "result": "✅ Miễn — không phải nộp thuế GTGT và TNCN",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng doanh thu miễn thuế"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 500 triệu đồng/năm",
+                "result": "🧾 Khuyến khích HĐĐT (doanh thu 500M – dưới 1 tỷ)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 500 triệu ≤ 500 triệu → MIỄN THUẾ GTGT và TNCN."
+          }
+        },
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "annual_revenue": 600000000,
+            "business_category": "goods"
+          },
+          "result": {
+            "annual_revenue": 600000000,
+            "business_category": "goods",
+            "exempt": false,
+            "gtgt_rate": 0.01,
+            "gtgt_payable": 6000000,
+            "tncn_rate": 0.005,
+            "tncn_base": 600000000,
+            "tncn_payable": 3000000,
+            "total_tax": 9000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Phân phối, cung cấp hàng hóa",
+                "formula": "600,000,000 × 1.0% = 6,000,000 VND",
+                "value": 6000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — PP tỷ lệ % doanh thu | Phân phối, cung cấp hàng hóa — TNCN 0.5%",
+                "formula": "600,000,000 × 0.5% = 3,000,000 VND",
+                "value": 3000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % TNCN theo nhóm ngành nghề (PP doanh thu)"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 600 triệu đồng | GTGT: 6.00 triệu (1.0%) | TNCN: 3.00 triệu (0.5% × toàn bộ doanh thu) | Tổng: 9.00 triệu đồng."
+          }
+        }
+      ],
+      "latency_ms": 10473,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 12 tham chiếu pháp luật + 3 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Khoản 2",
+            "Điều 4",
+            "Nghị định 68"
+          ],
+          "source_count": 3
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd', 'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd",
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "calculate_tax_hkd",
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": null,
+        "reason": "N/A — chưa có key_facts (cần annotate)",
+        "details": {}
+      }
+    },
+    {
+      "question_id": 2,
+      "question": "Doanh thu của quán phở một năm bao nhiêu thì được miễn không phải nộp thuế GTGT và TNCN?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Quán phở của bạn sẽ được miễn thuế GTGT và TNCN nếu có doanh thu từ 100 triệu đồng trở xuống trong một năm.\n\nTheo Nghị định 68/2026/NĐ-CP, hộ kinh doanh có doanh thu từ 500 triệu đồng trở xuống trong một năm sẽ được miễn thuế GTGT và TNCN.\n\n**Lưu ý:** Nghị định 68/2026/NĐ-CP có hiệu lực từ ngày 05/03/2026.",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 100000000
+          },
+          "result": {
+            "annual_revenue": 100000000,
+            "is_exempt": true,
+            "tax_method": "none",
+            "tax_method_desc": "Miễn — không áp dụng phương pháp nào",
+            "filing_frequency": "exempt",
+            "filing_desc": "Miễn kê khai — doanh thu ≤ 500 triệu",
+            "einvoice_required": false,
+            "einvoice_desc": "Không dùng HĐĐT (doanh thu < 500 triệu)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Miễn thuế GTGT và TNCN",
+                "condition": "Doanh thu 100.0 triệu ≤ 500 triệu/năm",
+                "result": "✅ Miễn — không phải nộp thuế GTGT và TNCN",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng doanh thu miễn thuế"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 100 triệu đồng/năm",
+                "result": "🧾 Không dùng HĐĐT (doanh thu < 500 triệu)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 100 triệu ≤ 500 triệu → MIỄN THUẾ GTGT và TNCN."
+          }
+        }
+      ],
+      "latency_ms": 2922,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 1/2 key facts, thiếu: ['500.000.000 VND']",
+        "details": {
+          "matched": [
+            "500 triệu"
+          ],
+          "missing": [
+            "500.000.000 VND"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 3,
+      "question": "Tiệm làm tóc của tôi doanh thu 1 tỷ/năm thì nộp thuế GTGT và TNCN theo tỷ lệ bao nhiêu phần trăm?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Tiệm làm tóc của bạn với doanh thu 1 tỷ đồng/năm sẽ nộp thuế GTGT và TNCN như sau:\n\n*   **Thuế GTGT:** 5% trên doanh thu.\n    *   Số thuế GTGT phải nộp: 1.000.000.000 VNĐ × 5% = 50.000.000 VNĐ.\n    *   Căn cứ: Theo Nghị định 68/2026/NĐ-CP, tỷ lệ % tính thuế GTGT đối với dịch vụ là 5%.\n*   **Thuế TNCN:** 2% trên doanh thu.\n    *   Số thuế TNCN phải nộp: 1.000.000.000 VNĐ × 2% = 20.000.000 VNĐ.\n    *   Căn cứ: Theo Nghị định 68/2026/NĐ-CP, tỷ lệ % TNCN đối với dịch vụ theo phương pháp tỷ lệ % doanh thu là 2%.\n\nTổng số thuế phải nộp là 70.000.000 VNĐ.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "annual_revenue": 1000000000,
+            "business_category": "services"
+          },
+          "result": {
+            "annual_revenue": 1000000000,
+            "business_category": "services",
+            "exempt": false,
+            "gtgt_rate": 0.05,
+            "gtgt_payable": 50000000,
+            "tncn_rate": 0.02,
+            "tncn_base": 1000000000,
+            "tncn_payable": 20000000,
+            "total_tax": 70000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Dịch vụ, xây dựng không bao thầu nguyên vật liệu",
+                "formula": "1,000,000,000 × 5.0% = 50,000,000 VND",
+                "value": 50000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — PP tỷ lệ % doanh thu | Dịch vụ — TNCN 2%",
+                "formula": "1,000,000,000 × 2.0% = 20,000,000 VND",
+                "value": 20000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % TNCN theo nhóm ngành nghề (PP doanh thu)"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 1000 triệu đồng | GTGT: 50.00 triệu (5.0%) | TNCN: 20.00 triệu (2.0% × toàn bộ doanh thu) | Tổng: 70.00 triệu đồng."
+          }
+        }
+      ],
+      "latency_ms": 3899,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tax_hkd, 1/1 ground-truth numbers khớp",
+        "details": {
+          "tool": "calculate_tax_hkd",
+          "matched": [
+            70000000
+          ],
+          "gt": [
+            70000000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 2 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 2
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd"
+          ],
+          "matching": [
+            "calculate_tax_hkd"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 3/6 key facts, thiếu: ['70 triệu', '50 triệu', '20 triệu']",
+        "details": {
+          "matched": [
+            "5%",
+            "2%",
+            "70.000.000"
+          ],
+          "missing": [
+            "70 triệu",
+            "50 triệu",
+            "20 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 4,
+      "question": "Tôi muốn nộp thuế theo lợi nhuận (doanh thu trừ chi phí) thay vì nộp theo % doanh thu thì có được không?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Để xác định bạn có được nộp thuế theo phương pháp lợi nhuận hay không, tôi cần biết doanh thu ước tính trong năm của bạn là bao nhiêu.\n\nBạn có thể cung cấp doanh thu dự kiến của hộ kinh doanh trong năm để tôi kiểm tra nhé.",
+      "tool_calls": [],
+      "latency_ms": 1739,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.3,
+        "reason": "PARTIAL — answer có từ khóa pháp lý nhưng thiếu citation cụ thể",
+        "details": {
+          "keyword_count": 2
+        }
+      },
+      "tier3": {
+        "score": 0.3,
+        "reason": "PARTIAL — không gọi tool nào nhưng có answer",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": null,
+        "reason": "N/A — chưa có key_facts (cần annotate)",
+        "details": {}
+      }
+    },
+    {
+      "question_id": 5,
+      "question": "Tôi mở 3 cửa hàng ở 3 quận khác nhau thì cái mức miễn thuế 500 triệu tính gộp hay tính cho từng cửa hàng?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "hard",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Mức doanh thu 500 triệu đồng/năm để xác định cá nhân kinh doanh có phải nộp thuế GTGT, TNCN hay không được tính gộp cho tổng doanh thu của cá nhân kinh doanh, không phải tính cho từng cửa hàng riêng lẻ.\n\nTheo Nghị định 68/2026/NĐ-CP, nếu tổng doanh thu từ tất cả các cửa hàng của bạn trong năm vượt quá 500 triệu đồng, bạn sẽ phải nộp thuế GTGT và thuế TNCN.\n\n**Căn cứ pháp lý:**\n*   Nghị định 68/2026/NĐ-CP (có hiệu lực từ 05/03/2026).",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 1000000000
+          },
+          "result": {
+            "annual_revenue": 1000000000,
+            "is_exempt": false,
+            "tax_method": "either",
+            "tax_method_desc": "Được tự chọn: tỷ lệ% doanh thu [TNCN = (DT−500M) × 15%] HOẶC lợi nhuận [TNCN = (DT−Chi phí) × 15%] — ổn định ≥ 2 năm",
+            "filing_frequency": "quarterly",
+            "filing_desc": "Kê khai thuế GTGT theo quý",
+            "einvoice_required": true,
+            "einvoice_desc": "Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Phương pháp tính thuế TNCN",
+                "condition": "Doanh thu 500 triệu – 3 tỷ",
+                "result": "⚖️ Tự chọn: PP tỷ lệ% (15% × (DT−500M)) hoặc PP lợi nhuận (15% × (DT−CP))",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Lựa chọn phương pháp tính thuế TNCN HKD"
+                }
+              },
+              {
+                "rule": "Kỳ kê khai thuế GTGT",
+                "condition": "Doanh thu 1.00 tỷ/năm",
+                "result": "📅 Kê khai thuế GTGT theo quý",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng kỳ kê khai thuế GTGT"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 1000 triệu đồng/năm",
+                "result": "🧾 Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [
+              "Doanh thu 500M–3B: nếu chọn phương pháp lợi nhuận, phải duy trì ổn định tối thiểu 2 năm liên tiếp."
+            ],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 1000 triệu/năm:\n• Phương pháp thuế TNCN: tỷ lệ% hoặc lợi nhuận (tự chọn)\n• Kê khai GTGT: theo quý\n• HĐĐT: bắt buộc"
+          }
+        }
+      ],
+      "latency_ms": 4776,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "500 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 6,
+      "question": "Hộ kinh doanh của tôi doanh thu 4 tỷ thì bắt buộc phải nộp thuế theo lợi nhuận đúng không?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Với doanh thu 4 tỷ đồng/năm, hộ kinh doanh của bạn **bắt buộc phải nộp thuế theo phương pháp lợi nhuận**.\n\nCụ thể:\n*   **Phương pháp tính thuế TNCN:** Bắt buộc áp dụng phương pháp lợi nhuận, với thuế suất TNCN là 17% trên lợi nhuận (Doanh thu - Chi phí hợp lý).\n*   **Kê khai thuế GTGT:** Theo quý.\n*   **Hóa đơn điện tử:** Bắt buộc sử dụng hóa đơn điện tử do doanh thu trên 1 tỷ đồng.\n\n**Căn cứ pháp lý:** Theo Nghị định 68/2026/NĐ-CP, có hiệu lực từ ngày 05/03/2026.\n\n**Lưu ý:** Khi áp dụng phương pháp lợi nhuận, bạn cần có sổ sách kế toán đầy đủ và các chi phí phải được cơ quan thuế công nhận là hợp lý, hợp lệ.",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 4000000000
+          },
+          "result": {
+            "annual_revenue": 4000000000,
+            "is_exempt": false,
+            "tax_method": "profit",
+            "tax_method_desc": "Bắt buộc phương pháp lợi nhuận — thuế suất TNCN 17%",
+            "filing_frequency": "quarterly",
+            "filing_desc": "Kê khai thuế GTGT theo quý",
+            "einvoice_required": true,
+            "einvoice_desc": "Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Phương pháp tính thuế TNCN (bắt buộc)",
+                "condition": "Doanh thu > 3 tỷ đồng",
+                "result": "⚠️ Bắt buộc PP lợi nhuận — TNCN = (DT−CP) × 17%",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Bắt buộc phương pháp lợi nhuận HKD >3 tỷ"
+                }
+              },
+              {
+                "rule": "Kỳ kê khai thuế GTGT",
+                "condition": "Doanh thu 4.00 tỷ/năm",
+                "result": "📅 Kê khai thuế GTGT theo quý",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng kỳ kê khai thuế GTGT"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 4000 triệu đồng/năm",
+                "result": "🧾 Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [
+              "Doanh thu > 3 tỷ: bắt buộc PP lợi nhuận — cần sổ sách kế toán đầy đủ, chi phí phải được cơ quan thuế công nhận."
+            ],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 4000 triệu/năm:\n• Phương pháp thuế TNCN: lợi nhuận (bắt buộc)\n• Kê khai GTGT: theo quý\n• HĐĐT: bắt buộc"
+          }
+        }
+      ],
+      "latency_ms": 3396,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['3 tỷ']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "3 tỷ"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 7,
+      "question": "Tôi cho thuê nhà nguyên căn 1 tháng 30 triệu thì đóng thuế như thế nào theo luật mới?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 1759,
+      "error": "'NoneType' object has no attribute 'parts'",
+      "tier1": {
+        "score": 0.0,
+        "reason": "FAIL — agent không gọi calculator/rule-engine tool nào",
+        "details": {
+          "tools_called": []
+        }
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "miễn",
+            "500 triệu",
+            "5%",
+            "360 triệu"
+          ]
+        }
+      }
+    }
+  ]
+}

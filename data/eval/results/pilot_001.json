@@ -1,0 +1,1676 @@
+{
+  "report": {
+    "summary": {
+      "total": 10,
+      "passed": 7,
+      "pass_rate": 0.7,
+      "avg_score": 0.725,
+      "errors": 1,
+      "annotated": 10,
+      "verified": 10,
+      "timestamp": "2026-03-14T16:18:50.530494"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 2,
+        "avg": 1.0,
+        "note": "Ground-truth check khi có expected_value; fallback tool-output check"
+      },
+      "tier2_citation": {
+        "applicable": 10,
+        "avg": 0.85,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 10,
+        "avg": 0.85,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 8,
+        "avg": 0.312,
+        "note": "Key facts check (N/A cho 2 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế hộ kinh doanh": {
+        "total": 10,
+        "passed": 7,
+        "pass_rate": 0.7,
+        "avg_score": 0.725
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 3,
+        "avg_score": 0.528
+      },
+      "hard": {
+        "count": 1,
+        "avg_score": 1.0
+      },
+      "medium": {
+        "count": 6,
+        "avg_score": 0.778
+      }
+    },
+    "latency_ms": {
+      "min": 3061,
+      "max": 22006,
+      "avg": 8876,
+      "p50": 4380,
+      "p95": 19924
+    },
+    "failed_questions": [
+      {
+        "id": 8,
+        "question": "Tiệm vàng của tôi doanh thu trên 50 tỷ thì thuế suất TNCN áp dụng là bao nhiêu p",
+        "score": 0.0,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      },
+      {
+        "id": 9,
+        "question": "Đang nộp thuế theo lợi nhuận (doanh thu trên 3 tỷ), sang năm tôi muốn đổi lại nộ",
+        "score": 0.5,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — có 11 sources nhưng answer không trích dẫn rõ ràng",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "error": null
+      },
+      {
+        "id": 10,
+        "question": "Hộ kinh doanh nộp thuế theo tỷ lệ % doanh thu (dưới 3 tỷ) thì phải mở những loại",
+        "score": 0.667,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PASS — 10 tham chiếu pháp luật + 10 sources",
+        "t3": "PASS — dùng {'search_legal_docs', 'get_article'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 1,
+      "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu gì?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Kể từ năm 2026, việc tính thuế đối với hộ kinh doanh (HKD) như cửa hàng tạp hóa của bạn sẽ không còn áp dụng phương pháp thuế khoán truyền thống nữa mà thay vào đó là các phương pháp tính thuế mới theo Nghị định 68/2026/NĐ-CP, có hiệu lực từ ngày 05/03/2026.\n\nCụ thể, có hai phương pháp chính để tính thuế cho hộ kinh doanh:\n\n1.  **Phương pháp tính thuế theo doanh thu (phương pháp khoán mới):**\n    *   Áp dụng cho HKD có doanh thu từ hoạt động sản xuất, kinh doanh trong năm **dưới 3 tỷ đồng**.\n    *   HKD có doanh thu từ 500 triệu đồng đến dưới 3 tỷ đồng có thể tự nguyện lựa chọn phương pháp này hoặc phương pháp kê khai.\n    *   Bạn sẽ được **miễn thuế GTGT và thuế TNCN** nếu có doanh thu từ kinh doanh hàng hóa, dịch vụ **dưới 500 triệu đồng/năm**.\n    *   Nếu doanh thu trên 500 triệu đồng/năm, thuế sẽ được tính dựa trên doanh thu thực tế phát sinh, áp dụng tỷ lệ thuế GTGT và TNCN theo ngành nghề. Đối với kinh doanh hàng hóa (tạp hóa), tỷ lệ thuế GTGT là 1% và thuế TNCN là 0.5%.\n\n2.  **Phương pháp tính thuế theo lợi nhuận (phương pháp kê khai):**\n    *   Áp dụng bắt buộc đối với HKD có doanh thu từ hoạt động sản xuất, kinh doanh trong năm **trên 3 tỷ đồng**.\n    *   HKD có doanh thu từ 500 triệu đồng đến dưới 3 tỷ đồng cũng có thể tự nguyện lựa chọn phương pháp này.\n    *   Thuế sẽ được tính dựa trên doanh thu trừ đi các chi phí hợp lý, hợp lệ.\n\n**Căn cứ pháp lý:** Nghị định 68/2026/NĐ-CP quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.\n\nĐể biết chính xác số thuế phải nộp, bạn cần xác định doanh thu dự kiến trong năm của cửa hàng tạp hóa. Nếu bạn cung cấp doanh thu ước tính, tôi có thể giúp bạn tính toán số thuế GTGT và TNCN theo phương pháp doanh thu.",
+      "tool_calls": [
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "query_date": "2026-03-14",
+            "doc_id": "68_2026_NDCP"
+          },
+          "result": {
+            "doc_id": "68_2026_NDCP",
+            "found": true,
+            "doc_number": "68/2026/NĐ-CP",
+            "doc_type": "Nghị định",
+            "title": "Quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+            "status": "valid",
+            "valid_from": "2026-03-05",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [],
+            "message": "Văn bản đang có hiệu lực tại 2026-03-14."
+          }
+        }
+      ],
+      "latency_ms": 8949,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 0.5,
+        "reason": "PARTIAL — dùng {'check_doc_validity'} thay vì {'calculate_tax_hkd_profit', 'calculate_tax_hkd'} cho topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "check_doc_validity"
+          ],
+          "expected": [
+            "calculate_tax_hkd",
+            "calculate_tax_hkd_profit",
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": null,
+        "reason": "N/A — chưa có key_facts (cần annotate)",
+        "details": {}
+      }
+    },
+    {
+      "question_id": 2,
+      "question": "Doanh thu của quán phở một năm bao nhiêu thì được miễn không phải nộp thuế GTGT và TNCN?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Một quán phở sẽ được miễn thuế giá trị gia tăng (GTGT) và thuế thu nhập cá nhân (TNCN) nếu có doanh thu từ hoạt động sản xuất, kinh doanh trong năm dương lịch **không vượt quá 500 triệu đồng**.\n\nTheo Nghị định 68/2026/NĐ-CP, nếu doanh thu của quán phở là 0 đồng (tức là không có doanh thu hoặc doanh thu dưới 500 triệu đồng), quán sẽ được miễn thuế GTGT và TNCN.\n\n**Căn cứ pháp lý:**\n*   Nghị định 68/2026/NĐ-CP (Ngưỡng doanh thu miễn thuế).",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 0
+          },
+          "result": {
+            "annual_revenue": 0,
+            "is_exempt": true,
+            "tax_method": "none",
+            "tax_method_desc": "Miễn — không áp dụng phương pháp nào",
+            "filing_frequency": "exempt",
+            "filing_desc": "Miễn kê khai — doanh thu ≤ 500 triệu",
+            "einvoice_required": false,
+            "einvoice_desc": "Không dùng HĐĐT (doanh thu < 500 triệu)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Miễn thuế GTGT và TNCN",
+                "condition": "Doanh thu 0.0 triệu ≤ 500 triệu/năm",
+                "result": "✅ Miễn — không phải nộp thuế GTGT và TNCN",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng doanh thu miễn thuế"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 0 triệu đồng/năm",
+                "result": "🧾 Không dùng HĐĐT (doanh thu < 500 triệu)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 0 triệu ≤ 500 triệu → MIỄN THUẾ GTGT và TNCN."
+          }
+        }
+      ],
+      "latency_ms": 3061,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 1/2 key facts, thiếu: ['500.000.000 VND']",
+        "details": {
+          "matched": [
+            "500 triệu"
+          ],
+          "missing": [
+            "500.000.000 VND"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 3,
+      "question": "Tiệm làm tóc của tôi doanh thu 1 tỷ/năm thì nộp thuế GTGT và TNCN theo tỷ lệ bao nhiêu phần trăm?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Đối với tiệm làm tóc có doanh thu 1 tỷ đồng/năm, bạn sẽ nộp thuế GTGT và thuế TNCN theo tỷ lệ như sau:\n\n*   **Thuế GTGT:** 5% trên doanh thu.\n    *   Số thuế GTGT phải nộp: 1.000.000.000 VND × 5% = 50.000.000 VND.\n*   **Thuế TNCN:** 2% trên doanh thu.\n    *   Số thuế TNCN phải nộp: 1.000.000.000 VND × 2% = 20.000.000 VND.\n\nTổng số thuế phải nộp là 70.000.000 VND.\n\n**Căn cứ pháp lý:**\nTheo Nghị định 68/2026/NĐ-CP về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "annual_revenue": 1000000000,
+            "business_category": "services"
+          },
+          "result": {
+            "annual_revenue": 1000000000,
+            "business_category": "services",
+            "exempt": false,
+            "gtgt_rate": 0.05,
+            "gtgt_payable": 50000000,
+            "tncn_rate": 0.02,
+            "tncn_base": 1000000000,
+            "tncn_payable": 20000000,
+            "total_tax": 70000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Dịch vụ, xây dựng không bao thầu nguyên vật liệu",
+                "formula": "1,000,000,000 × 5.0% = 50,000,000 VND",
+                "value": 50000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — PP tỷ lệ % doanh thu | Dịch vụ — TNCN 2%",
+                "formula": "1,000,000,000 × 2.0% = 20,000,000 VND",
+                "value": 20000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % TNCN theo nhóm ngành nghề (PP doanh thu)"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 1000 triệu đồng | GTGT: 50.00 triệu (5.0%) | TNCN: 20.00 triệu (2.0% × toàn bộ doanh thu) | Tổng: 70.00 triệu đồng."
+          }
+        }
+      ],
+      "latency_ms": 3286,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tax_hkd, 1/1 ground-truth numbers khớp",
+        "details": {
+          "tool": "calculate_tax_hkd",
+          "matched": [
+            70000000
+          ],
+          "gt": [
+            70000000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 2 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 2
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd"
+          ],
+          "matching": [
+            "calculate_tax_hkd"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 3/7 key facts, thiếu: ['15%', '50 triệu', '75 triệu', '125 triệu']",
+        "details": {
+          "matched": [
+            "5%",
+            "2%",
+            "70.000.000 VND"
+          ],
+          "missing": [
+            "15%",
+            "50 triệu",
+            "75 triệu",
+            "125 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 4,
+      "question": "Tôi muốn nộp thuế theo lợi nhuận (doanh thu trừ chi phí) thay vì nộp theo % doanh thu thì có được không?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Bạn hoàn toàn có thể lựa chọn nộp thuế theo phương pháp lợi nhuận (doanh thu trừ chi phí) thay vì phương pháp tỷ lệ % doanh thu, nếu doanh thu của bạn nằm trong khoảng từ 500 triệu đồng đến 3 tỷ đồng mỗi năm.\n\n**Căn cứ pháp lý:**\n\n*   Theo Nghị định 68/2026/NĐ-CP, đối với hộ kinh doanh có doanh thu từ 500 triệu đồng đến 3 tỷ đồng/năm, bạn có quyền tự lựa chọn phương pháp tính thuế TNCN:\n    *   Phương pháp tỷ lệ % doanh thu: Thuế TNCN = (Doanh thu - 500 triệu đồng) × 15%.\n    *   Phương pháp lợi nhuận: Thuế TNCN = (Doanh thu - Chi phí hợp lý) × 15%.\n\n**Lưu ý quan trọng:**\n\n*   Nếu bạn chọn phương pháp lợi nhuận, bạn phải duy trì ổn định phương pháp này tối thiểu 2 năm liên tiếp.",
+      "tool_calls": [
+        {
+          "tool": "evaluate_tax_obligation",
+          "args": {
+            "annual_revenue": 1000000000
+          },
+          "result": {
+            "annual_revenue": 1000000000,
+            "is_exempt": false,
+            "tax_method": "either",
+            "tax_method_desc": "Được tự chọn: tỷ lệ% doanh thu [TNCN = (DT−500M) × 15%] HOẶC lợi nhuận [TNCN = (DT−Chi phí) × 15%] — ổn định ≥ 2 năm",
+            "filing_frequency": "quarterly",
+            "filing_desc": "Kê khai thuế GTGT theo quý",
+            "einvoice_required": true,
+            "einvoice_desc": "Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+            "tmdt_withholding": false,
+            "obligations": [
+              {
+                "rule": "Phương pháp tính thuế TNCN",
+                "condition": "Doanh thu 500 triệu – 3 tỷ",
+                "result": "⚖️ Tự chọn: PP tỷ lệ% (15% × (DT−500M)) hoặc PP lợi nhuận (15% × (DT−CP))",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Lựa chọn phương pháp tính thuế TNCN HKD"
+                }
+              },
+              {
+                "rule": "Kỳ kê khai thuế GTGT",
+                "condition": "Doanh thu 1.00 tỷ/năm",
+                "result": "📅 Kê khai thuế GTGT theo quý",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng kỳ kê khai thuế GTGT"
+                }
+              },
+              {
+                "rule": "Hóa đơn điện tử",
+                "condition": "Doanh thu 1000 triệu đồng/năm",
+                "result": "🧾 Bắt buộc hóa đơn điện tử (doanh thu ≥ 1 tỷ)",
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "effective_date": "2026-03-05",
+                  "note": "Yêu cầu sử dụng hóa đơn điện tử"
+                }
+              }
+            ],
+            "notes": [
+              "Doanh thu 500M–3B: nếu chọn phương pháp lợi nhuận, phải duy trì ổn định tối thiểu 2 năm liên tiếp."
+            ],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "doc_number": "68/2026/NĐ-CP",
+              "effective_date": "2026-03-05",
+              "note": "Đánh giá nghĩa vụ thuế tổng hợp"
+            },
+            "summary": "Doanh thu 1000 triệu/năm:\n• Phương pháp thuế TNCN: tỷ lệ% hoặc lợi nhuận (tự chọn)\n• Kê khai GTGT: theo quý\n• HĐĐT: bắt buộc"
+          }
+        }
+      ],
+      "latency_ms": 3694,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 1 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 1
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'evaluate_tax_obligation'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "evaluate_tax_obligation"
+          ],
+          "matching": [
+            "evaluate_tax_obligation"
+          ]
+        }
+      },
+      "tier4": {
+        "score": null,
+        "reason": "N/A — chưa có key_facts (cần annotate)",
+        "details": {}
+      }
+    },
+    {
+      "question_id": 5,
+      "question": "Tôi mở 3 cửa hàng ở 3 quận khác nhau thì cái mức miễn thuế 500 triệu tính gộp hay tính cho từng cửa hàng?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "hard",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Theo quy định hiện hành, mức doanh thu 500 triệu đồng/năm để xác định đối tượng không phải nộp thuế giá trị gia tăng và thuế thu nhập cá nhân được tính gộp cho **tổng doanh thu của hộ kinh doanh** từ tất cả các hoạt động sản xuất, kinh doanh, không phải tính riêng cho từng cửa hàng.\n\nĐiều này có nghĩa là, nếu bạn mở 3 cửa hàng nhưng tất cả đều thuộc cùng một hộ kinh doanh, thì tổng doanh thu của cả 3 cửa hàng trong năm sẽ được cộng lại để so sánh với ngưỡng 500 triệu đồng.\n\n**Căn cứ pháp lý:**\n\n*   Khoản 1 Điều 3 Nghị định 68/2026/NĐ-CP quy định: \"Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế giá trị gia tăng.\"\n*   Điểm a Khoản 1 Điều 8 Nghị định 68/2026/NĐ-CP cũng nêu rõ: \"Trường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ từ 500 triệu đồng trở xuống thì hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế phát sinh trong năm với cơ quan thuế...\"\n\nCác quy định này đều đề cập đến \"doanh thu năm\" của \"hộ kinh doanh, cá nhân kinh doanh\" như một chủ thể duy nhất, không phân biệt theo số lượng địa điểm kinh doanh.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh nhiều địa điểm doanh thu tính gộp miễn thuế"
+          },
+          "result": {
+            "query": "hộ kinh doanh nhiều địa điểm doanh thu tính gộp miễn thuế",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "snippet": "Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu",
+                "snippet": "Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_2_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng > Khoản 1",
+                "snippet": "Người nộp thuế là hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 2: Đối tượng áp dụng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_I_dieu_2_khoan_1_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 2: Đối tượng áp dụng > Khoản 1",
+                "snippet": "Người nộp thuế là hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 2: Đối tượng áp dụng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2",
+                "snippet": "Khai thuế, tính thuế đối với các loại thuế khác Hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế phải nộp theo quy định của pháp luật về thuế và thực hiện khai thuế, nộp thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh.",
+                "score": 0.010769,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "doanh thu tính gộp hộ kinh doanh nhiều địa điểm ngưỡng miễn thuế 500 triệu"
+          },
+          "result": {
+            "query": "doanh thu tính gộp hộ kinh doanh nhiều địa điểm ngưỡng miễn thuế 500 triệu",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_9_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 2",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh mới bắt đầu hoạt động sản xuất, kinh doanh, khi có doanh thu lũy kế trên 500 triệu đồng thì thực hiện khai thuế theo quý theo quy định tại Điều 10 Nghị định này kể từ quý phát sinh doanh thu trên 500 triệu đồng.",
+                "score": 0.015887,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_1_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 1",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế giá trị gia tăng.",
+                "score": 0.015516,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "So_Tay_HKD_chunk_11",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 11",
+                "snippet": "STT | NỘI DUNG\nI | Bước 1: Xác định phương pháp tính thuế\n1 | - GTG Phương pháp tính - TNC thuế GTGT, TNCN năm | T: tỷ lệ % trên doanh thu. N: thuế suất nhân (x) (doanh thu – 500 triệu đồng)\nSTT | NỘI DUNG\n2 | Được tính Trườ có n áp d một điểm theo Doanh thu được trừ trừ k để xác định thuế trong TNCN toàn Trườ hoặc chọn nhân vào ngàn khác triệu | trừ 500 triệu đồng vào doanh thu thuế thu nhập cá n",
+                "score": 0.015445,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 11"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_9_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 3",
+                "snippet": "Từ năm tiếp theo, hộ kinh doanh, cá nhân kinh doanh nếu có doanh thu thực tế phát sinh từ 500 triệu đồng trở xuống thực hiện thông báo doanh thu theo quy định tại Điều 8 Nghị định này; trường hợp có doanh thu thực tế phát sinh trên 500 triệu đồng thì thực hiện khai thuế theo quy định tại Điều 10 Nghị định này.",
+                "score": 0.015397,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_1_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm a",
+                "snippet": "Khai thuế, tính thuế giá trị gia tăng, thuế thu nhập cá nhân\nTrường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ từ 500 triệu đồng trở xuống thì hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế phát sinh trong năm với cơ quan thuế chậm nhất là ngày 31 tháng 01 của năm dương lịch tiếp theo. Trường hợp hộ kinh",
+                "score": 0.014993,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 22006,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 8 tham chiếu pháp luật + 10 sources",
+        "details": {
+          "legal_refs": [
+            "Khoản 1",
+            "Điều 3",
+            "Nghị định 68",
+            "NĐ-CP",
+            "Khoản 1"
+          ],
+          "source_count": 10
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "500 triệu"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 6,
+      "question": "Hộ kinh doanh của tôi doanh thu 4 tỷ thì bắt buộc phải nộp thuế theo lợi nhuận đúng không?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Đúng vậy, hộ kinh doanh của bạn có doanh thu 4 tỷ đồng trong năm thì bắt buộc phải nộp thuế thu nhập cá nhân (TNCN) theo phương pháp lợi nhuận.\n\n**Căn cứ pháp lý:**\nTheo Điểm d Khoản 5 Điều 4 Nghị định 68/2026/NĐ-CP, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng. Phương pháp này là phương pháp tính thuế dựa trên lợi nhuận.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh doanh thu trên 3 tỷ phương pháp tính thuế"
+          },
+          "result": {
+            "query": "hộ kinh doanh doanh thu trên 3 tỷ phương pháp tính thuế",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_d_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm d",
+                "snippet": "Phương pháp tính thuế\nTrường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng. Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu ",
+                "score": 0.016029,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu",
+                "snippet": "Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu",
+                "score": 0.015701,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "snippet": "Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "score": 0.015221,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a",
+                "snippet": "Phương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                "score": 0.014698,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm trên 500 triệu đồng thuộc đối tượng chịu thuế giá trị gia tăng và áp dụng phương pháp tính trực tiếp theo doanh thu bằng tỷ lệ % nhân (x) doanh thu. Tỷ lệ % và doanh thu tính thuế thực hiện theo quy định của Luật Thuế giá trị gia tăng số 48/2024/QH15 và các văn bản hướng dẫn thi hành.",
+                "score": 0.014277,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 4380,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 4 tham chiếu pháp luật + 5 sources",
+        "details": {
+          "legal_refs": [
+            "Khoản 5",
+            "Điều 4",
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 5
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "3 tỷ"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 7,
+      "question": "Tôi cho thuê nhà nguyên căn 1 tháng 30 triệu thì đóng thuế như thế nào theo luật mới?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "individual",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Bạn cho thuê nhà nguyên căn với doanh thu 30 triệu đồng/tháng, tương đương 360 triệu đồng/năm, sẽ được miễn thuế Thu nhập cá nhân (TNCN) nhưng vẫn phải nộp thuế Giá trị gia tăng (GTGT).\n\nCụ thể:\n*   **Thuế GTGT:** 18.000.000 VND (5.0% của 360.000.000 VND).\n*   **Thuế TNCN:** Miễn thuế do doanh thu năm của bạn là 360.000.000 VND, thấp hơn ngưỡng 500.000.000 VND/năm.\n\nTổng số thuế bạn phải nộp là 18.000.000 VND.\n\nCăn cứ pháp lý: Theo Nghị định 68/2026/NĐ-CP về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.",
+      "tool_calls": [
+        {
+          "tool": "calculate_tax_hkd",
+          "args": {
+            "business_category": "real_estate",
+            "annual_revenue": 360000000
+          },
+          "result": {
+            "annual_revenue": 360000000,
+            "business_category": "real_estate",
+            "exempt": true,
+            "gtgt_rate": 0.05,
+            "gtgt_payable": 18000000,
+            "tncn_rate": 0.0,
+            "tncn_base": 0,
+            "tncn_payable": 0,
+            "total_tax": 18000000,
+            "breakdown": [
+              {
+                "tax_type": "GTGT",
+                "description": "Thuế GTGT — Cho thuê bất động sản",
+                "formula": "360,000,000 × 5.0% = 18,000,000 VND",
+                "value": 18000000,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề"
+                }
+              },
+              {
+                "tax_type": "TNCN",
+                "description": "Thuế TNCN — miễn vì doanh thu ≤500 triệu/năm",
+                "formula": "Doanh thu 360,000,000 ≤ 500,000,000 → miễn",
+                "value": 0,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "68/2026/NĐ-CP",
+                  "title": "Nghị định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                  "effective_date": "2026-03-05",
+                  "note": "Ngưỡng doanh thu miễn thuế TNCN: 500 triệu đồng/năm"
+                }
+              }
+            ],
+            "warnings": [],
+            "summary": "Doanh thu 360 triệu đồng ≤ 500 triệu → miễn thuế TNCN. Chỉ nộp GTGT: 18.00 triệu đồng (5.0% × doanh thu)."
+          }
+        }
+      ],
+      "latency_ms": 3733,
+      "error": null,
+      "tier1": {
+        "score": 1.0,
+        "reason": "PASS — gọi calculate_tax_hkd, số từ tool output xuất hiện trong answer",
+        "details": {
+          "tool": "calculate_tax_hkd",
+          "matched": [
+            18000000,
+            18000000
+          ]
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 2 tham chiếu pháp luật + 2 sources",
+        "details": {
+          "legal_refs": [
+            "Nghị định 68",
+            "NĐ-CP"
+          ],
+          "source_count": 2
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'calculate_tax_hkd'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "calculate_tax_hkd"
+          ],
+          "matching": [
+            "calculate_tax_hkd"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 1/5 key facts, thiếu: ['500 triệu', '10%', '5%', '10']",
+        "details": {
+          "matched": [
+            "miễn"
+          ],
+          "missing": [
+            "500 triệu",
+            "10%",
+            "5%",
+            "10"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 8,
+      "question": "Tiệm vàng của tôi doanh thu trên 50 tỷ thì thuế suất TNCN áp dụng là bao nhiêu phần trăm?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 3966,
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "20%",
+            "50 tỷ",
+            "0.5%",
+            "0.5"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 9,
+      "question": "Đang nộp thuế theo lợi nhuận (doanh thu trên 3 tỷ), sang năm tôi muốn đổi lại nộp theo % doanh thu thì có được phép không?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Xin lỗi, tôi cần thêm thông tin để trả lời câu hỏi này đầy đủ. Vui lòng thử hỏi chi tiết hơn.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "phương pháp tính thuế hộ kinh doanh"
+          },
+          "result": {
+            "query": "phương pháp tính thuế hộ kinh doanh",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5",
+                "snippet": "Phương pháp tính thuế",
+                "score": 0.015823,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_198_2025_QH15_chuong_IV_dieu_10_khoan_6_chunk",
+                "doc_id": "198_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị quyết 198/2025/QH15 > Chương IV > Điều 10: Hỗ trợ thuế, phí, lệ phí > Khoản 6",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh không áp dụng phương pháp khoán thuế từ ngày 01 tháng 01 năm 2026. Hộ kinh doanh, cá nhân kinh doanh nộp thuế theo pháp luật về quản lý thuế.",
+                "score": 0.014621,
+                "citation": {
+                  "doc_id": "198_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 198/2025/QH15 > Chương IV > Điều 10: Hỗ trợ thuế, phí, lệ phí > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm trên 500 triệu đồng thuộc đối tượng chịu thuế giá trị gia tăng và áp dụng phương pháp tính trực tiếp theo doanh thu bằng tỷ lệ % nhân (x) doanh thu. Tỷ lệ % và doanh thu tính thuế thực hiện theo quy định của Luật Thuế giá trị gia tăng số 48/2024/QH15 và các văn bản hướng dẫn thi hành.",
+                "score": 0.014502,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "snippet": "Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2",
+                "snippet": "Khai thuế, tính thuế đối với các loại thuế khác Hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế phải nộp theo quy định của pháp luật về thuế và thực hiện khai thuế, nộp thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh.",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "get_article_with_amendments",
+          "args": {
+            "article_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5"
+          },
+          "result": {
+            "article_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5",
+            "found": false,
+            "amendment_warnings": [],
+            "is_fully_resolved": false
+          }
+        },
+        {
+          "tool": "get_article_with_amendments",
+          "args": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6"
+          },
+          "result": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6",
+            "found": true,
+            "doc_id": "152_2025_TTBTC",
+            "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+            "content": "",
+            "full_text": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế\nChứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp ...",
+            "clause_count": 2,
+            "point_count": 0,
+            "clauses": [
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_1",
+                "index": "1",
+                "content": "Chứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế."
+              },
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2",
+                "index": "2",
+                "content": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)"
+              }
+            ],
+            "citation": {
+              "doc_id": "152_2025_TTBTC",
+              "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+            },
+            "amendment_warnings": [],
+            "has_amendments": false,
+            "is_fully_resolved": true,
+            "amendment_summary": ""
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "phương pháp tính thuế hộ kinh doanh doanh thu"
+          },
+          "result": {
+            "query": "phương pháp tính thuế hộ kinh doanh doanh thu",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm trên 500 triệu đồng thuộc đối tượng chịu thuế giá trị gia tăng và áp dụng phương pháp tính trực tiếp theo doanh thu bằng tỷ lệ % nhân (x) doanh thu. Tỷ lệ % và doanh thu tính thuế thực hiện theo quy định của Luật Thuế giá trị gia tăng số 48/2024/QH15 và các văn bản hướng dẫn thi hành.",
+                "score": 0.015163,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_198_2025_QH15_chuong_IV_dieu_10_khoan_6_chunk",
+                "doc_id": "198_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị quyết 198/2025/QH15 > Chương IV > Điều 10: Hỗ trợ thuế, phí, lệ phí > Khoản 6",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh không áp dụng phương pháp khoán thuế từ ngày 01 tháng 01 năm 2026. Hộ kinh doanh, cá nhân kinh doanh nộp thuế theo pháp luật về quản lý thuế.",
+                "score": 0.014348,
+                "citation": {
+                  "doc_id": "198_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 198/2025/QH15 > Chương IV > Điều 10: Hỗ trợ thuế, phí, lệ phí > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "snippet": "Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2",
+                "snippet": "Khai thuế, tính thuế đối với các loại thuế khác Hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế phải nộp theo quy định của pháp luật về thuế và thực hiện khai thuế, nộp thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh.",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_11_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+                "snippet": "Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "get_article_with_amendments",
+          "args": {
+            "article_id": "doc_68_2026_NDCP_chuong_II_dieu_3"
+          },
+          "result": {
+            "article_id": "doc_68_2026_NDCP_chuong_II_dieu_3",
+            "found": true,
+            "doc_id": "68_2026_NDCP",
+            "title": "Thuế giá trị gia tăng",
+            "content": "",
+            "full_text": "Thuế giá trị gia tăng\nHộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế giá trị gia tăng.\nHộ kinh doa...",
+            "clause_count": 2,
+            "point_count": 0,
+            "clauses": [
+              {
+                "id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_1",
+                "index": "1",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống thuộc đối tượng không chịu thuế giá trị gia tăng."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2",
+                "index": "2",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh có mức doanh thu năm trên 500 triệu đồng thuộc đối tượng chịu thuế giá trị gia tăng và áp dụng phương pháp tính trực tiếp theo doanh thu bằng tỷ lệ % nhân (x) doanh thu. Tỷ lệ % và doanh thu tính thuế thực hiện theo quy định của Luật Thuế giá trị gia tăng số 48/2024/QH15 và các văn bản hướng dẫn thi hành."
+              }
+            ],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "article_id": "doc_68_2026_NDCP_chuong_II_dieu_3",
+              "title": "Thuế giá trị gia tăng"
+            },
+            "amendment_warnings": [],
+            "has_amendments": false,
+            "is_fully_resolved": true,
+            "amendment_summary": ""
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "phương pháp kê khai thuế hộ kinh doanh"
+          },
+          "result": {
+            "query": "phương pháp kê khai thuế hộ kinh doanh",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 13: Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh tự kê khai đầy đủ, chính xác doanh thu phát sinh từ hoạt động sản xuất, kinh doanh để xác định số thuế phải nộp theo quy định của pháp luật thuế và tự chịu trách nhiệm trước pháp luật về nội dung đã kê khai.",
+                "score": 0.015836,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 13: Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1",
+                "snippet": "Hồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                "score": 0.015585,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_b_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b",
+                "snippet": "Hồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\nĐối với hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế, hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác là Tờ khai theo Mẫu số 01/CNKD ban hành kèm theo Thông tư này.",
+                "score": 0.014021,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2",
+                "snippet": "Khai thuế, tính thuế đối với các loại thuế khác Hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế phải nộp theo quy định của pháp luật về thuế và thực hiện khai thuế, nộp thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh.",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_11_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+                "snippet": "Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 16801,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — có 11 sources nhưng answer không trích dẫn rõ ràng",
+        "details": {
+          "source_count": 11
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs",
+            "get_article_with_amendments"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['3 tỷ']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "3 tỷ"
+          ]
+        }
+      }
+    },
+    {
+      "question_id": 10,
+      "question": "Hộ kinh doanh nộp thuế theo tỷ lệ % doanh thu (dưới 3 tỷ) thì phải mở những loại sổ sách kế toán nào?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "medium",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Theo quy định hiện hành, hộ kinh doanh nộp thuế theo tỷ lệ % doanh thu (dưới 3 tỷ đồng) phải mở các loại sổ sách kế toán sau:\n\n*   **Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD)**.\n\n**Căn cứ pháp lý:**\n*   Khoản 5 Điều 13 Nghị định 68/2026/NĐ-CP quy định hộ kinh doanh có trách nhiệm sử dụng sổ kế toán theo quy định của pháp luật kế toán và hướng dẫn của Bộ trưởng Bộ Tài chính.\n*   Khoản 2.1 Điều 5 Thông tư 152/2025/TT-BTC hướng dẫn cụ thể rằng hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu sử dụng Sổ doanh thu bán hàng hóa, dịch vụ theo Mẫu số S2a-HKD để ghi chép doanh thu bán hàng hóa, dịch vụ.\n\n**Lưu ý:** Cả Nghị định 68/2026/NĐ-CP và Thông tư 152/2025/TT-BTC đều đang có hiệu lực tại thời điểm hiện tại (2026-03-14).",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "sổ sách kế toán hộ kinh doanh phương pháp khoán"
+          },
+          "result": {
+            "query": "sổ sách kế toán hộ kinh doanh phương pháp khoán",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_5_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 13: Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
+                "snippet": "Hộ kinh doanh, cá nhân kinh doanh có trách nhiệm sử dụng sổ kế toán theo quy định của pháp luật kế toán và hướng dẫn của Bộ trưởng Bộ Tài chính; sử dụng hóa đơn theo quy định.",
+                "score": 0.015523,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 13: Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+                "snippet": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)",
+                "score": 0.015063,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+                "snippet": "Sổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:",
+                "score": 0.014831,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_1_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 1: Phạm vi điều chỉnh và đối tượng áp dụng > Khoản 1",
+                "snippet": "Thông tư này hướng dẫn việc ghi sổ kế toán của các hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.01458,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 1: Phạm vi điều chỉnh và đối tượng áp dụng > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_5_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 3",
+                "snippet": "Thời điểm xác định doanh thu",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 5: Doanh thu để xác định thuế thu nhập cá nhân > Khoản 3"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "152_2025_TTBTC"
+          },
+          "result": {
+            "doc_id": "152_2025_TTBTC",
+            "found": true,
+            "doc_number": "152/2025/TT-BTC",
+            "doc_type": "Thông tư",
+            "title": "Hướng dẫn kế toán cho các hộ kinh doanh, cá nhân kinh doanh",
+            "status": "valid",
+            "valid_from": "2026-01-01",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [],
+            "message": "Văn bản đang có hiệu lực tại 2026-03-14."
+          }
+        },
+        {
+          "tool": "check_doc_validity",
+          "args": {
+            "doc_id": "68_2026_NDCP"
+          },
+          "result": {
+            "doc_id": "68_2026_NDCP",
+            "found": true,
+            "doc_number": "68/2026/NĐ-CP",
+            "doc_type": "Nghị định",
+            "title": "Quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+            "status": "valid",
+            "valid_from": "2026-03-05",
+            "valid_to": null,
+            "query_date": "2026-03-14",
+            "amended_by": [],
+            "message": "Văn bản đang có hiệu lực tại 2026-03-14."
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk"
+          },
+          "result": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+            "found": false
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk"
+          },
+          "result": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk",
+            "found": false
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6"
+          },
+          "result": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6",
+            "found": true,
+            "doc_id": "152_2025_TTBTC",
+            "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế",
+            "content": "",
+            "full_text": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế\nChứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp ...",
+            "clause_count": 2,
+            "point_count": 0,
+            "clauses": [
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_1",
+                "index": "1",
+                "content": "Chứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế."
+              },
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2",
+                "index": "2",
+                "content": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)"
+              }
+            ],
+            "citation": {
+              "doc_id": "152_2025_TTBTC",
+              "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế"
+            }
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5"
+          },
+          "result": {
+            "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5",
+            "found": true,
+            "doc_id": "152_2025_TTBTC",
+            "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu",
+            "content": "",
+            "full_text": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu\nChứng từ kế toán sử dụng là Hóa đơn và các chứng từ khác làm căn cứ để xác định và kê kh...",
+            "clause_count": 2,
+            "point_count": 0,
+            "clauses": [
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_1",
+                "index": "1",
+                "content": "Chứng từ kế toán sử dụng là Hóa đơn và các chứng từ khác làm căn cứ để xác định và kê khai doanh thu theo quy định của pháp luật về thuế."
+              },
+              {
+                "id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2",
+                "index": "2",
+                "content": "Sổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:"
+              }
+            ],
+            "citation": {
+              "doc_id": "152_2025_TTBTC",
+              "article_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu"
+            }
+          }
+        },
+        {
+          "tool": "get_article",
+          "args": {
+            "article_id": "doc_68_2026_NDCP_chuong_IV_dieu_13"
+          },
+          "result": {
+            "article_id": "doc_68_2026_NDCP_chuong_IV_dieu_13",
+            "found": true,
+            "doc_id": "68_2026_NDCP",
+            "title": "Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh",
+            "content": "",
+            "full_text": "Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh\nHộ kinh doanh, cá nhân kinh doanh có quyền yêu cầu cơ quan thuế hướng dẫn, giải đáp thắc mắc, hỗ trợ về khai thuế, tính thuế và nộp thuế.\nHộ ...",
+            "clause_count": 8,
+            "point_count": 0,
+            "clauses": [
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_1",
+                "index": "1",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có quyền yêu cầu cơ quan thuế hướng dẫn, giải đáp thắc mắc, hỗ trợ về khai thuế, tính thuế và nộp thuế."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_2",
+                "index": "2",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có các quyền của người nộp thuế theo quy định pháp luật về quản lý thuế."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_3",
+                "index": "3",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh tự kê khai đầy đủ, chính xác doanh thu phát sinh từ hoạt động sản xuất, kinh doanh để xác định số thuế phải nộp theo quy định của pháp luật thuế và tự chịu trách nhiệm trước pháp luật về nội dung đã kê khai."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_4",
+                "index": "4",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh thực hiện thông báo cho cơ quan thuế theo phương thức điện tử tất cả các số tài khoản mở tại tổ chức cung ứng dịch vụ thanh toán, số hiệu ví điện tử mở tại tổ chức cung ứng dịch vụ trung gian thanh toán liên quan đến sản xuất, kinh doanh."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_5",
+                "index": "5",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có trách nhiệm sử dụng sổ kế toán theo quy định của pháp luật kế toán và hướng dẫn của Bộ trưởng Bộ Tài chính; sử dụng hóa đơn theo quy định."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_6",
+                "index": "6",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có trách nhiệm cung cấp sổ kế toán, hóa đơn, phần mềm quản lý bán hàng, tài liệu liên quan theo yêu cầu của cơ quan thuế khi kiểm tra thuế."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_7",
+                "index": "7",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử có trách nhiệm kê khai và nộp thuế tiêu thụ đặc biệt, thuế bảo vệ môi trường, thuế tài nguyên, phí bảo vệ môi trường và các khoản thu khác phải nộp ngân sách nhà nước do cơ quan thuế quản lý thu theo quy định của pháp luật về thuế, pháp luật về quản lý thuế và pháp luật khác có liên quan."
+              },
+              {
+                "id": "doc_68_2026_NDCP_chuong_IV_dieu_13_khoan_8",
+                "index": "8",
+                "content": "Hộ kinh doanh, cá nhân kinh doanh có hoạt động kinh doanh trên nền tảng thương mại điện tử có trách nhiệm cung cấp đầy đủ, chính xác cho chủ quản nền tảng thương mại điện tử thông tin mã số thuế hoặc số định danh cá nhân đối với công dân Việt Nam; số hộ chiếu hoặc thông tin định danh do cơ quan có thẩm quyền nước ngoài cấp đối với công dân nước ngoài và thông tin, tài liệu liên quan đến việc xác định nghĩa vụ thuế phải nộp, các thông tin bắt buộc đối với người bán theo quy định của pháp luật về thương mại điện tử."
+              }
+            ],
+            "citation": {
+              "doc_id": "68_2026_NDCP",
+              "article_id": "doc_68_2026_NDCP_chuong_IV_dieu_13",
+              "title": "Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh"
+            }
+          }
+        }
+      ],
+      "latency_ms": 13974,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — 10 tham chiếu pháp luật + 10 sources",
+        "details": {
+          "legal_refs": [
+            "Khoản 5",
+            "Điều 13",
+            "Nghị định 68",
+            "NĐ-CP",
+            "Khoản 2"
+          ],
+          "source_count": 10
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs', 'get_article'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs",
+            "get_article",
+            "check_doc_validity"
+          ],
+          "matching": [
+            "search_legal_docs",
+            "get_article"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/2 key facts, thiếu: ['S1a-HKD', 'S2b-HKD']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "S1a-HKD",
+            "S2b-HKD"
+          ]
+        }
+      }
+    }
+  ]
+}

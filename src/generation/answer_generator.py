@@ -13,6 +13,9 @@ from google import genai
 from google.genai import errors as genai_errors
 
 from src.retrieval.hybrid_search import HybridSearch
+from src.retrieval.query_classifier import classify, QueryIntent
+from src.graph.graph_retriever import GraphRetriever
+from src.graph.neo4j_client import Neo4jClient
 
 load_dotenv()
 
@@ -70,6 +73,17 @@ class AnswerGenerator:
             chroma_dir   = chroma_dir,
             model_name   = embedding_model,
         )
+
+        # Graph retriever
+        self.grapher: Optional[GraphRetriever] = None
+        try:
+            self._neo4j  = Neo4jClient()
+            self.grapher = GraphRetriever(self._neo4j)
+            self._graph_ok = True
+            logger.info("✅ GraphRetriever connected")
+        except Exception as e:
+            self._graph_ok = False
+            logger.warning(f"⚠️ Neo4j not available — graph features disabled: {e}")
 
         logger.info(f"✅ AnswerGenerator initialized — model: {model}")
 
@@ -136,7 +150,7 @@ class AnswerGenerator:
     # ── Build context từ search results ──────────────────────────────────
 
     def _build_context(self, search_results: List[Dict[str, Any]]) -> str:
-        """Chuyển search results thành context string cho LLM"""
+        """Chuyển search results (đã enrich) thành context string cho LLM"""
         if not search_results:
             return "Không tìm thấy điều khoản liên quan."
 
@@ -147,13 +161,61 @@ class AnswerGenerator:
             doc_number = meta.get("document_number", "")
             text       = r.get("text", "")
 
-            parts.append(
+            block = (
                 f"[{i}] {breadcrumb}\n"
                 f"Nguồn: {doc_number}\n"
-                f"Nội dung: {text}\n"
+                f"Nội dung: {text}"
             )
 
-        return "\n---\n".join(parts)
+            # Cảnh báo nếu doc hết hiệu lực
+            if r.get("validity_ok") is False:
+                block += "\n⚠️ [Lưu ý: văn bản này có thể đã hết hiệu lực]"
+
+            # Thêm parent Article title nếu có
+            if r.get("parent_title"):
+                block += f"\nĐiều: {r['parent_title']}"
+
+            # Thêm referenced nodes
+            for ref in r.get("referenced_nodes", []):
+                block += f"\n→ Tham chiếu: {ref.get('content', '')[:120]}"
+
+            parts.append(block)
+
+        # GuidanceChunks — gom tất cả, dedup theo id
+        seen_chunks: set[str] = set()
+        guidance_parts: list[str] = []
+        for r in search_results:
+            for gc in r.get("guidance_chunks", []):
+                gid = gc.get("id", "")
+                if gid not in seen_chunks:
+                    seen_chunks.add(gid)
+                    conf = gc.get("confidence", 0)
+                    guidance_parts.append(
+                        f"[Hướng dẫn — confidence {conf:.2f}]\n{gc.get('content','')[:400]}"
+                    )
+
+        context = "\n---\n".join(parts)
+        if guidance_parts:
+            context += "\n\n===== HƯỚNG DẪN THỰC TẾ =====\n" + "\n---\n".join(guidance_parts)
+        return context
+
+    # ── Direct lookup via graph ───────────────────────────────────────────
+
+    def _build_direct_context(self, article_id: str) -> str:
+        """Lấy nội dung đầy đủ của một Điều từ graph."""
+        if not self._graph_ok:
+            return ""
+        data = self.grapher.get_article_full(article_id)
+        if not data:
+            return ""
+
+        art    = data.get("article", {})
+        parts  = [f"Điều {art.get('node_index','')}: {art.get('title','')}\n{art.get('content','')}"]
+        for k in data.get("clauses", []):
+            parts.append(f"  Khoản {k.get('node_index','')}: {k.get('content','')}")
+        for d in data.get("points", []):
+            parts.append(f"    Điểm {d.get('node_index','')}: {d.get('content','')}")
+        return "\n".join(parts)
 
     # ── Main answer pipeline ──────────────────────────────────────────────
 
@@ -179,6 +241,10 @@ class AnswerGenerator:
             }
         """
 
+        # 0. Classify query intent
+        cq = classify(question)
+        logger.info(f"🎯 Intent: {cq.intent.value} | articles: {cq.article_refs}")
+
         # 1. Hybrid Search
         logger.info(f"🔍 Searching: {question[:60]}...")
         search_results = self.searcher.search(
@@ -187,8 +253,48 @@ class AnswerGenerator:
             filter_doc_id  = filter_doc_id,
         )
 
-        # 2. Build context
-        context = self._build_context(search_results)
+        # 2. Graph enrichment
+        extra_context = ""
+        if self._graph_ok:
+            from datetime import date as _date
+            search_results = self.grapher.enrich_hits(
+                search_results,
+                query_date          = _date.today(),
+                guidance_min_confidence = 0.82,
+            )
+
+            # DIRECT_LOOKUP — thêm full article nội dung từ graph
+            if cq.intent == QueryIntent.DIRECT_LOOKUP and cq.article_refs:
+                # Tìm article_id trong search results
+                for hit in search_results:
+                    ctx = hit.get("metadata", {})
+                    if ctx.get("node_type") in ("Điều", "Article"):
+                        direct = self._build_direct_context(
+                            ctx.get("node_id") or hit.get("chunk_id","").replace("_chunk","")
+                        )
+                        if direct:
+                            extra_context = "\n===== NỘI DUNG ĐẦY ĐỦ ĐIỀU =====\n" + direct
+                        break
+
+            # CROSS_DOC — thêm implementation chain
+            if cq.intent == QueryIntent.CROSS_DOC:
+                chain_parts = []
+                seen_chain: set[str] = set()
+                for hit in search_results[:3]:
+                    did = hit["metadata"].get("doc_id", "")
+                    if did and did not in seen_chain:
+                        seen_chain.add(did)
+                        chain = self.grapher.get_impl_chain(did)
+                        for rel in chain:
+                            chain_parts.append(
+                                f"  {rel.get('rel_type')}: {rel.get('doc_number','')} "
+                                f"({rel.get('doc_type','')} — {rel.get('status','')})"
+                            )
+                if chain_parts:
+                    extra_context = "\n===== QUAN HỆ VĂN BẢN =====\n" + "\n".join(chain_parts)
+
+        # 3. Build context
+        context = self._build_context(search_results) + extra_context
         config_context = self._build_config_context()
 
         # 3. Build prompt
@@ -239,6 +345,7 @@ class AnswerGenerator:
             "answer":  answer_text,
             "sources": sources,
             "model":   self.model,
+            "intent":  cq.intent.value,
         }
 
 

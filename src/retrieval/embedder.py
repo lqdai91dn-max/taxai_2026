@@ -64,11 +64,73 @@ class DocumentEmbedder:
         doc_id   = metadata.get("document_id", parsed_json_path.stem)
         chunks   = []
 
-        for node in doc.get("data", []):
-            self._extract_chunks(node, doc_id, metadata, chunks)
+        data_nodes = doc.get("data", [])
+        if data_nodes:
+            # Type A — structured legal hierarchy
+            for node in data_nodes:
+                self._extract_chunks(node, doc_id, metadata, chunks)
+        else:
+            # Type B — table-based guidance docs
+            self._extract_table_chunks(doc, doc_id, metadata, chunks)
+
+        # Dedup chunk_ids (can happen with amendment docs that have flattened nodes)
+        seen: dict[str, int] = {}
+        for c in chunks:
+            if c.chunk_id in seen:
+                seen[c.chunk_id] += 1
+                c.chunk_id = f"{c.chunk_id}_{seen[c.chunk_id]}"
+            else:
+                seen[c.chunk_id] = 0
 
         logger.info(f"📦 Built {len(chunks)} chunks from {doc_id}")
         return chunks
+
+    def _extract_table_chunks(
+        self,
+        doc: Dict[str, Any],
+        doc_id: str,
+        doc_meta: Dict[str, Any],
+        chunks: List[Chunk],
+    ):
+        """Type B docs — serialize each table into a searchable chunk."""
+        for t in doc.get("tables", []):
+            idx     = t.get("table_index", t.get("page_number", 0))
+            headers = t.get("headers", [])
+            rows    = t.get("rows", [])
+
+            parts = []
+            if headers:
+                parts.append(" | ".join(str(h) for h in headers if h))
+            for row in rows[:20]:
+                if isinstance(row, list):
+                    parts.append(" | ".join(str(c) for c in row if c))
+                elif isinstance(row, dict):
+                    parts.append(" | ".join(str(v) for v in row.values() if v))
+
+            text = "\n".join(parts).strip()
+            if len(text) < 20:
+                continue
+
+            chunk_id = f"{doc_id}_chunk_{idx}"
+            chunks.append(Chunk(
+                chunk_id   = chunk_id,
+                doc_id     = doc_id,
+                node_id    = chunk_id,
+                node_type  = "GuidanceChunk",
+                breadcrumb = f"{doc_meta.get('document_number','')}: Bảng {idx}",
+                text       = text[:2000],
+                metadata   = {
+                    "doc_id":          doc_id,
+                    "document_type":   doc_meta.get("document_type", ""),
+                    "document_number": doc_meta.get("document_number", ""),
+                    "node_type":       "GuidanceChunk",
+                    "node_index":      str(idx),
+                    "title":           " | ".join(str(h) for h in headers[:2] if h)[:80],
+                    "breadcrumb":      f"{doc_meta.get('document_number','')}: Bảng {idx}",
+                    "depth":           0,
+                    "effective_date":  doc_meta.get("effective_date", ""),
+                }
+            ))
 
     def _extract_chunks(
         self,
@@ -152,6 +214,8 @@ class DocumentEmbedder:
         batch_size: int = 32
     ) -> List[List[float]]:
         """Embed list chunks → trả về list vectors"""
+        if not chunks:
+            return []
         texts = [c.text for c in chunks]
         logger.info(f"🔢 Embedding {len(texts)} chunks (batch={batch_size})...")
 

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "doc_id": "310_2025_NDCP",
+  "description": "Bug: state machine assign sai node_index 'b' cho amendment instruction 'Bổ sung điểm đ, e, g...' tại dieu_1_khoan_3. Đây là directive node, không phải điểm b thứ 2. Fix: đổi node_index thành 'đ_bs' để tránh duplicate với diem_b thực sự.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_b_2",
+      "field": "node_index",
+      "value": "đ_bs"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_b_2",
+      "field": "node_id",
+      "value": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_d_bs"
+    }
+  ]
+}

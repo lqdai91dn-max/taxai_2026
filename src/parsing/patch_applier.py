@@ -144,6 +144,8 @@ class PatchApplier:
             return self._op_add_reference(nodes, op)
         elif op_type == "add_node":
             return self._op_add_node(nodes, op)
+        elif op_type == "add_table":
+            return self._op_add_table(result, op)
         else:
             logger.warning(f"⚠️  PatchApplier: unknown op '{op_type}' — skipped")
             return False
@@ -223,6 +225,46 @@ class PatchApplier:
             insert_idx = len(children)
 
         children.insert(insert_idx, new_node)
+        return True
+
+    def _op_add_table(self, result: dict, op: dict) -> bool:
+        """
+        Thêm structured table vào top-level result['tables'].
+        Idempotent: no-op nếu table với cùng page_number và headers đã tồn tại.
+
+        Op format:
+            {
+                "op": "add_table",
+                "table": {
+                    "headers": [...],
+                    "rows": [[...]],
+                    "row_count": N,
+                    "col_count": N,
+                    "extraction_strategy": "patch",
+                    "page_number": N
+                }
+            }
+        """
+        tables = result.setdefault("tables", [])
+        new_table = op["table"]
+        new_page = new_table.get("page_number")
+        new_headers = new_table.get("headers", [])
+
+        # Idempotent: no-op nếu đã có table cùng page_number và headers
+        for existing in tables:
+            if (existing.get("page_number") == new_page
+                    and existing.get("headers") == new_headers):
+                return False
+
+        # Gán table_index = tiếp theo trong danh sách
+        new_table = dict(new_table)
+        new_table["table_index"] = len(tables)
+        tables.append(new_table)
+
+        # Cập nhật tables_found trong metadata nếu có
+        if "pdf_metadata" in result:
+            result["pdf_metadata"]["tables_found"] = len(tables)
+
         return True
 
     # ── Tree helpers ──────────────────────────────────────────────────────────

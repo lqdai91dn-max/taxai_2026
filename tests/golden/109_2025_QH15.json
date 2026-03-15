@@ -4,7 +4,7 @@
     "document_type": "Luật",
     "document_number": "109/2025/QH15",
     "title": "THUẾ THU NHẬP CÁ NHÂN",
-    "issue_date": "2026-03-11",
+    "issue_date": "2025-12-10",
     "effective_date": "2026-07-01"
   },
   "data": [
@@ -12,7 +12,7 @@
       "node_id": "doc_109_2025_QH15_chuong_I",
       "node_type": "Chương",
       "node_index": "I",
-      "title": "",
+      "title": "NHỮNG QUY ĐỊNH CHUNG",
       "content": "",
       "breadcrumb": "Luật 109/2025/QH15 > Chương I",
       "references": [],
@@ -42,7 +42,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam và cá nhân không cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật nàyphát sinh tronglãnhthổ Việt Nam.",
+              "content": "Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam và cá nhân không cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong lãnh thổ Việt Nam.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 2: Người nộp thuế > Khoản 1",
               "references": [
                 {
@@ -163,7 +163,7 @@
                   "node_type": "Điểm",
                   "node_index": "d",
                   "title": null,
-                  "content": "Thu nhập từ hoạt động kinh doanh thương mại điện tử, kinh doanh dựa trênnền tảng số.",
+                  "content": "Thu nhập từ hoạt động kinh doanh thương mại điện tử, kinh doanh dựa trên nền tảng số.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 1 > Điểm d",
                   "references": [],
                   "children": []
@@ -184,7 +184,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Tiềnlương, tiền công và các khoảncó tínhchất tiền lương, tiền công;",
+                  "content": "Tiền lương, tiền công và các khoản có tính chất tiền lương, tiền công;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
@@ -204,7 +204,7 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Các khoản phụ cấp, trợ cấp, thu nhập khác trừ các khoản: phụ cấp, trợ cấp theo quy định của pháp luật về đãi người có công; phụ cấp quốc phòng, ưu an ninh; phụ cấp độc hại, nguy hiểm đối với ngành, nghề hoặc công việc ở noi làm việc có yếu tố độc hại, nguy hiểm; phụ cấp thu hút, phụ cấp khu vực theo quy định của pháp luật; phụ cấp, trợ cấp, sinh hoạt phí do cơ quan Việt Nam ở cấp nước ngoài chi trả; trợ khó khăn đột xuất, trợ cấp tai nạn lao động, bệnh nghề nghiệp, trợ cấp một lần khi sinh con hoặc nhận nuôi con nuôi, trợ cấp do suy giảm khả năng lao động, trợ cấp hưu trí một lần, trợ cấp tuất hàng tháng và các khoản trợ cấp khác theo quy định của pháp luật về bảo hiểm xã hội; trợ cấp thôi việc, trợ cấp mất việc làm; trợ cấp mang tính chất bảo trợ xã hội và các khoản phụ cấp, trợ cấp, thu nhập khác không mang tính chất tiền lương, tiền công do Chính phủ quy định.",
+                  "content": "Các khoản phụ cấp, trợ cấp, thu nhập khác trừ các khoản: phụ cấp, trợ cấp theo quy định của pháp luật về ưu đãi người có công; phụ cấp quốc phòng, an ninh; phụ cấp độc hại, nguy hiểm đối với ngành, nghề hoặc công việc ở nơi làm việc có yếu tố độc hại, nguy hiểm; phụ cấp thu hút, phụ cấp khu vực theo quy định của pháp luật; phụ cấp, trợ cấp, sinh hoạt phí do cơ quan Việt Nam ở nước ngoài chi trả; trợ cấp khó khăn đột xuất, trợ cấp tai nạn lao động, bệnh nghề ng hiệp, trợ cấp một lần khi sinh con hoặc nhận nuôi con nuôi, trợ cấp do suy giảm khả năng lao động, trợ cấp hưu trí một lần, trợ cấp tuất hàng tháng và các khoản trợ cấp khác theo quy định của pháp luật về bảo hiểm xã hội; trợ cấp thôi việc, trợ cấp mất việc làm; trợ cấp mang tính chất bảo trợ xã hội và các khoản phụ cấp, trợ cấp, thu nhập khác không mang tính chất tiền lương, tiền công do Chính phủ quy định.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 2 > Điểm c",
                   "references": [],
                   "children": []
@@ -266,7 +266,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thu nhập từ chuyển nhượng phần vốn trongcác tổchức kinhtế;",
+                  "content": "Thu nhập từ chuyển nhượng phần vốn trong các tổ chức kinh tế;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 4 > Điểm a",
                   "references": [],
                   "children": []
@@ -327,7 +327,7 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Thunhập từ chuyển nhượng quyền thuê đất, quyền thuê mặtnước;",
+                  "content": "Thu nhập từ chuyển nhượng quyền thuê đất, quyền thuê mặt nước;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 5 > Điểm c",
                   "references": [],
                   "children": []
@@ -358,7 +358,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Trúngthưởng xổ số;",
+                  "content": "Trúng thưởng xổ số;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6 > Điểm a",
                   "references": [],
                   "children": []
@@ -388,7 +388,7 @@
                   "node_type": "Điểm",
                   "node_index": "d",
                   "title": null,
-                  "content": "Trúng thưởng trong các trò chơi, cuộc thi có thưởng và các hình thức trúng thưởng khác, trừ trúng thưởng trong ca-si-no.",
+                  "content": "Trúng thưởng trong các trò chơi, cuộc thi có thưởng và các hình thức trúng thưởng khác, trừ trúng thưởng trong ca- si- no.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 6 > Điểm d",
                   "references": [],
                   "children": []
@@ -409,7 +409,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thu nhập từ chuyển giao, chuyển quyền sử dụng các đối tượng của quyền sở hữu trí tuệ; chuyển",
+                  "content": "Thu nhập từ chuyển giao, chuyển quyền sử dụng các đối tượng của quyền sở hữu trí tuệ;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 7 > Điểm a",
                   "references": [],
                   "children": []
@@ -419,7 +419,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Thu nhập từ giao công nghệ.",
+                  "content": "Thu nhập từ chuyển giao công nghệ.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 7 > Điểm b",
                   "references": [],
                   "children": []
@@ -460,7 +460,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thu nhập từ chuyển nhượng tên miền quốc gia Việt Nam “.vn\";",
+                  "content": "Thu nhập từ chuyển nhượng tên miền quốc gia Việt Nam “.vn”;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 10 > Điểm a",
                   "references": [],
                   "children": []
@@ -470,7 +470,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Thu nhập từ chuyển nhượng kết quả giảm phát thải khí nhà kính, tín chỉ các-bon;",
+                  "content": "Thu nhập từ chuyển nhượng kết quả giảm phát thải khí nhà kính, tín chỉ các- bon;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 10 > Điểm b",
                   "references": [],
                   "children": []
@@ -500,7 +500,7 @@
                   "node_type": "Điểm",
                   "node_index": "đ",
                   "title": null,
-                  "content": "Thu nhập từ chuyển nhượng vàng miếng. Chính phủ quy định ngưỡng giá trị vàng miếng chịu thuế, thời điểm áp dụng thu và điều chỉnh thuế suất thuế thu nhập cá nhân đối với chuyển nhượng vàng miếng phù hợp với lộtrình quản lýthị trường vàng.",
+                  "content": "Thu nhập từ chuyển nhượng vàng miếng. Chính phủ quy định ngưỡng giá trị vàng miếng chịu thuế, thời điểm áp dụng thu và điều chỉnh thuế suất thuế thu nhập cá nhân đối với chuyển nhượng vàng miếng phù hợp với lộ trình quản lý thị trường vàng.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 10 > Điểm đ",
                   "references": [],
                   "children": []
@@ -534,7 +534,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thu nhập từ chuyển nhượng, nhận thừa kế, quà tặng là bất động sản giữa vợ với chồng; cha đẻ, mẹ đẻ với con đẻ; cha nuôi, mẹ nuôi với con nuôi; chồng cha chồng, mẹ với con dâu; cha vợ, mẹ vợ với con rể; ông nội, bà nội với cháu nội; ông ngoại, bà ngoại với cháu ngoại; anh, chị, em ruột với nhau.",
+              "content": "Thu nhập từ chuyển nhượng, nhận thừa kế, quà tặng là bất động sản giữa vợ với chồng; cha đẻ, mẹ đẻ với con đẻ; cha nuôi, mẹ nuôi với con nuôi; cha chồng, mẹ chồng với con dâu; cha vợ, mẹ vợ với con rể; ông nội, bà nội với cháu nội; ông ngoại, bà ngoại với cháu ngoại; anh, chị, em ruột với nhau.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 1",
               "references": [],
               "children": []
@@ -564,7 +564,7 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Thu nhập của hộ gia đình, cá nhân trực tiếp sản xuất sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa qua chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường; sản xuất muối; thu nhập từ lợi tức cổ phần của thành viên hợp tác xã, liên hiệp hợp tác xã nông nghiệp, cánhân lànông dân ký kết hợp đồng với doanh nghiệp tham gia “Cánh đồng lớn”, trồng rừng sản xuất, nuôi trồng thủy sản.",
+              "content": "Thu nhập của hộ gia đình, cá nhân trực tiếp sản xuất sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa qua chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường; sản xuất muối; thu nhập từ lợi tức cổ phần của thành viên hợp tác xã, liên hiệp hợp tác xã nông nghiệp, cá nhân là nông dân ký kết hợp đồng với doanh nghiệp tham gia \"Cánh đồng lớn\", trồng rừng sản xuất, nuôi trồng thủy sản.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 4",
               "references": [],
               "children": []
@@ -574,7 +574,7 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Thu nhập từ chuyển đổi đất nông nghiệp của hộ gia đình, cá nhân được Nhà nước giao để sản xuất.",
+              "content": "Thu nhập từ chuyển đổi đất nông ng hiệp của hộ gia đình, cá nhân được Nhà nước giao để sản xuất.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 5",
               "references": [],
               "children": []
@@ -614,7 +614,7 @@
               "node_type": "Khoản",
               "node_index": "9",
               "title": null,
-              "content": "Tiền lương hưu do Quỹ bảo hiểm xã hội chỉ trả; thu nhập do quỹ bảo hiểm hưu trí bổ sung, quỹ hưu trí tự nguyện chi trả.",
+              "content": "Tiền lương hưu do Quỹ bảo hiểm xã hội chi trả; thu nhập do quỹ bảo hiểm hưu trí bổ sung, quỹ hưu trí tự nguyện chi trả.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 9",
               "references": [],
               "children": []
@@ -665,7 +665,7 @@
               "node_type": "Khoản",
               "node_index": "12",
               "title": null,
-              "content": "Thu nhập nhận được từ các tổ chức và quỹ từ thiện được cơ quan nhà nước có thẩm quyền cho phép thànhlập hoặccông nhận, hoạt động vì mục đích từ thiện, nhân đạo, không vì mục tiêu lợi nhuận.",
+              "content": "Thu nhập nhận được từ các tổ chức và quỹ từ thiện được cơ quan nhà nước có thẩm quyền cho phép thành lập hoặc công nhận, hoạt động vì mục đích từ thiện, nhân đạo, không vì mục tiêu lợi nhuận.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 12",
               "references": [],
               "children": []
@@ -705,7 +705,7 @@
               "node_type": "Khoản",
               "node_index": "16",
               "title": null,
-              "content": "Thu nhập từ chuyển nhượng lần đầu kết quả giảm phát thải khí nhà kính của cá nhân được công nhận kết quả giảm phát thải khí nhà kính, tín chỉ các-bon của cá nhân được cấp tín chỉ các-bon; thu nhập từ tiền lãi trái phiếu xanh; thu nhập từ chuyển nhượng lần đầu trái phiếu xanh sau khi phát hành.",
+              "content": "Thu nhập từ chuyển nhượng lần đầu kết quả giảm phát thải khí nhà kính của cá nhân được công nhận kết quả giảm phát thải khí nhà kính, tín chỉ các- bon của cá nhân được cấp tín chỉ các- bon; thu nhập từ tiền lãi trái phiếu xanh; thu nhập từ chuyển nhượng lần đầu trái phiếu xanh sau khi phát hành.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 16",
               "references": [],
               "children": []
@@ -735,7 +735,7 @@
               "node_type": "Khoản",
               "node_index": "19",
               "title": null,
-              "content": "Thu nhập của nhà đầu tư cá nhân, chuyên gia từ dự án khởi nghiệp sáng tạo, sáng lập viên cho doanh nghiệp khởi nghiệp sáng tạo, nhà đầu tư cá nhân góp vốn vào quỹ đầu tư mạo hiểm.",
+              "content": "Thu nhập của nhà đầu tư cá nhân, chuyên gia từ dự án khởi ng hiệp sáng tạo, sáng lập viên cho doanh ng hiệp khởi ng hiệp sáng tạo, nhà đầu tư cá nhân góp vốn vào quỹ đầu tư mạo hiểm.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 19",
               "references": [],
               "children": []
@@ -745,7 +745,7 @@
               "node_type": "Khoản",
               "node_index": "20",
               "title": null,
-              "content": "Thu nhập từ tiền lương, tiền công của chuyên gia nước ngoài làm việc tại chương trình, dự án tài trợ bằng nguồn vốn ODA không hoàn lại, chương trình, dự án phi chính phủ nước ngoài tại Việt Nam; cá nhân là người Việt Nam làm việc tại quan đại diện của tổ chức quốc tế thuộc Hệ thống Liên hợp quốc cơ tại Việt Nam; cá nhân tham gia lực lượng gìn giữ hòa bình của Liên hợp quốc.",
+              "content": "Thu nhập từ tiền lương, tiền công của chuyên gia nước ngoài làm việc tại chương trình, dự án tài trợ bằng nguồn vốn ODA không hoàn lại, chương trình, dự án phi chính phủ nước ngoài tại Việt Nam; cá nhân là người Việt Nam làm việc tại cơ quan đại diện của tổ chức quốc tế thuộc Hệ thống Liên hợp quốc tại Việt Nam; cá nhân tham gia lực lượng gìn giữ hòa bình của Liên hợp quốc.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 20",
               "references": [],
               "children": []
@@ -755,7 +755,7 @@
               "node_type": "Khoản",
               "node_index": "21",
               "title": null,
-              "content": "Thu nhập sau khi đã nộp thuế thu nhập doanh nghiệp của cá nhân là chủ doanh nghiệp tư nhân, cá nhân là chủ công ty trách nhiệm hữu hạn một thành viên.",
+              "content": "Thu nhập sau khi đã nộp thuế thu nhập doanh ng hiệp của cá nhân là chủ doanh ng hiệp tư nhân, cá nhân là chủ công ty trách nhiệm hữu hạn một thành viên.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 4: Thu nhập được miễn thuế > Khoản 21",
               "references": [],
               "children": []
@@ -796,7 +796,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
+              "content": "Miễn thuế thu nhập cá nhân trong thời hạn 05 năm đối với thu nhập từ tiền lương, tiền công của cá nhân là nhân lực công ng hiệp công nghệ số chất lượng cao thuộc các trường hợp sau:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 2",
               "references": [],
               "children": [
@@ -805,7 +805,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thu nhập từ dự án hoạt động công nghiệp công nghệ số trong khu công nghệ số tập trung;",
+                  "content": "Thu nhập từ dự án hoạt động công ng hiệp công nghệ số trong khu công nghệ số tập trung;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
@@ -815,7 +815,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Thu nhập từ dự án nghiên cứu và phát triển, sản xuất sản phẩm công nghệ sốtrọng điểm, chipbán dẫn, hệthống trí tuệnhân tạo;",
+                  "content": "Thu nhập từ dự án ng hiên cứu và phát triển, sản xuất sản phẩm công nghệ số trọng điểm, chip bán dẫn, hệ thống trí tuệ nhân tạo;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 2 > Điểm b",
                   "references": [],
                   "children": []
@@ -825,20 +825,19 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Thu nhập từ các hoạt động đào tạo nhân lực công nghiệp công nghệ số.",
+                  "content": "Thu nhập từ các hoạt động đào tạo nhân lực công ng hiệp công nghệ số.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 2 > Điểm c",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Miễn thuế thu nhập cá nhân trong thời hạn 05 năm đối với thu nhập từ tiền lương, tiền công của cá nhân là nhân lực công nghiệp công nghệ số chất lượng cao thuộc các trường hợp sau:"
+              ]
             },
             {
               "node_id": "doc_109_2025_QH15_chuong_I_dieu_5_khoan_3",
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Miễn thuế thu nhập cá nhân trong thời hạn 05 năm đối với thu nhập từ tiền lương, tiền công của cá nhân là nhân lực công nghệ cao thực hiện hoạt động nghiêncứu và phát triển công nghệ hoặc công nghệ chiến lược thuộc Danh cao mục công nghệ cao được ưu tiên đầu tư phát triển hoặc Danh mục công nghệ chiến lược, Danh mục sản phẩm công nghệ chiến lược theo quy định của pháp luật về công nghệ cao.",
+              "content": "Miễn thuế thu nhập cá nhân trong thời hạn 05 năm đối với thu nhập từ tiền lương, tiền công của cá nhân là nhân lực công nghệ cao thực hiện hoạt động nghiên cứu và phát triển công nghệ hoặc công nghệ chiến lược thuộc Danh mục công nghệ cao được ưu tiên đầu tư phát triển hoặc Danh mục công nghệ chiến lược, Danh mục sản phẩm công nghệ chiến lược theo quy định của pháp luật về công nghệ cao.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 3",
               "references": [],
               "children": []
@@ -848,7 +847,7 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Miễn thuế thu nhập cá nhân đối với chuyển nhượng chứng chỉ quỹ mở thành lập theo quy định của pháp luật về chứng khoán được nắm giữ từ 02 năm trở lên kể từ ngày mua.",
+              "content": "Miễn thuế thu nhập cá nhân đối với chuyển nhượng chứng chỉ quỹ mở thành lập theo quy định của pháp luật về chứng khoán được nắm giữ từ 02 năm trở lên kể từ ngày mua.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 4",
               "references": [],
               "children": []
@@ -858,12 +857,12 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Giảm 50% thuế thu nhập cá nhân đối với lợi tức của nhà đầu tư cá nhân được chia từ quỹ đầu tư chứng khoán, quỹ đầu tư bất động sản thành lập theo quy định của Luật Chứng khoán trong thời hạn do Chính phủ quy định.",
+              "content": "Giảm 50% thuế thu nhập cá nhân đối với lợi tức của nhà đầu tư cá nhân được chia từ quỹ đầu tư chứng khoán, quỹ đầu tư bất động sản thành lập theo quy định của Luật Chứng khoán trong thời hạn do Chính phủ quy định.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 5: Các trường hợp miễn thuế, giảm thuế khác > Khoản 5",
               "references": [
                 {
                   "text_match": "theo quy định của Luật Chứng khoán trong thời hạn do Chính phủ quy định",
-                  "target_id": "external_luat_chung_khoan_trong_thoi_han_do_chinh_phu_quy_dinh"
+                  "target_id": "external_luat_chung_khoan"
                 }
               ],
               "children": []
@@ -894,16 +893,15 @@
             }
           ],
           "children": [],
-          "lead_in_text": "Căn cứ quy định của Luật này, Chính phủ quy định về kỳ tính thuế theo năm đối với thu nhập từ kinh doanh, thu nhập từ tiền lương, tiền công của cá nhân trú; kỳ tính thuế theo từng lần phát sinh đối với các khoản thu nhập cư khác của cá nhân cư trú và cá nhân không cư trú; thời điểm xác định thu nhập tính thuế; quyết toán thuế; hoàn thuế đối với trường hợp cá nhân có số thuế đã nộp lớn hơn số thuế phải nộp hoặc chưa đến mức phải nộp; trách nhiệmkhấu trừ, khai thay, nộp thay cho người nộp thuế phù hợp với quy định của Luật Quản lý thuế."
+          "lead_in_text": "Căn cứ quy định của Luật này, Chính phủ quy định về kỳ tính thuế theo năm đối với thu nhập từ kinh doanh, thu nhập từ tiền lương, tiền công của cá nhân cư trú; kỳ tính thuế theo từng lần phát sinh đối với các khoản thu nhập khác của cá nhân cư trú và cá nhân không cư trú; thời điểm xác định thu nhập tính thuế; quyết toán thuế; hoàn thuế đối với trường hợp cá nhân có số thuế đã nộp lớn hơn số thuế phải nộp hoặc chưa đến mức phải nộp; trách nhiệm khấu trừ, khai thay, nộp thay cho người nộp thuế phù hợp với quy định của Luật Quản lý thuế."
         }
-      ],
-      "lead_in_text": "NHỮNG QUY ĐỊNH CHUNG"
+      ]
     },
     {
       "node_id": "doc_109_2025_QH15_chuong_II",
       "node_type": "Chương",
       "node_index": "II",
-      "title": "",
+      "title": "CĂN CỨ TÍNH THUẾ ĐỐI VỚI CÁ NHÂN CƯ TRÚ",
       "content": "",
       "breadcrumb": "Luật 109/2025/QH15 > Chương II",
       "references": [],
@@ -922,7 +920,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Cá nhân cư trú có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống không phải nộp thuế thu nhập cá nhân. Chính phủ trình Ủy ban Thường vụ Quốc hội điều chỉnh mức doanh thu không phải nộp thuế thu nhập cá nhân phù hợp với tình hình kinh tế xã hội trong từng thời kỳ.",
+              "content": "Cá nhân cư trú có hoạt động sản xuất, kinh doanh có mức doanh thu năm từ 500 triệu đồng trở xuống không phải nộp thuế thu nhập cá nhân. Chính phủ trình Ủy ban Thường vụ Quốc hội điều chỉnh mức doanh thu không phải nộp thuế thu nhập cá nhân phù hợp với tình hình kinh tế - xã hội trong từng thời kỳ.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 7: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 1",
               "references": [],
               "children": []
@@ -932,7 +930,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh của cá nhân cư trú có doanh thu năm trên mức quy định tại khoản 1 Điều này được xác định bằng thu nhập tính thuế nhân (x) với thuế suất. Trong đó:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 7: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 2",
               "references": [],
               "children": [
@@ -941,7 +939,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Thu nhập tính thuế được xác định bằng doanh thu củahàng hóa, dịch vụ bán ra trừ (-) đi chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ thuế; tính",
+                  "content": "Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) đi chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 7: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 2 > Điểm a",
                   "references": [],
                   "children": []
@@ -976,15 +974,14 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh của cá nhân cư trú có doanh thu năm trên mức quy định tại khoản 1 Điều này được xác định bằng thu nhập tính thuế nhân (x) với thuế suất. Trong đó:"
+              ]
             },
             {
               "node_id": "doc_109_2025_QH15_chuong_II_dieu_7_khoan_3",
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "",
+              "content": "Cá nhân kinh doanh có doanh thu năm trên mức quy định tại khoản 1 Điều này đến 03 tỷ đồng được lựa chọn nộp thuế theo quy định tại điểm a và điểm b khoản 2 Điều này hoặc nộp thuế theo thuế suất nhân (x) với doanh thu tính thuế. Doanh thu tính thuế và thuế suất được xác định như sau:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 7: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 3",
               "references": [],
               "children": [
@@ -1023,7 +1020,7 @@
                   "node_type": "Điểm",
                   "node_index": "d",
                   "title": null,
-                  "content": "Sản xuất, vận tải, dịch vụ có gắn với hàng hoá, xây dựng có bao thầu nguyênvật liệu: thuế suất 1,5%;",
+                  "content": "Sản xuất, vận tải, dịch vụ có gắn với hàng hoá, xây dựng có bao thầu nguyên vật liệu: thuế suất 1,5%;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 7: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 3 > Điểm d",
                   "references": [],
                   "children": []
@@ -1048,8 +1045,7 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Cá nhân kinh doanh có doanh thu năm trên mức quy định tại khoản 1 Điều này đến 03 tỷ đồng được lựa chọn nộp thuế theo quy định tại điểm a và điểm b khoản 2 Điều này hoặc nộp thuế theo thuế suất nhân (x) với doanh thu tính thuế. Doanh thu tính thuế và thuế suất được xác định như sau:"
+              ]
             },
             {
               "node_id": "doc_109_2025_QH15_chuong_II_dieu_7_khoan_4",
@@ -1087,7 +1083,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân trú được xác định bằng thu nhập tính thuế quy định tại khoản 2 Điều cư này, không phân biệt nơi trả thu nhập, nhân (x) với thuế suất tại Biểu thuế lũy tiến từng phần quy định tại Điều 9 của Luật này.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân cư trú được xác định bằng thu nhập tính thuế quy định tại khoản 2 Điều này, không phân biệt nơi trả thu nhập, nhân (x) với thuế suất tại Biểu thuế lũy tiến từng phần quy định tại Điều 9 của Luật này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 1",
               "references": [
                 {
@@ -1102,7 +1098,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thu nhập tính thuế đối với thu nhập từ tiền lương, tiền công là tổng thu nhập chịu thuế quy định tại khoản 2 Điều 3 của Luật này mà người nộp thuế nhận được trong kỳ tính thuế, trừ (-) đi các khoản đóng góp bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hiểm trách nhiệm nghề nghiệp đối với một số ngành, nghề phải tham gia bảo hiểm bắt buộc, khoản đóng góp tham gia bảo hiểm hưu trí bổ sung theo quy định của Luật Bảo hiểm xã hội, mua bảo hiểm hưu trí tự nguyện, bảo hiểm nhân thọ không vượt quá mức do Chính phủ quy định và các khoản giảm trừ quy định tại Điều 10 và Điều 11 của Luật này.",
+              "content": "Thu nhập tính thuế đối với thu nhập từ tiền lương, tiền công là tổng thu nhập chịu thuế quy định tại khoản 2 Điều 3 của Luật này mà người nộp thuế nhận được trong kỳ tính thuế, trừ (-) đi các khoản đóng góp bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất ng hiệp, bảo hiểm trách nhiệm nghề ng hiệp đối với một số ngành, nghề phải tham gia bảo hiểm bắt buộc, khoản đóng góp tham gia bảo hiểm hưu trí bổ sung theo quy định của Luật Bảo hiểm xã hội, mua bảo hiểm hưu trí tự nguyện, bảo hiểm nhân thọ không vượt quá mức do Chính phủ quy định và các khoản giảm trừ quy định tại Điều 10 và Điều 11 của Luật này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 2",
               "references": [
                 {
@@ -1111,7 +1107,7 @@
                 },
                 {
                   "text_match": "theo quy định của Luật Bảo hiểm xã hội, mua bảo hiểm hưu trí tự nguyện, bảo hiểm nhân thọ không vượt quá mức do Chính phủ quy định và các khoản",
-                  "target_id": "external_luat_bao_hiem_xa_hoi_mua_bao_hiem_huu_tri_tu_nguyen_bao_hiem_nhan_tho_khong_vuot_qua_muc_do_chinh_phu_quy_dinh_va_cac_khoan"
+                  "target_id": "external_luat_bao_hiem_xa_hoi"
                 },
                 {
                   "text_match": "tại Điều 10",
@@ -1165,7 +1161,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Biểu thuế luỹ tiến từng phần được quy định như sau: Bậc Phần thu nhập tính Phần thu nhập tính Thuê suât thuế thuế/năm thuế/tháng (%) (triệu đồng) (triệu đồng) 1 Đến 120 Đến 10 5 2 Trên 120 đến 360 Trên 10 đến 30 10 3 Trên 360 đến 720 Trên 30 đến 60 20 4 Trên 720 đến 1.200 Trên 60 đến 100 30 5 Trên 1.200 Trên 100 35",
+              "content": "Biểu thuế luỹ tiến từng phần được quy định như sau:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 9: Biểu thuế luỹ tiến từng phần > Khoản 2",
               "references": [],
               "children": []
@@ -1186,7 +1182,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "",
+              "content": "Giảm trừ gia cảnh là số tiền được trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công của người nộp thuế là cá nhân cư trú. Giảm trừ gia cảnh gồm:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 1",
               "references": [],
               "children": [
@@ -1195,7 +1191,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Mức giảm trừ đối với người nộp thuế là 15,5 triệu đồng/tháng (186 đồng/năm); triệu",
+                  "content": "Mức giảm trừ đối với người nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm);",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 1 > Điểm a",
                   "references": [],
                   "children": []
@@ -1205,20 +1201,19 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Mức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng.",
+                  "content": "Mức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/ tháng.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 1 > Điểm b",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Giảm trừ gia cảnh là số tiền được trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công của người nộp thuế là cá nhân cư trú. Giảm trừ gia cảnh gồm:"
+              ]
             },
             {
               "node_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_2",
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Căn cứ biến động của giá cả, thu nhập, Chính phủ trình Ủy ban Thường vụ Quốc hội quy định mức giảm trừ gia cảnh quy định tại khoản 1 Điều này phù hợp với tình hình kinh tế xã hội trong từng thời kỳ. -",
+              "content": "Căn cứ biến động của giá cả, thu nhập, Chính phủ trình Ủy ban Thường vụ Quốc hội quy định mức giảm trừ gia cảnh quy định tại khoản 1 Điều này phù hợp với tình hình kinh tế - xã hội trong từng thời kỳ.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 2",
               "references": [],
               "children": []
@@ -1238,7 +1233,7 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "",
+              "content": "Người phụ thuộc là người mà người nộp thuế có trách nhiệm nuôi dưỡng, bao gồm:",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4",
               "references": [],
               "children": [
@@ -1257,13 +1252,12 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Các cá nhân không có thu nhập hoặc có thu nhập không vượt quá mức do Bộ trưởng Bộ Tài chính quy định, bao gồm con thành niên đang học đại học, cao đẳng, trung học chuyên nghiệp hoặc học nghề; vợ hoặc chồng không có khả năng lao động; bố, mẹ đã hết tuổi lao động hoặc không có khả năng lao động; những người khác không nơi nương tựa mà người nộp thuế phải trực tiếp nuôi dưỡng.",
+                  "content": "Các cá nhân không có thu nhập hoặc có thu nhập không vượt quá mức do Bộ trưởng Bộ Tài chính quy định, bao gồm con thành niên đang học đại học, cao đẳng, trung học chuyên ng hiệp hoặc học nghề; vợ hoặc chồng không có khả năng lao động; bố, mẹ đã hết tuổi lao động hoặc không có khả năng lao động; những người khác không nơi nương tựa mà người nộp thuế phải trực tiếp nuôi dưỡng.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4 > Điểm b",
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Người phụ thuộc là người mà người nộp thuế có trách nhiệm nuôi dưỡng, bao gồm:"
+              ]
             }
           ]
         },
@@ -1271,9 +1265,9 @@
           "node_id": "doc_109_2025_QH15_chuong_II_dieu_11",
           "node_type": "Điều",
           "node_index": "11",
-          "title": "Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và",
+          "title": "Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác",
           "content": "",
-          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác",
           "references": [],
           "children": [
             {
@@ -1282,7 +1276,7 @@
               "node_index": "1",
               "title": null,
               "content": "Khoản đóng góp từ thiện, nhân đạo, bao gồm:",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 1",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 1",
               "references": [],
               "children": [
                 {
@@ -1291,7 +1285,7 @@
                   "node_index": "a",
                   "title": null,
                   "content": "Khoản đóng góp vào tổ chức, cơ sở chăm sóc, nuôi dưỡng trẻ em có hoàn cảnh đặc biệt khó khăn, người khuyết tật, người già không nơi nương tựa;",
-                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 1 > Điểm a",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 1 > Điểm a",
                   "references": [],
                   "children": []
                 },
@@ -1301,7 +1295,7 @@
                   "node_index": "b",
                   "title": null,
                   "content": "Khoản đóng góp vào quỹ từ thiện, quỹ nhân đạo, quỹ khuyến học;",
-                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 1 > Điểm b",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 1 > Điểm b",
                   "references": [],
                   "children": []
                 },
@@ -1310,8 +1304,8 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Khoản đóng góp vào các tổ chức có chức năng huy động tài trợ được thành lập và hoạt động theo quy định của pháp luật. Tổ chức, cơ sở và các quỹ quy định tại khoản này phải được cơ quan nhà nước có thẩm quyền cho phépthành lập hoặc công nhận, hoạt độngvì mục đích từ thiện, nhân đạo, khuyến học, không vì mục tiêu lợi nhuận.",
-                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 1 > Điểm c",
+                  "content": "Khoản đóng góp vào các tổ chức có chức năng huy động tài trợ được thành lập và hoạt động theo quy định của pháp luật. Tổ chức, cơ sở và các quỹ quy định tại khoản này phải được cơ quan nhà nước có thẩm quyền cho phép thành lập hoặc công nhận, hoạt động vì mục đích từ thiện, nhân đạo, khuyến học, không vì mục tiêu lợi nhuận.",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 1 > Điểm c",
                   "references": [],
                   "children": []
                 }
@@ -1322,8 +1316,8 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Khoản chi cho y tế, giáo dục đào tạo của người nộp thuế, người phụ - thuộc của người nộp thuế được giảm trừ vào thu nhập trước khi tính thuế theo mức do Chính phủquy định.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 2",
+              "content": "Khoản chi cho y tế, giáo dục - đào tạo của người nộp thuế, người phụ thuộc của người nộp thuế được giảm trừ vào thu nhập trước khi tính thuế theo mức do Chính phủ quy định.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 2",
               "references": [],
               "children": []
             },
@@ -1332,8 +1326,8 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Các khoản chỉ quy định tại Điều này phải đáp ứng các điều kiện về hóa đơn, chứng từ theo quy định của pháp luật và không được chỉ trả từ các nguồn khác.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 3",
+              "content": "Các khoản chi quy định tại Điều này phải đáp ứng các điều kiện về hóa đơn, chứng từ theo quy định của pháp luật và không được chi trả từ các nguồn khác.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 3",
               "references": [],
               "children": []
             },
@@ -1343,12 +1337,12 @@
               "node_index": "4",
               "title": null,
               "content": "Chính phủ quy định chi tiết Điều này.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và > Khoản 4",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác > Khoản 4",
               "references": [],
               "children": []
             }
           ],
-          "lead_in_text": "cáckhoảngiảm trừ khác Cá nhân trú được giảm trừ vào thu nhập chịu thuế trước khi tính thuế cư đối với thu nhập từ tiền lương, tiền công các khoản sau đây:"
+          "lead_in_text": "các khoản giảm trừ khác Cá nhân cư trú được giảm trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công các khoản sau đây:"
         },
         {
           "node_id": "doc_109_2025_QH15_chuong_II_dieu_12",
@@ -1374,7 +1368,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thu nhập tính thuế từ đầu tư vốn là tổng số các khoản thu nhập chịu thuế từ đầu tư vốn quy định tại khoản 3 Điều 3 của Luật này mà người nộp thuế nhận được theo từnglần phát sinh.",
+              "content": "Thu nhập tính thuế từ đầu tư vốn là tổng số các khoản thu nhập chịu thuế từ đầu tư vốn quy định tại khoản 3 Điều 3 của Luật này mà người nộp thuế nhận được theo từng lần phát sinh.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 12: Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn > Khoản 2",
               "references": [
                 {
@@ -1420,7 +1414,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 20% theo từng lần chuyển nhượng. Trong đó, thu nhập tính thuế từ chuyển nhượng vốn được xác định bằng giá chuyển nhượng trừ (-) đi giá mua và các khoản chi phí hợp lý liên quan đến việc tạo ra thu nhập từ chuyển nhượng vốn. Trường hợp không xác định giá mua và các chi phí liên quan đến việc chuyển nhượng vốn thì thuế thu nhập cá nhân được xác định bằng giá chuyển nhượng nhân (x) với thuế suất2%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 20% theo từng lần chuyển nhượng. Trong đó, thu nhập tính thuế từ chuyển nhượng vốn được xác định bằng giá chuyển nhượng trừ (-) đi giá mua và các khoản chi phí hợp lý liên quan đến việc tạo ra thu nhập từ chuyển nhượng vốn. Trường hợp không xác định giá mua và các chi phí liên quan đến việc chuyển nhượng vốn thì thuế thu nhập cá nhân được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 2%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 13: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn > Khoản 1",
               "references": [],
               "children": []
@@ -1471,7 +1465,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản của cánhân trú đượcxác định bằng giá chuyểnnhượngnhân (x) với thuế suất2%. cư",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản của cá nhân cư trú được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 2%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 14: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 1",
               "references": [],
               "children": []
@@ -1532,7 +1526,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế từ trúng thưởng là thời điểm tổ chức, cánhân trả thunhập cho người nộpthuế.",
+              "content": "Thời điểm xác định thu nhập tính thuế từ trúng thưởng là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 15: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng > Khoản 3",
               "references": [],
               "children": []
@@ -1563,7 +1557,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thu nhập tính thuế từ tiền bản quyền là phần thu nhập vượt trên 20 triệu đồng mà người nộp thuế nhận được khi chuyển giao, chuyển quyền sử dụng các đối tượng của quyền sở hữu trí tuệ, chuyển giao công nghệ theo từng đồng. hợp",
+              "content": "Thu nhập tính thuế từ tiền bản quyền là phần thu nhập vượt trên 20 triệu đồng mà người nộp thuế nhận được khi chuyển giao, chuyển quyền sử dụng các đối tượng của quyền sở hữu trí tuệ, chuyển giao công nghệ theo từng hợp đồng.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 16: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền > Khoản 2",
               "references": [],
               "children": []
@@ -1573,7 +1567,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế từ tiền bản quyền là thời điểm tổ chức, cánhân trả thunhập chongười nộp thuế.",
+              "content": "Thời điểm xác định thu nhập tính thuế từ tiền bản quyền là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 16: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền > Khoản 3",
               "references": [],
               "children": []
@@ -1635,7 +1629,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quả tặng của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 10%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng của cá nhân cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 10%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 18: Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng > Khoản 1",
               "references": [],
               "children": []
@@ -1674,7 +1668,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Đối với thu nhập từ nhận quà tặng là thời điểm tổ chức, cá nhân tặng chongười nộp thuế hoặc thời điểmngười nộp thuếnhận được thu nhập.",
+                  "content": "Đối với thu nhập từ nhận quà tặng là thời điểm tổ chức, cá nhân tặng cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập.",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 18: Thuế thu nhập cá nhân đối với thu nhập từ nhận thừa kế, quà tặng > Khoản 3 > Điểm b",
                   "references": [],
                   "children": []
@@ -1722,7 +1716,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân cư trú quy định tại điểm d và điểm đ khoản 10 Điều 3 của Luật này được xác định bằng giá chuyển nhượng nhân (x) với thuế suất0,1%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân cư trú quy định tại điểm d và điểm đ khoản 10 Điều 3 của Luật này được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 0,1%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 19: Thuế thu nhập cá nhân đối với thu nhập khác > Khoản 2",
               "references": [
                 {
@@ -1737,7 +1731,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế là thời điểm tổ chức, cá nhân chỉ trả thu nhập cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập.",
+              "content": "Thời điểm xác định thu nhập tính thuế là thời điểm tổ chức, cá nhân chi trả thu nhập cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 19: Thuế thu nhập cá nhân đối với thu nhập khác > Khoản 3",
               "references": [],
               "children": []
@@ -1754,14 +1748,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "CĂN CỨ TÍNH THUÉ ĐÓI VỚI CÁ NHÂN CƯ TRÚ"
+      ]
     },
     {
       "node_id": "doc_109_2025_QH15_chuong_III",
       "node_type": "Chương",
       "node_index": "III",
-      "title": "",
+      "title": "CĂN CỨ TÍNH THUẾ ĐỐI VỚI CÁ NHÂN KHÔNG CƯ TRÚ",
       "content": "",
       "breadcrumb": "Luật 109/2025/QH15 > Chương III",
       "references": [],
@@ -1790,7 +1783,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Doanh thu là toàn bộ tiền bán hàng, tiền gia công, tiền cung ứng dịch vụ kể cả trợgiá, phụ thu, phụ trội mà cá nhân được hưởng, không phân biệt đã thu được tiền hay chưa thu được tiền, bao gồm cả chi phí do bên mua hàng hoá, dịch vụ trả thay cho cá nhân không cư trú mà không được hoàn trả. Trường hợp thoả thuận hợp đồng không bao gồm thuế thu nhập cá nhân thì doanh thu tính thuế phải quy đổi là toàn bộ số tiền mà cá nhân không cư trú nhận được dưới bất kỳ hình thức nào từ việc cung cấp hàng hoá, dịch vụ tại Việt Nam không phụ thuộc vào địa điểm tiến hành các hoạt động kinh doanh.",
+              "content": "Doanh thu là toàn bộ tiền bán hàng, tiền gia công, tiền cung ứng dịch vụ kể cả trợ giá, phụ thu, phụ trội mà cá nhân được hưởng, không phân biệt đã thu được tiền hay chưa thu được tiền, bao gồm cả chi phí do bên mua hàng hoá, dịch vụ trả thay cho cá nhân không cư trú mà không được hoàn trả. Trường hợp thoả thuận hợp đồng không bao gồm thuế thu nhập cá nhân thì doanh thu tính thuế phải quy đổi là toàn bộ số tiền mà cá nhân không cư trú nhận được dưới bất kỳ hình thức nào từ việc cung cấp hàng hoá, dịch vụ tại Việt Nam không phụ thuộc vào địa điểm tiến hành các hoạt động kinh doanh.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 20: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 2",
               "references": [],
               "children": []
@@ -1809,7 +1802,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Phân cung cấp hàng hoá: 1%;",
+                  "content": "Phân phối, cung cấp hàng hoá: 1%;",
                   "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 20: Thuế thu nhập cá nhân đối với thu nhập từ kinh doanh > Khoản 3 > Điểm a",
                   "references": [],
                   "children": []
@@ -1854,8 +1847,7 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "phối,"
+              ]
             }
           ]
         },
@@ -1868,7 +1860,7 @@
           "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 21: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công",
           "references": [],
           "children": [],
-          "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân không trú được xác địnhbằng tổng số tiền lương, tiền công mà cá nhân cư F 13 không cư trú nhận được do thực hiện công việc tại Việt Nam nhân (x) với thuế suât 20%, không phân biệt nơi trả thu nhập."
+          "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân không cư trú được xác định bằng tổng số tiền lương, tiền công mà cá nhân không cư trú nhận được do thực hiện công việc tại Việt Nam nhân (x) với thuế suất 20%, không phân biệt nơi trả thu nhập."
         },
         {
           "node_id": "doc_109_2025_QH15_chuong_III_dieu_22",
@@ -1879,7 +1871,7 @@
           "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 22: Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn",
           "references": [],
           "children": [],
-          "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn của cá nhân không cư trú được xác định băng tông sô thu nhập mà cá nhân không cư trú nhận được từ việc đâu tư vôn vào tô chức, cá nhân tại Việt Nam nhân (x) với thuế suất 59%."
+          "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn của cá nhân không cư trú được xác định bằng tổng số thu nhập mà cá nhân không cư trú nhận được từ việc đầu tư vốn vào tổ chức, cá nhân tại Việt Nam nhân (x) với thuế suất 5%."
         },
         {
           "node_id": "doc_109_2025_QH15_chuong_III_dieu_23",
@@ -1895,7 +1887,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn của cá nhân không cư trú được xác định băng thu nhập tính thuê nhân (x) với thuế suất 20% theo từng lần phát sinh, không phân biệt việc chuyên nhượng được thực hiện tại Việt Nam hay tại nước ngoài. Trong đó, thu nhập tính thuê từ chuyên nhượng vôn được xác định băng giá chuyên nhượng trừ (-) đi giá mua và các khoản chi phí hợp ly liên quan đên việc tạo ra thu nhập từ chuyên nhượng phân vôn tại tô chức, cá nhân Việt Nam. Trường hợp không xác định được giá mua và các chi phí liên quan đến việc chuyên nhượng vôn thì thuê thu nhập cá nhân được xác định băng giá chuyên nhượng phân vôn tại tô chức, cá nhân Việt Nam nhân (x) với thuế suất 2%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn của cá nhân không cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 20% theo từng lần phát sinh, không phân biệt việc chuyển nhượng được thực hiện tại Việt Nam hay tại nước ngoài. Trong đó, thu nhập tính thuế từ chuyển nhượng vốn được xác định bằng giá chuyển nhượng trừ (-) đi giá mua và các khoản chi phí hợp lý liên quan đến việc tạo ra thu nhập từ chuyển nhượng phần vốn tại tổ chức, cá nhân Việt Nam. Trường hợp không xác định được giá mua và các chi phí liên quan đến việc chuyển nhượng vốn thì thuế thu nhập cá nhân được xác định bằng giá chuyển nhượng phần vốn tại tổ chức, cá nhân Việt Nam nhân (x) với thuế suất 2%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 23: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn > Khoản 1",
               "references": [],
               "children": []
@@ -1905,7 +1897,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng chứng khoán của cá nhân không cư trú được xác định băng giá chuyên nhượng nhân (x) với thuế suất 0,1%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng chứng khoán của cá nhân không cư trú được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 0,1%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 23: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn > Khoản 2",
               "references": [],
               "children": []
@@ -1915,7 +1907,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Chính phủ quy định chỉ tiết Điều này.",
+              "content": "Chính phủ quy định chi tiết Điều này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 23: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn > Khoản 3",
               "references": [],
               "children": []
@@ -1936,7 +1928,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bắt động sản của cá nhân không cư trú được xác định băng giá chuyên nhượng nhân (x) với | thuế suất 2%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản của cá nhân không cư trú được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 2%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 1",
               "references": [],
               "children": []
@@ -1946,7 +1938,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Chính phủ quy định chỉ tiết Điều này.",
+              "content": "Chính phủ quy định chi tiết Điều này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 24: Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản > Khoản 2",
               "references": [],
               "children": []
@@ -1967,7 +1959,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền của cá nhân không cư trú được xác định băng phân thu nhập vượt trên 20 triệu đông theo từng hợp đông chuyên giao, chuyên quyên sử dụng các đôi tượng của quyên sở hữu trí tuệ, chuyên giao công nghệ tại Việt Nam nhân (x) với thuế suất 5%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền của cá nhân không cư trú được xác định bằng phần thu nhập vượt trên 20 triệu đồng theo từng hợp đồng chuyển giao, chuyển quyền sử dụng các đối tượng của quyền sở hữu trí tuệ, chuyển giao công nghệ tại Việt Nam nhân (x) với thuế suất 5%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 25: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền, nhượng quyền thương mại > Khoản 1",
               "references": [],
               "children": []
@@ -1977,7 +1969,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập từ nhượng quyền thương mại của cá nhân không cư trú được xác định băng phân thu nhập vượt trên 20 triệu đông theo từng hợp đông nhượng quyên thương mại tại Việt Nam nhân (x) với thuế suất 5%. h 14",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập từ nhượng quyền thương mại của cá nhân không cư trú được xác định bằng phần thu nhập vượt trên 20 triệu đồng theo từng hợp đồng nhượng quyền thương mại tại Việt Nam nhân (x) với thuế suất 5%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 25: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền, nhượng quyền thương mại > Khoản 2",
               "references": [],
               "children": []
@@ -1988,12 +1980,12 @@
           "node_id": "doc_109_2025_QH15_chuong_III_dieu_26",
           "node_type": "Điều",
           "node_index": "26",
-          "title": "Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng,",
+          "title": "Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng",
           "content": "",
-          "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 26: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng,",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 26: Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng",
           "references": [],
           "children": [],
-          "lead_in_text": "nhận thừa kế, quà tặng Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng của cá nhân không cư trú được xác định băng phân giá trị vượt trên 20 triệu đồng theo từng lần trúng thưởng, nhận thừa kế, quà tặng tại Việt Nam nhân (x) với thuế suất 10%."
+          "lead_in_text": "Thuế thu nhập cá nhân đối với thu nhập từ trúng thưởng, nhận thừa kế, quà tặng của cá nhân không cư trú được xác định bằng phần giá trị vượt trên 20 triệu đồng theo từng lần trúng thưởng, nhận thừa kế, quà tặng tại Việt Nam nhân (x) với thuế suất 10%."
         },
         {
           "node_id": "doc_109_2025_QH15_chuong_III_dieu_27",
@@ -2009,7 +2001,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại các điểm a, b và c khoản 10 Điều 3 của Luật này được xác định băng thu nhập tính thuê nhân (x) với thuế suất 5%. Thu nhập tính thuê là phân thu nhập vượt trên 20 triệu đông mà người nộp thuê nhận được theo từng lân phát sinh.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại các điểm a, b và c khoản 10 Điều 3 của Luật này được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 5%. Thu nhập tính thuế là phần thu nhập vượt trên 20 triệu đồng mà người nộp thuế nhận được theo từng lần phát sinh.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 27: Thuế thu nhập cá nhân đối với thu nhập khác > Khoản 1",
               "references": [
                 {
@@ -2024,9 +2016,14 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại điểm d và điêm đ khoản 10 Điêu 3 của Luật này được xác định băng giá chuyển nhượng nhân (x) với thuế suất 0,1%.",
+              "content": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại điểm d và điểm đ khoản 10 Điều 3 của Luật này được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 0,1%.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 27: Thuế thu nhập cá nhân đối với thu nhập khác > Khoản 2",
-              "references": [],
+              "references": [
+                {
+                  "text_match": "điểm đ khoản 10 Điều 3",
+                  "target_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_10_diem_đ"
+                }
+              ],
               "children": []
             },
             {
@@ -2034,7 +2031,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Chính phủ quy định chỉ tiết Điều này.",
+              "content": "Chính phủ quy định chi tiết Điều này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 27: Thuế thu nhập cá nhân đối với thu nhập khác > Khoản 3",
               "references": [],
               "children": []
@@ -2045,9 +2042,9 @@
           "node_id": "doc_109_2025_QH15_chuong_III_dieu_28",
           "node_type": "Điều",
           "node_index": "28",
-          "title": "Thời điễm xác định thu nhập tính thuế",
+          "title": "Thời điểm xác định thu nhập tính thuế",
           "content": "",
-          "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế",
           "references": [],
           "children": [
             {
@@ -2055,9 +2052,14 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điêu 20 của Luật này là thời điêm cá nhân không cư trú nhận được thu nhập hoặc thời điêm xuât hoá đơn bán hàng hoá, cung cập dịch vụ.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế > Khoản 1",
-              "references": [],
+              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 20 của Luật này là thời điểm cá nhân không cư trú nhận được thu nhập hoặc thời điểm xuất hoá đơn bán hàng hoá, cung cấp dịch vụ.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế > Khoản 1",
+              "references": [
+                {
+                  "text_match": "tại Điều 20",
+                  "target_id": "doc_109_2025_QH15_chuong_III_dieu_20"
+                }
+              ],
               "children": []
             },
             {
@@ -2065,9 +2067,14 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại các điêu 21, 22, 25, 26 và 27 của Luật này là thời điểm tô chức, cá nhân tại Việt Nam trả thu nhập cho cá nhân không cư trú hoặc thời điểm cá nhân không cư trú nhận được thu nhập.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế > Khoản 2",
-              "references": [],
+              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại các điều 21, 22, 25, 26 và 27 của Luật này là thời điểm tổ chức, cá nhân tại Việt Nam trả thu nhập cho cá nhân không cư trú hoặc thời điểm cá nhân không cư trú nhận được thu nhập.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế > Khoản 2",
+              "references": [
+                {
+                  "text_match": "điều 21",
+                  "target_id": "doc_109_2025_QH15_chuong_III_dieu_21"
+                }
+              ],
               "children": []
             },
             {
@@ -2075,8 +2082,8 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 23 của Luật này là thời điêm giao dịch hoàn thành theo quy định của pháp luật.:",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế > Khoản 3",
+              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 23 của Luật này là thời điểm giao dịch hoàn thành theo quy định của pháp luật.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế > Khoản 3",
               "references": [
                 {
                   "text_match": "tại Điều 23",
@@ -2090,9 +2097,14 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điêu 24 của Luật này là thời điêm hợp đông chuyên nhượng có hiệu lực theo quy định của pháp luật hoặc thời điêm đăng ký quyên sử dụng, quyên sở hữu bất ' động sản.",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế > Khoản 4",
-              "references": [],
+              "content": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 24 của Luật này là thời điểm hợp đồng chuyển nhượng có hiệu lực theo quy định của pháp luật hoặc thời điểm đăng ký quyền sử dụng, quyền sở hữu bất động sản.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế > Khoản 4",
+              "references": [
+                {
+                  "text_match": "tại Điều 24",
+                  "target_id": "doc_109_2025_QH15_chuong_III_dieu_24"
+                }
+              ],
               "children": []
             },
             {
@@ -2100,21 +2112,20 @@
               "node_type": "Khoản",
               "node_index": "5",
               "title": null,
-              "content": "Chính phủ quy định chỉ tiết Điều này. |",
-              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điễm xác định thu nhập tính thuế > Khoản 5",
+              "content": "Chính phủ quy định chi tiết Điều này.",
+              "breadcrumb": "Luật 109/2025/QH15 > Chương III > Điều 28: Thời điểm xác định thu nhập tính thuế > Khoản 5",
               "references": [],
               "children": []
             }
           ]
         }
-      ],
-      "lead_in_text": "CĂN CỨ TÍNH THUÉ ĐÓI VỚI CÁ NHÂN KHÔNG CƯ TRÚ"
+      ]
     },
     {
       "node_id": "doc_109_2025_QH15_chuong_IV",
       "node_type": "Chương",
       "node_index": "IV",
-      "title": "",
+      "title": "ĐIỀU KHOẢN THI HÀNH",
       "content": "",
       "breadcrumb": "Luật 109/2025/QH15 > Chương IV",
       "references": [],
@@ -2133,7 +2144,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026, trừ trường hợp quy định tại khoản 2 Điêu này.: 15",
+              "content": "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026, trừ trường hợp quy định tại khoản 2 Điều này.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 1",
               "references": [],
               "children": []
@@ -2143,7 +2154,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Các quy định liên quan đến thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú áp dụng từ kỳ tính thuê năm 2026.",
+              "content": "Các quy định liên quan đến thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú áp dụng từ kỳ tính thuế năm 2026.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 2",
               "references": [],
               "children": []
@@ -2153,7 +2164,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "Luật Thuế thu nhập cá nhân số 04/2007/QH12 đã được sửa đổi, bố sung một sô điêu theo Luật sô 26/2012/QH13, Luật sô 71/2014/QH13, Luật sô 31/2024/QHI5, Luật sõ 43/2024/QHI5, Luật sô 48/2024/QHI5, Luật sô 56/2025/QH15, Luật số 71/2025/QH15 và Luật số 93/2025/QH15 hết hiệu lực kể từ ngày Luật này có hiệu lực thị hành; riêng các quy định liên quan đên thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú hết hiệu lực thi hành từ kỳ tính thuế năm 2026.",
+              "content": "Luật Thuế thu nhập cá nhân số 04/2007/QH12 đã được sửa đổi, bổ sung một số điều theo Luật số 26/2012/QH13, Luật số 71/2014/QH13, Luật số 31/2024/QH15, Luật số 43/2024/QH15, Luật số 48/2024/QH15, Luật số 56/2025/QH15, Luật số 71/2025/QH15 và Luật số 93/2025/QH15 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành; riêng các quy định liên quan đến thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú hết hiệu lực thi hành từ kỳ tính thuế năm 2026.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 3",
               "references": [
                 {
@@ -2168,25 +2179,121 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Trường hợp có quy định khác nhau về ưu đãi thuế giữa Luật này với Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điêu 10 của Luật Tô chức Chính phủ thì áp dụng theo quy định của Luật Thủ đô, nghị quyêt của Quốc hội và giải pháp quy định tại điêm h khoản 8 Điêu 10 của Luật Tô chức Chính phủ. Trường hợp quy định tại Luật này ưu đãi hơn thì người nộp thuê được lựa chọn áp dụng mức ưu đãi có lợi nhât. Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XƑ, Kỳ họp thứ 10 thông qua ngày 10 tháng 12 năm 2025. lẾ CHỦ TỊCH QUÓC HỘI _`Roae Trần Thanh Mẫn",
+              "content": "Trường hợp có quy định khác nhau về ưu đãi thuế giữa Luật này với Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ thì áp dụng theo quy định của Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ. Trường hợp quy định tại Luật này ưu đãi hơn thì người nộp thuế được lựa chọn áp dụng mức ưu đãi có lợi nhất.",
               "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 4",
               "references": [
                 {
-                  "text_match": "Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điêu 10 của Luật Tô chức Chính phủ thì áp dụng",
-                  "target_id": "external_luat_thu_do_nghi_quyet_cua_quoc_hoi_va_giai_phap_quy_dinh_tai_diem_h_khoan_8_dieu_10_cua_luat_to_chuc_chinh_phu_thi_ap_dung"
+                  "text_match": "Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ thì áp dụng",
+                  "target_id": "external_luat_thu_do"
                 },
                 {
-                  "text_match": "theo quy định của Luật Thủ đô, nghị quyêt của Quốc hội và giải pháp quy định tại điêm h khoản 8 Điêu 10 của Luật Tô chức Chính phủ",
-                  "target_id": "external_luat_thu_do_nghi_quyet_cua_quoc_hoi_va_giai_phap_quy_dinh_tai_diem_h_khoan_8_dieu_10_cua_luat_to_chuc_chinh_phu"
+                  "text_match": "tại điểm h khoản 8 Điều 10",
+                  "target_id": "external_luat_thu_do_dieu_10_khoan_8_diem_h"
+                },
+                {
+                  "text_match": "tại điểm h khoản 8 Điều 10",
+                  "target_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_8_diem_h"
                 }
               ],
               "children": []
             }
           ]
         }
-      ],
-      "lead_in_text": "ĐIÊU KHOẢN THỊ HÀNH"
+      ]
     }
   ],
-  "tables": []
+  "tables": [
+    {
+      "table_index": 0,
+      "headers": [
+        "Bậc thuế",
+        "Phần thu nhập tính thuế/năm (triệu đồng)",
+        "Phần thu nhập tính thuế/tháng (triệu đồng)",
+        "Thuế suất (%)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Đến 120",
+          "Đến 10",
+          "5"
+        ],
+        [
+          "2",
+          "Trên 120 đến 360",
+          "Trên 10 đến 30",
+          "10"
+        ],
+        [
+          "3",
+          "Trên 360 đến 720",
+          "Trên 30 đến 60",
+          "20"
+        ],
+        [
+          "4",
+          "Trên 720 đến 1.200",
+          "Trên 60 đến 100",
+          "30"
+        ],
+        [
+          "5",
+          "Trên 1.200",
+          "Trên 100",
+          "35"
+        ]
+      ],
+      "row_count": 5,
+      "col_count": 4,
+      "page_number": 0,
+      "extraction_strategy": "docx"
+    },
+    {
+      "headers": [
+        "Bậc",
+        "Phần thu nhập tính thuế/năm (triệu đồng)",
+        "Phần thu nhập tính thuế/tháng (triệu đồng)",
+        "Thuế suất (%)"
+      ],
+      "rows": [
+        [
+          "1",
+          "Đến 120",
+          "Đến 10",
+          "5"
+        ],
+        [
+          "2",
+          "Trên 120 đến 360",
+          "Trên 10 đến 30",
+          "10"
+        ],
+        [
+          "3",
+          "Trên 360 đến 720",
+          "Trên 30 đến 60",
+          "20"
+        ],
+        [
+          "4",
+          "Trên 720 đến 1.200",
+          "Trên 60 đến 100",
+          "30"
+        ],
+        [
+          "5",
+          "Trên 1.200",
+          "Trên 100",
+          "35"
+        ]
+      ],
+      "row_count": 5,
+      "col_count": 4,
+      "extraction_strategy": "patch",
+      "page_number": 8,
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_9_khoan_2",
+      "description": "Biểu thuế lũy tiến từng phần (Điều 9 Luật 109/2025/QH15)",
+      "table_index": 1
+    }
+  ]
 }

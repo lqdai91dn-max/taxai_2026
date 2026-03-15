@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "document_id": "110_2025_UBTVQH15",
+    "document_type": "Nghị quyết",
+    "document_number": "110/2025/UBTVQH15",
+    "title": "Về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân ỦY BAN THƯỜNG VỤ QUỐC HỘI",
+    "issue_date": "2026-01-01",
+    "effective_date": "2026-01-01"
+  },
+  "data": [
+    {
+      "node_id": "doc_110_2025_UBTVQH15_dieu_1",
+      "node_type": "Điều",
+      "node_index": "1",
+      "title": "Mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+      "content": "",
+      "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+      "references": [
+        {
+          "text_match": "tại khoản 1 Điều 19",
+          "target_id": "external_luat_thue_thu_nhap_ca_nhan_nhu_dieu_19_khoan_1"
+        }
+      ],
+      "children": [],
+      "lead_in_text": "Điều chỉnh mức giảm trừ gia cảnh quy định tại khoản 1 Điều 19 của Luật Thuế thu nhập cá nhân như sau:"
+    },
+    {
+      "node_id": "doc_110_2025_UBTVQH15_dieu_2",
+      "node_type": "Điều",
+      "node_index": "2",
+      "title": "Hiệu lực thi hành",
+      "content": "",
+      "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành",
+      "references": [],
+      "children": [
+        {
+          "node_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_1",
+          "node_type": "Khoản",
+          "node_index": "1",
+          "title": null,
+          "content": "Nghị quyết này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026 và áp dụng từ kỳ tính thuế năm 2026.",
+          "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 1",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_2",
+          "node_type": "Khoản",
+          "node_index": "2",
+          "title": null,
+          "content": "Nghị quyết số 954/2020/UBTVQH14 ngày 02 tháng 6 năm 2020 của ủy ban Thường vụ Quốc hội về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân hết hiệu lực kể từ ngày Nghị quyết này có hiệu lực thi hành. Nghị quyết này được Ủy ban Thường vụ Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XV, Phiên họp thứ 50 thông qua ngày 17 tháng 10 năm 2025.",
+          "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 2",
+          "references": [
+            {
+              "text_match": "Nghị quyết số 954/2020/UBTVQH14",
+              "target_id": "external_nghi_quyet_954_2020_ubtvqh14"
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ],
+  "tables": []
+}

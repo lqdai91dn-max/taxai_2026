@@ -43,6 +43,18 @@
     {
       "op": "remove_node",
       "node_id": "doc_373_2025_NDCP_phu_luc_II"
+    },
+    {
+      "op": "remove_node",
+      "node_id": "doc_373_2025_NDCP_phu_luc_1"
+    },
+    {
+      "op": "remove_node",
+      "node_id": "doc_373_2025_NDCP_phu_luc_1"
+    },
+    {
+      "op": "remove_node",
+      "node_id": "doc_373_2025_NDCP_phu_luc_1"
     }
   ]
 }

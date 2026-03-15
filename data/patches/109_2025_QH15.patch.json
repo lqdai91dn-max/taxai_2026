@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "doc_id": "109_2025_QH15",
+  "description": "Bug A: OCR sai số thuế suất 59%→5% tại Điều 22 (cá nhân không cư trú đầu tư vốn). Bug B: pdfplumber drop spaces giữa các từ tại nhiều điều (cánhân, thunhập, tronglãnhthổ, v.v.) và nhầm vị trí 'cư' trong một số câu. Bug C: Biểu thuế lũy tiến (Điều 9) không có border → pdfplumber không nhận dạng là table → nội dung inline trong content. Fix: tách introductory text + add_table op thêm structured table vào top-level tables.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_22",
+      "field": "lead_in_text",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập từ đầu tư vốn của cá nhân không cư trú được xác định bằng tổng số thu nhập mà cá nhân không cư trú nhận được từ việc đầu tư vốn vào tổ chức, cá nhân tại Việt Nam nhân (x) với thuế suất 5%."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_21",
+      "field": "lead_in_text",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân không cư trú được xác định bằng tổng số tiền lương, tiền công mà cá nhân không cư trú nhận được do thực hiện công việc tại Việt Nam nhân (x) với thuế suất 20%, không phân biệt nơi trả thu nhập."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_14_khoan_1",
+      "field": "content",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng bất động sản của cá nhân cư trú được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 2%."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_11",
+      "field": "lead_in_text",
+      "value": "các khoản giảm trừ khác Cá nhân cư trú được giảm trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công các khoản sau đây:"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_6",
+      "field": "lead_in_text",
+      "value": "Căn cứ quy định của Luật này, Chính phủ quy định về kỳ tính thuế theo năm đối với thu nhập từ kinh doanh, thu nhập từ tiền lương, tiền công của cá nhân cư trú; kỳ tính thuế theo từng lần phát sinh đối với các khoản thu nhập khác của cá nhân cư trú và cá nhân không cư trú; thời điểm xác định thu nhập tính thuế; quyết toán thuế; hoàn thuế đối với trường hợp cá nhân có số thuế đã nộp lớn hơn số thuế phải nộp hoặc chưa đến mức phải nộp; trách nhiệm khấu trừ, khai thay, nộp thay cho người nộp thuế phù hợp với quy định của Luật Quản lý thuế."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_2_khoan_1",
+      "field": "content",
+      "value": "Người nộp thuế thu nhập cá nhân là cá nhân cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong và ngoài lãnh thổ Việt Nam và cá nhân không cư trú có thu nhập chịu thuế quy định tại Điều 3 của Luật này phát sinh trong lãnh thổ Việt Nam."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_2_diem_a",
+      "field": "content",
+      "value": "Tiền lương, tiền công và các khoản có tính chất tiền lương, tiền công;"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_4_diem_a",
+      "field": "content",
+      "value": "Thu nhập từ chuyển nhượng phần vốn trong các tổ chức kinh tế;"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_5_diem_c",
+      "field": "content",
+      "value": "Thu nhập từ chuyển nhượng quyền thuê đất, quyền thuê mặt nước;"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_4_khoan_4",
+      "field": "content",
+      "value": "Thu nhập của hộ gia đình, cá nhân trực tiếp sản xuất sản phẩm cây trồng, rừng trồng, chăn nuôi, thủy sản nuôi trồng, đánh bắt chưa qua chế biến thành các sản phẩm khác hoặc chỉ qua sơ chế thông thường; sản xuất muối; thu nhập từ lợi tức cổ phần của thành viên hợp tác xã, liên hiệp hợp tác xã nông nghiệp, cá nhân là nông dân ký kết hợp đồng với doanh nghiệp tham gia \"Cánh đồng lớn\", trồng rừng sản xuất, nuôi trồng thủy sản."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_4_khoan_12",
+      "field": "content",
+      "value": "Thu nhập nhận được từ các tổ chức và quỹ từ thiện được cơ quan nhà nước có thẩm quyền cho phép thành lập hoặc công nhận, hoạt động vì mục đích từ thiện, nhân đạo, không vì mục tiêu lợi nhuận."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_5_khoan_3",
+      "field": "content",
+      "value": "Miễn thuế thu nhập cá nhân trong thời hạn 05 năm đối với thu nhập từ tiền lương, tiền công của cá nhân là nhân lực công nghệ cao thực hiện hoạt động nghiên cứu và phát triển công nghệ hoặc công nghệ chiến lược thuộc Danh mục công nghệ cao được ưu tiên đầu tư phát triển hoặc Danh mục công nghệ chiến lược, Danh mục sản phẩm công nghệ chiến lược theo quy định của pháp luật về công nghệ cao."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_7_khoan_3_diem_d",
+      "field": "content",
+      "value": "Sản xuất, vận tải, dịch vụ có gắn với hàng hoá, xây dựng có bao thầu nguyên vật liệu: thuế suất 1,5%;"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_15_khoan_3",
+      "field": "content",
+      "value": "Thời điểm xác định thu nhập tính thuế từ trúng thưởng là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_16_khoan_3",
+      "field": "content",
+      "value": "Thời điểm xác định thu nhập tính thuế từ tiền bản quyền là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_18_khoan_3_diem_b",
+      "field": "content",
+      "value": "Đối với thu nhập từ nhận quà tặng là thời điểm tổ chức, cá nhân tặng cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_19_khoan_2",
+      "field": "content",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân cư trú quy định tại điểm d và điểm đ khoản 10 Điều 3 của Luật này được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 0,1%."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_1_diem_d",
+      "field": "content",
+      "value": "Thu nhập từ hoạt động kinh doanh thương mại điện tử, kinh doanh dựa trên nền tảng số."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_6_diem_a",
+      "field": "content",
+      "value": "Trúng thưởng xổ số;"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_9_khoan_2",
+      "field": "content",
+      "value": "Biểu thuế luỹ tiến từng phần được quy định như sau:"
+    },
+    {
+      "op": "add_table",
+      "table": {
+        "headers": [
+          "Bậc",
+          "Phần thu nhập tính thuế/năm (triệu đồng)",
+          "Phần thu nhập tính thuế/tháng (triệu đồng)",
+          "Thuế suất (%)"
+        ],
+        "rows": [
+          ["1", "Đến 120", "Đến 10", "5"],
+          ["2", "Trên 120 đến 360", "Trên 10 đến 30", "10"],
+          ["3", "Trên 360 đến 720", "Trên 30 đến 60", "20"],
+          ["4", "Trên 720 đến 1.200", "Trên 60 đến 100", "30"],
+          ["5", "Trên 1.200", "Trên 100", "35"]
+        ],
+        "row_count": 5,
+        "col_count": 4,
+        "extraction_strategy": "patch",
+        "page_number": 8,
+        "node_id": "doc_109_2025_QH15_chuong_II_dieu_9_khoan_2",
+        "description": "Biểu thuế lũy tiến từng phần (Điều 9 Luật 109/2025/QH15)"
+      }
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_1_diem_a",
+      "field": "content",
+      "value": "Mức giảm trừ đối với người nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm);"
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_23_khoan_1",
+      "field": "content",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng vốn của cá nhân không cư trú được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 20% theo từng lần phát sinh, không phân biệt việc chuyển nhượng được thực hiện tại Việt Nam hay tại nước ngoài. Trong đó, thu nhập tính thuế từ chuyển nhượng vốn được xác định bằng giá chuyển nhượng trừ (-) đi giá mua và các khoản chi phí hợp lý liên quan đến việc tạo ra thu nhập từ chuyển nhượng phần vốn tại tổ chức, cá nhân Việt Nam. Trường hợp không xác định được giá mua và các chi phí liên quan đến việc chuyển nhượng vốn thì thuế thu nhập cá nhân được xác định bằng giá chuyển nhượng phần vốn tại tổ chức, cá nhân Việt Nam nhân (x) với thuế suất 2%."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_27_khoan_1",
+      "field": "content",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại các điểm a, b và c khoản 10 Điều 3 của Luật này được xác định bằng thu nhập tính thuế nhân (x) với thuế suất 5%. Thu nhập tính thuế là phần thu nhập vượt trên 20 triệu đồng mà người nộp thuế nhận được theo từng lần phát sinh."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_27_khoan_2",
+      "field": "content",
+      "value": "Thuế thu nhập cá nhân đối với thu nhập khác của cá nhân không cư trú quy định tại điểm d và điểm đ khoản 10 Điều 3 của Luật này được xác định bằng giá chuyển nhượng nhân (x) với thuế suất 0,1%."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_28_khoan_1",
+      "field": "content",
+      "value": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 20 của Luật này là thời điểm cá nhân không cư trú nhận được thu nhập hoặc thời điểm xuất hoá đơn bán hàng hoá, cung cấp dịch vụ."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_28_khoan_2",
+      "field": "content",
+      "value": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại các điều 21, 22, 25, 26 và 27 của Luật này là thời điểm tổ chức, cá nhân tại Việt Nam trả thu nhập cho cá nhân không cư trú hoặc thời điểm cá nhân không cư trú nhận được thu nhập."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_III_dieu_28_khoan_4",
+      "field": "content",
+      "value": "Thời điểm xác định thu nhập tính thuế đối với thu nhập quy định tại Điều 24 của Luật này là thời điểm hợp đồng chuyển nhượng có hiệu lực theo quy định của pháp luật hoặc thời điểm đăng ký quyền sử dụng, quyền sở hữu bất động sản."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_IV_dieu_29_khoan_1",
+      "field": "content",
+      "value": "Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026, trừ trường hợp quy định tại khoản 2 Điều này."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_IV_dieu_29_khoan_2",
+      "field": "content",
+      "value": "Các quy định liên quan đến thu nhập từ kinh doanh, từ tiền lương, tiền công của cá nhân cư trú áp dụng từ kỳ tính thuế năm 2026."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_109_2025_QH15_chuong_IV_dieu_29_khoan_4",
+      "field": "content",
+      "value": "Trường hợp có quy định khác nhau về ưu đãi thuế giữa Luật này với Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ thì áp dụng theo quy định của Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ. Trường hợp quy định tại Luật này ưu đãi hơn thì người nộp thuế được lựa chọn áp dụng mức ưu đãi có lợi nhất."
+    }
+  ]
+}

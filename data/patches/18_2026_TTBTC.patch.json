@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "doc_id": "18_2026_TTBTC",
+  "description": "BUG-009: Gemini OCR đánh nhầm node_index='3' cho khoản chuyển tiếp (Trường hợp các văn bản quy phạm pháp luật...) dưới Điều 6. Node này là khoản độc lập nằm sau khoản 4, cần index='5' để tránh duplicate.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_18_2026_TTBTC_dieu_6_khoan_3_2",
+      "field": "node_index",
+      "value": "5"
+    }
+  ]
+}

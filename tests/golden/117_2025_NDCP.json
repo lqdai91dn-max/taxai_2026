@@ -4,7 +4,7 @@
     "document_type": "Nghị định",
     "document_number": "117/2025/NĐ-CP",
     "title": "Quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân",
-    "issue_date": "2025-06-09",
+    "issue_date": "2025-02-18",
     "effective_date": "2025-07-01"
   },
   "data": [
@@ -12,7 +12,7 @@
       "node_id": "doc_117_2025_NDCP_chuong_I",
       "node_type": "Chương",
       "node_index": "I",
-      "title": "",
+      "title": "QUY ĐỊNH CHUNG",
       "content": "",
       "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương I",
       "references": [],
@@ -114,7 +114,7 @@
               "node_type": "Khoản",
               "node_index": "1",
               "title": null,
-              "content": "Tổ chức là nhà quản lý sàn giao dịch thương mại điện tử, tổ chức là nhà quản lý nền tảng số có chức năng thanh toán là nhà quản lý nền tảng được thiết lập để người mua thanh toán trực tiếp thông qua các phương tiện thanh toán như ví điện tử, thẻ ngân hàng hoặc thanh toán, chuyển khoản qua tài khoản thanh toán, hệ thống chuyển khoản tích hợp, thanh toán tiền mặt khi nhận hàng (giao hàng thu tiền hộ - Cash On Delivery) và các phương tiện thanh toán khác theo quy định của pháp luật.",
+              "content": "Tổ chức là nhà quản lý sàn giao dịch thương mại điện tử, tổ chức là nhà quản lý nền tảng số có chức năng thanh toán là nhà quản lý nền tảng được thiết lập để người mua thanh toán trực tiếp thông qua các phương tiện thanh toán như ví điện tử, thẻ ngân hàng hoặc thanh toán, chuyển khoản qua tài khoản thanh toán, hệ thống chuyển khoản tích hợp, thanh toán tiền mặt khi nhận hàng (giao hàng thu tiền hộ - Cash On De li ve ry) và các phương tiện thanh toán khác theo quy định của pháp luật.",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương I > Điều 3: Giải thích từ ngữ > Khoản 1",
               "references": [],
               "children": []
@@ -152,14 +152,13 @@
           ],
           "lead_in_text": "Trong Nghị định này, các từ ngữ dưới đây được hiểu như sau:"
         }
-      ],
-      "lead_in_text": "QUY ĐỊNH CHUNG"
+      ]
     },
     {
       "node_id": "doc_117_2025_NDCP_chuong_II",
       "node_type": "Chương",
       "node_index": "II",
-      "title": "",
+      "title": "PHẠM VI TRÁCH NHIỆM, CÁCH THỨC KHẤU TRỪ, NỘP THUẾ THAY, KÊ KHAI SỐ THUẾ ĐÃ KHẤU TRỪ CỦA TỔ CHỨC QUẢN LÝ NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ THUỘC ĐỐI TƯỢNG KHẤU TRỪ, NỘP THUẾ THAY",
       "content": "",
       "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II",
       "references": [],
@@ -224,7 +223,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
+              "content": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2",
               "references": [],
               "children": [
@@ -233,7 +232,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Tỷ lệ % tính thuế giá trị gia tăng thực hiện theo quy định",
+                  "content": "Tỷ lệ % tính thuế giá trị gia tăng thực hiện theo quy định của Luật Thuế giá trị gia tăng như sau:",
                   "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm a",
                   "references": [
                     {
@@ -272,15 +271,14 @@
                       "references": [],
                       "children": []
                     }
-                  ],
-                  "trailing_text": "của Luật Thuế giá trị gia tăng như sau:"
+                  ]
                 },
                 {
                   "node_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_diem_b",
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy",
+                  "content": "Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:",
                   "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm b",
                   "references": [
                     {
@@ -309,8 +307,7 @@
                       "references": [],
                       "children": []
                     }
-                  ],
-                  "trailing_text": "định của Luật Thuế thu nhập cá nhân như sau:"
+                  ]
                 },
                 {
                   "node_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_diem_c",
@@ -332,8 +329,7 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ."
+              ]
             }
           ]
         },
@@ -397,7 +393,7 @@
               "node_type": "Khoản",
               "node_index": "3",
               "title": null,
-              "content": "",
+              "content": "Địa điểm, thời hạn nộp hồ sơ khai và nộp số thuế đã khấu trừ:",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 6: Cách thức kê khai và nộp số thuế đã khấu trừ > Khoản 3",
               "references": [],
               "children": [
@@ -436,8 +432,7 @@
                   "references": [],
                   "children": []
                 }
-              ],
-              "lead_in_text": "Địa điểm, thời hạn nộp hồ sơ khai và nộp số thuế đã khấu trừ:"
+              ]
             }
           ]
         },
@@ -525,14 +520,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "PHẠM VI TRÁCH NHIỆM, CÁCH THỨC KHẤU TRỪ, NỘP THUẾ THAY, KÊ KHAI SỐ THUẾ ĐÃ KHẤU TRỪ CỦA TỔ CHỨC QUẢN LÝ NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ THUỘC ĐỐI TƯỢNG KHẤU TRỪ, NỘP THUẾ THAY"
+      ]
     },
     {
       "node_id": "doc_117_2025_NDCP_chuong_III",
       "node_type": "Chương",
       "node_index": "III",
-      "title": "",
+      "title": "HỒ SƠ, THỦ TỤC KHAI THUẾ, NỘP THUẾ VÀ HOÀN THUẾ CỦA CÁC HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ",
       "content": "",
       "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III",
       "references": [],
@@ -621,7 +615,7 @@
                   "node_type": "Điểm",
                   "node_index": "c",
                   "title": null,
-                  "content": "Cơ quan tiếp nhận và giải quyết hồ sơ khai thuế là cơ quan thuế quản lý địa bàn nơi hộ, cá nhân cư trú (nơi ở hiện tại/tạm trú/thường trú).",
+                  "content": "Cơ quan tiếp nhận và giải quyết hồ sơ khai thuế là cơ quan thuế quản lý địa bàn nơi hộ, cá nhân cư trú (nơi ở hiện tại/ tạm trú/ thường trú).",
                   "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 8: Hồ sơ, thủ tục kê khai, nộp thuế của hộ, cá nhân cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 3 > Điểm c",
                   "references": [],
                   "children": []
@@ -659,7 +653,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "",
+              "content": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2",
               "references": [
                 {
@@ -754,8 +748,7 @@
                     }
                   ]
                 }
-              ],
-              "lead_in_text": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:"
+              ]
             },
             {
               "node_id": "doc_117_2025_NDCP_chuong_III_dieu_9_khoan_3",
@@ -883,21 +876,20 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Cơ quan tiếp nhận và giải quyết hồ sơ hoàn thuế là cơ quan thuế quản lý địa bàn nơi hộ, cá nhân cư trú (nơi ở hiện tại/tạm trú/thường trú).",
+              "content": "Cơ quan tiếp nhận và giải quyết hồ sơ hoàn thuế là cơ quan thuế quản lý địa bàn nơi hộ, cá nhân cư trú (nơi ở hiện tại/ tạm trú/ thường trú).",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 10: Hồ sơ, thủ tục hoàn thuế > Khoản 4",
               "references": [],
               "children": []
             }
           ]
         }
-      ],
-      "lead_in_text": "HỒ SƠ, THỦ TỤC KHAI THUẾ, NỘP THUẾ VÀ HOÀN THUẾ CỦA CÁC HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ"
+      ]
     },
     {
       "node_id": "doc_117_2025_NDCP_chuong_IV",
       "node_type": "Chương",
       "node_index": "IV",
-      "title": "",
+      "title": "TỔ CHỨC THỰC HIỆN VÀ ĐIỀU KHOẢN THI HÀNH",
       "content": "",
       "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương IV",
       "references": [],
@@ -1025,8 +1017,23 @@
           "children": [],
           "lead_in_text": "Nghị định này có hiệu lực thi hành kể từ ngày 01 tháng 7 năm 2025. Trường hợp các văn bản quy phạm pháp luật quy định viện dẫn tại Nghị định này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo văn bản được sửa đổi, bổ sung hoặc thay thế./."
         }
+      ]
+    },
+    {
+      "node_id": "doc_117_2025_NDCP_phu_luc_1",
+      "node_type": "Phụ lục",
+      "node_index": "1",
+      "title": "Phụ lục 1",
+      "content": "",
+      "breadcrumb": "Nghị định 117/2025/NĐ-CP > Phụ lục 1: Phụ lục 1",
+      "references": [
+        {
+          "text_match": "Nghị định số 117/2025/NĐ-CP",
+          "target_id": "external_nghi_dinh_117_2025_nd_cp"
+        }
       ],
-      "lead_in_text": "TỔ CHỨC THỰC HIỆN VÀ ĐIỀU KHOẢN THI HÀNH"
+      "children": [],
+      "lead_in_text": "(Kèm theo Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ) Mẫu số: 01/CNKD-TMĐT CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc TỜ KHAI KHẤU TRỪ THUẾ ĐỐI VỚI HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ [01] Kỳ tính thuế: Tháng... năm…….. [02] Lần đầu: □\t[03] Bổ sung lần thứ:.... [04] Tên của tổ chức quản lý nền tảng thương mại điện tử:…………………………….. [05] Mã số thuế khấu trừ, nộp thay: …………………………………………………...... [06] Tên đại lý thuế (nếu có): …………………………………………………................ [07] Mã số thuế: ………………………………………………….................................... [08] Hợp đồng đại lý thuế: Số:………………………….. Ngày:………………………... Đơn vị tiền:... Tôi cam đoan số liệu khai trên là đúng và chịu trách nhiệm trước pháp luật về những số liệu đã khai. Mẫu số: 01-1/BK-CNKD-TMĐT BẢNG KÊ CHI TIẾT SỐ THUẾ ĐÃ KHẤU TRỪ CỦA HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ (Kèm theo Tờ khai 01/CNKD-TMĐT) [01] Kỳ tính thuế:\tTháng…………. năm………………… [02] Lần đầu: □\t\t[03] Bổ sung lần thứ:.... [04] Tên của tổ chức quản lý nền tảng thương mại điện tử: ………………………………………… [05] Mã số thuế khấu trừ, nộp thay: ………………………………………………………….. [06] Tên đại lý thuế (nếu có): ………………………………………………………………….. [07] Mã số thuế:\t…………………………………………………………………………………… [08] Hợp đồng đại lý thuế: Số: ………………………………………… Ngày: ……………… Đơn vị tiền:... Tôi cam đoan số liệu khai trên là đúng và chịu trách nhiệm trước pháp luật về những số liệu đã khai. Ghi chú: - Tên nền tảng thương mại điện tử (cột 02): Ghi đầy đủ tên tổ chức quản lý nền tảng thương mại điện tử. - Cá nhân không cư trú (cột 07): Tích vào ô này nếu kê khai khấu trừ thuế của cá nhân không cư trú - Nhóm ngành nghề (cột 08): (01) Hàng hóa; (02) Dịch vụ: (03) Vận tải, dịch vụ có gắn với hàng hóa; (04) Không xác định được hàng hóa hoặc dịch vụ hoặc loại dịch vụ. Trường hợp một gian hàng kinh doanh hàng hóa, dịch vụ thuộc các nhóm ngành nghề khác nhau thì mỗi ngành nghề kê khai một dòng. - Doanh thu của hộ, cá nhân (cột 09): Kê khai doanh thu phát sinh trong tháng theo từng nhóm ngành nghề (sau khi đã trừ đi doanh thu của giao dịch bị hủy hoặc trả lại hàng). - Số thuế GTGT (cột 10): Kê khai số thuế GTGT đã khấu trừ phát sinh trong tháng theo từng nhóm ngành nghề (sau khi đã trừ đi thuế GTGT đã khấu trừ của giao dịch bị hủy hoặc trả lại hàng). - Số thuế TNCN (cột 11): Kê khai số thuế TNCN đã khấu trừ phát sinh trong tháng theo từng nhóm ngành nghề (sau khi đã trừ đi thuế TNCN đã khấu trừ của giao dịch bị hủy hoặc trả lại hàng). Mẫu sổ: 01/BKNT-TMĐT BẢNG KÊ CHI TIẾT SỐ TIỀN NỘP THUẾ CỦA TỔ CHỨC QUẢN LÝ NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ (Kèm theo chứng từ nộp ngân sách nhà nước: Số ……., số tham chiếu ……., ngày …/…/…) [01] Ngày lập: …/…/… [02] Lần gửi thứ:.... [03] Tên của tổ chức quản lý nền tảng thương mại điện tử: …………………………………… [04] Mã số thuế khấu trừ, nộp thay: ………………………………………………………………. [05] Số tờ khai/ Số quyết định/ Số thông báo/ Mã định danh hồ sơ (ID):………………………... [06] Kỳ thuế/ Ngày quyết định/ Ngày thông báo: ………………………………………………….. [07] Tên đại lý thuế (nếu có): ……………………………………………………………………… [08] Mã số thuế: …………………………………………………………………………………….. [09] Hợp đồng đại lý thuế: Số: ………………………………………… Ngày:…………………… Đơn vị tiền:... Ghi chú: Mẫu số: 02/CNKD-TMĐT CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc TỜ KHAI THUẾ ĐỐI VỚI HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ ☐ Hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử thực hiện kê khai theo tháng. ☐ Hộ, cá nhân có hoạt động kinh doanh không thường xuyên trên nền tảng thương mại điện tử thực hiện kê khai theo từng lần phát sinh. [01] Kỳ tính thuế: \t[01a] Tháng... năm…….. [01b] Lần phát sinh: Ngày... tháng.... năm.... [02] Lần đầu: ☐\t\t[03] Bổ sung lần thứ:.... [04] Người nộp thuế: ……………………………………………………………………………… [05] Mã số thuế:\t…………………………………………………………………………………… [06] Tên đại lý thuế (nếu có): …………………………………………………………………… [07] Mã số thuế: …………………………………………………………………………………… [08] Hợp đồng đại lý thuế: Số: ………………………………………… Ngày:…………………. [09] Tên của tổ chức/ cá nhân khai thay (nếu có): ……………………………………………… [10] Mã số thuế: …………………………………………………………………………………… A. KÊ KHAI THUẾ GIÁ TRỊ GIA TĂNG (GTGT), THUẾ THU NHẬP CÁ NHÂN (TNCN) Đơn vị tiền: Đồng Việt Nam B. KÊ KHAI THUẾ TIÊU THỤ ĐẶC BIỆT (TTĐB) Đơn vị tiền: Đồng Việt Nam Tôi cam đoan số liệu khai trên là đúng và chịu trách nhiệm trước pháp luật về những số liệu đã khai. Mẫu số: 03/CNNN-TMĐT CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc TỜ KHAI THUẾ ĐỐI VỚI CÁ NHÂN KHÔNG CƯ TRÚ KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ [01] Kỳ tính thuế: Ngày….. tháng….. năm……….. [02] Lần đầu: ☐ [03] Bổ sung lần thứ:.... [04] Người nộp thuế: ……………………………………………………………………………… [05] Mã số thuế: …………………………………………………………………………………… [06] Thông tin trong trường hợp người nộp thuế chưa được cấp mã số thuế: [06.1] Số hộ chiếu/ Số giấy thông hành/ Số CMND biên giới/ Số giấy tờ định danh cá nhân khác: ……………. Ngày cấp: ……………………. Nơi cấp………………. [06.2] Ngày, tháng, năm sinh: ……………………………………………………………………… [06.3] Địa chỉ: ………………………………………………………………………………………… [06.4] Quốc tịch: ……………………………………………………………………………………… [07] Email: …………………………………………………………………………………………….. [08] Tên đại lý thuế (nếu có): ……………………………………………………………………….. [09] Mã số thuế: ………………………………………………………………………………………. [10] Hợp đồng đại lý thuế: Số: ………………………………………… Ngày:……………………. [11] Tên của tổ chức khai thay (nếu có): ………………………………………………………….. [12] Mã số thuế: ………………………………………………………………………………………. KÊ KHAI THUẾ GIÁ TRỊ GIA TĂNG (GTGT), THUẾ THU NHẬP CÁ NHÂN (TNCN) Đơn vị tiền:... Tôi cam đoan số liệu khai trên là đúng và chịu trách nhiệm trước pháp luật về những số liệu đã khai. Mẫu số: 01/CTKT-TMĐT CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc CHỨNG TỪ KHẤU TRỪ THUẾ ĐỐI VỚI HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ Năm:... I. THÔNG TIN TỔ CHỨC KHẤU TRỪ THUẾ [01] Tên của tổ chức quản lý nền tảng thương mại điện tử: ………………………………. [02] Mã số thuế khấu trừ, nộp thay: …………………………………………………………… [03] Địa chỉ: ……………………………………………………………………………………… [04] Điện thoại: …………………………………………………………………………………… II. THÔNG TIN GIAN HÀNG HOẶC HỘ, CÁ NHÂN [05] Tên gian hàng/ Tên tài khoản trên nền tảng thương mại điện tử:…………………….. [06] Tên hộ/Họ và tên cá nhân: ………………………………………………………………… [07] Mã số thuế: ………………………………………………………………………………… [08] Quốc tịch: …………………………………………………………………………………… [09] Địa chỉ hoặc điện thoại liên hệ: …………………………………………………………… [10] Số CCCD hoặc số giấy tờ định danh (T rường hợp không có mã số thuế):…………… III. THÔNG TIN SỐ THUẾ ĐÃ KHẤU TRỪ Đơn vị tiền: … Mẫu số: 03/CNKD-TMĐT CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc VĂN BẢN ĐỀ NGHỊ HOÀN THUẾ CỦA HỘ, CÁ NHÂN CÓ HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ (Áp dụng cho hộ, cá nhân thuộc đối tượng được hoàn thuế) [01] Kỳ tính thuế:\tNăm............ [02] Lần đầu: ☐\t\t[03] Bổ sung lần thứ:.... [03] Người nộp thuế: ……………………………………………………………………………………………………………………………… [04] Mã số thuế: …………………………………………………………………………………………………………………………………… [05] Tên đại lý thuế (nếu có): …………………………………………………………………………………………………………………….. [06] Mã số thuế: …………………………………………………………………………………………………………………………………… [07] Hợp đồng đại lý thuế: Số: ………………………………………… Ngày: ………………………………………… [08] Tên của tổ chức/ cá nhân khai thay (nếu có): …………………………………………………………………….. [09] Mã số thuế: …………………………………………………………………………………… I. TỔNG DOANH THU TOÀN BỘ HOẠT ĐỘNG KINH DOANH CỦA HỘ, CÁ NHÂN Đơn vị tiền: Đồng Việt Nam II. SỐ THUẾ ĐÃ NỘP NSNN ĐỐI VỚI HOẠT ĐỘNG KINH DOANH TRÊN NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ [15] Số tiền người nộp thuế trực tiếp nộp vào NSNN: [15.1] Thuế GTGT:………………………… [15.2] Thuế TNCN:………………………… [16] Số tiền do tổ chức khấu trừ, nộp thay: [16.1] Thuế GTGT:………………………… [16.2] Thuế TNCN: ………………………… [17] Tổng cộng số tiền đã nộp NSNN: [17.1] Thuế GTGT: (= [15.1] + [16.1])…………………. [17.2] Thuế TNCN: (= [15.2] + [16.2]) ………………………… [17.3] Tổng cộng: (= [17.1] + [17.2]) ………………………… III. ĐỀ NGHỊ XỬ LÝ KHOẢN NỘP THỪA [18] Đề nghị hoàn trả: [18.1] Thuế GTGT: ………………………… [18.2] Thuế TNCN: ………………………… [18.3] Tổng cộng: ………………………… Hình thức hoàn trả: ☐ Chuyển khoản: Tên chủ tài khoản…………………………………… Tài khoản số: ………………………… Tại Ngân hàng/KBNN: ………………………… ☐ Tiền mặt: Tên người nhận tiền: Số CCCD/ Số định danh cá nhân/ Số Hộ chiếu: …………………. Ngày cấp:……./…../…… Nơi cấp:………………… Nơi nhận tiền hoàn thuế: Kho bạc Nhà nước [19] Đề nghị bù trừ nghĩa vụ thuế phải nộp các kỳ khác: [19.1] Thuế GTGT: ………………………… [19.2] Thuế TNCN: ………………………… [19.3] Tổng cộng: ………………………….. Thông tin người nộp thuế đề nghị bù trừ khoản nộp thừa với khoản nợ, khoản thu phát sinh hoặc đề nghị hoàn kiêm bù trừ thu ngân sách nhà nước: Đơn vị tiền: Đồng Việt Nam Tôi cam đoan số liệu khai trên là đúng và chịu trách nhiệm trước pháp luật về những số liệu đã khai."
     }
   ],
   "tables": [
@@ -1042,7 +1049,7 @@
           "Tờ khai khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử"
         ],
         [
-          "Mẫu số: 01- 1/BK-CNKD- TMĐT",
+          "Mẫu số: 01-1/BK-CNKD-TMĐT",
           "Bảng kê chi tiết số thuế đã khấu trừ của hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử"
         ],
         [
@@ -1068,8 +1075,8 @@
       ],
       "row_count": 7,
       "col_count": 2,
-      "extraction_strategy": "lines",
-      "page_number": 12
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 1,
@@ -1079,15 +1086,15 @@
         "Mã chỉ tiêu",
         "Doanh thu của hộ, cá nhân",
         "Số thuế đã khấu trừ",
-        "",
-        ""
+        "Số thuế đã khấu trừ",
+        "Số thuế đã khấu trừ"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "",
+          "STT",
+          "Nhóm ngành nghề",
+          "Mã chỉ tiêu",
+          "Doanh thu của hộ, cá nhân",
           "Thuế GTGT",
           "Thuế TNCN",
           "Tổng cộng"
@@ -1136,12 +1143,21 @@
           "",
           "",
           ""
+        ],
+        [
+          "",
+          "Tổng cộng:",
+          "[13]",
+          "",
+          "",
+          "",
+          ""
         ]
       ],
-      "row_count": 6,
+      "row_count": 7,
       "col_count": 7,
-      "extraction_strategy": "lines",
-      "page_number": 13
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 2,
@@ -1156,20 +1172,20 @@
         "Nhóm ngành nghề",
         "Doanh thu của hộ, cá nhân",
         "Số thuế đã khấu trừ",
-        "",
-        ""
+        "Số thuế đã khấu trừ",
+        "Số thuế đã khấu trừ"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+          "STT",
+          "Tên nền tảng thương mại điện tử",
+          "Mã quản lý trên nền tảng thương mại điện tử của người bán là hộ, cá nhân",
+          "Tên gian hàng/ Tên tài khoản trên nền tảng thương mại điện tử",
+          "Tên hộ/ Họ và tên cá nhân",
+          "Mã số thuế/ Số định danh cá nhân (Số CCCD/Số hộ chiếu/ Số giấy tờ định danh của hộ, cá nhân",
+          "Cá nhân không cư trú",
+          "Nhóm ngành nghề",
+          "Doanh thu của hộ, cá nhân",
           "Số thuế GTGT",
           "số thuế TNCN",
           "Tổng cộng"
@@ -1186,21 +1202,7 @@
           "(09)",
           "(10)",
           "(11)",
-          "(12) ="
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "(10)+(11)"
+          "(12) = (10)+(11)"
         ],
         [
           "1",
@@ -1246,23 +1248,23 @@
         ],
         [
           "Tổng cộng",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+          "Tổng cộng",
+          "Tổng cộng",
+          "Tổng cộng",
+          "Tổng cộng",
+          "Tổng cộng",
+          "Tổng cộng",
+          "Tổng cộng",
           "",
           "",
           "",
           ""
         ]
       ],
-      "row_count": 7,
+      "row_count": 6,
       "col_count": 12,
-      "extraction_strategy": "lines",
-      "page_number": 16
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 3,
@@ -1305,15 +1307,15 @@
         [
           "",
           "Tổng cộng",
-          "",
+          "Tổng cộng",
           "",
           ""
         ]
       ],
       "row_count": 5,
       "col_count": 5,
-      "extraction_strategy": "lines",
-      "page_number": 18
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 4,
@@ -1322,15 +1324,15 @@
         "Nhóm ngành nghề",
         "Mã chỉ tiêu",
         "Thuế GTGT",
-        "",
+        "Thuế GTGT",
         "Thuế TNCN",
-        ""
+        "Thuế TNCN"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
+          "STT",
+          "Nhóm ngành nghề",
+          "Mã chỉ tiêu",
           "Doanh thu",
           "Số thuế",
           "Doanh thu",
@@ -1393,8 +1395,8 @@
       ],
       "row_count": 7,
       "col_count": 7,
-      "extraction_strategy": "lines",
-      "page_number": 21
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 5,
@@ -1456,8 +1458,8 @@
       ],
       "row_count": 5,
       "col_count": 7,
-      "extraction_strategy": "lines",
-      "page_number": 21
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 6,
@@ -1466,15 +1468,15 @@
         "Nhóm ngành nghề",
         "Mã chỉ tiêu",
         "Thuế GTGT",
-        "",
+        "Thuế GTGT",
         "Thuế TNCN",
-        ""
+        "Thuế TNCN"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
+          "STT",
+          "Nhóm ngành nghề",
+          "Mã chỉ tiêu",
           "Doanh thu",
           "Số thuế",
           "Doanh thu",
@@ -1537,8 +1539,8 @@
       ],
       "row_count": 7,
       "col_count": 7,
-      "extraction_strategy": "lines",
-      "page_number": 23
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 7,
@@ -1548,15 +1550,15 @@
         "Mã chỉ tiêu",
         "Doanh thu của hộ, cá nhân",
         "Số thuế đã khấu trừ",
-        "",
-        ""
+        "Số thuế đã khấu trừ",
+        "Số thuế đã khấu trừ"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "",
+          "STT",
+          "Nhóm ngành nghề",
+          "Mã chỉ tiêu",
+          "Doanh thu của hộ, cá nhân",
           "Thuế GTGT",
           "Thuế TNCN",
           "Tổng cộng"
@@ -1618,8 +1620,8 @@
       ],
       "row_count": 7,
       "col_count": 7,
-      "extraction_strategy": "lines",
-      "page_number": 25
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 8,
@@ -1669,29 +1671,29 @@
       ],
       "row_count": 6,
       "col_count": 4,
-      "extraction_strategy": "lines",
-      "page_number": 27
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 9,
       "headers": [
         "STT",
         "Thông tin khoản nợ/khoản thu phát sinh",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
+        "Thông tin khoản nợ/khoản thu phát sinh",
         "Số tiền còn phải nộp đề nghị bù trừ với số tiền nộp thừa",
         "SỐ tIền còn phải nộp sau bù trừ"
       ],
       "rows": [
         [
-          "",
+          "STT",
           "Mã số thuế",
           "Tên NNT",
           "Số định danh khoản phải nộp (ID) (nếu có)",
@@ -1702,8 +1704,8 @@
           "Địa bàn hành chính",
           "Hạn nộp",
           "Số tiền còn phải nộp",
-          "",
-          ""
+          "Số tiền còn phải nộp đề nghị bù trừ với số tiền nộp thừa",
+          "SỐ tIền còn phải nộp sau bù trừ"
         ],
         [
           "(1)",
@@ -1718,13 +1720,13 @@
           "(10)",
           "(11)",
           "(12)",
-          "(13)=(11)- (12)"
+          "(13)=(11)-(12)"
         ]
       ],
       "row_count": 2,
       "col_count": 13,
-      "extraction_strategy": "lines",
-      "page_number": 29
+      "page_number": 0,
+      "extraction_strategy": "docx"
     }
   ]
 }
