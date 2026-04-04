@@ -1,0 +1,1216 @@
+{
+  "report": {
+    "summary": {
+      "total": 2,
+      "passed": 1,
+      "pass_rate": 0.5,
+      "avg_score": 0.7,
+      "errors": 0,
+      "annotated": 0,
+      "verified": 0,
+      "timestamp": "2026-04-04T10:58:26.110119"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 2,
+        "avg": 0.9,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 2,
+        "avg": 0.8,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 2,
+        "avg": 0.5,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Giảm trừ gia cảnh": {
+        "total": 2,
+        "passed": 1,
+        "pass_rate": 0.5,
+        "avg_score": 0.7
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.75
+      },
+      "medium": {
+        "count": 1,
+        "avg_score": 0.65
+      }
+    },
+    "latency_ms": {
+      "min": 9353,
+      "max": 26851,
+      "avg": 18102,
+      "p50": 18102,
+      "p95": 25976
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 236,
+        "question": "Kính chào Cơ quan thuế, tôi có câu hỏi về đăng ký người phụ thuộc cần cơ quan th",
+        "score": 0.65,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 2/2, precision=0.40, penalty=0.80",
+        "t3": "PASS — gọi 3 tools (topic không có mapping cụ thể)",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 236,
+      "question": "Kính chào Cơ quan thuế, tôi có câu hỏi về đăng ký người phụ thuộc cần cơ quan thuế giải đáp: 1. Tôi uỷ quyền cho công ty đang làm việc thực hiện quyết toán thuế TNCN cuối năm. Tuy nhiên công ty có yêu cầu tôi tự đăng ký mã số thuế người phụ thuộc với cơ quan thuế để được cấp mã số thuế rồi báo lại công ty. Như vậy có đúng theo quy định không, nếu tôi tự đăng ký mst npt thì cuối năm tôi có phải tự quyết toán thuế TNCN không? 2. Theo tôi được biết từ ngày 14/2/2026 đã bãi bỏ thủ tục đăng ký người phụ thuộc, gộp với đăng ký thuế lần đầu. Tôi muốn hỏi bây giờ tôi muốn đăng ký mst npt lần đầu trực tiếp với CQT thì ngoài mẫu 20-dk-tct thì cần nộp thêm những hồ sơ gì? Trên dich vu cong không đính kèm được hồ sơ chứng minh npt thì tôi có phải gửi hồ sơ giấy đến cơ quan thuế để được cấp mst npt không? Tôi xin trân trọng cảm ơn!",
+      "topic": "Giảm trừ gia cảnh",
+      "difficulty": "medium",
+      "user_type": "employee",
+      "needs_calculation": false,
+      "annotation_status": "pending",
+      "answer": "Chào bạn, TaxAI xin giải đáp các thắc mắc của bạn về việc đăng ký mã số thuế (MST) người phụ thuộc (NPT) và quyết toán thuế TNCN như sau:\n\n### 1. Về việc tự đăng ký MST người phụ thuộc và ủy quyền quyết toán thuế\n\nViệc công ty yêu cầu bạn tự đăng ký MST cho người phụ thuộc là **phù hợp với quy định**, nhằm đảm bảo thông tin định danh của NPT được chính xác trước khi công ty thực hiện kê khai giảm trừ gia cảnh cho bạn.\n\n*   **Về việc quyết toán thuế:** Việc bạn tự thực hiện thủ tục đăng ký MST cho NPT (cấp mã lần đầu) **không làm thay đổi** quyền được ủy quyền quyết toán thuế của bạn.\n*   **Điều kiện ủy quyền:** Theo quy định tại *Tiết d.1 Điểm d Khoản 6 Điều 8 Nghị định 126/2020/NĐ-CP*, nếu bạn chỉ có thu nhập từ tiền lương, tiền công tại một nơi (công ty hiện tại) và đáp ứng các điều kiện ủy quyền khác, bạn **vẫn được ủy quyền** cho công ty quyết toán thay, dù bạn tự đăng ký MST cho người phụ thuộc trực tiếp với cơ quan thuế.\n\n### 2. Hồ sơ đăng ký MST người phụ thuộc lần đầu trực tiếp với Cơ quan thuế\n\nTừ năm 2026, theo các quy định mới về quản lý thuế (Luật 108/2025/QH15 và các văn bản hướng dẫn), thủ tục đăng ký thuế đã được đơn giản hóa. Tuy nhiên, khi bạn đăng ký MST lần đầu cho NPT trực tiếp với cơ quan thuế, bạn cần chuẩn bị hồ sơ như sau:\n\n**📌 Trích dẫn**\n> \"Cá nhân có thu nhập chịu thuế từ tiền lương, tiền công nộp hồ sơ đăng ký thuế cho tổ chức, cá nhân trả thu nhập hoặc cơ quan thuế trực tiếp quản lý tổ chức, cá nhân trả thu nhập.\" *(Tiết b.1 Điểm b Khoản 3 Điều 24 Thông tư 111/2013/TT-BTC)*\n\n**💬 Trả lời chi tiết:**\n*   **Mẫu biểu:** Bạn sử dụng **Tờ khai đăng ký thuế mẫu số 20-DK-TCT** (ban hành kèm theo Thông tư hướng dẫn về đăng ký thuế hiện hành).\n*   **Hồ sơ đính kèm:** Ngoài tờ khai, bạn cần chuẩn bị bản sao các giấy tờ sau của người phụ thuộc:\n    1.  **Thẻ căn cước/Chứng minh nhân dân/Hộ chiếu** còn hiệu lực (đối với NPT có quốc tịch Việt Nam từ đủ 14 tuổi trở lên).\n    2.  **Giấy khai sinh** (đối với NPT là trẻ em dưới 14 tuổi).\n    3.  **Giấy tờ chứng minh quan hệ** (như Sổ hộ khẩu, Giấy chứng nhận kết hôn, hoặc các giấy tờ xác nhận của chính quyền địa phương tùy theo đối tượng NPT).\n*   **Về việc nộp hồ sơ trực tuyến:** Hiện nay, các cổng dịch vụ công và ứng dụng **eTax Mobile** đã hỗ trợ đính kèm tệp hồ sơ (dạng ảnh chụp hoặc PDF). Nếu trên giao diện bạn đang sử dụng không có mục đính kèm, bạn có thể thực hiện theo 2 cách:\n    *   **Cách 1:** Sử dụng ứng dụng **eTax Mobile** của Tổng cục Thuế để thực hiện đăng ký (thường hỗ trợ chụp ảnh giấy tờ trực tiếp).\n    *   **Cách 2:** Nếu nộp qua Cổng dịch vụ công mà không đính kèm được, bạn có thể gửi hồ sơ giấy qua đường **bưu chính công ích** đến bộ phận Một cửa của Cơ quan thuế quản lý trực tiếp để được xử lý mà không nhất thiết phải đến trực tiếp.\n\n**📋 Tóm lại:**\n*   Bạn **vẫn được ủy quyền** cho công ty quyết toán thuế TNCN bình thường sau khi tự đăng ký MST cho người phụ thuộc.\n*   Hồ sơ gồm: **Mẫu 20-DK-TCT** + **Bản sao giấy tờ định danh** của NPT (Căn cước/Giấy khai sinh) + **Giấy tờ chứng minh quan hệ**.\n*   Có thể nộp qua **eTax Mobile** hoặc gửi hồ sơ giấy qua **bưu điện** nếu không đính kèm được file trên web.\n*   Căn cứ: Điều 8 Nghị định 126/2020/NĐ-CP; Điều 24 Thông tư 111/2013/TT-BTC.\n\nHy vọng thông tin trên giúp ích cho bạn! 😊",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "108_2025_QH15",
+            "query": "thủ tục đăng ký thuế lần đầu cấp mã số thuế người phụ thuộc hồ sơ mẫu 20-DK-TCT"
+          },
+          "result": {
+            "query": "thủ tục đăng ký thuế lần đầu cấp mã số thuế người phụ thuộc hồ sơ mẫu 20-DK-TCT",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_20_khoan_1_diem_b_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm b",
+                "snippet": "[VB: 108/2025/QH15 | Đ20 (Khoanh tiền thuế nợ) | K1 | Đ.b]\nCác trường hợp được khoanh tiền thuế nợ:\nNgười nộp thuế có quyết định giải thể gửi cơ quan đăng ký kinh doanh để làm thủ tục giải thể, cơ quan đăng ký kinh doanh đã thông báo người nộp thuế đang làm thủ tục giải thể trên hệ thống thông tin quốc gia về đăng ký kinh doanh nhưng người nộp thuế chưa hoàn thành thủ tục giải thể;",
+                "score": 0.016091,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_1_dieu_10_khoan_1_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 1 > Điều 10: Đăng ký thuế > Khoản 1",
+                "snippet": "[VB: 108/2025/QH15 | Đ10 (Đăng ký thuế) | K1]\nPhạm vi đăng ký thuế bao gồm đăng ký thuế lần đầu; thông báo thay đổi thông tin đăng ký thuế; thông báo khi tạm ngừng hoạt động, kinh doanh; chấm dứt hiệu lực mã số thuế; khôi phục mã số thuế.",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 1 > Điều 10: Đăng ký thuế > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_20_khoan_1_diem_d_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm d",
+                "snippet": "[VB: 108/2025/QH15 | Đ20 (Khoanh tiền thuế nợ) | K1 | Đ.d]\nCác trường hợp được khoanh tiền thuế nợ:\nNgười nộp thuế không còn hoạt động tại địa chỉ đã đăng ký kinh doanh với cơ quan đăng ký kinh doanh, cơ quan quản lý thuế;",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_20_khoan_1_diem_đ_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 108/2025/QH15 | Đ20 (Khoanh tiền thuế nợ) | K1 | Đ.đ]\nCác trường hợp được khoanh tiền thuế nợ:\nNgười nộp thuế đã bị cơ quan có thẩm quyền thu hồi giấy chứng nhận đăng ký kinh doanh, giấy chứng nhận đăng ký doanh ng hiệp, giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký tổ hợp tác, giấy chứng nhận đăng ký hộ kinh doanh, giấy phép thành lập và hoạt động, giấy phép hành nghề, giấy chứng nhận đăng ký hoạt động chi nhánh, văn phòng đại diện, giấy chứng nhận đăng ký địa điểm kinh doanh, đăng ký hoặc giấy phép hoạt động kinh doanh nền tảng thương mại điện tử;",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_12_khoan_6_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 12: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế > Khoản 6",
+                "snippet": "[VB: 108/2025/QH15 | Đ12 (Khai thuế, khoản thu khác; tính thuế, kh) | K6]\nĐối với hàng hóa xuất khẩu, nhập khẩu thì hồ sơ hải quan theo quy định của Luật Hải quan được sử dụng làm hồ sơ khai thuế. Việc khai thuế, khai bổ sung, thời hạn nộp hồ sơ khai thuế, cơ quan hải quan tiếp nhận hồ sơ khai thuế, tỷ giá tính thuế đối với hàng hóa xuất khẩu, hàng hóa nhập khẩu thực hiện theo quy định của pháp luật về hải quan.",
+                "score": 0.010769,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 12: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế > Khoản 6"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "126_2020_NDCP",
+            "query": "ủy quyền quyết toán thuế TNCN khi tự đăng ký mã số thuế người phụ thuộc cá nhân tự quyết toán hay ủy quyền"
+          },
+          "result": {
+            "query": "ủy quyền quyết toán thuế TNCN khi tự đăng ký mã số thuế người phụ thuộc cá nhân tự quyết toán hay ủy quyền",
+            "total_found": 10,
+            "results": [
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_8_khoan_6_diem_d_tiet_d.1_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Tiết",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm d > Tiết d.1",
+                "snippet": "[VB: 126/2020/NĐ-CP | Tiết d.1]\nTổ chức, cá nhân trả thu nhập từ tiền lương, tiền công có trách nhiệm khai quyết toán thuế và quyết toán thay cho các cá nhân có ủy quyền do tổ chức, cá nhân trả thu nhập chi trả, không phân biệt có phát sinh khấu trừ thuế hay không phát sinh khấu trừ thuế. Trường hợp tổ chức, cá nhân không phát sinh trả thu nhập thì không phải khai quyết toán thuế thu nhập cá nhân. Trường hợp cá nhân là người lao động được điều chuyển từ tổ chức cũ đến tổ chức mới do tổ chức cũ thực hiện sáp nhập, hợp nhất, chia, tách, chuyển đổi loại hình doanh nghiệp hoặc tổ chức cũ và tổ chức mới trong cùng một hệ thống thì tổ chức mới có trách nhiệm quyết toán thuế theo ủy quyền của cá nhân đối với cả phần thu nhập do tổ chức cũ chi trả và thu lại chứng từ khấu trừ thuế thu nhập cá nhân do tổ chức cũ đã cấp cho người lao động (nếu có).",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm d > Tiết d.1"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_III_dieu_17_khoan_5_diem_đ_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu > Khoản 5 > Điểm đ",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ17 (Ấn định thuế đối với hàng hóa ) | K5 | Đ.đ]\nTrình tự ấn định thuế\nLập biên bản để làm cơ sở ấn định thuế, trừ các trường hợp sau đây không lập biên bản: Người khai thuế không tự tính được số tiền thuế phải nộp; cơ quan hải quan thực hiện ấn định thuế theo kết luận của cơ quan thanh tra, kiểm tra, kiểm toán hoặc cơ quan khác có thẩm quyền sau khi thanh tra, kiểm tra, kiểm toán tại trụ sở người khai thuế, trong bản kết luận đã xác định chính xác số tiền thuế phải ấn định; hàng hóa nhập khẩu thuộc đối tượng miễn thuế, không chịu thuế là tài sản đảm bảo các khoản vay theo quy định tại điểm m khoản 4 Điều này; hàng hóa nhập khẩu chưa hoàn thành thủ tục hải quan bị kê biên để bán đấu giá theo quyết định của cơ quan có thẩm quyền hoặc bản án, quyết định của Tòa án thuộc đối tượng phải nộp thuế theo quy định tại điểm 1 khoản 4 Điều này.",
+                "score": 0.015018,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu > Khoản 5 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VIII_dieu_39_khoan_7_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VIII > Điều 39: Ủy nhiệm thu thuế và các khoản thu khác thuộc ngân sách nhà nước do cơ quan quản lý thuế quản lý thu > Khoản 7",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ39 (Ủy nhiệm thu thuế và các khoản thu khác ) | K7]\nKinh phí ủy nhiệm thu\na) Kinh phí ủy nhiệm thu từ nguồn ngân sách nhà nước cấp cho cơ quan quản lý thuế. Thủ trưởng cơ quan quản lý thuế được chỉ định thầu theo quy định và ký hợp đồng trực tiếp với tổ chức được ủy nhiệm thu được chỉ định thầu. Bộ Tài chính hướng dẫn cụ thể nội dung chi, mức chi, quản lý, sử dụng, thanh toán, quyết toán nguồn kinh phí ủy nhiệm thu.\nb) Việc chi trả kinh phí ủy nhiệm thu phải được thực hiện đúng đối tượng, đúng địa bàn và thanh toán bằng chuyển khoản thông qua tài khoản của bên được ủy nhiệm thu tại ngân hàng, kho bạc nhà nước; không thực hiện thanh toán kinh phí ủy nhiệm thu bằng tiền mặt. Cơ quan quản lý thuế phải trả kinh phí cho bên được ủy nhiệm thu trên cơ sở được quy định tại Hợp đồng ủy nhiệm thu và số tiền người nộp thuế đã thực nộp vào ngân sách nhà nước.",
+                "score": 0.014085,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VIII > Điều 39: Ủy nhiệm thu thuế và các khoản thu khác thuộc ngân sách nhà nước do cơ quan quản lý thuế quản lý thu > Khoản 7"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_7_khoan_5_diem_d_tiet_d.1_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Tiết",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5 > Điểm d > Tiết d.1",
+                "snippet": "[VB: 126/2020/NĐ-CP | Tiết d.1]\nĐối với cá nhân nhận cổ tức bằng chứng khoán; cá nhân là cổ đông hiện hữu nhận thưởng bằng chứng khoán thì tổ chức có trách nhiệm khai thuế thay và nộp thuế thay cho cá nhân đối với thu nhập từ đầu tư vốn khi cá nhân chuyển nhượng chứng khoán cùng loại như sau: Đối với chứng khoán thông qua hệ thống giao dịch trên Sở giao dịch chứng khoán thì tổ chức khai thuế thay và nộp thuế thay là công ty chứng khoán, ngân hàng thương mại nơi cá nhân mở tài khoản lưu ký, công ty quản lý quỹ nơi cá nhân ủy thác danh mục đầu tư. Đối với chứng khoán không thông qua hệ thống giao dịch trên Sở giao dịch chứng khoán thì tổ chức khai thuế thay và nộp thuế thay như sau: chứng khoán của công ty đại chúng đã đăng ký chứng khoán tập trung tại Trung tâm lưu ký chứng khoán thì tổ chức khai thuế thay và nộp thuế thay là công ty chứng khoán, ngân hàng thương mại nơi cá nhân mở tài khoản lưu ký chứng khoán; chứng khoán của công ty cổ phần chưa là công ty đại chúng nhưng tổ chức phát hành chứng khoán ủy quyền cho công ty chứng khoán quản lý danh sách cổ đông thì tổ chức khai thuế thay và nộp thuế thay là công ty chứng khoán được ủy quyền quản lý danh sách cổ đông; chứng khoán không thuộc trường hợp quy định nêu tại đoạn này thì tổ chức khai thuế thay và nộp thuế thay là tổ chức phát hành chứng khoán.",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5 > Điểm d > Tiết d.1"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_7_khoan_5_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ7 (Hồ sơ khai thuế) | K5]\nTổ chức, cá nhân thực hiện khai thuế thay, nộp thuế thay cho người nộp thuế phải có trách nhiệm thực hiện đầy đủ các quy định về khai thuế, nộp thuế như quy định đối với người nộp thuế tại Nghị định này, bao gồm:\na) Tổ chức, cá nhân thực hiện khai thuế thay, nộp thuế thay cho người nộp thuế theo quy định của pháp luật về thuế.\nb) Tổ chức tín dụng hoặc bên thứ ba được tổ chức tín dụng ủy quyền khai thác tài sản bảo đảm thực hiện khai thuế giá trị gia tăng, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân đối với hoạt động khai thác tải sản bảo đảm trong thời gian chờ xử lý thay cho người nộp thuế có tài sản đảm bảo.\n[... còn 7 điểm nữa]",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_III_dieu_17_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ17 (Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu)]",
+                "score": 0.010513,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu"
+                }
+              },
+              {
+                "chunk_id": "doc_373_2025_NDCP_dieu_3_chunk",
+                "doc_id": "373_2025_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 3: Sửa đổi, bổ sung điểm b.2 khoản 8 Điều 11 như sau:",
+                "snippet": "[VB: 373/2025/NĐ-CP | Đ3 (Sửa đổi, bổ sung điểm b.2 khoản 8 Điều 11 như sau:)]\n“b.2) Cá nhân cư trú có thu nhập tiền lương, tiền công thuộc diện tổ chức chi trả khấu trừ tại nguồn từ hai nơi trở lên thì nộp hồ sơ khai quyết toán thuế tại cơ quan thuế quản lý trực tiếp tổ chức trả thu nhập lớn nhất trong năm. Trường hợp có nhiều nguồn thu nhập lớn nhất trong năm mà các nguồn thu nhập đó bằng nhau thì cá nhân nộp hồ sơ quyết toán tại một trong những cơ quan thuế quản lý trực tiếp tổ chức chi trả các nguồn thu nhập lớn nhất trên. Trường hợp cá nhân nộp hồ sơ khai quyết toán thuế thu nhập cá nhân không đúng quy định nêu trên thì cơ quan thuế nơi đã tiếp nhận hồ sơ của cá nhân đó căn cứ thông tin trên hệ thống cơ sở dữ liệu ngành thuế hỗ trợ chuyển hồ sơ đến cơ quan thuế quản lý trực tiếp tổ chức trả thu nhập để thực hiện quyết toán thuế thu nhập cá nhân theo quy định pháp luật.”.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "373_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 3: Sửa đổi, bổ sung điểm b.2 khoản 8 Điều 11 như sau:"
+                }
+              },
+              {
+                "chunk_id": "doc_373_2025_NDCP_dieu_4_khoan_3_diem_b_chunk",
+                "doc_id": "373_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3 > Điểm b",
+                "snippet": "[VB: 373/2025/NĐ-CP | Đ4 (Sửa đổi, bổ sung một số điểm, ) | K3 | Đ.b]\n“6. Thời hạn cơ quan thuế ban hành thông báo nộp thuế và gửi thông báo nộp thuế cho người nộp thuế đối với các trường hợp quy định tại điểm đ, điểm h khoản 1 và khoản 2 Điều này kể từ ngày nhận được h\nChậm nhất là 07 ngày làm việc kể từ ngày nhận được văn bản xác định các khoản mà người thuê đất, người sử dụng đất được trừ vào tiền thuê đất, tiền sử dụng đất phải nộp của Ủy ban nhân dân cấp xã hoặc cơ quan chuyên môn thuộc Ủy ban nhân dân cấp tỉnh theo quy định, Ủy ban nhân dân cấp xã hoặc cơ quan chuyên môn thuộc Ủy ban nhân dân cấp tỉnh phải xác định các khoản mà người nộp thuế được trừ vào tiền thuê đất, tiền sử dụng đất phải nộp gửi cơ quan thuế chậm nhất 05 ngày làm việc kể từ ngày nhận được hồ sơ do Văn phòng đăng ký đất đai hoặc cơ quan có chức năng quản lý đất đai hoặc bộ phận một cửa liên thông chuyển đến.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "373_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_373_2025_NDCP_dieu_4_khoan_3_chunk",
+                "doc_id": "373_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3",
+                "snippet": "[VB: 373/2025/NĐ-CP | Đ4 (Sửa đổi, bổ sung một số điểm, khoản của ) | K3]\nSửa đổi, bổ sung khoản 6 như sau:\n“6. Thời hạn cơ quan thuế ban hành thông báo nộp thuế và gửi thông báo nộp thuế cho người nộp thuế đối với các trường hợp quy định tại điểm đ, điểm h khoản 1 và khoản 2 Điều này kể từ ngày nhận được hồ sơ khai thuế của người nộp thuế, phiếu chuyển thông tin để xác định nghĩa vụ tài chính về đất đai (bao gồm lần đầu và khi có thay đổi các căn cứ xác định nghĩa vụ tài chính) và văn bản hợp pháp, đầy đủ của cơ quan nhà nước có thẩm quyền, cụ thể như sau:\na) Chậm nhất là 07 ngày làm việc đối với tiền sử dụng đất và khoản phải nộp bổ sung của tổ chức, cá nhân là người gốc Việt Nam định cư ở nước ngoài; 05 ngày làm việc đối với tiền sử dụng đất và khoản phải nộp bổ sung của hộ gia đình, cá nhân (trừ cá nhân là người gốc Việt Nam định cư ở nước ngoài); 05 ngày làm việc đối với tiền thuê đất và khoản phải nộp bổ sung; 03 ngày làm việc đối với thuế thu nhập cá nhân từ chuyển nhượng bất động sản, từ nhận thừa kế, quà tặng là bất động sản, lệ phí trước bạ nhà, đất.\n[... còn 3 điểm nữa]",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "373_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_373_2025_NDCP_dieu_4_chunk",
+                "doc_id": "373_2025_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau:",
+                "snippet": "[VB: 373/2025/NĐ-CP | Đ4 (Sửa đổi, bổ sung một số điểm, khoản của Điều 13 nh)]",
+                "score": 0.007778,
+                "citation": {
+                  "doc_id": "373_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau:"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hồ sơ chứng minh người phụ thuộc đăng ký thuế lần đầu trực tiếp cơ quan thuế",
+            "doc_filter": "111_2013_TTBTC"
+          },
+          "result": {
+            "query": "hồ sơ chứng minh người phụ thuộc đăng ký thuế lần đầu trực tiếp cơ quan thuế",
+            "total_found": 14,
+            "results": [
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_24_khoan_4_diem_c_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 4 > Điểm c",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ24 (Đăng ký thuế) | K4 | Đ.c]\nĐăng ký thuế đối với một số trường hợp cụ thể:\nĐối với cá nhân là người phụ thuộc và người nộp thuế có kê khai giảm trừ gia cảnh nếu chưa có mã số thuế thì cơ quan thuế tự động cấp mã số thuế cho người phụ thuộc căn cứ trên thông tin của người phụ thuộc tại Tờ khai đăng ký giảm trừ gia cảnh (theo mẫu ban hành kèm theo văn bản hướng dẫn về quản lý thuế) của người nộp thuế.",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 4 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_24_khoan_3_diem_b_tiet_b.1_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Tiết",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3 > Điểm b > Tiết b.1",
+                "snippet": "[VB: 111/2013/TT-BTC | Tiết b.1]\nCá nhân có thu nhập chịu thuế từ tiền lương, tiền công nộp hồ sơ đăng ký thuế cho tổ chức, cá nhân trả thu nhập hoặc cơ quan thuế trực tiếp quản lý tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập có trách nhiệm tổng hợp tờ khai đăng ký thuế của cá nhân và nộp cho cơ quan thuế trực tiếp quản lý.",
+                "score": 0.015687,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3 > Điểm b > Tiết b.1"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_24_khoan_3_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ24 (Đăng ký thuế) | K3]\nĐịa điểm nộp hồ sơ đăng ký thuế\na) Địa điểm nộp hồ sơ đăng ký thuế thực hiện theo văn bản hướng dẫn về quản lý thuế.\nb) Địa điểm nộp hồ sơ đăng ký thuế đối với một số trường hợp cụ thể:",
+                "score": 0.015018,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_26_khoan_5_diem_d_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm d",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ26 (Khai thuế, quyết toán thuế) | K5 | Đ.d]\nKhai thuế đối với cá nhân có thu nhập từ chuyển nhượng chứng khoán\nDoanh nghiệp thực hiện thủ tục thay đổi danh sách cổ đông trong trường hợp chuyển nhượng chứng khoán mà không có chứng từ chứng minh cá nhân chuyển nhượng chứng khoán đã hoàn thành nghĩa vụ thuế thì doanh nghiệp nơi cá nhân chuyển nhượng chứng khoán có trách nhiệm khai thuế, nộp thuế thay cho cá nhân. Trường hợp doanh nghiệp nơi cá nhân chuyển nhượng chứng khoán khai thuế thay cho cá nhân thì doanh nghiệp thực hiện khai thay hồ sơ khai thuế thu nhập cá nhân. Doanh nghiệp khai thay ghi thêm “Khai thay” vào phần trước cụm từ “Người nộp thuế hoặc Đại diện hợp pháp của người nộp thuế” đồng thời người khai ký, ghi rõ họ tên và đóng dấu của doanh nghiệp. Trên hồ sơ tính thuế, chứng từ thu thuế vẫn phải thể hiện đúng người nộp thuế là cá nhân chuyển nhượng chứng khoán.",
+                "score": 0.014925,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_26_khoan_5_diem_b_tiet_b.1_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Tiết",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm b > Tiết b.1",
+                "snippet": "[VB: 111/2013/TT-BTC | Tiết b.1]\nCá nhân chuyển nhượng chứng khoán của công ty đại chúng đã đăng ký chứng khoán tập trung tại Trung tâm lưu ký chứng khoán không phải khai trực tiếp với cơ quan thuế mà Công ty chứng khoán, Ngân hàng thương mại nơi cá nhân mở tài khoản lưu ký chứng khoán khấu trừ thuế và khai thuế theo hướng dẫn tại khoản 1, Điều 26 Thông tư này.",
+                "score": 0.01491,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm b > Tiết b.1"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_II_muc_1_dieu_7_khoan_4_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 7: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu > Khoản 4",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ7 (Địa điểm nộp và hồ sơ đăng ký thuế lần đ) | K4]\nĐối với người nộp thuế là nhà thầu nước ngoài, nhà thầu phụ nước ngoài quy định tại điểm đ khoản 2 Điều 4 Thông tư này trực tiếp kê khai, nộp thuế nhà thầu hoặc các nghĩa vụ thuế khác trừ thuế nhà thầu do bên Việt Nam khấu trừ, nộp thay theo quy định của pháp luật về quản lý thuế nộp hồ sơ đăng ký thuế lần đầu tại Cục Thuế nơi đặt trụ sở. Hồ sơ đăng ký thuế gồm: - Tờ khai đăng ký thuế mẫu số 04-ĐK-TCT ban hành kèm theo Thông tư này; - Bảng kê các nhà thầu nước ngoài, nhà thầu phụ nước ngoài mẫu số BK04-ĐK-TCT ban hành kèm theo Thông tư này (nếu có); - Bản sao Giấy xác nhận đăng ký văn phòng điều hành hoặc Văn bản tương đương do cơ quan có thẩm quyền cấp (nếu có).",
+                "score": 0.015836,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 7: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_III_muc_1_dieu_22_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 22: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ22 (Địa điểm nộp và hồ sơ đăng ký thuế lần đầu)]\nĐịa điểm nộp và hồ sơ đăng ký thuế lần đầu đối với hộ kinh doanh đăng ký thuế cùng với đăng ký kinh doanh theo cơ chế một cửa liên thông là hồ sơ đăng ký hộ kinh doanh theo quy định của Chính phủ về hộ kinh doanh. Địa điểm nộp và hồ sơ đăng ký thuế lần đầu đối với hộ gia đình, cá nhân đăng ký thuế trực tiếp với cơ quan thuế thực hiện theo quy định tại khoản 3 Điều 31; khoản 2, khoản 3 Điều 32 Luật Quản lý thuế và các quy định sau:",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 22: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_II_muc_1_dieu_8_khoan_3_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 8: Cấp Giấy chứng nhận đăng ký thuế và Thông báo mã số thuế > Khoản 3",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ8 (Cấp Giấy chứng nhận đăng ký thuế và Thôn) | K3]\nCơ quan thuế thực hiện xử lý hồ sơ đăng ký thuế lần đầu và trả kết quả là Giấy chứng nhận đăng ký thuế hoặc Thông báo mã số thuế cho người nộp thuế là tổ chức qua Cổng thông tin điện tử của Tổng cục Thuế trong thời hạn 03 (ba) ngày làm việc kể từ ngày cơ quan thuế nhận đủ hồ sơ của người nộp thuế. Trường hợp người nộp thuế đăng ký nhận kết quả trực tiếp tại cơ quan thuế hoặc qua đường bưu chính, cơ quan thuế có trách nhiệm gửi kết quả qua bộ phận một cửa của cơ quan thuế hoặc qua dịch vụ bưu chính công ích đến địa chỉ người nộp thuế đã đăng ký.",
+                "score": 0.015063,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 8: Cấp Giấy chứng nhận đăng ký thuế và Thông báo mã số thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_I_dieu_4_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ4 (Đối tượng đăng ký thuế)]",
+                "score": 0.011085,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_I_dieu_4_khoan_2_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ4 (Đối tượng đăng ký thuế) | K2]\nNgười nộp thuế thuộc đối tượng thực hiện đăng ký thuế trực tiếp với cơ quan thuế, bao gồm:\na) Doanh nghiệp hoạt động trong các lĩnh vực chuyên ngành không phải đăng ký doanh nghiệp qua cơ quan đăng ký kinh doanh theo quy định của pháp luật chuyên ngành (sau đây gọi là Tổ chức kinh tế).\n[... còn 12 điểm nữa]",
+                "score": 0.011085,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_I_dieu_4_khoan_2_diem_đ_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2 > Điểm đ",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ4 (Đối tượng đăng ký thuế) | K2 | Đ.đ]\nNgười nộp thuế thuộc đối tượng thực hiện đăng ký thuế trực tiếp với cơ quan thuế, bao gồm:\nTổ chức nước ngoài không có tư cách pháp nhân tại Việt Nam, cá nhân nước ngoài hành nghề độc lập kinh doanh tại Việt Nam phù hợp với pháp luật Việt Nam có thu nhập phát sinh tại Việt Nam hoặc có phát sinh nghĩa vụ thuế tại Việt Nam (sau đây gọi là Nhà thầu nước ngoài, nhà thầu phụ nước ngoài).",
+                "score": 0.011085,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_III_muc_4_dieu_31_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ31 (Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kế)]",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_III_muc_4_dieu_31_khoan_3_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả > Khoản 3",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ31 (Xử lý hồ sơ chấm dứt hiệu lực mã số thuế) | K3]\nKhi nhận được thông tin chấm dứt hoạt động địa điểm kinh doanh của hộ kinh doanh do Hệ thống thông tin quốc gia về đăng ký kinh doanh truyền sang, thông báo chấm dứt hoạt động địa điểm kinh doanh của cá nhân kinh doanh theo quy định tại khoản 5 Điều 29 Thông tư này, cơ quan thuế quản lý khoản thu tại nơi có địa điểm kinh doanh thực hiện phối hợp với cơ quan thuế quản lý trực tiếp hộ kinh doanh, cá nhân kinh doanh để đôn đốc, xử lý nghĩa vụ thuế của hộ kinh doanh, cá nhân kinh doanh tại cơ quan thuế quản lý khoản thu nơi có địa điểm kinh doanh (nộp đầy đủ hồ sơ khai thuế, hoàn thành nghĩa vụ nộp thuế, hóa đơn và xử lý số tiền thuế nộp thừa (nếu có)), xử lý bù trừ nghĩa vụ thuế hoặc hoàn trả theo quy định của pháp luậ",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_86_2024_TTBTC_chuong_III_muc_4_dieu_32_chunk",
+                "doc_id": "86_2024_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 32: Chấm dứt hiệu lực mã số thuế đối với hộ kinh doanh, cá nhân kinh doanh trong trường hợp cơ quan thuế ban hành Thông báo không hoạt động tại địa chỉ đã đăng ký",
+                "snippet": "[VB: 86/2024/TT-BTC | Đ32 (Chấm dứt hiệu lực mã số thuế đối với hộ kinh doanh)]",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "86_2024_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 32: Chấm dứt hiệu lực mã số thuế đối với hộ kinh doanh, cá nhân kinh doanh trong trường hợp cơ quan thuế ban hành Thông báo không hoạt động tại địa chỉ đã đăng ký"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 26851,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.8,
+        "reason": "PARTIAL — overlap 2/2, precision=0.40, penalty=0.80",
+        "details": {
+          "matched": [
+            "111_2013_TTBTC",
+            "86_2024_TTBTC"
+          ],
+          "missing": []
+        }
+      },
+      "tier3": {
+        "score": 0.8,
+        "reason": "PASS — gọi 3 tools (topic không có mapping cụ thể)",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 1/2 key facts, thiếu: ['20-ĐK-TCT']",
+        "details": {
+          "matched": [
+            "vẫn được ủy quyền"
+          ],
+          "missing": [
+            "20-ĐK-TCT"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 1 > Điều 10: Đăng ký thuế > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 12: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế > Khoản 6",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm d > Tiết d.1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu > Khoản 5 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VIII > Điều 39: Ủy nhiệm thu thuế và các khoản thu khác thuộc ngân sách nhà nước do cơ quan quản lý thuế quản lý thu > Khoản 7",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5 > Điểm d > Tiết d.1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương III > Điều 17: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "373_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 3: Sửa đổi, bổ sung điểm b.2 khoản 8 Điều 11 như sau:",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "373_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "373_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau: > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "373_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 373/2025/NĐ-CP > Điều 4: Sửa đổi, bổ sung một số điểm, khoản của Điều 13 như sau:",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 4 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3 > Điểm b > Tiết b.1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 24: Đăng ký thuế > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 26: Khai thuế, quyết toán thuế > Khoản 5 > Điểm b > Tiết b.1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 7: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 22: Địa điểm nộp và hồ sơ đăng ký thuế lần đầu",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương II > Mục 1: . ĐĂNG KÝ THUẾ LẦN ĐẦU > Điều 8: Cấp Giấy chứng nhận đăng ký thuế và Thông báo mã số thuế > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương I > Điều 4: Đối tượng đăng ký thuế > Khoản 2 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 31: Xử lý hồ sơ chấm dứt hiệu lực mã số thuế và trả kết quả > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "86_2024_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 86/2024/TT-BTC > Chương III > Mục 4: . CHẤM DỨT HIỆU LỰC MÃ SỐ THUẾ > Điều 32: Chấm dứt hiệu lực mã số thuế đối với hộ kinh doanh, cá nhân kinh doanh trong trường hợp cơ quan thuế ban hành Thông báo không hoạt động tại địa chỉ đã đăng ký",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "108_2025_QH15",
+        "111_2013_TTBTC",
+        "373_2025_NDCP",
+        "126_2020_NDCP",
+        "86_2024_TTBTC"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 237,
+      "question": "Tôi tham gia các diễn đàn đều thấy đăng thông tin đã xóa bỏ thủ tục đăng ký người phụ thuộc. Vậy năm nay công ty tôi có cần đăng ký người phụ thuộc thay cho người lao động nữa không?",
+      "topic": "Giảm trừ gia cảnh",
+      "difficulty": "easy",
+      "user_type": "employee",
+      "needs_calculation": false,
+      "annotation_status": "pending",
+      "answer": "Thông tin về việc \"xóa bỏ thủ tục đăng ký người phụ thuộc\" mà bạn thấy trên các diễn đàn là **không chính xác**. Thực tế, các quy định pháp luật mới nhất (áp dụng cho năm 2026) chỉ thay đổi về **mức giảm trừ** và **đơn giản hóa hồ sơ**, chứ không bãi bỏ nghĩa vụ đăng ký.\n\nDưới đây là thông tin chi tiết dành cho công ty bạn:\n\n### 📌 Trích dẫn\n> \"Tổ chức, cá nhân trả thu nhập từ tiền lương, tiền công có trách nhiệm khai quyết toán thuế và quyết toán thay cho các cá nhân có ủy quyền... không phân biệt có phát sinh khấu trừ thuế hay không phát sinh khấu trừ thuế.\" *(Tiết d.1 Điểm d Khoản 6 Điều 8, Nghị định 126/2020/NĐ-CP)*\n\n### 💬 Trả lời\nTrong năm 2026, công ty bạn **vẫn phải thực hiện đăng ký người phụ thuộc (NPT)** cho người lao động nếu họ muốn được hưởng giảm trừ gia cảnh khi tính thuế TNCN. Việc đăng ký này là căn cứ để công ty tạm khấu trừ thuế hàng tháng/quý và thực hiện quyết toán thuế thay vào cuối năm.\n\nCó 3 điểm quan trọng công ty cần lưu ý trong năm nay:\n\n1.  **Mức giảm trừ mới (Áp dụng từ 01/01/2026):** Theo Nghị quyết 110/2025/UBTVQH15, mức giảm trừ gia cảnh đã tăng lên:\n    *   Cho bản thân người lao động: **15,5 triệu đồng/tháng**.\n    *   Cho mỗi người phụ thuộc: **6,2 triệu đồng/tháng**.\n2.  **Đơn giản hóa hồ sơ (Cơ sở dữ liệu quốc gia):** Thay vì bãi bỏ, Nhà nước đang hướng tới việc người lao động không cần nộp bản sao giấy khai sinh, sổ hộ khẩu giấy... nếu các thông tin này đã có trên Cơ sở dữ liệu quốc gia về dân cư. Tuy nhiên, người lao động vẫn phải lập **Tờ khai đăng ký người phụ thuộc** và gửi cho công ty để công ty nộp cho cơ quan thuế.\n3.  **Thời điểm đăng ký:** Người lao động đăng ký NPT tại bất kỳ thời điểm nào trong năm thì vẫn được tính giảm trừ hồi tố từ tháng 1 của năm đó (hoặc từ tháng phát sinh nghĩa vụ nuôi dưỡng).\n\n### 📋 Tóm lại\n*   **Nghĩa vụ của công ty:** Tiếp tục thu nhận hồ sơ đăng ký NPT từ người lao động và nộp mẫu đăng ký thuế cho cơ quan quản lý.\n*   **Mức giảm trừ NPT 2026:** **6,2 triệu đồng/người/tháng** (theo Nghị quyết 110/2025/UBTVQH15).\n*   **Lưu ý:** Việc không đăng ký NPT sẽ khiến người lao động bị khấu trừ thuế nhiều hơn mức thực tế phải nộp, gây khó khăn khi quyết toán và hoàn thuế sau này.\n*   **Căn cứ pháp lý:** Điều 8 Nghị định 126/2020/NĐ-CP; Điều 1 Nghị quyết 110/2025/UBTVQH15.\n\nBạn nên thông báo rõ cho người lao động để họ kịp thời kê khai, đảm bảo quyền lợi về mức giảm trừ gia cảnh mới. 😊",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thủ tục đăng ký người phụ thuộc mã số thuế người phụ thuộc bãi bỏ hay không",
+            "doc_filter": "108_2025_QH15"
+          },
+          "result": {
+            "query": "thủ tục đăng ký người phụ thuộc mã số thuế người phụ thuộc bãi bỏ hay không",
+            "total_found": 10,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_17_khoan_1_diem_đ_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 108/2025/QH15 | Đ17 (Hoàn thành nghĩa vụ nộp thuế) | K1 | Đ.đ]\nHoàn thành nghĩa vụ nộp thuế trong trường hợp giải thể, phá sản, chấm dứt hoạt động, không hoạt động tại địa chỉ đã đăng ký:\nNgười nộp thuế có đơn vị phụ thuộc chấm dứt hoạt động, không hoạt động tại địa chỉ đã đăng ký mà chưa hoàn thành nghĩa vụ nộp thuế thì chịu trách nhiệm hoàn thành nghĩa vụ nộp thuế của đơn vị phụ thuộc;",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_khoan_3_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực quản lý t) | K3]\nNgười nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn, không thu đối với hàng hóa xuất khẩu, nhập khẩu nhưng không thuộc các trường hợp quy định tại điểm e, điểm g khoản 4 Điều này và điểm b khoản 2 Điều 44 của Luật này thì ngoài việc nộp đủ số tiền thuế, tiền chậm nộp, người nộp thuế còn bị xử phạt vi phạm hành chính về quản lý thuế trong trường hợp sau đây:\na) Người nộp thuế tự phát hiện và khai bổ sung sau thời điểm cơ quan hải quan thông báo việc kiểm tra trực tiếp hồ sơ hải quan đối với hàng hóa đang làm thủ tục hải quan hoặc sau thời hạn 60 ngày kể từ ngày thông quan và trước thời điểm quyết định kiểm tra sau thông quan, thanh tra, kiểm tra đối với hàng hóa đã thông quan;\nb) Cơ quan hải quan phát hiện trong quá trình làm thủ tục hải quan; phát hiện khi kiểm tra sau thông quan, thanh tra, kiểm tra đối với hàng hóa đã thông quan và cá nhân, tổ chức vi phạm đã tự nguyện khắc phục hậu quả bằng cách nộp đủ số tiền thuế phải nộp theo quy định;\nc) Trường hợp không thuộc điểm a và điểm b khoản này mà người nộp thuế tự nguyện nộp đủ số tiền thuế phải nộp theo quy định.",
+                "score": 0.014502,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_20_khoan_1_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1",
+                "snippet": "[VB: 108/2025/QH15 | Đ20 (Khoanh tiền thuế nợ) | K1]\nCác trường hợp được khoanh tiền thuế nợ:\na) Người nộp thuế là người đã chết, người bị Tòa án tuyên bố là đã chết, mất tích hoặc mất năng lực hành vi dân sự;\nb) Người nộp thuế có quyết định giải thể gửi cơ quan đăng ký kinh doanh để làm thủ tục giải thể, cơ quan đăng ký kinh doanh đã thông báo người nộp thuế đang làm thủ tục giải thể trên hệ thống thông tin quốc gia về đăng ký kinh doanh nhưng người nộp thuế chưa hoàn thành thủ tục giải thể;\nc) Người nộp thuế đã được Tòa án thông báo thụ lý đơn yêu cầu áp dụng thủ tục phá sản hoặc được khoanh tiền thuế nợ theo văn bản đề nghị của Tòa án theo quy định của pháp luật về phục hồi, phá sản;\nd) Người nộp thuế không còn hoạt động tại địa chỉ đã đăng ký kinh doanh với cơ quan đăng ký kinh doanh, cơ quan quản lý thuế;\n[... còn 2 điểm nữa]",
+                "score": 0.014005,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_7_dieu_25_khoan_1_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 7 > Điều 25: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu > Khoản 1",
+                "snippet": "[VB: 108/2025/QH15 | Đ25 (Ấn định thuế đối với hàng hóa xuất khẩu,) | K1]\nCác trường hợp ấn định thuế của cơ quan hải quan đối với hàng hóa xuất khẩu, nhập khẩu:\na) Người nộp thuế dựa vào các chứng từ, tài liệu, dữ liệu không hợp pháp để khai thuế, tính thuế; không khai thuế hoặc kê khai không chính xác, không đầy đủ, không trung thực nội dung liên quan đến xác định nghĩa vụ thuế;\nb) Quá thời hạn theo quy định của pháp luật về hải quan, quy định khác của pháp luật có liên quan hoặc yêu cầu bằng văn bản của cơ quan hải quan mà người nộp thuế không cung cấp, từ chối hoặc trì hoãn, kéo dài việc cung cấp hồ sơ, sổ kế toán, tài liệu, chứng từ, dữ liệu, số liệu liên quan đến việc xác định chính xác số tiền thuế phải nộp, miễn, giảm, hoàn, không thu, không chịu thuế theo quy định;\n[... còn 7 điểm nữa]",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 7 > Điều 25: Ấn định thuế đối với hàng hóa xuất khẩu, nhập khẩu > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_khoan_3_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực) | K3 | Đ.a]\nNgười nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn, không thu đối với hàng hóa xuất khẩu, nhập khẩu nhưng không thuộc các trường hợp quy định tại\nNgười nộp thuế tự phát hiện và khai bổ sung sau thời điểm cơ quan hải quan thông báo việc kiểm tra trực tiếp hồ sơ hải quan đối với hàng hóa đang làm thủ tục hải quan hoặc sau thời hạn 60 ngày kể từ ngày thông quan và trước thời điểm quyết định kiểm tra sau thông quan, thanh tra, kiểm tra đối với hàng hóa đã thông quan;",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hành chính về quản lý t)]",
+                "score": 0.010151,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_2_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 2",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hành chính về) | K2]\nTrường hợp không xử phạt vi phạm hành chính về quản lý thuế:\na) Trường hợp người nộp thuế có hành vi khai sai theo quy định tại khoản 2 Điều 45 của Luật này nhưng đã khai bổ sung hồ sơ khai thuế và đã tự giác nộp đủ số tiền thuế phải nộp trước thời điểm cơ quan thuế công bố quyết định kiểm tra thuế, cơ quan có thẩm quyền khác công bố quyết định thanh tra, kiểm tra tại trụ sở người nộp thuế hoặc trước thời điểm cơ quan thuế phát hiện không qua kiểm tra thuế tại trụ sở của người nộp thuế hoặc trước khi cơ quan có thẩm quyền khác phát hiện; cá nhân trực tiếp quyết toán thuế thu nhập cá nhân chậm nộp hồ sơ quyết toán thuế thu nhập cá nhân mà có phát sinh số tiền thuế được hoàn và các trường hợp không bị xử phạt vi phạm h",
+                "score": 0.010151,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_2_diem_b_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 2 > Điểm b",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hàn) | K2 | Đ.b]\nTrường hợp không xử phạt vi phạm hành chính về quản lý thuế:\nTrường hợp người nộp thuế có hành vi khai sai theo quy định tại khoản 3 Điều 45 của Luật này nhưng đã khai bổ sung trước thời điểm cơ quan hải quan thông báo việc kiểm tra trực tiếp hồ sơ hải quan đối với hàng hóa đang làm thủ tục hải quan; Người nộp thuế khai bổ sung trong thời hạn 60 ngày kể từ ngày thông quan và trước thời điểm quyết định thanh tra, kiểm tra đối với hàng hóa đã thông quan, kiểm tra sau thông quan và các trường hợp khác theo quy định của Chính phủ.",
+                "score": 0.010151,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 2 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_1_diem_e_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm e",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K1 | Đ.e]\nCác trường hợp phải nộp tiền chậm nộp bao gồm:\nTrường hợp không bị xử phạt vi phạm hành chính về quản lý thuế theo quy định tại điểm a khoản 2 Điều 44 đối với hành vi quy định tại khoản 2 Điều 45 của Luật này và trường hợp quy định tại điểm b khoản 2 Điều 44 của Luật này;",
+                "score": 0.009426,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm e"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_1_diem_đ_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K1 | Đ.đ]\nCác trường hợp phải nộp tiền chậm nộp bao gồm:\nTrường hợp quy định tại khoản 8 Điều 44 của Luật này;",
+                "score": 0.006598,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm đ"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "109_2025_QH15",
+            "query": "giảm trừ gia cảnh người phụ thuộc điều kiện hồ sơ chứng minh"
+          },
+          "result": {
+            "query": "giảm trừ gia cảnh người phụ thuộc điều kiện hồ sơ chứng minh",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_1_diem_b_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 1 > Điểm b",
+                "snippet": "[VB: 109/2025/QH15 | Đ10 (Giảm trừ gia cảnh) | K1 | Đ.b]\nGiảm trừ gia cảnh là số tiền được trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công của người nộp thuế là cá nhân cư trú. Giảm trừ gia cảnh gồm:\nMức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng.",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_3_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 3",
+                "snippet": "[VB: 109/2025/QH15 | Đ10 (Giảm trừ gia cảnh) | K3]\nViệc xác định mức giảm trừ gia cảnh đối với người phụ thuộc thực hiện theo nguyên tắc mỗi người phụ thuộc chỉ được tính giảm trừ một lần vào một người nộp thuế.",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_4_diem_a_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4 > Điểm a",
+                "snippet": "[VB: 109/2025/QH15 | Đ10 (Giảm trừ gia cảnh) | K4 | Đ.a]\nNgười phụ thuộc là người mà người nộp thuế có trách nhiệm nuôi dưỡng, bao gồm:\nCon chưa thành niên; con là người mất năng lực hành vi dân sự, người khuyết tật, không có khả năng lao động;",
+                "score": 0.015221,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_11_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác",
+                "snippet": "[VB: 109/2025/QH15 | Đ11 (Giảm trừ đối với các khoản đóng góp từ thiện, nhân)]\ncác khoản giảm trừ khác Cá nhân cư trú được giảm trừ vào thu nhập chịu thuế trước khi tính thuế đối với thu nhập từ tiền lương, tiền công các khoản sau đây:",
+                "score": 0.015221,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 11: Giảm trừ đối với các khoản đóng góp từ thiện, nhân đạo và các khoản giảm trừ khác"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_10_khoan_4_diem_b_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4 > Điểm b",
+                "snippet": "[VB: 109/2025/QH15 | Đ10 (Giảm trừ gia cảnh) | K4 | Đ.b]\nNgười phụ thuộc là người mà người nộp thuế có trách nhiệm nuôi dưỡng, bao gồm:\nCác cá nhân không có thu nhập hoặc có thu nhập không vượt quá mức do Bộ trưởng Bộ Tài chính quy định, bao gồm con thành niên đang học đại học, cao đẳng, trung học chuyên nghiệp hoặc học nghề; vợ hoặc chồng không có khả năng lao động; bố, mẹ đã hết tuổi lao động hoặc không có khả năng lao động; những người khác không nơi nương tựa mà người nộp thuế phải trực tiếp nuôi dưỡng.",
+                "score": 0.015181,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 10: Giảm trừ gia cảnh > Khoản 4 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_IV_dieu_29_khoan_4_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 4",
+                "snippet": "[VB: 109/2025/QH15 | Đ29 (Hiệu lực thi hành) | K4]\nTrường hợp có quy định khác nhau về ưu đãi thuế giữa Luật này với Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ thì áp dụng theo quy định của Luật Thủ đô, nghị quyết của Quốc hội và giải pháp quy định tại điểm h khoản 8 Điều 10 của Luật Tổ chức Chính phủ. Trường hợp quy định tại Luật này ưu đãi hơn thì người nộp thuế được lựa chọn áp dụng mức ưu đãi có lợi nhất.",
+                "score": 0.010604,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương IV > Điều 29: Hiệu lực thi hành > Khoản 4"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "110_2025_UBTVQH15",
+            "query": "mức giảm trừ gia cảnh người phụ thuộc 2026"
+          },
+          "result": {
+            "query": "mức giảm trừ gia cảnh người phụ thuộc 2026",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_110_2025_UBTVQH15_dieu_1_diem_b_chunk",
+                "doc_id": "110_2025_UBTVQH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm b",
+                "snippet": "[VB: 110/2025/UBTVQH15 | Đ1 (Mức giảm trừ gia cảnh của thuế) | Đ.b]\nĐiều chỉnh mức giảm trừ gia cảnh quy định tại khoản 1 Điều 19 của Luật Thuế thu nhập cá nhân như sau:\nMức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "110_2025_UBTVQH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_110_2025_UBTVQH15_dieu_1_chunk",
+                "doc_id": "110_2025_UBTVQH15",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+                "snippet": "[VB: 110/2025/UBTVQH15 | Đ1 (Mức giảm trừ gia cảnh của thuế thu nhập cá nhân)]\nĐiều chỉnh mức giảm trừ gia cảnh quy định tại khoản 1 Điều 19 của Luật Thuế thu nhập cá nhân như sau:",
+                "score": 0.016052,
+                "citation": {
+                  "doc_id": "110_2025_UBTVQH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân"
+                }
+              },
+              {
+                "chunk_id": "doc_110_2025_UBTVQH15_dieu_1_diem_a_chunk",
+                "doc_id": "110_2025_UBTVQH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm a",
+                "snippet": "[VB: 110/2025/UBTVQH15 | Đ1 (Mức giảm trừ gia cảnh của thuế) | Đ.a]\nĐiều chỉnh mức giảm trừ gia cảnh quy định tại khoản 1 Điều 19 của Luật Thuế thu nhập cá nhân như sau:\nMức giảm trừ đối với đối tượng nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm);",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "110_2025_UBTVQH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_1_chunk",
+                "doc_id": "110_2025_UBTVQH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 1",
+                "snippet": "[VB: 110/2025/UBTVQH15 | Đ2 (Hiệu lực thi hành) | K1]\nNghị quyết này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026 và áp dụng từ kỳ tính thuế năm 2026.",
+                "score": 0.015553,
+                "citation": {
+                  "doc_id": "110_2025_UBTVQH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_2_chunk",
+                "doc_id": "110_2025_UBTVQH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 2",
+                "snippet": "[VB: 110/2025/UBTVQH15 | Đ2 (Hiệu lực thi hành) | K2]\nNghị quyết số 954/2020/UBTVQH14 ngày 02 tháng 6 năm 2020 của ủy ban Thường vụ Quốc hội về điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân hết hiệu lực kể từ ngày Nghị quyết này có hiệu lực thi hành. Nghị quyết này được Ủy ban Thường vụ Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XV, Phiên họp thứ 50 thông qua ngày 17 tháng 10 năm 2025.",
+                "score": 0.015457,
+                "citation": {
+                  "doc_id": "110_2025_UBTVQH15",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 2: Hiệu lực thi hành > Khoản 2"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "trách nhiệm của tổ chức chi trả thu nhập đăng ký người phụ thuộc cho người lao động",
+            "doc_filter": "126_2020_NDCP"
+          },
+          "result": {
+            "query": "trách nhiệm của tổ chức chi trả thu nhập đăng ký người phụ thuộc cho người lao động",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VII_dieu_32_khoan_5_diem_d_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm d",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ32 (Cưỡng chế bằng biện pháp khấu ) | K5 | Đ.d]\nTrách nhiệm của cơ quan, tổ chức, người sử dụng lao động đang quản lý tiền lương hoặc thu nhập của cá nhân bị cưỡng chế\nCơ quan, tổ chức sử dụng lao động đang quản lý tiền lương hoặc thu nhập của người nộp thuế bị cưỡng chế cố tình không thực hiện quyết định cưỡng chế thì bị xử phạt vi phạm hành chính về quản lý thuế theo quy định.",
+                "score": 0.015978,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VII_dieu_32_khoan_5_diem_b_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm b",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ32 (Cưỡng chế bằng biện pháp khấu ) | K5 | Đ.b]\nTrách nhiệm của cơ quan, tổ chức, người sử dụng lao động đang quản lý tiền lương hoặc thu nhập của cá nhân bị cưỡng chế\nKhi đến kỳ phát tiền lương hoặc thu nhập gần nhất, cơ quan, tổ chức, người đang quản lý tiền lương hoặc thu nhập của cá nhân bị cưỡng chế có trách nhiệm khấu trừ một phần tiền lương hoặc thu nhập của cá nhân bị cưỡng chế theo nội dung ghi trong quyết định cưỡng chế và chuyển số tiền đã khấu trừ vào ngân sách nhà nước, đồng thời thông báo cho người có thẩm quyền ra quyết định cưỡng chế biết.",
+                "score": 0.015385,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VII_dieu_32_khoan_5_diem_c_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm c",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ32 (Cưỡng chế bằng biện pháp khấu ) | K5 | Đ.c]\nTrách nhiệm của cơ quan, tổ chức, người sử dụng lao động đang quản lý tiền lương hoặc thu nhập của cá nhân bị cưỡng chế\nTrường hợp chưa khấu trừ đủ số tiền thuế nợ theo quyết định cưỡng chế m� hợp đồng lao động của người nộp thuế bị cưỡng chế chấm dứt, cơ quan, tổ chức sử dụng lao động phải thông báo cho người ra quyết định cưỡng chế biết trong thời hạn 05 ngày làm việc, kể từ ngày chấm dứt hợp đồng lao động.",
+                "score": 0.01521,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 32: Cưỡng chế bằng biện pháp khấu trừ một phần tiền lương hoặc thu nhập > Khoản 5 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VI_dieu_27_khoan_4_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VI > Điều 27: Trách nhiệm cung cấp thông tin của tổ chức, cá nhân có liên quan > Khoản 4",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ27 (Trách nhiệm cung cấp thông tin của tổ ch) | K4]\nTổ chức, cá nhân chi trả thu nhập có trách nhiệm cung cấp thông tin về chi trả thu nhập và số tiền thuế khấu trừ của người nộp thuế khi quyết toán thuế năm hoặc khi có yêu cầu của cơ quan quản lý thuế.",
+                "score": 0.014984,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VI > Điều 27: Trách nhiệm cung cấp thông tin của tổ chức, cá nhân có liên quan > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_8_khoan_6_diem_d_tiet_d.1_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Tiết",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm d > Tiết d.1",
+                "snippet": "[VB: 126/2020/NĐ-CP | Tiết d.1]\nTổ chức, cá nhân trả thu nhập từ tiền lương, tiền công có trách nhiệm khai quyết toán thuế và quyết toán thay cho các cá nhân có ủy quyền do tổ chức, cá nhân trả thu nhập chi trả, không phân biệt có phát sinh khấu trừ thuế hay không phát sinh khấu trừ thuế. Trường hợp tổ chức, cá nhân không phát sinh trả thu nhập thì không phải khai quyết toán thuế thu nhập cá nhân. Trường hợp cá nhân là người lao động được điều chuyển từ tổ chức cũ đến tổ chức mới do tổ chức cũ thực hiện sáp nhập, hợp nhất, chia, tách, chuyển đổi loại hình doanh nghiệp hoặc tổ chức cũ và tổ chức mới trong cùng một hệ thống thì tổ chức mới có trách nhiệm quyết toán thuế theo ủy quyền của cá nhân đối với cả phần thu nhập do tổ chức cũ chi trả và thu lại chứng từ khấu trừ thuế thu nhập cá nhân do tổ chức cũ đã cấp cho người lao động (nếu có).",
+                "score": 0.014918,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm d > Tiết d.1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 9353,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.50",
+        "details": {
+          "matched": [
+            "110_2025_UBTVQH15",
+            "109_2025_QH15"
+          ],
+          "missing": [],
+          "extra": [
+            "108_2025_QH15",
+            "126_2020_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 0.8,
+        "reason": "PASS — gọi 4 tools (topic không có mapping cụ thể)",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.5,
+        "reason": "PARTIAL — 1/2 key facts, thiếu: ['vẫn phải đăng ký']",
+        "details": {
+          "matched": [
+            "không chính xác"
+          ],
+          "missing": [
+            "vẫn phải đăng ký"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [],
+      "false_refusal": false
+    }
+  ]
+}

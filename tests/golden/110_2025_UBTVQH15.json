@@ -21,7 +21,28 @@
           "target_id": "external_luat_thue_thu_nhap_ca_nhan_nhu_dieu_19_khoan_1"
         }
       ],
-      "children": [],
+      "children": [
+        {
+          "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_a",
+          "node_type": "Điểm",
+          "node_index": "a",
+          "title": null,
+          "content": "Mức giảm trừ đối với đối tượng nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm);",
+          "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm a",
+          "references": [],
+          "children": []
+        },
+        {
+          "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_b",
+          "node_type": "Điểm",
+          "node_index": "b",
+          "title": null,
+          "content": "Mức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng.",
+          "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm b",
+          "references": [],
+          "children": []
+        }
+      ],
       "lead_in_text": "Điều chỉnh mức giảm trừ gia cảnh quy định tại khoản 1 Điều 19 của Luật Thuế thu nhập cá nhân như sau:"
     },
     {

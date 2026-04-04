@@ -1,0 +1,1310 @@
+[
+  {
+    "id": "BT_STRAIGHTFORWARD_001",
+    "group": "straightforward",
+    "topic": "Giảm trừ gia cảnh bản thân 2026",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "question": "Mức giảm trừ gia cảnh cho người nộp thuế thu nhập cá nhân theo Luật Thuế TNCN 2025 là bao nhiêu?",
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "15.000.000 đồng/tháng"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 19 Khoản 1 Luật Thuế TNCN 2025 (109_2025_QH15) quy định mức giảm trừ đối với mỗi người nộp thuế."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_002",
+    "group": "straightforward",
+    "topic": "Hoàn thuế TNCN đã khấu trừ thừa",
+    "user_type": "employee",
+    "difficulty": "easy",
+    "question": "Tôi đã nộp thừa thuế thu nhập cá nhân trong năm 2025, vậy tôi có được hoàn lại số tiền đó không và cơ sở pháp lý là gì?",
+    "expected_docs": [
+      "108_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 8 Khoản 2 Luật Quản lý thuế 2025 (108_2025_QH15) quy định người nộp thuế được hoàn thuế theo quy định của pháp luật về thuế."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_003",
+    "group": "straightforward",
+    "topic": "Ngưỡng miễn thuế HKD",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "question": "Hộ kinh doanh của tôi có doanh thu bao nhiêu thì không phải nộp thuế TNCN và GTGT theo quy định mới?",
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 20 Nghị định 68/2026/NDCP quy định hộ kinh doanh có doanh thu từ 500 triệu đồng trở xuống không phải nộp thuế GTGT và TNCN."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_004",
+    "group": "straightforward",
+    "topic": "Mức phạt nộp chậm tờ khai thuế",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "question": "Nếu tôi nộp tờ khai thuế muộn vài ngày thì bị phạt bao nhiêu tiền theo quy định hiện hành?",
+    "expected_docs": [
+      "310_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Nghị định 310/2025/NDCP sửa đổi Điều 7 Nghị định 125/2020/NDCP về hành vi chậm nộp hồ sơ khai thuế. Khoản 1 Điều 7 (sửa đổi) quy định mức phạt từ 2.000.000 đồng đến 5.000.000 đồng cho hành vi nộp chậm từ 01 đến 05 ngày nếu có tình tiết giảm nhẹ, hoặc từ 5.000.000 đồng đến 8.000.000 đồng nếu không có tình tiết giảm nhẹ."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_005",
+    "group": "straightforward",
+    "topic": "Thuế TMĐT sàn Shopee khấu trừ",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "question": "Tôi bán hàng online trên Shopee, vậy Shopee có phải khấu trừ thuế của tôi trước khi thanh toán không?",
+    "expected_docs": [
+      "117_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 5 Nghị định 117/2025/NDCP quy định trách nhiệm của sàn giao dịch thương mại điện tử trong việc khấu trừ thuế đối với người bán."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_006",
+    "group": "straightforward",
+    "topic": "Giảm trừ gia cảnh bản thân",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "question": "Mức giảm trừ gia cảnh áp dụng cho bản thân người nộp thuế từ năm 2026 theo quy định mới là bao nhiêu?",
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "132 triệu đồng/năm"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 18, Khoản 1, Điểm a của Luật Thuế TNCN 2025 (109_2025_QH15) quy định mức giảm trừ gia cảnh cho người nộp thuế."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_007",
+    "group": "straightforward",
+    "topic": "Ngưỡng miễn thuế HKD",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "question": "Tôi bán hàng online, nếu doanh thu cả năm không vượt quá mức nào thì không cần đóng thuế?",
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 5, Khoản 1 của Nghị định 68/2026 (68_2026_NDCP) quy định ngưỡng doanh thu chịu thuế đối với hộ kinh doanh."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_008",
+    "group": "straightforward",
+    "topic": "Đăng ký MST lần đầu",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "question": "Một cá nhân khi đăng ký mã số thuế lần đầu trực tiếp với cơ quan thuế thì cần những giấy tờ tùy thân nào?",
+    "expected_docs": [
+      "86_2024_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 3, Khoản 1, Điểm a của Thông tư 86/2024 (86_2024_TTBTC) hướng dẫn hồ sơ đăng ký thuế lần đầu cho cá nhân."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_009",
+    "group": "straightforward",
+    "topic": "Thuế TMĐT sàn Shopee khấu trừ",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "question": "Theo Nghị định mới về quản lý thuế thương mại điện tử, các sàn giao dịch TMĐT có chức năng thanh toán trực tuyến như Shopee có trách nhiệm gì trong việc khấu trừ thuế của người bán?",
+    "expected_docs": [
+      "117_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 4, Khoản 1 của Nghị định 117/2025 (117_2025_NDCP) quy định trách nhiệm của sàn giao dịch thương mại điện tử."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_010",
+    "group": "straightforward",
+    "topic": "Khấu trừ thuế TNCN 10% hợp đồng ngắn hạn",
+    "user_type": "employer",
+    "difficulty": "medium",
+    "question": "Công ty tôi có ký hợp đồng dịch vụ tư vấn dưới 3 tháng với một cá nhân, chi trả 5 triệu đồng/lần. Theo Luật Thuế TNCN 2025, công ty có phải khấu trừ bao nhiêu phần trăm trên khoản chi trả này không?",
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "10%"
+      ],
+      "thresholds": [
+        "2 triệu đồng/lần"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Điều 23, Khoản 1, Điểm i của Luật Thuế TNCN 2025 (109_2025_QH15) quy định về khấu trừ thuế đối với thu nhập từ tiền lương, tiền công, tiền thù lao của cá nhân không ký hợp đồng lao động hoặc hợp đồng dưới 3 tháng."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_011",
+    "group": "straightforward",
+    "topic": "Giảm trừ gia cảnh bản thân",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "question": "Theo Luật Thuế Thu nhập cá nhân 2025 có hiệu lực từ 01/01/2026, mức giảm trừ gia cảnh cho bản thân người nộp thuế được quy định như thế nào?",
+    "expected_docs": [
+      "109_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Giảm trừ bản thân: 15 triệu đồng/tháng (132 triệu/năm) — Điều 19 Luật 109/2025/QH15"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Tham khảo Điều X Luật Thuế TNCN 2025 (109_2025_QH15) quy định về giảm trừ gia cảnh cho bản thân người nộp thuế."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_012",
+    "group": "straightforward",
+    "topic": "Ngưỡng doanh thu chịu thuế HKD",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "question": "Tôi kinh doanh dịch vụ ăn uống nhỏ lẻ và doanh thu năm 2026 dự kiến là 95 triệu đồng. Vậy tôi có thuộc diện phải nộp thuế khoán hộ kinh doanh không?",
+    "expected_docs": [
+      "68_2026_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Tham khảo Điều X Nghị định 68/2026/ND-CP quy định về ngưỡng doanh thu chịu thuế đối với hộ kinh doanh."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_013",
+    "group": "straightforward",
+    "topic": "Mức phạt nộp chậm tờ khai thuế",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "question": "Nếu một tổ chức nộp hồ sơ khai thuế quá thời hạn quy định từ 91 ngày trở lên, mức phạt vi phạm hành chính về thuế theo Nghị định 310/2025 là bao nhiêu?",
+    "expected_docs": [
+      "310_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": [
+        "Phạt chậm nộp hồ sơ khai thuế >90 ngày: 15-25 triệu đồng (Điều 1K10a NĐ 310/2025)"
+      ]
+    },
+    "annotation_note": "Tham khảo Điều X Nghị định 310/2025/ND-CP sửa đổi quy định về mức phạt đối với hành vi nộp chậm hồ sơ khai thuế."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_014",
+    "group": "straightforward",
+    "topic": "Thuế TMĐT sàn khấu trừ",
+    "user_type": "online_seller",
+    "difficulty": "easy",
+    "question": "Tôi bán hàng hóa trên các sàn thương mại điện tử lớn. Sàn đó có phải thực hiện việc khấu trừ và nộp thuế thay cho tôi không theo quy định tại Nghị định 117/2025?",
+    "expected_docs": [
+      "117_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Tham khảo Điều X Nghị định 117/2025/ND-CP quy định về trách nhiệm khấu trừ thuế của sàn giao dịch thương mại điện tử."
+  },
+  {
+    "id": "BT_STRAIGHTFORWARD_015",
+    "group": "straightforward",
+    "topic": "Sổ doanh thu S2b-HKD",
+    "user_type": "household_business",
+    "difficulty": "easy",
+    "question": "Hộ kinh doanh thuộc diện nộp thuế theo phương pháp khoán muốn theo dõi chi tiết doanh thu bán hàng hóa, dịch vụ của mình thì cần sử dụng mẫu sổ kế toán nào theo hướng dẫn của Thông tư 152/2025?",
+    "expected_docs": [
+      "152_2025_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [
+        "S2b-HKD"
+      ],
+      "deadlines": []
+    },
+    "annotation_note": "Tham khảo Điều X Thông tư 152/2025/TT-BTC hướng dẫn về chế độ kế toán cho hộ kinh doanh, cụ thể là mẫu S2b-HKD."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_001",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, HKD, TMĐT, Quyết toán TNCN",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "question": "Tôi đang là nhân viên văn phòng, lương cứng 20 triệu/tháng. Ngoài ra tôi còn bán quần áo trên TikTok Shop, mỗi tháng cũng kiếm thêm được tầm 15 củ. Vậy tôi phải khai và nộp thuế cho thu nhập từ TikTok như thế nào cho đúng luật mới, với lại có phải kê khai gộp với lương không, hay là hai cái riêng?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "117_2025_NDCP",
+      "108_2025_QH15",
+      "126_2020_NDCP",
+      "1296_CTNVT"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "Thuế suất lũy tiến từng phần cho thu nhập từ tiền lương, tiền công (Luật TNCN 2025)",
+        "Thuế suất khoán đối với hộ kinh doanh (VD: 1.5% - 5% cho PIT, 1% - 5% cho VAT tùy ngành nghề, theo NĐ 68/2026)"
+      ],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)",
+        "Khoán method: 500 triệu < DT ≤ 3 tỷ; Kê khai method: DT > 3 tỷ (Điều 4K5 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi liên quan đến nhiều nguồn thu nhập (lương và kinh doanh online), yêu cầu làm rõ cách tính thuế cho từng loại và việc kê khai, quyết toán thuế TNCN chung. Hệ thống cần phân biệt nghĩa vụ của cá nhân có thu nhập từ tiền lương và hộ kinh doanh có thu nhập từ TMĐT, cũng như quy định về khấu trừ của sàn TMĐT và quyết toán TNCN cuối kỳ. Các văn bản chính: Luật TNCN 2025 (quy định về thu nhập chịu thuế, đối tượng nộp), NĐ 68/2026 (chi tiết về thuế HKD, ngưỡng doanh thu), NĐ 117/2025 (quản lý thuế TMĐT, vai trò của sàn), Luật QLT 2025 (nghĩa vụ kê khai), NĐ 126/2020 và CV 1296 (hướng dẫn quyết toán)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_002",
+    "group": "cross_domain",
+    "topic": "HKD, phương pháp tính thuế, xử phạt, chi phí được trừ",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi chuyên bán đồ thủ công mỹ nghệ. Năm ngoái tôi vẫn nộp thuế khoán vì nghĩ doanh thu chưa tới ngưỡng, nhưng giờ bị bên thuế xuống kiểm tra, bảo doanh thu vượt 200 củ rồi mà không chuyển sang kê khai, không có sổ sách gì cả nên bị phạt nặng. Giờ tôi muốn biết mức phạt vi phạm hành chính thuế cho trường hợp này là bao nhiêu theo luật mới, và quan trọng hơn là nếu chuyển sang kê khai thì những chi phí nào tôi có thể đưa vào để 'trừ' thuế được?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "310_2025_NDCP",
+      "125_2020_NDCP",
+      "108_2025_QH15",
+      "152_2025_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Khoán method: 500 triệu < DT ≤ 3 tỷ; Kê khai method: DT > 3 tỷ (Điều 4K5 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi đề cập đến việc chuyển đổi phương pháp tính thuế của HKD (từ khoán sang kê khai), hậu quả của việc không tuân thủ (bị phạt) và các chi phí được phép khấu trừ khi áp dụng phương pháp kê khai. Hệ thống cần tra cứu quy định về ngưỡng doanh thu HKD, các hành vi vi phạm hành chính thuế và mức phạt tương ứng, cũng như nguyên tắc xác định chi phí hợp lý. Các văn bản chính: NĐ 68/2026 (phương pháp tính thuế HKD), NĐ 310/2025 và NĐ 125/2020 (xử phạt vi phạm hành chính thuế), Luật QLT 2025 (nghĩa vụ kê khai, quản lý thuế), TT 152/2025 (sổ sách kế toán HKD)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_003",
+    "group": "cross_domain",
+    "topic": "Quyết toán TNCN, thu nhập đa nguồn, ủy quyền quyết toán",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "question": "Năm nay tôi vừa có lương từ công ty, vừa nhận cổ tức từ mấy mã chứng khoán tôi đầu tư, lại còn có thêm mấy dự án viết bài tự do nữa. Giờ cuối năm rồi, tôi cần quyết toán thuế TNCN cho tất cả các khoản này như thế nào? Liệu tôi có được ủy quyền cho công ty quyết toán gộp hết cho mình không, hay là tôi phải tự làm riêng từng cái?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "126_2020_NDCP",
+      "373_2025_NDCP",
+      "1296_CTNVT"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "Thuế suất lũy tiến từng phần cho thu nhập từ tiền lương, tiền công (Luật TNCN 2025)",
+        "Thuế suất 5% cho thu nhập từ đầu tư vốn (cổ tức) (Luật TNCN 2025)"
+      ],
+      "thresholds": [
+        "Mức giảm trừ gia cảnh (Luật TNCN 2025)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi tập trung vào quy trình quyết toán thuế TNCN cho cá nhân có nhiều nguồn thu nhập khác nhau (lương, cổ tức, dự án tự do) và khả năng ủy quyền quyết toán. Hệ thống cần giải thích nguyên tắc tổng hợp thu nhập để quyết toán, các loại thu nhập chịu thuế TNCN và điều kiện để được ủy quyền quyết toán. Các văn bản chính: Luật TNCN 2025 (quy định về các loại thu nhập chịu thuế, cách tính), NĐ 126/2020 (quy trình quyết toán thuế TNCN), NĐ 373/2025 (quy định chi tiết về ủy quyền quyết toán), Công văn 1296 (hướng dẫn quyết toán TNCN)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_004",
+    "group": "cross_domain",
+    "topic": "HKD, TMĐT, nghĩa vụ kê khai, khấu trừ thuế",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "question": "Em bán hàng online qua Shopee, trên đó họ tự động trừ thuế của em luôn rồi. Nhưng em còn bán thêm qua Facebook, Zalo nữa, mấy cái này thì không bị 'app trừ thuế' như Shopee. Vậy thì em có cần phải đi khai báo, nộp thuế gì thêm cho phần bán ngoài Shopee không? Hay là cứ để thế thôi?",
+    "expected_docs": [
+      "117_2025_NDCP",
+      "68_2026_NDCP",
+      "108_2025_QH15",
+      "18_2026_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "Thuế suất khoán đối với hộ kinh doanh (VD: 1.5% - 5% cho PIT, 1% - 5% cho VAT tùy ngành nghề, theo NĐ 68/2026)"
+      ],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi thực tế, sử dụng ngôn ngữ đời thường ('app trừ thuế') về nghĩa vụ thuế của người bán hàng online có nhiều kênh (sàn TMĐT và mạng xã hội), đặc biệt khi sàn đã thực hiện khấu trừ. Hệ thống cần làm rõ vai trò của sàn TMĐT trong việc khấu trừ thuế và nghĩa vụ kê khai, nộp thuế còn lại của người bán đối với tổng thu nhập từ các kênh. Các văn bản chính: NĐ 117/2025 (quản lý thuế TMĐT, trách nhiệm của sàn), NĐ 68/2026 (quy định chi tiết về HKD, phương pháp tính thuế), Luật QLT 2025 (nghĩa vụ kê khai), TT 18/2026 (hồ sơ kê khai)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_005",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, cho thuê nhà, freelance, miễn giảm thuế, luật mới",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Tôi đang có một căn hộ cho thuê nguyên căn với giá 30 triệu/tháng và còn làm thêm tư vấn tự do nữa. Nghe nói luật thuế TNCN mới có nhiều thay đổi từ 2026, không biết thu nhập từ cho thuê nhà của tôi có bị tính khác đi không, và liệu có được hưởng thêm ưu đãi, miễn giảm thuế gì theo các quy định mới không? Đặc biệt là cái phần thu nhập từ tư vấn tự do thì khai báo thế nào cho đúng?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "20_2026_NDCP",
+      "108_2025_QH15",
+      "126_2020_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "Thuế suất đối với thu nhập từ cho thuê tài sản (VD: 5% PIT + 5% VAT theo NĐ 68/2026)",
+        "Thuế suất đối với thu nhập từ hoạt động kinh doanh/dịch vụ (VD: 1.5% - 5% PIT, 1% - 5% VAT tùy ngành nghề, theo NĐ 68/2026)"
+      ],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi phức tạp, yêu cầu hệ thống giải thích các thay đổi của Luật TNCN mới (hiệu lực 2026) ảnh hưởng đến thu nhập từ cho thuê tài sản và hoạt động dịch vụ (freelance), đồng thời tư vấn về các ưu đãi, miễn giảm thuế mới. Hệ thống cần tổng hợp thông tin từ nhiều luật và nghị định. Các văn bản chính: Luật TNCN 2025 (quy định mới về TNCN), NĐ 68/2026 (chi tiết về thuế HKD, bao gồm cho thuê tài sản và dịch vụ), NĐ 20/2026 (miễn giảm thuế), Luật QLT 2025 (nghĩa vụ kê khai), NĐ 126/2020 (quy trình quyết toán), Luật 149/2025 (điều khoản chuyển tiếp)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_006",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, HKD TMĐT, Quyết toán TNCN",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "question": "Tôi đang làm văn phòng với mức lương 20 triệu/tháng sau khi trừ bảo hiểm, đồng thời có mở shop bán mỹ phẩm trên Shopee với doanh thu trung bình 80 triệu/tháng. Shopee đã tự động khấu trừ thuế hộ tôi rồi. Cuối năm, tôi muốn biết mình có phải kê khai thêm gì về thu nhập từ Shopee không, và có cần làm quyết toán thuế TNCN chung cho cả lương và thu nhập từ Shopee không? Nếu có thì quy trình kê khai và quyết toán như thế nào?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "117_2025_NDCP",
+      "68_2026_NDCP",
+      "126_2020_NDCP",
+      "108_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi liên quan đến thu nhập từ tiền lương và thu nhập từ kinh doanh (HKD qua TMĐT). Cần xác định nghĩa vụ kê khai của cá nhân khi sàn đã khấu trừ (117_2025_NDCP), ngưỡng doanh thu chịu thuế của HKD (68_2026_NDCP), và việc quyết toán chung cho nhiều nguồn thu nhập (109_2025_QH15, 126_2020_NDCP)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_007",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, HKD TMĐT, Vi phạm hành chính thuế, Quyết toán TNCN",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Chị Lan làm nhân viên văn phòng, lương 15 'củ' mỗi tháng. Ngoài ra, chị còn bán hàng qua TikTok Shop, doanh thu năm vừa rồi là 150 triệu, nhưng chị quên béng không đăng ký kinh doanh hay kê khai thuế gì cả. Giờ bị thanh tra phát hiện, chị muốn biết mình sẽ bị xử phạt như thế nào, và liệu có cách nào để giảm nhẹ mức phạt không? Với lại, cuối năm chị có phải quyết toán thuế TNCN chung cho cả hai nguồn thu nhập này không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "117_2025_NDCP",
+      "108_2025_QH15",
+      "310_2025_NDCP",
+      "125_2020_NDCP",
+      "20_2026_NDCP",
+      "126_2020_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Phân tích thu nhập từ tiền lương và thu nhập từ kinh doanh (TikTok Shop). Xác định vi phạm không đăng ký kinh doanh/kê khai thuế (108_2025_QH15), mức phạt (310_2025_NDCP, 125_2020_NDCP), khả năng giảm nhẹ phạt (20_2026_NDCP). Cuối cùng là nghĩa vụ quyết toán chung (109_2025_QH15, 126_2020_NDCP)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_008",
+    "group": "cross_domain",
+    "topic": "HKD, Chuyển đổi phương pháp tính thuế, Vi phạm hành chính thuế, Miễn giảm thuế",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi chuyên bán đồ ăn vặt online. Năm 2025, tôi đang nộp thuế theo phương pháp khoán. Đến năm 2026, theo luật mới, tôi muốn chuyển sang nộp thuế theo phương pháp kê khai vì doanh thu năm 2025 của tôi đã vượt 3 tỷ đồng rồi. Tuy nhiên, năm 2024 tôi có khai sai doanh thu một quý, giờ đang bị phạt. Liệu việc chuyển đổi phương pháp này có ảnh hưởng gì đến việc xử lý vi phạm cũ không? Và tôi có thể xin giảm nhẹ mức phạt đó không, vì tôi đã chủ động kê khai lại và nộp bổ sung rồi?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "108_2025_QH15",
+      "310_2025_NDCP",
+      "125_2020_NDCP",
+      "20_2026_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "3 tỷ đồng/năm (ngưỡng doanh thu để áp dụng PP kê khai đối với HKD)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi liên quan đến điều kiện và thủ tục chuyển đổi phương pháp tính thuế cho HKD (68_2026_NDCP), xử lý vi phạm hành chính thuế (310_2025_NDCP, 125_2020_NDCP) khi khai sai, và khả năng được giảm nhẹ phạt khi đã tự giác khắc phục (20_2026_NDCP). Cũng cần xem xét các điều khoản chuyển tiếp (149_2025_QH15)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_009",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, Quyết toán TNCN, Ủy quyền quyết toán, Giảm trừ gia cảnh",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "question": "Năm 2026, tôi có thu nhập từ ba nguồn chính: tiền cho thuê căn hộ (15 triệu/tháng), làm freelance thiết kế đồ họa cho công ty nước ngoài (trung bình 25 triệu/tháng), và lợi nhuận từ việc đầu tư chứng khoán (khoảng 50 triệu trong năm). Tôi muốn hỏi liệu tôi có được ủy quyền quyết toán thuế TNCN cho một bên dịch vụ không, và các khoản giảm trừ nào tôi có thể áp dụng cho bản thân và cho hai con đang học đại học?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "126_2020_NDCP",
+      "373_2025_NDCP",
+      "68_2026_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Phân loại các nguồn thu nhập (cho thuê nhà, freelance là kinh doanh; chứng khoán là đầu tư vốn) theo 109_2025_QH15. Xác định điều kiện ủy quyền quyết toán TNCN (373_2025_NDCP, 126_2020_NDCP) và các quy định về giảm trừ gia cảnh cho bản thân và người phụ thuộc (con đang học đại học) theo 109_2025_QH15."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_010",
+    "group": "cross_domain",
+    "topic": "HKD, TMĐT, Nghĩa vụ kê khai, Xử phạt, Quyết toán TNCN",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Vợ chồng tôi là ông Thành và bà Mai. Ông Thành có cái tiệm phở nhỏ nhưng cũng bán online qua mấy cái app giao đồ ăn, doanh thu năm vừa rồi tầm 180 triệu. Bà Mai thì làm shipper bán thời gian, mỗi tháng cũng kiếm được thêm 8-10 'củ' từ việc ship hàng. Giờ tôi muốn hỏi là vợ chồng tôi có được gộp chung doanh thu để khai thuế HKD không? Hay mỗi người phải tự khai riêng? Nếu lỡ mà quên khai thuế cho mấy cái nguồn này thì bị phạt bao nhiêu tiền? Có cách nào để làm thủ tục 'app trừ thuế' cho nó tiện không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "117_2025_NDCP",
+      "108_2025_QH15",
+      "310_2025_NDCP",
+      "125_2020_NDCP",
+      "86_2024_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi phức tạp về việc xác định đối tượng nộp thuế (cá nhân hay HKD), nguyên tắc gộp/tách doanh thu giữa vợ chồng (109_2025_QH15, 68_2026_NDCP, 86_2024_TTBTC). Đề cập nghĩa vụ của người bán hàng/cung cấp dịch vụ qua app (TMĐT) (117_2025_NDCP) và xử phạt khi không kê khai (310_2025_NDCP, 125_2020_NDCP). Cụm từ 'app trừ thuế' ám chỉ việc sàn có thực hiện khấu trừ tại nguồn hay không."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_011",
+    "group": "cross_domain",
+    "topic": "Multiple income sources, HKD, E-commerce, Quyết toán TNCN",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Chị Hạnh là nhân viên văn phòng, lương tháng 20 triệu. Ngoài ra, chị còn có một cửa hàng tạp hóa nhỏ kinh doanh theo hộ cá thể, doanh thu trung bình 80 triệu/tháng. Mới đây, chị Hạnh bắt đầu bán thêm quần áo trên TikTok Shop, doanh thu từ nền tảng này cũng khoảng 25 triệu/tháng. Sàn TikTok đã khấu trừ thuế trực tiếp rồi. Chị Hạnh muốn biết cuối năm mình phải kê khai, quyết toán thuế TNCN thế nào cho đúng, và các nguồn thu nhập này có được gộp chung để tính giảm trừ gia cảnh hay không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "117_2025_NDCP",
+      "126_2020_NDCP",
+      "373_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Cần phân biệt thu nhập từ tiền lương, tiền công (tính theo biểu lũy tiến) với thu nhập từ kinh doanh (HKD, online seller). Thu nhập từ kinh doanh của HKD và cá nhân bán hàng online đều chịu thuế TNCN và GTGT nếu vượt ngưỡng. Sàn TMĐT khấu trừ thuế theo NĐ 117/2025 nhưng cá nhân vẫn có nghĩa vụ quyết toán nếu vượt ngưỡng. Giảm trừ gia cảnh áp dụng cho tổng thu nhập chịu thuế từ tiền lương, tiền công và kinh doanh (sau khi đã tính đúng theo quy định từng loại) theo Luật TNCN 2025."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_012",
+    "group": "cross_domain",
+    "topic": "Tax violations, penalties, deductible expenses, HKD accounting",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của anh Tùng chuyên bán đồ điện tử, năm ngoái do sơ suất mà nộp chậm tờ khai thuế 2 tháng, bị phạt hành chính 7.5 triệu đồng. Năm nay, anh ấy muốn hỏi khoản tiền phạt đó có được tính vào chi phí được trừ khi xác định thu nhập chịu thuế của hộ kinh doanh không? Đồng thời, những khoản chi phí nào là hợp lệ để hộ kinh doanh của anh Tùng khai thuế theo phương pháp kê khai?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC",
+      "125_2020_NDCP",
+      "310_2025_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Khoản phạt vi phạm hành chính về thuế thường không được tính là chi phí được trừ khi tính thuế thu nhập cá nhân từ kinh doanh. Nghị định 68/2026 và Thông tư 152/2025 sẽ quy định các chi phí hợp lệ (liên quan đến hoạt động kinh doanh, có hóa đơn chứng từ hợp pháp) cho HKD theo phương pháp kê khai."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_013",
+    "group": "cross_domain",
+    "topic": "HKD tax methods, compliance, new laws (transition)",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của chị Mai ở quận 10 đã hoạt động được 5 năm, doanh thu trung bình các năm trước đều dưới 100 triệu nên chỉ nộp thuế khoán. Tuy nhiên, từ đầu năm 2026, do mở rộng quy mô, doanh thu dự kiến sẽ \"phọt lên\" khoảng 300 triệu/năm. Chị Mai nghe nói luật mới có thay đổi về phương pháp tính thuế cho HKD. Chị muốn biết mình có bắt buộc phải chuyển sang phương pháp kê khai không, và nếu có thì thủ tục chuyển đổi như thế nào, cần chuẩn bị những giấy tờ, sổ sách gì?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC",
+      "108_2025_QH15",
+      "149_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [
+        "S1a",
+        "S2a",
+        "S2b"
+      ],
+      "deadlines": []
+    },
+    "annotation_note": "Nghị định 68/2026 quy định rõ ngưỡng doanh thu để áp dụng phương pháp khoán. Nếu HKD vượt ngưỡng 500 triệu đồng/năm, sẽ bắt buộc phải chuyển sang kê khai. Thủ tục chuyển đổi và các loại sổ sách kế toán cần chuẩn bị (ví dụ S1a, S2a, S2b...) được quy định chi tiết trong Nghị định 68/2026 và Thông tư 152/2025."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_014",
+    "group": "cross_domain",
+    "topic": "Multiple income sources, Rental income, Freelance, Quyết toán TNCN",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "question": "Em làm freelance code trên mạng, thu nhập cũng tầm 15 củ/tháng. Ngoài ra, em còn có căn nhà cho thuê được 10 triệu/tháng. Giờ cuối năm, em phải làm quyết toán TNCN sao cho đúng luật mới 2026? Có cần kê khai gộp hết không hay mỗi cái một kiểu? Với lại, em có nghe nói có cái 'app trừ thuế' gì đó, không biết có dùng được cho cả hai loại thu nhập này không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "126_2020_NDCP",
+      "373_2025_NDCP",
+      "86_2024_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 100 triệu đồng/năm cho thu nhập từ kinh doanh (Điều 3 Nghị định 68/2026/NDCP - áp dụng tương tự cho cá nhân có hoạt động kinh doanh)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Thu nhập từ freelance (cung cấp dịch vụ) và cho thuê nhà đều là thu nhập từ hoạt động sản xuất, kinh doanh theo Luật TNCN 2025. Cá nhân có thể phải quyết toán TNCN cho các nguồn này nếu vượt ngưỡng hoặc có yêu cầu hoàn thuế. Luật TNCN 2025 (109/2025/QH15) sẽ quy định chi tiết về cách tính thuế và QTTNCN cho từng loại thu nhập, bao gồm việc gộp thu nhập để tính giảm trừ gia cảnh. 'App trừ thuế' có thể hiểu là ứng dụng eTax Mobile hoặc các cổng thông tin điện tử của cơ quan thuế để kê khai, nộp thuế."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_015",
+    "group": "cross_domain",
+    "topic": "Multiple income sources, Capital gains, Quyết toán TNCN, Exemptions",
+    "user_type": "employee",
+    "difficulty": "hard",
+    "question": "Anh Nam là nhân viên văn phòng, lương trung bình 30 triệu/tháng. Trong năm 2026, anh ấy có bán chứng khoán và thu được khoản lãi 150 triệu đồng. Anh Nam nghe nói Luật TNCN 2025 có nhiều điểm mới và có thể có những trường hợp miễn giảm thuế. Anh ấy muốn biết liệu thu nhập từ chứng khoán có phải gộp vào lương để quyết toán TNCN không, hay được tính riêng? Và với tổng thu nhập như vậy, anh ấy có được hưởng ưu đãi hay miễn giảm gì theo luật mới không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "20_2026_NDCP",
+      "126_2020_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "Thuế suất đối với thu nhập từ chuyển nhượng chứng khoán (Điều 19 Luật 109/2025/QH15)"
+      ],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Thu nhập từ chuyển nhượng chứng khoán (thu nhập từ đầu tư vốn) thường được tính thuế riêng với thuế suất cố định (ví dụ 0.1% trên giá chuyển nhượng), không gộp vào thu nhập từ tiền lương, tiền công để tính thuế lũy tiến (theo Luật TNCN 2025, Điều 19 và Điều 21). Nghị định 20/2026 sẽ quy định các trường hợp miễn, giảm thuế cụ thể. Cá nhân vẫn phải quyết toán TNCN cho thu nhập từ tiền lương, tiền công."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_016",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, HKD TMĐT, Quyết toán TNCN, Sổ sách",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "question": "Tôi là nhân viên văn phòng, lương tháng 20 triệu. Ngoài ra, tôi còn có một shop bán đồ handmade trên Shopee, doanh thu trung bình 15 triệu/tháng. Sàn Shopee đã tự động khấu trừ 1.5% thuế trước khi trả tiền cho tôi. Cuối năm nay tôi có cần phải quyết toán thuế TNCN cho cả hai nguồn thu nhập này không? Tôi có cần phải ghi sổ sách kế toán cho shop online của mình không, hay chỉ cần dựa vào dữ liệu từ Shopee là đủ? Và nếu có, tôi phải nộp hồ sơ kê khai gì?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "117_2025_NDCP",
+      "68_2026_NDCP",
+      "126_2020_NDCP",
+      "152_2025_TTBTC",
+      "18_2026_TTBTC",
+      "1296_CTNVT",
+      "108_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [
+        "1.5% (tỷ lệ khấu trừ của sàn TMĐT)"
+      ],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Kiểm tra khả năng tổng hợp quy định về thu nhập từ tiền lương, thu nhập từ kinh doanh TMĐT (có sàn khấu trừ), nghĩa vụ quyết toán thuế TNCN, và quy định về sổ sách kế toán cho hộ kinh doanh. Sàn khấu trừ không có nghĩa là miễn nghĩa vụ khai, nộp của HKD hay quyết toán của cá nhân."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_017",
+    "group": "cross_domain",
+    "topic": "HKD, Chuyển phương pháp tính thuế, Xử phạt, Giảm trừ chi phí",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Tôi đang là hộ kinh doanh nhỏ lẻ, doanh thu năm ngoái tầm 150 triệu, nên cứ nộp thuế khoán. Nhưng năm nay, công việc thuận lợi, doanh thu trung bình tháng đã vượt '25 củ', thậm chí có tháng lên tới 50 triệu. Tôi nghe nói nếu vượt ngưỡng thì phải chuyển sang phương pháp kê khai. Vậy tôi phải làm thủ tục gì để chuyển đổi? Và nếu tôi đã bị phạt vì chậm nộp tờ khai thuế khoán của quý trước, thì có cách nào để 'giảm trừ' cái tiền phạt đó vào chi phí khi chuyển sang phương pháp kê khai không?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC",
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "109_2025_QH15",
+      "108_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Kiểm tra quy định về ngưỡng doanh thu để chuyển đổi phương pháp tính thuế của HKD, thủ tục chuyển đổi, các quy định về xử phạt vi phạm hành chính thuế và khả năng 'giảm trừ' tiền phạt (thực tế là không được tính vào chi phí hợp lý khi tính thuế)."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_018",
+    "group": "cross_domain",
+    "topic": "Thu nhập đa nguồn, Quyết toán TNCN, Ủy quyền, Xử phạt",
+    "user_type": "employee",
+    "difficulty": "hard",
+    "question": "Năm ngoái tôi bị phạt vì quên quyết toán thuế TNCN cho khoản thu nhập từ dịch vụ tư vấn freelance. Năm nay, tôi có thu nhập từ lương ở công ty A (đã khấu trừ thuế), một khoản từ cho thuê nhà (đã nộp thuế theo từng lần phát sinh), và một ít lãi từ đầu tư chứng khoán. Tôi có thể ủy quyền cho công ty A quyết toán hộ cả ba nguồn thu nhập này không? Và cái vụ bị phạt năm ngoái có 'ám' tôi trong quá trình quyết toán năm nay không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "126_2020_NDCP",
+      "373_2025_NDCP",
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "1296_CTNVT"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Kiểm tra quy định về ủy quyền quyết toán thuế TNCN khi có nhiều nguồn thu nhập (tiền lương, cho thuê BĐS, đầu tư chứng khoán), điều kiện ủy quyền, và ảnh hưởng của việc đã bị phạt vi phạm hành chính thuế trong quá khứ."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_019",
+    "group": "cross_domain",
+    "topic": "HKD TMĐT, Sàn khấu trừ, Đăng ký MST, Hoàn thuế",
+    "user_type": "online_seller",
+    "difficulty": "medium",
+    "question": "Tôi là chủ hộ kinh doanh cá thể, chuyên bán hàng qua Livestream trên Facebook. Doanh thu của tôi năm nay khoảng 200 triệu. Tôi cũng có liên kết với một số sàn TMĐT để bán thêm, và các sàn này đã tự động khấu trừ thuế của tôi mỗi khi có giao dịch. Vậy tôi có cần phải đăng ký mã số thuế riêng cho hoạt động livestream của mình không, hay chỉ cần dùng mã số thuế cá nhân đã có? Và nếu tôi thấy mình nộp thuế bị 'hớ' do sàn khấu trừ cao quá, tôi có thể làm thủ tục hoàn thuế không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "117_2025_NDCP",
+      "68_2026_NDCP",
+      "86_2024_TTBTC",
+      "108_2025_QH15",
+      "126_2020_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Kiểm tra quy định về đăng ký MST cho HKD (sử dụng MST của chủ HKD), nghĩa vụ của HKD TMĐT có sàn khấu trừ, và điều kiện, thủ tục hoàn thuế TNCN đối với thu nhập từ kinh doanh."
+  },
+  {
+    "id": "BT_CROSS_DOMAIN_020",
+    "group": "cross_domain",
+    "topic": "Miễn giảm thuế, HKD, Thu nhập khác, Điều khoản chuyển tiếp",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi năm 2025 có doanh thu 130 triệu. Tôi cũng có một khoản thu nhập từ trúng thưởng xổ số 30 triệu. Tôi nghe nói có luật mới về miễn giảm thuế cho hộ kinh doanh doanh thu nhỏ. Vậy tôi có được miễn giảm thuế cho HKD của mình không? Và đối với khoản trúng thưởng thì tính thuế như thế nào? Liệu các quy định miễn giảm này có áp dụng cho thu nhập từ trúng thưởng không? Tôi cần lưu ý gì về các 'điều khoản chuyển tiếp' giữa luật cũ và luật mới không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "68_2026_NDCP",
+      "20_2026_NDCP",
+      "149_2025_QH15",
+      "108_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)",
+        "10 triệu đồng (ngưỡng chịu thuế TNCN từ trúng thưởng)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Kiểm tra quy định về ngưỡng doanh thu miễn thuế cho HKD, cách tính thuế TNCN từ trúng thưởng, phạm vi áp dụng của các chính sách miễn giảm thuế (chỉ cho HKD hay cả thu nhập khác), và khả năng hệ thống nhận diện và xử lý các điều khoản chuyển tiếp khi có luật mới (Luật TNCN 2025, NĐ 20/2026)."
+  },
+  {
+    "id": "BT_TEMPORAL_001",
+    "group": "temporal",
+    "topic": "Personal_Income_Tax_PIT",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "question": "Tôi làm quyết toán thuế TNCN cho thu nhập năm 2024. Vậy mức giảm trừ gia cảnh cho bản thân tôi được áp dụng là 11 triệu đồng hay 15.5 triệu đồng theo luật mới?",
+    "expected_docs": [
+      "111_2013_TTBTC",
+      "92_2015_TTBTC",
+      "126_2020_NDCP",
+      "149_2025_QH15",
+      "109_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "11_million_VND"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Luật Thuế TNCN 2025 (109_2025_QH15) có hiệu lực từ 01/01/2026. Do đó, quyết toán thuế TNCN cho thu nhập năm 2024 vẫn áp dụng các quy định của Luật Thuế TNCN hiện hành và các văn bản hướng dẫn (Thông tư 111/2013, Thông tư 92/2015) và Nghị quyết 954/2020/UBTVQH14 (không có trong corpus). Mức giảm trừ gia cảnh cho bản thân là 11 triệu đồng. Điều khoản chuyển tiếp của 149_2025_QH15 sẽ quy định rõ."
+  },
+  {
+    "id": "BT_TEMPORAL_002",
+    "group": "temporal",
+    "topic": "Tax_Refund",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "question": "Doanh nghiệp tôi nộp hồ sơ hoàn thuế TNCN cho người lao động phát sinh từ năm 2023 vào tháng 3 năm 2025. Vậy thủ tục hoàn thuế cần tuân thủ theo Thông tư 86/2024/TT-BTC hay các quy định cũ trước đó?",
+    "expected_docs": [
+      "86_2024_TTBTC",
+      "126_2020_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "Thông tư 86/2024",
+      "thủ tục áp dụng tại thời điểm nộp hồ sơ"
+    ],
+    "annotation_note": "Thủ tục hoàn thuế được áp dụng theo văn bản có hiệu lực tại thời điểm nộp hồ sơ hoàn thuế. Thông tư 86/2024/TT-BTC quy định thủ tục đăng ký MST, hoàn thuế, có hiệu lực từ năm 2024. Do đó, việc nộp hồ sơ hoàn thuế vào tháng 3/2025 sẽ áp dụng theo Thông tư 86/2024/TT-BTC. Điều khoản chuyển tiếp trong 149_2025_QH15 sẽ làm rõ thêm nếu có các trường hợp đặc biệt."
+  },
+  {
+    "id": "BT_TEMPORAL_003",
+    "group": "temporal",
+    "topic": "Household_Business_Tax",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "question": "Hộ kinh doanh của tôi đang nộp thuế theo phương pháp khoán trong năm 2025. Khi Luật Thuế TNCN 2025 và Nghị định 68/2026/NĐ-CP có hiệu lực từ 2026, tôi có bắt buộc phải chuyển sang phương pháp kê khai hoặc phương pháp khác ngay lập tức không, hay vẫn được tiếp tục áp dụng phương pháp khoán đến hết năm 2026?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "18_2026_TTBTC",
+      "152_2025_TTBTC",
+      "149_2025_QH15",
+      "So_Tay_HKD",
+      "126_2020_NDCP"
+    ],
+    "key_facts": [
+      "không bắt buộc tự chuyển ngay",
+      "cơ quan thuế hướng dẫn chuyển đổi",
+      "doanh thu trên 500 triệu chuyển kê khai theo Điều 10"
+    ],
+    "annotation_note": "Nghị định 68/2026/NĐ-CP sẽ quy định chi tiết về phương pháp tính thuế đối với hộ kinh doanh. Các điều khoản chuyển tiếp trong 149_2025_QH15 hoặc chính Nghị định 68/2026/NĐ-CP sẽ quy định rõ việc xử lý đối với hộ kinh doanh đang áp dụng phương pháp khoán trước thời điểm có hiệu lực. Thông thường, sẽ có quy định cho phép tiếp tục áp dụng phương pháp cũ trong một thời gian nhất định hoặc chuyển đổi theo lộ trình."
+  },
+  {
+    "id": "BT_TEMPORAL_004",
+    "group": "temporal",
+    "topic": "Rental_Income_Tax",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "question": "Tôi có ký hợp đồng cho thuê nhà với một cá nhân vào tháng 11/2025, thời hạn thuê là 2 năm, bắt đầu từ ngày 01/01/2026. Vậy tiền thuê nhà mà tôi nhận được từ năm 2026 trở đi sẽ phải nộp thuế TNCN theo Luật Thuế TNCN 2007 (sửa đổi 2012) và Thông tư 111/2013 hay theo Luật Thuế TNCN 2025 mới?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "111_2013_TTBTC",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "thời điểm phát sinh thu nhập",
+      "Luật 109/2025 hiệu lực từ 01/07/2026",
+      "trước 01/07/2026 áp dụng luật cũ"
+    ],
+    "annotation_note": "Mặc dù hợp đồng được ký vào năm 2025, nhưng thu nhập từ cho thuê tài sản phát sinh từ ngày 01/01/2026 trở đi sẽ thuộc đối tượng và chịu sự điều chỉnh của Luật Thuế TNCN 2025 (109_2025_QH15). Điều khoản chuyển tiếp trong Luật 149/2025/QH15 sẽ quy định nguyên tắc áp dụng đối với các hợp đồng đã ký trước ngày luật mới có hiệu lực."
+  },
+  {
+    "id": "BT_TEMPORAL_005",
+    "group": "temporal",
+    "topic": "Tax_Violations",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "question": "Một doanh nghiệp thực hiện hành vi kê khai sai dẫn đến thiếu số tiền thuế phải nộp vào tháng 7 năm 2025. Đến tháng 2 năm 2026, cơ quan thuế phát hiện và ra quyết định xử phạt vi phạm hành chính. Hỏi doanh nghiệp này sẽ bị áp dụng mức phạt theo Nghị định 125/2020/NĐ-CP hay theo Nghị định 310/2025/NĐ-CP?",
+    "expected_docs": [
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "Nghị định 125/2020",
+      "hành vi vi phạm tháng 7/2025",
+      "áp dụng quy định có lợi hơn nếu NĐ310/2025 có lợi hơn"
+    ],
+    "annotation_note": "Theo nguyên tắc áp dụng pháp luật về xử phạt vi phạm hành chính, hành vi vi phạm xảy ra vào thời điểm nào thì áp dụng văn bản pháp luật có hiệu lực tại thời điểm đó để xử phạt. Do hành vi kê khai sai diễn ra vào tháng 7/2025, tức là trước khi Nghị định 310/2025/NĐ-CP có hiệu lực, nên về nguyên tắc sẽ áp dụng Nghị định 125/2020/NĐ-CP. Tuy nhiên, Điều khoản chuyển tiếp của Nghị định 310/2025/NĐ-CP hoặc Luật 149/2025/QH15 có thể quy định trường hợp được áp dụng quy định có lợi hơn cho người vi phạm nếu Nghị định mới có hiệu lực và có quy định giảm nhẹ trách nhiệm."
+  },
+  {
+    "id": "BT_TEMPORAL_006",
+    "group": "temporal",
+    "topic": "Quyết toán thuế TNCN, giảm trừ gia cảnh",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "question": "Tôi cần làm quyết toán thuế TNCN cho thu nhập phát sinh trong năm 2024. Xin hỏi, mức giảm trừ gia cảnh cho bản thân và người phụ thuộc sẽ áp dụng theo quy định nào: Luật TNCN hiện hành (với mức giảm trừ bản thân 11 triệu đồng) hay Luật Thuế TNCN 2025 (với mức giảm trừ bản thân 15.5 triệu đồng) có hiệu lực từ 2026?",
+    "expected_docs": [
+      "111_2013_TTBTC",
+      "92_2015_TTBTC",
+      "149_2025_QH15"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        [
+          "giảm trừ bản thân (2024)",
+          "11.000.000 VND"
+        ],
+        [
+          "giảm trừ người phụ thuộc (2024)",
+          "4.400.000 VND"
+        ]
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Luật Thuế TNCN 2025 (109_2025_QH15) có hiệu lực từ 01/01/2026. Do đó, thu nhập phát sinh trong năm 2024 vẫn áp dụng các quy định của Luật TNCN hiện hành và các văn bản hướng dẫn (TT111/2013, TT92/2015) về mức giảm trừ gia cảnh. Điều khoản chuyển tiếp trong Luật 149/2025 QH15 sẽ xác nhận nguyên tắc này."
+  },
+  {
+    "id": "BT_TEMPORAL_007",
+    "group": "temporal",
+    "topic": "Hộ kinh doanh, phương pháp tính thuế, sổ sách kế toán",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi đang nộp thuế theo phương pháp khoán trong năm 2025. Từ ngày 01/01/2026, các quy định mới về quản lý thuế đối với hộ kinh doanh có hiệu lực theo Nghị định 68/2026/NDCP và Thông tư 18/2026/TTBTC. Vậy tôi có cần đăng ký lại phương pháp tính thuế hay có điều khoản chuyển tiếp nào đặc biệt không? Tôi có phải thay đổi sổ sách kế toán theo Thông tư 152/2025/TTBTC ngay từ đầu năm 2026 không?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "149_2025_QH15",
+      "152_2025_TTBTC",
+      "18_2026_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [],
+      "form_codes": [
+        "S1a",
+        "S2a",
+        "S2b"
+      ],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi yêu cầu hệ thống tìm điều khoản chuyển tiếp cụ thể trong Luật 149/2025 QH15 và Nghị định 68/2026 NDCP về việc áp dụng phương pháp tính thuế mới và sổ sách kế toán mới (Thông tư 152/2025 TT-BTC) cho HKD đang hoạt động. Cần làm rõ liệu HKD có tự động chuyển đổi phương pháp hay cần đăng ký lại."
+  },
+  {
+    "id": "BT_TEMPORAL_008",
+    "group": "temporal",
+    "topic": "Thủ tục hoàn thuế, Luật Quản lý thuế",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "question": "Tôi đang chuẩn bị hồ sơ hoàn thuế TNCN cho một cá nhân có thu nhập từ năm 2023. Nếu tôi nộp hồ sơ này vào giữa năm 2026, thì thủ tục hoàn thuế sẽ áp dụng theo quy định của Luật Quản lý thuế 2025 (có hiệu lực từ 01/01/2026) và Thông tư 86/2024/TTBTC hay vẫn theo các quy định của Luật Quản lý thuế hiện hành tại thời điểm phát sinh thu nhập 2023?",
+    "expected_docs": [
+      "108_2025_QH15",
+      "86_2024_TTBTC",
+      "126_2020_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "thủ tục áp dụng theo thời điểm nộp hồ sơ",
+      "Luật Quản lý thuế 2025",
+      "108/2025/QH15"
+    ],
+    "annotation_note": "Đây là câu hỏi NOISY/REALISTIC. Cần làm rõ nguyên tắc áp dụng luật về thủ tục: thường áp dụng luật có hiệu lực tại thời điểm thực hiện thủ tục, trừ khi có điều khoản chuyển tiếp quy định khác. Luật Quản lý thuế 2025 (108_2025_QH15) có hiệu lực 01/01/2026. Thông tư 86/2024 TT-BTC hướng dẫn thủ tục đăng ký MST, hoàn thuế. Điều khoản chuyển tiếp của Luật 108/2025 QH15 hoặc 149/2025 QH15 sẽ là căn cứ xác định."
+  },
+  {
+    "id": "BT_TEMPORAL_009",
+    "group": "temporal",
+    "topic": "Thu nhập từ cho thuê tài sản, hiệu lực luật",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "question": "Tôi có hợp đồng cho thuê nhà ký từ tháng 7/2025 và kéo dài đến hết năm 2027. Thu nhập từ cho thuê phát sinh từ tháng 1/2026 trở đi sẽ phải tính thuế TNCN theo Luật Thuế TNCN 2025 hay vẫn theo Luật cũ (Luật Thuế TNCN 2007, sửa đổi 2012) vì hợp đồng đã được ký kết trước thời điểm Luật mới có hiệu lực?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "111_2013_TTBTC",
+      "92_2015_TTBTC",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "thời điểm phát sinh thu nhập",
+      "trước 01/07/2026 áp dụng luật cũ",
+      "từ 01/07/2026 áp dụng Luật 109/2025"
+    ],
+    "annotation_note": "Cần kiểm tra điều khoản chuyển tiếp của Luật Thuế TNCN 2025 (109_2025_QH15) và Luật 149/2025 QH15. Nguyên tắc chung là thuế được tính theo luật có hiệu lực tại thời điểm phát sinh thu nhập, không phải thời điểm ký hợp đồng."
+  },
+  {
+    "id": "BT_TEMPORAL_010",
+    "group": "temporal",
+    "topic": "Ủy quyền quyết toán thuế TNCN",
+    "user_type": "employer",
+    "difficulty": "medium",
+    "question": "Công ty tôi đang chuẩn bị hướng dẫn nhân viên ủy quyền quyết toán thuế TNCN cho thu nhập phát sinh trong năm 2025. Tôi nên tham khảo Nghị định 373/2025/NDCP về ủy quyền quyết toán hay vẫn theo Nghị định 126/2020/NDCP vì đây là kỳ thuế của năm 2025 và Nghị định 373/2025 có hiệu lực từ 2026?",
+    "expected_docs": [
+      "373_2025_NDCP",
+      "126_2020_NDCP",
+      "149_2025_QH15",
+      "1296_CTNVT"
+    ],
+    "key_facts": [
+      "quyết toán kỳ thuế 2025",
+      "Nghị định 126/2020",
+      "Công văn 1296/CTNVT"
+    ],
+    "annotation_note": "Nghị định 373/2025 NDCP quy định về ủy quyền quyết toán thuế TNCN, có hiệu lực từ 01/01/2026. Nghị định 126/2020 NDCP là quy định hiện hành cho kỳ thuế 2025. Câu hỏi này kiểm tra việc áp dụng luật về thủ tục quyết toán thuế. Cần xem điều khoản chuyển tiếp của NĐ 373/2025 NDCP hoặc Luật 149/2025 QH15. Công văn 1296_CTNVT hướng dẫn quyết toán thuế TNCN 2025 cũng sẽ liên quan trực tiếp đến việc quyết toán cho năm 2025."
+  },
+  {
+    "id": "BT_TEMPORAL_011",
+    "group": "temporal",
+    "topic": "Personal Income Tax (PIT) deduction",
+    "user_type": "individual",
+    "difficulty": "easy",
+    "question": "Tôi làm việc hưởng lương cả năm 2024. Khi quyết toán thuế TNCN cho năm này, mức giảm trừ gia cảnh cho bản thân tôi và cho người phụ thuộc sẽ áp dụng theo quy định của văn bản pháp luật nào?",
+    "expected_docs": [
+      "111_2013_TTBTC",
+      "92_2015_TTBTC",
+      "126_2020_NDCP"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Giảm trừ bản thân 2024: 11 triệu đồng/tháng (132 triệu/năm)",
+        "Giảm trừ người phụ thuộc 2024: 4,4 triệu đồng/tháng/người"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Quyết toán thuế TNCN năm 2024 áp dụng Luật Thuế TNCN hiện hành (Luật 2007 sửa đổi 2012) và các văn bản hướng dẫn như TT111/2013, TT92/2015. Nghị định 126/2020 quy định về quy trình quyết toán."
+  },
+  {
+    "id": "BT_TEMPORAL_012",
+    "group": "temporal",
+    "topic": "Household Business (HKD) tax method transition",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi đang nộp thuế theo phương pháp khoán trong năm 2025. Từ ngày 01/01/2026, khi Luật Thuế TNCN 2025 và Nghị định 68/2026 có hiệu lực, tôi có phải chuyển sang phương pháp kê khai không, hay vẫn được tiếp tục áp dụng phương pháp khoán và nếu có thì theo quy định nào?",
+    "expected_docs": [
+      "149_2025_QH15",
+      "68_2026_NDCP",
+      "109_2025_QH15",
+      "So_Tay_HKD"
+    ],
+    "key_facts": [
+      "không bắt buộc tự chuyển ngay lập tức",
+      "Điều 17 Khoản 4 Nghị định 68/2026",
+      "doanh thu từ 500 triệu trở xuống thông báo doanh thu"
+    ],
+    "annotation_note": "Theo Điều 3 Luật 149/2025/QH15 về điều khoản chuyển tiếp, các nghĩa vụ thuế phát sinh từ 01/01/2026 sẽ áp dụng theo luật mới. Nghị định 68/2026/NDCP quy định chi tiết về phương pháp tính thuế cho hộ kinh doanh, trong đó vẫn cho phép phương pháp khoán đối với hộ không thực hiện chế độ kế toán (Điều 6 NĐ 68/2026). Do đó, hộ kinh doanh có thể tiếp tục khoán nếu đủ điều kiện, nhưng theo quy định của Nghị định 68/2026 và các văn bản hướng dẫn mới."
+  },
+  {
+    "id": "BT_TEMPORAL_013",
+    "group": "temporal",
+    "topic": "Tax refund procedure",
+    "user_type": "accountant",
+    "difficulty": "medium",
+    "question": "Công ty tôi đang chuẩn bị hồ sơ đề nghị hoàn thuế giá trị gia tăng và thuế thu nhập cá nhân cho kỳ tính thuế năm 2024. Nếu chúng tôi nộp hồ sơ này vào tháng 3/2026, thì thủ tục hoàn thuế sẽ thực hiện theo Thông tư 86/2024/TT-BTC hay theo các quy định mới có hiệu lực từ năm 2026?",
+    "expected_docs": [
+      "149_2025_QH15",
+      "86_2024_TTBTC",
+      "108_2025_QH15"
+    ],
+    "key_facts": [
+      "thủ tục theo Luật Quản lý thuế 2025",
+      "108/2025/QH15",
+      "số thuế hoàn xác định theo luật năm 2024"
+    ],
+    "annotation_note": "Theo Điều 3 Luật 149/2025/QH15 về điều khoản chuyển tiếp, nghĩa vụ thuế phát sinh trước ngày luật mới có hiệu lực thì áp dụng luật tại thời điểm phát sinh. Tuy nhiên, thủ tục hành chính thuế (bao gồm hoàn thuế) thường áp dụng quy định có hiệu lực tại thời điểm thực hiện thủ tục. Do đó, thủ tục hoàn thuế nộp vào tháng 3/2026 sẽ áp dụng theo Luật Quản lý thuế 2025 (108_2025_QH15) và các văn bản hướng dẫn có hiệu lực tại thời điểm đó, trong khi việc xác định số thuế được hoàn cho năm 2024 vẫn dựa trên luật thuế có hiệu lực năm 2024."
+  },
+  {
+    "id": "BT_TEMPORAL_014",
+    "group": "temporal",
+    "topic": "Rental income tax",
+    "user_type": "individual",
+    "difficulty": "medium",
+    "question": "Tôi có cho thuê một căn nhà từ tháng 7/2024 với hợp đồng 3 năm. Vậy tiền thuế thu nhập cá nhân từ cho thuê nhà mà tôi phải nộp cho các năm 2025 và 2026 sẽ tính theo luật nào? Có gì khác biệt không?",
+    "expected_docs": [
+      "149_2025_QH15",
+      "111_2013_TTBTC",
+      "109_2025_QH15",
+      "92_2015_TTBTC"
+    ],
+    "key_facts": [
+      "năm 2025 áp dụng luật cũ",
+      "từ 01/07/2026 áp dụng Luật 109/2025",
+      "thuế suất 5% cho thuê tài sản"
+    ],
+    "annotation_note": "Đối với thu nhập từ cho thuê nhà: thu nhập phát sinh trong năm 2025 sẽ áp dụng theo Luật Thuế TNCN hiện hành (Luật 2007 sửa đổi 2012) và các văn bản hướng dẫn như TT111/2013, TT92/2015. Thu nhập phát sinh từ ngày 01/01/2026 sẽ áp dụng theo Luật Thuế TNCN 2025 và các văn bản hướng dẫn mới, căn cứ Điều 3 Luật 149/2025/QH15 về điều khoản chuyển tiếp."
+  },
+  {
+    "id": "BT_TEMPORAL_015",
+    "group": "temporal",
+    "topic": "PIT QTT for year before new law",
+    "user_type": "employer",
+    "difficulty": "easy",
+    "question": "Là một doanh nghiệp, chúng tôi đang chuẩn bị hồ sơ quyết toán thuế thu nhập cá nhân cho nhân viên cho kỳ tính thuế năm 2025. Xin hỏi chúng tôi cần tham chiếu biểu thuế lũy tiến từng phần theo Luật Thuế TNCN hiện hành (Luật 2007 sửa đổi 2012) hay theo Luật Thuế TNCN 2025?",
+    "expected_docs": [
+      "1296_CTNVT",
+      "111_2013_TTBTC",
+      "92_2015_TTBTC",
+      "109_2025_QH15"
+    ],
+    "key_facts": [
+      "kỳ tính thuế năm 2025 áp dụng luật cũ",
+      "Thông tư 111/2013",
+      "Luật 109/2025 không áp dụng cho năm 2025"
+    ],
+    "annotation_note": "Việc quyết toán thuế TNCN cho kỳ tính thuế năm 2025 vẫn áp dụng Luật Thuế TNCN hiện hành (Luật 2007 sửa đổi 2012) và các văn bản hướng dẫn như TT111/2013, TT92/2015. Luật Thuế TNCN 2025 chỉ có hiệu lực từ ngày 01/01/2026, do đó không áp dụng cho kỳ tính thuế năm 2025. Công văn 1296/CTNVT cũng hướng dẫn cụ thể về quyết toán thuế TNCN năm 2025."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_001",
+    "group": "edge_attack",
+    "topic": "Xử phạt vi phạm hành chính thuế, điều khoản chuyển tiếp",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi đã nộp hồ sơ khai thuế tháng 12/2025 chậm 15 ngày. Đến tháng 01/2026, cơ quan thuế ra quyết định xử phạt về hành vi này. Xin hỏi, hộ kinh doanh của tôi sẽ bị xử phạt theo Nghị định nào?",
+    "expected_docs": [
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "Nghị định 125/2020",
+      "hành vi vi phạm tháng 12/2025",
+      "áp dụng quy định có lợi hơn nếu NĐ310 nhẹ hơn"
+    ],
+    "annotation_note": "Hành vi vi phạm xảy ra vào tháng 12/2025 (trước ngày 01/01/2026). Nghị định 310/2025_NDCP có hiệu lực từ 01/01/2026. Nguyên tắc chung là áp dụng luật tại thời điểm xảy ra hành vi vi phạm. Cần kiểm tra Điều khoản chuyển tiếp của 149/2025/QH15 hoặc 310/2025/NDCP về việc áp dụng pháp luật xử phạt vi phạm hành chính đối với hành vi xảy ra trước ngày luật mới có hiệu lực."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_002",
+    "group": "edge_attack",
+    "topic": "Miễn giảm thuế TNCN, thu nhập người nước ngoài, tổ chức phi chính phủ",
+    "user_type": "employer",
+    "difficulty": "hard",
+    "question": "Tôi nghe nói làm dự án nước ngoài có ưu đãi thuế. Công ty tôi đang làm cho một tổ chức phi chính phủ quốc tế ở Việt Nam, có nhân viên nước ngoài. Vậy thu nhập của họ có được miễn thuế TNCN không?",
+    "expected_docs": [
+      "20_2026_NDCP",
+      "109_2025_QH15"
+    ],
+    "key_facts": [
+      "miễn thuế TNCN",
+      "ODA không hoàn lại",
+      "chương trình phi chính phủ nước ngoài",
+      "Điều 4 Khoản 20"
+    ],
+    "annotation_note": "Đây là câu hỏi mơ hồ (noisy) và đòi hỏi hệ thống phải xác định liệu 'tổ chức phi chính phủ quốc tế' có thuộc diện được hưởng ưu đãi/miễn thuế TNCN cụ thể nào theo Nghị định 20/2026/NDCP hoặc các văn bản khác không, và các điều kiện áp dụng cho nhân viên nước ngoài là gì. Các trường hợp miễn giảm thường rất cụ thể và có điều kiện."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_003",
+    "group": "edge_attack",
+    "topic": "Kê khai sai, xử phạt thuế, hộ kinh doanh",
+    "user_type": "household_business",
+    "difficulty": "hard",
+    "question": "Hộ kinh doanh của tôi đã nộp tờ khai thuế GTGT và TNCN theo phương pháp khoán năm 2026. Đến tháng 3/2026, cơ quan thuế thông báo doanh thu kê khai trên eTax thấp hơn doanh thu thực tế ghi nhận tại sổ S1a (theo Thông tư 152/2025) mà cán bộ thuế kiểm tra được. Vậy tôi phải làm gì để điều chỉnh và có bị xử phạt không?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "152_2025_TTBTC",
+      "108_2025_QH15",
+      "310_2025_NDCP"
+    ],
+    "key_facts": [
+      "nộp tờ khai bổ sung",
+      "tự nguyện trước thanh tra không bị phạt",
+      "tiền chậm nộp vẫn tính"
+    ],
+    "annotation_note": "Hệ thống cần hướng dẫn về việc nộp hồ sơ khai bổ sung, điều chỉnh tờ khai (Luật QLT 108/2025/QH15). Đồng thời, cần xác định hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp có bị xử phạt không, và mức phạt áp dụng theo Nghị định 310/2025/NDCP. Thông tư 152/2025/TTBTC quy định về sổ sách kế toán của HKD, và Nghị định 68/2026/NDCP quy định về phương pháp khoán."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_004",
+    "group": "edge_attack",
+    "topic": "Quyết toán thuế TNCN, ủy quyền quyết toán, điều khoản chuyển tiếp",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "question": "Công ty tôi có một nhân viên đã nghỉ việc vào tháng 8/2025 và sau đó đi làm ở công ty khác. Đến tháng 3/2026, nhân viên này muốn ủy quyền cho công ty cũ (công ty tôi) để quyết toán thuế TNCN năm 2025 và hoàn thuế (nếu có). Công ty tôi có được phép nhận ủy quyền quyết toán cho trường hợp này không?",
+    "expected_docs": [
+      "126_2020_NDCP",
+      "1296_CTNVT",
+      "373_2025_NDCP",
+      "149_2025_QH15"
+    ],
+    "key_facts": [
+      "không được nhận ủy quyền",
+      "có thu nhập từ 2 nơi làm việc trong năm 2025",
+      "không đủ điều kiện ủy quyền"
+    ],
+    "annotation_note": "Cần xác định quy định về ủy quyền quyết toán thuế TNCN áp dụng cho kỳ tính thuế năm 2025 (quyết toán vào đầu năm 2026). Thông thường, nếu cá nhân có thu nhập từ 2 nơi làm việc trở lên trong năm thì không được ủy quyền cho một đơn vị. Cần kiểm tra Công văn 1296_CTNVT (hướng dẫn quyết toán 2025) và Nghị định 126/2020/NDCP. Đồng thời, cần xem xét Nghị định 373/2025/NDCP có hiệu lực từ 01/01/2026 có quy định chuyển tiếp nào cho kỳ quyết toán 2025 hay không."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_005",
+    "group": "edge_attack",
+    "topic": "Hộ kinh doanh, thương mại điện tử, khấu trừ thuế, hoàn thuế",
+    "user_type": "online_seller",
+    "difficulty": "hard",
+    "question": "Tôi là hộ kinh doanh bán hàng online trên sàn TMĐT X. Trong năm 2026, tổng doanh thu từ việc bán hàng qua sàn X là 80 triệu đồng. Ngoài ra, tôi còn có 30 triệu đồng doanh thu từ việc bán hàng trực tiếp (không qua sàn). Sàn TMĐT X đã thực hiện khấu trừ thuế TNCN và GTGT đầy đủ cho phần doanh thu trên sàn theo quy định. Tôi muốn biết liệu tôi có phải nộp thêm thuế không, và trong trường hợp nào thì tôi có thể được hoàn thuế?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "117_2025_NDCP",
+      "108_2025_QH15",
+      "86_2024_TTBTC"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Tổng doanh thu của HKD là 110 triệu đồng, vượt ngưỡng 500 triệu đồng/năm (Nghị định 68/2026/NDCP), do đó HKD phải nộp thuế. Sàn TMĐT đã khấu trừ phần doanh thu trên sàn (Nghị định 117/2025/NDCP). Hệ thống cần giải thích cách HKD phải khai và nộp thuế cho phần doanh thu trực tiếp và quyết toán tổng thể. Đồng thời, hướng dẫn về các trường hợp được hoàn thuế nếu số thuế đã nộp (bao gồm cả phần sàn khấu trừ) lớn hơn số thuế phải nộp (Luật QLT 108/2025/QH15, Thông tư 86/2024/TTBTC)."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_006",
+    "group": "edge_attack",
+    "topic": "Thuế TNCN, Điều khoản chuyển tiếp, Miễn giảm thuế",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "question": "Một chuyên gia nước ngoài làm việc cho dự án ODA tại Việt Nam từ tháng 10/2025 đến tháng 3/2026. Lương của họ nhận được trong quý 1/2026 (tháng 1, 2, 3/2026) có được miễn thuế thu nhập cá nhân theo Luật Thuế TNCN 2025 không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "149_2025_QH15",
+      "20_2026_NDCP"
+    ],
+    "key_facts": [
+      "thu nhập Q1/2026 trước 01/07/2026 áp dụng luật cũ",
+      "chuyên gia ODA được miễn thuế",
+      "Điều 4 Khoản 20 Luật 109/2025"
+    ],
+    "annotation_note": "Câu hỏi yêu cầu hệ thống phân tích điều khoản chuyển tiếp khi một luật mới (Luật TNCN 2025) có hiệu lực giữa kỳ tính thuế của một đối tượng. Cần xem xét Luật 149/2025 về hiệu lực pháp luật và điều khoản chuyển tiếp để xác định luật áp dụng cho phần thu nhập từ 2026, đồng thời áp dụng các quy định về miễn thuế cho ODA trong Luật TNCN 2025 và/hoặc Nghị định 20/2026."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_007",
+    "group": "edge_attack",
+    "topic": "Thuế TNCN, Miễn giảm thuế",
+    "user_type": "individual",
+    "difficulty": "hard",
+    "question": "Chị An là nhân viên của một tổ chức phi chính phủ (NGO) nước ngoài hoạt động tại Việt Nam, được cấp phép và tài trợ 100% từ nguồn viện trợ nước ngoài không hoàn lại. Tổ chức này có thỏa thuận riêng với Chính phủ Việt Nam về các ưu đãi thuế. Liệu tiền lương của chị An có được miễn thuế thu nhập cá nhân theo Luật Thuế TNCN 2025 không?",
+    "expected_docs": [
+      "109_2025_QH15",
+      "20_2026_NDCP",
+      "111_2013_TTBTC"
+    ],
+    "key_facts": [
+      "miễn thuế TNCN",
+      "viện trợ không hoàn lại phi chính phủ",
+      "Điều 4 Khoản 13",
+      "cần cơ quan nhà nước phê duyệt"
+    ],
+    "annotation_note": "Câu hỏi kiểm tra khả năng hệ thống xử lý các trường hợp miễn giảm thuế đặc biệt dựa trên bản chất của tổ chức và nguồn tài trợ. Cần tra cứu Luật TNCN 2025 và Nghị định 20/2026 để tìm các điều khoản liên quan đến miễn thuế cho thu nhập từ các tổ chức quốc tế, NGO, hoặc viện trợ không hoàn lại. Có thể cần xem xét liệu các quy định cũ (TT111/2013, nếu chưa bị thay thế hoàn toàn bởi luật mới cho trường hợp này) có còn hiệu lực hoặc được tham chiếu hay không."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_008",
+    "group": "edge_attack",
+    "topic": "Hộ kinh doanh, Thuế TNCN, Thuế GTGT, TMĐT, Ngưỡng chịu thuế",
+    "user_type": "household_business",
+    "difficulty": "medium",
+    "question": "Em mới bán đồ thủ công qua Facebook với TikTok được mấy tháng, thấy cũng có khách. Em còn có một cái cửa hàng nhỏ ở nhà nữa. Tổng cộng doanh thu từ cả hai kênh này trong năm nay (2026) chắc cũng tầm 80 triệu. Giờ em muốn hỏi là em có phải nộp thuế gì không? Rồi nếu có thì nộp như thế nào cho mấy cái kênh online với cửa hàng của em?",
+    "expected_docs": [
+      "68_2026_NDCP",
+      "109_2025_QH15",
+      "117_2025_NDCP",
+      "18_2026_TTBTC",
+      "So_Tay_HKD"
+    ],
+    "key_facts": {
+      "tax_rates": [],
+      "thresholds": [
+        "Ngưỡng doanh thu 500 triệu đồng/năm: miễn GTGT + TNCN (Điều 3K1, Điều 4K1 - NĐ 68/2026)"
+      ],
+      "form_codes": [],
+      "deadlines": []
+    },
+    "annotation_note": "Câu hỏi kiểm tra khả năng hệ thống hiểu ngữ cảnh \"noisy\" của người dùng, tổng hợp doanh thu từ nhiều nguồn (online và offline), và áp dụng ngưỡng doanh thu chịu thuế cho hộ kinh doanh theo Nghị định 68/2026. Đồng thời, cần giải thích về cơ chế quản lý thuế TMĐT theo Nghị định 117/2025 (dù doanh thu dưới ngưỡng, nguyên tắc này vẫn là thông tin hữu ích)."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_009",
+    "group": "edge_attack",
+    "topic": "Xử phạt vi phạm hành chính thuế, Bất khả kháng, Thủ tục hành chính thuế",
+    "user_type": "employer",
+    "difficulty": "hard",
+    "question": "Công ty tôi vừa bị phạt hành chính thuế do nộp chậm hồ sơ khai thuế giá trị gia tăng quý 4/2025. Lý do là kế toán trưởng của công ty bị tai nạn giao thông đột xuất phải nhập viện cấp cứu ngay trước thời hạn nộp. Công ty có thể làm gì để xin miễn giảm tiền phạt trong trường hợp này không?",
+    "expected_docs": [
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "108_2025_QH15"
+    ],
+    "key_facts": [
+      "bất khả kháng được xem xét miễn phạt",
+      "cung cấp hồ sơ bằng chứng",
+      "tai nạn nhập viện đột xuất"
+    ],
+    "annotation_note": "Câu hỏi yêu cầu hệ thống nhận diện trường hợp \"bất khả kháng\" và khả năng áp dụng tình tiết giảm nhẹ hoặc miễn trách nhiệm hành chính thuế. Cần tham chiếu Nghị định 125/2020 (và các sửa đổi của Nghị định 310/2025) về các trường hợp được miễn hoặc giảm phạt, cũng như Luật Quản lý thuế 2025 về nguyên tắc xử lý vi phạm và các trường hợp đặc biệt."
+  },
+  {
+    "id": "BT_EDGE_ATTACK_010",
+    "group": "edge_attack",
+    "topic": "Xử phạt vi phạm hành chính thuế, Điều khoản chuyển tiếp, Hiệu lực pháp luật",
+    "user_type": "accountant",
+    "difficulty": "hard",
+    "question": "Một doanh nghiệp bị cơ quan thuế phát hiện hành vi khai sai thuế thu nhập doanh nghiệp năm tài chính 2025, dẫn đến thiếu số thuế phải nộp. Quyết định xử phạt vi phạm hành chính thuế được ban hành vào tháng 3 năm 2026. Vậy, mức phạt chậm nộp và các hình thức xử phạt khác sẽ áp dụng theo Nghị định 125/2020 hay Nghị định 310/2025?",
+    "expected_docs": [
+      "125_2020_NDCP",
+      "310_2025_NDCP",
+      "149_2025_QH15",
+      "108_2025_QH15"
+    ],
+    "key_facts": [
+      "Nghị định 125/2020",
+      "vi phạm năm tài chính 2025",
+      "áp dụng quy định có lợi hơn nếu NĐ310 nhẹ hơn"
+    ],
+    "annotation_note": "Câu hỏi này kiểm tra khả năng hệ thống xác định văn bản pháp luật áp dụng cho hành vi vi phạm hành chính thuế khi có sự thay đổi về quy định xử phạt (NĐ 125/2020 bị NĐ 310/2025 sửa đổi). Trọng tâm là xác định thời điểm áp dụng luật: thời điểm xảy ra hành vi vi phạm hay thời điểm ban hành quyết định xử phạt, dựa trên các điều khoản chuyển tiếp của Nghị định 310/2025 và Luật 149/2025 về hiệu lực pháp luật."
+  }
+]

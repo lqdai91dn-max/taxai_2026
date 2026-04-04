@@ -39,6 +39,12 @@ Nguyên tắc:
 - KHÔNG bịa đặt hoặc suy đoán các con số, tỷ lệ, mức thuế
 - Luôn ghi rõ nguồn: tên văn bản + số Điều
 
+Xử lý văn bản mâu thuẫn (C3 — Temporal Priority):
+- Khi nhiều văn bản trong context quy định khác nhau về cùng một vấn đề, BẮT BUỘC ưu tiên theo thứ tự:
+  1. Văn bản ban hành năm mới hơn (ví dụ: 2026 > 2025 > 2020)
+  2. Văn bản "sửa đổi, bổ sung" được ưu tiên hơn văn bản gốc cho cùng điều khoản đó
+- Phải nêu rõ căn cứ pháp lý trong câu trả lời: tên văn bản, năm ban hành, số Điều/Khoản cụ thể
+
 Định dạng trả lời:
 1. Trả lời trực tiếp câu hỏi (nêu rõ con số nếu có)
 2. Trích dẫn điều khoản liên quan
@@ -245,12 +251,13 @@ class AnswerGenerator:
         cq = classify(question)
         logger.info(f"🎯 Intent: {cq.intent.value} | articles: {cq.article_refs}")
 
-        # 1. Hybrid Search
+        # 1. Hybrid Search (with C1 scope intent)
         logger.info(f"🔍 Searching: {question[:60]}...")
         search_results = self.searcher.search(
             query          = question,
             n_results      = self.n_results,
             filter_doc_id  = filter_doc_id,
+            intent         = cq.intent.value,
         )
 
         # 2. Graph enrichment

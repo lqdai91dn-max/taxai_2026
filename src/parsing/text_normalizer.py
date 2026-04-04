@@ -87,7 +87,12 @@ def _prev_ends_syllable(token: str, i: int) -> bool:
     if prev1.lower() in _FINAL_CONSONANTS:
         return True
     if i >= 2 and token[i - 2:i].lower() in _FINAL_DIGRAPHS:
-        return True
+        # Guard: final digraph (ng/nh/ch) must have a vowel nucleus before it.
+        # Without a preceding vowel it's an initial cluster (e.g. "ngh" in "nghiệp"),
+        # not a syllable-final digraph — so we must NOT split here.
+        if any(_is_vowel_char(c) for c in token[:i - 2]):
+            return True
+        return False
     return False
 
 
@@ -110,6 +115,10 @@ def _find_split_pos(token: str) -> Optional[int]:
     # Try each position i (split = token[:i] + ' ' + token[i:])
     # Start from 2 (minimum first-syllable length) to n-2
     for i in range(2, n - 1):
+        # Condition A: token[:i] must end a valid Vietnamese syllable
+        if not _prev_ends_syllable(token, i):
+            continue
+
         # Condition B: current position starts a valid Vietnamese initial
         suffix = token[i:]
         m = _INITIAL_RE.match(suffix)
@@ -167,6 +176,10 @@ def fix_merged_words(text: str) -> str:
     def replace_token(m: re.Match) -> str:
         tok = m.group(0)
         if len(tok) <= _MIN_MERGE_LEN:
+            return tok
+        # Skip tokens containing '/' (form codes, doc refs like "02/PTHU-DK", "373/2025/NĐ-CP")
+        # or digits — these are codes/numbers, not merged Vietnamese syllables.
+        if '/' in tok or any(c.isdigit() for c in tok):
             return tok
         fixed = _fix_merged_token(tok)
         return fixed

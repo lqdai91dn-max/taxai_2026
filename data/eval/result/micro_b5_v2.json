@@ -1,0 +1,283 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "pass_rate": 1.0,
+      "avg_score": 0.75,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-02T16:21:18.879709"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.5,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Kế toán HKD": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0,
+        "avg_score": 0.75
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.75
+      }
+    },
+    "latency_ms": {
+      "min": 49286,
+      "max": 49286,
+      "avg": 49286,
+      "p50": 49286,
+      "p95": 49286
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": []
+  },
+  "results": [
+    {
+      "question_id": 146,
+      "question": "Phần mềm kế toán miễn phí do Nhà nước cung cấp cho hộ kinh doanh có bắt buộc phải tích hợp tính năng xuất hóa đơn điện tử và chữ ký số không?",
+      "topic": "Kế toán HKD",
+      "difficulty": "easy",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Nhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số mà doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh sử dụng.\n> Phần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, nghiệp vụ về kế toán như sau: Có khả năng kết nối hoặc sẵn sàng kết nối thuế với các phần mềm có liên quan khi thực hiện công tác kế toán (phần mềm hóa đơn điện tử, chữ ký số...).\n*(Khoản 1 và Điểm e Khoản 4 Điều 10, Nghị định 20/2026/NĐ-CP)*\n\n💬 Trả lời\nTheo Nghị định 20/2026/NĐ-CP, phần mềm kế toán miễn phí do Nhà nước cung cấp cho hộ kinh doanh **phải có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số**.\n\nCụ thể, phần mềm này cần:\n*   Là một phần của nền tảng số tích hợp các giải pháp chuyển đổi số.\n*   Có khả năng kết nối hoặc sẵn sàng kết nối với các phần mềm liên quan như hóa đơn điện tử và chữ ký số khi thực hiện công tác kế toán.\n\nHộ kinh doanh có nhu cầu sẽ được cung cấp tài khoản và sử dụng các phần mềm miễn phí này.\n\n📋 Tóm lại\n*   **Bắt buộc tích hợp:** Phần mềm kế toán miễn phí phải có khả năng tích hợp với hóa đơn điện tử và chữ ký số.\n*   **Mục đích:** Hỗ trợ chuyển đổi số cho hộ kinh doanh.\n*   **Căn cứ:** Điều 10 Nghị định 20/2026/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "phần mềm kế toán miễn phí hộ kinh doanh tích hợp hóa đơn điện tử chữ ký số",
+            "doc_filter": "20_2026_NDCP"
+          },
+          "result": {
+            "query": "phần mềm kế toán miễn phí hộ kinh doanh tích hợp hóa đơn điện tử chữ ký số",
+            "total_found": 7,
+            "results": [
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_1_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số) | K1]\nNhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số mà doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh sử dụng.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_5_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số) | K5]\nDoanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh được cung cấp tài khoản và sử dụng các phần mềm miễn phí trên nền tảng số theo quy định tại khoản 1 Điều này khi có nhu cầu. Bộ Tài chính hướng dẫn quy trình, thủ tục cung cấp, quản lý, vận hành nền tảng số, phần mềm kế toán cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh.",
+                "score": 0.016052,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_e_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các n) | K4 | Đ.e]\nPhần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, nghiệp vụ về kế toán như sau:\nCó khả năng kết nối hoặc sẵn sàng kết nối thuế với các phần mềm có liên quan khi thực hiện công tác kế toán (phần mềm hóa đơn điện tử, chữ ký số...).",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_a_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm a",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các n) | K4 | Đ.a]\nPhần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, nghiệp vụ về kế toán như sau:\nCác quy trình, nghiệp vụ kế toán được thiết lập trên phần mềm phải đảm bảo tuân thủ các quy định của pháp luật kế toán, pháp luật thuế và pháp luật khác có liên quan, không làm thay đổi bản chất, nguyên tắc, phương pháp kế toán và thông tin, số liệu trình bày trên sổ kế toán và báo cáo tài chính theo quy định;",
+                "score": 0.014338,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_dieu_11_khoan_1_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ11 (Hỗ trợ miễn phí dịch vụ đào tạo về quản ) | K1]\nNgân sách nhà nước hỗ trợ 100% tổng chi phí của khóa đào tạo quản trị doanh nghiệp (bao gồm cả quản trị kế toán, thuế, nhân sự) cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.013699,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm)]",
+                "score": 0.011236,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_III_dieu_7_khoan_1_diem_a_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ7 (Miễn, giảm thuế thu nhập doanh) | K1 | Đ.a]\nCông ty quản lý quỹ đầu tư khởi nghiệp sáng tạo theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo có thu\nĐược miễn thuế, giảm thuế thu nhập doanh nghiệp trong thời hạn theo quy định tại khoản 1 Điều 10 Nghị quyết số 198/2025/QH15;",
+                "score": 0.010655,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 49286,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "details": {
+          "matched": [
+            "20_2026_NDCP"
+          ],
+          "missing": [
+            "198_2025_QH15"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "tính năng tích hợp",
+            "hóa đơn điện tử"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "20_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

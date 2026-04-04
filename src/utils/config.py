@@ -92,9 +92,9 @@ class Config:
     # LLM CONFIGURATION - GEMINI 2.5
     # -------------------------------
     
-    # ✅ CORRECTED: Gemini 2.5 models
-    GEMINI_MODEL_DEFAULT = "gemini-2.5-flash"  # Fast, cheap, good enough for 85% queries
-    GEMINI_MODEL_PREMIUM = "gemini-2.5-pro"    # Slow, expensive, best reasoning
+    # Gemini 3 models (paid tier 1)
+    GEMINI_MODEL_DEFAULT = "gemini-3-flash-preview"  # Fast, cheap, good enough for 85% queries
+    GEMINI_MODEL_PREMIUM = "gemini-3-pro-preview"    # Slow, expensive, best reasoning
     
     # Enable intelligent routing
     ENABLE_INTELLIGENT_ROUTING = True
@@ -1096,7 +1096,7 @@ DOCUMENT_REGISTRY: Dict[str, LegalDocument] = {
         title="Nghị quyết điều chỉnh mức giảm trừ gia cảnh",
         issued_by="Ủy ban Thường vụ Quốc hội",
         issued_date=date(2025, 12, 15),
-        effective_from=date(2026, 7, 1),
+        effective_from=date(2026, 1, 1),  # NQ110 áp dụng từ 01/01/2026, khác Luật 109 (01/07/2026)
         legal_level=2,
         amends=["luat_thue_tncn_2025"],
         category="TNCN",
@@ -1219,6 +1219,26 @@ DOCUMENT_REGISTRY: Dict[str, LegalDocument] = {
     ),
 
     # ==============================
+    # NGHỊ ĐỊNH 125/2020 - XỬ PHẠT (bản gốc)
+    # ==============================
+    "125_2020_NDCP": LegalDocument(
+        doc_id="nghi_dinh_xu_phat_goc_2020",
+        doc_type="decree",
+        number="125/2020/NĐ-CP",
+        title="Nghị định quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+        issued_by="Chính phủ",
+        issued_date=date(2020, 10, 19),
+        effective_from=date(2020, 12, 5),
+        legal_level=3,
+        category="Penalty",
+        tax_scope={
+            "tax_type": ["PIT", "VAT", "CIT"],
+            "affects": ["penalty", "compliance", "invoice"],
+        },
+        tags=["xử phạt", "vi phạm", "hóa đơn", "mức phạt", "chế tài", "125/2020"],
+    ),
+
+    # ==============================
     # NGHỊ ĐỊNH 310/2025 - XỬ PHẠT
     # ==============================
     "310_2025_NDCP": LegalDocument(
@@ -1258,6 +1278,186 @@ DOCUMENT_REGISTRY: Dict[str, LegalDocument] = {
             "affects": ["bookkeeping", "compliance"],
         },
         tags=["kế toán", "hộ kinh doanh", "sổ sách"],
+    ),
+
+    # ==============================
+    # NGHỊ ĐỊNH 68/2026 - THUẾ HKD
+    # ==============================
+    "68_2026_NDCP": LegalDocument(
+        doc_id="nghi_dinh_thue_hkd_2026",
+        doc_type="decree",
+        number="68/2026/NĐ-CP",
+        title="Nghị định quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh",
+        issued_by="Chính phủ",
+        issued_date=date(2026, 3, 5),
+        effective_from=date(2026, 3, 5),
+        legal_level=3,
+        category="HKD",
+        tax_scope={
+            "tax_type": ["PIT", "VAT"],
+            "taxpayer_type": ["household"],
+            "regime": ["flat", "declaration"],
+            "affects": ["calculation", "compliance", "registration"],
+        },
+        tags=["hộ kinh doanh", "thuế khoán", "khai thuế", "68/2026"],
+    ),
+
+    # ==============================
+    # THÔNG TƯ 18/2026 - THỦ TỤC HKD
+    # ==============================
+    "18_2026_TTBTC": LegalDocument(
+        doc_id="thong_tu_thu_tuc_hkd_2026",
+        doc_type="circular",
+        number="18/2026/TT-BTC",
+        title="Thông tư quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh",
+        issued_by="Bộ Tài chính",
+        issued_date=date(2026, 3, 5),
+        effective_from=date(2026, 3, 5),
+        legal_level=4,
+        implements=["nghi_dinh_thue_hkd_2026"],
+        category="HKD",
+        tax_scope={
+            "tax_type": ["PIT", "VAT"],
+            "taxpayer_type": ["household"],
+            "affects": ["registration", "compliance", "procedure"],
+        },
+        tags=["hộ kinh doanh", "hồ sơ", "thủ tục", "đăng ký", "18/2026"],
+    ),
+
+    # ==============================
+    # THÔNG TƯ 111/2013 - HƯỚNG DẪN LUẬT TNCN
+    # ==============================
+    "111_2013_TTBTC": LegalDocument(
+        doc_id="thong_tu_111_2013",
+        doc_type="circular",
+        number="111/2013/TT-BTC",
+        title="Thông tư hướng dẫn thực hiện Luật Thuế thu nhập cá nhân",
+        issued_by="Bộ Tài chính",
+        issued_date=date(2013, 8, 15),
+        effective_from=date(2013, 10, 1),
+        legal_level=4,
+        category="TNCN",
+        tax_scope={
+            "tax_type": ["PIT"],
+            "income_type": ["salary", "business", "capital", "transfer"],
+            "taxpayer_type": ["individual"],
+            "affects": ["calculation", "deduction", "exemption", "withholding", "settlement"],
+        },
+        tags=["TNCN", "giảm trừ gia cảnh", "khấu trừ thuế", "ủy quyền quyết toán", "111/2013"],
+    ),
+
+    # ==============================
+    # THÔNG TƯ 92/2015 - SỬA ĐỔI TT111 (GIẢM TRỪ GIA CẢNH, NPT)
+    # ==============================
+    "92_2015_TTBTC": LegalDocument(
+        doc_id="thong_tu_92_2015",
+        doc_type="circular",
+        number="92/2015/TT-BTC",
+        title="Thông tư hướng dẫn thực hiện thuế TNCN đối với cá nhân không cư trú và sửa đổi TT111/2013",
+        issued_by="Bộ Tài chính",
+        issued_date=date(2015, 6, 15),
+        effective_from=date(2015, 8, 1),
+        legal_level=4,
+        category="TNCN",
+        tax_scope={
+            "tax_type": ["PIT"],
+            "income_type": ["salary", "business", "capital"],
+            "taxpayer_type": ["individual"],
+            "affects": ["deduction", "exemption", "calculation", "settlement"],
+        },
+        tags=["TNCN", "giảm trừ gia cảnh", "người phụ thuộc", "NPT hồi tố", "92/2015"],
+    ),
+
+    # ==============================
+    # NGHỊ ĐỊNH 126/2020 - QUẢN LÝ THUẾ
+    # ==============================
+    "126_2020_NDCP": LegalDocument(
+        doc_id="nghi_dinh_126_2020",
+        doc_type="decree",
+        number="126/2020/NĐ-CP",
+        title="Nghị định quy định chi tiết một số điều của Luật Quản lý thuế",
+        issued_by="Chính phủ",
+        issued_date=date(2020, 10, 19),
+        effective_from=date(2020, 12, 5),
+        legal_level=3,
+        category="TNCN",
+        tax_scope={
+            "tax_type": ["PIT", "VAT", "CIT"],
+            "taxpayer_type": ["individual", "household", "enterprise"],
+            "affects": ["filing", "settlement", "compliance", "withholding"],
+        },
+        tags=["quản lý thuế", "quyết toán TNCN", "ủy quyền quyết toán", "126/2020"],
+    ),
+
+    # ==============================
+    # THÔNG TƯ 86/2024 - ĐĂNG KÝ MST
+    # ==============================
+    "86_2024_TTBTC": LegalDocument(
+        doc_id="thong_tu_86_2024",
+        doc_type="circular",
+        number="86/2024/TT-BTC",
+        title="Thông tư hướng dẫn về đăng ký thuế",
+        issued_by="Bộ Tài chính",
+        issued_date=date(2024, 11, 22),
+        effective_from=date(2025, 1, 6),
+        legal_level=4,
+        category="TNCN",
+        tax_scope={
+            "tax_type": ["PIT"],
+            "taxpayer_type": ["individual"],
+            "affects": ["registration", "compliance"],
+        },
+        tags=["đăng ký thuế", "MST", "người phụ thuộc", "CCCD", "86/2024"],
+    ),
+
+    # ==============================
+    # CÔNG VĂN 1296/CTNVT - HƯỚNG DẪN QUYẾT TOÁN TNCN
+    # ==============================
+    "1296_CTNVT": LegalDocument(
+        doc_id="cong_van_quyet_toan_tncn_1296",
+        doc_type="guidance",
+        number="1296/CTNVT",
+        title="Công văn hướng dẫn quyết toán thuế thu nhập cá nhân",
+        issued_by="Cục Thuế",
+        issued_date=date(2026, 3, 15),
+        effective_from=date(2026, 1, 1),
+        legal_level=5,
+        category="TNCN",
+        tax_scope={
+            "tax_type": ["PIT"],
+            "taxpayer_type": ["individual"],
+            "affects": ["finalization", "compliance"],
+        },
+        tags=["quyết toán", "TNCN", "cá nhân", "hoàn thuế"],
+    ),
+
+    # ==============================
+    # LUẬT QUẢN LÝ THUẾ 2025
+    # ==============================
+    "108_2025_QH15": LegalDocument(
+        doc_id="luat_quan_ly_thue_2025",
+        doc_type="law",
+        number="108/2025/QH15",
+        title="Luật Quản lý thuế",
+        issued_by="Quốc hội",
+        issued_date=date(2025, 12, 10),
+        effective_from=date(2026, 7, 1),   # phần lớn có hiệu lực 01/07/2026
+        legal_level=1,
+        supersedes=["LQT_38_2019"],
+        category="QUANLY",
+        tax_scope={
+            "tax_type": ["ALL"],
+            "taxpayer_type": ["individual", "household", "enterprise"],
+            "affects": [
+                "registration", "declaration", "inspection",
+                "enforcement", "refund", "penalty", "agent",
+            ],
+        },
+        tags=[
+            "quản lý thuế", "đăng ký thuế", "kê khai", "thanh tra",
+            "kiểm tra", "cưỡng chế", "hoàn thuế", "đại lý thuế",
+            "gia hạn", "bất khả kháng", "mã số thuế",
+        ],
     ),
 }
 

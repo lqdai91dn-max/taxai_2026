@@ -1,0 +1,869 @@
+{
+  "report": {
+    "summary": {
+      "total": 4,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.25,
+      "errors": 0,
+      "annotated": 4,
+      "verified": 4,
+      "timestamp": "2026-04-02T15:26:14.250906"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 4,
+        "avg": 0.5,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 4,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 4,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Kế toán HKD": {
+        "total": 4,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.25
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 2,
+        "avg_score": 0.25
+      },
+      "hard": {
+        "count": 2,
+        "avg_score": 0.25
+      }
+    },
+    "latency_ms": {
+      "min": 10974,
+      "max": 19008,
+      "avg": 13684,
+      "p50": 12376,
+      "p95": 18037
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 103,
+        "question": "Sổ chi tiết tiền (Mẫu S2e-HKD) của hộ kinh doanh có được phép gộp chung tiền mặt",
+        "score": 0.25,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "error": null
+      },
+      {
+        "id": 105,
+        "question": "Cá nhân kinh doanh có được phép thuê người ngoài, hoặc nhờ vợ/chồng mình làm kế ",
+        "score": 0.25,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "error": null
+      },
+      {
+        "id": 139,
+        "question": "Trong sổ S2d-HKD (Sổ chi tiết vật liệu), nếu tôi mua hàng của nông dân không có ",
+        "score": 0.25,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "error": null
+      },
+      {
+        "id": 189,
+        "question": "Theo Sổ kế toán S2b-HKD (Dành cho hộ nộp %), hộ kinh doanh có bắt buộc phải in s",
+        "score": 0.25,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 103,
+      "question": "Sổ chi tiết tiền (Mẫu S2e-HKD) của hộ kinh doanh có được phép gộp chung tiền mặt tại quỹ và tiền gửi ngân hàng vào cùng 1 cột không?",
+      "topic": "Kế toán HKD",
+      "difficulty": "easy",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán.\n>\n> 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\n>\n> 2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\n>\n> (Khoản 2 Điều 6, Thông tư 152/2025/TT-BTC)\n\n💬 Trả lời\nTheo Thông tư 152/2025/TT-BTC hướng dẫn chế độ kế toán cho hộ kinh doanh, không có quy định cụ thể về việc gộp chung tiền mặt tại quỹ và tiền gửi ngân hàng vào cùng một cột trong Sổ chi tiết tiền (Mẫu S2e-HKD).\n\nThông tư này chủ yếu quy định về các mẫu sổ như Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu S2b-HKD) và Sổ chi tiết doanh thu, chi phí (Mẫu S2c-HKD) và phương pháp ghi chép các sổ này. Các quy định về phương pháp ghi sổ thường tập trung vào việc ghi nhận doanh thu, chi phí theo từng nghiệp vụ phát sinh hoặc theo định kỳ, và làm căn cứ xác định nghĩa vụ thuế.\n\nDo không có hướng dẫn cụ thể cho phép gộp chung, để đảm bảo tính minh bạch và dễ dàng đối chiếu với các chứng từ gốc, hộ kinh doanh nên tách riêng tiền mặt và tiền gửi ngân hàng thành các cột hoặc sổ theo dõi riêng biệt. Điều này giúp việc quản lý dòng tiền và đối chiếu số liệu với ngân hàng hoặc kiểm tra của cơ quan thuế được chính xác hơn.\n\n📋 Tóm lại\n*   **Không có quy định cho phép gộp chung:** Thông tư 152/2025/TT-BTC không đề cập đến việc gộp chung tiền mặt và tiền gửi ngân hàng trong Sổ chi tiết tiền (Mẫu S2e-HKD).\n*   **Nên tách riêng:** Để đảm bảo tính minh bạch và dễ đối chiếu, hộ kinh doanh nên theo dõi riêng tiền mặt và tiền gửi ngân hàng.\n*   **Căn cứ:** Khoản 2 Điều 6 Thông tư 152/2025/TT-BTC.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "152_2025_TTBTC",
+            "query": "Sổ chi tiết tiền Mẫu S2e-HKD gộp chung tiền mặt tiền gửi ngân hàng"
+          },
+          "result": {
+            "query": "Sổ chi tiết tiền Mẫu S2e-HKD gộp chung tiền mặt tiền gửi ngân hàng",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ6 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Trường hợp hộ kinh doanh, cá nhân kinh doanh có nhiều nhóm ngành nghề khác nhau thì sổ này có thể mở cho từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế GTGT thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để theo dõi, đối chiếu số thuế GTGT phải nộp với cơ quan thuế. Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ có thể theo từng ngành nghề để làm căn cứ xác định doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trên cơ sở doanh thu được xác định, hộ kinh doanh, cá nhân kinh doanh tính ra số tiền thuế GTGT phải nộp theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Dòng cuối cùng ghi tổng số thuế GTGT phải nộp.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo quy định của pháp luật về thuế. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế TNCN thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để đối chiếu số thuế TNCN phải nộp với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung nghiệp vụ phát sinh.\n- Cột 1: Ghi số tiền phù",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ5 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_1_dieu_4_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ4 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K1]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:\n\n2. Phương pháp ghi sổ S1a-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không. Trường hợp hộ kinh doanh, cá nhân kinh doanh thực hiện kê khai doanh thu theo quy định của pháp luật về thuế thì hộ kinh doanh, cá nhân kinh doanh có thể dùng sổ này để theo dõi, đối chiếu số liệu với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A: Ghi ngày, tháng ghi sổ.\n- Cột B: Ghi diễn giải doanh thu từ việc bán hàng hóa, dịch vụ. Hộ kinh doanh, cá nhân kinh doanh có thể ghi theo từng nghiệp vụ phát sinh hoặc theo định kỳ.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ.",
+                "score": 0.015699,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K2]\nThời hạn lưu trữ tài liệu kế toán của hộ kinh doanh, cá nhân kinh doanh tối thiểu là 05 năm, đối với thời hạn lưu trữ hóa đơn thì thực hiện theo quy định của pháp luật về thuế.",
+                "score": 0.015516,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K1]\nHộ kinh doanh, cá nhân kinh doanh được lựa chọn lưu trữ các tài liệu kế toán (hóa đơn, chứng từ kế toán, sổ kế toán,...) trên phương tiện điện tử hoặc bằng bản giấy.",
+                "score": 0.015084,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toán)]",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 19008,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "details": {
+          "matched": [
+            "152_2025_TTBTC"
+          ],
+          "missing": [
+            "68_2026_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['Không gộp chung']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "Không gộp chung"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "152_2025_TTBTC"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 105,
+      "question": "Cá nhân kinh doanh có được phép thuê người ngoài, hoặc nhờ vợ/chồng mình làm kế toán ghi sổ sách cho hộ kinh doanh của mình không?",
+      "topic": "Kế toán HKD",
+      "difficulty": "hard",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán hoặc bố trí người làm kế toán hoặc thuê dịch vụ làm kế toán cho hộ kinh doanh, cá nhân kinh doanh theo quy định của pháp luật. Người đại diện hộ kinh doanh, cá nhân kinh doanh có thể bố trí cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, vợ, chồng, con đẻ, con nuôi, anh, chị, em ruột của mình làm kế toán cho hộ kinh doanh, cá nhân kinh doanh hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán cho hộ kinh doanh, cá nhân kinh doanh.\n*(Điều 2, Thông tư 152/2025/TT-BTC)*\n\n💬 Trả lời\nTheo quy định hiện hành, cá nhân kinh doanh hoàn toàn được phép thuê người ngoài hoặc bố trí vợ/chồng mình làm kế toán ghi sổ sách cho hộ kinh doanh.\n\nCụ thể, Thông tư 152/2025/TT-BTC quy định về tổ chức công tác kế toán cho hộ kinh doanh, cá nhân kinh doanh như sau:\n*   **Tự ghi chép hoặc bố trí người làm kế toán:** Người đại diện hộ kinh doanh, cá nhân kinh doanh có thể tự mình ghi chép sổ sách kế toán hoặc bố trí người khác làm kế toán.\n*   **Thuê dịch vụ kế toán:** Hộ kinh doanh cũng có thể thuê các dịch vụ làm kế toán chuyên nghiệp theo quy định của pháp luật.\n*   **Người thân làm kế toán:** Đặc biệt, người đại diện hộ kinh doanh, cá nhân kinh doanh được phép bố trí các thành viên trong gia đình như cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, vợ, chồng, con đẻ, con nuôi, anh, chị, em ruột của mình làm kế toán.\n*   **Kiêm nhiệm:** Ngoài ra, người làm quản lý, điều hành, thủ kho, thủ quỹ, hoặc người được giao nhiệm vụ thường xuyên mua, bán tài sản cũng có thể kiêm nhiệm làm kế toán.\n\n📋 Tóm lại\n*   Cá nhân kinh doanh có thể tự ghi chép sổ sách kế toán.\n*   Có thể thuê người ngoài hoặc sử dụng dịch vụ kế toán.\n*   Được phép bố trí vợ/chồng hoặc các thành viên gia đình khác (cha, mẹ, con, anh, chị, em ruột) làm kế toán.\n*   Người làm quản lý, thủ kho, thủ quỹ, hoặc người mua bán tài sản cũng có thể kiêm nhiệm làm kế toán.\n*   Căn cứ: Điều 2 Thông tư 152/2025/TT-BTC.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh thuê người làm kế toán ghi sổ sách vợ chồng",
+            "doc_filter": "152_2025_TTBTC"
+          },
+          "result": {
+            "query": "hộ kinh doanh thuê người làm kế toán ghi sổ sách vợ chồng",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 2: Tổ chức công tác kế toán",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ2 (Tổ chức công tác kế toán)]\nNgười đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán hoặc bố trí người làm kế toán hoặc thuê dịch vụ làm kế toán cho hộ kinh doanh, cá nhân kinh doanh theo quy định của pháp luật. Người đại diện hộ kinh doanh, cá nhân kinh doanh có thể bố trí cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, vợ, chồng, con đẻ, con nuôi, anh, chị, em ruột của mình làm kế toán cho hộ kinh doanh, cá nhân kinh doanh hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán cho hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 2: Tổ chức công tác kế toán"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ6 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Trường hợp hộ kinh doanh, cá nhân kinh doanh có nhiều nhóm ngành nghề khác nhau thì sổ này có thể mở cho từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế GTGT thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để theo dõi, đối chiếu số thuế GTGT phải nộp với cơ quan thuế. Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ có thể theo từng ngành nghề để làm căn cứ xác định doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trên cơ sở doanh thu được xác định, hộ kinh doanh, cá nhân kinh doanh tính ra số tiền thuế GTGT phải nộp theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Dòng cuối cùng ghi tổng số thuế GTGT phải nộp.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo quy định của pháp luật về thuế. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế TNCN thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để đối chiếu số thuế TNCN phải nộp với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung nghiệp vụ phát sinh.\n- Cột 1: Ghi số tiền phù",
+                "score": 0.016091,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ5 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:",
+                "score": 0.015699,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K1]\nHộ kinh doanh, cá nhân kinh doanh được lựa chọn lưu trữ các tài liệu kế toán (hóa đơn, chứng từ kế toán, sổ kế toán,...) trên phương tiện điện tử hoặc bằng bản giấy.",
+                "score": 0.015657,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K3]\nNgoài các sổ kế toán hướng dẫn tại Thông tư này, hộ kinh doanh, cá nhân kinh doanh có thể bổ sung thêm các sổ kế toán hoặc sửa đổi lại biểu mẫu các sổ kế toán cho phù hợp với nhu cầu của đơn vị. Sổ kế toán được mở thêm hoặc sửa đổi lại biểu mẫu vẫn phải ghi rõ tên sổ; ngày, tháng, năm lập sổ; họ tên và chữ ký, đóng dấu (nếu có) của người đại diện hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toán)]",
+                "score": 0.011264,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 12220,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "details": {
+          "matched": [
+            "152_2025_TTBTC"
+          ],
+          "missing": [
+            "68_2026_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['thuê người ngoài làm kế toán']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "thuê người ngoài làm kế toán"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 2: Tổ chức công tác kế toán",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "152_2025_TTBTC"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 139,
+      "question": "Trong sổ S2d-HKD (Sổ chi tiết vật liệu), nếu tôi mua hàng của nông dân không có hóa đơn GTGT thì phần chứng từ ghi số hiệu của bảng kê nào?",
+      "topic": "Kế toán HKD",
+      "difficulty": "hard",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.\n*(Điều 6 Khoản 1, Thông tư 152/2025/TT-BTC)*\n\n💬 Trả lời\nTheo Thông tư 152/2025/TT-BTC, khi hộ kinh doanh mua hàng hóa của nông dân mà không có hóa đơn GTGT, bạn sẽ sử dụng **Bảng kê mua hàng hóa, dịch vụ** làm chứng từ để ghi vào sổ S2d-HKD (Sổ chi tiết vật liệu).\n\nCụ thể, Điều 6 Khoản 1 của Thông tư 152/2025/TT-BTC quy định rằng Bảng kê mua hàng hóa, dịch vụ là một trong các chứng từ kế toán được sử dụng làm căn cứ để xác định doanh thu, thu nhập tính thuế trong trường hợp hộ kinh doanh mua hàng hóa, dịch vụ từ người bán không có hóa đơn GTGT hoặc hóa đơn bán hàng.\n\n📋 Tóm lại\n*   **Chứng từ sử dụng:** Bảng kê mua hàng hóa, dịch vụ.\n*   **Mục đích:** Dùng làm căn cứ ghi sổ S2d-HKD và xác định doanh thu, thu nhập tính thuế.\n*   **Căn cứ:** Điều 6 Khoản 1 Thông tư 152/2025/TT-BTC.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "S2d-HKD mua hàng nông dân không hóa đơn bảng kê",
+            "doc_filter": "152_2025_TTBTC"
+          },
+          "result": {
+            "query": "S2d-HKD mua hàng nông dân không hóa đơn bảng kê",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ6 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K1]\nChứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ6 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Trường hợp hộ kinh doanh, cá nhân kinh doanh có nhiều nhóm ngành nghề khác nhau thì sổ này có thể mở cho từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế GTGT thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để theo dõi, đối chiếu số thuế GTGT phải nộp với cơ quan thuế. Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ có thể theo từng ngành nghề để làm căn cứ xác định doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trên cơ sở doanh thu được xác định, hộ kinh doanh, cá nhân kinh doanh tính ra số tiền thuế GTGT phải nộp theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Dòng cuối cùng ghi tổng số thuế GTGT phải nộp.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo quy định của pháp luật về thuế. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế TNCN thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để đối chiếu số thuế TNCN phải nộp với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung nghiệp vụ phát sinh.\n- Cột 1: Ghi số tiền phù",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ5 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:",
+                "score": 0.015799,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_1_dieu_4_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ4 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K1]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:\n\n2. Phương pháp ghi sổ S1a-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không. Trường hợp hộ kinh doanh, cá nhân kinh doanh thực hiện kê khai doanh thu theo quy định của pháp luật về thuế thì hộ kinh doanh, cá nhân kinh doanh có thể dùng sổ này để theo dõi, đối chiếu số liệu với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A: Ghi ngày, tháng ghi sổ.\n- Cột B: Ghi diễn giải doanh thu từ việc bán hàng hóa, dịch vụ. Hộ kinh doanh, cá nhân kinh doanh có thể ghi theo từng nghiệp vụ phát sinh hoặc theo định kỳ.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ.",
+                "score": 0.015699,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_4_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 4",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K4]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh sử dụng hóa đơn điện tử mà được hệ thống thông tin quản lý thuế của cơ quan thuế hỗ trợ xác định số thuế giá trị gia tăng (GTGT), thuế thu nhập cá nhân (TNCN), các loại thuế khác phải nộp (nếu có) và thông báo cho người nộp thuế thì hộ kinh doanh, cá nhân kinh doanh sử dụng các mẫu sổ kế toán hướng dẫn tại Thông tư này để theo dõi, đối chiếu với số thuế phải nộp theo thông báo của cơ quan thuế.",
+                "score": 0.014995,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toán)]",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 10974,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "details": {
+          "matched": [
+            "152_2025_TTBTC"
+          ],
+          "missing": [
+            "68_2026_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['Bảng kê thu mua']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "Bảng kê thu mua"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "152_2025_TTBTC"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 189,
+      "question": "Theo Sổ kế toán S2b-HKD (Dành cho hộ nộp %), hộ kinh doanh có bắt buộc phải in sổ ra giấy để ký tên hay được lưu trữ hoàn toàn bằng file Excel/Phần mềm?",
+      "topic": "Kế toán HKD",
+      "difficulty": "easy",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Hộ kinh doanh, cá nhân kinh doanh được lựa chọn lưu trữ các tài liệu kế toán (hóa đơn, chứng từ kế toán, sổ kế toán,...) trên phương tiện điện tử hoặc bằng bản giấy.\n> Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 Thông tư này.\n*(Khoản 1 Điều 3 và Điểm a Khoản 2 Điều 6, Thông tư 152/2025/TT-BTC)*\n\n💬 Trả lời\nTheo Thông tư 152/2025/TT-BTC, hộ kinh doanh không bắt buộc phải in sổ kế toán S2b-HKD ra giấy để ký tên. Hộ kinh doanh có quyền lựa chọn lưu trữ các tài liệu kế toán, bao gồm cả sổ kế toán S2b-HKD, dưới dạng bản giấy hoặc trên phương tiện điện tử (như file Excel, phần mềm kế toán).\n\nCụ thể, Điểm a Khoản 2 Điều 6 của Thông tư 152/2025/TT-BTC quy định rõ rằng Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 của Thông tư này. Điều 3 Khoản 1 của Thông tư này cũng khẳng định hộ kinh doanh, cá nhân kinh doanh được lựa chọn hình thức lưu trữ tài liệu kế toán.\n\n📋 Tóm lại\n*   **Lựa chọn hình thức lưu trữ:** Hộ kinh doanh có thể lưu trữ sổ kế toán S2b-HKD dưới dạng bản giấy hoặc trên phương tiện điện tử (file Excel, phần mềm kế toán).\n*   **Không bắt buộc in ra giấy:** Không có quy định bắt buộc phải in sổ ra giấy để ký tên.\n*   **Căn cứ pháp lý:** Khoản 1 Điều 3 và Điểm a Khoản 2 Điều 6 Thông tư 152/2025/TT-BTC.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "Sổ kế toán S2b-HKD in ra giấy hay lưu trữ điện tử",
+            "doc_filter": "152_2025_TTBTC"
+          },
+          "result": {
+            "query": "Sổ kế toán S2b-HKD in ra giấy hay lưu trữ điện tử",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_1_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K1]\nHộ kinh doanh, cá nhân kinh doanh được lựa chọn lưu trữ các tài liệu kế toán (hóa đơn, chứng từ kế toán, sổ kế toán,...) trên phương tiện điện tử hoặc bằng bản giấy.",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ6 (Trường hợp hộ kinh doanh, cá nhân kinh d) | K2]\nSổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Trường hợp hộ kinh doanh, cá nhân kinh doanh có nhiều nhóm ngành nghề khác nhau thì sổ này có thể mở cho từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế GTGT thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để theo dõi, đối chiếu số thuế GTGT phải nộp với cơ quan thuế. Sổ S2b-HKD có thể lưu trữ dưới dạng bản giấy hoặc phương tiện điện tử (file Excel, phần mềm kế toán) theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ có thể theo từng ngành nghề để làm căn cứ xác định doanh thu bán hàng hóa, dịch vụ theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Trên cơ sở doanh thu được xác định, hộ kinh doanh, cá nhân kinh doanh tính ra số tiền thuế GTGT phải nộp theo từng ngành nghề có cùng tỷ lệ % để tính thuế GTGT. Dòng cuối cùng ghi tổng số thuế GTGT phải nộp.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo quy định của pháp luật về thuế. Trường hợp cơ quan thuế cung cấp dữ liệu nộp thuế TNCN thì hộ kinh doanh, cá nhân kinh doanh sử dụng sổ này để đối chiếu số thuế TNCN phải nộp với cơ quan thuế.\nb) Phương pháp ghi sổ\n- Cột A, B: Ghi số hiệu, ngày, tháng của chứng từ.\n- Cột C: Ghi diễn giải nội dung nghiệp vụ phát sinh.\n- Cột 1: Ghi số tiền phù",
+                "score": 0.016091,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_2_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K2]\nThời hạn lưu trữ tài liệu kế toán của hộ kinh doanh, cá nhân kinh doanh tối thiểu là 05 năm, đối với thời hạn lưu trữ hóa đơn thì thực hiện theo quy định của pháp luật về thuế.",
+                "score": 0.01595,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_khoan_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toá) | K3]\nNgoài các sổ kế toán hướng dẫn tại Thông tư này, hộ kinh doanh, cá nhân kinh doanh có thể bổ sung thêm các sổ kế toán hoặc sửa đổi lại biểu mẫu các sổ kế toán cho phù hợp với nhu cầu của đơn vị. Sổ kế toán được mở thêm hoặc sửa đổi lại biểu mẫu vẫn phải ghi rõ tên sổ; ngày, tháng, năm lập sổ; họ tên và chữ ký, đóng dấu (nếu có) của người đại diện hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.015531,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_152_2025_TTBTC_chuong_I_dieu_3_chunk",
+                "doc_id": "152_2025_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+                "snippet": "[VB: 152/2025/TT-BTC | Đ3 (Về sổ kế toán và lưu trữ tài liệu kế toán)]",
+                "score": 0.015483,
+                "citation": {
+                  "doc_id": "152_2025_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 12532,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=1.00, penalty=1.00",
+        "details": {
+          "matched": [
+            "152_2025_TTBTC"
+          ],
+          "missing": [
+            "68_2026_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['Chấp nhận file Excel']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "Chấp nhận file Excel"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "152_2025_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I > Điều 3: Về sổ kế toán và lưu trữ tài liệu kế toán",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "152_2025_TTBTC"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

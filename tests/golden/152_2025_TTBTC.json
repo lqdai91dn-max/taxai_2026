@@ -144,7 +144,7 @@
                   "node_type": "Khoản",
                   "node_index": "1",
                   "title": null,
-                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:",
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:\n\nPhương pháp ghi sổ S1a-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không.\nb) Phương pháp ghi sổ\n- Cột A: Ghi ngày, tháng ghi sổ.\n- Cột B: Ghi diễn giải doanh thu từ việc bán hàng hóa, dịch vụ. Hộ kinh doanh, cá nhân kinh doanh có thể ghi theo từng nghiệp vụ phát sinh hoặc theo định kỳ.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
                   "references": [],
                   "children": []
@@ -207,7 +207,7 @@
                   "node_type": "Khoản",
                   "node_index": "1",
                   "title": null,
-                  "content": "Chứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.",
+                  "content": "Chứng từ kế toán: Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.\n\n2.2.3. Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (Mẫu số S2d-HKD)\nPhương pháp ghi sổ S2d-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa để theo dõi, quản lý về tình hình nhập, xuất, tồn cho từng vật liệu, dụng cụ, sản phẩm, hàng hóa.\nb) Phương pháp ghi sổ\n- Cột 1: Ghi đơn giá nhập, xuất, tồn. Đơn giá xuất kho tính theo phương pháp bình quân gia quyền cuối kỳ: Đơn giá xuất kho = (Giá trị hàng tồn đầu kỳ + Giá trị hàng nhập trong kỳ) / (Số lượng hàng tồn đầu kỳ + Số lượng hàng nhập trong kỳ).\n- Cột 2: Ghi số lượng nhập kho. Cột 3: thành tiền nhập (= Cột 1 x Cột 2).\n- Cột 4: Ghi số lượng xuất kho. Cột 5: thành tiền xuất (= Cột 1 x Cột 4).\n- Cột 6: Số lượng tồn. Cột 7: thành tiền tồn (= Cột 1 x Cột 6).\n\n2.2.4. Sổ chi tiết tiền (Mẫu số S2e-HKD)\nPhương pháp ghi sổ S2e-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh phải mở sổ chi tiết tiền để theo dõi tình hình thu, chi bằng tiền mặt hoặc tiền gửi không kỳ hạn. Hộ kinh doanh, cá nhân kinh doanh phải theo dõi riêng biệt tiền mặt và tiền gửi không kỳ hạn; không được gộp chung tiền mặt với tiền gửi ngân hàng vào cùng một cột. Có thể mở sổ chi tiết theo từng ngân hàng.\nb) Phương pháp ghi sổ\n- Cột 1, 2: Ghi số tiền thu, chi tiền mặt hoặc số tiền gửi không kỳ hạn gửi vào, rút ra.\nCuối kỳ, tính ra số tiền mặt tồn quỹ và số tiền gửi không kỳ hạn dư cuối kỳ.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 1",
                   "references": [],
                   "children": []
@@ -217,7 +217,7 @@
                   "node_type": "Khoản",
                   "node_index": "2",
                   "title": null,
-                  "content": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)",
+                  "content": "Sổ kế toán hộ kinh doanh nộp thuế theo lợi nhuận gồm: S2b-HKD (doanh thu), S2c-HKD (doanh thu + chi phí TNCN), S2d-HKD (vật liệu nhập xuất tồn), S2e-HKD (tiền mặt + tiền gửi).\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này ghi doanh thu theo từng nhóm ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Sổ S2b-HKD có thể lưu trữ trên phương tiện điện tử hoặc bằng bản giấy theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Số hiệu, ngày tháng chứng từ. Cột C: diễn giải doanh thu. Cột 1: số tiền.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo phương pháp lợi nhuận.\nb) Phương pháp ghi sổ\n- Dòng 1: Tổng doanh thu bán hàng hóa, dịch vụ.\n- Dòng 2: Tổng chi phí hợp lý (nguyên liệu, lương, khấu hao, dịch vụ mua ngoài, lãi vay, chi phí khác).\n- Chênh lệch (Dòng 1 - Dòng 2) = thu nhập tính thuế TNCN.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
                   "references": [],
                   "children": []
@@ -308,7 +308,7 @@
               "node_type": "Khoản",
               "node_index": "4",
               "title": null,
-              "content": "Trong quá trình thực hiện nếu có vướng mắc, đề nghị phản ánh về Bộ Tài chính để ng hiên cứu giải quyết./.",
+              "content": "Trong quá trình thực hiện nếu có vướng mắc, đề nghị phản ánh về Bộ Tài chính để nghiên cứu giải quyết./.",
               "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III > Điều 8: Hiệu lực thi hành > Khoản 4",
               "references": [],
               "children": []

@@ -46,13 +46,16 @@ except:
 # TEXT CLEANING - MINIMAL (for good quality PDFs)
 # =========================================================
 
-def clean_legal_text(text: str) -> str:
+def clean_legal_text(text: str, fix_merged: bool = True) -> str:
     """
     Minimal cleaning for Vietnamese legal PDFs
 
     Works for both:
     - Digital PDFs with perfect text
     - OCR PDFs with good quality
+
+    fix_merged=False: bỏ qua fix_merged_words — dùng cho DOCX/DOC source
+    (text đã đúng, không có OCR space-drop artifact).
     """
     import unicodedata
 
@@ -63,7 +66,9 @@ def clean_legal_text(text: str) -> str:
     # Fix merged words (OCR space-drop): "cánhân" → "cá nhân"
     # Root cause: some embedded fonts have zero advance-width for space glyph
     # → pdfplumber can't infer inter-word boundaries → syllables merge.
-    text = fix_merged_words(text)
+    # CHỈ chạy cho PDF — DOCX text đã đúng, fix_merged_words gây false positive.
+    if fix_merged:
+        text = fix_merged_words(text)
 
     # Normalize hyphenated breaks trong legal references
     # VD: "NĐ-\nCP" → "NĐ-CP", "TT- BKHĐT" → "TT-BKHĐT" (cả line-break và space)

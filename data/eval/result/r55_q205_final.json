@@ -1,0 +1,568 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "pass_rate": 1.0,
+      "avg_score": 0.9,
+      "errors": 0,
+      "annotated": 0,
+      "verified": 0,
+      "timestamp": "2026-04-04T11:18:56.886750"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.8,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 0.8,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Quyết toán thuế TNCN": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0,
+        "avg_score": 0.9
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.9
+      }
+    },
+    "latency_ms": {
+      "min": 22939,
+      "max": 22939,
+      "avg": 22939,
+      "p50": 22939,
+      "p95": 22939
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": []
+  },
+  "results": [
+    {
+      "question_id": 205,
+      "question": "Tại sao thu nhập hiển thị trên eTax Mo bile lại khác với thu nhập trên chứng từ khấu trừ thuế TNCN do công ty cấp? Tôi phải khai quyết toán thuế TNCN theo số nào ạ?",
+      "topic": "Quyết toán thuế TNCN",
+      "difficulty": "easy",
+      "user_type": "employee",
+      "needs_calculation": false,
+      "annotation_status": "pending",
+      "answer": "Việc có sự chênh lệch giữa dữ liệu trên ứng dụng eTax Mobile và Chứng từ khấu trừ thuế TNCN do công ty cấp là tình huống khá phổ biến. Dưới đây là giải đáp chi tiết dựa trên quy định pháp luật hiện hành:\n\n### 📌 Trích dẫn\n> \"Thời điểm xác định thu nhập tính thuế từ tiền lương, tiền công là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập.\" *(Khoản 3 Điều 8, Luật Thuế thu nhập cá nhân số 109/2025/QH15)*\n\n### 💬 Trả lời\n\n**1. Tại sao có sự khác biệt về con số?**\nNguyên nhân chủ yếu nằm ở **thời điểm chi trả thực tế**:\n*   **Nguyên tắc tính thuế:** Thuế TNCN được tính theo thời điểm \"thực trả\". Ví dụ: Tiền lương tháng 12/2025 nhưng công ty chi trả vào tháng 01/2026 thì khoản thu nhập này sẽ được tính vào quyết toán thuế của năm 2026, không phải năm 2025.\n*   **Dữ liệu eTax Mobile:** Đây là dữ liệu do các công ty (tổ chức chi trả) kê khai trên tờ khai thuế tháng/quý gửi lên cơ quan thuế. Nếu công ty kê khai sót, kê khai sai thời điểm hoặc chưa cập nhật dữ liệu điều chỉnh, số liệu trên ứng dụng sẽ không khớp.\n*   **Chứng từ khấu trừ:** Đây là văn bản chính thức do công ty cấp cho bạn, xác nhận tổng thu nhập và số thuế đã khấu trừ trong năm tính thuế (từ 01/01 đến 31/12).\n\n**2. Bạn phải khai quyết toán theo số nào?**\nBạn phải khai quyết toán thuế TNCN theo **số liệu trên Chứng từ khấu trừ thuế TNCN** (và thư xác nhận thu nhập nếu có) do công ty cấp. \n\nLý do:\n*   Chứng từ khấu trừ là căn cứ pháp lý cao nhất để chứng minh thu nhập và số thuế bạn đã nộp.\n*   Theo hướng dẫn tại *Công văn 1296/CTNVT*, hồ sơ quyết toán thuế yêu cầu bản sao các chứng từ chứng minh số thuế đã khấu trừ. Nếu dữ liệu trên eTax Mobile sai, bạn có quyền yêu cầu công ty điều chỉnh lại tờ khai hoặc sử dụng chứng từ thực tế để tự kê khai.\n\n**3. Cách xử lý khi số liệu không khớp:**\n*   **Bước 1:** Liên hệ với bộ phận kế toán/nhân sự của công ty để đối soát lại danh sách thu nhập từng tháng. Xác định xem có khoản thu nhập nào bị lệch thời điểm hoặc bị kê khai nhầm hay không.\n*   **Bước 2:** Nếu công ty xác nhận số trên Chứng từ là đúng, bạn dùng số đó để điền vào tờ khai quyết toán (Mẫu 02/QTT-TNCN).\n*   **Bước 3:** Khi nộp hồ sơ, nếu cơ quan thuế phản hồi dữ liệu không khớp với hệ thống, bạn cung cấp Chứng từ khấu trừ thuế (bản điện tử hoặc bản giấy) để đối chiếu.\n\n### 📋 Tóm lại\n*   **Số liệu sử dụng:** Ưu tiên số trên **Chứng từ khấu trừ thuế TNCN** do đơn vị chi trả cấp.\n*   **Nguyên tắc:** Thu nhập tính thuế tính theo thời điểm **thực nhận tiền** (Điều 8 Luật 109/2025/QH15).\n*   **Hồ sơ:** Phải có chứng từ khấu trừ để làm căn cứ nộp kèm tờ khai quyết toán (trừ trường hợp đơn vị đã chuyển dữ liệu điện tử đồng bộ hoàn toàn lên hệ thống thuế).\n*   **Lưu ý:** Nếu bạn làm việc tại nhiều nơi, hãy thu thập đủ chứng từ của tất cả các nơi trước khi thực hiện quyết toán.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thu nhập hiển thị trên eTax Mobile khác chứng từ khấu trừ thuế TNCN quyết toán theo số nào"
+          },
+          "result": {
+            "query": "thu nhập hiển thị trên eTax Mobile khác chứng từ khấu trừ thuế TNCN quyết toán theo số nào",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_1296_CTNVT_phan_23_chunk",
+                "doc_id": "1296_CTNVT",
+                "node_type": "Phần",
+                "breadcrumb": "",
+                "snippet": "[VB: 1296/CTNVT | Phần  (2.3. Thủ tục kê khai quyết toán thuế TNCN)]\na) Hồ sơ khai quyết toán thuế TNCN - Đối với cá nhân khai quyết toán thuế TNCN trực tiếp với cơ quan thuế, hồ sơ quyết toán thuế TNCN bao gồm: + Tờ khai quyết toán thuế thu nhập cá nhân mẫu số 02/QTT-TNCN ban hành kèm theo Phụ lục II Thông tư số 80/2021/TT-BTC ngày 29/9/2021 của Bộ Tài chính. + Phụ lục bảng kê giảm trừ gia cảnh cho người phụ thuộc mẫu số 02-1/BK-QTT-TNCN ban hành kèm theo Phụ lục II Thông tư số 80/2021/TT-BTC ngày 29/9/2021 của Bộ Tài chính. + Bản sao (bản chụp từ bản chính) các chứng từ chứng minh số thuế đã khấu trừ, đã tạm nộp trong năm, số thuế đã nộp ở nước ngoài (nếu có). Các trường hợp không cần cung cấp chứng từ chứng minh số thuế đã khấu trừ: Trường hợp tổ chức trả thu nhập thực hiện chuyển dữ liệu chứng từ khấu trừ thuế TNCN điện tử đến cơ quan thuế người nộp thuế không cần nộp bản sao các chứng từ chứng minh số thuế đã khấu trừ. Trường hợp tổ chức trả thu nhập không cấp chứng từ khấu trừ thuế cho cá nhân do tổ chức trả thu nhập đã chấm dứt hoạt động thì cơ quan thuế căn cứ cơ sở dữ liệu của ngành Thuế để xem xét xử lý hồ sơ quyết toán thuế cho cá nhân. + Bản sao Giấy chứng nhận khấu trừ thuế (ghi rõ đã nộp thuế theo tờ khai thuế thu nhập nào) do cơ quan trả thu nhập cấp hoặc Bản sao chứng từ ngân hàng đối với số thuế đã nộp ở nước ngoài có xác nhận của người nộp thuế trong trường hợp theo quy định của luật pháp nước ngoài, cơ quan thuế nước ngoài không cấp giấy xác nhận số thuế đã nộp. + Bản sao các hóa đơn chứng từ chứng minh khoản đóng góp vào quỹ từ thiện, quỹ nhân đạo, quỹ khuyến học (nếu có). + Tài liệu chứng minh về số tiền đã trả của đơn vị, tổ chức trả thu nhập ở nước ngoài trong trường hợp cá nhân nhận thu nhập từ các tổ chức quốc tế, Đại sứ quán, Lãnh sự quán và nhận thu nhập từ nước ngoài. + Hồ sơ đăng ký người phụ thuộc theo quy định về đăng ký thuế (nếu tính giảm trừ cho người phụ thuộc tại thời điểm quyết toán thuế đối với người phụ thuộc chưa thực hiện đăn",
+                "score": 0.017712,
+                "citation": {
+                  "doc_id": "1296_CTNVT",
+                  "doc_number": "",
+                  "breadcrumb": ""
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_25_khoan_1_diem_đ_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ25 (Khấu trừ thuế và chứng từ khấu) | K1 | Đ.đ]\nKhấu trừ thuế Khấu trừ thuế là việc tổ chức, cá nhân trả thu nhập thực hiện tính trừ số thuế phải nộp vào thu nhập của người nộp thuế trước khi trả thu nhập, cụ thể như sau:\nThu nhập từ chuyển nhượng chứng khoán\nMọi trường hợp chuyển nhượng chứng khoán đều phải khấu trừ thuế theo thuế\nsuất 0,1% trên giá chuyển nhượng trước khi thanh toán cho người chuyển\nnhượng. Cụ thể việc khấu trừ thuế được thực hiện như sau:",
+                "score": 0.005102,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_25_khoan_1_diem_h_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm h",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ25 (Khấu trừ thuế và chứng từ khấu) | K1 | Đ.h]\nKhấu trừ thuế Khấu trừ thuế là việc tổ chức, cá nhân trả thu nhập thực hiện tính trừ số thuế phải nộp vào thu nhập của người nộp thuế trước khi trả thu nhập, cụ thể như sau:\nThu nhập từ bản quyền, nhượng quyền thương mại Tổ chức, cá nhân trả thu nhập từ bản quyền, nhượng quyền thương mại có trách nhiệm khấu trừ thuế thu nhập cá nhân trước khi trả thu nhập cho cá nhân. Số thuế khấu trừ được xác định bằng phần thu nhập vượt trên 10 triệu đồng theo từng hợp đồng chuyển nhượng nhân (×) với thuế suất 5%. Trường hợp hợp đồng có giá trị lớn thanh toán làm nhiều lần thì lần đầu thanh toán, tổ chức, cá nhân trả thu nhập trừ 10 triệu đồng khỏi giá trị thanh toán, số còn lại phải nhân với thuế suất 5% để khấu trừ thuế. Các lần thanh toán sau sẽ khấu trừ thuế thu nhập tính trên tổng số tiền thanh toán của từng lần.",
+                "score": 0.00485,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm h"
+                }
+              },
+              {
+                "chunk_id": "doc_111_2013_TTBTC_dieu_25_khoan_2_chunk",
+                "doc_id": "111_2013_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 2",
+                "snippet": "[VB: 111/2013/TT-BTC | Đ25 (Khấu trừ thuế và chứng từ khấu trừ thuế) | K2]\nChứng từ khấu trừ\na) Tổ chức, cá nhân trả các khoản thu nhập đã khấu trừ thuế theo hướng dẫn tại khoản 1, Điều này phải cấp chứng từ khấu trừ thuế theo yêu cầu của cá nhân bị khấu trừ. Trường hợp cá nhân ủy quyền quyết toán thuế thì không cấp chứng từ khấu trừ. �\nb) Cấp chứng từ khấu trừ trong một số trường hợp cụ thể như sau:",
+                "score": 0.004618,
+                "citation": {
+                  "doc_id": "111_2013_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_92_2015_TTBTC_chuong_IV_dieu_21_khoan_3_diem_b_tiet_b.2_chunk",
+                "doc_id": "92_2015_TTBTC",
+                "node_type": "Tiết",
+                "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.2",
+                "snippet": "[VB: 92/2015/TT-BTC | Tiết b.2]\nHồ sơ khai quyết toán b.2.1) Cá nhân có thu nhập từ tiền lương, tiền công không thuộc trường hợp được ủy quyền cho tổ chức, cá nhân trả thu nhập quyết toán thuế thay thì khai quyết toán thuế trực tiếp với cơ quan thuế theo mẫu sau: - Tờ khai quyết toán thuế mẫu số 02/QTT-TNCN ban hành kèm theo Thông tư số 92/2015/TT-BTC. - Phụ lục mẫu số 02-1/BK-QTT-TNCN ban hành kèm theo Thông tư số 92/2015/TT-BTC nếu có đăng ký giảm trừ gia cảnh cho người phụ thuộc. - Bản chụp các chứng từ chứng minh số thuế đã khấu trừ, đã tạm nộp trong năm, số thuế đã nộp ở nước ngoài (nếu có). Cá nhân cam kết chịu trách nhiệm về tính chính xác của các thông tin trên bản chụp đó. Trường hợp tổ chức trả thu nhập không cấp chứng từ khấu trừ thuế cho cá nhân do tổ chức trả thu nhập đã chấm dứt hoạt động thì cơ quan thuế căn cứ cơ sở dữ liệu của ngành thuế để xem xét xử lý hồ sơ quyết toán thuế cho cá nhân mà không bắt buộc phải có chứng từ khấu trừ thuế. Trường hợp, theo quy định của luật pháp nước ngoài, cơ quan thuế nước ngoài không cấp giấy xác nhận số thuế đã nộp, người nộp thuế có thể nộp bản chụp Giấy chứng nhận khấu trừ thuế (ghi rõ đã nộp thuế theo tờ khai thuế thu nhập nào) do cơ quan trả thu nhập cấp hoặc bản chụp chứng từ ngân hàng đối với số thuế đã nộp ở nước ngoài có xác nhận của người nộp thuế. - Bản chụp các hóa đơn chứng từ chứng minh khoản đóng góp vào quỹ từ thiện, quỹ nhân đạo, quỹ khuyến học (nếu có). - Trường hợp cá nhân nhận thu nhập từ các tổ chức Quốc tế, Đại sứ quán, Lãnh sự quán và nhận thu nhập từ nước ngoài phải có tài liệu chứng minh về số tiền đã trả của đơn vị, tổ chức trả thu nhập ở nước ngoài. b.2.2) Đối với cá nhân ủy quyền cho tổ chức, cá nhân trả thu nhập quyết toán thuế thay Cá nhân ủy quyền cho tổ chức, cá nhân trả thu nhập quyết toán thay theo mẫu số 02/UQ-QTT-TNCN ban hành kèm theo Thông tư số 92/2015/TT-BTC, kèm theo bản chụp hóa đơn, chứng từ chứng minh đóng góp từ thiện, nhân đạo, khuyến học (nếu có).",
+                "score": 0.004606,
+                "citation": {
+                  "doc_id": "92_2015_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.2"
+                }
+              },
+              {
+                "chunk_id": "doc_92_2015_TTBTC_chuong_IV_dieu_21_khoan_3_diem_b_tiet_b.1_chunk",
+                "doc_id": "92_2015_TTBTC",
+                "node_type": "Tiết",
+                "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.1",
+                "snippet": "[VB: 92/2015/TT-BTC | Tiết b.1]\nHồ sơ khai thuế quý Cá nhân cư trú có thu nhập từ tiền lương, tiền công khai thuế quý trực tiếp với cơ quan thuế theo Tờ khai mẫu số 02/KK-TNCN ban hành kèm theo Thông tư số 92/2015/TT-BTC.",
+                "score": 0.002764,
+                "citation": {
+                  "doc_id": "92_2015_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thời điểm xác định thu nhập tính thuế tiền lương tiền công chi trả thực tế",
+            "doc_filter": "109_2025_QH15"
+          },
+          "result": {
+            "query": "thời điểm xác định thu nhập tính thuế tiền lương tiền công chi trả thực tế",
+            "total_found": 7,
+            "results": [
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_8_khoan_3_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 3",
+                "snippet": "[VB: 109/2025/QH15 | Đ8 (Thuế thu nhập cá nhân đối với thu nhập t) | K3]\nThời điểm xác định thu nhập tính thuế từ tiền lương, tiền công là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế hoặc thời điểm người nộp thuế nhận được thu nhập.",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_3_khoan_2_diem_a_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 2 > Điểm a",
+                "snippet": "[VB: 109/2025/QH15 | Đ3 (Thu nhập chịu thuế) | K2 | Đ.a]\nThu nhập từ tiền lương, tiền công, bao gồm:\nTiền lương, tiền công và các khoản có tính chất tiền lương, tiền công;",
+                "score": 0.015887,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_8_khoan_1_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 1",
+                "snippet": "[VB: 109/2025/QH15 | Đ8 (Thuế thu nhập cá nhân đối với thu nhập t) | K1]\nThuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công của cá nhân cư trú được xác định bằng thu nhập tính thuế quy định tại khoản 2 Điều này, không phân biệt nơi trả thu nhập, nhân (x) với thuế suất tại Biểu thuế lũy tiến từng phần quy định tại Điều 9 của Luật này.",
+                "score": 0.015699,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_I_dieu_6_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 6: Quản lý thuế đối với thuế thu nhập cá nhân",
+                "snippet": "[VB: 109/2025/QH15 | Đ6 (Quản lý thuế đối với thuế thu nhập cá nhân)]\nCăn cứ quy định của Luật này, Chính phủ quy định về kỳ tính thuế theo năm đối với thu nhập từ kinh doanh, thu nhập từ tiền lương, tiền công của cá nhân cư trú; kỳ tính thuế theo từng lần phát sinh đối với các khoản thu nhập khác của cá nhân cư trú và cá nhân không cư trú; thời điểm xác định thu nhập tính thuế; quyết toán thuế; hoàn thuế đối với trường hợp cá nhân có số thuế đã nộp lớn hơn số thuế phải nộp hoặc chưa đến mức phải nộp; trách nhiệm khấu trừ, khai thay, nộp thay cho người nộp thuế phù hợp với quy định của Luật Quản lý thuế.",
+                "score": 0.014954,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 6: Quản lý thuế đối với thuế thu nhập cá nhân"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_16_khoan_3_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 16: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền > Khoản 3",
+                "snippet": "[VB: 109/2025/QH15 | Đ16 (Thuế thu nhập cá nhân đối với thu nhập t) | K3]\nThời điểm xác định thu nhập tính thuế từ tiền bản quyền là thời điểm tổ chức, cá nhân trả thu nhập cho người nộp thuế.",
+                "score": 0.014615,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 16: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_8_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công",
+                "snippet": "[VB: 109/2025/QH15 | Đ8 (Thuế thu nhập cá nhân đối với thu nhập từ tiền lươ)]",
+                "score": 0.010989,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công"
+                }
+              },
+              {
+                "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_9_chunk",
+                "doc_id": "109_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 9: Biểu thuế luỹ tiến từng phần",
+                "snippet": "[VB: 109/2025/QH15 | Đ9 (Biểu thuế luỹ tiến từng phần)]",
+                "score": 0.010989,
+                "citation": {
+                  "doc_id": "109_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 9: Biểu thuế luỹ tiến từng phần"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hồ sơ quyết toán thuế TNCN chứng từ khấu trừ thuế dữ liệu hệ thống thuế",
+            "doc_filter": "126_2020_NDCP"
+          },
+          "result": {
+            "query": "hồ sơ quyết toán thuế TNCN chứng từ khấu trừ thuế dữ liệu hệ thống thuế",
+            "total_found": 7,
+            "results": [
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_I_dieu_6_khoan_3_diem_d_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3 > Điểm d",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ6 (Đăng ký thuế) | K3 | Đ.d]\nNgười nộp thuế có trách nhiệm thực hiện các thủ tục về thuế với cơ quan thuế quản lý trực tiếp trước khi thay đổi địa chỉ trụ sở sang địa bàn cấp tỉnh khác theo quy định tại Điều 36 Luật Quản lý thuế,\nĐược chuyển số tiền thuế giá trị gia tăng chưa khấu trừ hết để bù trừ với số thuế giá trị gia tăng phát sinh tại cơ quan thuế nơi chuyển đến; số thuế thu nhập cá nhân, thuế thu nhập doanh nghiệp, lợi nhuận sau thuế còn lại sau khi trích lập các quỹ đã tạm nộp nhưng chưa đến thời hạn nộp hồ sơ khai quyết toán thuế để bù trừ với số phải nộp theo hồ sơ khai quyết toán thuế.",
+                "score": 0.016021,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_I_dieu_6_khoan_3_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ6 (Đăng ký thuế) | K3]\nNgười nộp thuế có trách nhiệm thực hiện các thủ tục về thuế với cơ quan thuế quản lý trực tiếp trước khi thay đổi địa chỉ trụ sở sang địa bàn cấp tỉnh khác theo quy định tại Điều 36 Luật Quản lý thuế, cụ thể:\na) Nộp đầy đủ hồ sơ khai thuế, báo cáo tình hình sử dụng hóa đơn còn thiếu theo quy định.\nb) Nộp đầy đủ số tiền thuế và các khoản thu khác thuộc ngân sách nhà nước theo quy định.\nc) Đề nghị hoàn trả số tiền thuế, các khoản thu khác thuộc ngân sách nh� nước nộp thừa (trừ trường hợp quy định tại điểm d khoản này).\nd) Được chuyển số tiền thuế giá trị gia tăng chưa khấu trừ hết để bù trừ với số thuế giá trị gia tăng phát sinh tại cơ quan thuế nơi chuyển đến; số thuế thu nhập cá nhân, thuế thu nhập doanh nghiệp, lợi nhuận sau thuế còn lại sau khi trích lập các quỹ đã tạm nộp nhưng chưa đến thời hạn nộp hồ sơ khai quyết toán thuế để bù trừ với số phải nộp theo hồ sơ khai quyết toán thuế.",
+                "score": 0.014026,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VII_dieu_31_khoan_5_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 31: Cưỡng chế bằng biện pháp trích tiền từ tài khoản, phong tỏa tài khoản của người nộp thuế bị cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 5",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ31 (Cưỡng chế bằng biện pháp trích tiền từ t) | K5]\nThủ tục thu tiền bằng biện pháp trích tiền từ tài khoản Việc trích tiền từ tài khoản của người nộp thuế bị cưỡng chế thi hành quyết định hành chính về quản lý thuế được thực hiện trên cơ sở các chứng từ thu theo quy định. Chứng từ thu sử dụng để trích chuyển tiền từ tài khoản được gửi cho các bên liên quan (bản sao).",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 31: Cưỡng chế bằng biện pháp trích tiền từ tài khoản, phong tỏa tài khoản của người nộp thuế bị cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_8_khoan_6_diem_b_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm b",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ8 (Các loại thuế khai theo tháng,) | K6 | Đ.b]\nCác loại thuế, khoản thu khai quyết toán năm và quyết toán đến thời điểm giải thể, phá sản, chấm dứt hoạt động, chấm dứt hợp đồng hoặc tổ chức lại doanh nghiệp. Trường hợp chuyển đổi loại hình doanh n\nThuế thu nhập doanh nghiệp (trừ thuế thu nhập doanh nghiệp từ chuyển nhượng vốn của nhà thầu nước ngoài; thuế thu nhập doanh nghiệp kê khai theo phương pháp tỷ lệ trên doanh thu theo từng lần phát sinh hoặc theo tháng theo quy định tại điểm đ khoản 4 Điều này). Người nộp thuế phải tự xác định số thuế thu nhập doanh nghiệp tạm nộp quý (bao gồm cả tạm phân bổ số thuế thu nhập doanh nghiệp cho địa bàn cấp tỉnh nơi có đơn vị phụ thuộc, địa điểm kinh doanh, nơi có bất động sản chuyển nhượng khác với nơi người nộp thuế đóng trụ sở chính) Và được trừ số thuế đã tạm nộp với số phải nộp theo quyết toán thuế năm. Người nộp thuế thuộc diện lập báo cáo tài chính quý theo quy định của pháp luật về kế toán căn cứ vào báo cáo tài chính quý và các quy định của pháp luật về thuế để xác định số thuế thu nhập doanh nghiệp tạm nộp quý. Người nộp thuế không thuộc diện lập báo cáo tài chính quý theo quy định của pháp luật về kế toán căn cứ vào kết quả sản xuất, kinh doanh quý và các quy định của pháp luật về thuế để xác định số thuế thu nhập doanh nghiệp tạm nộp quý. Tổng số thuế thu nhập doanh nghiệp đã tạm nộp của 03 quý đầu năm tính thuế không được thấp hơn 75% số thuế thu nhập doanh nghiệp phải nộp theo quyết toán năm. Trường hợp người nộp thuế nộp thiếu so với số thuế phải tạm nộp 03 quý đầu năm thì phải nộp tiền chậm nộp tính trên số thuế nộp thiếu kể từ ngày tiếp sau ngày cuối cùng của thời hạn tạm nộp thuế thu nhập doanh nghiệp quý 03 đến ngày nộp số thuế còn thiếu vào ngân sách nhà nước. Người nộp thuế có thực hiện dự án đầu tư cơ sở hạ tầng, nhà để chuyển nhượng hoặc cho thuê mua, có thu tiền ứng trước của khách hàng theo tiến độ phù hợp với quy định của pháp luật thì thực hiện tạm nộp thuế thu nhập doanh nghiệp",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_7_khoan_1_diem_c_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 1 > Điểm c",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ7 (Hồ sơ khai thuế) | K1 | Đ.c]\nHồ sơ khai thuế là tờ khai thuế và các chứng từ, tài liệu liên quan làm căn cứ để xác định nghĩa vụ thuế của người nộp thuế với ngân sách nhà nước do người nộp thuế lập và gửi đến cơ quan quản lý thuế\nCơ quan thuế căn cứ hồ sơ khai thuế của hộ kinh doanh, cá nhân kinh doanh nộp thuế theo phương pháp khoán và các thông tin quản lý thuế để xác định mức thuế khoán theo quy định tại Điều 51 Luật Quản lý thuế và theo quy định của Bộ trưởng Bộ Tài chính.",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 1 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_VII_dieu_36_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 36: Cưỡng chế bằng biện pháp thu tiền, tài sản khác của người nộp thuế bị cưỡng chế do cơ quan, tổ chức, cá nhân khác đang giữ",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ36 (Cưỡng chế bằng biện pháp thu tiền, tài sản khác củ)]",
+                "score": 0.009818,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 36: Cưỡng chế bằng biện pháp thu tiền, tài sản khác của người nộp thuế bị cưỡng chế do cơ quan, tổ chức, cá nhân khác đang giữ"
+                }
+              },
+              {
+                "chunk_id": "doc_126_2020_NDCP_chuong_II_dieu_8_chunk",
+                "doc_id": "126_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế",
+                "snippet": "[VB: 126/2020/NĐ-CP | Đ8 (Các loại thuế khai theo tháng, khai theo quý, khai)]",
+                "score": 0.007778,
+                "citation": {
+                  "doc_id": "126_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 22939,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.8,
+        "reason": "PARTIAL — overlap 2/2, precision=0.40, penalty=0.80",
+        "details": {
+          "matched": [
+            "109_2025_QH15",
+            "126_2020_NDCP"
+          ],
+          "missing": []
+        }
+      },
+      "tier3": {
+        "score": 0.8,
+        "reason": "PASS — gọi 3 tools (topic không có mapping cụ thể)",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "chứng từ khấu trừ",
+            "liên hệ"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "1296_CTNVT",
+          "doc_number": "",
+          "breadcrumb": "",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 1 > Điểm h",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "111_2013_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 111/2013/TT-BTC > Điều 25: Khấu trừ thuế và chứng từ khấu trừ thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "92_2015_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "92_2015_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 92/2015/TT-BTC > Chương IV > Điều 21: Sửa đổi, bổ sung Điều 16 Thông tư số 156/2013/TT-BTC ngày > Khoản 3 > Điểm b > Tiết b.1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 3: Thu nhập chịu thuế > Khoản 2 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương I > Điều 6: Quản lý thuế đối với thuế thu nhập cá nhân",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 16: Thuế thu nhập cá nhân đối với thu nhập từ tiền bản quyền > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 8: Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "109_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 109/2025/QH15 > Chương II > Điều 9: Biểu thuế luỹ tiến từng phần",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương I > Điều 6: Đăng ký thuế > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 31: Cưỡng chế bằng biện pháp trích tiền từ tài khoản, phong tỏa tài khoản của người nộp thuế bị cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế > Khoản 6 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 7: Hồ sơ khai thuế > Khoản 1 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương VII > Điều 36: Cưỡng chế bằng biện pháp thu tiền, tài sản khác của người nộp thuế bị cưỡng chế do cơ quan, tổ chức, cá nhân khác đang giữ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "126_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 126/2020/NĐ-CP > Chương II > Điều 8: Các loại thuế khai theo tháng, khai theo quý, khai theo năm, khai theo từng lần phát sinh nghĩa vụ thuế và khai quyết toán thuế",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "1296_CTNVT",
+        "92_2015_TTBTC",
+        "111_2013_TTBTC",
+        "109_2025_QH15",
+        "126_2020_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

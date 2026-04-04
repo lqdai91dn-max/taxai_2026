@@ -1,5 +1,5 @@
 """
-Tool registry cho Tax AI — 12 tools.
+Tool registry cho Tax AI — 8 tools active.
 
 Phase A (deterministic calculators):
   1. calculate_tax_hkd              — GTGT + TNCN cho HKD (phương pháp doanh thu)
@@ -9,15 +9,17 @@ Phase A (deterministic calculators):
 
 Phase B (retrieval + lookup wrappers):
   5. search_legal_docs              — hybrid BM25 + vector search
-  6. get_article                    — toàn văn Điều từ Neo4j
-  7. check_doc_validity             — hiệu lực văn bản tại một ngày
-  8. get_guidance                   — GuidanceChunks từ Sổ tay/Công văn
-  9. get_impl_chain                 — chuỗi IMPLEMENTS/AMENDS/SUPERSEDES
- 10. resolve_legal_reference        — parse citation text → doc_id + article_id
- 11. get_article_with_amendments    — Điều luật + cảnh báo sửa đổi
+  6. check_doc_validity             — hiệu lực văn bản tại một ngày
+  7. resolve_legal_reference        — parse citation text → doc_id + article_id
 
 Phase B+ (rule engine):
- 12. evaluate_tax_obligation        — Rule engine: miễn thuế, kỳ kê khai, HĐĐT, TMĐT
+  8. evaluate_tax_obligation        — Rule engine: miễn thuế, kỳ kê khai, HĐĐT, TMĐT
+
+DISABLED (Neo4j offline — silent fail, burns iterations):
+  - get_article                    → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
+  - get_article_with_amendments    → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
+  - get_impl_chain                 → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
+  - get_guidance                   → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
 
 Usage:
     from src.tools import TOOL_DEFINITIONS, TOOL_REGISTRY
@@ -195,30 +197,16 @@ TOOL_DEFINITIONS = [
                     "type": "string",
                     "description": "doc_id cụ thể để giới hạn phạm vi (optional).",
                 },
+                "exclude_doc_ids": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "Danh sách doc_id cần loại trừ khỏi kết quả. Dùng khi biết chắc văn bản đó không liên quan để tránh false positive. Ví dụ: ['310_2025_NDCP'] khi câu hỏi không liên quan đến xử phạt vi phạm.",
+                },
             },
             "required": ["query"],
         },
     },
-    {
-        "name": "get_article",
-        "description": (
-            "Lấy toàn văn một Điều luật (bao gồm các Khoản, Điểm) từ graph database. "
-            "Dùng khi đã biết article_id cụ thể từ resolve_legal_reference hoặc search."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "article_id": {
-                    "type": "string",
-                    "description": (
-                        "ID của Article node. Định dạng: 'doc_{doc_id}_[chuong_X_]dieu_N'. "
-                        "Lấy từ resolve_legal_reference hoặc search_legal_docs."
-                    ),
-                },
-            },
-            "required": ["article_id"],
-        },
-    },
+    # get_article — DISABLED: Neo4j offline, silent fail burns iterations
     {
         "name": "check_doc_validity",
         "description": (
@@ -241,44 +229,8 @@ TOOL_DEFINITIONS = [
             "required": ["doc_id"],
         },
     },
-    {
-        "name": "get_guidance",
-        "description": (
-            "Lấy hướng dẫn thực tế từ Sổ tay HKD / Công văn cho một Điều luật cụ thể. "
-            "Dùng khi cần ví dụ áp dụng thực tế hoặc giải thích chi tiết hơn."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "article_id": {
-                    "type": "string",
-                    "description": "ID Article cần tra cứu hướng dẫn.",
-                },
-                "min_confidence": {
-                    "type": "number",
-                    "description": "Ngưỡng confidence (0-1, mặc định 0.82).",
-                },
-            },
-            "required": ["article_id"],
-        },
-    },
-    {
-        "name": "get_impl_chain",
-        "description": (
-            "Trả về chuỗi văn bản liên quan: Luật → Nghị định → Thông tư → Công văn. "
-            "Dùng khi cần giải thích hierarchy pháp lý hoặc tìm văn bản hướng dẫn chi tiết hơn."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "doc_id": {
-                    "type": "string",
-                    "description": "ID văn bản gốc. Ví dụ: '109_2025_QH15'.",
-                },
-            },
-            "required": ["doc_id"],
-        },
-    },
+    # get_guidance  — DISABLED: Neo4j offline, silent fail burns iterations
+    # get_impl_chain — DISABLED: Neo4j offline, silent fail burns iterations
     {
         "name": "resolve_legal_reference",
         "description": (
@@ -300,24 +252,7 @@ TOOL_DEFINITIONS = [
             "required": ["reference_text"],
         },
     },
-    {
-        "name": "get_article_with_amendments",
-        "description": (
-            "Lấy toàn văn Điều luật kèm cảnh báo nếu văn bản có bị sửa đổi. "
-            "Tốt hơn get_article khi cần đảm bảo tính chính xác pháp lý. "
-            "Trả về amendment_warnings nếu có văn bản khác sửa đổi văn bản cha."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "article_id": {
-                    "type": "string",
-                    "description": "ID của Article. Ví dụ: 'doc_68_2026_NDCP_chuong_II_dieu_4'.",
-                },
-            },
-            "required": ["article_id"],
-        },
-    },
+    # get_article_with_amendments — DISABLED: Neo4j offline, silent fail burns iterations
 
     # ── Phase B+ — Rule engine ────────────────────────────────────────────────
     {

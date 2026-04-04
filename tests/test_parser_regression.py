@@ -162,7 +162,7 @@ GOLDEN: dict = {
     "110_2025_UBTVQH15": {
         "root_count": 2,
         "root_types": {"Điều"},
-        "total_nodes": 4,
+        "total_nodes": 6,  # updated: patch thêm điểm a, b vào Điều 1 → 4+2=6
         "max_depth": 2,
         "tables_count": 0,
         "no_false_nodes": [],
@@ -172,6 +172,16 @@ GOLDEN: dict = {
                 "exists": True,
                 "field": "title",
                 "value": "Mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+            },
+            {
+                "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_a",
+                "exists": True,
+                "content_contains": "15,5 triệu đồng/tháng",
+            },
+            {
+                "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_b",
+                "exists": True,
+                "content_contains": "6,2 triệu đồng/tháng",
             },
             {
                 "node_id": "doc_110_2025_UBTVQH15_dieu_2_khoan_1",
@@ -250,13 +260,14 @@ GOLDEN: dict = {
         ],
     },
 
-    # Nghị định 68/2026/NĐ-CP — Gemini 2.5 Pro extraction (PDF digital)
+    # Nghị định 68/2026/NĐ-CP — DOCX source (updated 2026-03-17)
+    # Biểu thuế trong PDF là text/image, không phải Word table → tables=0
     "68_2026_NDCP": {
         "root_count": 5,
         "root_types": {"Chương"},
         "total_nodes": 159,
         "max_depth": 4,
-        "tables_count": 14,
+        "tables_count": 0,
         "no_false_nodes": [],
         "spot_checks": [
             {
@@ -272,13 +283,14 @@ GOLDEN: dict = {
         ],
     },
 
-    # Thông tư 18/2026/TT-BTC — Gemini image fallback (PDF scan thuần)
+    # Thông tư 18/2026/TT-BTC — DOCX source (updated 2026-03-17)
+    # DOCX parse: 13 roots (Điều + Phụ lục), 41 tables, richer than Gemini scan (6 Điều, 0 tables)
     "18_2026_TTBTC": {
-        "root_count": 6,
-        "root_types": {"Điều"},
-        "total_nodes": 29,
+        "root_count": 13,
+        "root_types": {"Điều", "Phụ lục"},
+        "total_nodes": 46,
         "max_depth": 3,
-        "tables_count": 0,
+        "tables_count": 41,
         "no_false_nodes": [],
         "spot_checks": [
             {
@@ -306,13 +318,13 @@ GOLDEN: dict = {
         "spot_checks": [],
     },
 
-    # Sổ tay Hộ Kinh Doanh — Type B (guidance), 26 bảng tra cứu
+    # Sổ tay Hộ Kinh Doanh — Type B (guidance), 28 bảng tra cứu (patch: thêm pages 29-30)
     "So_Tay_HKD": {
         "root_count": 0,
         "root_types": set(),
         "total_nodes": 0,
         "max_depth": 0,
-        "tables_count": 26,
+        "tables_count": 28,
         "no_false_nodes": [],
         "spot_checks": [],
     },
@@ -324,10 +336,10 @@ GOLDEN: dict = {
 # Docs dùng Gemini API để parse — output không deterministic, skip REPARSE test.
 # Các doc này chỉ được bảo vệ bởi FAST test (load JSON đã save).
 GEMINI_SOURCED = {
-    "68_2026_NDCP",    # pdf+Gemini 2.5 Pro
-    "18_2026_TTBTC",   # pdf scan+Gemini image fallback
-    "So_Tay_HKD",      # pdf+Gemini 2.5 Pro
-    # 1296_CTNVT: đã chuyển sang .doc (antiword) — deterministic, không cần Gemini
+    "So_Tay_HKD",   # pdf+Gemini 2.5 Pro
+    "1296_CTNVT",   # pdf+Gemini (file .doc bị corrupt, dùng Gemini PDF parse)
+    # 68_2026_NDCP: đã có DOCX → deterministic DOCX parse
+    # 18_2026_TTBTC: đã có DOCX → deterministic DOCX parse
 }
 
 

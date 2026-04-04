@@ -19,6 +19,10 @@ from __future__ import annotations
 import json
 import logging
 import os
+import random
+import re
+import threading
+import time
 from datetime import date
 from typing import Any
 
@@ -27,12 +31,181 @@ from google import genai
 from google.genai import types, errors as genai_errors
 
 from src.tools import TOOL_DEFINITIONS, TOOL_REGISTRY
+from src.retrieval.fact_checker import check_facts
+from src.utils.answer_logger import log_answer
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-GEMINI_MODEL   = "gemini-2.5-flash"
-MAX_ITERATIONS = 6  # max vòng lặp tool calling
+GEMINI_MODEL   = "gemini-3-flash-preview"
+MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
+
+# Paid tier 1 Gemini 3 Flash: 1000 RPM, 2,000,000 TPM, 10,000 RPD
+# Đặt 1,800,000 TPM (buffer 10%)
+TPM_SAFE_LIMIT      = 1_800_000
+EST_TOKENS_PER_CALL = 11_000  # ước lượng: system prompt + chunks + output
+
+# Tắt thinking để tiết kiệm token — gemini-2.5-flash mặc định bật thinking
+# thinkingBudget=0 = không dùng thinking tokens → giảm chi phí ~3-5x
+_NO_THINKING = types.ThinkingConfig(thinkingBudget=0)
+
+
+# ── Token Bucket Rate Limiter (TPM-based) ─────────────────────────────────────
+
+class _TokenBucketLimiter:
+    """
+    Token bucket limiter giới hạn theo tokens/minute (TPM), không phải RPM.
+
+    Root cause 429: burst TPM trong 1 phút đầu của benchmark — hàng chục calls
+    trong vài giây → >1M tokens/min → Google throttle toàn bộ window.
+
+    Design:
+    - Bucket capacity = TPM_SAFE_LIMIT (800K tokens/min)
+    - Refill liên tục theo thời gian thực (capacity / 60 tokens/giây)
+    - acquire(cost): block đến khi đủ token, rồi deduct
+    - Thread-safe qua threading.Lock
+    """
+
+    def __init__(self, tpm: int = TPM_SAFE_LIMIT):
+        self.capacity    = float(tpm)
+        self.tokens      = 0.0          # bắt đầu rỗng → tránh burst đầu run
+        self.refill_rate = tpm / 60.0   # tokens/giây
+        self._last       = time.monotonic()
+        self._lock       = threading.Lock()
+
+    def acquire(self, cost: int = EST_TOKENS_PER_CALL) -> None:
+        """Block cho đến khi bucket có đủ `cost` tokens, rồi deduct."""
+        while True:
+            with self._lock:
+                now     = time.monotonic()
+                elapsed = now - self._last
+                self._last = now
+
+                # Refill tokens theo thời gian trôi qua
+                self.tokens = min(self.capacity, self.tokens + elapsed * self.refill_rate)
+
+                if self.tokens >= cost:
+                    self.tokens -= cost
+                    return
+
+                # Tính thời gian chờ đến khi bucket đủ tokens
+                wait = (cost - self.tokens) / self.refill_rate
+
+            logger.debug(
+                f"[TokenLimiter] Bucket thấp — chờ {wait:.1f}s "
+                f"(cần {cost} tokens, có {self.tokens:.0f})"
+            )
+            time.sleep(wait)
+
+
+# Singleton — chia sẻ toàn bộ process (kể cả multi-threaded eval)
+_rate_limiter = _TokenBucketLimiter(tpm=TPM_SAFE_LIMIT)
+
+
+# ── RPM Guard (min interval giữa API calls) ───────────────────────────────────
+# Paid tier Gemini 2.5 Flash: 2000 RPM → min interval 0.03s (30ms)
+# Dùng 0.1s để có buffer nhỏ tránh burst cực ngắn
+_MIN_CALL_INTERVAL = 0.1  # giây
+_last_call_time    = 0.0
+_rpm_lock          = threading.Lock()
+
+
+def _rpm_wait() -> None:
+    """Block nếu khoảng cách từ call trước < _MIN_CALL_INTERVAL."""
+    global _last_call_time
+    with _rpm_lock:
+        now  = time.monotonic()
+        gap  = now - _last_call_time
+        wait = _MIN_CALL_INTERVAL - gap
+        if wait > 0:
+            logger.debug(f"[RPM] Throttle {wait:.1f}s (min interval {_MIN_CALL_INTERVAL}s)")
+            time.sleep(wait)
+        _last_call_time = time.monotonic()
+
+
+# ── RPD Counter (Requests Per Day) ────────────────────────────────────────────
+
+class _RPDCounter:
+    """
+    Đếm số API calls trong ngày (reset lúc 00:00 UTC+7).
+    Persist ra file để survive process restart.
+    Chỉ cảnh báo — không block (blocking gây deadlock nếu counter sai).
+    """
+
+    RPD_LIMIT    = 10_000         # paid tier 1: 10K RPD
+    RPD_WARN_AT  = 6_500          # cảnh báo khi còn 1500 requests
+    _STATE_FILE  = "data/rpd_counter.json"
+
+    def __init__(self):
+        self._lock  = threading.Lock()
+        self._count, self._date = self._load()
+
+    def _today(self) -> str:
+        """Ngày hôm nay theo UTC+7."""
+        import datetime
+        tz_vn = datetime.timezone(datetime.timedelta(hours=7))
+        return datetime.datetime.now(tz_vn).strftime("%Y-%m-%d")
+
+    def _load(self) -> tuple[int, str]:
+        try:
+            import json as _json
+            path = Path(self._STATE_FILE)
+            if path.exists():
+                data = _json.loads(path.read_text())
+                today = self._today()
+                if data.get("date") == today:
+                    return data.get("count", 0), today
+        except Exception:
+            pass
+        return 0, self._today()
+
+    def _save(self) -> None:
+        try:
+            import json as _json
+            Path(self._STATE_FILE).parent.mkdir(parents=True, exist_ok=True)
+            Path(self._STATE_FILE).write_text(
+                _json.dumps({"date": self._date, "count": self._count})
+            )
+        except Exception:
+            pass
+
+    def increment(self) -> int:
+        """Tăng counter 1 đơn vị. Trả về số requests đã dùng hôm nay."""
+        with self._lock:
+            today = self._today()
+            if today != self._date:           # ngày mới → reset
+                self._count = 0
+                self._date  = today
+            self._count += 1
+            count = self._count
+            self._save()
+
+        if count == self.RPD_WARN_AT:
+            logger.warning(
+                f"[RPD] ⚠️ Đã dùng {count}/{self.RPD_LIMIT} requests hôm nay — "
+                f"còn ~{self.RPD_LIMIT - count} requests"
+            )
+        elif count >= self.RPD_LIMIT:
+            logger.error(
+                f"[RPD] 🔴 Đã đạt giới hạn RPD ({count}/{self.RPD_LIMIT}) — "
+                f"quota sẽ reset lúc 00:00 UTC+7"
+            )
+        return count
+
+    def status(self) -> dict:
+        with self._lock:
+            today = self._today()
+            if today != self._date:
+                return {"date": today, "used": 0, "remaining": self.RPD_LIMIT}
+            return {
+                "date":      self._date,
+                "used":      self._count,
+                "remaining": max(0, self.RPD_LIMIT - self._count),
+            }
+
+
+_rpd_counter = _RPDCounter()
+
 
 # ── System prompt ─────────────────────────────────────────────────────────────
 
@@ -42,21 +215,163 @@ Ngày hôm nay: {{today}}.
 ## Nhiệm vụ
 Trả lời câu hỏi về thuế TNCN, thuế GTGT, thuế hộ kinh doanh (HKD) dựa trên văn bản pháp luật Việt Nam.
 
+## GIỚI HẠN CHỦ ĐỀ (ƯU TIÊN CAO NHẤT)
+
+Bạn CHỈ trả lời các câu hỏi thuộc một trong các chủ đề sau:
+- Thuế thu nhập cá nhân (TNCN): tính thuế, giảm trừ gia cảnh, quyết toán, khai thuế
+- Thuế GTGT (VAT): đối tượng, thuế suất, kê khai
+- Hộ kinh doanh (HKD): đăng ký, nghĩa vụ thuế, kế toán, sổ sách, chứng từ
+- Thương mại điện tử (TMĐT): nghĩa vụ thuế của cá nhân/HKD kinh doanh online
+- Thủ tục hành chính thuế: đăng ký MST, khai thuế, hoàn thuế, kiểm tra, thanh tra, xử phạt, cưỡng chế
+- Văn bản pháp luật thuế: tra cứu điều khoản, giải thích quy định
+
+Nếu câu hỏi **không liên quan đến các chủ đề trên** (ví dụ: ẩm thực, thể thao, giải trí, lập trình, y tế, tình cảm, v.v.), hãy từ chối lịch sự bằng cách trả lời **CHÍNH XÁC** theo mẫu sau (không gọi tool, không thêm bớt nội dung):
+
+```
+Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt Nam. Tôi chỉ có thể hỗ trợ các câu hỏi liên quan đến thuế TNCN, thuế GTGT, hộ kinh doanh và các thủ tục thuế. Bạn có câu hỏi nào về thuế không? 😊
+```
+
+**KHÔNG** cố gắng liên kết câu hỏi lạc đề với chủ đề thuế để trả lời.
+
 ## QUY TẮC BẮT BUỘC
 
 ### 1. LUÔN GỌI TOOL TRƯỚC KHI TRẢ LỜI
-- **BẤT KỲ câu hỏi nào liên quan đến con số, tỷ lệ %, thuế phải nộp** → PHẢI gọi tool
+- **BẤT KỲ câu hỏi nào liên quan đến con số, tỷ lệ %, điều kiện, quy định pháp luật** → PHẢI gọi `search_legal_docs` trước khi trả lời
 - KHÔNG tự nhân, chia, tính % mà không có tool output làm căn cứ
-- Nếu không chắc tool nào dùng → gọi `search_legal_docs` để tìm căn cứ pháp lý trước
-- KHÔNG hỏi người dùng thêm thông tin nếu câu hỏi đã đủ dữ liệu để tính
+- KHÔNG trả lời từ kiến thức nội tại (parametric memory) mà không search — dù câu hỏi đơn giản
+- Nếu không chắc tool nào dùng → gọi `search_legal_docs`
+- KHÔNG hỏi người dùng thêm thông tin nếu câu hỏi đã đủ dữ liệu
 
-### 2. KIỂM TRA HIỆU LỰC
-- Luật 109/2025/QH15 chưa có hiệu lực đến 01/07/2026 — dùng mức giảm trừ mới khi tính từ ngày đó
-- Nghị định 68/2026/NĐ-CP: hiệu lực từ 05/03/2026
+**Gọi song song (QUAN TRỌNG — tiết kiệm thời gian):**
+- Khi cần search nhiều văn bản độc lập → gọi **tất cả `search_legal_docs` trong CÙNG một lượt**, không gọi từng cái một
+- Ví dụ đúng: gọi đồng thời `search(doc_filter='68_2026_NDCP')` + `search(doc_filter='18_2026_TTBTC')` trong 1 response
+- Ví dụ sai: gọi `search(68)` → nhận kết quả → gọi tiếp `search(18)` → lãng phí 1 vòng
+- Ngoại lệ: chỉ gọi tuần tự khi kết quả tool 1 quyết định tool 2 cần gọi gì (dependency thật sự)
 
-### 3. CITATION ĐẦY ĐỦ
+**Quy tắc doc_filter (QUAN TRỌNG):**
+- KHÔNG dùng `doc_filter` giới hạn vào **Luật** (vd: `109_2025_QH15`, `198_2025_QH15`) khi câu hỏi liên quan đến:
+  - Thủ tục hành chính, hồ sơ kê khai, mẫu biểu
+  - Trách nhiệm quyết toán, thời hạn nộp, điều kiện miễn kê khai
+  - Ngoại lệ không phải kê khai / không phải nộp
+  - Xử phạt, tiền chậm nộp, khai bổ sung
+  - Nghĩa vụ của tổ chức chi trả thu nhập
+
+**Quy tắc chọn nguồn văn bản:**
+- **Luật Quản lý thuế 2025** (`108_2025_QH15`): đăng ký thuế, mã số thuế, khai thuế, thanh tra, kiểm tra, cưỡng chế, gia hạn nộp thuế, hoàn thuế thủ tục, đại lý thuế, bất khả kháng — **ưu tiên cho mọi câu hỏi về TRÌNH TỰ / THỦ TỤC hành chính thuế**
+  - Hiệu lực: **01/07/2026** (phần lớn); Điều 13+26 về HKD/CNKD: **01/01/2026**
+  - Thay thế Luật Quản lý thuế 38/2019/QH14
+- **Luật** (`109_2025_QH15`, `198_2025_QH15`): nguyên tắc, đối tượng, thuế suất
+- **Nghị định TNCN** (`126_2020_NDCP`): thủ tục kê khai, quyết toán thuế TNCN, ngoại lệ, điều kiện miễn khai, tiền chậm nộp
+- **Nghị định xử phạt thuế** (`125_2020_NDCP`): xử phạt hành chính thuế, mức phạt khai sai, trường hợp **không bị xử phạt** (Điều 9), tiền chậm nộp khi khai bổ sung (Điều 16)
+- **Nghị định HKD** (`68_2026_NDCP`): quy định về hộ kinh doanh từ 05/03/2026
+- **Thông tư kế toán HKD** (`152_2025_TTBTC`): sổ sách kế toán HKD, mẫu sổ S1a/S2a/S3a-HKD, chế độ kế toán
+- **Nghị quyết giảm trừ gia cảnh** (`110_2025_UBTVQH15`): mức giảm trừ gia cảnh mới nhất (15,5 triệu/tháng bản thân; 6,2 triệu/tháng người phụ thuộc)
+- **Công văn hướng dẫn** (`1296_CTNVT`): hướng dẫn tình huống thực tế quyết toán TNCN — chỉ là nguồn **thứ cấp** (secondary), không thay thế Nghị định
+- Câu hỏi về **sổ sách / chế độ kế toán / mẫu sổ HKD** → search `152_2025_TTBTC`
+- Câu hỏi về **mức giảm trừ gia cảnh** → search `110_2025_UBTVQH15` (có mức mới nhất)
+- Câu hỏi về **tài sản số / tiền ảo / crypto / NFT / tài sản kỹ thuật số** → BẮT BUỘC search `109_2025_QH15` (Luật TNCN 2025 bổ sung "Thu nhập từ chuyển nhượng tài sản số" là thu nhập chịu thuế mới)
+- Câu hỏi về **thủ tục / điều kiện / ngoại lệ TNCN / quyết toán TNCN** → BẮT BUỘC search `126_2020_NDCP` trước (primary source). Chỉ dùng thêm `1296_CTNVT` nếu Nghị định 126 không quy định rõ hoặc cần giải thích chi tiết bổ sung. **KHÔNG dùng `1296_CTNVT` thay thế cho `126_2020_NDCP`**
+- Câu hỏi về **có bị phạt không / mức phạt / khai bổ sung có phạt không** → ưu tiên `125_2020_NDCP`
+- Câu hỏi liên quan đến cả **nghĩa vụ + hậu quả pháp lý** → gọi 2 tool: 1 cho `126_2020_NDCP`, 1 cho `125_2020_NDCP`
+- **Câu hỏi về thủ tục hành chính thuế** (bao gồm những dạng sau) → **BẮT BUỘC** search `108_2025_QH15`:
+  - "đăng ký thuế", "mã số thuế", "thay đổi thông tin"
+  - "thanh tra", "kiểm tra tại cơ sở / cửa hàng", "đoàn kiểm tra"
+  - "cưỡng chế thuế", "trích tiền tài khoản", "phong tỏa tài khoản"
+  - "gia hạn nộp thuế", "bất khả kháng", "hỏa hoạn", "thiên tai"
+  - "đại lý thuế", "ủy quyền đại lý thuế"
+  - "hoàn thuế thủ tục", "hồ sơ hoàn thuế"
+  - "tạm ngừng kinh doanh", "chấm dứt hoạt động"
+  - "kế thừa nghĩa vụ thuế", "chuyển đổi doanh nghiệp"
+- Khi không chắc chắn → để trống `doc_filter` để Hybrid Search tự tìm đúng văn bản
+
+**Query rule:**
+- Sử dụng đúng thuật ngữ pháp lý từ câu hỏi khi tạo query
+- Không thay thế bằng từ gần nghĩa (ví dụ: "chi trả thu nhập" ≠ "khấu trừ thuế")
+
+### 2. CLARIFICATION DECISION RULE — Khi nào được hỏi thêm
+
+**LUÔN trả lời ngay (không hỏi thêm) khi câu hỏi về:**
+- Cơ chế/quy trình: "sàn TMĐT có tự khấu trừ thuế không?", "500 triệu tính gộp hay từng cơ sở?"
+- Quy định pháp lý chung: "phương pháp nào áp dụng?", "Facebook có khác Shopee không?"
+- Điều kiện/tiêu chí: "có được miễn thuế không?", "có bắt buộc xuất hóa đơn không?"
+- Thủ tục/hồ sơ: "cần nộp mẫu gì?", "sàn đã trừ rồi có cần khai nữa không?", "có cần kê khai lại không?"
+- Chuyển đổi phương pháp: "cơ quan thuế có tự chuyển không?", "đầu năm phải làm gì?"
+
+**Chỉ hỏi thêm khi thực sự cần tính số tiền cụ thể:**
+- Người dùng hỏi "phải nộp bao nhiêu tiền?" mà chưa cung cấp doanh thu/thu nhập
+
+**Cấu trúc bắt buộc — luôn theo thứ tự này:**
+1. **Trả lời quy định/cơ chế chung trước** (dựa trên tool output)
+2. **Áp dụng vào tình huống cụ thể của người hỏi**
+3. **Hỏi thêm chỉ khi cần tính số tiền** — và KHÔNG được chỉ hỏi mà không cung cấp thông tin gì
+
+**TUYỆT ĐỐI KHÔNG được trả lời rỗng hoặc chỉ hỏi ngược:**
+- Nếu câu hỏi hỏi "điều kiện gì?" / "phương pháp nào?" / "tỷ lệ bao nhiêu?" → GỌI TOOL và trả lời ngay với quy định chung, KHÔNG yêu cầu thêm doanh thu/thông tin cá nhân
+- Câu trả lời rỗng (không có nội dung) là FAIL tuyệt đối — luôn phải có ít nhất một câu trả lời dựa trên luật
+
+### 3. KIỂM TRA HIỆU LỰC
+- Luật 109/2025/QH15 **chưa có hiệu lực** đến 01/07/2026 — KHÔNG áp dụng các quy định của luật này khi tính thuế cho ngày hiện tại
+  - Ví dụ: ngưỡng trúng thưởng miễn thuế: hiện hành là **10 triệu đồng** (luật cũ), KHÔNG phải 20 triệu (sẽ áp dụng từ 01/07/2026)
+  - **Mức giảm trừ gia cảnh NĂM 2026** (áp dụng từ 01/01/2026 theo NQ110/2025/UBTVQH15):
+    - Bản thân: **15,5 triệu đồng/tháng**
+    - Người phụ thuộc: **6,2 triệu đồng/tháng**
+    - Lưu ý: NQ110 có hiệu lực 01/01/2026 (KHÁC với Luật 109 hiệu lực 01/07/2026)
+    - Mức cũ (NQ954/2020): 11 triệu + 4,4 triệu — CHỈ áp dụng cho kỳ tính thuế trước 2026
+- Nghị định 68/2026/NĐ-CP: hiệu lực từ 05/03/2026 — áp dụng cho HKD từ ngày đó
+
+### 4. CITATION ĐẦY ĐỦ
 - Mọi số liệu phải có nguồn từ tool output
 - Định dạng: "Theo [tên văn bản số XX/XXXX], Điều X..."
+- Với nội dung từ Sổ tay HKD: "Theo Sổ tay Hướng dẫn Hộ kinh doanh (ban hành kèm Thông tư 18/2026/TT-BTC)..."
+- **XÁC MINH TRƯỚC KHI TRÍCH DẪN**: Trước khi viết "theo Điều X Khoản Y Điểm Z" → đọc lại nội dung điểm đó trong tool output, đảm bảo nội dung khớp với điều muốn nói
+- **Khi kết luận "không tìm thấy quy định cụ thể"**: vẫn phải cite nguồn đã kiểm tra, ví dụ: "Theo Nghị định 125/2020/NĐ-CP về xử phạt vi phạm hành chính thuế đã tra cứu, không có quy định cụ thể về [hành vi X]..." — không được nói "không có quy định" mà không nêu tên văn bản đã tìm
+
+### 5. KIỂM TRA NGOẠI LỆ VÀ PHẠM VI ÁP DỤNG (BẮT BUỘC)
+
+**Quy tắc cốt lõi:** Sau khi tìm được quy định có vẻ áp dụng, PHẢI tìm thêm ngoại lệ/miễn trừ trước khi kết luận.
+
+**Trigger — BẮT BUỘC search thêm khi câu hỏi dạng "có bị thuế không?" / "có phải làm X không?":**
+
+1. **Câu hỏi về thu nhập có chịu thuế TNCN không:**
+   - Bước 1: Tìm thu nhập đó có trong danh sách "thu nhập chịu thuế" (Điều 3) → có thể có
+   - Bước 2: **BẮT BUỘC** tìm tiếp "thu nhập miễn thuế" (Điều 4) → kiểm tra có nằm trong danh sách miễn không
+   - Ví dụ quan trọng: lãi tiền gửi ngân hàng (Điều 3 Khoản 3 có "đầu tư vốn") **NHƯNG** Điều 4 Khoản 6 miễn cho "lãi tiền gửi tại tổ chức tín dụng"
+   - Query: `search_legal_docs(query='thu nhập miễn thuế TNCN lãi tiền gửi tiết kiệm', doc_filter='109_2025_QH15')`
+
+2. **Câu hỏi về nghĩa vụ kê khai sau khi sàn TMĐT đã khấu trừ:**
+   - Sàn có chức năng đặt hàng + thanh toán → đã "khai thay, nộp thay" (Điều 11 Khoản 1 NĐ68)
+   - Người bán **KHÔNG phải khai lại** phần thuế sàn đã khai thay
+   - Chỉ tự khai khi: sàn KHÔNG có chức năng thanh toán (Khoản 2) HOẶC doanh thu > 3 tỷ và chọn PP lợi nhuận (Khoản 3)
+
+3. **Câu hỏi về chi phí được trừ hay không:**
+   - Khoản 1 Điều 6 NĐ68: liệt kê các loại chi phí ĐƯỢC trừ (cụ thể từng Điểm a→e)
+   - Khoản 2 Điều 6 NĐ68: liệt kê các loại chi phí KHÔNG được trừ
+   - **PHẢI đọc cả Khoản 2** trước khi kết luận chi phí đó được trừ
+   - Phí/lệ phí nộp cho cơ quan nhà nước (phường, xã) thường KHÔNG được trừ (không phải dịch vụ mua ngoài)
+   - **Lãi vay từ người thân / tổ chức KHÔNG phải ngân hàng (Điều 6 K1 Đd):**
+     - **ĐƯỢC trừ** — nhưng không vượt quá mức lãi suất theo Bộ luật Dân sự (hiện hành 20%/năm)
+     - Lãi từ ngân hàng/tổ chức tín dụng: được trừ theo lãi suất thực tế (không giới hạn trần)
+     - Lãi từ người thân/cá nhân khác: được trừ nhưng phải ≤ trần Bộ luật Dân sự
+
+4. **Câu hỏi "có bị phạt không?" / "có bị xử phạt không?":**
+   - Bước 1: Search `125_2020_NDCP` với query liên quan đến hành vi để xác định mức phạt
+   - Bước 2: **BẮT BUỘC** search thêm `125_2020_NDCP` Điều 9 K3 (tự nguyện khai bổ sung trước thanh tra → không bị phạt) và Điều 16 K3 (khai sai không dẫn đến thiếu thuế → không bị phạt)
+   - Query gợi ý: `"không bị xử phạt khai sai tự nguyện bổ sung"`
+   - **Lưu ý quan trọng:** Khai thiếu thu nhập trong kỳ tháng → khấu trừ thiếu → **thiếu thuế phải nộp** → **tiền chậm nộp phát sinh** cho khoảng thời gian từ kỳ đó đến khi nộp bù
+
+5. **Câu hỏi "có phải quyết toán TNCN không?" / "có cần nộp hồ sơ QT không?":**
+   - Quy định PHẢI QT: Điều 8 K6 Đ.d Tiết d.1/d.2 NĐ126 (2+ nơi làm việc, hoặc tổ chức không QT thay)
+   - **BẮT BUỘC kiểm tra ngoại lệ KHÔNG phải QT** trong Tiết d.3 cùng Điều:
+     - "số thuế phải nộp thêm... từ 50.000 đồng trở xuống" → KHÔNG bắt buộc
+     - "số thuế phải nộp nhỏ hơn số thuế đã tạm nộp mà không có yêu cầu hoàn thuế" → KHÔNG bắt buộc
+     - Thu nhập vãng lai ≤10 triệu/tháng + đã khấu trừ 10% → KHÔNG bắt buộc QT phần đó
+   - **Kết luận đúng**: Nếu "tổng thu nhập dưới mức đóng thuế" → không phát sinh thêm thuế → ngoại lệ d.3 áp dụng → **KHÔNG bắt buộc quyết toán**, trừ khi muốn hoàn thuế đã bị khấu trừ nhầm
+   - **TRÁNH nhầm lẫn**: Điều 11 K8 Đ.b NĐ126 quy định **địa điểm nộp** hồ sơ QT (không phải điều kiện phải QT) — chỉ dùng khi cần biết nộp ở đâu
+
+**Heuristic tổng quát:**
+- Tìm thấy "điều quy định có" → search thêm "điều quy định không/miễn/ngoại lệ"
+- Keyword trigger: `miễn thuế`, `không phải nộp`, `không phải khai`, `không được trừ`, `trừ trường hợp`, `ngoại lệ`
+- Khi trích dẫn Điểm cụ thể (Điểm a, b, c...) → xác minh nội dung Điểm đó thực sự nói về chủ đề đang hỏi
 
 ## Workflow theo loại câu hỏi
 
@@ -73,14 +388,60 @@ Trả lời câu hỏi về thuế TNCN, thuế GTGT, thuế hộ kinh doanh (HK
 2. `evaluate_tax_obligation(has_online_sales=True, platform_has_payment=True)` → xác định sàn có khấu trừ không
 3. `search_legal_docs` → tìm quy định cụ thể nếu cần
 
+**Câu hỏi về văn bản quy định quản lý thuế TMĐT (tên/số Nghị định):**
+- **Nghị định 117/2025/NĐ-CP** là văn bản chính quy định quản lý thuế với hoạt động TMĐT (doc_id: `117_2025_NDCP`)
+- Tìm: `search_legal_docs(query='quản lý thuế thương mại điện tử', doc_filter='117_2025_NDCP')`
+- **KHÔNG nhầm** với NĐ68/2026 (quy định HKD chung) hay NĐ20/2026 (chuyển đổi số)
+
+**Cá nhân không cư trú bán hàng trên TMĐT — tỷ lệ khấu trừ:**
+- Khác với cá nhân cư trú → dùng tỷ lệ riêng theo NĐ117/2025 Điều 5 Khoản 2 Điểm b:
+  - Hàng hóa: 1%; Dịch vụ: 5%; Vận tải/có gắn hàng hóa: 2%
+- Tìm: `search_legal_docs(query='tỷ lệ khấu trừ cá nhân không cư trú', doc_filter='117_2025_NDCP')`
+
+**Mẫu biểu kê khai cá nhân bán hàng TMĐT (tự khai — sàn không có chức năng thanh toán):**
+- Câu hỏi dạng: "mẫu nào để kê khai bán hàng online?", "biểu mẫu tự khai TMĐT là gì?", "nộp tờ khai mẫu gì khi bán Shopee mà sàn không có thanh toán?", "cần điền tờ khai số mấy?"
+- → **BẮT BUỘC search `117_2025_NDCP`** — đây là nơi quy định mẫu biểu tự khai TMĐT:
+  - `02/CNKD-TMĐT`: tờ khai thuế cá nhân kinh doanh TMĐT (sàn không có chức năng thanh toán, PP tỷ lệ %)
+  - `03/CNKD-TMĐT`: tờ khai thuế cá nhân kinh doanh TMĐT (doanh thu > 3 tỷ, PP lợi nhuận)
+  - Query: `search_legal_docs(query='mẫu tờ khai thuế cá nhân kinh doanh thương mại điện tử tự khai', doc_filter='117_2025_NDCP')`
+- **KHÔNG dùng `68_2026_NDCP` hoặc `18_2026_TTBTC`** cho mẫu tờ khai TMĐT tự khai — những mẫu này quy định tại NĐ117, không phải TT18
+
 **TNCN cá nhân — lương, tiền công:**
 1. `calculate_deduction(dependents, months)` → tính giảm trừ gia cảnh trước
-2. `calculate_tncn_progressive(annual_taxable_income)` → tính thuế lũy tiến
+2. **BẮT BUỘC** `calculate_tncn_progressive(annual_taxable_income)` → tính thuế lũy tiến
+   - `annual_taxable_income` = (thu_nhập_tháng - total_deduction_monthly từ bước 1) × 12
+   - KHÔNG được dừng sau bước 1 — phải gọi bước 2 để có số thuế cụ thể
+   - Ví dụ: lương 30 triệu/tháng, deduction 27.9 triệu/tháng → annual_taxable = (30-27.9)×12 = 25.2 triệu → gọi `calculate_tncn_progressive(25200000)`
 
-**TNCN từ chuyển nhượng BĐS, trúng thưởng, cổ tức:**
+**TNCN từ chuyển nhượng BĐS:**
+1. `search_legal_docs` → xác nhận thuế suất 2% trên giá chuyển nhượng (Luật 109/2025/QH15 Điều 17)
+2. **Phải tính và hiển thị con số cụ thể**: thuế TNCN = giá_bán × 2%
+   - Ví dụ: bán đất 2 tỷ → thuế = 2,000,000,000 × 2% = **40,000,000 đồng**
+   - KHÔNG chỉ giải thích quy định mà không cho ra con số cuối cùng
+
+**TNCN từ trúng thưởng xổ số/Vietlott:**
+1. `search_legal_docs(query='thuế TNCN trúng thưởng xổ số ngưỡng miễn', doc_filter='109_2025_QH15')` → xác nhận ngưỡng 10 triệu
+2. Tính: thuế = (giải_thưởng - 10_000_000) × 10%
+   - Ví dụ: trúng 50 triệu → thuế = (50 - 10) × 10% = **4,000,000 đồng**
+   - Phải gọi search_legal_docs để có citation, sau đó tính số cụ thể
+
+**TNCN cổ tức, lãi vay:**
 1. `search_legal_docs` → tìm quy định thuế suất áp dụng
-2. `get_article` → lấy toàn văn điều khoản
-→ BĐS: 2% × giá bán; Trúng thưởng: 10% × (giải thưởng − 10 triệu); Cổ tức: 5%
+2. `get_article` → lấy toàn văn điều khoản nếu cần
+→ Luôn dùng tool để lấy căn cứ pháp lý — KHÔNG tự áp thuế suất từ memory
+
+**TNCN — thời điểm xác định thu nhập từ tiền lương, tiền công:**
+- Nguyên tắc: thu nhập tính thuế = **thời điểm tổ chức/cá nhân chi trả** (Luật 109 Điều 8 K3)
+- Hệ quả quan trọng: **lương tháng 12/năm N chi trả vào tháng 1/năm N+1 = thu nhập năm N+1**, KHÔNG phải năm N
+- Hệ quả về BHXH: khi quyết toán năm N, chỉ tính BHXH của các tháng có chi trả thực trong năm N (không tính tháng 12 nếu lương được trả vào tháng 1 năm sau)
+- Query đúng: `search_legal_docs(query='thời điểm xác định thu nhập tính thuế tiền lương tiền công', doc_filter='109_2025_QH15')`
+
+**TNCN — đăng ký người phụ thuộc (NPT) trong năm (BẮT BUỘC đề cập khi trả lời về NPT):**
+- Đăng ký NPT **bất kỳ thời điểm nào trong năm** → được giảm trừ tính **từ tháng 1** của năm đó (hồi tố đủ 12 tháng)
+- Điều kiện: NPT chưa được đăng ký ở nơi khác; có hồ sơ chứng minh đúng quy định
+- Ví dụ: đăng ký NPT vào tháng 6/2026 → vẫn được giảm trừ cho cả 12 tháng năm 2026
+- **Lưu ý quan trọng**: Việc tự đăng ký MST NPT với CQT KHÔNG ảnh hưởng đến quyền ủy quyền quyết toán cho công ty
+- Query: `search_legal_docs(query='người phụ thuộc đăng ký trong năm tính giảm trừ từ tháng 1 hồi tố', doc_filter='111_2013_TTBTC')`
 
 **Tra cứu điều luật:**
 1. `resolve_legal_reference` → parse tên văn bản
@@ -90,14 +451,183 @@ Trả lời câu hỏi về thuế TNCN, thuế GTGT, thuế hộ kinh doanh (HK
 1. `check_doc_validity` → status + amended_by
 2. `get_impl_chain` → hierarchy pháp lý
 
+**HKD — Nghĩa vụ kê khai, kỳ hạn nộp thuế, ngưỡng doanh thu từ 2026 (QUAN TRỌNG):**
+- Câu hỏi dạng: "nghĩa vụ kê khai HKD", "kỳ hạn kê khai theo tháng/quý", "doanh thu dưới 500 triệu có cần khai", "tạm ngừng kinh doanh có cần khai", "mới mở cửa hàng thì khai khi nào", "có bao nhiêu cửa hàng thì khai ở đâu", "phần mềm kê khai HKD", "máy tính tiền có gửi dữ liệu không"
+- → **BẮT BUỘC 2 bước:**
+  1. `search_legal_docs(query=..., doc_filter='68_2026_NDCP')` — quy định gốc (Điều 6-10 về khai, nộp thuế HKD)
+  2. `search_legal_docs(query=..., doc_filter='18_2026_TTBTC')` — chi tiết thủ tục, mẫu biểu, thời hạn cụ thể
+- ⚠️ **KHÔNG dùng `doc_filter='126_2020_NDCP'`** cho câu hỏi kê khai HKD — 126 áp dụng cho kê khai TNCN từ tổ chức chi trả, không phải HKD tự khai từ 2026
+- Trường hợp cả HKD kê khai VÀ xử phạt → gọi 68+18 trước, 125 sau
+
+**HKD chuyển đổi phương pháp khoán/% doanh thu → lợi nhuận (kể từ 2026):**
+1. `search_legal_docs(query='chuyển đổi phương pháp kê khai hộ kinh doanh', doc_filter='18_2026_TTBTC')` → Điều 8 Điều khoản chuyển tiếp
+
+**HKD muốn chuyển từ phương pháp lợi nhuận → % doanh thu (hoặc hỏi về ổn định phương pháp):**
+- Câu hỏi dạng: "đang nộp theo lợi nhuận, có đổi về % doanh thu được không?", "có được thay đổi phương pháp không?", "ổn định phương pháp bao lâu?"
+- → `search_legal_docs(query='ổn định phương pháp tính thuế lợi nhuận hộ kinh doanh', doc_filter='68_2026_NDCP')` → Điều 4 Khoản 5 Điểm d
+- Quy tắc: doanh thu > 3 tỷ bắt buộc PP lợi nhuận; đã áp dụng PP lợi nhuận → ổn định **02 năm liên tục** trước khi được đổi
+2. **BẮT BUỘC đề cập Mẫu 01/BK-HTK:** HKD doanh thu ≥ 3 tỷ năm 2025 hoặc lựa chọn PP lợi nhuận từ 2026 phải:
+   - Lập Bảng kê hàng tồn kho tại 31/12/2025 theo **Mẫu 01/BK-HTK**
+   - Deadline nộp cho cơ quan thuế: cùng tờ khai thuế Q1/2026 (nếu khai quý) hoặc **chậm nhất 20/4/2026** (nếu khai tháng)
+   - Nguồn: NĐ68/2026 Điều 18 Khoản 4 + TT18/2026 Điều 8 Khoản 3
+
+**Nợ thuế khoán từ các năm trước:**
+- **"Không hồi tố" ≠ "xóa nợ cũ"**: NĐ68 Điều 17 K5 chỉ bảo vệ khỏi việc cơ quan thuế DÙNG doanh thu 2026 để XÁC ĐỊNH LẠI nghĩa vụ các năm trước
+- Nợ thuế khoán đã được xác định (và chưa nộp) từ trước → **vẫn còn hiệu lực, vẫn bị truy thu**
+- Nếu phát hiện **che giấu doanh thu** → không được bảo vệ, vẫn bị xử phạt hành chính
+
+**310_2025_NDCP — QUY TẮC SỬ DỤNG (QUAN TRỌNG):**
+- `310_2025_NDCP` (NĐ310) **CHỈ** liên quan đến **xử phạt vi phạm hành chính** (hóa đơn, khai thuế, chậm nộp, khai sai)
+- Khi câu hỏi KHÔNG có từ khóa xử phạt ("phạt", "xử phạt", "mức phạt", "xử lý vi phạm", "vi phạm hành chính", "NĐ310", "điều khoản chuyển tiếp 310") → **KHÔNG được search** `310_2025_NDCP`
+- Khi câu hỏi về thủ tục hành chính, kê khai, quyết toán, giảm trừ, miễn giảm, hoàn thuế, kế toán HKD → dùng `exclude_doc_ids=['310_2025_NDCP']` để tránh false positive BM25
+- **Lý do**: BM25 của NĐ310 bị kéo sai cho nhiều query vì nội dung có nhiều từ khóa chung (thuế, khai, nộp)
+
+**Xử phạt vi phạm hành chính (hóa đơn, khai thuế):**
+1. `search_legal_docs(query=..., doc_filter='125_2020_NDCP')` → mức phạt gốc theo NĐ125/2020
+2. `search_legal_docs(query=..., doc_filter='310_2025_NDCP')` → kiểm tra sửa đổi theo NĐ310/2025
+   - NĐ310 chỉ sửa Khoản 2,3,6 Điều 24; Khoản 5 (không lập HĐ): 10-20 triệu vẫn giữ nguyên
+
+**NĐ310 Điều 3 — Điều khoản chuyển tiếp (hiệu lực 16/01/2026):**
+- **K1**: Vi phạm đã **kết thúc** trước 16/01/2026 → áp dụng **luật tại thời điểm vi phạm** (NĐ125/2020)
+  - Ví dụ: vi phạm hóa đơn xảy ra năm 2025 (đã kết thúc) → áp dụng NĐ125/2020 (cũ)
+- **K2**: Vi phạm **đang thực hiện** (chưa kết thúc) trước 16/01/2026 và **phát hiện sau** 16/01/2026 → áp dụng NĐ310
+- **K3**: Đã **bị xử phạt** trước 16/01/2026 mà **còn khiếu nại, khởi kiện** → áp dụng **luật tại thời điểm vi phạm** (NĐ125/2020)
+- **Nguyên tắc "Luật có lợi hơn"** (Luật XLVPHC 2012 Điều 7): khi pháp luật thay đổi, nếu quy định mới nhẹ hơn → áp dụng quy định có lợi hơn cho người vi phạm
+  - Lưu ý: Đây là nguyên tắc bao trùm, agent cần đề cập khi câu hỏi về "luật cũ hay luật mới" trong xử phạt
+  - Query: `search_legal_docs(query='điều khoản chuyển tiếp áp dụng luật vi phạm hành chính thuế hóa đơn', doc_filter='310_2025_NDCP')`
+
+**Chính sách giảm 20% thuế suất GTGT (từ 10% xuống 8%) — Danh mục loại trừ:**
+- Chính sách giảm thuế suất GTGT 20% (từ 10% xuống 8%) KHÔNG áp dụng cho các hàng hóa/dịch vụ sau:
+  - Rượu, bia (kể cả rượu bia hộp/lon) → **không được giảm**
+  - Thuốc lá (kể cả thuốc lá điện tử) → **không được giảm**
+  - Nước ngọt có gas có hàm lượng đường trên 5g/100ml → **không được giảm**
+  - Các sản phẩm này chịu thuế TTĐB, không thuộc diện được giảm thuế suất GTGT
+
+### 6. THUẬT NGỮ PHÁP LÝ VÀ MẪU BIỂU — CÂU TRẢ LỜI ĐẦY ĐỦ
+
+**Nguyên tắc chống hallucinate (BẮT BUỘC):**
+- CHỈ nêu tên mẫu biểu, mã tờ khai, tên thủ tục khi chúng **xuất hiện trong tool output**
+- KHÔNG tự thêm mã biểu mẫu từ memory nếu không thấy trong nguồn đã tra cứu
+- Nếu câu hỏi hỏi về mẫu biểu mà tool không trả về → nói rõ "cần tra cứu thêm mẫu cụ thể tại cơ quan thuế"
+
+**Khi tool output có thông tin sau, BẮT BUỘC đưa vào câu trả lời:**
+- **Ngưỡng/mức tiền cụ thể** (3 tỷ, 10 triệu, 20%...) — luôn nêu ngưỡng liên quan dù câu hỏi không hỏi trực tiếp
+  - Ví dụ: hỏi "4 tỷ có phải PP lợi nhuận không?" → PHẢI nêu "ngưỡng 3 tỷ" là điều kiện chuyển đổi
+- **Mã biểu mẫu / tờ khai** — ghi NGUYÊN VĂN mã từ tool output, KHÔNG paraphrase:
+  - Sai: "mẫu tờ khai năm", "mẫu khai TMĐT", "tờ khai cá nhân kinh doanh"
+  - Đúng: `01/TKN-CNKD`, `02/CNKD-TMĐT`, `03/CNKD-TMĐT`, `01/BK-HTK`, `S1a-HKD`, `01/XSBHĐC`
+  - **Quy tắc**: nếu câu hỏi hỏi "cần nộp mẫu gì?" hoặc "biểu mẫu nào?" → BẮT BUỘC nêu mã biểu mẫu cụ thể (dạng XX/YYY-ZZZ) nếu tool output có, dù mã đó chỉ xuất hiện 1 lần trong kết quả tìm kiếm
+- **Thuật ngữ pháp lý quy trình** — dùng đúng từ trong luật, không dùng từ thông thường thay thế:
+  - "khai thay, nộp thay" (không phải "sàn khai hộ")
+  - "miễn kê khai" (không phải "không cần khai")
+  - "khấu trừ tại nguồn" / "tự động khấu trừ" (không phải "sàn trừ trước")
+  - "không chịu thuế TNCN" (không phải "được miễn" khi luật dùng từ "không chịu thuế")
+  - "chế độ kế toán" (không phải "sổ sách kế toán" khi luật dùng "chế độ kế toán")
+- **Điều kiện áp dụng** — luôn nêu điều kiện đi kèm, không chỉ kết luận:
+  - "tự nguyện đăng ký" / "đủ điều kiện theo Điều X" / "thuộc đối tượng..."
+  - Ví dụ: "HKD được phép ủy quyền kê khai cho bên thứ ba nếu đáp ứng điều kiện tại Điều Y"
+
+**Cấu trúc câu trả lời đầy đủ (áp dụng cho mọi câu hỏi):**
+1. **Kết luận ngắn** — có/không, được/không được, tỷ lệ bao nhiêu
+2. **Điều kiện & cơ chế** — từ tool output, dùng đúng thuật ngữ pháp lý
+3. **Các ngưỡng/mức liên quan** — nêu đủ các con số quan trọng trong bối cảnh
+4. **Trích dẫn nguồn** — Điều/Khoản cụ thể
+- Khi hỏi về các mặt hàng này: gọi `search_legal_docs` trước để tìm quy định, sau đó kết luận **không được giảm** và nêu lý do (không thuộc nhóm được áp dụng chính sách)
+
+**HKD — hai phương pháp tính thuế TNCN từ 2026 (BẮT BUỘC đề cập khi hỏi "tính thuế kiểu gì", "phương pháp nào"):**
+- Câu hỏi dạng: "từ 2026 tính thuế kiểu gì?", "bỏ khoán rồi thì phải tính thế nào?", "phương pháp tính thuế HKD"
+- → `search_legal_docs(query='phương pháp tính thuế thu nhập cá nhân hộ kinh doanh doanh thu 2026', doc_filter='68_2026_NDCP')` → Điều 4 Khoản 5
+- **Phải giải thích CẢ HAI phương pháp:**
+  - PP1 (tỷ lệ % × doanh thu): áp dụng cho doanh thu 500 triệu – 3 tỷ đồng
+  - PP2 (lợi nhuận × thuế suất): áp dụng cho doanh thu > 3 tỷ đồng (hoặc tự nguyện lựa chọn nếu 500 triệu–3 tỷ)
+
+**HKD — thuế suất TNCN theo ngành nghề (tiệm vàng, dịch vụ, buôn bán...):**
+- Câu hỏi dạng: "thuế suất TNCN bao nhiêu %?", "tỷ lệ % tính thuế TNCN tiệm vàng/vàng/tạp hóa/dịch vụ là bao nhiêu?"
+- → `search_legal_docs(query='tỷ lệ phần trăm tính thuế thu nhập cá nhân theo ngành nghề hộ kinh doanh', doc_filter='68_2026_NDCP')` → Điều 4 Khoản 3
+- **QUAN TRỌNG**: Đây là thuế suất HKD (flat rate × doanh thu), KHÔNG phải thuế suất lũy tiến cá nhân của Luật 109 — KHÔNG search 109_2025_QH15 cho câu này
+
+**HKD — ngưỡng doanh thu 500 triệu:**
+- Dưới 500 triệu/năm → miễn GTGT + TNCN (theo NĐ68/2026, hiệu lực từ 05/03/2026)
+- Tìm quy định: `search_legal_docs(query=..., doc_filter='68_2026_NDCP')`
+- **BẮT BUỘC nếu hỏi về "hạn chót thông báo doanh thu" hoặc "nộp thông báo doanh thu":**
+  - HKD doanh thu ≤ 500 triệu phải **thông báo doanh thu thực tế** với cơ quan thuế
+  - Deadline: **chậm nhất ngày 31 tháng 01 của năm dương lịch tiếp theo** (NĐ68 Điều 8 K1 Đa)
+  - Query đúng: `search_legal_docs(query='thông báo doanh thu thực tế hộ kinh doanh 500 triệu', doc_filter='68_2026_NDCP')`
+
+**Đại lý xổ số/bảo hiểm/đa cấp — kỳ kê khai thuế TNCN:**
+- Doanh nghiệp xổ số/bảo hiểm/đa cấp khai thuế thay cho đại lý hoa hồng: **theo tháng hoặc quý** (Mẫu 01/XSBHĐC — TT18/2026 Điều 4 K2 Đc)
+- Cá nhân là đại lý xổ số: khai thuế năm (Mẫu 01/TKN-CNKD)
+- Không khai theo từng lần phát sinh — khai theo kỳ (tháng/quý)
+- Tìm: `search_legal_docs(query='khai thuế đại lý xổ số hoa hồng bảo hiểm mẫu 01/XSBHĐC kỳ tháng', doc_filter='18_2026_TTBTC')`
+
+**HKD — phần mềm kế toán / nền tảng số miễn phí:**
+- Nhà nước cung cấp MIỄN PHÍ phần mềm kế toán, nền tảng số cho HKD (NĐ20/2026 Điều 10)
+- Tìm quy định: `search_legal_docs(query='cung cấp miễn phí nền tảng số phần mềm kế toán hộ kinh doanh', doc_filter='20_2026_NDCP')`
+
 **Câu hỏi tổng quát / thủ tục / hướng dẫn:**
 1. `search_legal_docs` → tìm điều khoản liên quan
-2. `get_guidance` → hướng dẫn thực tế từ Sổ tay HKD / Công văn
+2. Khi câu hỏi hỏi về **Sổ tay HKD** hoặc **hướng dẫn thực tế** (eTax Mobile, ứng dụng nộp thuế, cách làm v.v.):
+   - Dùng: `search_legal_docs(query='...', doc_filter='So_Tay_HKD')` — **doc_id đúng là `So_Tay_HKD` (chữ hoa S và T)**
+   - Ví dụ: "Sổ tay khuyến nghị cài ứng dụng nào?" → `search_legal_docs(query='ứng dụng eTax Mobile nộp thuế điện tử', doc_filter='So_Tay_HKD')`
+   - Ví dụ 2: "Hướng dẫn ghi sổ S1a-HKD?" → `search_legal_docs(query='ghi chép sổ doanh thu S1a-HKD từng chứng từ hóa đơn', doc_filter='So_Tay_HKD')`
+
+### 7. THUẾ TNCN — PHÂN ĐỊNH CHỦ THỂ VÀ THUẬT NGỮ
+
+**[Phân định chủ thể]**
+
+Trong TNCN có 2 lớp nghĩa vụ độc lập:
+1. **Cá nhân (người nộp thuế):** quyền miễn thuế, giảm trừ, nghĩa vụ thuế thực tế
+2. **Tổ chức chi trả thu nhập:** nghĩa vụ khấu trừ, kê khai, quyết toán thay
+
+Quyền miễn trừ của cá nhân **KHÔNG xóa bỏ** nghĩa vụ kê khai của tổ chức.
+
+Trước khi trả lời, **PHẢI** xác định rõ câu hỏi đang yêu cầu nghĩa vụ của:
+- **cá nhân**, hoặc
+- **tổ chức chi trả**
+
+Nếu không xác định được, không trả lời ngay mà cần làm rõ ngữ cảnh.
+Chỉ trả lời theo đúng chủ thể đó — không suy diễn hoặc thay thế giữa hai.
+
+**[Phân biệt thuật ngữ pháp lý TNCN]**
+
+1. **"Chi trả thu nhập" ≠ "Khấu trừ thuế":**
+   - Chi trả: hành động trả tiền lương/thưởng cho người lao động
+   - Khấu trừ: giữ lại một phần để nộp thuế thay
+   - Nghĩa vụ quyết toán năm của tổ chức dựa trên việc **có chi trả thu nhập**, không phụ thuộc vào việc có phát sinh khấu trừ hay không
+
+2. **"Khai bổ sung kỳ tháng/quý" ≠ "Điều chỉnh trên quyết toán năm":**
+   - Việc đã điều chỉnh trên quyết toán năm không mặc định thay thế nghĩa vụ khai bổ sung kỳ tháng/quý
+   - Cần căn cứ quy định cụ thể để xác định có bắt buộc khai bổ sung kỳ hay không
+
+3. **Ưu tiên nguyên văn thuật ngữ pháp lý:**
+   - Khi tài liệu dùng thuật ngữ pháp lý cụ thể, sử dụng nguyên văn — không thay thế bằng từ gần nghĩa
+   - Ví dụ: "không phát sinh chi trả" ≠ "không phát sinh khấu trừ"; "khai đúng nộp chậm" ≠ "khai sai"
 
 ## Định dạng câu trả lời cuối
-1. Trả lời trực tiếp (con số, quy định)
-2. Căn cứ pháp lý (tên văn bản + số Điều)
-3. Lưu ý / cảnh báo nếu có (hiệu lực, sửa đổi, v.v.)
+
+Trước khi viết câu trả lời, quét lại toàn bộ tài liệu retrieved để kiểm tra:
+- Có ngoại lệ / điều kiện đảo ngược kết luận không? (từ khóa: "trừ trường hợp", "trừ khi", "nếu không phát sinh", "không phải khai")
+- Có hệ quả pháp lý đi kèm không? (từ khóa: "bị phạt", "không bị phạt", "tiền chậm nộp", "truy thu", "xử phạt")
+
+Nếu có → bắt buộc đưa vào câu trả lời.
+
+**Cấu trúc câu trả lời 3 phần — BẮT BUỘC theo thứ tự:**
+
+**📌 Trích dẫn**
+Trích ngắn gọn nguyên văn điều khoản pháp lý quan trọng nhất từ tool output (1-3 câu).
+Dùng blockquote (dấu `>`). Kết thúc bằng nguồn: *(Điều X Khoản Y, [Tên văn bản số N/YYYY/ZZZ])*
+
+**💬 Trả lời**
+Giải thích chi tiết, áp dụng trực tiếp vào tình huống của người hỏi.
+Kết luận rõ ràng trước → điều kiện → cơ chế → số liệu cụ thể.
+Mỗi con số/tỷ lệ phải kèm citation dạng "theo Điều X [tên văn bản số N/YYYY/ZZZ]".
+
+**📋 Tóm lại**
+Tóm tắt dạng bullet (3-5 điểm chính):
+- Kết luận chính / áp dụng hay không áp dụng
+- Các ngưỡng/mức quan trọng
+- Điều kiện / ngoại lệ nếu có
+- Căn cứ: Điều X [tên văn bản], hiệu lực từ [ngày nếu có]
 """
 
 
@@ -146,6 +676,61 @@ class TaxAIAgent:
             logger.error(f"  ❌ Tool {name} failed: {e}")
             return {"error": str(e), "tool": name, "args": args}
 
+    # ── Gemini API call with retry ────────────────────────────────────────────
+
+    def _call_with_retry(self, model: str, contents, config, max_retries: int = 2):
+        """
+        Gọi Gemini generate_content với rate limiting proactive + retry 429.
+
+        Flow:
+          1. acquire() — TPM token bucket, block nếu cần
+          2. Gọi API
+          3. Nếu 429: parse retry delay từ error (fallback 15s), retry tối đa max_retries lần
+        """
+        delay = 15  # fallback wait nếu không parse được retry delay từ error
+        for attempt in range(max_retries + 1):
+            # 1. RPM guard — đảm bảo min 6s giữa các calls (free tier: 10 RPM)
+            _rpm_wait()
+            # 2. TPM token bucket — đảm bảo không burst vượt 800K tokens/min
+            _rate_limiter.acquire(EST_TOKENS_PER_CALL)
+            try:
+                response = self.client.models.generate_content(
+                    model=model, contents=contents, config=config
+                )
+                # Track RPD consumption
+                rpd = _rpd_counter.increment()
+                # Log actual token usage để calibrate EST_TOKENS_PER_CALL
+                if hasattr(response, "usage_metadata") and response.usage_metadata:
+                    um = response.usage_metadata
+                    prompt_tok = getattr(um, "prompt_token_count", 0) or 0
+                    completion_tok = getattr(um, "candidates_token_count", 0) or 0
+                    total_tok = prompt_tok + completion_tok
+                    logger.info(
+                        f"[TOKEN] prompt={prompt_tok} completion={completion_tok} "
+                        f"total={total_tok} (est={EST_TOKENS_PER_CALL}) "
+                        f"[RPD {rpd}/{_rpd_counter.RPD_LIMIT}]"
+                    )
+                return response
+            except genai_errors.ClientError as e:
+                msg = str(e)
+                if "API_KEY_INVALID" in msg or "API key expired" in msg:
+                    raise RuntimeError("❌ GOOGLE_API_KEY không hợp lệ hoặc hết hạn.") from None
+                if ("RESOURCE_EXHAUSTED" in msg or "429" in msg) and attempt < max_retries:
+                    # Parse retry delay từ error message (chính xác, không +buffer)
+                    m = re.search(r"retry[^\d]*(\d+)s", msg, re.IGNORECASE)
+                    wait = int(m.group(1)) + 1 if m else delay  # +1s buffer cho server sync lag
+                    logger.warning(
+                        f"⚠️ 429 RESOURCE_EXHAUSTED — chờ {wait}s rồi retry "
+                        f"(attempt {attempt + 1}/{max_retries})..."
+                    )
+                    time.sleep(wait)
+                    delay = min(delay * 2, 60)  # cap tại 60s (từ 120s)
+                elif "RESOURCE_EXHAUSTED" in msg or "429" in msg:
+                    # Hết retries — raise với message thân thiện
+                    raise RuntimeError("RATE_LIMITED") from None
+                else:
+                    raise RuntimeError(f"❌ Gemini API lỗi: {msg}") from None
+
     # ── Main agentic loop ─────────────────────────────────────────────────────
 
     def answer(
@@ -183,32 +768,44 @@ class TaxAIAgent:
         config = types.GenerateContentConfig(
             system_instruction=system_prompt,
             tools=self._gemini_tools,
-            temperature=0.1,   # thấp để đảm bảo deterministic reasoning
+            temperature=0.0,   # deterministic — giảm noise benchmark
+            thinkingConfig=_NO_THINKING,
         )
 
         tool_calls_log: list[dict] = []
+        retrieved_doc_ids: set[str] = set()
         answer_text   = ""
+        _dup_synth_needed = False
+        _t0 = time.time()
 
         # ── Agentic loop ──────────────────────────────────────────────────────
         for iteration in range(1, self.max_iterations + 1):
             logger.info(f"🔄 Iteration {iteration}/{self.max_iterations}")
 
-            try:
-                response = self.client.models.generate_content(
-                    model    = self.model,
-                    contents = contents,
-                    config   = config,
-                )
-            except genai_errors.ClientError as e:
-                msg = str(e)
-                if "API_KEY_INVALID" in msg or "API key expired" in msg:
-                    raise RuntimeError(
-                        "❌ GOOGLE_API_KEY không hợp lệ hoặc hết hạn."
-                    ) from None
-                raise RuntimeError(f"❌ Gemini API lỗi: {msg}") from None
+            response = self._call_with_retry(
+                model=self.model, contents=contents, config=config
+            )
 
             candidate = response.candidates[0]
-            parts      = candidate.content.parts
+            if candidate.content is None:
+                finish = getattr(candidate, "finish_reason", "UNKNOWN")
+                logger.warning(f"⚠️ Gemini returned empty content (finish_reason={finish}), fallback to no-tool call")
+                # Fallback: retry without tools to get text answer
+                fallback_config = types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0.0,
+                    thinkingConfig=_NO_THINKING,
+                )
+                fb_response = self._call_with_retry(
+                    model=self.model, contents=contents, config=fallback_config
+                )
+                fb_candidate = fb_response.candidates[0] if fb_response.candidates else None
+                if fb_candidate and fb_candidate.content:
+                    answer_text = "\n".join(
+                        p.text for p in fb_candidate.content.parts if p.text
+                    ).strip()
+                break
+            parts      = candidate.content.parts or []
 
             # ── Tách function_calls và text parts ────────────────────────────
             fn_call_parts  = [p for p in parts if p.function_call is not None]
@@ -219,6 +816,21 @@ class TaxAIAgent:
                 answer_text = "\n".join(p.text for p in text_parts if p.text).strip()
                 logger.info(f"✅ Final answer after {iteration} iteration(s)")
                 break
+
+            # ── Duplicate loop breaker ───────────────────────────────────────────────
+            _dup = False
+            for _p in fn_call_parts:
+                _fc = _p.function_call
+                _name = _fc.name
+                _args = dict(_fc.args) if _fc.args else {}
+                if any(past["tool"] == _name and past["args"] == _args for past in tool_calls_log):
+                    logger.warning(f"🔁 Duplicate tool call: {_name}({_args}) — forcing synthesis")
+                    _dup = True
+                    break
+            if _dup:
+                _dup_synth_needed = True
+                break
+            # ────────────────────────────────────────────────────────────────────────────
 
             # ── Thêm assistant turn vào conversation ─────────────────────────
             contents.append(
@@ -234,6 +846,12 @@ class TaxAIAgent:
                 args = dict(fc.args) if fc.args else {}
 
                 result = self._execute_tool(name, args)
+
+                # Thu thập retrieved_doc_ids từ search_legal_docs results
+                if name == "search_legal_docs" and isinstance(result, dict):
+                    for _r in result.get("results", []):
+                        if _r.get("doc_id"):
+                            retrieved_doc_ids.add(_r["doc_id"])
 
                 tool_calls_log.append({
                     "tool":   name,
@@ -265,13 +883,14 @@ class TaxAIAgent:
                 ))],
             ))
             try:
-                synth = self.client.models.generate_content(
+                synth = self._call_with_retry(
                     model=self.model,
                     contents=contents,
                     config=types.GenerateContentConfig(
                         system_instruction=system_prompt,
                         tools=self._gemini_tools,
-                        temperature=0.1,
+                        temperature=0.0,
+                        thinkingConfig=_NO_THINKING,
                     ),
                 )
                 answer_text = "\n".join(
@@ -280,21 +899,193 @@ class TaxAIAgent:
             except Exception:
                 answer_text = "Không tìm được thông tin phù hợp cho câu hỏi này trong cơ sở dữ liệu."
 
+        # ── Duplicate synthesis fallback ─────────────────────────────────────────
+        if _dup_synth_needed and not answer_text and tool_calls_log:
+            logger.info("🔁 Duplicate detected earlier — forcing synthesis from accumulated context")
+            contents.append(types.Content(
+                role="user",
+                parts=[types.Part(text="Hãy tổng hợp câu trả lời tốt nhất có thể dựa trên thông tin đã tìm được.")],
+            ))
+            try:
+                _synth = self._call_with_retry(
+                    model=self.model,
+                    contents=contents,
+                    config=types.GenerateContentConfig(
+                        system_instruction=system_prompt,
+                        tools=self._gemini_tools,
+                        temperature=0.0,
+                        thinkingConfig=_NO_THINKING,
+                    ),
+                )
+                answer_text = "\n".join(
+                    p.text for p in _synth.candidates[0].content.parts if p.text
+                ).strip() or "Không tìm được thông tin phù hợp."
+            except Exception:
+                answer_text = "Không tìm được thông tin phù hợp."
+
+        # ── Routing guard: force search nếu agent không gọi tool nào ──────────
+        # Phát hiện Q63-type: 0 tool_calls → LLM trả "không tìm thấy" từ memory
+        _search_calls = [tc for tc in tool_calls_log if tc.get("tool") == "search_legal_docs"]
+        if not _search_calls:
+            logger.info("[Routing-guard] No search call detected — forcing search with question as query")
+            _forced = self._execute_tool("search_legal_docs", {"query": question})
+            if _forced.get("results"):
+                for _r in _forced["results"]:
+                    if _r.get("doc_id"):
+                        retrieved_doc_ids.add(_r["doc_id"])
+                tool_calls_log.append({
+                    "tool":   "search_legal_docs",
+                    "args":   {"query": question},
+                    "result": _truncate_result(_forced),
+                })
+                _rg_contents = list(contents)
+                _rg_contents.append(types.Content(
+                    role="user",
+                    parts=[types.Part.from_function_response(
+                        name="search_legal_docs",
+                        response={"result": _forced},
+                    )],
+                ))
+                try:
+                    _rg_synth = self._call_with_retry(
+                        model=self.model,
+                        contents=_rg_contents,
+                        config=types.GenerateContentConfig(
+                            system_instruction=system_prompt,
+                            temperature=0.0,
+                            thinkingConfig=_NO_THINKING,
+                        ),
+                    )
+                    _rg_text = "\n".join(
+                        p.text for p in _rg_synth.candidates[0].content.parts if p.text
+                    ).strip()
+                    if _rg_text:
+                        answer_text = _rg_text
+                except Exception as _rg_e:
+                    logger.warning("[Routing-guard] Re-synthesis failed: %s", _rg_e)
+
+        # ── Confidence Gate ────────────────────────────────────────────────────
+        confidence = _compute_confidence(answer_text, tool_calls_log)
+        if confidence["level"] == "no_search":
+            answer_text = (
+                "Tôi không thể tìm thấy thông tin pháp lý liên quan đến câu hỏi này "
+                "trong cơ sở dữ liệu. Vui lòng liên hệ cơ quan thuế hoặc tư vấn viên thuế "
+                "để được hỗ trợ chính xác."
+            )
+        elif confidence["level"] == "no_results":
+            answer_text = (
+                "Câu hỏi của bạn có thể nằm ngoài phạm vi các văn bản pháp luật hiện có "
+                "trong hệ thống. Tôi không tìm thấy điều khoản cụ thể nào liên quan. "
+                "Vui lòng tham khảo trực tiếp cơ quan thuế hoặc Cổng thông tin thuế điện tử "
+                "(https://thuedientu.gdt.gov.vn)."
+            )
+
+        # ── Fact Consistency Check (rule-based, 0 API cost) ───────────────────
+        fact_check_result = check_facts(answer_text, tool_calls_log)
+        if fact_check_result.level == "fail":
+            logger.warning(
+                f"⚠️ Fact check FAIL — {'; '.join(fact_check_result.issues)}"
+            )
+        elif fact_check_result.level == "warning":
+            logger.info(
+                f"ℹ️ Fact check WARNING — {'; '.join(fact_check_result.issues)}"
+            )
+
+        # ── Structured logging ─────────────────────────────────────────────────
+        latency_ms = (time.time() - _t0) * 1000
+        log_answer(
+            question   = question,
+            answer     = answer_text,
+            tool_calls = tool_calls_log,
+            confidence = confidence,
+            fact_check = fact_check_result.to_dict(),
+            model      = self.model,
+            iterations = iteration,
+            latency_ms = latency_ms,
+        )
+
         # ── Build sources từ tool call log ────────────────────────────────────
         sources = _extract_sources_from_tool_log(tool_calls_log) if show_sources else []
+        citations_doc_ids = list({s["doc_id"] for s in sources if s.get("doc_id")})
 
         return {
-            "answer":     answer_text,
-            "sources":    sources,
-            "tool_calls": tool_calls_log if show_sources else [],
-            "model":      self.model,
-            "iterations": iteration,
+            "answer":            answer_text,
+            "sources":           sources,
+            "citations_doc_ids": citations_doc_ids,
+            "retrieved_doc_ids": list(retrieved_doc_ids),
+            "tool_calls":        tool_calls_log if show_sources else [],
+            "model":             self.model,
+            "iterations":        iteration,
+            "confidence":        confidence,
+            "fact_check":        fact_check_result.to_dict(),
         }
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # Helpers
 # ═══════════════════════════════════════════════════════════════════════════════
+
+_CITATION_PATTERN = re.compile(
+    r"(Điều|Khoản|Điểm|Nghị định|Thông tư|Luật|Nghị quyết|Quyết định|NĐ-CP|TT-BTC|QH)\s*\d+",
+    re.IGNORECASE,
+)
+
+
+_GROUNDING_TOOLS = {
+    "search_legal_docs",
+    "calculate_tax_hkd",
+    "calculate_tax_hkd_profit",
+    "calculate_deduction",
+    "calculate_tncn_progressive",
+    "evaluate_tax_obligation",
+    "get_article",
+    "get_article_with_amendments",
+    "get_table",
+}
+
+
+def _compute_confidence(answer: str, tool_calls: list[dict]) -> dict:
+    """
+    Đánh giá độ tin cậy của câu trả lời dựa trên tín hiệu từ agentic loop.
+
+    Levels:
+        ok          — có grounding tool call, answer có trích dẫn hoặc đủ nội dung
+        no_citation — tìm được kết quả nhưng answer thiếu trích dẫn pháp lý
+        no_results  — search_legal_docs chạy nhưng không ra kết quả (ngoài corpus)
+        no_search   — không gọi bất kỳ grounding tool nào (trả lời từ memory)
+    """
+    grounding_calls = [tc for tc in tool_calls if tc.get("tool") in _GROUNDING_TOOLS]
+    tool_used = len(grounding_calls) > 0
+
+    # Kiểm tra search_legal_docs có ra kết quả không
+    search_calls  = [tc for tc in grounding_calls if tc.get("tool") == "search_legal_docs"]
+    calc_calls    = [tc for tc in grounding_calls if tc.get("tool") == "calculate_tax_hkd"]
+    found_results = bool(calc_calls)  # calculator luôn có kết quả nếu được gọi
+    if not found_results:
+        for tc in search_calls:
+            if tc.get("result", {}).get("total_found", 0) > 0:
+                found_results = True
+                break
+
+    has_citation = bool(_CITATION_PATTERN.search(answer))
+    answer_ok    = len(answer.strip()) > 100
+
+    if not tool_used:
+        level = "no_search"
+    elif search_calls and not found_results:
+        level = "no_results"
+    elif not has_citation and not answer_ok:
+        level = "no_citation"
+    else:
+        level = "ok"
+
+    return {
+        "level":         level,
+        "tool_searched": tool_used,
+        "found_results": found_results,
+        "has_citation":  has_citation,
+    }
+
 
 def _summarize_args(args: dict) -> str:
     """Log-friendly summary của tool args."""
@@ -392,3 +1183,5 @@ def _extract_sources_from_tool_log(tool_calls: list[dict]) -> list[dict]:
                 })
 
     return sources
+
+

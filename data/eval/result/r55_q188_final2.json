@@ -1,0 +1,407 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.25,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-04T14:04:42.007537"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.5,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thủ tục hành chính": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.25
+      }
+    },
+    "by_difficulty": {
+      "hard": {
+        "count": 1,
+        "avg_score": 0.25
+      }
+    },
+    "latency_ms": {
+      "min": 31598,
+      "max": 31598,
+      "avg": 31598,
+      "p50": 31598,
+      "p95": 31598
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 188,
+        "question": "Cơ quan đăng ký kinh doanh cấp xã có trách nhiệm gửi thông tin hộ kinh doanh mới",
+        "score": 0.25,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PARTIAL — overlap 1/2, precision=0.50, penalty=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thủ tục hành chính'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 188,
+      "question": "Cơ quan đăng ký kinh doanh cấp xã có trách nhiệm gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế trong thời gian bao nhiêu ngày làm việc?",
+      "topic": "Thủ tục hành chính",
+      "difficulty": "hard",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Theo quy định tại **Nghị định 68/2026/NĐ-CP** và **Luật Quản lý thuế 2025**, cơ quan đăng ký kinh doanh cấp xã (Ủy ban nhân dân cấp xã) có trách nhiệm phối hợp chặt chẽ với cơ quan thuế trong việc quản lý thông tin hộ kinh doanh.\n\n📌 **Trích dẫn**\n> \"Cơ quan cấp các loại giấy chứng nhận, giấy phép có nhiệm vụ cung cấp thông tin về nội dung... giấy chứng nhận đăng ký hộ kinh doanh... cho cơ quan quản lý thuế thông qua phương thức điện tử.\" *(Khoản 8 Điều 39, Luật Quản lý thuế số 108/2025/QH15)*\n>\n> \"Ủy ban nhân dân cấp xã có trách nhiệm: Phối hợp với cơ quan thuế để rà soát, thu thập và cập nhật danh sách hộ kinh doanh, cá nhân kinh doanh đang hoạt động trên địa bàn; phát hiện và thông báo kịp thời cho cơ quan thuế các trường hợp: bắt đầu kinh doanh, tạm ngừng, chấm dứt hoạt động...\" *(Điểm a Khoản 2 Điều 15, Nghị định 68/2026/NĐ-CP)*\n\n💬 **Trả lời**\nTheo các quy định mới nhất áp dụng cho năm 2026, việc trao đổi thông tin giữa cơ quan đăng ký kinh doanh và cơ quan thuế được thực hiện như sau:\n\n1.  **Thời hạn thông báo:** Cơ quan đăng ký kinh doanh cấp xã phải thông báo **kịp thời** cho cơ quan thuế khi có hộ kinh doanh mới thành lập (bắt đầu kinh doanh) trên địa bàn. Mặc dù Nghị định 68/2026/NĐ-CP dùng thuật ngữ \"kịp thời\", nhưng theo quy trình liên thông và đồng bộ dữ liệu hiện nay, thông tin này thường được truyền qua hệ thống điện tử ngay sau khi giấy chứng nhận đăng ký hộ kinh doanh được cấp.\n2.  **Phương thức thực hiện:** Việc cung cấp thông tin bắt buộc phải thực hiện qua **phương thức điện tử** theo quy định tại Luật Quản lý thuế 2025 để đảm bảo tính tức thời và chính xác của mã số thuế được cấp kèm theo giấy đăng ký kinh doanh.\n3.  **Trách nhiệm phối hợp:** Ngoài việc gửi thông tin ban đầu, UBND cấp xã còn phải phối hợp rà soát định kỳ để phát hiện các trường hợp kinh doanh không đăng ký hoặc thay đổi địa điểm để thông báo cho cơ quan thuế quản lý.\n\n📋 **Tóm lại**\n*   **Thời hạn:** Thông báo **kịp thời** (thực hiện ngay qua hệ thống điện tử liên thông).\n*   **Nội dung cung cấp:** Thông tin đăng ký thành lập, thay đổi, tạm ngừng hoặc chấm dứt hoạt động của hộ kinh doanh.\n*   **Căn cứ pháp lý:** Điều 39 Luật Quản lý thuế 2025 và Điều 15 Nghị định 68/2026/NĐ-CP.\n*   **Hiệu lực:** Quy định về trách nhiệm của UBND cấp xã tại Nghị định 68 có hiệu lực từ ngày **05/03/2026**.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "cơ quan đăng ký kinh doanh cấp xã gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế thời gian bao nhiêu ngày làm việc",
+            "doc_filter": "68_2026_NDCP"
+          },
+          "result": {
+            "query": "cơ quan đăng ký kinh doanh cấp xã gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế thời gian bao nhiêu ngày làm việc",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_đ_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm đ",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K4 | Đ.đ]\nĐịa điểm khai thuế, nộp thuế\nThông báo địa điểm kinh doanh Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định. Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính.",
+                "score": 0.016237,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_c_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K5 | Đ.c]\nSử dụng hóa đơn điện tử\nHộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh tại Điều 9 Nghị định này hoặc hộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trước chưa đến 01 tỷ đồng nhưng trong năm tính thuế có doanh thu tính thuế giá trị gia tăng từ 01 tỷ đồng trở lên thì phải áp dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Hộ kinh doanh, cá nhân kinh doanh đăng ký sử dụng hóa đơn điện tử trong thời gian 30 ngày kể từ ngày cuối cùng của kỳ tính thuế có doanh thu tính thuế giá trị gia tăng lũy kế từ 01 tỷ đồng trở lên.",
+                "score": 0.015657,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_15_khoan_2_diem_a_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm a",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ15 (Trách nhiệm của Ủy ban nhân dâ) | K2 | Đ.a]\nTrách nhiệm của Ủy ban nhân dân cấp xã\nPhối hợp với cơ quan thuế để rà soát, thu thập và cập nhật danh sách hộ kinh doanh, cá nhân kinh doanh đang hoạt động trên địa bàn; phát hiện và thông báo kịp thời cho cơ quan thuế các trường hợp: bắt đầu kinh doanh, tạm ngừng, chấm dứt hoạt động, thay đổi ngành nghề, địa điểm kinh doanh trên địa bàn, kinh doanh không đăng ký, kinh doanh trái phép, ngoài địa điểm được cấp phép;",
+                "score": 0.015638,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_15_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ15 (Trách nhiệm của Ủy ban nhân dân các cấp) | K2]\nTrách nhiệm của Ủy ban nhân dân cấp xã\na) Phối hợp với cơ quan thuế để rà soát, thu thập và cập nhật danh sách hộ kinh doanh, cá nhân kinh doanh đang hoạt động trên địa bàn; phát hiện và thông báo kịp thời cho cơ quan thuế các trường hợp: bắt đầu kinh doanh, tạm ngừng, chấm dứt hoạt động, thay đổi ngành nghề, địa điểm kinh doanh trên địa bàn, kinh doanh không đăng ký, kinh doanh trái phép, ngoài địa điểm được cấp phép;\nb) Phối hợp với cơ quan thuế trong việc tổ chức tuyên truyền, phổ biến chính sách pháp luật về thuế đến người dân, hộ kinh doanh và cá nhân kinh doanh. Hỗ trợ công tác tuyên truyền lưu động, niêm yết thông tin, hướng dẫn người nộp thuế thực hiện kê khai, nộp thuế đúng quy định. Phản ánh các khó khăn, vướng mắc của người dân liên quan đến chính sách thuế đến cơ quan thuế để cùng phối hợp giải quyết;\n[... còn 5 điểm nữa]",
+                "score": 0.015018,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_6_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thuế và sử dụ) | K6]\nTạm ngừng, chấm dứt hoạt động kinh doanh\na) Hộ kinh doanh thuộc đối tượng phải đăng ký kinh doanh theo quy định của pháp luật về đăng ký doanh nghiệp thì thực hiện thủ tục tạm ngừng hoạt động kinh doanh theo quy định tại Nghị định số 168/2025/NĐ-CP ngày 30 tháng 6 năm 2025 của Chính phủ về đăng ký doanh nghiệp;\nb) Trường hợp không phải đăng ký kinh doanh theo quy định của pháp luật về đăng ký doanh nghiệp nhưng đã đăng ký thuế với cơ quan thuế thì người nộp thuế gửi thông báo đến cơ quan quản lý thuế quản lý trực tiếp để cập nhật tình trạng “tạm ngừng kinh doanh” theo quy định của Bộ Tài chính;\nc) Trong thời gian tạm ngừng hoạt động, hộ kinh doanh, cá nhân kinh doanh không phải nộp hồ sơ khai thuế, trừ trường hợp tạm ngừng không trọn tháng nếu khai thuế theo tháng hoặc tạm ngừng không trọn quý nếu khai thuế theo quý;\n[... còn 1 điểm nữa]",
+                "score": 0.01491,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_9_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ9 (Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhậ)]",
+                "score": 0.01096,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "cơ quan đăng ký kinh doanh cấp xã gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế thời gian bao nhiêu ngày làm việc",
+            "doc_filter": "108_2025_QH15"
+          },
+          "result": {
+            "query": "cơ quan đăng ký kinh doanh cấp xã gửi thông tin hộ kinh doanh mới thành lập sang cơ quan thuế thời gian bao nhiêu ngày làm việc",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VI_dieu_39_khoan_8_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ39 (Nhiệm vụ, trách nhiệm và quyền) | K8 | Đ.a]\nCác cơ quan nhà nước có trách nhiệm cung cấp thông tin người nộp thuế cho cơ quan quản lý thuế thông qua phương thức điện tử:\nCơ quan cấp các loại giấy chứng nhận, giấy phép có nhiệm vụ cung cấp thông tin về nội dung giấy chứng nhận đăng ký đầu tư, giấy chứng nhận đăng ký doanh ng hiệp, giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký tổ hợp tác, giấy chứng nhận đăng ký hộ kinh doanh, thông tin về chủ sở hữu, giấy phép hành nghề, giấy phép thành lập và hoạt động, giấy chứng nhận thay đổi nội dung đăng ký kinh doanh của tổ chức, cá nhân và cung cấp thông tin khác theo yêu cầu của cơ quan quản lý thuế;",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VI_dieu_39_khoan_8_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8",
+                "snippet": "[VB: 108/2025/QH15 | Đ39 (Nhiệm vụ, trách nhiệm và quyền hạn của c) | K8]\nCác cơ quan nhà nước có trách nhiệm cung cấp thông tin người nộp thuế cho cơ quan quản lý thuế thông qua phương thức điện tử:\na) Cơ quan cấp các loại giấy chứng nhận, giấy phép có nhiệm vụ cung cấp thông tin về nội dung giấy chứng nhận đăng ký đầu tư, giấy chứng nhận đăng ký doanh ng hiệp, giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký tổ hợp tác, giấy chứng nhận đăng ký hộ kinh doanh, thông tin về chủ sở hữu, giấy phép hành nghề, giấy phép thành lập và hoạt động, giấy chứng nhận thay đổi nội dung đăng ký kinh doanh của tổ chức, cá nhân và cung cấp thông tin khác theo yêu cầu của cơ quan quản lý thuế;\nb) Kho bạc Nhà nước cung cấp thông tin về số tiền thuế, khoản thu khác, tiền chậm nộp, tiền phạt đã nộp, đã hoàn của người nộp thuế;\nc) Cơ quan quản lý nhà nước về nhà, đất cung cấp thông tin về hiện trạng sử dụng đất, sở hữu nhà của tổ chức, hộ gia đình, hộ kinh doanh, cá nhân kinh doanh;\n[... còn 4 điểm nữa]",
+                "score": 0.015856,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_2_dieu_49_khoan_1_diem_h_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 2 > Điều 49: Biện pháp cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 1 > Điểm h",
+                "snippet": "[VB: 108/2025/QH15 | Đ49 (Biện pháp cưỡng chế thi hành q) | K1 | Đ.h]\nCác biện pháp cưỡng chế thi hành quyết định hành chính về quản lý thuế bao gồm:\nThu hồi giấy chứng nhận đăng ký kinh doanh, giấy chứng nhận đăng ký doanh ng hiệp, giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký tổ hợp tác, giấy chứng nhận đăng ký hộ kinh doanh, giấy phép thành lập và hoạt động, giấy phép hành nghề, giấy chứng nhận đăng ký hoạt động chi nhánh, văn phòng đại diện, giấy chứng nhận đăng ký địa điểm kinh doanh, đăng ký hoặc giấy phép hoạt động kinh doanh nền tảng thương mại điện tử.",
+                "score": 0.015768,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 2 > Điều 49: Biện pháp cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 1 > Điểm h"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_20_khoan_1_diem_đ_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 108/2025/QH15 | Đ20 (Khoanh tiền thuế nợ) | K1 | Đ.đ]\nCác trường hợp được khoanh tiền thuế nợ:\nNgười nộp thuế đã bị cơ quan có thẩm quyền thu hồi giấy chứng nhận đăng ký kinh doanh, giấy chứng nhận đăng ký doanh ng hiệp, giấy chứng nhận đăng ký hợp tác xã, giấy chứng nhận đăng ký tổ hợp tác, giấy chứng nhận đăng ký hộ kinh doanh, giấy phép thành lập và hoạt động, giấy phép hành nghề, giấy chứng nhận đăng ký hoạt động chi nhánh, văn phòng đại diện, giấy chứng nhận đăng ký địa điểm kinh doanh, đăng ký hoặc giấy phép hoạt động kinh doanh nền tảng thương mại điện tử;",
+                "score": 0.015726,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VI_dieu_40_khoan_5_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 40: Nhiệm vụ, trách nhiệm và quyền hạn của tổ chức, cá nhân khác trong quản lý thuế > Khoản 5",
+                "snippet": "[VB: 108/2025/QH15 | Đ40 (Nhiệm vụ, trách nhiệm và quyền hạn của t) | K5]\nĐại lý thuế, hộ kinh doanh, cá nhân kinh doanh dịch vụ làm thủ tục về thuế:\na) Đại lý thuế là doanh ng hiệp được thành lập và hoạt động theo quy định của pháp luật, có ít nhất 02 người có đủ tiêu chuẩn kinh doanh dịch vụ tư vấn thuế, làm việc toàn thời gian tại doanh ng hiệp, thực hiện các dịch vụ làm thủ tục về thuế theo thỏa thuận với người nộp thuế;\nb) Hộ kinh doanh, cá nhân kinh doanh dịch vụ làm thủ tục về thuế là cá nhân có đủ tiêu chuẩn kinh doanh dịch vụ tư vấn thuế và hoạt động theo quy định của pháp luật, thực hiện các dịch vụ làm thủ tục về thuế theo thỏa thuận với người nộp thuế;\n[... còn 2 điểm nữa]",
+                "score": 0.01437,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 40: Nhiệm vụ, trách nhiệm và quyền hạn của tổ chức, cá nhân khác trong quản lý thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_5_dieu_21_khoan_1_diem_c_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 21: Xoá tiền thuế nợ > Khoản 1 > Điểm c",
+                "snippet": "[VB: 108/2025/QH15 | Đ21 (Xoá tiền thuế nợ) | K1 | Đ.c]\nCác trường hợp được xóa tiền thuế nợ:\nNgười nộp thuế không thuộc trường hợp quy định tại điểm a và điểm b khoản này mà cơ quan quản lý thuế đã áp dụng biện pháp cưỡng chế quy định tại điểm h khoản 1 Điều 49 của Luật này và khoản tiền thuế nợ này đã quá 10 năm kể từ ngày hết thời hạn nộp nhưng không có khả năng thu hồi;",
+                "score": 0.010249,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 21: Xoá tiền thuế nợ > Khoản 1 > Điểm c"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 31598,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.5,
+        "reason": "PARTIAL — overlap 1/2, precision=0.50, penalty=1.00",
+        "details": {
+          "matched": [
+            "68_2026_NDCP"
+          ],
+          "missing": [
+            "126_2020_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thủ tục hành chính'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['01 ngày làm việc']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "01 ngày làm việc"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 6",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 39: Nhiệm vụ, trách nhiệm và quyền hạn của các cơ quan nhà nước, các cơ quan kiểm tra, giám sát, Mặt trận Tổ quốc Việt Nam, các tổ chức chính trị xã hội - nghề ng hiệp, tổ chức xã hội, tổ chức xã hội - nghề ng hiệp trong quản lý thuế > Khoản 8",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 2 > Điều 49: Biện pháp cưỡng chế thi hành quyết định hành chính về quản lý thuế > Khoản 1 > Điểm h",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 20: Khoanh tiền thuế nợ > Khoản 1 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VI > Điều 40: Nhiệm vụ, trách nhiệm và quyền hạn của tổ chức, cá nhân khác trong quản lý thuế > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 5 > Điều 21: Xoá tiền thuế nợ > Khoản 1 > Điểm c",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "108_2025_QH15",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

@@ -46,11 +46,18 @@ def extract_text_and_tables_from_docx(
 
     # ── Text extraction ───────────────────────────────────────────────────
     # doc.paragraphs chỉ trả về paragraph trong body, không bao gồm cell trong bảng
+    # Regex: "Điều N " without period (e.g. "Điều 29 Title") → normalize to "Điều 29. Title"
+    _RE_DIEU_NO_PERIOD = re.compile(r'^(Điều\s+\d+[a-zA-Z]*)\s+([^\s])', re.UNICODE)
+
     lines = []
     for para in doc.paragraphs:
         text = para.text.strip()
-        if text:
-            lines.append(text)
+        if not text:
+            continue
+        # Normalize heading paragraphs that are missing the period after article number
+        if 'heading' in para.style.name.lower():
+            text = _RE_DIEU_NO_PERIOD.sub(r'\1. \2', text)
+        lines.append(text)
 
     full_text = "\n".join(lines)
 

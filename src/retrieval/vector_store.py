@@ -108,6 +108,47 @@ class VectorStore:
 
         return hits
 
+    def get_by_ids(self, chunk_ids: List[str]) -> List[Dict[str, Any]]:
+        """Fetch chunks by chunk_id list (for reference expansion)."""
+        if not chunk_ids:
+            return []
+        try:
+            results = self.collection.get(
+                ids     = chunk_ids,
+                include = ["documents", "metadatas"],
+            )
+        except Exception:
+            return []
+
+        hits = []
+        for i, cid in enumerate(results.get("ids", [])):
+            hits.append({
+                "chunk_id": cid,
+                "text":     results["documents"][i],
+                "metadata": results["metadatas"][i],
+            })
+        return hits
+
+    def get_by_doc_id(self, doc_id: str, limit: int = 20) -> List[Dict[str, Any]]:
+        """Fetch chunks belonging to a specific document (for amendment expansion)."""
+        try:
+            results = self.collection.get(
+                where   = {"doc_id": doc_id},
+                limit   = limit,
+                include = ["documents", "metadatas"],
+            )
+        except Exception:
+            return []
+
+        hits = []
+        for i, cid in enumerate(results.get("ids", [])):
+            hits.append({
+                "chunk_id": cid,
+                "text":     results["documents"][i],
+                "metadata": results["metadatas"][i],
+            })
+        return hits
+
     def count(self) -> int:
         return self.collection.count()
 

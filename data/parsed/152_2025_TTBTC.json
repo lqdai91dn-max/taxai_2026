@@ -4,7 +4,7 @@
     "document_type": "Thông tư",
     "document_number": "152/2025/TT-BTC",
     "title": "Hướng dẫn kế toán cho các hộ kinh doanh, cá nhân kinh doanh",
-    "issue_date": "2025-12-31",
+    "issue_date": "2024-11-29",
     "effective_date": "2026-01-01"
   },
   "data": [
@@ -12,7 +12,7 @@
       "node_id": "doc_152_2025_TTBTC_chuong_I",
       "node_type": "Chương",
       "node_index": "I",
-      "title": "",
+      "title": "QUY ĐỊNH CHUNG",
       "content": "",
       "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương I",
       "references": [],
@@ -110,14 +110,13 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "QUY ĐỊNH CHUNG"
+      ]
     },
     {
       "node_id": "doc_152_2025_TTBTC_chuong_II",
       "node_type": "Chương",
       "node_index": "II",
-      "title": "",
+      "title": "QUY ĐỊNH CỤ THỂ",
       "content": "",
       "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II",
       "references": [],
@@ -126,7 +125,7 @@
           "node_id": "doc_152_2025_TTBTC_chuong_II_muc_1",
           "node_type": "Mục",
           "node_index": "1",
-          "title": "",
+          "title": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG KHÔNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, KHÔNG PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN",
           "content": "",
           "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1",
           "references": [],
@@ -145,33 +144,23 @@
                   "node_type": "Khoản",
                   "node_index": "1",
                   "title": null,
-                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể",
+                  "content": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:\n\nPhương pháp ghi sổ S1a-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không.\nb) Phương pháp ghi sổ\n- Cột A: Ghi ngày, tháng ghi sổ.\n- Cột B: Ghi diễn giải doanh thu từ việc bán hàng hóa, dịch vụ. Hộ kinh doanh, cá nhân kinh doanh có thể ghi theo từng nghiệp vụ phát sinh hoặc theo định kỳ.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 1 > Điều 4: Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân > Khoản 1",
                   "references": [],
                   "children": []
                 }
               ]
             }
-          ],
-          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG KHÔNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, KHÔNG PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN"
+          ]
         },
         {
           "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2",
           "node_type": "Mục",
           "node_index": "2",
-          "title": "",
+          "title": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN Hộ kinh doanh, cá nhân kinh doanh căn cứ vào phương pháp nộp thuế GTGT, thuế TNCN để thực hiện kế toán theo một trong các trường hợp quy định tại Điều 5 hoặc Điều 6 Thông tư này, cụ thể như sau:",
           "content": "",
           "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2",
-          "references": [
-            {
-              "text_match": "tại Điều 5",
-              "target_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5"
-            },
-            {
-              "text_match": "Điều 6",
-              "target_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6"
-            }
-          ],
+          "references": [],
           "children": [
             {
               "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_5",
@@ -197,7 +186,7 @@
                   "node_type": "Khoản",
                   "node_index": "2",
                   "title": null,
-                  "content": "Sổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a- HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ",
+                  "content": "Sổ kế toán 2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD) Hộ kinh doanh, cá nhân kinh doanh sử dụng sổ doanh thu bán hàng hóa, dịch vụ theo mẫu sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ:",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 5: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT và thuế TNCN theo tỷ lệ phần trăm (%) trên doanh thu > Khoản 2",
                   "references": [],
                   "children": []
@@ -218,7 +207,7 @@
                   "node_type": "Khoản",
                   "node_index": "1",
                   "title": null,
-                  "content": "Chứng từ kế toán Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.",
+                  "content": "Chứng từ kế toán: Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.\n\n2.2.3. Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (Mẫu số S2d-HKD)\nPhương pháp ghi sổ S2d-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa để theo dõi, quản lý về tình hình nhập, xuất, tồn cho từng vật liệu, dụng cụ, sản phẩm, hàng hóa.\nb) Phương pháp ghi sổ\n- Cột 1: Ghi đơn giá nhập, xuất, tồn. Đơn giá xuất kho tính theo phương pháp bình quân gia quyền cuối kỳ: Đơn giá xuất kho = (Giá trị hàng tồn đầu kỳ + Giá trị hàng nhập trong kỳ) / (Số lượng hàng tồn đầu kỳ + Số lượng hàng nhập trong kỳ).\n- Cột 2: Ghi số lượng nhập kho. Cột 3: thành tiền nhập (= Cột 1 x Cột 2).\n- Cột 4: Ghi số lượng xuất kho. Cột 5: thành tiền xuất (= Cột 1 x Cột 4).\n- Cột 6: Số lượng tồn. Cột 7: thành tiền tồn (= Cột 1 x Cột 6).\n\n2.2.4. Sổ chi tiết tiền (Mẫu số S2e-HKD)\nPhương pháp ghi sổ S2e-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh phải mở sổ chi tiết tiền để theo dõi tình hình thu, chi bằng tiền mặt hoặc tiền gửi không kỳ hạn. Hộ kinh doanh, cá nhân kinh doanh phải theo dõi riêng biệt tiền mặt và tiền gửi không kỳ hạn; không được gộp chung tiền mặt với tiền gửi ngân hàng vào cùng một cột. Có thể mở sổ chi tiết theo từng ngân hàng.\nb) Phương pháp ghi sổ\n- Cột 1, 2: Ghi số tiền thu, chi tiền mặt hoặc số tiền gửi không kỳ hạn gửi vào, rút ra.\nCuối kỳ, tính ra số tiền mặt tồn quỹ và số tiền gửi không kỳ hạn dư cuối kỳ.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 1",
                   "references": [],
                   "children": []
@@ -228,21 +217,20 @@
                   "node_type": "Khoản",
                   "node_index": "2",
                   "title": null,
-                  "content": "Sổ kế toán 2.1. Hộ kinh doanh, cá nhân kinh doanh sử dụng các sổ kế toán theo danh mục sau đây 2.2. Biểu mẫu và phương pháp ghi sổ kế toán 2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b- HKD)",
+                  "content": "Sổ kế toán hộ kinh doanh nộp thuế theo lợi nhuận gồm: S2b-HKD (doanh thu), S2c-HKD (doanh thu + chi phí TNCN), S2d-HKD (vật liệu nhập xuất tồn), S2e-HKD (tiền mặt + tiền gửi).\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này ghi doanh thu theo từng nhóm ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Sổ S2b-HKD có thể lưu trữ trên phương tiện điện tử hoặc bằng bản giấy theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Số hiệu, ngày tháng chứng từ. Cột C: diễn giải doanh thu. Cột 1: số tiền.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo phương pháp lợi nhuận.\nb) Phương pháp ghi sổ\n- Dòng 1: Tổng doanh thu bán hàng hóa, dịch vụ.\n- Dòng 2: Tổng chi phí hợp lý (nguyên liệu, lương, khấu hao, dịch vụ mua ngoài, lãi vay, chi phí khác).\n- Chênh lệch (Dòng 1 - Dòng 2) = thu nhập tính thuế TNCN.",
                   "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 2 > Điều 6: Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế GTGT theo tỷ lệ % trên doanh thu và thuế TNCN trên thu nhập tính thuế > Khoản 2",
                   "references": [],
                   "children": []
                 }
               ]
             }
-          ],
-          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH THUỘC ĐỐI TƯỢNG CHỊU THUẾ GIÁ TRỊ GIA TĂNG, PHẢI NỘP THUẾ THU NHẬP CÁ NHÂN Hộ kinh doanh, cá nhân kinh doanh căn cứ vào phương pháp nộp thuế GTGT, thuế TNCN để thực hiện kế toán theo một trong các trường hợp quy định tại Điều 5 hoặc Điều 6 Thông tư này, cụ thể như sau:"
+          ]
         },
         {
           "node_id": "doc_152_2025_TTBTC_chuong_II_muc_3",
           "node_type": "Mục",
           "node_index": "3",
-          "title": "",
+          "title": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH CÓ HOẠT ĐỘNG THUỘC DIỆN CHỊU CÁC LOẠI THUẾ KHÁC",
           "content": "",
           "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 3",
           "references": [],
@@ -251,24 +239,22 @@
               "node_id": "doc_152_2025_TTBTC_chuong_II_muc_3_dieu_7",
               "node_type": "Điều",
               "node_index": "7",
-              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "title": "Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động thuộc diện chịu các loại thuế khác",
               "content": "",
-              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 3 > Điều 7: Trường hợp hộ kinh doanh, cá nhân kinh doanh",
+              "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương II > Mục 3 > Điều 7: Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động thuộc diện chịu các loại thuế khác",
               "references": [],
               "children": [],
-              "lead_in_text": "có hoạt động thuộc diện chịu các loại thuế khác Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động thuộc diện chịu các loại thuế khác (thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường, thuế sử dụng đất) thì sử dụng thêm sổ theo dõi nghĩa vụ thuế khác (Mẫu số S3a-HKD) như sau"
+              "lead_in_text": "Trường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động thuộc diện chịu các loại thuế khác (thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường, thuế sử dụng đất) thì sử dụng thêm sổ theo dõi nghĩa vụ thuế khác (Mẫu số S3a-HKD) như sau:"
             }
-          ],
-          "lead_in_text": "KẾ TOÁN TẠI HỘ KINH DOANH, CÁ NHÂN KINH DOANH CÓ HOẠT ĐỘNG THUỘC DIỆN CHỊU CÁC LOẠI THUẾ KHÁC"
+          ]
         }
-      ],
-      "lead_in_text": "QUY ĐỊNH CỤ THỂ"
+      ]
     },
     {
       "node_id": "doc_152_2025_TTBTC_chuong_III",
       "node_type": "Chương",
       "node_index": "III",
-      "title": "",
+      "title": "TỔ CHỨC THỰC HIỆN",
       "content": "",
       "breadcrumb": "Thông tư 152/2025/TT-BTC > Chương III",
       "references": [],
@@ -329,16 +315,15 @@
             }
           ]
         }
-      ],
-      "lead_in_text": "TỔ CHỨC THỰC HIỆN"
+      ]
     }
   ],
   "pdf_metadata": {
-    "pdf_type": "digital",
-    "total_pages": 19,
-    "text_length": 18716,
-    "tables_found": 7,
-    "extraction_method": "pdfplumber"
+    "pdf_type": "docx",
+    "total_pages": 0,
+    "text_length": 15111,
+    "tables_found": 9,
+    "extraction_method": "python-docx"
   },
   "tables": [
     {
@@ -362,14 +347,14 @@
       ],
       "row_count": 2,
       "col_count": 3,
-      "extraction_strategy": "lines",
-      "page_number": 4
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 1,
       "headers": [
         "Chứng từ",
-        "",
+        "Chứng từ",
         "Diễn giải",
         "Số tiền"
       ],
@@ -377,8 +362,8 @@
         [
           "Số hiệu",
           "Ngày, tháng",
-          "",
-          ""
+          "Diễn giải",
+          "Số tiền"
         ],
         [
           "A",
@@ -491,8 +476,8 @@
       ],
       "row_count": 19,
       "col_count": 4,
-      "extraction_strategy": "lines",
-      "page_number": 6
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 2,
@@ -505,38 +490,44 @@
         [
           "1",
           "Sổ doanh thu bán hàng hóa, dịch vụ",
-          "Mẫu số S2b- HKD"
+          "Mẫu số S2b-HKD"
         ],
         [
           "2",
           "Sổ chi tiết doanh thu, chi phí",
-          "Mẫu số S2c- HKD"
+          "Mẫu số S2c-HKD"
         ],
         [
           "3",
           "Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa",
-          "Mẫu số S2d- HKD"
+          "Mẫu số S2d-HKD"
         ],
         [
           "4",
           "Sổ chi tiết tiền",
-          "Mẫu số S2e- HKD"
+          "Mẫu số S2e-HKD"
         ]
       ],
       "row_count": 4,
       "col_count": 3,
-      "extraction_strategy": "lines",
-      "page_number": 7
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
       "table_index": 3,
       "headers": [
-        "Số hiệu",
-        "Ngày, tháng",
-        "",
-        ""
+        "Chứng từ",
+        "Chứng từ",
+        "Diễn giải",
+        "Số tiền"
       ],
       "rows": [
+        [
+          "Số hiệu",
+          "Ngày, tháng",
+          "Diễn giải",
+          "Số tiền"
+        ],
         [
           "A",
           "B",
@@ -668,18 +659,27 @@
           "",
           "Tổng số thuế GTGT phải nộp",
           ""
-        ],
-        [
-          "Chứng từ",
-          "",
-          "Diễn giải",
-          "Số tiền"
-        ],
+        ]
+      ],
+      "row_count": 23,
+      "col_count": 4,
+      "page_number": 0,
+      "extraction_strategy": "docx"
+    },
+    {
+      "table_index": 4,
+      "headers": [
+        "Chứng từ",
+        "Chứng từ",
+        "Diễn giải",
+        "Số tiền"
+      ],
+      "rows": [
         [
           "Số hiệu",
           "Ngày, tháng",
-          "",
-          ""
+          "Diễn giải",
+          "Số tiền"
         ],
         [
           "A",
@@ -748,41 +748,41 @@
           ""
         ]
       ],
-      "row_count": 35,
+      "row_count": 12,
       "col_count": 4,
-      "extraction_strategy": "lines",
-      "page_number": 10
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
-      "table_index": 4,
+      "table_index": 5,
       "headers": [
         "Chứng từ",
-        "",
-        "Diễ n giải",
-        "Đơ n vị tín h",
-        "Đơ n giá",
+        "Chứng từ",
+        "Diễn giải",
+        "Đơn  vị  tính",
+        "Đơn  giá",
         "Nhập",
-        "",
+        "Nhập",
         "Xuất",
-        "",
+        "Xuất",
         "Tồn",
-        "",
-        "Gh i ch ú"
+        "Tồn",
+        "Ghi chú"
       ],
       "rows": [
         [
-          "Số hiệ u",
-          "Ngày , thán g",
-          "",
-          "",
-          "",
-          "Số lượn g",
-          "Thàn h tiền",
-          "Số lượn g",
-          "Thàn h tiền",
-          "Số lượn g",
-          "Thàn h tiền",
-          ""
+          "Số  hiệu",
+          "Ngày,  tháng",
+          "Diễn giải",
+          "Đơn  vị  tính",
+          "Đơn  giá",
+          "Số lượng",
+          "Thành tiền",
+          "Số lượng",
+          "Thành tiền",
+          "Số  lượng",
+          "Thành  tiền",
+          "Ghi chú"
         ],
         [
           "A",
@@ -815,7 +815,7 @@
         [
           "",
           "",
-          "Cộn g phát sinh tron g kỳ",
+          "Cộng phát  sinh trong kỳ",
           "X",
           "X",
           "",
@@ -843,23 +843,46 @@
       ],
       "row_count": 5,
       "col_count": 12,
-      "extraction_strategy": "lines",
-      "page_number": 12
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
-      "table_index": 5,
+      "table_index": 6,
+      "headers": [
+        "",
+        "Đơn giá xuất kho",
+        "=",
+        "(Giá trị hàng tồn đầu kỳ + Giá trị hàng nhập trong kỳ)",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "Đơn giá xuất kho",
+          "=",
+          "(Số lượng hàng tồn đầu kỳ + số lượng hàng nhập trong kỳ)",
+          ""
+        ]
+      ],
+      "row_count": 1,
+      "col_count": 5,
+      "page_number": 0,
+      "extraction_strategy": "docx"
+    },
+    {
+      "table_index": 7,
       "headers": [
         "Chứng từ",
-        "",
+        "Chứng từ",
         "Diễn giải",
         "Số tiền",
-        ""
+        "Số tiền"
       ],
       "rows": [
         [
           "Số hiệu",
           "Ngày tháng",
-          "",
+          "Diễn giải",
           "Thu/Gửi vào",
           "Chi/Rút ra"
         ],
@@ -992,53 +1015,53 @@
       ],
       "row_count": 19,
       "col_count": 5,
-      "extraction_strategy": "lines",
-      "page_number": 14
+      "page_number": 0,
+      "extraction_strategy": "docx"
     },
     {
-      "table_index": 6,
+      "table_index": 8,
       "headers": [
-        "Ngà y thán g ghi sổ",
-        "Diễ n giả i",
-        "Lượ ng hàng hóa, dịch vụ chịu thuế",
-        "Mứ c thu ế tuy ệt đối",
-        "Giá tính thuế/ 01 đơn vị hàng hóa, dịch vụ",
-        "Thu ế suấ t",
+        "Ngày tháng ghi sổ",
+        "Diễn giải",
+        "Lượng hàng hóa, dịch vụ chịu thuế",
+        "Mức thuế tuyệt đối",
+        "Giá tính thuế/01 đơn vị hàng hóa, dịch vụ",
+        "Thuế suất",
         "Các loại thuế khác",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Các loại thuế khác",
+        "Các loại thuế khác",
+        "Các loại thuế khác",
+        "Các loại thuế khác",
+        "Các loại thuế khác"
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+          "Ngày tháng ghi sổ",
+          "Diễn giải",
+          "Lượng hàng hóa, dịch vụ chịu thuế",
+          "Mức thuế tuyệt đối",
+          "Giá tính thuế/01 đơn vị hàng hóa, dịch vụ",
+          "Thuế suất",
           "Thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt",
-          "",
-          "",
-          "Thuế bảo vệ môi trườ ng",
-          "Thuế tài nguy ên",
-          "Thu ế sử dụn g đất"
+          "Thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt",
+          "Thuế xuất khẩu, thuế nhập khẩu, thuế tiêu thụ đặc biệt",
+          "Thuế bảo vệ môi trường",
+          "Thuế tài nguyên",
+          "Thuế sử dụng đất"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Áp dụng phươ ng pháp tính thuế theo tỷ lệ %",
-          "Áp dụng phươ ng pháp tính thuế tuyệt đối (nếu có)",
-          "Số thu ế ph ải nộ p",
-          "",
-          "",
-          ""
+          "Ngày tháng ghi sổ",
+          "Diễn giải",
+          "Lượng hàng hóa, dịch vụ chịu thuế",
+          "Mức thuế tuyệt đối",
+          "Giá tính thuế/01 đơn vị hàng hóa, dịch vụ",
+          "Thuế suất",
+          "Áp dụng phương pháp tính thuế theo tỷ lệ %",
+          "Áp dụng phương pháp tính thuế tuyệt đối (nếu có)",
+          "Số thuế phải nộp",
+          "Thuế bảo vệ môi trường",
+          "Thuế tài nguyên",
+          "Thuế sử dụng đất"
         ],
         [
           "A",
@@ -1056,7 +1079,7 @@
         ],
         [
           "Tổng cộng",
-          "",
+          "Tổng cộng",
           "",
           "",
           "",
@@ -1071,8 +1094,9 @@
       ],
       "row_count": 4,
       "col_count": 12,
-      "extraction_strategy": "lines",
-      "page_number": 16
+      "page_number": 0,
+      "extraction_strategy": "docx"
     }
-  ]
+  ],
+  "parser_version": "7.0"
 }

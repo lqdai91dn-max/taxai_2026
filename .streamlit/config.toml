@@ -1,0 +1,10 @@
+[server]
+maxUploadSize = 10
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+# Cho phép Streamlit chạy lâu hơn 30s mà không timeout
+fastReruns = true

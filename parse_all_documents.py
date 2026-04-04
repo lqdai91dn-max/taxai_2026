@@ -115,17 +115,17 @@ def parse_all_documents():
         print(f"[{i}/{len(all_docs)}] {doc_key}")
         print("─" * 70)
 
-        # Resolve PDF path
-        pdf_path = config.RAW_DIR / f"{doc_key}.pdf"
-        if not pdf_path.exists():
-            # Try without extension in case key already has it
-            alt = config.RAW_DIR / doc_key
+        # Resolve source path — prefer .docx > .pdf > .doc (DOCX gives better quality)
+        pdf_path = None
+        for ext in [".docx", ".pdf", ".doc"]:
+            alt = config.RAW_DIR / f"{doc_key}{ext}"
             if alt.exists():
                 pdf_path = alt
-            else:
-                print(f"⚠️  PDF not found: {pdf_path}")
-                results[doc_key] = {"status": "SKIP", "reason": "PDF not found"}
-                continue
+                break
+        if pdf_path is None:
+            print(f"⚠️  Source file not found for: {doc_key}")
+            results[doc_key] = {"status": "SKIP", "reason": "Source file not found"}
+            continue
 
         try:
             # ── PARSE ──────────────────────────────────────

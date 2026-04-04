@@ -350,9 +350,10 @@ class ParsePipeline:
 
         # ── Stage 1: Extract ────────────────────────────────────────────────
         raw_text, raw_tables, total_pages, pdf_meta = self._stage_extract(pdf_path)
+        is_docx = pdf_path.suffix.lower() in (".docx", ".doc")
 
         # ── Stage 2: Normalize ──────────────────────────────────────────────
-        clean_text, clean_tables = self._stage_normalize(raw_text, raw_tables)
+        clean_text, clean_tables = self._stage_normalize(raw_text, raw_tables, is_docx=is_docx)
 
         # ── Stage 2.5: Extract metadata (cần clean text) ────────────────────
         metadata = extract_metadata(clean_text, pdf_path.name)
@@ -416,7 +417,7 @@ class ParsePipeline:
 
     # ── Stage 2 ───────────────────────────────────────────────────────────────
 
-    def _stage_normalize(self, raw_text: str, raw_tables: list):
+    def _stage_normalize(self, raw_text: str, raw_tables: list, is_docx: bool = False):
         """
         Normalize text + merge fragmented tables.
 
@@ -425,6 +426,7 @@ class ParsePipeline:
           ✅ Fix "NĐ-\\nCP" → "NĐ-CP" (hyphenated line break)
           ✅ Remove page numbers, decorative separators
           ✅ Normalize consecutive whitespace
+          ✅ fix_merged_words (CHỈ cho PDF — DOCX text đã đúng, không cần split)
 
         KHÔNG được:
           ❌ Merge lines bừa (vỡ structure: "Khoản 1. a)" sai)
@@ -434,7 +436,7 @@ class ParsePipeline:
         Fix bug ở đây nếu: encoding sai, dính chữ, khoảng trắng thừa.
         """
         logger.info("🧹 Stage 2: Normalize")
-        clean_text = clean_legal_text(raw_text)
+        clean_text = clean_legal_text(raw_text, fix_merged=not is_docx)
         clean_tables = _merge_split_tables(raw_tables)
         return clean_text, clean_tables
 
