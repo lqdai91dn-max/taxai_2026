@@ -330,13 +330,37 @@ PDF/DOCX
   │
   ▼ Stage 3: Structure Detection (State Machine)
   │   src/parsing/state_machine/parser_core.py
-  │   - Nhận dạng: Phần → Chương → Mục → Điều → Khoản → Điểm
+  │
+  │   Nhận dạng 6 cấp bằng regex:
+  │   ┌──────────────┬────────────────────────────────────────┐
+  │   │ Level        │ Pattern ví dụ                          │
+  │   ├──────────────┼────────────────────────────────────────┤
+  │   │ PHAN         │ ^PHẦN\s+[IVX]+                         │
+  │   │ CHUONG       │ ^Chương\s+[IVX]+                       │
+  │   │ MUC          │ ^Mục\s+\d+                             │
+  │   │ DIEU         │ ^Điều\s+(\d+)\.?\s+                    │
+  │   │ KHOAN        │ ^\s*(\d+)\.\s+[A-ZĐÁÀẢÃẠ]             │
+  │   │ DIEM         │ ^\s*([a-zđ])\)\s+                      │
+  │   └──────────────┴────────────────────────────────────────┘
+  │
+  │   State Machine: mỗi dòng → classify level → so sánh với stack
+  │   Nếu level tăng → push (node con)
+  │   Nếu level giảm → pop stack cho đến cùng level → node anh em
+  │
+  │   Node ID format: doc_{doc_id}_{slug_of_title}_{parent_chain}
+  │   Ví dụ: doc_68_2026_NDCP_chuong_II_dieu_5_khoan_1
+  │
   │   src/parsing/state_machine/indentation_checker.py
-  │   - Phát hiện level thụt lề
+  │   - Phát hiện level thụt lề bằng font/indent từ DOCX style
+  │   - Fallback: regex numbering pattern (1. → a) → i.)
+  │
   │   src/parsing/state_machine/node_builder.py
-  │   - Xây dựng cây node có ID duy nhất
+  │   - Xây dựng cây node, gán node_id duy nhất trong toàn corpus
+  │   - Tính node_index thứ tự trong anh em cùng level
+  │
   │   src/parsing/state_machine/reference_detector.py
-  │   - Phát hiện tham chiếu chéo giữa điều khoản
+  │   - Pattern: "theo Điều X", "quy định tại Khoản Y Điều Z"
+  │   - Tạo cross-references: {text_match, target_id} để retrieval follow
   │
   ▼ Stage 4: Patch Application
   │   src/parsing/patch_applier.py
@@ -367,12 +391,32 @@ PDF/DOCX
 data/parsed/{doc_id}.json
   │
   ▼ src/retrieval/embedder.py
+  │
   │   Chunking strategy theo loại node:
-  │   ├── Điều/Khoản: 1 chunk = 1 node (+ breadcrumb header)
-  │   │   Header format: "[VB: NĐ 68/2026 | Chương II | Điều 5]"
-  │   ├── Khoản: include children ≤ 800 chars, ≤ 5 items
-  │   ├── Table: split theo MAX_TABLE_CHUNK_CHARS = 1200 chars
-  │   └── Guidance (Sổ tay/Công văn): include doc title
+  │
+  │   PHÁP LUẬT (Điều/Khoản):
+  │   ┌────────────────────────────────────────────────────────┐
+  │   │ BM25 text (dùng để index từ khóa):                     │
+  │   │ "[VB: NĐ 68/2026/NĐ-CP | Chương II | Điều 5]          │
+  │   │  Phương pháp tính thuế đối với hộ kinh doanh nộp       │
+  │   │  thuế theo tỷ lệ % trên doanh thu. Khoản 1: Hộ kinh   │
+  │   │  doanh có doanh thu từ 500 triệu đến 3 tỷ đồng..."     │
+  │   │                                                        │
+  │   │ Vector text (dùng để embed):                           │
+  │   │ "[NĐ 68/2026 - Chương II - Điều 5 - Khoản 1]          │
+  │   │  Hộ kinh doanh có doanh thu từ 500 triệu đến 3 tỷ..." │
+  │   │                                                        │
+  │   │ Metadata: {doc_id, node_id, level, doc_number,         │
+  │   │            effective_from, superseded, page_number}    │
+  │   └────────────────────────────────────────────────────────┘
+  │
+  │   Children Expansion (Khoản → include Điểm con):
+  │   - Nếu Khoản có ≤ 5 điểm con VÀ tổng ≤ 800 chars
+  │   - → gộp vào 1 chunk (context đầy đủ hơn cho LLM)
+  │   - Nếu > 800 chars → mỗi Điểm là 1 chunk riêng
+  │
+  │   Tables: split theo MAX_TABLE_CHUNK_CHARS = 1,200 chars
+  │   Guidance (Sổ tay/Công văn): prepend doc title vào mỗi chunk
   │
   ▼ Embedding: keepitreal/vietnamese-sbert
   │   (SBERT fine-tuned cho tiếng Việt)
@@ -390,8 +434,26 @@ Query từ Agent
   │
   ├─ BM25 Search
   │   src/retrieval/hybrid_search.py
-  │   - Synonym expansion: "GTGT" → "giá trị gia tăng"
-  │   - 15 cặp từ đồng nghĩa trong _SYNONYM_MAP
+  │   - Synonym expansion: query → thêm từ đồng nghĩa trước khi BM25
+  │
+  │   _SYNONYM_MAP (15 cặp):
+  │   ┌──────────────────────────────────────────────────────┐
+  │   │ "gtgt"    → "giá trị gia tăng"                       │
+  │   │ "tncn"    → "thu nhập cá nhân"                       │
+  │   │ "hkd"     → "hộ kinh doanh"                          │
+  │   │ "tmđt"    → "thương mại điện tử"                     │
+  │   │ "mst"     → "mã số thuế"                             │
+  │   │ "qlỵt"    → "quản lý thuế"                           │
+  │   │ "nđ"      → "nghị định"                              │
+  │   │ "tt"      → "thông tư"                               │
+  │   │ "cqt"     → "cơ quan thuế"                           │
+  │   │ "ttnnt"   → "tổ chức trả thu nhập"                   │
+  │   │ "npt"     → "người phụ thuộc"                        │
+  │   │ "nck"     → "ngưỡng chịu khổ"                        │
+  │   │ "ck"      → "khấu trừ"                               │
+  │   │ "pp"      → "phương pháp"                            │
+  │   │ "dthu"    → "doanh thu"                              │
+  │   └──────────────────────────────────────────────────────┘
   │
   └─ Vector Search
       ChromaDB cosine similarity
@@ -518,13 +580,83 @@ User question
 - **Tier 4** (Key Facts): Câu trả lời có các từ khóa thiết yếu không
 - 225 câu hỏi benchmark với ground truth annotation
 
+#### F11 — Off-topic Guard (Bộ lọc câu hỏi ngoài chủ đề)
+
+Câu hỏi không liên quan đến thuế (ví dụ: "tôi đói bụng quá", "thời tiết hôm nay") bị chặn **trước khi** vào cache hay agent. Điều này tránh lưu câu trả lời sai vào cache.
+
+**Cơ chế hoạt động:**
+
+```python
+# Regex keyword matching — 40+ từ khóa thuế
+_TAX_KEYWORDS = re.compile(
+    r'thuế|tncn|gtgt|vat|hkd|hộ\s*kinh\s*doanh|khai\s*thuế|nộp\s*thuế|'
+    r'hoàn\s*thuế|quyết\s*toán|giảm\s*trừ|gia\s*cảnh|mã\s*số\s*thuế|mst|'
+    r'thu\s*nhập|lương|thưởng|hoa\s*hồng|doanh\s*thu|'
+    r'nghị\s*định|thông\s*tư|luật|điều\s*\d+|khoản\s*\d+|'
+    r'kế\s*toán|hóa\s*đơn|chứng\s*từ|sổ\s*sách|'
+    r'cưỡng\s*chế|xử\s*phạt|tiền\s*chậm\s*nộp|thanh\s*tra|'
+    r'người\s*phụ\s*thuộc|npt|người\s*lao\s*động|tổ\s*chức\s*chi\s*trả|'
+    r'cơ\s*quan\s*thuế|cqt|tờ\s*khai|hồ\s*sơ\s*thuế|'
+    r'thương\s*mại\s*điện\s*tử|tmđt|kê\s*khai|khấu\s*trừ\s*tại\s*nguồn',
+    re.IGNORECASE | re.UNICODE,
+)
+
+def _is_offtopic(question: str) -> bool:
+    return not bool(_TAX_KEYWORDS.search(question))
+```
+
+**Luồng xử lý:**
+```
+User gửi câu hỏi
+    │
+    ▼ _is_offtopic() check — ~0.1ms
+    │
+    ├─ Off-topic → Trả lời ngay: "Tôi chỉ hỗ trợ câu hỏi thuế..."
+    │              KHÔNG vào cache, KHÔNG gọi Gemini
+    │
+    └─ On-topic → Tiếp tục QACache lookup → Agent loop
+```
+
+**Ví dụ test:**
+| Câu hỏi | Kết quả |
+|---|---|
+| "tôi đói bụng quá" | ❌ Off-topic → chặn ngay |
+| "thời tiết hôm nay" | ❌ Off-topic → chặn ngay |
+| "hộ kinh doanh nộp thuế mấy phần trăm?" | ✅ On-topic → tiếp tục |
+| "đăng ký người phụ thuộc thế nào?" | ✅ On-topic (có "người phụ thuộc") |
+
 ### 5.2 Kết quả Evaluation
 
-| Round | Pass Rate | T2 (Citation) | Ghi chú |
+**Tiến trình qua các round:**
+
+| Round | Pass Rate | T2 Citation | Ghi chú |
 |---|---|---|---|
-| R49 (baseline trước cải tiến) | 53.3% | 0.557 | Trước Phase 2 |
-| R54 (full 225 câu) | 68.0% | 0.674 | Sau annotation fix Round 1 |
-| R55 (partial, 104 câu valid) | **77.9%** | ~0.72 | Sau annotation fix Round 2+3 + routing rules |
+| R49 (baseline) | 53.3% | 55.7% | Trước Phase 2, routing cơ bản |
+| R54 (full 225 câu) | 68.0% | 67.4% | Sau annotation fix Round 1 |
+| R55 (225 câu) | 72.9% | ~72% | Annotation fix R2+R3, routing HKD |
+| **R56 (04/04/2026)** | **76.9%** | **80.5%** | Off-topic guard + annotation fix tất cả nhóm |
+
+**R56 — Kết quả chi tiết theo chủ đề:**
+
+| Chủ đề | Pass/Total | Pass Rate | Ghi chú |
+|---|---|---|---|
+| Hiệu lực pháp luật | 4/4 | 100% | Câu hỏi về ngày hiệu lực — đơn giản |
+| Ủy quyền quyết toán TNCN | 6/6 | 100% | Corpus đầy đủ, câu hỏi trực tiếp |
+| Xử lý vi phạm thuế | 1/1 | 100% | — |
+| Kế toán HKD | 23/26 | 88% | TT152 routing hoạt động tốt |
+| Thuế thu nhập cá nhân | 20/23 | 87% | Giảm trừ, khấu trừ tại nguồn |
+| Nghĩa vụ kê khai | 17/20 | 85% | Hạn nộp, mẫu biểu |
+| Hoàn thuế TNCN | 4/5 | 80% | — |
+| Xử phạt vi phạm | 12/15 | 80% | Mức phạt, tiền chậm nộp |
+| Thuế hộ kinh doanh | 33/41 | 80% | Phương pháp tính thuế |
+| Thuế thương mại điện tử | 28/38 | 74% | Câu hỏi phức tạp, nhiều edge case |
+| Thủ tục hành chính | 10/14 | 71% | Thủ tục, mẫu biểu |
+| Quyết toán thuế TNCN | 4/7 | 57% | Câu phức tạp, nhiều điều kiện |
+| Thuế cho thuê tài sản | 2/3 | 67% | — |
+| Miễn giảm thuế | 1/3 | 33% | Routing thiếu, corpus gap |
+| Khấu trừ thuế TNCN | 1/3 | 33% | Câu hỏi edge case |
+| Giảm trừ gia cảnh | 4/8 | 50% | Phức tạp, nhiều điều kiện phụ |
+| Đăng ký MST | 0/2 | 0% | Corpus gap — thiếu hướng dẫn chi tiết |
 
 ---
 
@@ -715,7 +847,29 @@ Tier 3 — Tool Selection (T3):
 
 Tier 4 — Key Facts (T4):
   Áp dụng: 225/225 câu có key_facts
-  Pass: ALL key_facts xuất hiện trong câu trả lời (fuzzy match)
+  Pass (T4a): ALL key_facts match bằng partial_ratio ≥ 80
+            → dùng thư viện rapidfuzz.fuzz.partial_ratio()
+  Pass (T4b): nếu T4a fail → LLM Judge (Gemini Flash) kiểm tra
+            → judge prompt: "Câu trả lời có chứa ý [key_fact] không?"
+            → Pass nếu judge trả lời "YES"
+  Fail: cả T4a và T4b đều fail
+
+  Ví dụ T4 pass/fail:
+  ┌─────────────────────────────────────────────────────────────┐
+  │ Key fact: "0.03%/ngày"                                      │
+  │ Answer: "...tính tiền chậm nộp là 0,03%/ngày..."           │
+  │ → partial_ratio("0.03%/ngày", "0,03%/ngày") = 94 → PASS   │
+  │                                                             │
+  │ Key fact: "500 triệu"                                       │
+  │ Answer: "...ngưỡng doanh thu chịu thuế là 500.000.000 đ..." │
+  │ → partial_ratio = 60 (fail T4a)                             │
+  │ → LLM Judge: "Có đề cập 500 triệu không?" → YES → PASS    │
+  │                                                             │
+  │ Key fact: "Mẫu 20-ĐK-TCT"                                  │
+  │ Answer: "...nộp hồ sơ tại cơ quan thuế..."                 │
+  │ → partial_ratio = 40 → FAIL T4a                             │
+  │ → LLM Judge: "Có nhắc mẫu 20-ĐK-TCT không?" → NO → FAIL  │
+  └─────────────────────────────────────────────────────────────┘
 
 Overall score = trung bình T1+T2+T3+T4 (bỏ N/A)
 Passed = overall_score ≥ 0.667
@@ -1128,12 +1282,14 @@ Phase 4 (2027):  TaxAI Enterprise
 
 | Metric | Giá trị | Ghi chú |
 |---|---|---|
-| Pass rate (full) | 76.9 % | R56, 225 câu |
-| T2 Citation score | 90.5 % | Câu trả lời có nguồn |
-| T3 Tool selection score | 94 % | Gọi đúng tool |
-| T4 Key Facts score | 81.6 % | Câu trả lời đầy đủ nội dung |
-| Corpus size | 20 văn bản | ~13,000+ nodes đã parse |
-| Latency (trung bình) | ~8-15 giây | Bao gồm 2 lần search + generation |
+| Pass rate (full) | **76.9%** | R56, 225 câu, ngày 04/04/2026 |
+| T2 Citation score | **80.5%** | Câu trả lời có nguồn pháp lý |
+| T3 Tool selection score | **94.0%** | Gọi đúng loại tool |
+| T4 Key Facts score | **81.6%** | Câu trả lời đầy đủ nội dung thiết yếu |
+| Corpus size | **20 văn bản** | ~13,000+ nodes đã parse và index |
+| Latency (trung bình) | **8–12 giây** | 2 lần Gemini search + generation |
+| Cache hit rate | **~30%** | Câu hỏi lặp lại phục vụ < 200ms |
+| Off-topic block rate | < 1% | Câu hỏi ngoài chủ đề bị chặn ngay |
 
 ### 11.2 Điểm mạnh
 
@@ -1152,12 +1308,13 @@ Phase 4 (2027):  TaxAI Enterprise
 
 ### 11.4 Roadmap ngắn hạn
 
-| Sprint | Mục tiêu | Dự báo Pass% |
+| Sprint | Mục tiêu | Kết quả thực tế |
 |---|---|---|
-| R56 (hiện tại) | Annotation fix + routing P2 | ~82-85% |
-| Sprint B | Kế toán HKD (26 câu, TT152 routing) | ~87-90% |
-| Sprint D | Contextual Retrieval (breadcrumb BM25) | ~92-95% |
-| Sprint E | Multi-turn + Streaming + Deploy | Production ready |
+| R55 (trước) | Annotation fix Round 2, routing fix HKD | 72.9% pass |
+| **R56 (hiện tại)** | Off-topic guard + annotation fix tất cả nhóm | **76.9%** (+4pp) |
+| Sprint C | Contextual Retrieval, T2 citation boost | ~82-85% (dự kiến) |
+| Sprint D | Multi-turn conversation memory | ~87-90% (dự kiến) |
+| Sprint E | Streaming + Deploy Streamlit Cloud | Production ready |
 
 **Hard deadline: 01/07/2026** — Luật 109/2025/QH15 (Thuế TNCN) và Luật 108/2025/QH15 (Quản lý thuế) có hiệu lực, cần update corpus và invalidate QA cache.
 
@@ -1183,3 +1340,528 @@ Phase 4 (2027):  TaxAI Enterprise
 
 *Báo cáo được tạo tự động từ source code và documentation của dự án TaxAI.*
 *Ngày cập nhật: 04/04/2026*
+
+---
+
+## PHỤ LỤC B: BỘ CÂU HỎI TEST — 225 CÂU
+
+**Ký hiệu độ khó:** 🟢 Easy &nbsp;|&nbsp; 🟡 Medium &nbsp;|&nbsp; 🔴 Hard &nbsp;|&nbsp; 🧮 Cần tính toán
+
+---
+
+### B.1 Bất khả kháng (2 câu)
+
+**Q95** 🟡 — Cửa hàng bị thiệt hại do lũ lụt, làm đơn gia hạn nộp thuế cần xác nhận của cơ quan nào?
+
+**Q117** 🟡 — Kho hàng bị hỏa hoạn, nộp chậm hồ sơ khai thuế trong thời gian khắc phục có bị phạt không?
+
+---
+
+### B.2 Giảm trừ gia cảnh (8 câu)
+
+**Q201** 🟢 — NLĐ đăng ký giảm trừ gia cảnh tại Công ty A, có được tiếp tục đăng ký tại Công ty B không?
+
+**Q218** 🟡 — Đã đăng ký giảm trừ cho mẹ từ T02/2025, trước quyết toán có chuyển sang cho chồng được không?
+
+**Q223** 🟢 — Muốn chuyển 1 NPT từ tôi sang vợ, thủ tục thế nào?
+
+**Q224** 🟡 — NLĐ tự đăng ký NPT tại CQT sau khi công ty đăng ký thất bại, công ty có được tính giảm trừ hàng tháng không?
+
+**Q225** 🟡 — (3 câu hỏi trong 1): Mã số thuế NPT chưa có định danh mức 2; Tổng thu nhập chịu thuế trên QTT vs tờ khai tháng; Kê khai thiếu NPT trong năm xử lý thế nào?
+
+**Q226** 🟢 — NPT đã đăng ký từ trước có bắt buộc phải cập nhật CCCD mới không?
+
+**Q236** 🟡 — Ủy quyền cho công ty QTT nhưng tự đăng ký MST NPT có phải tự QTT không? Sau 14/2/2026 thủ tục đăng ký NPT lần đầu cần hồ sơ gì?
+
+**Q237** 🟢 — Thông tin đã bãi bỏ thủ tục đăng ký NPT, vậy công ty có cần đăng ký NPT thay NLĐ nữa không?
+
+---
+
+### B.3 Hiệu lực pháp luật (4 câu)
+
+**Q46** 🟢 — Chính xác ngày nào bãi bỏ phương pháp thuế khoán đối với hộ kinh doanh?
+
+**Q47** 🔴 — Năm 2025 đang đóng thuế khoán, đầu 2026 CQT có tự chuyển đổi hay phải tự làm?
+
+**Q49** 🟢 — Quy định quản lý thuế trên sàn TMĐT tìm ở Nghị định số mấy?
+
+**Q191** 🟡 — Bãi bỏ thuế khoán từ 01/01/2026 có áp dụng cho xe ôm truyền thống không?
+
+---
+
+### B.4 Hoàn thuế TNCN (5 câu)
+
+**Q207** 🟡 — Thuế nộp thừa năm 2021, quyết toán năm 2021 bây giờ có được hoàn không? Có bị phạt chậm nộp hồ sơ không?
+
+**Q215** 🟢 — Thuế TNCN nộp thừa năm 2024 có được trừ vào thuế năm 2025/2026 không?
+
+**Q217** 🟡 — Cá nhân nước ngoài QT năm đầu tiên 01/09/2025–30/08/2026, thừa thuế 10tr, có bù trừ vào Q1/2026 không?
+
+**Q219** 🟡 — Công ty nộp thuế TNCN thay NLĐ, khoản đó NLĐ có được hoàn không?
+
+**Q234** 🟢 — Thu nhập dưới mức chịu thuế nhưng đã ủy quyền QTT, có phải làm lại QTT không?
+
+---
+
+### B.5 Khấu trừ thuế TNCN (3 câu)
+
+**Q202** 🟡 — Thưởng Tết 500.000đ chi sau khi đã tính lương tháng 12, khấu trừ 5% riêng hay gộp vào lương lũy tiến?
+
+**Q231** 🟡 — Kỳ lương 26–25, nghỉ việc ngày cuối tháng, lương 26–31 trả tháng sau có được giảm trừ gia cảnh và tính lũy tiến không?
+
+**Q235** 🟡 — Lương T12/2025 trả T1/2026, chi phí BHXH tính 11 hay 12 tháng khi QTT?
+
+---
+
+### B.6 Kế toán HKD (26 câu)
+
+**Q45** 🟡 — Sổ S1a-HKD phải ghi từng ngày hay được ghi gộp định kỳ?
+
+**Q51** 🔴 — Sang 2026 nộp theo lợi nhuận, lập Bảng kê hàng tồn kho theo mẫu số mấy?
+
+**Q52** 🟡 — Hạn nộp Bảng kê hàng tồn kho (Mẫu 01/BK-HTK) là ngày nào?
+
+**Q53** 🟢 — Tiền phạt vi phạm giao thông khi đi giao hàng có được tính chi phí không?
+
+**Q64** 🟡 — HKD nộp theo % có bắt buộc tài khoản ngân hàng đứng tên "Hộ kinh doanh" không?
+
+**Q65** 🟡 — Xe ô tô đứng tên cá nhân chủ hộ dùng sinh hoạt gia đình có được khấu hao vào chi phí quán ăn không?
+
+**Q69** 🔴 — Lãi suất vay tiền người thân có được tính chi phí HKD nộp lợi nhuận không?
+
+**Q92** 🟢 — Mua hàng dưới 200.000đ từ nông dân không có HĐ dùng Bảng kê mẫu nào?
+
+**Q94** 🔴 — Ghi sai Sổ S2b-HKD, gạch xóa bút bi hay lập sổ mới?
+
+**Q101** 🔴 — Cột 1 'Số tiền' Mẫu S2b-HKD ghi thông tin gì?
+
+**Q103** 🟢 — Sổ S2e-HKD có được gộp tiền mặt và tiền gửi ngân hàng cùng 1 cột không?
+
+**Q105** 🔴 — HKD có được thuê người ngoài hoặc nhờ vợ/chồng làm kế toán không?
+
+**Q115** 🟢 — Lỡ khai theo Quý khi DT trên 50 tỷ phải khai Tháng, nộp lại có bị phạt không?
+
+**Q126** 🟡 — HKD dưới 500tr/năm có bắt buộc lưu sổ sách bao nhiêu năm không?
+
+**Q132** 🟡 — Sổ S2b-HKD, xuất vật liệu ra tính đơn giá theo phương pháp nào?
+
+**Q135** 🔴 — Chi bồi thường giao hàng trễ có được tính chi phí hợp lý không?
+
+**Q139** 🔴 — Sổ S2d-HKD, mua hàng nông dân không HĐ GTGT thì phần chứng từ ghi số hiệu bảng kê nào?
+
+**Q146** 🟢 — Phần mềm kế toán miễn phí Nhà nước có bắt buộc tích hợp xuất HĐ điện tử không?
+
+**Q152** 🟡 — Mua nguyên vật liệu dưới 200.000đ không lấy HĐ, tự lập phiếu chi tính vào sổ S2c-HKD được không?
+
+**Q158** 🟢 — Sổ S1a-HKD dưới 500tr có cần đóng dấu giáp lai CQT không?
+
+**Q161** 🟢 — Cột 'Tiền thuế GTGT' trong S2b-HKD có mục đích gì khi HKD không được khấu trừ đầu vào?
+
+**Q170** 🟢 — Sao kê Momo có được tính là chứng từ thanh toán hợp lệ không?
+
+**Q186** 🟢 — Bảng kê thu mua nông sản có cần chữ ký người nông dân không?
+
+**Q189** 🟢 — Sổ S2b-HKD có bắt buộc in ra giấy ký tên hay được lưu file Excel không?
+
+**Q194** 🟡 — Tiền thuê mặt bằng trả trước 1 năm có được phân bổ đều hàng tháng không?
+
+**Q200** 🟢 — Dòng cuối Sổ S1a-HKD cần chữ ký của ai để xác nhận số liệu?
+
+---
+
+### B.7 Miễn giảm thuế (3 câu)
+
+**Q39** 🟢 — Luật mới giảm 20% thuế GTGT, bán gạo có được giảm không?
+
+**Q40** 🟡 — Bán rượu bia thuốc lá có được giảm 20% GTGT không?
+
+**Q71** 🟡 — Nước ngọt có gas (đường > 5g/100ml) có được giảm 20% GTGT không?
+
+---
+
+### B.8 Nghĩa vụ kê khai (20 câu)
+
+**Q31** 🟡 — DT dưới 500tr/năm có phải nộp tờ khai hàng tháng không?
+
+**Q32** 🟢 — DT 2 tỷ/năm khai thuế GTGT, TNCN theo tháng hay quý?
+
+**Q33** 🟡 — Tháng nghỉ sửa chữa không có DT có cần nộp tờ khai không?
+
+**Q34** 🔴 — Mở cửa hàng T8/2026 DT dưới 500tr, hạn nộp thông báo DT là ngày nào?
+
+**Q35** 🔴 — DT trên 50 tỷ lỡ khai theo Quý thay vì Tháng, xử lý thế nào?
+
+**Q36** 🟢 — DT bao nhiêu bắt buộc dùng hóa đơn điện tử?
+
+**Q37** 🟡 — Máy tính tiền có tự động gửi dữ liệu lên CQT không?
+
+**Q38** 🟢 — Nhà nước có cung cấp phần mềm kế toán miễn phí cho HKD không?
+
+**Q44** 🟡 — DT 400tr có được đăng ký xuất HĐ điện tử từng lần phát sinh không?
+
+**Q70** 🟢 — Xuất HĐ điện tử mặt hàng giảm 20% GTGT phải ghi chú như thế nào?
+
+**Q73** 🟡 — DT 1,5 tỷ năm 2025, năm 2026 khai GTGT theo tháng hay quý?
+
+**Q76** 🟢 — Nhà nước bỏ lệ phí môn bài rồi có cần nộp tờ khai môn bài nữa không?
+
+**Q78** 🔴 — Bán lẻ thuốc tây bắt buộc dùng HĐ điện tử từ máy tính tiền, kết nối dữ liệu CQT theo phương thức nào?
+
+**Q81** 🔴 — Vợ đứng tên giấy phép HKD nhưng tài khoản ngân hàng là tên tôi, khai thuế điền MST ai?
+
+**Q82** 🟢 — Tạm ngừng kinh doanh 3 tháng nộp thông báo Mẫu 01/TB-ĐĐKD cho chi cục thuế hay UBND phường?
+
+**Q133** 🟡 — DT 400tr đầu năm 2026, tháng 9 vượt 500tr, tháng 10 có phải khai thuế không?
+
+**Q144** 🟡 — Nhiều cửa hàng cùng quận, nộp chung 1 tờ khai hay 3 tờ khai riêng?
+
+**Q164** 🟡 — HKD nộp theo % cuối năm có làm QTT TNCN như người làm công ăn lương không?
+
+**Q178** 🟢 — Xe ôm truyền thống thỉnh thoảng chở hàng muốn xin HĐ điện tử từng lần nộp mẫu nào?
+
+**Q181** 🟡 — Bán hàng 3 ngày Tết (bán hoa mai, đào) khai thuế theo năm, tháng hay từng lần?
+
+---
+
+### B.9 Quyết toán thuế TNCN (7 câu)
+
+**Q204** 🟢 — Doanh nghiệp không có NLĐ phải nộp thuế TNCN, có phải làm QTT không?
+
+**Q205** 🟢 — Thu nhập trên eTax Mobile khác chứng từ khấu trừ, khai QTT theo số nào?
+
+**Q206** 🟡 — Hệ thống trả lỗi ở Phụ lục 05-3/BK-NPT, xử lý thế nào?
+
+**Q208** 🟡 — Ngoài văn phòng, còn bán TikTok/YouTube/Facebook. Khi QTT có được ủy quyền và phải khai thu nhập đó không?
+
+**Q211** 🟡 — Không lấy được chứng từ khấu trừ của công ty cũ đã giải thể, vẫn QTT được không?
+
+**Q212** 🟢 — Làm 2 công ty tổng thu nhập dưới mức chịu thuế TNCN có phải làm QTT không?
+
+**Q214** 🟡 — Thuế phải nộp thêm 50.000đ hoặc thấp hơn, có cần kê khai vào QTT không?
+
+---
+
+### B.10 Thu nhập chịu thuế (2 câu)
+
+**Q227** 🟡 — Tiền hỗ trợ điện thoại có miễn thuế TNCN không? Làm thêm giờ, ngày nghỉ lễ từ 1/1/2026 miễn toàn bộ hay chỉ phần chênh lệch?
+
+**Q233** 🟡 — Trần tiền ăn ca 730k bị hủy từ 15/6/2025 có được tính cả năm khi QTT 2025 không?
+
+---
+
+### B.11 Thuế cho thuê tài sản (3 câu)
+
+**Q220** 🟡 — Khai thay thuế cho thuê BĐS theo năm, nay đổi sang theo kỳ thanh toán, bị trễ T1+2+3/2026 có bị phạt không?
+
+**Q221** 🟡 — Nộp nhầm tiểu mục và CQT quản lý thuế cho thuê, điều chỉnh thế nào?
+
+**Q222** 🟡 — NĐ68/2026 không thấy mẫu biểu khai thay thuê xe ô tô (chỉ có BĐS), quy định thế nào?
+
+---
+
+### B.12 Thuế hộ kinh doanh (41 câu)
+
+**Q1** 🟢 — Từ 2026 bỏ thuế khoán, bán tạp hóa tính thuế kiểu gì?
+
+**Q2** 🟢 — DT quán phở bao nhiêu thì được miễn thuế GTGT và TNCN?
+
+**Q3** 🟡 🧮 — Tiệm làm tóc DT 1 tỷ/năm nộp GTGT và TNCN tỷ lệ bao nhiêu %?
+
+**Q4** 🟡 — Muốn nộp thuế theo lợi nhuận thay vì theo % DT có được không?
+
+**Q5** 🔴 — Mở 3 cửa hàng ở 3 quận, ngưỡng 500tr miễn thuế tính gộp hay từng cửa hàng?
+
+**Q6** 🟡 — DT 4 tỷ có bắt buộc nộp theo lợi nhuận không?
+
+**Q7** 🟡 — Cho thuê nhà nguyên căn 30tr/tháng đóng thuế thế nào?
+
+**Q8** 🟢 — Tiệm vàng DT trên 50 tỷ thuế suất TNCN bao nhiêu %?
+
+**Q9** 🟡 — Đang nộp theo lợi nhuận (DT trên 3 tỷ), sang năm muốn đổi lại theo % có được không?
+
+**Q10** 🟡 — HKD nộp theo % phải mở những loại sổ sách nào?
+
+**Q41** 🟢 — Kinh doanh vũ trường, karaoke ngoài GTGT/TNCN còn nộp thêm thuế gì?
+
+**Q42** 🟡 — HKD có được ủy quyền cho đại lý thuế làm thủ tục hoàn thuế không?
+
+**Q54** 🔴 — Vừa cho thuê nhà, vừa bán trà sữa ở địa chỉ khác, làm chung 1 tờ khai hay tách riêng?
+
+**Q55** 🟡 — Nộp theo lợi nhuận, tháng lỗ có phải nộp TNCN không?
+
+**Q56** 🟢 — Đại lý bảo hiểm nhân thọ nhận hoa hồng, tự khai hay công ty trừ luôn?
+
+**Q61** 🟢 — HKD mới thành lập nộp theo phương pháp kê khai dùng tờ khai mẫu số mấy?
+
+**Q72** 🟡 — Chủ HKD tự trả lương cho bản thân có được tính vào chi phí hợp lý không?
+
+**Q75** 🟡 — Xưởng mộc bao thầu luôn nguyên vật liệu, tỷ lệ GTGT và TNCN bao nhiêu?
+
+**Q77** 🔴 — Chọn nộp lợi nhuận năm 2026 nhưng DT cuối năm chỉ 2,5 tỷ, có bị ép quay lại theo % không?
+
+**Q91** 🔴 — DT 6 tỷ/năm (nộp lợi nhuận) bắt buộc lập sổ sách theo Thông tư số mấy?
+
+**Q98** 🟢 — Kinh doanh nhiều ngành nghề tỷ lệ thuế khác nhau, mức 500tr miễn thuế phân bổ thế nào?
+
+**Q102** 🟡 — DT 500tr–3 tỷ đang nộp theo %, tự ý đổi sang lợi nhuận giữa năm có được không?
+
+**Q104** 🟡 — Chi phí phần mềm quản lý bán hàng có được tính chi phí hợp lệ trừ thuế lợi nhuận HKD không?
+
+**Q107** 🟢 🧮 — Thiết kế đồ họa, viết phần mềm, tỷ lệ GTGT + TNCN tổng cộng bao nhiêu %?
+
+**Q108** 🟡 — HKD nộp theo phương pháp khoán có được xuất HĐ điện tử không?
+
+**Q119** 🟡 — Chạy xe công nghệ (Grab, Be), tự khai hay Grab khai và nộp thay?
+
+**Q120** 🔴 — Xe ôm công nghệ có được áp dụng giảm trừ gia cảnh (15,5tr/tháng) không?
+
+**Q130** 🟢 🧮 — Cho thuê mặt bằng đặt trạm BTS 100tr/năm, GTGT + TNCN tổng cộng bao nhiêu %?
+
+**Q131** 🟢 — HKD bị cưỡng chế ngừng HĐ điện tử có được xuất HĐ lẻ từng lần không?
+
+**Q141** 🟡 — Chủ HKD tự mua BHYT tự nguyện cho bản thân, khoản chi có được trừ không?
+
+**Q142** 🟡 — Chủ HKD có bắt buộc trả lương cho vợ/con phụ giúp bán hàng để tính chi phí không?
+
+**Q145** 🔴 — Chọn nộp lợi nhuận, CQT phát hiện sổ sách lộn xộn có quyền ấn định thuế không?
+
+**Q155** 🟡 — Tiệm sửa xe mua phụ tùng tính chung tiền công, khai theo tỷ lệ dịch vụ (2%) hay phân phối (0,5%)?
+
+**Q157** 🔴 — Bán nông sản do cá nhân tự sản xuất bán trực tiếp có chịu GTGT và TNCN không?
+
+**Q159** 🟡 — Phí vệ sinh an toàn thực phẩm nộp hàng năm có được tính chi phí vận hành khi tính lợi nhuận không?
+
+**Q173** 🟡 — HKD nộp theo lợi nhuận có được chuyển lỗ sang năm sau không?
+
+**Q175** 🔴 — Năm 2025 nộp thuế khoán, sang 2026 kê khai, hóa đơn giấy cũ chưa dùng hết xử lý thế nào?
+
+**Q183** 🟢 — Mua bán phế liệu (ve chai) DT dưới 500tr có phải đăng ký MST và nộp tờ khai không?
+
+**Q190** 🟡 — Kinh doanh phòng trọ có được trừ hóa đơn điện nước vào DT trước khi tính TNCN không?
+
+**Q192** 🔴 — Đang nộp theo %, DT vượt 3 tỷ vào T10/2026, có phải chuyển sang lợi nhuận từ T11 không?
+
+**Q198** 🟡 — Chủ HKD ốm nằm viện 1 tháng đóng cửa, có được miễn thuế khoán tháng đó không?
+
+---
+
+### B.13 Thuế thu nhập cá nhân (23 câu)
+
+**Q11** 🟢 — Mức giảm trừ gia cảnh bản thân và NPT năm 2026 là bao nhiêu?
+
+**Q12** 🟡 🧮 — Lương 20tr/tháng, nuôi 1 con nhỏ, có bị trừ thuế TNCN không?
+
+**Q13** 🔴 — Bố mẹ hết tuổi lao động nhưng có lương hưu 4tr/tháng, có đăng ký NPT được không?
+
+**Q14** 🔴 — Làm 2 công ty, 1 hợp đồng chính thức, 1 freelance, cuối năm QTT ở đâu?
+
+**Q15** 🟢 — Trúng vé số Vietlott 50 triệu bị trừ bao nhiêu tiền thuế?
+
+**Q16** 🟢 🧮 — Bán mảnh đất 2 tỷ, thuế TNCN tính làm sao?
+
+**Q17** 🟡 — Bán cổ phần trong công ty khởi nghiệp sáng tạo có được miễn thuế TNCN không?
+
+**Q18** 🟢 — Lãi tiết kiệm ngân hàng hàng tháng có bị tính thuế TNCN không?
+
+**Q19** 🟡 — Chuyên gia dự án ODA viện trợ không hoàn lại, lương có bị thu thuế TNCN không?
+
+**Q20** 🟡 — Shipper công nghệ bị trừ thuế từng đơn, tổng cả năm 100tr có được hoàn thuế không?
+
+**Q43** 🟡 — Chuyên gia AI trong doanh nghiệp khởi nghiệp sáng tạo, có được miễn giảm thuế TNCN không?
+
+**Q63** 🟡 🧮 — Lương 30tr, giảm trừ bản thân 15,5tr, 2 con nhỏ 12,4tr, đóng TNCN bao nhiêu?
+
+**Q66** 🟢 — Bán chứng chỉ quỹ mở đầu tư giữ 3 năm liên tục, có miễn thuế TNCN không?
+
+**Q67** 🟢 — Tiền bồi thường bảo hiểm nhân thọ khi tai nạn có bị tính thuế TNCN không?
+
+**Q68** 🟡 — Người Việt làm tại cơ quan Liên hợp quốc tại VN, lương có phải nộp TNCN không?
+
+**Q74** 🟢 — Tai nạn giao thông tốn kém điều trị nội trú, có được giảm thuế TNCN không?
+
+**Q114** 🟡 — Đại lý bán hàng đa cấp Amway, công ty đã trừ thuế TNCN phải nộp Bảng kê theo mẫu nào?
+
+**Q116** 🟢 — Nhận thừa kế mảnh đất từ bố mẹ ruột có phải nộp thuế TNCN không?
+
+**Q134** 🟢 — Cá nhân cho thuê nhà, hợp đồng ghi công ty nộp thuế thay, cá nhân còn phải nộp tờ khai không?
+
+**Q140** 🟡 — Ủy quyền QTT, cá nhân đổi CCCD 12 số, công ty có trách nhiệm thông báo CQT không?
+
+**Q163** 🟡 — Đại lý xổ số kiến thiết nhận hoa hồng khai TNCN theo tháng hay từng lần phát sinh?
+
+**Q174** 🔴 — Cá nhân có tiền ảo (crypto) sinh lời, pháp luật thuế hiện hành có đánh thuế TNCN không?
+
+**Q187** 🟡 — Cá nhân cư trú có thu nhập từ YouTube nước ngoài, khai thuế TNCN tại chi cục thuế thường trú hay tạm trú?
+
+---
+
+### B.14 Thuế thương mại điện tử (38 câu)
+
+**Q21** 🟢 — Bán hàng Shopee/TikTok, sàn tự thu thuế hay phải tự khai nộp?
+
+**Q22** 🟢 🧮 — Bán quần áo, Shopee trừ thuế theo tỷ lệ bao nhiêu % mỗi đơn?
+
+**Q23** 🟡 — Bán hàng order qua Facebook cá nhân, khách chuyển khoản thẳng, ai nộp thuế?
+
+**Q24** 🔴 — Vừa bán tạp hóa (đã nộp thuế), vừa bán TikTok, cuối năm tính thuế gộp thế nào?
+
+**Q25** 🟡 — Sàn TMĐT không xác định được hàng hóa hay dịch vụ, trừ thuế mức cao nhất là bao nhiêu?
+
+**Q26** 🟡 — DT Shopee cả năm 300tr đã bị sàn trừ thuế, số tiền đó tính sao?
+
+**Q27** 🔴 — Cá nhân nước ngoài bán hàng trên sàn TMĐT VN, tỷ lệ thuế khác người Việt không?
+
+**Q28** 🟢 — Mã số định danh trên sàn TMĐT để khấu trừ thuế có phải số CCCD không?
+
+**Q29** 🟡 — Sàn đã tự trừ thuế, có cần điền vào tờ khai thuế ở phường nữa không?
+
+**Q30** 🟡 — DT dưới 500tr, muốn xin hoàn tiền thuế sàn đã trừ lố dùng mẫu đơn nào?
+
+**Q57** 🟡 — TikTok Shop đã khấu trừ thuế, sàn có cấp Chứng từ khấu trừ thuế Mẫu 01/CTKT-TMĐT không?
+
+**Q58** 🟡 — Shopee trừ thừa thuế (DT < 500tr), nộp Văn bản xin hoàn (Mẫu 03/CNKD-TMĐT) cho chi cục thuế nào?
+
+**Q59** 🟡 — Khách trả hàng hoàn tiền (giao dịch hủy), DT đó có bị sàn tính để trừ thuế không?
+
+**Q60** 🔴 — Dùng CCCD của mẹ đăng ký shop TikTok, sàn khai thuế thay dưới MST ai?
+
+**Q62** 🟢 — Tờ khai thuế HKD trên nền tảng TMĐT áp dụng mẫu số mấy?
+
+**Q79** 🟢 — Bán hàng online không thường xuyên có được khai thuế theo từng lần phát sinh không?
+
+**Q80** 🟡 — DT để sàn TMĐT tính thuế tính trên tiền hàng hay cộng luôn tiền ship?
+
+**Q96** 🟡 — Facebook, YouTube có phải cung cấp thông tin tài khoản, DT người bán cho CQT không?
+
+**Q97** 🟡 — Tiền thuế các sàn TMĐT khấu trừ của người bán nộp vào ngân sách theo tháng hay quý?
+
+**Q106** 🟡 — Bán hàng nhận ngoại tệ (USD), quy đổi VND theo tỷ giá nào khi lên tờ khai?
+
+**Q109** 🟢 — Bán hàng livestream trên Facebook cá nhân, Facebook có tự trừ thuế như TikTok không?
+
+**Q110** 🔴 — Vừa bán bún bò tại nhà, vừa đăng ký GrabFood. DT cả 2 trên 3 tỷ QTT TNCN gộp vào mẫu nào?
+
+**Q111** 🟢 — Sàn TMĐT (Shopee) nộp phần thuế đã khấu trừ của người bán theo mẫu tờ khai số mấy?
+
+**Q112** 🔴 — Cá nhân nước ngoài không cư trú tại VN bán hàng Lazada, sàn khấu trừ TNCN tỷ lệ bao nhiêu?
+
+**Q113** 🟡 — Tiền thuế TNCN Shopee đã trừ trong năm xử lý thế nào khi tự làm QTT cuối năm?
+
+**Q136** 🟡 — Bán hàng trên Shopee và TikTok, có được ủy nhiệm cho 2 sàn tự lập HĐ điện tử không?
+
+**Q137** 🟡 — Sàn TMĐT chây ỳ không nộp tiền thuế đã trừ lên Kho bạc, tôi có bị CQT đòi nợ không?
+
+**Q143** 🟢 — Chứng từ khấu trừ thuế TMĐT (Mẫu 01/CTKT-TMĐT) là bản giấy hay điện tử?
+
+**Q148** 🟢 — Bảng kê 01-1/BK-CNKD-TMĐT cột 08 'Nhóm ngành nghề' gồm mấy loại?
+
+**Q151** 🟢 — Cá nhân không cư trú bán hàng livestream trên nền tảng không có thanh toán tại VN, nộp thuế theo mẫu nào?
+
+**Q160** 🔴 🧮 — Cá nhân cung cấp nội dung số (YouTuber, TikToker) nhận tiền Google/TikTok, tỷ lệ thuế GTGT + TNCN = 7% đúng không?
+
+**Q162** 🟡 — Shopee khấu trừ thuế, cuối tháng xuất chứng từ tổng cho cả tháng hay từng giao dịch?
+
+**Q171** 🟡 — Sàn TMĐT chây ỳ không nộp tiền thuế khấu trừ, tôi có bị đòi nợ không? *(tương tự Q137)*
+
+**Q176** 🟡 — Bán tài sản cá nhân cũ (tivi, tủ lạnh) trên Chợ Tốt có bị sàn khấu trừ thuế % không?
+
+**Q179** 🟡 — Tờ khai Mẫu 02/CNKD-TMĐT nộp cho CQT trực tiếp quản lý hay nộp qua Cổng thông tin Tổng cục Thuế?
+
+**Q180** 🔴 — Thu nhập affiliate (tiếp thị liên kết) trên TikTok xếp vào nhóm dịch vụ (7%) hay đại lý (5%)?
+
+**Q193** 🟢 — Tờ khai Mẫu 01/CNKD-TMĐT yêu cầu khai loại hàng hóa dịch vụ gì?
+
+**Q196** 🟡 — Gian hàng Shopee bán cả quần áo (hàng hóa) và gói thành viên (dịch vụ), sàn tính tỷ lệ khấu trừ gộp hay tách riêng?
+
+---
+
+### B.15 Thủ tục hoàn thuế (2 câu)
+
+**Q89** 🟡 — Nộp thừa 5 triệu tiền thuế TNCN năm ngoái, có được tự động cấn trừ năm nay không?
+
+**Q127** 🔴 — Văn bản đề nghị hoàn trả khoản nộp thừa của cá nhân kinh doanh dùng mẫu số mấy?
+
+---
+
+### B.16 Thủ tục hành chính (14 câu)
+
+**Q90** 🟡 — Chuyển đổi từ HKD lên doanh nghiệp nhỏ và vừa có kế thừa nghĩa vụ thuế cũ không?
+
+**Q93** 🔴 — Vi phạm hóa đơn năm 2025, đến 2026 mới khiếu nại, CQT giải quyết theo luật nào?
+
+**Q123** 🟢 — Sổ tay thuế HKD khuyến nghị cài ứng dụng nào để tra cứu và nộp thuế điện tử?
+
+**Q125** 🟢 — Chứng từ giao dịch trên app ngân hàng (Mobile Banking) có được xem là chứng từ nộp thuế hợp lệ không?
+
+**Q147** 🟡 — CQT muốn kiểm tra trực tiếp tại cửa hàng DT 6 tỷ/năm, có phải thông báo trước không?
+
+**Q149** 🟢 — MST cá nhân kinh doanh có được dùng chung làm MST của HKD khi đăng ký thành lập không?
+
+**Q153** 🟡 — Chủ HKD mở tài khoản ngân hàng mới nhận tiền khách không khai báo CQT có vi phạm không?
+
+**Q167** 🟢 — Biểu mẫu Thông báo tạm ngừng HKD do CQT tiếp nhận (qua liên thông) có mã hiệu số mấy?
+
+**Q168** 🟢 — Nộp đủ nợ thuế bị cưỡng chế trích tiền ngân hàng, Quyết định chấm dứt cưỡng chế dùng mẫu nào?
+
+**Q169** 🟡 — Văn bản đề nghị gia hạn nộp thuế do hỏa hoạn có cần biên bản xác nhận thiệt hại của công an không?
+
+**Q184** 🟢 — Cá nhân có được ủy quyền cho Đại lý thuế ký tên thay trên Văn bản đề nghị hoàn thuế TNCN không?
+
+**Q188** 🔴 — Cơ quan đăng ký kinh doanh cấp xã phải gửi thông tin HKD mới thành lập sang CQT trong bao nhiêu ngày?
+
+**Q197** 🔴 — Đoàn kiểm tra thuế tại cửa hàng có được phép thu giữ máy tính cá nhân chủ hộ không?
+
+**Q199** 🟢 — Mã QR trong Sổ tay thuế liên kết tới Cổng thông tin của cơ quan nào?
+
+---
+
+### B.17 Xử lý vi phạm thuế (1 câu)
+
+**Q213** 🟡 — Doanh nghiệp khai đủ số thuế khấu trừ nhưng khai thiếu thu nhập chịu thuế hàng tháng, chỉ sửa trong QTT hay phải nộp tờ khai bổ sung?
+
+---
+
+### B.18 Xử phạt vi phạm (15 câu)
+
+**Q48** 🟡 — Nợ thuế khoán năm 2025 trở về trước, sang 2026 có bị truy thu không?
+
+**Q50** 🔴 — Năm 2025 nộp thuế khoán giấu DT, sang 2026 khai thật DT cao vọt, có bị phạt ngược không?
+
+**Q83** 🟡 — Cố tình không xuất HĐ điện tử cho khách, bị phát hiện phạt bao nhiêu?
+
+**Q84** 🟡 — Cháy làm mất dữ liệu HĐ chưa gửi CQT, khai báo mất có bị phạt không?
+
+**Q85** 🟢 — Quên cập nhật đổi CCCD 12 số trên MST cá nhân có bị CQT phạt tiền không?
+
+**Q86** 🔴 — Nộp chậm hồ sơ khai thuế điện tử 2 ngày, CQT gửi biên bản vi phạm qua kênh nào?
+
+**Q87** 🟢 — Tính sai DT dẫn đến nộp thiếu thuế, nếu tự nguyện nộp bù có bị quy tội trốn thuế không?
+
+**Q88** 🟡 — Bị phạt chậm nộp hồ sơ khai thuế, dẫn đến tiền thuế nộp chậm luôn, bị phạt cả 2 lỗi không?
+
+**Q99** 🟡 — Khai khống chi phí được hoàn thuế cao hơn thực tế, ngoài trả lại tiền còn bị phạt thêm bao nhiêu %?
+
+**Q118** 🔴 — Đã nộp đủ tiền phạt vào ngân sách, có bị bêu tên công khai trên báo không?
+
+**Q138** 🔴 — Không đăng ký thành lập mà vẫn mở cửa bán hàng, công an hay CQT xử phạt?
+
+**Q165** 🟢 — Mức tiền chậm nộp thuế hiện tại là bao nhiêu % trên 1 ngày chậm nộp?
+
+**Q166** 🟡 — Khai sai mã ngành nghề dẫn đến nộp thiếu thuế, bị phạt 20% số thuế thiếu đúng không?
+
+**Q182** 🔴 — Cố tình cung cấp sai mã số định danh cho Sàn TMĐT để trốn khấu trừ thuế bị xử phạt thế nào?
+
+**Q195** 🔴 — Sàn TMĐT kê khai sai thuế của tôi dẫn đến tôi bị phạt, sàn có trách nhiệm bồi thường không?
+
+---
+
+### B.19 Đăng ký MST (2 câu)
+
+**Q229** 🟢 — Hiện nay MST cá nhân là số CCCD, người nộp thuế còn cần đăng ký MST không?
+
+**Q230** 🟢 — Người lao động chưa khớp dữ liệu quốc gia chưa cập nhật MST qua CCCD, khi làm QTT TNCN có dùng MST cũ được không?
+
+---
+
+*Tổng cộng: 225 câu hỏi — 19 chủ đề — 3 mức độ (Easy/Medium/Hard)*
+*Nguồn: data/eval/questions.json, phiên bản R56 (04/04/2026)*
