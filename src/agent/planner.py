@@ -808,18 +808,26 @@ class TaxAIAgent:
                 msg = str(e)
                 if "API_KEY_INVALID" in msg or "API key expired" in msg:
                     raise RuntimeError("❌ GOOGLE_API_KEY không hợp lệ hoặc hết hạn.") from None
-                if ("RESOURCE_EXHAUSTED" in msg or "429" in msg) and attempt < max_retries:
-                    # Parse retry delay từ error message (chính xác, không +buffer)
-                    m = re.search(r"retry[^\d]*(\d+)s", msg, re.IGNORECASE)
-                    wait = int(m.group(1)) + 1 if m else delay  # +1s buffer cho server sync lag
-                    logger.warning(
-                        f"⚠️ 429 RESOURCE_EXHAUSTED — chờ {wait}s rồi retry "
-                        f"(attempt {attempt + 1}/{max_retries})..."
-                    )
+                is_429 = "RESOURCE_EXHAUSTED" in msg or "429" in msg
+                is_503 = "UNAVAILABLE" in msg or "503" in msg
+                if (is_429 or is_503) and attempt < max_retries:
+                    if is_503:
+                        wait = 10  # 503 thường ngắn hơn 429
+                        logger.warning(
+                            f"⚠️ 503 UNAVAILABLE — model overload, chờ {wait}s rồi retry "
+                            f"(attempt {attempt + 1}/{max_retries})..."
+                        )
+                    else:
+                        # Parse retry delay từ error message (chính xác, không +buffer)
+                        m = re.search(r"retry[^\d]*(\d+)s", msg, re.IGNORECASE)
+                        wait = int(m.group(1)) + 1 if m else delay  # +1s buffer
+                        logger.warning(
+                            f"⚠️ 429 RESOURCE_EXHAUSTED — chờ {wait}s rồi retry "
+                            f"(attempt {attempt + 1}/{max_retries})..."
+                        )
                     time.sleep(wait)
-                    delay = min(delay * 2, 60)  # cap tại 60s (từ 120s)
-                elif "RESOURCE_EXHAUSTED" in msg or "429" in msg:
-                    # Hết retries — raise với message thân thiện
+                    delay = min(delay * 2, 60)  # cap tại 60s
+                elif is_429 or is_503:
                     raise RuntimeError("RATE_LIMITED") from None
                 else:
                     raise RuntimeError(f"❌ Gemini API lỗi: {msg}") from None

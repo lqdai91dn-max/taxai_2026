@@ -783,6 +783,12 @@ if question:
                     "Câu hỏi của bạn không bị mất."
                 )
                 st.warning(err)
+            elif "UNAVAILABLE" in raw or "503" in raw:
+                err = (
+                    "⏳ **Model đang quá tải** — Gemini đang có lượng truy cập cao (503). "
+                    "Vui lòng chờ **10-30 giây** rồi hỏi lại."
+                )
+                st.warning(err)
             elif "GOOGLE_API_KEY" in raw or "API_KEY_INVALID" in raw:
                 err = "🔑 **Lỗi API key** — Kiểm tra lại `GOOGLE_API_KEY` trong file `.env`."
                 st.error(err)
