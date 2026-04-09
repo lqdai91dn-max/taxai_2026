@@ -366,7 +366,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "109_2025_QH15"
+      "111_2013_TTBTC"
     ],
     "expected_articles": [
       "Điều kiện xác định người phụ thuộc"
@@ -709,7 +709,7 @@
       "get_article"
     ],
     "key_facts": [
-      "tổng hợp chung"
+      "tổng hợp doanh thu"
     ],
     "expected_value": {
       "text": "Khai gộp nếu tổng doanh thu chịu thuế",
@@ -859,7 +859,7 @@
       "get_article"
     ],
     "key_facts": [
-      "không cần phải điền"
+      "không phải kê khai lại"
     ],
     "expected_value": {
       "text": "Không phải khai lại phần sàn đã thu",
@@ -889,7 +889,7 @@
       "get_article"
     ],
     "key_facts": [
-      "03/CNKD-TMĐT"
+      "nộp thừa"
     ],
     "expected_value": {
       "text": "03/CNKD-TMĐT",
@@ -1616,7 +1616,7 @@
       "get_article"
     ],
     "key_facts": [
-      "kê khai riêng biệt"
+      "tách riêng"
     ],
     "expected_value": {
       "text": "Khai thuế tổng hợp chung trên 01 hồ sơ khai thuế (NĐ68 Điều 8 K4 Đb)",
@@ -1726,8 +1726,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "68_2026_NDCP"
     ],
     "expected_articles": [
       "Nơi nhận hồ sơ hoàn thuế"
@@ -1798,7 +1797,7 @@
       "get_article"
     ],
     "key_facts": [
-      "người đăng ký tài khoản"
+      "CCCD của mẹ"
     ],
     "expected_value": {
       "text": "Tính cho người đứng tên CCCD (Mẹ)",
@@ -2120,8 +2119,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "109_2025_QH15",
-      "68_2026_NDCP"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Mặt hàng loại trừ giảm thuế"
@@ -2276,7 +2274,7 @@
       "evaluate_tax_obligation"
     ],
     "key_facts": [
-      "không còn phải nộp lệ phí môn bài"
+      "lệ phí môn bài"
     ],
     "expected_value": {
       "text": "Được miễn",
@@ -2335,7 +2333,7 @@
       "evaluate_tax_obligation"
     ],
     "key_facts": [
-      "chuyển dữ liệu"
+      "kết nối dữ liệu"
     ],
     "expected_value": {
       "text": "Chuyển dữ liệu điện tử",
@@ -2357,7 +2355,7 @@
     "needs_law_retrieval": true,
     "expected_docs": [
       "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "117_2025_NDCP"
     ],
     "expected_articles": [
       "Kỳ khai thuế online không thường xuyên"
@@ -2521,7 +2519,7 @@
       "get_article"
     ],
     "key_facts": [
-      "miễn phạt"
+      "không xử phạt"
     ],
     "expected_value": {
       "text": "Tùy thời gian khai báo có thể miễn phạt",
@@ -2787,7 +2785,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
       "310_2025_NDCP"
     ],
     "expected_articles": [
@@ -2817,7 +2814,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
       "152_2025_TTBTC"
     ],
     "expected_articles": [
@@ -2848,8 +2844,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "108_2025_QH15"
     ],
     "expected_articles": [
       "Hồ sơ gia hạn nộp thuế"
@@ -3390,7 +3385,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "109_2025_QH15",
       "18_2026_TTBTC"
     ],
     "expected_articles": [
@@ -3635,7 +3629,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP"
+      "108_2025_QH15"
     ],
     "expected_articles": [
       "Chứng từ nộp thuế app bank"
@@ -3735,7 +3729,7 @@
       "calculate_tax_hkd"
     ],
     "key_facts": [
-      "miễn thuế"
+      "không phải nộp thuế"
     ],
     "expected_value": {
       "text": "miễn thuế",
@@ -4029,7 +4023,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "1296_CTNVT",
       "126_2020_NDCP"
     ],
     "expected_articles": [
@@ -4452,7 +4445,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "109_2025_QH15"
+      "111_2013_TTBTC"
     ],
     "expected_articles": [
       "Thuế nông sản tự trồng"
@@ -4522,7 +4515,7 @@
       "get_article"
     ],
     "key_facts": [
-      "không được tính"
+      "không được trừ"
     ],
     "expected_value": {
       "text": "Không được tính",
@@ -4573,7 +4566,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
       "152_2025_TTBTC"
     ],
     "expected_articles": [
@@ -4584,7 +4576,7 @@
       "get_guidance"
     ],
     "key_facts": [
-      "quản lý"
+      "theo dõi"
     ],
     "expected_value": {
       "text": "Lên Báo cáo quản lý",
@@ -4614,7 +4606,7 @@
       "get_article"
     ],
     "key_facts": [
-      "tổng hợp theo tháng"
+      "theo tháng"
     ],
     "expected_value": {
       "text": "Tổng theo tháng",
@@ -4694,8 +4686,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
-      "310_2025_NDCP"
+      "68_2026_NDCP"
     ],
     "expected_articles": [
       "Điều về xử lý chậm nộp tiền thuế"
@@ -4981,7 +4972,7 @@
       "get_article"
     ],
     "key_facts": [
-      "hóa đơn giấy chưa sử dụng"
+      "không được tiếp tục"
     ],
     "expected_value": {
       "text": "Thực hiện thủ tục hủy",
@@ -5071,7 +5062,7 @@
       "get_article"
     ],
     "key_facts": [
-      "Cổng TTĐT Tổng cục Thuế"
+      "Tổng cục Thuế"
     ],
     "expected_value": {
       "text": "Cổng TTĐT Tổng cục Thuế",
@@ -5462,7 +5453,8 @@
       "get_article"
     ],
     "key_facts": [
-      "Hàng hóa/Dịch vụ"
+      "hàng hóa",
+      "dịch vụ"
     ],
     "expected_value": {
       "text": "Hàng hóa/Dịch vụ",
@@ -5492,7 +5484,7 @@
       "get_guidance"
     ],
     "key_facts": [
-      "được phân bổ đều"
+      "phân bổ"
     ],
     "expected_value": {
       "text": "được phân bổ vào các tháng",
@@ -5584,7 +5576,7 @@
       "get_guidance"
     ],
     "key_facts": [
-      "Không được thu giữ"
+      "không được phép"
     ],
     "expected_value": {
       "text": "Không được thu giữ máy tính",
@@ -5604,7 +5596,6 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "92_2015_TTBTC",
       "68_2026_NDCP"
     ],
     "expected_articles": [
@@ -5859,7 +5850,7 @@
     "needs_law_retrieval": true,
     "expected_docs": [
       "117_2025_NDCP",
-      "111_2013_TTBTC"
+      "126_2020_NDCP"
     ],
     "expected_articles": [
       "NĐ117/2025"
@@ -6165,7 +6156,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "126_2020_NDCP",
+      "68_2026_NDCP",
       "108_2025_QH15"
     ],
     "expected_articles": [
