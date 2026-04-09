@@ -572,7 +572,7 @@ with st.sidebar:
     show_iters      = st.toggle("Hiển thị số bước suy luận", value=True)
     use_cache       = st.toggle("Dùng cache câu hỏi", value=True,
                                 help="Trả kết quả ngay nếu câu hỏi tương tự đã được hỏi (similarity ≥ 0.88)")
-    use_streaming   = st.toggle("Streaming response", value=True,
+    use_streaming   = st.toggle("Streaming response", value=False,
                                 help="Hiển thị câu trả lời từng từ thay vì hiện toàn bộ cùng lúc")
 
     st.divider()
@@ -700,26 +700,17 @@ if question:
                 save_session(st.session_state.session_id, st.session_state.messages)
                 st.rerun()
 
-            # P1 Cache: exact hash lookup sau preliminary retrieval
-            # Tại sao post-retrieval: hash key bao gồm top_doc_ids → khi luật mới
-            # hiệu lực, cùng câu hỏi sẽ retrieve docs khác → hash khác → cache miss
-            # → answer mới được generate. Không cần bump CACHE_VERSION.
+            # Cache lookup — semantic similarity, không cần preliminary retrieval
             top_doc_ids: list[str] = []
             if use_cache and not filter_doc_id:
                 try:
-                    from src.tools.retrieval_tools import search_legal_docs as _sld
-                    _prelim = _sld(question, top_k=3)
-                    top_doc_ids = list({
-                        r["doc_id"] for r in _prelim.get("results", [])
-                        if r.get("doc_id")
-                    })
-                    hit = load_qa_cache().lookup_exact(question, top_doc_ids)
+                    hit = load_qa_cache().lookup(question)
                     if hit:
                         answer     = hit.answer
                         from_cache = True
                 except Exception as _ce:
                     import logging as _log
-                    _log.getLogger(__name__).debug(f"[Cache] preliminary retrieval error: {_ce}")
+                    _log.getLogger(__name__).debug(f"[Cache] lookup error: {_ce}")
 
             # Full pipeline
             if not from_cache:
@@ -732,12 +723,16 @@ if question:
                 iterations = result.get("iterations", 0)
                 model_name = result.get("model", "")
 
-                # Store vào cache nếu hợp lệ (dùng top_doc_ids từ preliminary retrieval)
+                # Store vào cache nếu hợp lệ — lấy doc_ids từ pipeline result
                 if use_cache and answer and iterations <= 5 and not filter_doc_id:
                     key_facts = [
                         s.get("breadcrumb", s.get("reference", ""))
                         for s in sources if s.get("type") == "search"
                     ]
+                    top_doc_ids = list({
+                        s.get("doc_id") for s in sources
+                        if s.get("type") == "search" and s.get("doc_id")
+                    })
                     load_qa_cache().store(
                         question=question, answer=answer,
                         key_facts=[kf for kf in key_facts if kf],
