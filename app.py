@@ -423,6 +423,71 @@ def _format_answer_sections(content: str) -> str:
     return content
 
 
+# ── Streaming helper ──────────────────────────────────────────────────────────
+
+def _render_streaming(msg: dict, show_sources: bool, show_iters: bool) -> None:
+    """
+    P3 — Streaming display cho NEW AI messages.
+
+    Dùng st.write_stream() để hiển thị từng từ thay vì toàn bộ cùng lúc.
+    Chỉ gọi cho messages mới vừa generate (không phải history re-render).
+
+    Sau khi stream xong, hiển thị metadata (cache badge, iterations, time)
+    và sources dưới dạng st.expander.
+    """
+    answer     = msg.get("content", "")
+    ts         = msg.get("time", "")
+    from_cache = msg.get("from_cache", False)
+    iterations = msg.get("iterations", 0)
+    citations  = msg.get("citations", [])
+    sources    = msg.get("sources", [])
+    latency_ms = msg.get("latency_ms", 0)
+
+    # Annotate citations inline
+    display_content = answer
+    if citations and '<span class="inline-cite">' not in answer:
+        display_content, _ = parse_citations(answer)
+    display_content = _format_answer_sections(display_content)
+
+    # Stream từng từ vào chat message container
+    with st.chat_message("assistant", avatar="⚖️"):
+        # st.write_stream nhận generator, trả về full text
+        def _word_gen():
+            for word in display_content.split(" "):
+                yield word + " "
+
+        st.write_stream(_word_gen())
+
+        # Metadata badges
+        badges: list[str] = []
+        if from_cache:
+            badges.append("⚡ Cache")
+        if show_iters and iterations > 1:
+            badges.append(f"🔄 {iterations} bước")
+        if latency_ms:
+            badges.append(f"⏱️ {latency_ms}ms")
+        if ts:
+            badges.append(ts)
+        st.caption("  ·  ".join(badges))
+
+        # Citations footnotes
+        if citations and show_sources:
+            msg_id_key = msg.get("_id", str(id(msg)))
+            btn_cols = st.columns(min(len(citations), 4))
+            for i, cit in enumerate(citations):
+                with btn_cols[i % len(btn_cols)]:
+                    label = f"[{i+1}] Điều {cit['dieu']} · {cit['doc_number']}"
+                    if st.button(label, key=f"cit_stream_{msg_id_key}_{i}",
+                                 use_container_width=True, type="secondary"):
+                        show_article_dialog(cit)
+
+        # Sources expander
+        if show_sources and sources:
+            with st.expander(f"📚 {len(sources)} nguồn tham khảo", expanded=False):
+                for src in sources:
+                    st.markdown(f"- {src.get('breadcrumb', src.get('reference', ''))}")
+
+
 # ── Render one message ────────────────────────────────────────────────────────
 
 def _render_message(msg: dict, show_sources: bool, show_iters: bool) -> None:
@@ -503,10 +568,12 @@ with st.sidebar:
     st.divider()
 
     # Toggles
-    show_sources = st.toggle("Hiển thị nguồn trích dẫn", value=True)
-    show_iters   = st.toggle("Hiển thị số bước suy luận", value=True)
-    use_cache    = st.toggle("Dùng cache câu hỏi", value=True,
-                             help="Trả kết quả ngay nếu câu hỏi tương tự đã được hỏi (similarity ≥ 0.88)")
+    show_sources    = st.toggle("Hiển thị nguồn trích dẫn", value=True)
+    show_iters      = st.toggle("Hiển thị số bước suy luận", value=True)
+    use_cache       = st.toggle("Dùng cache câu hỏi", value=True,
+                                help="Trả kết quả ngay nếu câu hỏi tương tự đã được hỏi (similarity ≥ 0.88)")
+    use_streaming   = st.toggle("Streaming response", value=True,
+                                help="Hiển thị câu trả lời từng từ thay vì hiện toàn bộ cùng lúc")
 
     st.divider()
 
@@ -603,6 +670,16 @@ if question:
             iterations = 0
             model_name = ""
 
+            # P2 — Multi-turn DST: build context từ lịch sử trước câu hỏi hiện tại
+            from src.agent.dialogue_state import DialogueStateTracker as _DST
+            _tracker = _DST()
+            _history_before = [m for m in st.session_state.messages if m.get("role") == "user"
+                               and m.get("content") != question]
+            _tracker.process_history(_history_before)
+            _tracker.process_current_turn(question)
+            # Chỉ inject context nếu đã có ít nhất 1 lượt trước (không phải câu đầu tiên)
+            _context_hint = _tracker.build_context_string() if _history_before else None
+
             # Off-topic guard (trước cache — tránh serve cached response lạc đề)
             if _is_offtopic(question):
                 answer     = _OFFTOPIC_RESPONSE
@@ -623,25 +700,40 @@ if question:
                 save_session(st.session_state.session_id, st.session_state.messages)
                 st.rerun()
 
-            # Cache lookup
-            if use_cache:
-                hit = load_qa_cache().lookup(question)
-                if hit:
-                    answer     = hit.answer
-                    from_cache = True
+            # P1 Cache: exact hash lookup sau preliminary retrieval
+            # Tại sao post-retrieval: hash key bao gồm top_doc_ids → khi luật mới
+            # hiệu lực, cùng câu hỏi sẽ retrieve docs khác → hash khác → cache miss
+            # → answer mới được generate. Không cần bump CACHE_VERSION.
+            top_doc_ids: list[str] = []
+            if use_cache and not filter_doc_id:
+                try:
+                    from src.tools.retrieval_tools import search_legal_docs as _sld
+                    _prelim = _sld(question, top_k=3)
+                    top_doc_ids = list({
+                        r["doc_id"] for r in _prelim.get("results", [])
+                        if r.get("doc_id")
+                    })
+                    hit = load_qa_cache().lookup_exact(question, top_doc_ids)
+                    if hit:
+                        answer     = hit.answer
+                        from_cache = True
+                except Exception as _ce:
+                    import logging as _log
+                    _log.getLogger(__name__).debug(f"[Cache] preliminary retrieval error: {_ce}")
 
             # Full pipeline
             if not from_cache:
                 result     = load_agent().answer(
-                    question=question, filter_doc_id=filter_doc_id, show_sources=True
+                    question=question, filter_doc_id=filter_doc_id, show_sources=True,
+                    context_hint=_context_hint,
                 )
                 answer     = result["answer"]
                 sources    = result.get("sources", [])
                 iterations = result.get("iterations", 0)
                 model_name = result.get("model", "")
 
-                # Store vào cache nếu hợp lệ
-                if use_cache and answer and sources and iterations <= 5:
+                # Store vào cache nếu hợp lệ (dùng top_doc_ids từ preliminary retrieval)
+                if use_cache and answer and iterations <= 5 and not filter_doc_id:
                     key_facts = [
                         s.get("breadcrumb", s.get("reference", ""))
                         for s in sources if s.get("type") == "search"
@@ -650,6 +742,7 @@ if question:
                         question=question, answer=answer,
                         key_facts=[kf for kf in key_facts if kf],
                         source_round="user",
+                        top_doc_ids=top_doc_ids or None,
                     )
 
             latency = int((time.perf_counter() - t0) * 1000)
@@ -675,8 +768,11 @@ if question:
             # Auto-save session sau mỗi câu
             save_session(st.session_state.session_id, st.session_state.messages)
 
-            # Render AI message
-            _render_message(ai_msg, show_sources, show_iters)
+            # Render AI message — streaming nếu bật, ngược lại render thường
+            if use_streaming and not from_cache:
+                _render_streaming(ai_msg, show_sources, show_iters)
+            else:
+                _render_message(ai_msg, show_sources, show_iters)
 
         except Exception as e:
             raw = str(e)

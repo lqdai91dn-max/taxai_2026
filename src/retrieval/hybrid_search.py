@@ -6,7 +6,9 @@ Hybrid search = BM25 (keyword) + Vector (semantic) cho TaxAI 2026
 from __future__ import annotations
 import json
 import logging
+import math
 import re
+from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -464,7 +466,101 @@ class HybridSearch:
             _excl = set(exclude_doc_ids)
             results = [r for r in results if r.get("metadata", {}).get("doc_id", "") not in _excl]
 
+        # 9. valid_to temporal filter (P0) — loại chunk từ văn bản đã hết hiệu lực.
+        # DOCUMENT_REGISTRY.LegalDocument.effective_to: None = còn hiệu lực; date = hết hạn.
+        # Default query_date = today → filter tất cả doc hết hiệu lực (effective_to < today).
+        # Không filter khi effective_to=None (đại đa số — văn bản còn hiệu lực).
+        # Tác dụng hiện tại: minimal (chưa có doc nào có effective_to set).
+        # Sẽ có tác dụng khi 111_2013/92_2015 được set effective_to trong DOCUMENT_REGISTRY.
+        results = self._filter_expired_docs(results)
+
+        # 10. Scope filter (P1) — loại specific_entity docs cho câu hỏi nguyên tắc chung.
+        # Chỉ chạy khi search tổng quát (không filter theo doc cụ thể).
+        # Hiện tại: tất cả docs là "general" → không có tác dụng.
+        # Sẽ active khi thêm công văn CQT trả lời riêng cho doanh nghiệp cụ thể.
+        if not filter_doc_id:
+            results = self._filter_specific_entity_docs(results, is_general_question=True)
+
         return results
+
+    def _filter_specific_entity_docs(
+        self,
+        results: List[Dict[str, Any]],
+        is_general_question: bool = True,
+    ) -> List[Dict[str, Any]]:
+        """P1 — Scope filter: loại tài liệu specific_entity cho câu hỏi nguyên tắc chung.
+
+        Vấn đề: Công văn trả lời riêng cho 1 doanh nghiệp (scope=specific_entity) có thể
+        mâu thuẫn với Thông tư chung (scope=general). Nếu dùng recency → sẽ chọn sai.
+
+        Rule:
+            is_general_question=True → exclude specific_entity docs khỏi results
+            is_general_question=False → giữ nguyên (câu hỏi về trường hợp cụ thể, OK dùng)
+
+        Hiện trạng (09/04/2026):
+            Tất cả docs trong DOCUMENT_REGISTRY đều scope="general".
+            Method này là infrastructure — sẽ có tác dụng khi thêm specific_entity docs.
+
+        Args:
+            results:              Danh sách chunks sau ranking
+            is_general_question:  True nếu câu hỏi về nguyên tắc/quy định chung
+        """
+        if not is_general_question:
+            return results
+
+        from src.utils.config import DOCUMENT_REGISTRY
+        filtered = []
+        removed = 0
+        for r in results:
+            doc_id = r.get("metadata", {}).get("doc_id", "")
+            reg = DOCUMENT_REGISTRY.get(doc_id)
+            if reg is not None and reg.scope_of_application == "specific_entity":
+                removed += 1
+                logger.info("[ScopeFilter] Loại doc=%s (specific_entity) khỏi general question", doc_id)
+                continue
+            filtered.append(r)
+
+        if removed:
+            logger.info("[ScopeFilter] Filtered %d specific_entity chunks", removed)
+        return filtered
+
+    def _filter_expired_docs(
+        self,
+        results: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        """P0 — valid_to temporal filter.
+
+        Loại bỏ chunks từ văn bản đã hết hiệu lực theo DOCUMENT_REGISTRY.
+        Dùng date.today() làm query_date mặc định.
+
+        Design note:
+        - Phần lớn docs có effective_to=None → không bị filter (vẫn hiệu lực)
+        - Hiện tại không có doc nào có effective_to set → filter không có tác dụng
+        - Sẽ có tác dụng khi thêm effective_to cho 111_2013, 92_2015 (superseded docs)
+        - Không dùng superseded metadata vì supersession penalty (bước 3.2) đã xử lý
+          → filter này là lớp backup cứng (hard exclude) khi doc thực sự hết hiệu lực
+        """
+        from src.utils.config import DOCUMENT_REGISTRY
+        from datetime import date as _date
+
+        today = _date.today()
+        filtered = []
+        removed = 0
+        for r in results:
+            doc_id = r.get("metadata", {}).get("doc_id", "")
+            reg = DOCUMENT_REGISTRY.get(doc_id)
+            if reg is not None and reg.effective_to is not None and reg.effective_to < today:
+                removed += 1
+                logger.info(
+                    "[ValidTo] Loại chunk từ %s (effective_to=%s < today=%s)",
+                    doc_id, reg.effective_to, today,
+                )
+                continue
+            filtered.append(r)
+
+        if removed:
+            logger.info("[ValidTo] Filtered %d chunks từ %d doc(s) đã hết hiệu lực", removed, removed)
+        return filtered
 
     def _detect_topics(self, query: str) -> List[Dict]:
         """Trả về các TOPIC_RULES match với query (case-insensitive)."""
@@ -725,29 +821,51 @@ class HybridSearch:
         self,
         results: List[Dict[str, Any]],
     ) -> List[Dict[str, Any]]:
-        """P2.2 — Legal authority hierarchy boost.
+        """P1 — Legal authority hierarchy boost + recency scoring.
 
-        Điều chỉnh rrf_score theo cấp độ pháp lý của từng văn bản.
-        Khi NĐ126/2020 và 1296/CTNVT cùng xuất hiện trong top results,
-        nghị định (level 3, ×1.10) được ưu tiên hơn công văn (level 5, ×0.70).
+        Công thức: final_score = rrf_score × hierarchy_factor × (1 + β × recency)
+
+        hierarchy_factor: Luật×1.10, NQ×1.07, NĐ×1.05, TT×1.00, Công văn×0.85
+        recency = 1 / (1 + log(1 + days_since_effective/365))
+            - Văn bản mới (0 ngày): recency ≈ 1.0
+            - 1 năm: recency ≈ 0.59
+            - 5 năm: recency ≈ 0.37
+            - 10 năm: recency ≈ 0.27
+        β = 0.15 — nhỏ đủ để không override hierarchy, đủ để phân biệt 310/2025 vs 125/2020
+
+        Chỉ áp dụng recency cho chunk KHÔNG bị supersession penalty
+        (chunk superseded đã bị ×0.25, không cần thêm recency penalty).
         """
         from src.utils.config import DOCUMENT_REGISTRY
 
+        today = date.today()
         changed = False
         for r in results:
             doc_id = r.get("metadata", {}).get("doc_id", "")
             reg = DOCUMENT_REGISTRY.get(doc_id)
             if reg is None:
                 continue
-            factor = _LEGAL_LEVEL_BOOST.get(reg.legal_level, 1.0)
-            if factor != 1.0:
-                r["rrf_score"] = round(r.get("rrf_score", 0) * factor, 6)
-                r["authority_boost"] = factor
+
+            # 1. Hierarchy factor
+            hierarchy = _LEGAL_LEVEL_BOOST.get(reg.legal_level, 1.0)
+
+            # 2. Recency factor — bỏ qua nếu chunk đã bị supersession penalty
+            recency_boost = 1.0
+            if not r.get("superseded_penalized"):
+                days = max(0, (today - reg.effective_from).days)
+                recency = 1.0 / (1.0 + math.log1p(days / 365.0))
+                recency_boost = 1.0 + 0.15 * recency
+
+            # 3. Combine
+            combined = hierarchy * recency_boost
+            if abs(combined - 1.0) > 0.001:
+                r["rrf_score"] = round(r.get("rrf_score", 0) * combined, 6)
+                r["authority_boost"] = round(combined, 4)
                 changed = True
 
         if changed:
             results.sort(key=lambda x: x.get("rrf_score", 0), reverse=True)
-            logger.info("[P2.2] Authority hierarchy boost applied")
+            logger.info("[P1] Authority hierarchy + recency boost applied")
 
         return results
 

@@ -895,6 +895,13 @@ class LegalDocument:
     category: str = "General"  # TNCN | GTGT | Policy | Accounting | Penalty | TMDT
     tax_scope: TaxScope = field(default_factory=dict)
     tags: List[str] = field(default_factory=list)
+
+    # ============ SCOPE OF APPLICATION (P1) ============
+    # "general"         — áp dụng cho mọi đối tượng (Luật, NĐ, TT, Công văn hướng dẫn chung)
+    # "specific_entity" — chỉ áp dụng cho 1 doanh nghiệp/cá nhân cụ thể
+    #                     (Công văn trả lời của CQT cho 1 taxpayer riêng)
+    # Rule: khi câu hỏi mang tính nguyên tắc chung → không dùng specific_entity docs
+    scope_of_application: str = "general"
     
     # ============ PROCESSING METADATA ============
     parsed_date: str = field(default_factory=lambda: datetime.now().isoformat())

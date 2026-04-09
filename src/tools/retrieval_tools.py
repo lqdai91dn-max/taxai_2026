@@ -465,10 +465,45 @@ def search_legal_docs(
             except Exception as e:
                 logger.warning(f"[C1b] TMĐT co-retrieval failed: {e}")
 
+    # P0 — Retrieval OOD Signal (Relative Score Gap)
+    # Tính từ kết quả gốc (trước co-retrieval injection) để phản ánh "độ khó tìm" thực sự.
+    # hits = kết quả từ searcher.search() trước injection; results đã bao gồm injected chunks.
+    # Ngưỡng calibrate từ range RRF score: ~0.005–0.016 cho top results.
+    #   OOD_FLOOR = 0.005: top chunk score này thấp → match yếu → likely OOD
+    #   OOD_GAP_MARGIN = 0.0008: khoảng cách score[0]-score[1] rất nhỏ → mọi chunk đều "vừa vừa"
+    #     → không có winner rõ ràng → many false positives from keyword overlap
+    _OOD_FLOOR = 0.005
+    _OOD_GAP_MARGIN = 0.0008
+    _ood_signal = False
+    _ood_top_score = 0.0
+    _ood_gap = 0.0
+    if hits:
+        _scores = [h.get("rrf_score", 0.0) for h in hits]
+        _ood_top_score = _scores[0] if _scores else 0.0
+        if len(_scores) >= 2:
+            _ood_gap = _scores[0] - _scores[1]
+            _ood_signal = _ood_gap < _OOD_GAP_MARGIN or _ood_top_score < _OOD_FLOOR
+        elif _scores:
+            _ood_signal = _scores[0] < _OOD_FLOOR
+        else:
+            _ood_signal = True
+    else:
+        _ood_signal = True  # không có kết quả = definitely OOD
+    if _ood_signal:
+        logger.info(
+            "[OOD] Retrieval OOD signal: top_score=%.5f gap=%.5f → likely low-confidence",
+            _ood_top_score, _ood_gap,
+        )
+
     return {
         "query":        query,
         "total_found":  len(results),
         "results":      results,
+        "_ood": {
+            "signal":    _ood_signal,
+            "top_score": round(_ood_top_score, 5),
+            "gap":       round(_ood_gap, 5),
+        },
     }
 
 

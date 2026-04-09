@@ -792,6 +792,7 @@ class TaxAIAgent:
         question: str,
         filter_doc_id: str | None = None,
         show_sources: bool = True,
+        context_hint: str | None = None,
     ) -> dict[str, Any]:
         """
         Trả lời câu hỏi thuế qua agentic loop.
@@ -800,12 +801,46 @@ class TaxAIAgent:
             question:      Câu hỏi của user.
             filter_doc_id: Giới hạn tìm kiếm trong 1 văn bản (optional).
             show_sources:  Trả về tool call log hay không.
+            context_hint:  Ngữ cảnh DST từ các lượt hội thoại trước (optional).
+                           Được thêm vào system prompt để LLM hiểu follow-up questions.
 
         Returns:
             {answer, sources, tool_calls, model, iterations}
         """
         today = date.today().isoformat()
         system_prompt = AGENT_SYSTEM_PROMPT.format(today=today)
+
+        # P2 — Multi-turn DST context injection
+        if context_hint:
+            system_prompt += f"\n\n{context_hint}"
+
+        # ── Pre-router (P1) — lightweight tax-domain check ────────────────────
+        # Chặn query rõ ràng ngoài domain TRƯỚC khi chạy bất kỳ tool nào.
+        # Tiết kiệm: ~10K tokens/call (embedding + search + generation).
+        # Không dùng LLM: chỉ keyword + pattern matching → ~0ms latency.
+        #
+        # Thiết kế 2 lớp:
+        #   Lớp 1 (hard reject): keywords rõ ràng ngoài domain thuế
+        #   Lớp 2 (soft pass): nếu có bất kỳ keyword thuế → pass dù có OOD words
+        # Nguyên tắc: FN (bỏ sót OOD) ít hại hơn FP (reject câu hỏi hợp lệ)
+        _pre_router_result = _pre_route(question)
+        if _pre_router_result == "reject":
+            return {
+                "answer": (
+                    "Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt Nam. "
+                    "Tôi chỉ có thể hỗ trợ các câu hỏi liên quan đến thuế TNCN, thuế GTGT, "
+                    "hộ kinh doanh và các thủ tục thuế. Bạn có câu hỏi nào về thuế không?"
+                ),
+                "sources": [],
+                "citations_doc_ids": [],
+                "retrieved_doc_ids": [],
+                "tool_calls": [],
+                "model": self.model,
+                "iterations": 0,
+                "confidence": {"level": "pre_router_reject"},
+                "fact_check": {},
+                "_pre_routed": True,
+            }
 
         # Nếu có filter_doc_id → thêm vào system prompt
         if filter_doc_id:
@@ -1033,6 +1068,43 @@ class TaxAIAgent:
                 "Vui lòng tham khảo trực tiếp cơ quan thuế hoặc Cổng thông tin thuế điện tử "
                 "(https://thuedientu.gdt.gov.vn)."
             )
+        elif confidence["level"] == "no_citation":
+            # P0 Citation Guardrail: tìm được kết quả nhưng câu trả lời thiếu
+            # trích dẫn pháp lý VÀ quá ngắn → không đủ tin cậy để trả ra ngoài
+            logger.warning("[CitationGuard] Answer thiếu trích dẫn pháp lý (has_citation=False, answer_ok=False)")
+            answer_text = (
+                "Tôi đã tra cứu nhưng không xác định được căn cứ pháp lý cụ thể "
+                "cho câu hỏi này trong cơ sở dữ liệu hiện tại. "
+                "Vui lòng liên hệ cơ quan thuế hoặc tư vấn viên thuế để được hỗ trợ chính xác."
+            )
+
+        # ── Citation Alignment — Numeric Heuristic (P0) ───────────────────────
+        # Phát hiện số liệu trong answer không xuất hiện trong chunk nào → hallucination
+        # MVP: chỉ log warning, chưa reject (cần calibrate false positive rate trước)
+        _align_mismatches = _check_numeric_alignment(answer_text, tool_calls_log)
+        if _align_mismatches:
+            logger.warning(
+                "[CitationAlign] %d số không khớp chunk — có thể hallucination: %s",
+                len(_align_mismatches), _align_mismatches[:5],
+            )
+
+        # ── Retrieval OOD Signal (P0) ─────────────────────────────────────────
+        # Nếu MỌI search call đều trả về OOD signal (score gap thấp / top_score thấp)
+        # → khả năng cao câu hỏi ngoài domain nhưng vẫn partial match keywords
+        _search_calls_with_ood = [
+            tc for tc in tool_calls_log
+            if tc.get("tool") == "search_legal_docs"
+            and isinstance(tc.get("result"), dict)
+        ]
+        if _search_calls_with_ood:
+            _all_ood = all(
+                tc["result"].get("_ood", {}).get("signal", False)
+                for tc in _search_calls_with_ood
+            )
+            if _all_ood and confidence["level"] == "ok":
+                logger.warning(
+                    "[OOD] Tất cả search calls có retrieval OOD signal — câu hỏi có thể ngoài corpus"
+                )
 
         # ── Fact Consistency Check (rule-based, 0 API cost) ───────────────────
         fact_check_result = check_facts(answer_text, tool_calls_log)
@@ -1166,6 +1238,49 @@ def _truncate_result(result: Any, max_chars: int = 800) -> Any:
                 truncated[k] = v
         return truncated
     return result
+
+
+def _check_numeric_alignment(answer: str, tool_calls: list[dict]) -> list[str]:
+    """
+    P0 Citation Alignment — Numeric Heuristic.
+
+    Kiểm tra các số có đơn vị pháp lý trong answer có xuất hiện trong chunk text không.
+    Mục đích: phát hiện hallucination dạng "chunk nói 5%, answer nói 10%".
+
+    Returns:
+        List các số không tìm thấy trong chunk nào (có thể là hallucination).
+        Empty list = không phát hiện mismatch.
+
+    Giới hạn:
+        - Chỉ catch numeric drift — không catch hallucination về tên văn bản
+        - False negative: số đúng nhưng không xuất hiện đúng dạng (định dạng khác)
+        - MVP: chỉ log warning, caller quyết định có reject không
+    """
+    # Tìm số có đơn vị thuế/pháp lý (%, triệu, tháng, ngày, ...)
+    num_pattern = re.compile(
+        r'\b(\d+(?:[,.]\d+)?)\s*(?:%|triệu|tỷ|nghìn|đồng|tháng|ngày|năm)\b',
+        re.IGNORECASE,
+    )
+    numbers_in_answer = num_pattern.findall(answer.lower())
+    if not numbers_in_answer:
+        return []
+
+    # Gom tất cả chunk texts từ search_legal_docs results
+    chunk_texts: list[str] = []
+    for call in tool_calls:
+        if call.get("tool") != "search_legal_docs":
+            continue
+        for r in call.get("result", {}).get("results", []):
+            snippet = r.get("snippet", "")
+            if snippet:
+                chunk_texts.append(snippet.lower())
+
+    if not chunk_texts:
+        return []
+
+    all_chunk_text = " ".join(chunk_texts)
+    mismatches = [n for n in numbers_in_answer if n not in all_chunk_text]
+    return mismatches
 
 
 def _extract_sources_from_tool_log(tool_calls: list[dict]) -> list[dict]:
