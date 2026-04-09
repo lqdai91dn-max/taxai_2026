@@ -223,7 +223,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Tỷ lệ khấu trừ thuế qua sàn thương mại điện tử (TMĐT) theo Điều 5 Khoản 2 NĐ 117/2025/NĐ-CP:\n• Thuế GTGT — Hàng hóa: 1% | Dịch vụ: 5% | Vận tải + hàng hóa: 3%\n• Thuế TNCN (cá nhân cư trú) — Hàng hóa: 0,5% | Dịch vụ: 2% | Vận tải + hàng hóa: 1,5%\n• Thuế TNCN (cá nhân không cư trú) — Hàng hóa: 1% | Dịch vụ: 5% | Vận tải + hàng hóa: 2%\n• Không xác định được hàng hóa hay dịch vụ: áp dụng tỷ lệ dịch vụ (xem Điểm c)\n\n[Nguyên văn]: Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.",
+              "content": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2",
               "references": [],
               "children": [
@@ -232,7 +232,7 @@
                   "node_type": "Điểm",
                   "node_index": "a",
                   "title": null,
-                  "content": "Tỷ lệ % thuế GTGT qua sàn TMĐT: Hàng hóa 1%, Dịch vụ 5%, Vận tải và dịch vụ gắn hàng hóa 3%.\n\n[Nguyên văn]: Tỷ lệ % tính thuế giá trị gia tăng thực hiện theo quy định của Luật Thuế giá trị gia tăng như sau:",
+                  "content": "Tỷ lệ % tính thuế giá trị gia tăng thực hiện theo quy định của Luật Thuế giá trị gia tăng như sau:",
                   "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm a",
                   "references": [
                     {
@@ -278,7 +278,7 @@
                   "node_type": "Điểm",
                   "node_index": "b",
                   "title": null,
-                  "content": "Tỷ lệ % thuế TNCN qua sàn TMĐT: Cá nhân cư trú — Hàng hóa 0,5%, Dịch vụ 2%, Vận tải+hàng hóa 1,5%. Cá nhân không cư trú — Hàng hóa 1%, Dịch vụ 5%, Vận tải+hàng hóa 2%.\n\n[Nguyên văn]: Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:",
+                  "content": "Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:",
                   "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm b",
                   "references": [
                     {
@@ -653,7 +653,7 @@
               "node_type": "Khoản",
               "node_index": "2",
               "title": null,
-              "content": "Tỷ lệ % thuế GTGT và TNCN áp dụng khi tổ chức khai thay, nộp thay (Điều 9 Khoản 2 NĐ 117/2025): cùng tỷ lệ với Điều 5 Khoản 2 — GTGT Hàng hóa 1%, Dịch vụ 5%, Vận tải 3%; TNCN cư trú Hàng hóa 0,5%, Dịch vụ 2%.\n\n[Nguyên văn]: Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:",
+              "content": "Tỷ lệ % tính thuế giá trị gia tăng, tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế giá trị gia tăng và Luật Thuế thu nhập cá nhân như sau:",
               "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương III > Điều 9: Hồ sơ, thủ tục kê khai, nộp thuế đối với cá nhân không cư trú nộp thuế trên nền tảng thương mại điện tử không có chức năng thanh toán > Khoản 2",
               "references": [
                 {
