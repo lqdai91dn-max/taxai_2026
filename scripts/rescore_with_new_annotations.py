@@ -116,6 +116,9 @@ def main():
             citations = list(set(det.get("matched", []) + det.get("extra", [])))
             if not citations:
                 citations = det.get("got", [])
+            # Rescore format (from previous rescore run): "citations" key
+            if not citations:
+                citations = det.get("citations", [])
         else:
             citations = []
         # Fallback to retrieved_doc_ids if still empty

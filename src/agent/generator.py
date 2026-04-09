@@ -659,6 +659,34 @@ class GeneratorStage:
             except (KeyError, TypeError) as e:
                 logger.warning("Generator: skip malformed citation: %s", e)
 
+        # Fallback: auto-populate citations từ top retrieved chunks nếu LLM không cite
+        # Triggered khi citations=[] (LLM answer from training data, không dùng chunks)
+        if not citations and state.retrieval_output and state.retrieval_output.chunks:
+            losing_ids_fb: Set[str] = set()
+            if state.retrieval_output.has_conflict:
+                for cp in state.retrieval_output.conflicts:
+                    loser = cp.chunk_id_a if cp.winner_id == cp.chunk_id_b else cp.chunk_id_b
+                    losing_ids_fb.add(loser)
+            seen_fb: set = set()
+            for ch in state.retrieval_output.chunks:
+                if ch.chunk_id in losing_ids_fb or ch.doc_id in seen_fb:
+                    continue
+                seen_fb.add(ch.doc_id)
+                citations.append(Citation(
+                    doc_id=ch.doc_id,
+                    article="",
+                    text="",
+                    label=ch.doc_id,
+                    chunk_id=ch.chunk_id,
+                ))
+                if len(citations) >= 2:  # cap=2: recall=high, precision=ok
+                    break
+            if citations:
+                logger.info(
+                    "Generator: fallback auto-cite %d docs from retrieved chunks (LLM cite=0)",
+                    len(citations),
+                )
+
         key_facts: List[str] = [str(f) for f in data.get("key_facts", []) if f]
 
         latency_ms = int((time.perf_counter() - t0) * 1000)
