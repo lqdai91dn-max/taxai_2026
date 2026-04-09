@@ -40,6 +40,45 @@ logger = logging.getLogger(__name__)
 GEMINI_MODEL   = "gemini-3-flash-preview"
 MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
 
+# ── Pre-router: lightweight OOD / tax-domain check ───────────────────────────
+
+_TAX_ANCHOR_RE = re.compile(
+    r"thuế|tncn|hkd|hộ kinh doanh|kê khai|quyết toán|hoàn thuế|miễn thuế"
+    r"|hóa đơn|nghị định|thông tư|luật|điều\s+\d|khoản\s+\d"
+    r"|doanh thu|thu nhập|giảm trừ|người phụ thuộc|lương|tiền công"
+    r"|phạt|vi phạm|truy thu|cưỡng chế|sàn tmđt|shopee|lazada|tiktok"
+    r"|gtgt|vat|bhxh|bhyt|bhtn|cnkd|cá nhân kinh doanh|hộ khoán"
+    r"|mẫu\s+\d+|tờ khai|thủ tục|hồ sơ thuế",
+    re.IGNORECASE | re.UNICODE,
+)
+
+_OOD_HARD_RE = re.compile(
+    r"thời tiết|bóng đá|nấu ăn|công thức|tình yêu|chứng khoán|bitcoin"
+    r"|crypto|game|phim|âm nhạc|thể thao|y tế|sức khỏe|bệnh viện"
+    r"|trường học|giáo dục|ngoại ngữ|du lịch|khách sạn|nhà hàng",
+    re.IGNORECASE | re.UNICODE,
+)
+
+
+def _pre_route(question: str) -> str:
+    """
+    Lightweight pre-router: phân loại câu hỏi trước khi gọi bất kỳ LLM nào.
+
+    Returns:
+        "pass"   — câu hỏi liên quan đến thuế, tiếp tục pipeline
+        "reject" — câu hỏi rõ ràng ngoài domain thuế
+
+    Thiết kế 2 lớp (FN ít hại hơn FP):
+      Lớp 1: nếu có tax keyword → pass ngay (ưu tiên không reject nhầm)
+      Lớp 2: nếu có OOD keyword rõ ràng VÀ không có tax keyword → reject
+      Default: pass (ambiguous → để LLM xử lý)
+    """
+    if _TAX_ANCHOR_RE.search(question):
+        return "pass"
+    if _OOD_HARD_RE.search(question):
+        return "reject"
+    return "pass"
+
 # Paid tier 1 Gemini 3 Flash: 1000 RPM, 2,000,000 TPM, 10,000 RPD
 # Đặt 1,800,000 TPM (buffer 10%)
 TPM_SAFE_LIMIT      = 1_800_000
