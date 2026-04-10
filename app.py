@@ -425,69 +425,6 @@ def _format_answer_sections(content: str) -> str:
 
 # ── Streaming helper ──────────────────────────────────────────────────────────
 
-def _render_streaming(msg: dict, show_sources: bool, show_iters: bool) -> None:
-    """
-    P3 — Streaming display cho NEW AI messages.
-
-    Dùng st.write_stream() để hiển thị từng từ thay vì toàn bộ cùng lúc.
-    Chỉ gọi cho messages mới vừa generate (không phải history re-render).
-
-    Sau khi stream xong, hiển thị metadata (cache badge, iterations, time)
-    và sources dưới dạng st.expander.
-    """
-    answer     = msg.get("content", "")
-    ts         = msg.get("time", "")
-    from_cache = msg.get("from_cache", False)
-    iterations = msg.get("iterations", 0)
-    citations  = msg.get("citations", [])
-    sources    = msg.get("sources", [])
-    latency_ms = msg.get("latency_ms", 0)
-
-    # Annotate citations inline
-    display_content = answer
-    if citations and '<span class="inline-cite">' not in answer:
-        display_content, _ = parse_citations(answer)
-    display_content = _format_answer_sections(display_content)
-
-    # Stream từng từ vào chat message container
-    with st.chat_message("assistant", avatar="⚖️"):
-        # st.write_stream nhận generator, trả về full text
-        def _word_gen():
-            for word in display_content.split(" "):
-                yield word + " "
-
-        st.write_stream(_word_gen())
-
-        # Metadata badges
-        badges: list[str] = []
-        if from_cache:
-            badges.append("⚡ Cache")
-        if show_iters and iterations > 1:
-            badges.append(f"🔄 {iterations} bước")
-        if latency_ms:
-            badges.append(f"⏱️ {latency_ms}ms")
-        if ts:
-            badges.append(ts)
-        st.caption("  ·  ".join(badges))
-
-        # Citations footnotes
-        if citations and show_sources:
-            msg_id_key = msg.get("_id", str(id(msg)))
-            btn_cols = st.columns(min(len(citations), 4))
-            for i, cit in enumerate(citations):
-                with btn_cols[i % len(btn_cols)]:
-                    label = f"[{i+1}] Điều {cit['dieu']} · {cit['doc_number']}"
-                    if st.button(label, key=f"cit_stream_{msg_id_key}_{i}",
-                                 use_container_width=True, type="secondary"):
-                        show_article_dialog(cit)
-
-        # Sources expander
-        if show_sources and sources:
-            with st.expander(f"📚 {len(sources)} nguồn tham khảo", expanded=False):
-                for src in sources:
-                    st.markdown(f"- {src.get('breadcrumb', src.get('reference', ''))}")
-
-
 # ── Render one message ────────────────────────────────────────────────────────
 
 def _render_message(msg: dict, show_sources: bool, show_iters: bool) -> None:
@@ -572,9 +509,6 @@ with st.sidebar:
     show_iters      = st.toggle("Hiển thị số bước suy luận", value=True)
     use_cache       = st.toggle("Dùng cache câu hỏi", value=True,
                                 help="Trả kết quả ngay nếu câu hỏi tương tự đã được hỏi (similarity ≥ 0.88)")
-    use_streaming   = st.toggle("Streaming response", value=False,
-                                help="Hiển thị câu trả lời từng từ thay vì hiện toàn bộ cùng lúc")
-
     st.divider()
 
     # Actions
@@ -763,11 +697,7 @@ if question:
             # Auto-save session sau mỗi câu
             save_session(st.session_state.session_id, st.session_state.messages)
 
-            # Render AI message — streaming nếu bật, ngược lại render thường
-            if use_streaming and not from_cache:
-                _render_streaming(ai_msg, show_sources, show_iters)
-            else:
-                _render_message(ai_msg, show_sources, show_iters)
+            _render_message(ai_msg, show_sources, show_iters)
 
         except Exception as e:
             raw = str(e)
