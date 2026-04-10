@@ -121,10 +121,11 @@ st.markdown("""
                 padding: 8px 12px; margin: 6px 0; border-radius: 4px; }
 /* Citation / Answer section labels */
 .section-label {
-    display: inline-block;
+    display: block;
     font-size: 0.75em; font-weight: 700; letter-spacing: 0.06em;
     text-transform: uppercase; border-radius: 4px;
-    padding: 3px 10px; margin: 10px 0 6px 0;
+    padding: 3px 10px; margin: 14px 0 6px 0;
+    width: fit-content;
 }
 .citation-label {
     background: #dbeafe; color: #1e40af;
