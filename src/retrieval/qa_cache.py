@@ -262,7 +262,7 @@ class QACache:
         emb         = self._embed(question)
 
         metadata: dict[str, Any] = {
-            "answer":        answer[:2000],          # ChromaDB metadata có giới hạn
+            "answer":        answer,                 # full answer, không cắt
             "key_facts":     json.dumps(key_facts or [], ensure_ascii=False),
             "topic":         topic,
             "source_round":  source_round,
