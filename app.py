@@ -589,16 +589,6 @@ with st.sidebar:
             save_session(st.session_state.session_id, st.session_state.messages)
             st.success("Đã lưu!")
 
-    _cache_total = load_qa_cache().count()
-    if st.button(f"🧹 Xóa cache ({_cache_total} mục)", use_container_width=True,
-                 help="Xóa toàn bộ câu hỏi đã cache (giữ lại dữ liệu benchmark seeded)"):
-        n = load_qa_cache().clear_user_entries()
-        if n == 0:
-            # Không có user entries — flush toàn bộ (kể cả test/dev entries)
-            n = load_qa_cache().flush()
-        st.success(f"Đã xóa {n} mục khỏi cache.")
-        st.rerun()
-
     st.divider()
 
     # Chat history

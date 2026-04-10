@@ -303,19 +303,6 @@ class QACache:
         logger.info(f"[QACache] Flushed {n} entries (version bump to {CACHE_VERSION})")
         return n
 
-    def clear_user_entries(self) -> int:
-        """
-        Xóa các entries do user tạo ra (source_round == "user").
-        Giữ lại benchmark-seeded entries.
-        Trả về số entries đã xóa.
-        """
-        result = self._col.get(where={"source_round": "user"}, include=[])
-        ids = result.get("ids", [])
-        if not ids:
-            return 0
-        self._col.delete(ids=ids)
-        logger.info(f"[QACache] Cleared {len(ids)} user entries")
-        return len(ids)
 
     def seed_from_benchmark(
         self,
