@@ -1,0 +1,439 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "pass_rate": 1.0,
+      "avg_score": 0.834,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-02T17:19:02.686943"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.667,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Kế toán HKD": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0,
+        "avg_score": 0.834
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.834
+      }
+    },
+    "latency_ms": {
+      "min": 21780,
+      "max": 21780,
+      "avg": 21780,
+      "p50": 21780,
+      "p95": 21780
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": []
+  },
+  "results": [
+    {
+      "question_id": 115,
+      "question": "Hộ kinh doanh lỡ chọn kỳ khai thuế theo Quý, giờ phát hiện doanh thu trên 50 tỷ bắt buộc khai theo Tháng thì nộp lại hồ sơ có bị tính tiền chậm nộp không?",
+      "topic": "Kế toán HKD",
+      "difficulty": "easy",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Mức tính tiền chậm nộp bằng 0,03%/ ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ ngày tính trên số tiền thuế chậm nộp do cơ quan hải quan quản lý thu.\n*(Điều 16 Khoản 2 Điểm a, Luật 108/2025/QH15)*\n\n💬 Trả lời\nHộ kinh doanh của bạn nếu có doanh thu trên 50 tỷ đồng thì bắt buộc phải khai thuế theo tháng. Việc lỡ chọn kỳ khai thuế theo quý và sau đó phát hiện phải khai theo tháng là một hành vi vi phạm về thời hạn nộp hồ sơ khai thuế.\n\nKhi bạn nộp lại hồ sơ khai thuế để điều chỉnh kỳ khai từ quý sang tháng, bạn sẽ phải nộp tiền chậm nộp đối với số tiền thuế phát sinh từ các kỳ khai tháng mà bạn đã nộp chậm. Mức tính tiền chậm nộp là **0,03%/ngày** tính trên số tiền thuế chậm nộp, theo Điều 16 Khoản 2 Điểm a Luật 108/2025/QH15.\n\nNgoài ra, tùy thuộc vào thời gian chậm nộp hồ sơ khai thuế, bạn có thể bị xử phạt hành chính về hành vi vi phạm thời hạn nộp hồ sơ khai thuế theo quy định tại Điều 13 Nghị định 125/2020/NĐ-CP.\n\n📋 Tóm lại\n*   **Tiền chậm nộp:** Bạn sẽ bị tính tiền chậm nộp với mức 0,03%/ngày trên số tiền thuế phát sinh từ các kỳ khai tháng mà bạn đã nộp chậm.\n*   **Xử phạt hành chính:** Có thể bị xử phạt hành chính về hành vi vi phạm thời hạn nộp hồ sơ khai thuế.\n*   **Căn cứ:** Điều 16 Khoản 2 Điểm a Luật 108/2025/QH15 và Điều 13 Nghị định 125/2020/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh doanh thu trên 50 tỷ khai thuế theo tháng khai bổ sung tiền chậm nộp",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "hộ kinh doanh doanh thu trên 50 tỷ khai thuế theo tháng khai bổ sung tiền chậm nộp",
+            "total_found": 9,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_2_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K2 | Đ.a]\nMức tính tiền chậm nộp và thời gian tính tiền chậm nộp được quy định như sau:\nMức tính tiền chậm nộp bằng 0,03%/ ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ ngày tính trên số tiền thuế chậm nộp do cơ quan hải quan quản lý thu;",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_2_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp tiền thuế, k) | K2]\nMức tính tiền chậm nộp và thời gian tính tiền chậm nộp được quy định như sau:\na) Mức tính tiền chậm nộp bằng 0,03%/ ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ ngày tính trên số tiền thuế chậm nộp do cơ quan hải quan quản lý thu;\nb) Thời gian tính tiền chậm nộp thực hiện theo quy định của Chính phủ.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_5_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp ) | K5]\nPhạt tiền từ 15.000.000 đồng đến 25.000.000 đồng đối với hành vi nộp hồ sơ khai thuế quá thời hạn trên 90 ngày kể từ ngày hết hạn nộp hồ sơ khai thuế, có phát sinh số thuế phải nộp và người nộp thuế đã nộp đủ số tiền thuế, tiền chậm nộp vào ngân sách nhà nước trước thời điểm cơ quan thuế công bố quyết định kiểm tra thuế, thanh tra thuế hoặc trước thời điểm cơ quan thuế lập biên bản về hành vi chậm nộp hồ sơ khai thuế theo quy định tại khoản 11 Điều 143 Luật Quản lý thuế. Trường hợp số tiền phạt nếu áp dụng theo khoản này lớn hơn số tiền thuế phát sinh trên hồ sơ khai thuế thì số tiền phạt tối đa đối với trường hợp này bằng số tiền thuế phát sinh phải nộp trên hồ sơ khai thuế nhưng không thấp hơn mức trung bình của khung phạt tiền quy định tại khoản 4 Điều này.",
+                "score": 0.015873,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_42_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ42 (Tiền chậm nộp tiền phạt vi phạ) | K1 | Đ.a]\nTính tiền chậm nộp tiền phạt\nTổ chức, cá nhân chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn thì bị tính tiền chậm nộp tiền phạt theo mức 0,05%/ngày tính trên số tiền phạt chậm nộp.",
+                "score": 0.015761,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_6_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp ) | K6]\nBiện pháp khắc phục hậu quả:\na) Buộc nộp đủ số tiền chậm nộp tiền thuế vào ngân sách nhà nước đối với hành vi vi phạm quy định tại các khoản 1, 2, 3, 4 và 5 Điều này trong trường hợp người nộp thuế chậm nộp hồ sơ khai thuế dẫn đến chậm nộp tiền thuế;\nb) Buộc nộp hồ sơ khai thuế, phụ lục kèm theo hồ sơ khai thuế đối với hành vi quy định tại điểm c, d khoản 4 Điều này.",
+                "score": 0.015349,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_4_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 4",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp ) | K4]\nPhạt tiền từ 8.000.000 đồng đến 15.000.000 đồng đối với một trong các hành vi sau đây:\na) Nộp hồ sơ khai thuế quá thời hạn quy định từ 61 ngày đến 90 ngày;\nb) Nộp hồ sơ khai thuế quá thời hạn quy định từ 91 ngày trở lên nhưng không phát sinh số thuế phải nộp;\nc) Không nộp hồ sơ khai thuế nhưng không phát sinh số thuế phải nộp;\nd) Không nộp các phụ lục theo quy định về quản lý thuế đối với doanh nghiệp có giao dịch liên kết kèm theo hồ sơ quyết toán thuế thu nhập doanh nghiệp.",
+                "score": 0.014606,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_dieu_1_khoan_5_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Điều 1: Áp dụng biện pháp khắc phục hậu quả do vi phạm hành chính gây ra đối với <ông (bà)/tổ chức> có tên sau đây: > Khoản 5 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ1 (Áp dụng biện pháp khắc phục hậ) | K5 | Đ.b]\nBiện pháp để khắc phục hậu quả gồm:\nTiền chậm nộp tiền thuế (nếu có): (Bằng chữ) Số tiền chậm nộp tiền thuế nêu trên được tính đến hết ngày Ông(bà)/Tổ chức[12]\t…………. có trách nhiệm tự tính và nộp số tiền chậm nộp tiền thuế kể từ sau ngày…. \tđến thời điểm thực nộp số tiền thuế truy thu và tiền phạt vào ngân sách nhà nước theo quy định.",
+                "score": 0.013814,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Điều 1: Áp dụng biện pháp khắc phục hậu quả do vi phạm hành chính gây ra đối với <ông (bà)/tổ chức> có tên sau đây: > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai)]",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_17_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ17 (Xử phạt hành vi trốn thuế) | K1 | Đ.a]\nPhạt tiền 1 lần số thuế trốn đối với người nộp thuế có từ một tình tiết giảm nhẹ trở lên khi thực hiện một trong các hành vi vi phạm sau đây:\nKhông nộp hồ sơ đăng ký thuế; không nộp hồ sơ khai thuế hoặc nộp hồ sơ khai thuế sau 90 ngày, kể từ ngày hết thời hạn nộp hồ sơ khai thuế hoặc kể từ ngày hết thời hạn gia hạn nộp hồ sơ khai thuế, trừ trường hợp quy định tại điểm b, c khoản 4 và khoản 5 Điều 13 Nghị định này;",
+                "score": 0.010317,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh doanh thu trên 50 tỷ khai thuế theo tháng",
+            "doc_filter": "18_2026_TTBTC"
+          },
+          "result": {
+            "query": "hộ kinh doanh doanh thu trên 50 tỷ khai thuế theo tháng",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_8_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ8 (Điều khoản chuyển tiếp) | K1]\nĐối với trường hợp quy định tại khoản 3 Điều 18 Nghị định số 68/2026/NĐ-CP ngày 05/03/2026 của Chính phủ thì được khai điều chỉnh theo Tờ khai thuế đối với hoạt động cho thuê tài sản Mẫu số 01/TTS ban hành kèm theo Thông tư số 40/2021/TT-BTC ngày 01 tháng 6 năm 2021 của Bộ trưởng Bộ Tài chính hướng dẫn thuế giá trị gia tăng, thuế thu nhập cá nhân và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh theo doanh thu chịu thuế thực tế phát sinh trong năm 2025 và khai doanh thu năm 2026 theo Tờ khai thuế đối với hoạt động cho thuê bất động sản Mẫu số 01/BĐS ban hành kèm theo Thông tư này.",
+                "score": 0.015823,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_d_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm d",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê ) | K1 | Đ.d]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\nHộ kinh doanh, cá nhân kinh doanh đang hoạt động thuộc đối tượng quy định tại điểm b khoản 4 Điều 17 Nghị định số 68/2026/NĐ-CP gửi Thông báo số tài khoản/số hiệu ví điện tử theo Mẫu số 01/BK-STK ban hành kèm theo Thông tư này chậm nhất là ngày 20 tháng 4 năm 2026. Hộ kinh doanh, cá nhân kinh doanh đang hoạt động thuộc đối tượng quy định tại điểm a khoản 4 Điều 17 Nghị định số 68/2026/NĐ-CP gửi Thông báo số tài khoản/số hiệu ví điện tử theo Mẫu số 01/BK-STK ban hành kèm theo Thông tư này kèm theo Tờ khai thuế đầu tiên của năm 2026. Hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh gửi Thông báo số tài khoản/số hiệu ví điện tử theo mẫu số 01/BK-STK ban hành kèm theo Thông tư này kèm theo Thông báo doanh thu hoặc Tờ khai thuế đầu tiên của năm 2026. Hộ kinh doanh, cá nhân kinh doanh khi thay đổi thông tin số tài khoản/số hiệu ví điện tử thì thông báo cho cơ quan thuế theo quy định của pháp luật quản lý thuế.",
+                "score": 0.015799,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê khai thuế) | K1]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\na) Hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân (bao gồm cả hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh) thông báo doanh thu thực tế phát sinh trong năm và kê khai các loại thuế khác theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.\nb) Đối với hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế, hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác là Tờ khai theo Mẫu số 01/CNKD ban hành kèm theo Thông tư này.\n[... còn 2 điểm nữa]",
+                "score": 0.015699,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_b_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê ) | K1 | Đ.b]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\nĐối với hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế, hồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác là Tờ khai theo Mẫu số 01/CNKD ban hành kèm theo Thông tư này.",
+                "score": 0.015385,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_a_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điểm",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm a",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê ) | K1 | Đ.a]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\nHộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân (bao gồm cả hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh) thông báo doanh thu thực tế phát sinh trong năm và kê khai các loại thuế khác theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.",
+                "score": 0.015152,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 21780,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.667,
+        "reason": "PARTIAL — overlap 2/3, precision=0.67, penalty=1.00",
+        "details": {
+          "matched": [
+            "125_2020_NDCP",
+            "108_2025_QH15"
+          ],
+          "missing": [
+            "68_2026_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Kế toán HKD'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "tiền chậm nộp",
+            "0,03%"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Điều 1: Áp dụng biện pháp khắc phục hậu quả do vi phạm hành chính gây ra đối với <ông (bà)/tổ chức> có tên sau đây: > Khoản 5 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 1 > Điểm a",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "18_2026_TTBTC",
+        "108_2025_QH15"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

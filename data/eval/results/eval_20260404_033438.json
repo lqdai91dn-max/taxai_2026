@@ -1,0 +1,122 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.0,
+      "errors": 1,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-04T03:34:38.709510"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Nghĩa vụ kê khai": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.0
+      }
+    },
+    "latency_ms": {
+      "min": null,
+      "max": null,
+      "avg": null,
+      "p50": null,
+      "p95": null
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 38,
+        "question": "Nhà nước có cung cấp phần mềm kế toán, khai thuế nào miễn phí cho hộ kinh doanh ",
+        "score": 0.0,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "RATE_LIMITED"
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 38,
+      "question": "Nhà nước có cung cấp phần mềm kế toán, khai thuế nào miễn phí cho hộ kinh doanh nhỏ xài không?",
+      "topic": "Nghĩa vụ kê khai",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 46403,
+      "error": "RATE_LIMITED",
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "phần mềm miễn phí"
+          ]
+        }
+      },
+      "sources": [],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [],
+      "false_refusal": false
+    }
+  ]
+}

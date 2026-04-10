@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "doc_id": "110_2025_UBTVQH15",
+  "description": "Bug: Điều 1 thiếu điểm a, b. Parser lưu lead_in_text nhưng không tạo node con cho điểm a (mức giảm trừ cá nhân 15.5tr) và điểm b (mức giảm trừ người phụ thuộc 6.2tr). Fix: add_node 2 điểm vào Điều 1.",
+  "ops": [
+    {
+      "op": "add_node",
+      "parent_id": "doc_110_2025_UBTVQH15_dieu_1",
+      "after": null,
+      "node": {
+        "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_a",
+        "node_type": "Điểm",
+        "node_index": "a",
+        "title": null,
+        "content": "Mức giảm trừ đối với đối tượng nộp thuế là 15,5 triệu đồng/tháng (186 triệu đồng/năm);",
+        "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm a",
+        "references": [],
+        "children": []
+      }
+    },
+    {
+      "op": "add_node",
+      "parent_id": "doc_110_2025_UBTVQH15_dieu_1",
+      "after": "doc_110_2025_UBTVQH15_dieu_1_diem_a",
+      "node": {
+        "node_id": "doc_110_2025_UBTVQH15_dieu_1_diem_b",
+        "node_type": "Điểm",
+        "node_index": "b",
+        "title": null,
+        "content": "Mức giảm trừ đối với mỗi người phụ thuộc là 6,2 triệu đồng/tháng.",
+        "breadcrumb": "Nghị quyết 110/2025/UBTVQH15 > Điều 1: Mức giảm trừ gia cảnh của thuế thu nhập cá nhân > Điểm b",
+        "references": [],
+        "children": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "pass_rate": 1.0,
+      "avg_score": 1.0,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-04T09:05:40.492211"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Nghĩa vụ kê khai": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0,
+        "avg_score": 1.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 1.0
+      }
+    },
+    "latency_ms": {
+      "min": 50820,
+      "max": 50820,
+      "avg": 50820,
+      "p50": 50820,
+      "p95": 50820
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": []
+  },
+  "results": [
+    {
+      "question_id": 38,
+      "question": "Nhà nước có cung cấp phần mềm kế toán, khai thuế nào miễn phí cho hộ kinh doanh nhỏ xài không?",
+      "topic": "Nghĩa vụ kê khai",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "Nhà nước có chính sách hỗ trợ miễn phí các công cụ này để thúc đẩy chuyển đổi số cho hộ kinh doanh (HKD). Cụ thể như sau:\n\n### 📌 Trích dẫn\n> \"Nhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số...\"\n*(Điều 10 Khoản 1, Nghị định 20/2026/NĐ-CP)*\n\n### 💬 Trả lời\nTheo quy định mới nhất tại **Nghị định 20/2026/NĐ-CP**, bạn có thể tiếp cận các hỗ trợ miễn phí sau:\n\n1.  **Phần mềm kế toán & Nền tảng số miễn phí:** Nhà nước cung cấp các nền tảng số tích hợp sẵn phần mềm kế toán cho HKD. Phần mềm này được thiết kế để kết nối thông suốt với hệ thống hóa đơn điện tử và chữ ký số, giúp bạn quản lý sổ sách đúng quy định mà không tốn chi phí mua bản quyền phần mềm thương mại (theo Điều 10 Khoản 1 và 5).\n2.  **Ứng dụng khai và nộp thuế (eTax Mobile):** Tổng cục Thuế cung cấp ứng dụng **eTax Mobile** trên điện thoại di động. Đây là công cụ miễn phí giúp HKD có thể tự tra cứu nghĩa vụ thuế, lập tờ khai và nộp thuế điện tử mọi lúc mọi nơi mà không cần đến trực tiếp cơ quan thuế (theo Sổ tay Hướng dẫn HKD).\n3.  **Hỗ trợ đào tạo miễn phí:** Nếu bạn chưa biết cách sử dụng phần mềm hoặc chưa rõ về nghiệp vụ kế toán, Ngân sách nhà nước hỗ trợ **100% chi phí** các khóa đào tạo về quản trị kế toán và thuế cho HKD (theo Điều 11 Khoản 1 Nghị định 20/2026/NĐ-CP).\n\n**Cách thức đăng ký:**\n*   Bạn có thể truy cập **Cổng thông tin điện tử của Tổng cục Thuế** hoặc liên hệ trực tiếp với Đội Thuế xã/phường nơi đặt địa điểm kinh doanh để được cấp tài khoản sử dụng các phần mềm miễn phí này.\n*   Tải ứng dụng **eTax Mobile** trên App Store hoặc Google Play để thực hiện các thủ tục thuế cá nhân.\n\n### 📋 Tóm lại\n*   **Phần mềm kế toán:** Được cung cấp miễn phí qua các nền tảng số của Nhà nước (Nghị định 20/2026/NĐ-CP).\n*   **Khai và nộp thuế:** Sử dụng ứng dụng **eTax Mobile** hoặc Cổng thông tin điện tử Tổng cục Thuế (miễn phí).\n*   **Đào tạo:** Được hỗ trợ 100% chi phí học về kế toán và thuế.\n*   **Căn cứ:** Điều 10, 11 Nghị định 20/2026/NĐ-CP và Sổ tay Hướng dẫn Hộ kinh doanh.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "20_2026_NDCP",
+            "query": "cung cấp miễn phí nền tảng số phần mềm kế toán hộ kinh doanh nhỏ"
+          },
+          "result": {
+            "query": "cung cấp miễn phí nền tảng số phần mềm kế toán hộ kinh doanh nhỏ",
+            "total_found": 7,
+            "results": [
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_5_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số) | K5]\nDoanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh được cung cấp tài khoản và sử dụng các phần mềm miễn phí trên nền tảng số theo quy định tại khoản 1 Điều này khi có nhu cầu. Bộ Tài chính hướng dẫn quy trình, thủ tục cung cấp, quản lý, vận hành nền tảng số, phần mềm kế toán cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_1_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số) | K1]\nNhà nước cung cấp miễn phí cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh nền tảng số tích hợp các giải pháp chuyển đổi số, trong đó có phần mềm kế toán có tính năng tích hợp được với phần mềm hóa đơn điện tử và dịch vụ chữ ký số mà doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, hộ kinh doanh và cá nhân kinh doanh sử dụng.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_dieu_11_khoan_1_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ11 (Hỗ trợ miễn phí dịch vụ đào tạo về quản ) | K1]\nNgân sách nhà nước hỗ trợ 100% tổng chi phí của khóa đào tạo quản trị doanh nghiệp (bao gồm cả quản trị kế toán, thuế, nhân sự) cho doanh nghiệp nhỏ, doanh nghiệp siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.015221,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_4_diem_e_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các n) | K4 | Đ.e]\nPhần mềm kế toán phải đảm bảo tối thiểu các yêu cầu chuyên môn, nghiệp vụ về kế toán như sau:\nCó khả năng kết nối hoặc sẵn sàng kết nối thuế với các phần mềm có liên quan khi thực hiện công tác kế toán (phần mềm hóa đơn điện tử, chữ ký số...).",
+                "score": 0.015084,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_phan_m_khoan_3_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 3",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số) | K3]\nNhà cung cấp sản phẩm, dịch vụ các nền tảng số, phần mềm kế toán không được có hành vi hạn chế cạnh tranh, hành vi cạnh tranh không lành mạnh theo quy định của pháp luật về cạnh tranh.",
+                "score": 0.014762,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_IV_dieu_10_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ10 (Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm)]",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh"
+                }
+              },
+              {
+                "chunk_id": "doc_20_2026_NDCP_chuong_III_dieu_7_khoan_1_diem_a_chunk",
+                "doc_id": "20_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a",
+                "snippet": "[VB: 20/2026/NĐ-CP | Đ7 (Miễn, giảm thuế thu nhập doanh) | K1 | Đ.a]\nCông ty quản lý quỹ đầu tư khởi nghiệp sáng tạo theo quy định của Luật Hỗ trợ doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo, tổ chức trung gian hỗ trợ khởi nghiệp đổi mới sáng tạo có thu\nĐược miễn thuế, giảm thuế thu nhập doanh nghiệp trong thời hạn theo quy định tại khoản 1 Điều 10 Nghị quyết số 198/2025/QH15;",
+                "score": 0.010484,
+                "citation": {
+                  "doc_id": "20_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "ứng dụng eTax Mobile nộp thuế điện tử khai thuế hộ kinh doanh",
+            "doc_filter": "So_Tay_HKD"
+          },
+          "result": {
+            "query": "ứng dụng eTax Mobile nộp thuế điện tử khai thuế hộ kinh doanh",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "So_Tay_HKD_chunk_26",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 26",
+                "snippet": "Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp — Bảng 26\nKênh hỗ trợ | Thông tin liên hệ\nCổng thông tin thuế hỗ trợ doanh nhân | https://hotronnt.gdt.gov.vn — Cổng TTĐT Tổng cục Thuế\nHệ thống thông tin giải quyết thủ tục hành chính | https://dichvucong.gdt.gov.vn — Cổng TTĐT Tổng cục Thuế\nỨng dụng Etax Mobile | Qua mục Hỗ trợ tại Ứng dụng Etax Mobile — ứng dụng thuế điện tử trên điện thoại di động",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 26"
+                }
+              },
+              {
+                "chunk_id": "So_Tay_HKD_chunk_27",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 27",
+                "snippet": "Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp — Bảng 27\nHướng dẫn | Nội dung\nMã QR tra cứu danh sách công chức hỗ trợ | Quý hộ kinh doanh quét mã QR để tra cứu danh sách công chức hỗ trợ người nộp thuế theo từng địa bàn — Cổng TTĐT Tổng cục Thuế\nMã QR tra cứu hướng dẫn ứng dụng thuế điện tử | Quý hộ kinh doanh quét mã QR để tra cứu hướng dẫn sử dụng các hệ thống và ứng dụng Thuế điện tử hiện đang được triển khai — Cục Thuế — Tổng cục Thuế",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 27"
+                }
+              },
+              {
+                "chunk_id": "So_Tay_HKD_chunk_12_p2",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 12 (phần 2)",
+                "snippet": "Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp — Bảng 12\nSTT | NỘI DUNG\n2 | Kỳ k Kỳ khai thuế và thuế Thời hạn nộp hồ sơ - Kh khai thuế - Ch thán | hai thuế và Thời hạn nộp hồ sơ khai GTGT, TNCN: ai thuế GTGT, TNCN theo quý. ậm nhất là ngày cuối cùng của g đầu tiên của quý tiếp theo.\nSTT | NỘI DUNG\n3 | - Tờ k gia tă - Bản tài k Hồ sơ khai thuế khai hộ ki hoạt hộ ki kinh | hai mẫu số 01/CNKD: Khai thuế giá trị ng, thuế thu nhập cá nhân: g kê mẫu 01/BK-STK: Thông báo số hoản/số hiệu ví điện tử kèm theo Tờ thuế đầu tiên trong năm 2026 đối với nh doanh, cá nhân kinh doanh đang động hoặc Tờ khai thuế đầu tiên của nh doanh, cá nhân kinh doanh mới ra doanh và thông báo lại khi có thay đổi.\n4 | - Nộp điện - Trư cảnh ngườ Phương thức trợ x khai thuế kiện hoặc khác tử th qua phục | hồ sơ khai thuế bằng phương thức tử. ờng hợp thuộc đối tượng có hoàn đặc biệt, bao gồm người cao tuổi, i khuyết tật, người thuộc diện bảo ã hội, người cư trú tại địa bàn có điều kinh tế - xã hội đặc biệt khó khăn thuộc trường hợp bất khả kháng , không thể thực hiện giao dịch điện ì nộp hồ sơ trực tiếp hoặc gửi hồ sơ dịch vụ bưu chính đến trung tâm vụ hành chính công cấp xã.",
+                "score": 0.015553,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 12 (phần 2)"
+                }
+              },
+              {
+                "chunk_id": "So_Tay_HKD_chunk_15_p2",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 15 (phần 2)",
+                "snippet": "Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp — Bảng 15\nSTT | NỘI DUNG\n3 | * Hồ s thuế T - Tờ kh gia tăn nhân t - Bảng tính đế - Bảng Hồ sơ khai thuế tài kh khai th hộ kin hoạt đ hộ kin ra kinh đổi. * Hồ s năm: T | ơ khai thuế GTGT và khai tạm nộp NCN trong năm: ai mẫu số 01/CNKD: Khai thuế giá trị g, khai tạm nộp thuế thu nhập cá rong năm. kê hàng tồn kho, máy móc, thiết bị n 31/12/2025. kê mẫu 01/BK-STK: Thông báo số oản/số hiệu ví điện tử kèm theo Tờ uế đầu tiên trong năm 2026 đối với h doanh, cá nhân kinh doanh đang ộng hoặc Tờ khai thuế đầu tiên của h doanh, cá nhân kinh doanh mới doanh và thông báo lại khi có thay ơ khai quyết toán thuế TNCN cuối ờ khai mẫu số 02/CNKD-TNCN-QTT\nSTT | NỘI DUNG\n4 | - Nộp h - Trườn đặc bi khuyết Phương thức người khai thuế - xã hộ hợp bấ giao dị gửi hồ tâm ph | ồ sơ khai thuế bằng phương thức điện tử. g hợp thuộc đối tượng có hoàn cảnh ệt, bao gồm người cao tuổi, người tật, người thuộc diện bảo trợ xã hội, cư trú tại địa bàn có điều kiện kinh tế i đặc biệt khó khăn hoặc thuộc trường t khả kháng khác, không thể thực hiện ch điện tử thì nộp hồ sơ trực tiếp hoặc sơ qua dịch vụ bưu chính đến trung ục vụ hành chính công cấp xã.",
+                "score": 0.015457,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 15 (phần 2)"
+                }
+              },
+              {
+                "chunk_id": "So_Tay_HKD_chunk_17",
+                "doc_id": "So_Tay_HKD",
+                "node_type": "GuidanceChunk",
+                "breadcrumb": "N/A: Bảng 17",
+                "snippet": "Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp — Bảng 17\nSTT | NỘI DUNG\n3 | * Hồ nộp - Tờ giá t nhậ - Bả thiế - Bả số t Hồ sơ khai thuế theo 2026 kinh khai cá n và th * Hồ cuối TNC | sơ khai thuế GTGT và khai tạm thuế TNCN trong năm: khai mẫu số 01/CNKD: Khai thuế rị gia tăng, khai tạm nộp thuế thu p cá nhân trong năm. ng kê hàng tồn kho, máy móc, t bị tính đến 31/12/2025. ng kê mẫu 01/BK-STK: Thông báo ài khoản/số hiệu ví điện tử kèm Tờ khai thuế đầu tiên trong năm đối với hộ kinh doanh, cá nhân doanh đang hoạt động hoặc Tờ thuế đầu tiên của hộ kinh doanh, hân kinh doanh mới ra kinh doanh ông báo lại khi có thay đổi. sơ khai quyết toán thuế TNCN năm: Tờ khai mẫu số 02/CNKD- N-QTT\n4 | - Nộ điện - Trư cảnh ngườ Phương thức khai trợ x thuế kiện hoặc khác tử th qua phục | p hồ sơ khai thuế bằng phương thức tử. ờng hợp thuộc đối tượng có hoàn đặc biệt, bao gồm người cao tuổi, i khuyết tật, người thuộc diện bảo ã hội, người cư trú tại địa bàn có điều kinh tế - xã hội đặc biệt khó khăn thuộc trường hợp bất khả kháng , không thể thực hiện giao dịch điện ì nộp hồ sơ trực tiếp hoặc gửi hồ sơ dịch vụ bưu chính đến trung tâm vụ hành chính công cấp xã.",
+                "score": 0.01521,
+                "citation": {
+                  "doc_id": "So_Tay_HKD",
+                  "doc_number": "",
+                  "breadcrumb": "N/A: Bảng 17"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 50820,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=1.00",
+        "details": {
+          "matched": [
+            "So_Tay_HKD",
+            "20_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": []
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Nghĩa vụ kê khai'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "phần mềm miễn phí"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 11: Hỗ trợ miễn phí dịch vụ đào tạo về quản trị doanh nghiệp, kế toán, thuế, nhân sự cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 4 > Điểm e",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương IV > Điều 10: Hỗ trợ cung cấp miễn phí các nền tảng số, phần mềm kế toán dùng chung cho doanh nghiệp nhỏ, siêu nhỏ, hộ kinh doanh và cá nhân kinh doanh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "20_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 20/2026/NĐ-CP > Chương III > Điều 7: Miễn, giảm thuế thu nhập doanh nghiệp > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "So_Tay_HKD",
+          "doc_number": "",
+          "breadcrumb": "N/A: Bảng 26",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "So_Tay_HKD",
+          "doc_number": "",
+          "breadcrumb": "N/A: Bảng 27",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "So_Tay_HKD",
+          "doc_number": "",
+          "breadcrumb": "N/A: Bảng 12 (phần 2)",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "So_Tay_HKD",
+          "doc_number": "",
+          "breadcrumb": "N/A: Bảng 15 (phần 2)",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "So_Tay_HKD",
+          "doc_number": "",
+          "breadcrumb": "N/A: Bảng 17",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "So_Tay_HKD",
+        "20_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

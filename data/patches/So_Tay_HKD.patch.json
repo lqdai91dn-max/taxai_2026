@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "doc_id": "So_Tay_HKD",
+  "description": "Bug: Gemini parser bỏ sót pages 29-30 của PDF. Page 29 có kênh hỗ trợ eTax Mobile và Cổng TTĐT Tổng cục Thuế. Page 30 có hướng dẫn quét mã QR tra cứu công chức hỗ trợ.",
+  "ops": [
+    {
+      "op": "add_table",
+      "table": {
+        "page_number": 29,
+        "headers": ["Kênh hỗ trợ", "Thông tin liên hệ"],
+        "rows": [
+          ["Cổng thông tin thuế hỗ trợ doanh nhân", "https://hotronnt.gdt.gov.vn — Cổng TTĐT Tổng cục Thuế"],
+          ["Hệ thống thông tin giải quyết thủ tục hành chính", "https://dichvucong.gdt.gov.vn — Cổng TTĐT Tổng cục Thuế"],
+          ["Ứng dụng Etax Mobile", "Qua mục Hỗ trợ tại Ứng dụng Etax Mobile — ứng dụng thuế điện tử trên điện thoại di động"]
+        ],
+        "row_count": 3,
+        "col_count": 2,
+        "extraction_strategy": "patch"
+      }
+    },
+    {
+      "op": "add_table",
+      "table": {
+        "page_number": 30,
+        "headers": ["Hướng dẫn", "Nội dung"],
+        "rows": [
+          ["Mã QR tra cứu danh sách công chức hỗ trợ", "Quý hộ kinh doanh quét mã QR để tra cứu danh sách công chức hỗ trợ người nộp thuế theo từng địa bàn — Cổng TTĐT Tổng cục Thuế"],
+          ["Mã QR tra cứu hướng dẫn ứng dụng thuế điện tử", "Quý hộ kinh doanh quét mã QR để tra cứu hướng dẫn sử dụng các hệ thống và ứng dụng Thuế điện tử hiện đang được triển khai — Cục Thuế — Tổng cục Thuế"]
+        ],
+        "row_count": 2,
+        "col_count": 2,
+        "extraction_strategy": "patch"
+      }
+    }
+  ]
+}

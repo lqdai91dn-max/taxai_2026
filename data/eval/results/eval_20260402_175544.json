@@ -1,0 +1,395 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.5,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-02T17:55:44.639488"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế thương mại điện tử": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.5
+      }
+    },
+    "by_difficulty": {
+      "medium": {
+        "count": 1,
+        "avg_score": 0.5
+      }
+    },
+    "latency_ms": {
+      "min": 22992,
+      "max": 22992,
+      "avg": 22992,
+      "p50": 22992,
+      "p95": 22992
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 25,
+        "question": "Nếu sàn TMĐT không xác định được sản phẩm tôi bán là hàng hóa hay dịch vụ thì họ",
+        "score": 0.5,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PASS — overlap 2/2 docs, precision=1.00",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế thương mại điện tử'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 25,
+      "question": "Nếu sàn TMĐT không xác định được sản phẩm tôi bán là hàng hóa hay dịch vụ thì họ trừ thuế tôi mức cao nhất là bao nhiêu?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "medium",
+      "user_type": "online_seller",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Trường hợp các tổ chức quản lý nền tảng thương mại điện tử thuộc đối tượng khấu trừ, nộp thay không xác định được giao dịch phát sinh doanh thu từ nền tảng thương mại điện tử là hàng hóa hay dịch vụ hoặc loại dịch vụ thì việc xác định số thuế phải khấu trừ thực hiện theo mức tỷ lệ % cao nhất quy định tại điểm a khoản này và theo mức tỷ lệ % cao nhất của dịch vụ quy định cho cá nhân cư trú hoặc cá nhân không cư trú quy định tại điểm b khoản này.\n*(Điểm c Khoản 2 Điều 5, Nghị định 117/2025/NĐ-CP)*\n\n💬 Trả lời\nTheo Nghị định 117/2025/NĐ-CP, nếu sàn thương mại điện tử (TMĐT) không thể xác định được giao dịch của bạn là bán hàng hóa hay cung cấp dịch vụ, hoặc không xác định được loại dịch vụ cụ thể, thì họ sẽ áp dụng mức tỷ lệ phần trăm (%) thuế cao nhất để khấu trừ.\n\nCụ thể, sàn TMĐT sẽ khấu trừ thuế theo:\n*   **Mức tỷ lệ % cao nhất của thuế giá trị gia tăng (GTGT)** quy định cho hàng hóa hoặc dịch vụ.\n*   **Mức tỷ lệ % cao nhất của thuế thu nhập cá nhân (TNCN) đối với dịch vụ** quy định cho cá nhân cư trú hoặc cá nhân không cư trú.\n\nĐiều này nhằm đảm bảo nghĩa vụ thuế được thực hiện đầy đủ trong trường hợp không có thông tin rõ ràng về loại hình giao dịch.\n\n📋 Tóm lại\n*   Nếu sàn TMĐT không xác định được loại hình giao dịch (hàng hóa hay dịch vụ), họ sẽ áp dụng mức thuế suất cao nhất.\n*   Mức cao nhất này bao gồm tỷ lệ % cao nhất cho cả thuế GTGT và thuế TNCN đối với dịch vụ.\n*   Căn cứ: Điểm c Khoản 2 Điều 5 Nghị định 117/2025/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "117_2025_NDCP",
+            "query": "sàn TMĐT không xác định được loại hàng hóa dịch vụ thì khấu trừ thuế bao nhiêu"
+          },
+          "result": {
+            "query": "sàn TMĐT không xác định được loại hàng hóa dịch vụ thì khấu trừ thuế bao nhiêu",
+            "total_found": 12,
+            "results": [
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_diem_c_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm c",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, ) | K2 | Đ.c]\nSố thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.\nTrường hợp các tổ chức quản lý nền tảng thương mại điện tử thuộc đối tượng khấu trừ, nộp thay không xác định được giao dịch phát sinh doanh thu từ nền tảng thương mại điện tử là hàng hóa hay dịch vụ hoặc loại dịch vụ thì việc xác định số thuế phải khấu trừ thực hiện theo mức tỷ lệ % cao nhất quy định tại điểm a khoản này và theo mức tỷ lệ % cao nhất của dịch vụ quy định cho cá nhân cư trú hoặc cá nhân không cư trú quy định tại điểm b khoản này.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, xác định s) | K2]\nSố thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.\na) Tỷ lệ % tính thuế giá trị gia tăng thực hiện theo quy định của Luật Thuế giá trị gia tăng như sau:\nb) Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:\nc) Trường hợp các tổ chức quản lý nền tảng thương mại điện tử thuộc đối tượng khấu trừ, nộp thay không xác định được giao dịch phát sinh doanh thu từ nền tảng thương mại điện tử là hàng hóa hay dịch vụ hoặc loại dịch vụ thì việc xác định số thuế phải khấu trừ thực hiện theo mức tỷ lệ % cao nhất quy định tại điểm a khoản này và theo mức tỷ lệ % cao nhất của dịch vụ quy định cho cá nhân cư trú hoặc cá nhân không cư trú quy định tại điểm b khoản này.\n[... còn 1 điểm nữa]",
+                "score": 0.015906,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_1_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 1",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, xác định s) | K1]\nThời điểm thực hiện khấu trừ: tổ chức quản lý nền tảng thương mại điện tử quy định tại Điều 4 Nghị định này thực hiện khấu trừ số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải nộp đối với mỗi giao dịch cung cấp hàng hóa, dịch vụ phát sinh doanh thu trên nền tảng thương mại điện tử thuộc phạm vi quản lý ngay khi xác nhận giao dịch thành công và chấp nhận thanh toán đối với giao dịch bán hàng hóa, dịch vụ trên nền tảng thương mại điện tử cho hộ, cá nhân.",
+                "score": 0.015776,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_6_khoan_1_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 6: Cách thức kê khai và nộp số thuế đã khấu trừ > Khoản 1",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ6 (Cách thức kê khai và nộp số thuế đã khấu) | K1]\nCác tổ chức quản lý nền tảng thương mại điện tử thực hiện kê khai số thuế đã khấu trừ theo tháng. Đối với giao dịch bị hủy hoặc trả lại hàng thì tổ chức quản lý nền tảng thương mại điện tử thực hiện bù trừ số thuế đã khấu trừ, nộp thay của giao dịch bị hủy hoặc trả lại hàng với số thuế phải khấu trừ, nộp thay của các giao dịch bán hàng hóa, cung cấp dịch vụ. Số thuế nộp thay của tổ chức quản lý nền tảng thương mại điện tử được xác định bằng tổng số thuế của các giao dịch bán hàng hóa, cung cấp dịch vụ sau khi bù trừ với tổng số thuế các giao dịch bị hủy hoặc trả lại hàng của hộ, cá nhân (nếu có). Các tổ chức quản lý nền tảng thương mại điện tử ở trong nước được hệ thống của cơ quan thuế cấp mã số thuế riêng (mã số thuế 10 chữ số) để kê khai và nộp thay số thuế đã khấu trừ và không phải nộp hồ sơ đăng ký thuế. Các tổ chức quản lý nền tảng thương mại điện tử ở nước ngoài được cấp mã số thuế 10 chữ số để thực hiện nghĩa vụ thuế phát sinh tại Việt Nam (nếu có) như quy định đối với nhà cung cấp ở nước ngoài tại Thông tư số 80/2021/TT-BTC ngày 29 tháng 9 năm 2021 của Bộ trưởng Bộ Tài chính và được sử dụng mã số thuế này để kê khai và nộp số thuế đã khấu trừ của hộ, cá nhân cư trú kinh doanh trên nền tảng thương mại điện tử ở nước ngoài.",
+                "score": 0.015657,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 6: Cách thức kê khai và nộp số thuế đã khấu trừ > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_diem_d_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm d",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, ) | K2 | Đ.d]\nSố thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ.\nDoanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ là số tiền bán hàng hóa, dịch vụ của hộ, cá nhân được hưởng mà tổ chức quản lý nền tảng thương mại điện tử thu hộ.",
+                "score": 0.015247,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_4_chunk",
+                "doc_id": "117_2025_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 4: Khấu trừ, nộp thuế thay",
+                "snippet": "[VB: 117/2025/NĐ-CP | Đ4 (Khấu trừ, nộp thuế thay)]",
+                "score": 0.011043,
+                "citation": {
+                  "doc_id": "117_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 4: Khấu trừ, nộp thuế thay"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_1_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ11 (Khai thuế, khấu trừ thuế đối với hoạt độ) | K1]\nChủ quản nền tảng thương mại điện tử, nền tảng số khác trong nước hoặc nước ngoài có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm thực hiện khấu trừ, khai thay và nộp thay số thuế đã khấu trừ đối với mỗi giao dịch cung cấp hàng hóa, dịch vụ của hộ kinh doanh, cá nhân kinh doanh theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_I_dieu_1_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 1: Phạm vi điều chỉnh",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ1 (Phạm vi điều chỉnh)]\nNghị định này quy định về chính sách thuế: thuế giá trị gia tăng, thuế thu nhập cá nhân và các loại thuế khác; khai thuế, tính thuế, nộp thuế, quyết toán thuế, xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa; phạm vi trách nhiệm, cách thức các chủ quản nền tảng thương mại điện tử, nền tảng số khác thực hiện khấu trừ, kê khai thay và nộp thay số thuế đã khấu trừ của hộ kinh doanh, cá nhân kinh doanh; trách nhiệm khai thay, nộp thuế thay của tổ chức trong các trường hợp: hợp tác kinh doanh với hộ kinh doanh, cá nhân kinh doanh, ký hợp đồng với hộ kinh doanh, cá nhân kinh doanh làm đại lý bán đúng giá đối với xổ số, bảo hiểm, bán hàng đa cấp; sử dụng hóa đơn điện tử; trách nhiệm của tổ chức, cá nhân có liên quan.",
+                "score": 0.015349,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 1: Phạm vi điều chỉnh"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ11 (Khai thuế, khấu trừ thuế đối với hoạt độ) | K2]\nHộ kinh doanh, cá nhân cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm tự kê khai, nộp thuế theo quy định tại Điều 8, Điều 9, Điều 10 Nghị định này.",
+                "score": 0.015315,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn)]",
+                "score": 0.01072,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_9_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ9 (Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhậ)]",
+                "score": 0.01072,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ10 (Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhậ)]",
+                "score": 0.01072,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 22992,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=1.00",
+        "details": {
+          "matched": [
+            "117_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": []
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế thương mại điện tử'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/2 key facts, thiếu: ['5%', '2%']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "5%",
+            "2%"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 6: Cách thức kê khai và nộp số thuế đã khấu trừ > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 5: Thời điểm thực hiện khấu trừ, xác định số thuế phải khấu trừ > Khoản 2 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "117_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 117/2025/NĐ-CP > Chương II > Điều 4: Khấu trừ, nộp thuế thay",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương I > Điều 1: Phạm vi điều chỉnh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "117_2025_NDCP",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

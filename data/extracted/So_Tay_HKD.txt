@@ -1,0 +1,937 @@
+THUẾ NHÀ NƯỚC
+Sổ tay hướng dẫn
+thực hiện nghĩa vụ thuế
+DÀNH CHO HỘ KINH DOANH
+CÁ NHÂN KINH DOANH
+TỜ KHAI THUẾ
+THUẾ NHÀ NƯỚC
+Sổ tay hướng dẫn
+thực hiện nghĩa vụ thuế
+DÀNH CHO HỘ KINH DOANH
+CÁ NHÂN KINH DOANH
+Đồng hành cùng hộ kinh doanh
+thực hiện nghĩa vụ thuế đúng quy định!
+MỤC LỤC SỔ TAY
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ DÀNH CHO
+HỘ KINH DOANH, CÁ NHÂN KINH DOANH
+A. PHẦN MỞ ĐẦU
+B. NỘI DUNG
+I. Bắt đầu kinh doanh - Những điều cần lưu ý
+1. Quyền thành lập hộ kinh doanh
+2. Nghĩa vụ đăng ký hộ kinh doanh
+3. Đăng ký thuế
+4. Thủ tục đăng ký kinh doanh – Đăng ký thuế
+5. Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp
+6. Những bước chuẩn bị tiếp theo sau khi đăng ký thuế
+II. Nghĩa vụ thuế - Hiểu đúng, làm đủ
+1. Hộ kinh doanh phải nộp thuế khi nào, đối với hoạt động gì?
+2. Hộ kinh doanh cần nộp những loại thuế nào?
+3. Xác định số thuế GTGT, TNCN phải nộp đối với hộ kinh doanh
+4. Doanh thu để xác định thuế thu nhập cá nhân của hộ kinh doanh là gì?
+5. Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân
+6. Thuế suất đối với các hoạt động kinh doanh của hộ kinh doanh?
+III. Kê khai nộp thuế - Dễ hiểu, dễ thực hiện
+1. Hướng dẫn kê khai, nộp thuế cụ thể theo từng trường hợp
+2. Bảng tra cứu nhanh hướng dẫn kê khai theo ngưỡng doanh thu
+3. Hàng tồn kho - Nỗi lo đã được xóa bỏ
+IV. Hóa đơn điện tử – Điều cần thiết khi kinh doanh
+1. Lợi ích của hóa đơn điện tử
+2. Đối tượng sử dụng, loại hóa đơn, hình thức hóa đơn
+3. Lưu ý về việc đăng ký sử dụng hóa đơn điện tử
+4. Thay đổi thông tin đăng ký sử dụng hóa đơn
+5. Ủy nhiệm lập hóa đơn cho sàn TMĐT
+6. Hộ kinh doanh xuất và lập hóa đơn khi nào?
+7. Xuất hóa đơn sai sót/hoặc trong một số trường hợp phát sinh, xử lý như thế nào?
+8. Một số lưu ý khác
+V. Quyền lợi về giảm thuế giá trị gia tăng dành cho hộ kinh doanh
+VI. Hoàn thuế - Quyền lợi cần biết
+1. Hộ kinh doanh được hoàn thuế khi nào?
+2. Để được hoàn thuế, hộ kinh doanh cần chuẩn bị gì?
+3. Hộ kinh doanh có thể hoàn thuế bằng cách nào?
+VII. Các tình huống đặc biệt -Lưu ý để thực hiện
+1. Hộ kinh doanh thay đổi thông tin đăng ký như thế nào?
+2. Tạm ngừng kinh doanh, hộ kinh doanh cần phải làm gì?
+3. Không hoạt động nữa, hộ kinh doanh làm thế nào cho đúng?
+4. Mở thêm địa điểm kinh doanh, hộ kinh doanh cần làm gì?
+5. Hộ kinh doanh chuyển đổi lên doanh nghiệp?
+VIII. Quyền, trách nhiệm của hộ kinh doanh và những điều cần tránh
+1. Quyền và trách nhiệm của hộ kinh doanh trong quá trình thực hiện nghĩa vụ thuế
+2. Những điều hộ kinh doanh cần lưu ý khi thực hiện nghĩa vụ thuế
+IX. Hỗ trợ
+X. Hướng dẫn sử dụng các ứng dụng Thuế điện tử
+C. THÔNG ĐIỆP GỬI TỚI HỘ KINH DOANH
+A. PHẦN MỞ ĐẦU
+Kính chào Quý hộ kinh doanh, cá nhân kinh doanh trên toàn quốc!
+Bước sang năm 2026, Quý hộ kinh doanh, cá nhân kinh doanh (sau đây gọi chung là “hộ kinh doanh”) chính thức thực hiện kê khai, nộp thuế theo cơ chế tự tính, tự khai, tự nộp. Đây là bước chuyển đổi quan trọng trong công tác quản lý thuế, hướng tới một môi trường kinh doanh công bằng, minh bạch, đồng thời mở ra nhiều cơ hội phát triển ổn định và bền vững cho Quý hộ kinh doanh. Trong giai đoạn đầu tiếp cận và làm quen với phương thức mới, việc Quý hộ kinh doanh còn có những băn khoăn, lúng túng trước các quy định, thủ tục và cách thức thực hiện nghĩa vụ thuế là điều khó tránh khỏi.
+Thấu hiểu rõ những băn khoăn, tâm lý ban đầu đó, Cục Thuế đã xây dựng và phát hành Sổ tay hướng dẫn hộ kinh doanh với mong muốn đồng hành, hỗ trợ Quý hộ kinh doanh trong quá trình tìm hiểu, thực hiện các quy định về thuế. Tất cả Quý hộ kinh doanh không phân biệt quy mô doanh thu, ngành nghề lĩnh vực hoạt động đều có thể sử dụng sổ tay như tài liệu tham khảo thường xuyên hoặc tra cứu nhanh khi cần thực hiện các thủ tục về thuế.
+Cuốn sổ được biên soạn theo hướng ngắn gọn, dễ hiểu, tập trung vào những nội dung thiết thực, gắn trực tiếp với hoạt động sản xuất, kinh doanh của hộ kinh doanh trong thực tế như đăng ký thuế, kê khai, nộp thuế, sử dụng hóa đơn điện tử và trách nhiệm lưu giữ hồ sơ, chứng từ. Thông qua các hướng dẫn cụ thể, sổ tay giúp Quý hộ kinh doanh chủ động thực hiện đúng, đầy đủ nghĩa vụ thuế, hạn chế sai sót, tránh rủi ro, từ đó yên tâm phát triển hoạt động kinh doanh.
+Để sử dụng hiệu quả, Quý hộ kinh doanh nên tập trung đọc, tìm hiểu những nội dung phù hợp với loại hình, quy mô kinh doanh của mình và ghi chú các thông tin cần thiết để thuận tiện áp dụng trong thực tế.
+Cục Thuế mong rằng Sổ tay hướng dẫn hộ kinh doanh sẽ là người bạn đồng hành tin cậy, hỗ trợ Quý hộ kinh doanh thực hiện nghĩa vụ thuế đúng quy định, góp phần xây dựng hoạt động kinh doanh ổn định, bền vững và lâu dài.
+Kính chúc Quý hộ kinh doanh sức khỏe, kinh doanh thuận lợi và ngày càng thành công!
+B. NỘI DUNG
+BẮT ĐẦU KINH DOANH
+Những điều cần lưu ý
+Quyền thành lập hộ kinh doanh
+Cá nhân, thành viên hộ gia đình là công dân Việt Nam có năng lực hành vi dân sự đầy đủ theo quy định của Bộ luật Dân sự có quyền thành lập hộ kinh doanh (ngoại trừ một số trường hợp như đang bị truy cứu trách nhiệm hình sự, tạm giam, phạt tù...)
+Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ.
+Nghĩa vụ đăng ký hộ kinh doanh
+Cá nhân, thành viên hộ gia đình chỉ được đăng ký duy nhất một hộ kinh doanh trong phạm vi toàn quốc.
+Người thành lập hộ kinh doanh, hộ kinh doanh có nghĩa vụ đăng ký hộ kinh doanh, không được hoạt động dưới danh nghĩa hộ kinh doanh mà không đăng ký.
+Trường hợp không bắt buộc đăng ký hộ kinh doanh:
+Hộ gia đình sản xuất nông, lâm, ngư nghiệp, làm muối; bán hàng rong, quà vặt, buôn chuyến, kinh doanh lưu động, kinh doanh thời vụ, làm dịch vụ có thu nhập thấp theo mức quy định của từng tỉnh, thành phố (ngoại trừ kinh doanh ngành nghề có điều kiện)
+Cá nhân kinh doanh của các nước có chung đường biên giới đất liền với Việt Nam thực hiện hoạt động mua, bán, trao đổi hàng hóa tại chợ biên giới, chợ cửa khẩu, chợ trong khu kinh tế cửa khẩu.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Đăng ký thuế
+Hộ gia đình, cá nhân có hoạt động sản xuất, kinh doanh phải đăng ký thuế theo quy định của pháp luật quản lý thuế.
+Hộ kinh doanh thực hiện đăng ký thuế theo cơ chế một cửa liên thông cùng với đăng ký hộ kinh doanh tại cơ quan đăng ký kinh doanh theo quy định của pháp luật có liên quan; không cần phải đến cùng lúc 02 cơ quan đăng ký kinh doanh và cơ quan thuế để thực hiện.
+Trường hợp cá nhân kinh doanh không thuộc diện đăng ký hộ kinh doanh thì phải đăng ký thuế với cơ quan thuế.
+Thủ tục đăng ký kinh doanh – Đăng ký thuế
+Liên thông
+Đăng ký trực tiếp
+Đối tượng
+Cá nhân hoặc các thành viên hộ gia đình khi tiến hành hoạt động sản xuất kinh doanh
+- Hộ gia đình, cá nhân có hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ theo quy định của pháp luật nhưng không đăng ký hộ kinh doanh qua cơ quan đăng ký kinh doanh theo quy định của Chính phủ về hộ kinh doanh.
+Hộ gia đình sản xuất nông, lâm, ngư nghiệp, làm muối và những người bán hàng rong, quà vặt, buôn chuyến, kinh doanh lưu động, kinh doanh thời vụ, làm dịch vụ có thu nhập thấp, trừ trường hợp kinh doanh các ngành, nghề đầu tư kinh doanh có điều kiện
+Cá nhân kinh doanh của các nước có chung đường biên giới đất liền với Việt Nam thực hiện hoạt động mua, bán, trao đổi hàng hóa tại chợ biên giới, chợ cửa khẩu, chợ trong khu kinh tế cửa khẩu.
+Nơi làm thủ tục
+Cơ quan đăng ký kinh doanh cấp xã/phường
+- Thuế cơ sở nơi đặt trụ sở kinh doanh, hoặc nơi cá nhân có bất động sản cho thuê.
+Thuế cơ sở nơi cư trú của cá nhân kinh doanh trong trường hợp cá nhân kinh doanh không có trụ sở kinh doanh cố định.
+Ngành nghề kinh doanh
+Ghi tên ngành và mã ngành cấp bốn trong Hệ thống ngành kinh tế Việt Nam đối với ngành, nghề kinh doanh chính.
+Ghi 01 ngành nghề kinh doanh chính thực tế đang kinh doanh.
+Hồ sơ/ giấy tờ cần thiết
+Giấy đề nghị đăng ký hộ kinh doanh kèm theo Thông tư 68/2025/TT-BTC ngày 01/7/2025
+Tờ khai đăng ký thuế mẫu số 03-ĐK-TCT kèm theo Thông tư 86/2024/TT-BTC ngày 23/12/2024
+Thời hạn thực hiện
+Khi hộ gia đình, cá nhân kinh doanh bắt đầu hoạt động kinh doanh
+10 ngày làm việc kể từ ngày bắt đầu kinh doanh
+Thời hạn được CQNN giải quyết
+03 (ba) ngày làm việc kể từ ngày nhận được văn bản đề nghị
+03 (ba) ngày làm việc kể từ ngày cơ quan thuế nhận đủ hồ sơ của người nộp thuế
+LƯU Ý
+Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác thực hiện sử dụng số định danh cá nhân thay cho mã số thuế cơ quan thuế cấp cho hộ kinh doanh, cá nhân kinh doanh (sử dụng số ĐDCN của người đại diện).
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Hướng dẫn đăng ký thuế cụ thể theo từng trường hợp
+Cá nhân làm công ăn lương có hoạt động kinh doanh, Cá nhân có hoạt động cho thuê bất động sản:
+Trường hợp cá nhân đăng ký thành lập hộ kinh doanh khi bắt đầu hoạt động kinh doanh hoặc cho thuê nhà thì thực hiện đăng ký thuế theo cơ chế một cửa liên thông cùng với đăng ký kinh doanh;
+Trường hợp cá nhân không đăng ký thành lập hộ kinh doanh thì thực hiện đăng ký thuế trực tiếp với cơ quan thuế.
+Cá nhân có nhiều địa điểm kinh doanh:
+Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc thành lập, thay đổi thông tin, tạm ngừng, chấm dứt hoạt động kinh doanh của các địa điểm kinh doanh đến cơ quan thuế quản lý trực tiếp theo quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+Cá nhân kinh doanh nhiều ngành nghề:
+Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc thành lập, thay đổi thông tin, tạm ngừng, chấm dứt hoạt động kinh doanh của các địa điểm kinh doanh đến cơ quan thuế quản lý trực tiếp theo quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Hộ kinh doanh, cá nhân kinh doanh lưu ý sau khi đăng ký thuế
+Sau khi hoàn tất đăng ký thuế, hộ kinh doanh chủ động thực hiện một số bước sau để đảm bảo việc kê khai, nộp thuế được thuận lợi và đúng quy định:
+Đăng ký và kích hoạt tài khoản thuế điện tử để thực hiện các thủ tục kê khai, nộp thuế và tra cứu nghĩa vụ thuế trực tuyến.
+Kiểm tra, rà soát thông tin đăng ký thuế (mã số thuế, thông tin định danh, tài khoản ngân hàng, ngành nghề kinh doanh...) để kịp thời cập nhật khi có thay đổi.
+Theo dõi các thông báo từ cơ quan thuế trên hệ thống điện tử để thực hiện đúng thời hạn kê khai, nộp thuế và tránh phát sinh vi phạm.
+Tìm hiểu quy định nghĩa vụ thuế, cách ghi chép sổ sách, theo dõi doanh thu, đầu vào, cùng các nghĩa vụ, quyền lợi về thuế khác tại phần tiếp theo của sổ tay.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+NGHĨA VỤ THUẾ
+Hiểu đúng, làm đủ
+01 Nộp thuế khi nào, đối với hoạt động gì?
+Thực hiện nghĩa vụ thuế, không phân biệt: Kinh doanh truyền thống hay bán hàng online, bán qua sàn thương mại điện tử; Cho thuê tài sản hay bất động sản; Hộ kinh doanh một hay nhiều ngành nghề cùng lúc;...
+Không phải nộp thuế thu nhập cá nhân (TNCN), không phải nộp thuế giá trị gia tăng (GTGT) khi có mức doanh thu năm từ 500 triệu đồng trở xuống.
+02 Cần nộp những loại thuế nào?
+Thuế giá trị gia tăng (GTGT) và thuế thu nhập cá nhân (TNCN) là hai loại thuế chủ yếu áp dụng đối với hoạt động sản xuất, kinh doanh thông thường của hộ kinh doanh khi doanh thu vượt ngưỡng 500 triệu đồng/ năm theo quy định.
+Thuế tiêu thụ đặc biệt đối với hộ kinh doanh sản xuất, rượu bia, thuốc lá, xăng, cung cấp dịch vụ vũ trường, karaoke,....
+Thuế tài nguyên đối với hộ kinh doanh có hoạt động khai thác tài nguyên như khoáng sản, dầu thô, khí thiên nhiên, sản phẩm của rừng, hải sản tự nhiên, nước thiên nhiên,...;
+Phí bảo vệ môi trường đối với khai thác khoáng sản.
+03 Xác định số thuế GTGT, TNCN phải nộp đối với hộ kinh doanh
+Đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng, thuế GTGT và thuế TNCN được tính như sau:
+Thuế GTGT được tính theo phương pháp trực tiếp trên doanh thu, cụ thể:
+Thuế GTGT phải nộp = Doanh thu × Tỷ lệ % thuế GTGT
+Thuế TNCN của hộ kinh doanh, cá nhân kinh doanh được xác định theo một trong hai phương pháp sau:
+(1) Phương pháp nộp thuế trên doanh thu tính thuế
+Áp dụng đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này
+Thuế TNCN phải nộp = Doanh thu tính thuế (doanh thu - 500 triệu đồng) × Thuế suất TNCN
+(2) Phương pháp nộp thuế trên thu nhập tính thuế
+Áp dụng với tất cả hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng (trừ trường hợp nộp thuế trên doanh thu tính thuế)
+Thu nhập tính thuế = Doanh thu – Chi phí hợp lý, hợp lệ
+Thuế TNCN phải nộp = Thu nhập tính thuế × Thuế suất
+Cần nộp những loại thuế nào?
+Thuế giá trị gia tăng, thuế thu nhập cá nhân, thuế tiêu thụ đặc biệt, thuế tài nguyên và phí bảo vệ môi trường
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+04 Doanh thu để xác định thuế TNCN của hộ kinh doanh là gì?
+Doanh thu để xác định thuế thu nhập cá nhân được hiểu một cách đơn giản là toàn bộ số tiền mà hộ kinh doanh thực tế được hưởng từ hoạt động sản xuất, kinh doanh, không phân biệt đã thu được tiền hay chưa; trong đó bao gồm cả các khoản thưởng được nhận, khoản được nhận từ hỗ trợ đạt doanh số, khuyến mại, chiết khấu thanh toán, khoản hỗ trợ được nhận bằng tiền hoặc không bằng tiền, các khoản trợ giá, phụ thu, phụ trội, phí thu thêm được nhận theo quy định (không bao gồm chiết khấu thương mại, giảm giá hàng bán, hàng bán bị trả lại), các khoản bồi thường vi phạm hợp đồng, bồi thường khác liên quan đến hoạt động kinh doanh, doanh thu khác.
+Tùy theo từng hình thức kinh doanh cụ thể, cách xác định doanh thu cũng có những điểm khác nhau. Hộ kinh doanh có thể tham khảo bảng sau:
+Hoạt động kinh doanh
+Doanh thu tính thuế
+Gia công hàng hóa
+Toàn bộ tiền thu được từ hoạt động gia công, bao gồm tiền công gia công và các khoản chi phí về nhiên liệu, động lực, vật liệu phụ và chi phí khác phục vụ cho việc gia công
+Bán hàng hóa, cung cấp dịch vụ trả góp, trả chậm
+Giá bán hàng hóa, dịch vụ trả tiền một lần, không bao gồm tiền lãi trả góp, tiền lãi trả chậm
+Giao hàng hóa cho đại lý
+Tổng số tiền bán hàng hóa
+Nhận làm đại lý bán hàng đúng giá
+Tiền hoa hồng được hưởng theo hợp đồng đại lý
+Cho thuê tài sản
+Số tiền thuê bên thuê trả theo hợp đồng từng kỳ; trường hợp trả trước nhiều năm thì doanh thu được phân bổ theo từng năm hoặc xác định theo doanh thu trả tiền một lần
+Kinh doanh dịch vụ thu tiền trước nhiều năm
+Doanh thu được phân bổ theo từng năm hoặc xác định theo doanh thu trả tiền một lần
+Vận tải hành khách, hàng hóa, hành lý
+Toàn bộ doanh thu vận chuyển phát sinh trong kỳ tính thuế
+Xây dựng, lắp đặt có bao thầu nguyên vật liệu
+Giá trị công trình, hạng mục công trình hoặc khối lượng công trình nghiệm thu, bao gồm cả giá trị nguyên vật liệu, máy móc, thiết bị
+Xây dựng, lắp đặt không bao thầu nguyên vật liệu
+Số tiền từ hoạt động xây dựng, lắp đặt, không bao gồm giá trị nguyên vật liệu, máy móc, thiết bị
+Để xác định đúng nghĩa vụ thuế của mình, hộ kinh doanh cần theo dõi, kê khai đầy đủ, trung thực toàn bộ doanh thu phát sinh trong quá trình kinh doanh. Việc kê khai đúng ngay từ đầu sẽ giúp hộ kinh doanh tránh được sai sót, rủi ro về thuế và yên tâm tập trung cho hoạt động kinh doanh lâu dài.
+05 Các khoản chi được trừ và không được trừ khi xác định thuế thu nhập cá nhân
+3 điều kiện xác định khoản chi được trừ:
+• Các khoản chi phí thực tế phát sinh liên quan đến hoạt động sản xuất, kinh doanh
+• Có đủ hóa đơn, chứng từ theo quy định của pháp luật về hóa đơn, chứng từ, pháp luật về kế toán
+• Chứng từ thanh toán không dùng tiền mặt đối với các khoản thanh toán từng lần có giá trị từ 05 triệu đồng trở lên, cụ thể như sau:
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Chi tiết các khoản chi được trừ:
+STT
+Khoản chi được trừ
+1
+Chi phí nguyên liệu, vật liệu, nhiên liệu, năng lượng, hàng hóa sử dụng vào sản xuất, kinh doanh
+2
+Chi phí tiền lương, tiền công, tiền thưởng, các khoản phụ cấp, bảo hiểm bắt buộc và các khoản chi trả cho người lao động có đóng bảo hiểm bắt buộc theo quy định; chi phí tiền lương, tiền công, các khoản phụ cấp và các khoản chi trả cho người lao động dưới 01 tháng
+3
+Chi phí khấu hao tài sản cố định phục vụ cho hoạt động sản xuất, kinh doanh. Mức trích khấu hao tài sản cố định được tính vào chi phí hợp lý theo quy định về chế độ quản lý, sử dụng và trích khấu hao tài sản cố định áp dụng đối với doanh nghiệp. Trường hợp tài sản cố định đã khấu hao hết giá trị nhưng vẫn tiếp tục được sử dụng cho sản xuất, kinh doanh thì không được trích khấu hao
+4
+Chi phí dịch vụ mua ngoài như điện, nước, điện thoại, internet, vận chuyển, thuê tài sản, sửa chữa, bảo dưỡng có hóa đơn, chứng từ theo quy định của pháp luật
+5
+Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của tổ chức tín dụng theo lãi suất thực tế. Chi phí trả lãi tiền vay vốn sản xuất, kinh doanh của đối tượng không phải là tổ chức tín dụng không vượt quá mức quy định tại Bộ luật Dân sự
+6
+Các khoản chi khác phục vụ trực tiếp hoạt động sản xuất, kinh doanh
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Các khoản chi không được trừ khi xác định thu nhập tính thuế:
+STT
+Khoản chi không được trừ
+1
+Khoản chi không liên quan đến hoạt động sản xuất, kinh doanh
+2
+Các khoản chi không có đủ hóa đơn, chứng từ theo quy định của pháp luật
+3
+Khoản tiền lương, tiền công và các khoản chi có tính chất tiền lương của cá nhân kinh doanh, nhóm cá nhân kinh doanh, các thành viên trong hộ kinh doanh trừ các khoản đóng góp bảo hiểm bắt buộc; khoản tiền lương, tiền công và các khoản chi có tính chất tiền lương đã tính vào chi phí nhưng thực tế không chi trả hoặc không có chứng từ thanh toán
+4
+Phần chi khấu hao tài sản cố định vượt mức quy định hoặc khấu hao đối với tài sản cố định không sử dụng cho hoạt động sản xuất, kinh doanh
+5
+Các khoản chi phạt vi phạm hành chính, phạt vi phạm hợp đồng, tiền bồi thường do lỗi của cá nhân kinh doanh
+6
+Đất ở và công trình phục vụ sinh hoạt trên đất, xe ô tô và các tài sản đăng ký sở hữu hoặc đăng ký sử dụng mang tên cá nhân, trừ xe ô tô và các tài sản đăng ký sở hữu hoặc đăng ký sử dụng với mục đích kinh doanh vận tải, du lịch
+7
+Các khoản chi phí phục vụ nhu cầu cá nhân, gia đình. Cá nhân kinh doanh có trách nhiệm theo dõi riêng chi phí phục vụ hoạt động kinh doanh và chi phí phục vụ nhu cầu cá nhân, gia đình.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+06 Thuế suất đối với các hoạt động kinh doanh của hộ kinh doanh?
+Tỷ lệ tính thuế GTGT: Đối với hộ kinh doanh có doanh thu trên 500 triệu đồng/năm, thuế GTGT được tính theo tỷ lệ % trên doanh thu. Căn cứ vào ngành nghề kinh doanh tỷ lệ % tính thuế GTGT được xác định như sau:
+Nhóm ngành nghề kinh doanh
+Tỷ lệ % tính thuế GTGT
+Phân phối, cung cấp hàng hóa
+1%
+Dịch vụ, xây dựng không bao thầu nguyên vật liệu
+5%
+Sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu
+3%
+Hoạt động kinh doanh khác
+2%
+Thuế suất thuế TNCN:
+Mức doanh thu năm
+Thuế suất TNCN
+Doanh thu trên 500 triệu đến 03 tỷ đồng
+15%
+Doanh thu trên 03 tỷ đến 50 tỷ đồng
+17%
+Doanh thu trên 50 tỷ đồng
+20%
+Riêng hộ kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn nộp thuế TNCN trên doanh thu thì căn cứ ngành nghề kinh doanh thuế suất thuế TNCN được xác định như sau:
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Nhóm ngành nghề kinh doanh
+Thuế suất Thuế TNCN (%)
+Phân phối, cung cấp hàng hóa
+0,5%
+Dịch vụ, xây dựng không bao thầu nguyên vật liệu
+2%
+Hoạt động cho thuê tài sản, đại lý bảo hiểm, đại lý xổ số, đại lý bán hàng đa cấp
+5%
+Sản xuất, vận tải, dịch vụ có gắn với hàng hóa, xây dựng có bao thầu nguyên vật liệu
+1,5%
+Hoạt động cung cấp sản phẩm và dịch vụ nội dung thông tin số về giải trí, trò chơi điện tử, phim số, ảnh số, nhạc số, quảng cáo số
+5%
+Hoạt động kinh doanh khác
+1%
+KÊ KHAI THUẾ
+Dễ hiểu, dễ thực hiện
+Hướng dẫn kê khai, nộp thuế cụ thể theo từng trường hợp
+Hộ kinh doanh truyền thống
+Hộ kinh doanh chỉ có hoạt động kinh doanh trên sàn TMĐT
+Hộ kinh doanh vừa có hoạt động kinh doanh truyền thống vừa có hoạt động kinh doanh trên sàn TMĐT
+Đối với doanh thu kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác (trong nước hoặc nước ngoài) có chức năng đặt hàng trực tuyến
+Đối với doanh thu phát sinh trên nền tảng thương mại điện tử, nền tảng số khác (trong nước hoặc nước ngoài) có chức năng đặt hàng trực tuyến
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Thực hiện xác định phương pháp tính thuế, sổ sách kế toán, kê khai nộp thuế theo bảng bên dưới
+và chức năng thanh toán thì Chủ quản quản lý nền tảng có trách nhiệm thực hiện khấu trừ, khai thay và nộp thay số thuế đã khấu trừ đối với mỗi giao dịch cung cấp hàng hóa, dịch vụ của hộ kinh doanh, cá nhân kinh doanh theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ.
+Đối với doanh thu kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán thì hộ kinh doanh, cá nhân kinh doanh tự xác định phương pháp tính thuế, sổ sách kế toán, kê khai nộp thuế theo bảng bên dưới.
+Cuối năm hộ kinh doanh tổng hợp toàn bộ doanh thu từ hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác (bao gồm cả doanh thu đã được khấu trừ khai thay nộp thay và doanh thu tự kê khai trong năm). Trường hợp có doanh thu năm trên 3 tỷ đồng hoặc trên 500 triệu đồng đến 3 tỷ đồng lựa chọn nộp thuế TNCN trên thu nhập tính thuế thì hộ kinh doanh, cá nhân kinh doanh thực hiện quyết toán thuế TNCN theo bảng bên dưới.
+và chức năng thanh toán thì Chủ quản quản lý nền tảng nhiệm thực hiện khấu trừ, khai thay và nộp thay số thuế đã khấu trừ.
+Đối với doanh thu phát sinh từ hoạt động kinh doanh truyền thống và doanh thu phát sinh trên nền tảng thương mại điện tử, nền tảng số khác (trong nước hoặc nước ngoài) không có chức năng đặt hàng trực tuyến và chức năng thanh toán thì hộ kinh doanh, cá nhân kinh doanh tự xác định phương pháp tính thuế, sổ sách kế toán, kê khai nộp thuế theo bảng bên dưới.
+Cuối năm hộ kinh doanh tổng hợp toàn bộ doanh thu từ hoạt động kinh doanh truyền thống và hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác (bao gồm cả doanh thu đã được khấu trừ khai thay nộp thay và doanh thu tự kê khai trong năm). Trường hợp có doanh thu năm trên 3 tỷ đồng hoặc trên 500 triệu đồng đến 3 tỷ đồng lựa chọn nộp thuế TNCN trên thu nhập tính thuế thì hộ kinh doanh, cá nhân kinh doanh thực hiện quyết toán thuế TNCN theo bảng bên dưới.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Bảng tra cứu nhanh hướng dẫn kê khai theo ngưỡng doanh thu
+2.1. Hộ kinh doanh có doanh thu năm từ 500 triệu đồng trở xuống
+STT
+NỘI DUNG
+I
+Bước 1: Xác định phương pháp tính thuế
+1
+Phương pháp tính thuế GTGT, TNCN
+Không chịu thuế GTGT, TNCN
+2
+Thay đổi phương pháp tính thuế
+Trường hợp phát sinh doanh thu thực tế trên 500 triệu đồng trong năm thì thực hiện khai thuế, nộp thuế kể từ quý phát sinh doanh thu trên 500 triệu đồng.
+II
+Bước 2: Thực hiện quy định về số sách kế toán, hóa đơn, chứng từ theo quy định
+1
+Sổ kế toán
+Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD)
+2
+Mục đích sổ kế toán
+Làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không.
+Theo dõi, đối chiếu số liệu với cơ quan thuế.
+3
+Chứng từ kế toán
+Không
+4
+Hình thức lưu trữ
+Điện tử hoặc giấy
+5
+Thời gian lưu trữ
+Đối với tài liệu kế toán: tối thiểu là 05 năm
+6
+Tổ chức công tác kế toán
+Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán;
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+6
+Tổ chức công tác kế toán
+- Hoặc bố trí người làm công tác kế toán(bố, mẹ, vợ, chồng, con, anh, chị, em, hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán);
+Hoặc thuê dịch vụ làm kế toán.
+III
+Bước 3: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp hồ sơ khai thuế
+Khai thuế tổng hợp chung cho các địa điểm kinh doanh trên một (01) hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh.
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+1. Mới ra kinh doanh
+Ra kinh doanh trong 6 tháng đầu năm: thông báo 02/lần năm
++ Lần 1 thông báo doanh thu thực tế phát sinh đến hết 30/6: chậm nhất 31/7
++ Lần 2 thông báo doanh thu thực tế phát sinh 6 tháng cuối năm: Chậm nhất 31/01 năm dương lịch tiếp theo.
+Ra kinh doanh trong 6 tháng cuối năm: thông báo doanh thu thực tế phát sinh chậm nhất 31/01 năm dương lịch tiếp theo.
+- Thông báo Số tài khoản/số hiệu ví điện tử kèm theo Thông báo doanh thu kỳ đầu tiên và Thông báo lại khi có thay đổi
+2. Kinh doanh ổn định
+- Thông báo Số tài khoản/số hiệu ví điện tử chậm nhất là ngày 20 tháng 4 năm 2026 và Thông báo lại khi có thay đổi
+- Thông báo doanh thu thực tế phát sinh trong năm chậm nhất là ngày 31/01 năm dương lịch tiếp theo.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+3
+Hồ sơ khai thuế
+- Thông báo số tài khoản/số hiệu ví điện tử theo Bảng kê mẫu 01/BK-STK
+- Thông báo doanh thu theo Mẫu số 01/TKN-CNKD
+4
+Phương thức khai thuế
+Nộp hồ sơ khai thuế bằng phương thức điện tử.
+- Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+5
+Nơi nộp thuế
+Không phải nộp thuế
+6
+Phương thức nộp thuế
+Không phải nộp thuế
+2.2. Hộ kinh doanh có doanh thu năm trên 500 triệu đồng đến 3 tỷ đồng lựa chọn nộp thuế TNCN trên doanh thu
+STT
+NỘI DUNG
+I
+Bước 1: Xác định phương pháp tính thuế
+1
+Phương pháp tính thuế GTGT, TNCN
+GTGT: tỷ lệ % trên doanh thu.
+TNCN: thuế suất nhân (x) (doanh thu năm – 500 triệu đồng)
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+2
+Doanh thu được trừ để xác định thuế TNCN
+Được trừ 500 triệu đồng vào doanh thu tính thuế thu nhập cá nhân.
+Trường hợp có nhiều ngành, nghề hoặc có nhiều địa điểm kinh doanh thì được áp dụng mức trừ 500 triệu đồng đối với một hoặc một số ngành, nghề hoặc địa điểm kinh doanh do cá nhân lựa chọn theo phương án có lợi nhất (tổng mức trừ không vượt quá 500 triệu đồng trong một năm đối với doanh thu của toàn bộ hoạt động kinh doanh)
+Trường hợp doanh thu từ ngành, nghề hoặc địa điểm kinh doanh được lựa chọn chưa trừ đủ 500 triệu đồng, cá nhân được trừ tiếp mức chưa trừ hết vào doanh thu của một hoặc một số ngành, nghề hoặc địa điểm kinh doanh khác cho đến khi tổng mức trừ đủ 500 triệu đồng.
+3
+Thay đổi và ổn định phương pháp tính thuế
+Nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất
+II
+Bước 2: Thực hiện quy định về số sách kế toán, hóa đơn, chứng từ theo quy định
+1
+Sổ kế toán
+Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2a-HKD)
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+2
+Mục đích sổ kế toán
+Ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh để tính thuế GTGT, TNCN.
+Theo dõi, đối chiếu số thuế phải nộp với cơ quan thuế.
+3
+Chứng từ kế toán
+Hóa đơn và các chứng từ khác
+4
+Hình thức lưu trữ
+Điện tử hoặc giấy
+5
+Thời gian lưu trữ
+Đối với tài liệu kế toán: tối thiểu là 05 năm
+6
+Tổ chức công tác kế toán
+- Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán;
+Hoặc bố trí người làm công tác kế toán(bố, mẹ, vợ, chồng, con, anh, chị, em, hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán);
+Hoặc thuê dịch vụ làm kế toán.
+III
+Bước 3: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp hồ sơ khai thuế
+Khai thuế tổng hợp chung cho các địa điểm kinh doanh trên một (01) hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh.
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế GTGT, TNCN:
+Khai thuế GTGT, TNCN theo quý.
+Chậm nhất là ngày cuối cùng của tháng đầu tiên của quý tiếp theo.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+3
+Hồ sơ khai thuế
+- Tờ khai mẫu số 01/CNKD: Khai thuế giá trị gia tăng, thuế thu nhập cá nhân:
+Bảng kê mẫu 01/BK-STK: Thông báo số tài khoản/số hiệu ví điện tử kèm theo Tờ khai thuế đầu tiên trong năm 2026 đối với hộ kinh doanh, cá nhân kinh doanh đang hoạt động hoặc Tờ khai thuế đầu tiên của hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh và thông báo lại khi có thay đổi.
+4
+Phương thức khai thuế
+- Nộp hồ sơ khai thuế bằng phương thức điện tử.
+- Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+5
+Nơi nộp thuế
+Nộp thuế cho từng địa điểm kinh doanh
+6
+Phương thức nộp thuế
+1. Nộp điện tử trên: Hệ thống thông tin quản lý thuế; Hệ thống dịch vụ công trực tuyến của Kho bạc Nhà nước; dịch vụ thanh toán điện tử của tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế theo quy định của pháp luật.
+2. Nộp trực tiếp tại: tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế; cơ quan nhà nước có thẩm quyền theo quy định của pháp luật; cơ quan quản lý thuế; tổ chức được cơ quan quản lý thuế ủy nhiệm thu thuế.
+Trường hợp khoản thuế phải nộp đã được cơ quan thuế cấp mã định danh khoản phải nộp thì hộ kinh doanh thực hiện nộp theo mã định danh khoản phải nộp
+2.3. Hộ kinh doanh có doanh thu năm trên 3 tỷ đồng đến 50 tỷ đồng hoặc trên 500 triệu đồng đến 3 tỷ đồng lựa chọn nộp thuế TNCN trên thu nhập tính thuế
+STT
+NỘI DUNG
+I
+Bước 1: Xác định phương pháp tính thuế
+1
+Phương pháp tính thuế GTGT, TNCN
+GTGT: tỷ lệ % trên doanh thu.
+- TNCN:
++) Doanh thu trên 500 triệu đồng đến 3 tỷ đồng: thu nhập tính thuế nhân (x) với thuế suất 15%
++) Doanh thu năm trên 3 tỷ đồng đến 50 tỷ đồng: thu nhập tính thuế nhân (x) với thuế suất 17%
+2
+Thay đổi và ổn định phương pháp tính thuế
+Thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+II
+Bước 2: Thực hiện quy định về số sách kế toán, hóa đơn, chứng từ theo quy định
+1
+Sổ kế toán
+- Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)
+- Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)
+- Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (Mẫu số S2d-HKD)
+- Sổ chi tiết tiền (Mẫu số S2e-HKD)
+2
+Mục đích sổ kế toán
+Ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh để tính thuế GTGT, TNCN
+Theo dõi, đối chiếu số thuế phải nộp với cơ quan thuế.
+- Theo dõi, quản lý về tình hình nhập, xuất, tồn cho từng vật liệu, dụng cụ, sản phẩm, hàng hóa.
+Theo dõi tình hình thu, chi bằng tiền mặt hoặc tiền gửi không kỳ hạn (tiền gửi để thanh toán) trong tài khoản của hộ kinh doanh, cá nhân kinh doanh.
+3
+Chứng từ kế toán
+Hóa đơn, Bảng kê mua hàng hóa, dịch vụ và các chứng từ kế toán khác
+4
+Hình thức lưu trữ
+Điện tử hoặc giấy
+5
+Thời gian lưu trữ
+Đối với tài liệu kế toán: tối thiểu là 05 năm
+6
+Tổ chức công tác kế toán
+Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán;
+Hoặc bố trí người làm công tác kế toán(bố, mẹ, vợ, chồng, con, anh, chị, em, hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán);
+- Hoặc thuê dịch vụ làm kế toán.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+III
+Bước 3: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp hồ sơ khai thuế
+Khai thuế tổng hợp chung cho các địa điểm kinh doanh trên một (01) hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh.
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế GTGT, TNCN:
+Khai thuế GTGT và khai tạm nộp TNCN theo quý. Chậm nhất là ngày cuối cùng của tháng đầu tiên của quý tiếp theo.
+Khai quyết toán thuế thu nhập cá nhân theo năm: chậm nhất là ngày 31/3 năm dương lịch tiếp theo
+3
+Hồ sơ khai thuế
+* Hồ sơ khai thuế GTGT và khai tạm nộp thuế TNCN trong năm:
+- Tờ khai mẫu số 01/CNKD: Khai thuế giá trị gia tăng, khai tạm nộp thuế thu nhập cá nhân trong năm.
+- Bảng kê hàng tồn kho, máy móc, thiết bị tính đến 31/12/2025.
+Bảng kê mẫu 01/BK-STK: Thông báo số tài khoản/số hiệu ví điện tử kèm theo Tờ khai thuế đầu tiên trong năm 2026 đối với hộ kinh doanh, cá nhân kinh doanh đang hoạt động hoặc Tờ khai thuế đầu tiên của hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh và thông báo lại khi có thay đổi.
+* Hồ sơ khai quyết toán thuế TNCN cuối năm: Tờ khai mẫu số 02/CNKD-TNCN-QTT
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+4
+Phương thức khai thuế
+- Nộp hồ sơ khai thuế bằng phương thức điện tử.
+- Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+5
+Nơi nộp thuế
+Nộp thuế GTGT cho từng địa điểm kinh doanh, tạm nộp thuế TNCN tại trụ sở chính.
+6
+Phương thức nộp thuế
+1. Nộp điện tử trên: Hệ thống thông tin quản lý thuế; Hệ thống dịch vụ công trực tuyến của Kho bạc Nhà nước; dịch vụ thanh toán điện tử của tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế theo quy định của pháp luật.
+2. Nộp trực tiếp tại: tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế; cơ quan nhà nước có thẩm quyền theo quy định của pháp luật; cơ quan quản lý thuế; tổ chức được cơ quan quản lý thuế ủy nhiệm thu thuế.
+Trường hợp khoản thuế phải nộp đã được cơ quan thuế cấp mã định danh khoản phải nộp thì hộ kinh doanh thực hiện nộp theo mã định danh khoản phải nộp.
+2.4. Hộ kinh doanh có doanh thu năm trên 50 tỷ đồng
+STT
+NỘI DUNG
+I
+Bước 1: Xác định phương pháp tính thuế
+1
+Phương pháp tính thuế GTGT, TNCN
+GTGT: tỷ lệ % trên doanh thu.
+- TNCN: thu nhập tính thuế nhân (x) với thuế suất 20%
+2
+Thay đổi và ổn định phương pháp tính thuế
+Thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.
+II
+Bước 2: Thực hiện quy định về số sách kế toán, hóa đơn, chứng từ theo quy định
+1
+Sổ kế toán
+Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)
+Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)
+- Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (Mẫu số S2d-HKD)
+Sổ chi tiết tiền (Mẫu số S2e-HKD)
+2
+Mục đích sổ kế toán
+Ghi doanh thu bán hàng hóa, dịch vụ theo từng nhóm danh mục ngành nghề kinh doanh để tính thuế GTGT, TNCN
+Theo dõi, đối chiếu số thuế phải nộp với cơ quan thuế.
+Theo dõi, quản lý về tình hình nhập, xuất, tồn cho từng vật liệu, dụng cụ, sản phẩm, hàng hóa.
+- Theo dõi tình hình thu, chi bằng tiền mặt hoặc tiền gửi không kỳ hạn (tiền gửi để thanh toán) trong tài khoản của hộ kinh doanh, cá nhân kinh doanh.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+3
+Chứng từ kế toán
+Hóa đơn, Bảng kê mua hàng hóa, dịch vụ và các chứng từ kế toán khác
+4
+Hình thức lưu trữ
+Điện tử hoặc giấy
+5
+Thời gian lưu trữ
+Đối với tài liệu kế toán: tối thiểu là 05 năm
+6
+Tổ chức công tác kế toán
+Người đại diện hộ kinh doanh, cá nhân kinh doanh tự ghi chép sổ sách kế toán;
+Hoặc bố trí người làm công tác kế toán (bố, mẹ, vợ, chồng, con, anh, chị, em, hoặc bố trí người làm quản lý, điều hành, thủ kho, thủ quỹ, người được giao nhiệm vụ thường xuyên mua, bán tài sản kiêm nhiệm làm kế toán);
+Hoặc thuê dịch vụ làm kế toán.
+III
+Bước 3: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp thuế
+Khai thuế tổng hợp chung cho các địa điểm kinh doanh trên một (01) hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh.
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế GTGT, TNCN:
+- Khai thuế GTGT và khai tạm nộp TNCN theo tháng.
+Chậm nhất là ngày thứ 20 của tháng tiếp theo tháng phát sinh nghĩa vụ thuế.
+Riêng hồ sơ khai thuế tháng 1, 2, 3 năm 2026 gửi cho cơ quan thuế quản lý trực tiếp chậm nhất là ngày 20/4/2026.
+- Khai quyết toán thuế thu nhập cá nhân theo năm: chậm nhất là ngày 31/3 năm dương lịch tiếp theo.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+3
+Hồ sơ khai thuế
+* Hồ sơ khai thuế GTGT và khai tạm nộp thuế TNCN trong năm:
+Tờ khai mẫu số 01/CNKD: Khai thuế giá trị gia tăng, khai tạm nộp thuế thu nhập cá nhân trong năm.
+Bảng kê hàng tồn kho, máy móc, thiết bị tính đến 31/12/2025.
+Bảng kê mẫu 01/BK-STK: Thông báo số tài khoản/số hiệu ví điện tử kèm theo Tờ khai thuế đầu tiên trong năm 2026 đối với hộ kinh doanh, cá nhân kinh doanh đang hoạt động hoặc Tờ khai thuế đầu tiên của hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh và thông báo lại khi có thay đổi.
+* Hồ sơ khai quyết toán thuế TNCN cuối năm: Tờ khai mẫu số 02/CNKD-TNCN-QTT
+4
+Phương thức khai thuế
+Nộp hồ sơ khai thuế bằng phương thức điện tử.
+Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+5
+Nơi nộp thuế
+Nộp thuế GTGT cho từng địa điểm kinh doanh, tạm nộp thuế TNCN tại trụ sở chính.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+6
+Phương thức nộp thuế
+1. Nộp điện tử trên: Hệ thống thông tin quản lý thuế; Hệ thống dịch vụ công trực tuyến của Kho bạc Nhà nước; dịch vụ thanh toán điện tử của tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế theo quy định của pháp luật.
+2. Nộp trực tiếp tại: tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế; cơ quan nhà nước có thẩm quyền theo quy định của pháp luật; cơ quan quản lý thuế; tổ chức được cơ quan quản lý thuế ủy nhiệm thu thuế.
+Trường hợp khoản thuế phải nộp đã được cơ quan thuế cấp mã định danh khoản phải nộp thì hộ kinh doanh thực hiện nộp theo mã định danh khoản phải nộp
+2.5. Hộ kinh doanh phát sinh các loại thuế khác (TTĐB, Thuế tài nguyên, Thuế BVMT, phí BVMT)
+STT
+NỘI DUNG
+I
+Bước 1: Thực hiện quy định về số sách kế toán, hóa đơn, chứng từ theo quy định
+1
+Sổ kế toán
+Sổ theo dõi nghĩa vụ thuế khác (Mẫu số S3a-HKD)
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+II
+Bước 2: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp hồ sơ khai thuế
+Khai thuế tổng hợp chung cho các địa điểm kinh doanh trên một (01) hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh.
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai các loại thuế: TTĐB, thuế/phí BVMT, thuế tài nguyên:
+Khai thuế cùng với kỳ khai thuế giá trị gia tăng hoặc cùng thời hạn thông báo doanh thu thực tế phát sinh
+3
+Hồ sơ khai thuế
+Hộ kinh doanh có doanh thu năm từ 500 triệu đồng trở xuống khai các loại thuế khác trên mẫu 01/TKN-CNKD.
+Hộ kinh doanh có doanh thu năm trên 500 triệu đồng khai các loại thuế khác trên mẫu số 01/CNKD
+4
+Phương thức khai thuế
+Nộp hồ sơ khai thuế bằng phương thức điện tử.
+- Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+5
+Nơi nộp thuế
+Nộp thuế cho từng địa điểm nơi phát sinh khoản thu
+6
+Phương thức nộp thuế
+1. Nộp điện tử trên: Hệ thống thông tin quản lý thuế; Hệ thống dịch vụ công trực tuyến của Kho bạc Nhà nước; dịch vụ thanh toán điện tử của tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế theo quy định của pháp luật.
+2. Nộp trực tiếp tại: tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế; cơ quan nhà nước có thẩm quyền theo quy định của pháp luật; cơ quan quản lý thuế; tổ chức được cơ quan quản lý thuế ủy nhiệm thu thuế.
+Trường hợp khoản thuế phải nộp đã được cơ quan thuế cấp mã định danh khoản phải nộp thì HỘ KINH DOANH thực hiện nộp theo mã định danh khoản phải nộp
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+2.6. Cá nhân có hoạt động cho thuê bất động sản
+STT
+NỘI DUNG
+I
+Bước 1: Xác định phương pháp tính thuế
+1
+Phương pháp tính thuế GTGT, TNCN
+- GTGT: doanh thu x 5%
+- TNCN: (doanh thu năm - 500 triệu đồng) x 5%
+2
+Doanh thu được trừ để xác định thuế TNCN
+- Được trừ 500 triệu đồng vào doanh thu tính thuế thuế thu nhập cá nhân.
+- Trường hợp có nhiều bất động sản cho thuê thì được trừ 500 triệu đồng đối với một hoặc một số hợp đồng cho thuê do cá nhân lựa chọn (tổng mức được trừ không quá 500 triệu đồng một năm đối với tất cả hợp đồng).
+Trường hợp hợp đồng được lựa chọn chưa trừ đủ 500 triệu đồng, thì được tiếp tục lựa chọn các hợp đồng khác để được trừ tiếp cho đến khi trừ đủ 500 triệu đồng.
+- Trường hợp cá nhân có nhiều bất động sản cho thuê ở các địa điểm khác nhau và có quy định bên đi thuê khai thay, nộp thay thuế, khi lựa chọn hợp đồng cho thuê bất động sản để áp dụng mức được trừ khi tính thuế thu nhập cá nhân, cá nhân cho thuê bất động sản và bên đi thuê phải quy định rõ trong hợp đồng cho thuê bất động sản nội dung khai thay, nộp thay thuế và số tiền được trừ khi tính thuế thu nhập cá nhân. Trường hợp hợp đồng cho thuê bất động sản có quy định khai thay, nộp thay thuế nhưng chưa trừ đủ 500 triệu đồng thì cá nhân được tiếp tục lựa chọn các hợp đồng cho thuê bất động sản khác để tiếp tục được trừ cho đến khi trừ đủ 500 triệu đồng.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+II
+Bước 2: Thực hiện kê khai, nộp thuế
+1
+Nơi nộp hồ sơ khai thuế
+Nộp hồ sơ khai thuế đến cơ quan thuế nơi có bất động sản cho thuê.
+Trường hợp có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên một (01) hồ sơ khai thuế và lựa chọn một (01) cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế (trừ trường hợp tổ chức đi thuê khai thay, nộp thay)
+2
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế
+Kỳ khai thuế và Thời hạn nộp hồ sơ khai thuế GTGT, TNCN:
+- Cá nhân trực tiếp khai thuế:
++ 02 lần/năm: lần một chậm nhất vào ngày 31/07 và lần hai vào ngày 31/01 năm dương lịch tiếp theo.
++ Hoặc 01 lần/ năm chậm nhất vào ngày 31/01 năm dương lịch tiếp theo
+Bên đi thuê là người khai thuế thay, nộp thuế thay: thực hiện khai thuế theo lần phát sinh kỳ thanh toán. Trường hợp có nhiều lần phát sinh trong năm thì khai thuế theo tháng.
+3
+Hồ sơ khai thuế
+- Cá nhân trực tiếp khai thuế:
+Tờ khai mẫu số 01/BĐS và Phụ lục bảng kê chi tiết bất động sản mẫu số 01/BK-BĐS
+- Bên đi thuê là người khai thuế thay, nộp thuế thay: Tờ khai mẫu số 01/TCKT và Phụ lục bảng kê chi tiết cá nhân cho thuê bất động sản mẫu 02/BK-KTBĐS
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+STT
+NỘI DUNG
+4
+Phương thức khai thuế
+- Nộp hồ sơ khai thuế bằng phương thức điện tử.
+- Trường hợp thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến trung tâm phục vụ hành chính công cấp xã.
+5
+Nơi nộp thuế
+Nộp thuế theo từng địa điểm nơi có bất động sản cho thuê
+6
+Phương thức nộp thuế
+1. Nộp điện tử trên: Hệ thống thông tin quản lý thuế; Hệ thống dịch vụ công trực tuyến của Kho bạc Nhà nước; dịch vụ thanh toán điện tử của tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế theo quy định của pháp luật.
+2. Nộp trực tiếp tại: tổ chức cung ứng dịch vụ thanh toán, tổ chức cung ứng dịch vụ trung gian thanh toán, tổ chức dịch vụ khác có kết nối trực tiếp hoặc gián tiếp với Hệ thống thông tin quản lý thuế của cơ quan quản lý thuế; cơ quan nhà nước có thẩm quyền theo quy định của pháp luật; cơ quan quản lý thuế; tổ chức được cơ quan quản lý thuế ủy nhiệm thu thuế.
+Trường hợp khoản thuế phải nộp đã được cơ quan thuế cấp mã định danh khoản phải nộp thì Hộ kinh doanh thực hiện nộp theo mã định danh khoản phải nộp
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Hàng tồn kho – Nỗi lo đã được xóa bỏ
+Từ năm 2026, để được tính chi phí hợp lý khi xác định thuế thu nhập cá nhân, hộ kinh doanh có doanh thu từ 03 tỷ đồng trở lên hoặc lựa chọn nộp thuế theo phương pháp thu nhập tính thuế × thuế suất cần thực hiện kê khai hàng tồn kho, máy móc, thiết bị.
+Cụ thể, hộ kinh doanh xác định và ghi nhận giá trị hàng tồn kho, máy móc, thiết bị đang phục vụ hoạt động sản xuất, kinh doanh tại thời điểm ngày 31/12/2025, lập Bảng kê theo mẫu 01/BK-HTK của Bộ Tài chính, lưu tại đơn vị và gửi 01 bản điện tử cho cơ quan thuế quản lý trực tiếp cùng hồ sơ khai thuế quý I năm 2026 đối với trường hợp khai thuế theo quý hoặc chậm nhất là ngày 20 tháng 3 năm 2026 đối với trường hợp khai thuế theo tháng.
+Việc kê khai giúp làm rõ chi phí đầu vào, tránh rủi ro khi quyết toán thuế. Hộ, cá nhân kinh doanh chịu trách nhiệm về tính trung thực, chính xác của thông tin; cơ quan thuế tiếp nhận bảng kê để phục vụ quản lý, không xác nhận nguồn gốc hàng hóa.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+HÓA ĐƠN ĐIỆN TỬ
+Điều cần thiết khi kinh doanh
+Lợi ích của hóa đơn điện tử
+Minh bạch – hiện đại – chuyển đổi số
+Hộ kinh doanh dễ dàng quản lý doanh thu, hàng ra, vào vào
+Tạo dựng hình ảnh chuyên nghiệp với khách hàng
+Được cơ quan thuế hỗ trợ lên tờ khai thuế tự động
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Đối tượng sử dụng, loại hóa đơn, hình thức hóa đơn
+Đối tượng
+Loại hóa đơn/ Chứng từ
+Hình thức hóa đơn
+Nghĩa vụ/ Quyền lợi/ Giới hạn
+Bắt buộc
+Hộ kinh doanh có doanh thu từ 01 tỷ đồng/ năm trở lên;
+- Hóa đơn bán hàng (chủ yếu)
+- Ngoài ra còn có:
+- HĐĐT có mã; HĐĐT khởi tạo từ máy tính tiền (với HHDV cung cấp trực tiếp đến người tiêu dùng)
+Miễn phí với Hộ kinh doanh thuộc địa bàn KT-XH khó khăn, đặc biệt khó khăn: đăng ký sử dụng qua cổng của CQT
+Các trường hợp còn lại: đăng ký sử dụng qua nhà cung cấp giải pháp HĐĐT
+Khuyến khích
+Hộ kinh doanh có doanh thu hàng năm trên 500 triệu đồng và dưới 1 tỷ đồng đáp ứng điều kiện và có nhu cầu sử dụng HĐĐT
++ Hóa đơn thương mại (dùng cho XK)
++ Phiếu xuất kho kiêm vận chuyển nội bộ)
++ Hóa đơn bán hàng tích hợp biên lai thu thuế, phí, lệ phí...
+Không được sử dụng
+- Cá nhân không kinh doanh
+- Hộ kinh doanh có doanh thu từ dưới 500 triệu đồng/năm
+Không được sử dụng hóa đơn kể cả theo từng lần phát sinh
+Từng lần phát sinh
+- Hộ kinh doanh có doanh thu trên 500 đến dưới 1 tỷ đồng chưa đăng ký sử dụng HĐĐT nhưng cần có hóa đơn để giao cho khách hàng;
+- Đang làm thủ tục giải thể, ngừng kinh doanh cần có hóa đơn để giao cho người mua khi thanh lý tài sản, hàng hóa;
+- Tạm ngừng hoạt động kinh doanh cần có hóa đơn giao cho khách hàng để thực hiện các hợp đồng đã ký trước ngày cơ quan thuế thông báo tạm ngừng kinh doanh
+- Bị cơ quan thuế cưỡng chế nợ thuế bằng biện pháp ngừng sử dụng hóa đơn;
+- Hóa đơn bán hàng
+- HĐĐT có mã
+Phải khai và nộp thuế trước khi được cơ quan thuế cấp hóa đơn.
+Trường hợp ngừng sử dụng hóa đơn
+- Hộ kinh doanh đã giải thể;
+- Hộ kinh doanh bỏ địa chỉ kinh doanh;
+- Hộ kinh doanh Tạm ngừng kinh doanh
+- Hộ kinh doanh bị cưỡng chế nợ thuế bằng biện pháp ngừng sử dụng hóa đơn
+Các hành vi khác (bán hàng nhập lậu/hàng cấm/ hàng giả...; bán khống hàng hóa dịch vụ bị CQNN có thẩm quyền phát hiện khởi tố...)
+- Theo đề nghị tạm ngừng sử dụng hóa đơn của Hộ kinh doanh.
+Tùy trường hợp mà Cơ quan thuế sẽ tự động ngừng sử dụng hóa đơn hoặc gửi Thông báo cho Hộ kinh doanh được biết và chấp hành.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Lưu ý về việc đăng ký sử dụng hóa đơn điện tử
+Thời điểm phải đăng ký sử dụng hóa đơn điện tử: Khi hộ kinh doanh có doanh thu trong năm đến ngưỡng từ 1 tỷ đồng trở lên
+Thời hạn phải đăng ký với cơ quan thuế: Trong vòng 30 ngày kể từ ngày cuối cùng của kỳ tính thuế có doanh thu tính thuế GTGT lũy kế từ 1 tỷ đồng trở lên. Ví dụ:
++ Hộ kinh doanh mới thành lập từ ngày 1/1/2026, kê khai theo quý, đến ngày 30/4/2026 có doanh thu lũy kế là 1 tỷ đồng thì đăng ký chậm nhất là 30 ngày kể từ ngày 30/6/2026
++ Hộ kinh doanh đã thành lập từ năm 2024, có doanh thu cả năm 2025 dưới 1 tỷ đồng, đến ngày 30/4/2026 có doanh thu lũy kế của năm 2026 là 1 tỷ đồng thì đăng ký chậm nhất là 30 ngày kể từ ngày 30/6/2026
+Mẫu đăng ký: 01/ĐKTĐ-HĐĐT
+• Mã số thuế của Hộ kinh doanh là số định danh cá nhân của chủ hộ.
+• Tên, địa chỉ của Hộ kinh doanh: Là thông tin tên, địa chỉ trụ sở ghi trên giấy chứng nhận đăng ký hộ kinh doanh hoặc thông tin địa chỉ đã được cơ quan thuế rà soát cập nhật tương ứng theo địa bàn hành chính 02 cấp.
+• Cơ quan thuế quản lý: Là Thuế cơ sở quản lý địa bàn nơi hộ kinh doanh đặt trụ sở.
+Điều kiện cần:
+• Hộ kinh doanh không thuộc trường hợp ngừng sử dụng HĐĐT
+• Đã trang bị giải pháp hóa đơn điện tử; Có chữ ký số;
+• Thông tin định danh cá nhân của Chủ hộ kinh doanh đã được rà soát, chuẩn hóa khớp đúng với CSDLQG về Dân cư;
+• Chủ hộ kinh doanh không thuộc diện đã từng hoặc đang là người đại diện pháp luật của doanh nghiệp, chủ hộ kinh doanh bỏ địa chỉ kinh doanh, ngừng hoạt động chưa đóng mã số thuế, tạm ngừng hoạt động nhưng chưa hoàn thành nghĩa vụ thuế; có hành vi vi phạm về thuế, hóa đơn, chứng từ; người nộp thuế rủi ro về thuế cao.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+* Đối với Hộ kinh doanh có nhiều địa điểm kinh doanh:
+Đăng ký sử dụng hóa đơn điện tử với cơ quan thuế quản lý địa bàn nơi hộ kinh doanh đặt trụ sở (các địa điểm kinh doanh không phải thực hiện đăng ký sử dụng hóa đơn điện tử). Trong đó, thông tin đăng ký, sử dụng hóa đơn điện tử của hộ kinh doanh xác định như sau:
+* Trường hợp Hộ kinh doanh đăng ký nhưng không được CQT chấp nhận đăng ký sử dụng hóa đơn thì:
+• CQT có trách nhiệm thông báo rõ lý do Hộ kinh doanh không đủ điều kiện đăng ký sử dụng hóa đơn điện tử; Hoặc ban hành Thông báo yêu cầu Hộ kinh doanh giải trình, bổ sung thông tin tài liệu/Xác minh địa chỉ hoạt động nếu chưa đủ điều kiện
+• Hộ kinh doanh giải trình/thực hiện theo yêu cầu, thông báo của CQT để được chấp nhận đăng ký sử dụng hóa đơn.
+*Lưu ý đối với trường hợp liên quan đến chủ hộ kinh doanh đang là người đại diện pháp luật của doanh nghiệp có liên quan thì chủ hộ kinh doanh có trách nhiệm hoàn thành nghĩa vụ đăng ký thuế, nghĩa vụ nộp thuế đối với doanh nghiệp đó trước khi được chấp nhận đăng ký sử dụng hóa đơn.
+Thay đổi thông tin đăng ký sử dụng hóa đơn
+Hộ kinh doanh thay đổi đại diện hộ kinh doanh, cá nhân kinh doanh
+Hộ kinh doanh thêm hoặc thay đổi hình thức hóa đơn (có mã/máy tính tiền)
+Các thông tin khác
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Ủy nhiệm lập hóa đơn cho sàn TMĐT
+Hộ kinh doanh có quyền ủy nhiệm cho sàn thương mại điện tử lập hóa đơn cho hoạt động bán hàng hóa, cung cấp dịch vụ trên sàn thương mại điện tử thay cho Hộ kinh doanh.
+Sàn thương mại điện tử có trách nhiệm thông báo với cơ quan thuế khi Hộ kinh doanh ủy quyền.
+Hóa đơn điện tử thể hiện tên, địa chỉ, mã số thuế của cả bên ủy nhiệm (Hộ kinh doanh) và bên nhận ủy nhiệm (sàn TMĐT)
+Hộ kinh doanh xuất và lập hóa đơn khi nào?
+Hoạt động
+Thời điểm ghi nhận
+Lưu ý
+Bán hàng hóa nội địa
+Chuyển giao quyền sở hữu hoặc quyền sử dụng hàng hóa
+Không phân biệt đã thu được tiền hay chưa
+Cung cấp dịch vụ
+Hoàn thành việc cung cấp dịch vụ
+Không phân biệt đã thu được tiền hay chưa
+Một số trường hợp đặc biệt:
+Xuất khẩu hàng hóa
+Chậm nhất không quá ngày làm việc tiếp theo kể từ ngày hàng hóa được thông quan theo quy định pháp luật về hải quan
+Không phân biệt đã thu được tiền hay chưa
+Trường hợp có thu tiền trước/trong khi cung cấp dịch vụ
+Thời điểm thu tiền
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Giao hàng nhiều lần hoặc bàn giao từng hạng mục, công đoạn dịch vụ
+Từng lần theo thời điểm giao hàng/bàn giao
+Xây dựng, lắp đặt
+Thời điểm nghiệm thu, bàn giao
+Không phân biệt đã thu được tiền hay chưa
+Khám chữa bệnh có sử dụng phần mềm quản lý khám chữa bệnh và và có lưu trên hệ thống CNTT đối với từng giao dịch
+Được phép lập hóa đơn tổng cuối ngày
+Lập theo từng lần nếu khách hàng yêu cầu hóa đơn
+Xuất hóa đơn sai sót hoặc trong một số trường hợp phát sinh, xử lý như thế nào?
+Trường hợp phát sinh
+Cách xử lý
+Lưu ý
+Hóa đơn đã lập sai tên, địa chỉ người mua nhưng không sai MST người mua và các thông tin khác
+Không phải lập hóa đơn điều chỉnh/thay thế mà chỉ thông báo với CQT theo mẫu 04/SS-HĐĐT
+Thông báo cả cho người mua
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Sai sót trường hợp còn lại (sai số tiền, sai số thuế, sai MST người mua, sai MST người bán, sai tên HHDV...)
+Lập hóa đơn điều chỉnh hoặc thay thế;
+- Tùy vào mức độ sai sót và chọn điều chỉnh/thay thế (sai ít chọn điều chỉnh, sai nhiều chọn thay thế)
+Hóa đơn điều chỉnh/thay thế ghi rõ điều chỉnh/thay thế cho hóa đơn Mẫu số... ký hiệu... số... ngày... tháng... năm
+Sai sót trường hợp còn lại (sai số tiền, sai số thuế, sai MST người mua, sai MST người bán, sai tên HHDV...)
+Lập hóa đơn điều chỉnh hoặc thay thế;
+- Trường hợp người mua là DN/TC/HKD thì người bán và người mua lập văn bản thỏa thuận
+Người mua là cá nhân: Thông báo cho người mua (hoặc qua website người bán)
+Nếu sai cùng một người mua với nhiều hóa đơn trong cùng tháng: có thể lập một hóa đơn điều chỉnh/thay thế và đính kèm bảng kê
+Một số trường hợp đặc thù
+Khách trả lại hàng
+Lập hóa đơn điều chỉnh ghi âm với giá trị mà khách trả lại
+Chiết khấu thương mại trong trường hợp lập riêng 1 hóa đơn CKTM
+Lập hóa đơn ghi âm, kèm bảng kê hóa đơn cần điều chỉnh
+CQNN thanh quyết toán dẫn đến thay đổi giá trị
+Lập hóa đơn điều chỉnh ghi âm (nếu giảm); ghi dương (nếu tăng)
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Một số lưu ý khác
+Không có quy định về việc hủy hóa đơn đã lập sai
+HKD định kỳ/thường xuyên tra cứu dữ liệu hóa đơn đầu vào để quản trị rủi ro khi:
+• Người bán bị CQT ban hành thông báo bỏ địa chỉ kinh doanh => Lưu ý không làm ăn với các đối tác không chấp hành quy định về thuế.
+• Phát hiện Doanh nghiệp/HKD khác xuất khống hóa đơn cho mình (không phát sinh mua bán nhưng vẫn có hóa đơn) => thông báo cho CQT quản lý để xử lý.
+QUYỀN LỢI VỀ GIẢM THUẾ GIÁ TRỊ GIA TĂNG DÀNH CHO HỘ KINH DOANH
+Nhằm hỗ trợ hoạt động sản xuất, kinh doanh và kích thích tiêu dùng, Quốc hội đã ban hành Nghị quyết số 204/2025/QH15 ngày 17 tháng 6 năm 2025 về giảm thuế giá trị gia tăng, Chính phủ đã ban hành Nghị định số 174/2025/NĐ-CP ngày 30/6/2025 quy định quy định chính sách giảm thuế giá trị gia tăng theo nghị quyết số 204/2025/QH15.
+Theo đó, Hộ kinh doanh được giảm 20% mức tỷ lệ % để tính thuế giá trị gia tăng khi thực hiện xuất hóa đơn đối với hàng hóa, dịch vụ.
+1. Thời gian được giảm thuế
+Chính sách giảm thuế GTGT được áp dụng từ ngày 01/7/2025 đến hết ngày 31/12/2026 đối với hàng hóa, dịch vụ
+2. Mức giảm thuế hộ kinh doanh được hưởng
+Hộ kinh doanh, cá nhân kinh doanh được giảm 20% mức tỷ lệ % để tính thuế GTGT.
+3. Hàng hóa, dịch vụ được áp dụng giảm thuế
+Chính sách giảm thuế áp dụng đối với hầu hết hàng hóa, dịch vụ, ngoại trừ một số nhóm ngành, lĩnh vực sau:
+- Viễn thông, Tài chính, ngân hàng, chứng khoán, bảo hiểm, kinh doanh bất động sản, sản phẩm kim loại, sản phẩm khai khoáng (trừ than)
+Hàng hóa, dịch vụ chịu thuế tiêu thụ đặc biệt (trừ xăng)
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+Lưu ý: mặt hàng nước giải khát có hàm lượng đường trên 5g/100ml từ ngày 01/1/2026 chịu thuế tiêu thụ đặc biệt nên sẽ không thuộc diện được giảm thuế GTGT.
+4. Trường hợp được giảm thuế GTGT, hộ kinh doanh lập hóa đơn, kê khai thuế như thế nào?
+Lập hóa đơn điện tử:
+Khi lập hóa đơn bán hàng, dịch vụ thuộc diện được giảm thuế GTGT, HỘ kinh doanh lưu ý tích chọn nội dung giảm thuế GTGT trên phần mềm hóa đơn điện tử mà Hộ kinh doanh đang sử dụng để đảm bảo quyền lợi của Hộ kinh doanh và người tiêu dùng.
+Trên hóa đơn phải thể hiện rõ nội dung giảm thuế theo quy định, theo đó tại cột “Thành tiền” ghi đầy đủ tiền hàng hóa, dịch vụ trước khi giảm, tại dòng “Cộng tiền hàng hóa, dịch vụ” ghi theo số đã giảm 20% mức tỷ lệ % trên doanh thu, đồng thời ghi chú: “đã giảm... (số tiền) tương ứng 20% mức tỷ lệ % để tính thuế giá trị gia tăng theo Nghị quyết số 204/2025/QH15".
+Kê khai thuế
+Hộ kinh doanh, cá nhân kinh doanh thực hiện kê khai các hàng hóa, dịch vụ được giảm thuế GTGT theo Mẫu số 01 tại Phụ lục III Phụ lục giảm thuế GTGT theo Nghị quyết số 204/2025/QH15 ban hành tại Nghị định số 174/2025/NĐ-CP cùng với Tờ khai 01/CNKD.
+HOÀN THUẾ
+Quyền lợi cần biết
+Hộ kinh doanh được hoàn thuế khi nào?
+Hộ kinh doanh trong năm có số thuế nộp thừa thì được bù trừ với số thuế phải nộp hoặc được hoàn trả số thuế đã nộp thừa khi không còn tiền thuế nợ.
+• Hộ kinh doanh được chủ quản quản lý nền tảng thương mại điện tử, nền tảng số khác (trong nước hoặc nước ngoài) có chức năng đặt hàng trực tuyến và chức năng thanh toán thực hiện khấu trừ, khai và nộp thuế thay hoặc đã nộp thuế nhưng có doanh thu thực tế phát sinh của năm từ 500 triệu đồng trở xuống thì được bù trừ với số thuế phải nộp hoặc được hoàn thuế.
+HƯỚNG DẪN THỰC HIỆN NGHĨA VỤ THUẾ
+Dành cho cá nhân, hộ kinh doanh
+• Hộ kinh doanh có số tiền thuế, tiền chậm nộp, tiền phạt đã nộp hoặc được các tổ chức, cá nhân đã khấu trừ, nộp thay lớn hơn số tiền thuế, tiền chậm nộp, tiền phạt phải nộp thì được bù trừ với số thuế phải nộp hoặc được hoàn thuế.
+Để được hoàn thuế, hộ kinh doanh cần chuẩn bị gì?
+Để được hoàn thuế hộ kinh doanh phải kê khai chỉ tiêu đề nghị hoàn thuế trên Tờ khai thuế năm:
+Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư số 18/TT-BTC/2026 ngày 5/3/2026 của Bộ Tài chính.
+Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế mẫu số 02/QTT-TNCN-CNKD ban hành kèm theo Thông tư số 18/TT-BTC/2026 ngày 5/3/2026 của Bộ Tài chính.
+Trường hợp Hộ kinh doanh kê khai chính xác các tờ khai trong năm, các thông tin liên quan đến việc xác định nghĩa vụ thuế của Hộ kinh doanh khớp đúng với dữ liệu tại Hệ thống quản lý của Cơ quan thuế thì Cơ quan thuế thực hiện hoàn thuế tự động cho Hộ kinh doanh theo quy định.
+Hộ kinh doanh có thể hoàn thuế bằng cách nào?
+Hộ kinh doanh có thể nộp hồ sơ đề nghị hoàn thuế bằng những phương thức sau:
+• Đề nghị hoàn thuế bằng hồ sơ điện tử: Người nộp thuế gửi đề nghị hoàn thuế điện tử qua Hệ thống thông tin quản lý thuế hoặc qua các Cổng thông tin điện tử khác theo quy định về giao dịch điện tử trong lĩnh vực thuế.
+• Đề nghị hoàn thuế bằng hồ sơ giấy: Người nộp thuế nộp trực tiếp hoặc qua đường bưu chính đề nghị hoàn thuế bằng giấy đến cơ quan thuế.
+Nơi nộp hồ sơ hoàn thuế là cơ quan thuế nơi nộp hồ sơ khai thuế. Trường hợp hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số đã được chủ quản quản lý sàn giao dịch thương mại điện tử, nền tảng số thực hiện khấu trừ, nộp thuế thay hoặc chỉ có hoạt động kinh doanh khác đã được tổ chức khác khấu trừ, khai thay, nộp thuế thay thì cơ quan tiếp nhận và giải quyết hồ sơ hoàn thuế là cơ quan thuế quản lý nơi chủ hộ kinh doanh, cá nhân kinh doanh cư trú.
+CÁC TÌNH HUỐNG ĐẶC BIỆT
+Lưu ý để thực hiện
+Hộ kinh doanh thay đổi thông tin đăng ký như thế nào?
+Đối với trường hợp đã đăng ký thành lập hộ kinh doanh: Chủ hộ kinh doanh thực hiện nộp hồ sơ thay đổi nội dung đăng ký hộ kinh doanh (theo quy định tại Nghị định 168/2025/NĐ-CP và Thông tư 68/2025/TT-BTC) tại cơ quan đăng ký kinh doanh nơi đặt trụ sở kinh doanh chính. Trong thời hạn làm việc theo quy định, Cơ quan đăng ký kinh doanh sẽ thực hiện cập nhật thông tin và tự động truyền dữ liệu sang hệ thống của Cơ quan thuế để đồng bộ dữ liệu trên toàn quốc.
+Đối với trường hợp không thành lập hộ kinh doanh: Trong thời hạn 10 ngày làm việc kể từ ngày có sự thay đổi thông tin, hộ kinh doanh phải nộp Tờ khai điều chỉnh, bổ sung thông tin đăng ký thuế theo mẫu số 08-MST ban hành kèm theo Thông tư 86/2024/TT-BTC tại cơ quan thuế quản lý trực tiếp. Người nộp thuế có thể nộp bằng phương thức điện tử, bưu chính hoặc qua hồ sơ giấy trực tiếp.
+Trường hợp hộ kinh doanh thực hiện thay đổi thông tin đăng ký thuế của địa điểm kinh doanh khác trụ sở chính thì Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc thay đổi thông tin địa điểm kinh doanh đó đến cơ quan thuế quản lý trụ sở kinh doanh quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP ngày 05/3/2026 của Chính phủ. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+Trường hợp thay đổi chủ hộ kinh doanh:
+Trường hợp thay đổi chủ hộ kinh doanh thì hộ kinh doanh cần thực hiện thủ tục đăng ký thay đổi nội dung đăng ký hộ kinh doanh theo quy định tại Điều 100, Nghị định 168/2025/NĐ-CP về đăng ký doanh nghiệp. Thông tin thay đổi sẽ được truyền sang cơ quan thuế theo cơ chế liên thông để cấp mã số thuế cho hộ kinh doanh theo chủ hộ mới.
+Sau khi hộ kinh doanh được cấp Giấy chứng nhận thay đổi theo mã số thuế của chủ hộ mới thì cơ quan thuế tự động cập nhật trạng thái mã số thuế của hộ kinh doanh theo mã số thuế của chủ hộ cũ (về trạng thái 03 – NNT ngừng hoạt động nhưng chưa hoàn thành thủ tục chấm dứt hiệu lực mã số thuế). Chủ hộ kinh doanh cũ sẽ phải thực hiện các thủ tục về thuế để hoàn thành nghĩa vụ thuế của hộ kinh doanh theo mã số thuế của chủ hộ cũ với cơ quan thuế quản lý trực tiếp theo quy định tại Điều 15 Thông tư số 86/2024/TT-BTC.
+Tạm ngừng kinh doanh, hộ kinh doanh cần phải làm gì?
+Đối với trường hợp đã đăng ký thành lập hộ kinh doanh: : Hộ kinh doanh gửi thông báo bằng văn bản về việc tạm ngừng kinh doanh đến Cơ quan đăng ký kinh doanh nơi đã đăng ký ít nhất là 03 ngày làm việc trước khi tạm ngừng (theo quy định tại Nghị định 168/2025/NĐ-CP và Thông tư 68/2025/TT-BTC). Sau khi tiếp nhận hồ sơ hợp lệ, Cơ quan đăng ký kinh doanh sẽ gửi thông tin điện tử sang Cơ quan thuế để tạm dừng các nghĩa vụ kê khai thuế trong thời gian tương ứng.
+Đối với trường hợp không thành lập hộ kinh doanh: Người nộp thuế thực hiện gửi Thông báo mẫu số 23/ĐK-TCT ban hành kèm theo Thông tư 86/2024/TT-BTC đến cơ quan thuế quản lý trực tiếp theo thời hạn quy định.
+Trường hợp hộ kinh doanh thực hiện tạm ngừng kinh doanh tại địa điểm kinh doanh khác trụ sở chính thì Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc tạm ngừng kinh doanh địa điểm kinh doanh đó đến cơ quan thuế quản lý trụ sở kinh doanh quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP ngày 05/3/2026 của Chính phủ. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+Không hoạt động nữa, hộ kinh doanh làm thế nào cho đúng?
+Đối với trường hợp đã đăng ký thành lập hộ kinh doanh: theo quy định tại Nghị định 168/2025/NĐ-CP và Thông tư 68/2025/TT-BTC, hộ kinh doanh có trách nhiệm thanh toán đầy đủ các khoản nợ, gồm cả nợ thuế và nghĩa vụ tài chính khác trước khi nộp hồ sơ đăng ký chấm dứt hoạt động hộ kinh doanh, trừ trường hợp hộ kinh doanh và chủ nợ có thỏa thuận khác. Sau khi hoàn thành nghĩa vụ, hộ kinh doanh gửi hồ sơ đăng ký chấm dứt hoạt động tại cơ quan đăng ký kinh doanh quản lý để thực hiện thủ tục thu hồi giấy phép.
+► Đối với trường hợp không thành lập hộ kinh doanh: Hộ kinh doanh gửi hồ sơ chấm dứt hiệu lực mã số thuế là Văn bản đề nghị chấm dứt hiệu lực mã số thuế mẫu số 24/ĐK-TCT ban hành kèm theo Thông tư 86/2024/TT-BTC đến cơ quan thuế quản lý trực tiếp. Khi hộ kinh doanh đã hoàn thành nghĩa vụ thuế theo quy định thì cơ quan thuế sẽ cập nhật thông tin và chuyển trạng thái mã số thuế của người nộp thuế thành “NNT ngừng hoạt động và đã hoàn thành thủ tục chấm dứt hiệu lực mã số thuế”.
+Trường hợp hộ kinh doanh, cá nhân kinh doanh thực hiện chấm dứt hoạt động kinh doanh tại địa điểm kinh doanh khác trụ sở chính thì hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về chấm dứt hoạt động địa điểm kinh doanh đến cơ quan thuế quản lý trụ sở kinh doanh quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2026/NĐ-CP ngày 05/3/2026 của Chính phủ. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+Mở thêm địa điểm kinh doanh, hộ kinh doanh cần làm gì?
+Hộ kinh doanh, cá nhân kinh doanh gửi Thông báo về việc thành lập địa điểm kinh doanh đến cơ quan thuế quản lý trụ sở kinh doanh quy định tại điểm đ khoản 4 Điều 8 Nghị định số 68/2025/NĐ-CP ngày 05/3/2026 của Chính phủ. Hồ sơ thông báo theo mẫu số 01/TB-ĐĐKD ban hành kèm theo Thông tư số 18/2026/TT-BTC ngày 05/3/2026.
+Hộ kinh doanh chuyển đổi lên doanh nghiệp?
+Hộ kinh doanh không được hoạt động kể từ thời điểm doanh nghiệp chuyển đổi từ hộ kinh doanh được cấp Giấy chứng nhận đăng ký doanh nghiệp.
+Việc đăng ký thành lập doanh nghiệp trên cơ sở chuyển đổi từ hộ kinh doanh thực hiện tại Cơ quan đăng ký kinh doanh cấp tỉnh nơi doanh nghiệp dự định đặt trụ sở chính.
+Hộ kinh doanh sang thực hiện thủ tục chấm dứt hoạt động tại cơ quan thuế, cơ quan thuế có trách nhiệm gửi thông tin cho Cơ quan đăng ký kinh doanh cấp xã khi hộ kinh doanh đã hoàn thành nghĩa vụ thuế.
+Trong thời hạn 03 ngày làm việc kể từ ngày nhận được thông tin của Cơ quan thuế về việc hộ kinh doanh hoàn thành nghĩa vụ thuế, Cơ quan đăng ký kinh doanh cấp xã chuyển tình trạng pháp lý của hộ kinh doanh sang tình trạng đã chấm dứt hoạt động trong Cơ sở dữ liệu về đăng ký hộ kinh doanh.
+Lưu ý: Đối với hộ kinh doanh chuyển lên doanh nghiệp nhỏ và vừa theo quy định tại Luật hỗ trợ doanh nghiệp nhỏ và vừa thì hộ kinh doanh phải hoàn thành nghĩa vụ thuế với cơ quan thuế quản lý trực tiếp hoặc có văn bản gửi cơ quan thuế cam kết doanh nghiệp nhỏ và vừa chuyển đổi từ hộ kinh doanh kế thừa toàn bộ nghĩa vụ thuế của hộ kinh doanh theo quy định của pháp luật về hỗ trợ doanh nghiệp nhỏ và vừa.
+QUYỀN, TRÁCH NHIỆM CỦA HỘ KINH DOANH
+Những điều cần tránh
+1. Quyền và trách nhiệm của hộ kinh doanh trong quá trình thực hiện nghĩa vụ thuế
+Khi tham gia sản xuất, kinh doanh, hộ kinh doanh vừa có quyền được hỗ trợ, vừa có trách nhiệm thực hiện đúng nghĩa vụ thuế theo quy định của pháp luật. Trước hết, hộ kinh doanh có quyền yêu cầu cơ quan thuế hướng dẫn, giải đáp thắc mắc và hỗ trợ trong quá trình kê khai, tính thuế và nộp thuế. Đồng thời, hộ kinh doanh được thực hiện đầy đủ các quyền của người nộp thuế theo pháp luật về quản lý thuế, như được cung cấp thông tin, được bảo mật thông tin và được giải quyết kịp thời các kiến nghị liên quan đến nghĩa vụ thuế.
+Song song với các quyền đó, hộ kinh doanh có trách nhiệm tự kê khai đầy đủ, trung thực và chính xác doanh thu phát sinh từ hoạt động kinh doanh, làm căn cứ xác định số thuế phải nộp, và tự chịu trách nhiệm trước pháp luật về nội dung đã kê khai. Đồng thời, nhằm tăng cường minh bạch, hộ kinh doanh lưu ý thông báo đầy đủ, kịp thời bằng phương thức điện tử với cơ quan thuế về tất cả các tài khoản thanh toán phục vụ hoạt động kinh doanh; thực hiện sử dụng sổ kế toán, hóa đơn theo đúng quy định; và cung cấp sổ sách, hóa đơn, phần mềm quản lý bán hàng, tài liệu liên quan khi cơ quan thuế thực hiện kiểm tra theo quy định.
+Đối với hộ kinh doanh có hoạt động trên nền tảng thương mại điện tử, hộ kinh doanh cũng cần thực hiện thêm việc cung cấp đầy đủ, chính xác thông tin định danh, mã số thuế và các thông tin cần thiết cho tổ chức quản lý nền tảng; đồng thời thực hiện đầy đủ nghĩa vụ kê khai, nộp các loại thuế, phí phát sinh theo quy định, đặc biệt đối với các hoạt động thuộc diện chịu thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường và các khoản thu khác.
+2. Những điều hộ kinh doanh cần lưu ý khi thực hiện nghĩa vụ thuế
+Trong quá trình thực hiện nghĩa vụ thuế, hộ kinh doanh cần chú ý kê khai đầy đủ doanh thu, sử dụng đúng hóa đơn, thông báo các tài khoản thanh toán phục vụ kinh doanh và lưu giữ sổ sách, chứng từ theo quy định. Việc thực hiện đúng và kịp thời các nội dung này sẽ giúp hạn chế sai sót và rủi ro không cần thiết.
+Trong giai đoạn chuyển đổi từ phương pháp khoán sang phương pháp kê khai, cơ quan thuế thực hiện theo tinh thần hỗ trợ, hướng dẫn là chính. Trường hợp hộ kinh doanh chủ động kê khai, điều chỉnh, bổ sung thông tin và làm theo hướng dẫn của cơ quan thuế thì không bị xử lý vi phạm hành chính đối với các sai sót phát sinh trong quá trình thực hiện, qua đó giúp hộ kinh doanh yên tâm làm quen với phương thức quản lý mới.
+Đối với các trường hợp cố ý vi phạm nghĩa vụ thuế sẽ được xem xét xử lý theo pháp luật tùy theo mức độ vi phạm. Vì vậy, việc chủ động tìm hiểu quy định, kê khai trung thực, lưu giữ hồ sơ và trao đổi kịp thời với cơ quan thuế khi có vướng mắc sẽ giúp hộ kinh doanh tránh rủi ro, an tâm kinh doanh và phát triển bền vững lâu dài.
+IX HỖ TRỢ
+Để đồng hành, hỗ trợ hộ kinh doanh, cá nhân kinh doanh trong công tác khai, nộp thuế. Hộ kinh doanh, cá nhân kinh doanh có thể gửi ý kiến góp ý, phản ánh đến Cục Thuế qua các kênh, ứng dụng như:
+- Cổng thông tin thuế hỗ trợ doanh nhân
+(https://hotronnt.gdt.gov.vn)
+- Hệ thống thông tin giải quyết thủ tục hành chính
+(https://dichvucong.gdt.gov.vn)
+- Qua mục Hỗ trợ tại Ứng dụng Etax Mobile
+THÔNG ĐIỆP GỬI TỚI HỘ KINH DOANH
+Quý hộ kinh doanh quét mã QR để tra cứu danh sách công chức hỗ trợ người nộp thuế theo từng địa bàn:
+X HƯỚNG DẪN SỬ DỤNG CÁC ỨNG DỤNG THUẾ ĐIỆN TỬ
+Hệ thống thông tin quản lý thuế đang được nâng cấp, hoàn thiện theo lộ trình nhằm hỗ trợ hộ kinh doanh thực hiện nghĩa vụ thuế điện tử. Quý hộ kinh doanh quét mã QR dưới đây để tra cứu hướng dẫn sử dụng các hệ thống và ứng dụng Thuế điện tử hiện đang được triển khai.
+Thông điệp gửi tới Hộ kinh doanh
+Việc thực hiện kê khai, nộp thuế theo cơ chế tự khai, tự tính, tự nộp là bước chuyển đổi cần thiết giúp hoạt động kinh doanh ngày càng minh bạch, ổn định và bền vững hơn. Cục Thuế tin tưởng rằng, với sự chủ động của Quý hộ kinh doanh cùng sự hỗ trợ kịp thời từ cơ quan thuế, việc kê khai, nộp thuế sẽ dần trở nên đơn giản, quen thuộc và dễ thực hiện. Mỗi bước Quý hộ kinh doanh thực hiện đúng hôm nay sẽ góp phần tạo nền tảng vững chắc cho hoạt động kinh doanh lâu dài, hạn chế rủi ro và mở ra nhiều cơ hội phát triển trong tương lai.
+Cơ quan thuế luôn đồng hành cùng Quý hộ kinh doanh trên tinh thần hỗ trợ, hướng dẫn và tạo điều kiện thuận lợi nhất trong suốt quá trình thực hiện. Mọi vướng mắc phát sinh đều được tiếp nhận, giải đáp kịp thời nhằm giúp Quý hộ kinh doanh yên tâm sản xuất, kinh doanh.
+Cục Thuế mong rằng Sổ tay hướng dẫn hộ kinh doanh sẽ là người bạn đồng hành gần gũi, giúp Quý hộ kinh doanh thêm tự tin khi thực hiện nghĩa vụ thuế, yên tâm tập trung phát triển sản xuất, kinh doanh.
+THUẾ NHÀ NƯỚC
+Minh bạch nghĩa vụ thuế
+Kinh doanh an tâm, phát triển bền vững
+Kính chúc Quý hộ kinh doanh sức khỏe, an tâm kinh doanh, vững vàng thực hiện nghĩa vụ thuế và ngày càng thành công, thịnh vượng

@@ -1,0 +1,123 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.0,
+      "errors": 1,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-03T07:52:15.444403"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế hộ kinh doanh": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.0
+      }
+    },
+    "latency_ms": {
+      "min": null,
+      "max": null,
+      "avg": null,
+      "p50": null,
+      "p95": null
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 1,
+        "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu",
+        "score": 0.0,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — answer rỗng",
+        "t3": "FAIL — không gọi tool nào",
+        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 1,
+      "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu gì?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "",
+      "tool_calls": [],
+      "latency_ms": 19842,
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {}
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — không gọi tool nào",
+        "details": {
+          "tools_used": []
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — answer rỗng",
+        "details": {
+          "key_facts": [
+            "tỷ lệ",
+            "lợi nhuận"
+          ]
+        }
+      },
+      "sources": [],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [],
+      "false_refusal": false
+    }
+  ]
+}

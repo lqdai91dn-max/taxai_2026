@@ -1,0 +1,464 @@
+{
+  "report": {
+    "summary": {
+      "total": 2,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.666,
+      "errors": 0,
+      "annotated": 2,
+      "verified": 2,
+      "timestamp": "2026-04-02T11:43:55.391417"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 2,
+        "avg": 0.333,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 2,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 2,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Nghĩa vụ kê khai": {
+        "total": 2,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.666
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.666
+      },
+      "hard": {
+        "count": 1,
+        "avg_score": 0.666
+      }
+    },
+    "latency_ms": {
+      "min": 9178,
+      "max": 21404,
+      "avg": 15291,
+      "p50": 15291,
+      "p95": 20793
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 81,
+        "question": "Vợ tôi đứng tên giấy phép hộ kinh doanh, nhưng tài khoản ngân hàng nhận tiền của",
+        "score": 0.666,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — overlap 1/3 docs",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Nghĩa vụ kê khai'",
+        "error": null
+      },
+      {
+        "id": 82,
+        "question": "Tháng sau tôi có việc bận muốn tạm ngừng kinh doanh 3 tháng thì nộp thông báo Mẫ",
+        "score": 0.666,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — overlap 1/3 docs",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Nghĩa vụ kê khai'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 81,
+      "question": "Vợ tôi đứng tên giấy phép hộ kinh doanh, nhưng tài khoản ngân hàng nhận tiền của khách lại là tên tôi. Vậy khi khai báo thuế tôi điền mã số thuế của ai?",
+      "topic": "Nghĩa vụ kê khai",
+      "difficulty": "hard",
+      "user_type": "individual",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Đối với hộ kinh doanh, cá nhân kinh doanh có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác:\n> a) Trường hợp có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác có chức năng đặt hàng trực tuyến và chức năng thanh toán, chủ quản nền tảng thương mại điện tử, nền tảng số khác (trong nước hoặc nước ngoài) có trách nhiệm khấu trừ, khai thay và nộp thay số thuế đã khấu trừ của hộ kinh doanh, cá nhân kinh doanh;\n> b) Trường hợp có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán, hộ kinh doanh, cá nhân kinh doanh trực tiếp khai thuế, tính thuế và nộp thuế theo quy định.\n> *(Khoản 4 Điều 13, Luật Quản lý thuế 108/2025/QH15)*\n\n💬 Trả lời\nTheo quy định pháp luật về thuế, hộ kinh doanh được cấp mã số thuế dựa trên thông tin của chủ hộ kinh doanh đã đăng ký giấy phép. Do vợ bạn là người đứng tên giấy phép hộ kinh doanh, mã số thuế của hộ kinh doanh sẽ được cấp cho vợ bạn.\n\nViệc tài khoản ngân hàng nhận tiền của khách là tên bạn (chồng) không ảnh hưởng đến việc khai báo thuế của hộ kinh doanh. Khi khai báo thuế, bạn cần điền mã số thuế của **vợ bạn**, vì vợ bạn là chủ hộ kinh doanh và là người nộp thuế theo quy định.\n\nTrong trường hợp hộ kinh doanh có hoạt động kinh doanh trên nền tảng thương mại điện tử có chức năng đặt hàng và thanh toán trực tuyến, chủ quản nền tảng sẽ có trách nhiệm khấu trừ, khai thay và nộp thay thuế. Nếu không có chức năng này, hộ kinh doanh sẽ trực tiếp khai và nộp thuế.\n\n📋 Tóm lại\n*   **Mã số thuế:** Bạn cần điền mã số thuế của **vợ bạn** khi khai báo thuế, vì vợ bạn là chủ hộ kinh doanh.\n*   **Tài khoản ngân hàng:** Việc tài khoản ngân hàng nhận tiền là tên bạn không thay đổi nghĩa vụ khai thuế của hộ kinh doanh do vợ bạn đứng tên.\n*   **Căn cứ:** Điều 13 Luật Quản lý thuế 108/2025/QH15.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "mã số thuế hộ kinh doanh tài khoản ngân hàng khác tên",
+            "doc_filter": "108_2025_QH15"
+          },
+          "result": {
+            "query": "mã số thuế hộ kinh doanh tài khoản ngân hàng khác tên",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_1_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K1]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nhân:\na) Trường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu hằng năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng không chịu thuế, đối tượng không phải nộp thuế theo quy định của pháp luật về thuế giá trị gia tăng, thuế thu nhập cá nhân, hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế phát sinh trong năm với cơ quan thuế;\n[... còn 1 điểm nữa]",
+                "score": 0.015642,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_4_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 4",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K4]\nĐối với hộ kinh doanh, cá nhân kinh doanh có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác:\na) Trường hợp có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác có chức năng đặt hàng trực tuyến và chức năng thanh toán, chủ quản nền tảng thương mại điện tử, nền tảng số khác (t rong nước hoặc nước ngoài) có trách nhiệm khấu trừ, khai thay và nộp thay số thuế đã khấu trừ của hộ kinh doanh, cá nhân kinh doanh;\nb) Trường hợp có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán, hộ kinh doanh, cá nhân kinh doanh trực tiếp khai thuế, tính thuế và nộp thuế theo quy định.",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_1_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tín) | K1 | Đ.a]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nhân:\nTrường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu hằng năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng không chịu thuế, đối tượng không phải nộp thuế theo quy định của pháp luật về thuế giá trị gia tăng, thuế thu nhập cá nhân, hộ kinh doanh, cá nhân kinh doanh thông báo doanh thu thực tế phát sinh trong năm với cơ quan thuế;",
+                "score": 0.015516,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_5_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K5]\nChính phủ quy định chi tiết Điều này và các nội dung sau: việc quyết toán thuế và xử lý tiền thuế, khoản thu khác nộp thừa; phạm vi trách nhiệm, cách thức các chủ quản nền tảng thương mại điện tử, nền tảng số khác thực hiện khấu trừ, khai thay và nộp thay số thuế đã khấu trừ của hộ kinh doanh, cá nhân kinh doanh; trách nhiệm khai thay, nộp thuế thay của tổ chức trong trường hợp hợp tác kinh doanh với hộ kinh doanh, cá nhân kinh doanh, ký hợp đồng với hộ kinh doanh, cá nhân kinh doanh làm đại lý bán đúng giá đối với xổ số, bảo hiểm, bán hàng đa cấp.",
+                "score": 0.015483,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_1_diem_b_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm b",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tín) | K1 | Đ.b]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nhân:\nTrường hợp hộ kinh doanh, cá nhân kinh doanh xác định có mức doanh thu hằng năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng chịu thuế, đối tượng phải nộp thuế theo quy định của pháp luật về thuế, hộ kinh doanh, cá nhân kinh doanh tự xác định số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo quy định của pháp luật về thuế giá trị gia tăng, thuế thu nhập cá nhân. Trường hợp hộ kinh doanh, cá nhân kinh doanh sử dụng hóa đơn điện tử, hoá đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế, Hệ thống thông tin quản lý thuế tự động tạo lập tờ khai thuế để hỗ trợ hộ kinh doanh, cá nhân kinh doanh trong việc khai thuế và tính thuế trên cơ sở dữ liệu hóa đơn điện tử, cơ sở dữ liệu quản lý thuế và các nguồn cơ sở dữ liệu khác mà cơ quan thuế có được từ cơ quan nhà nước khác, tổ chức, cá nhân cung cấp.",
+                "score": 0.015397,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+                "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, khoản thu kh)]",
+                "score": 0.010838,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 21404,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.333,
+        "reason": "FAIL — overlap 1/3 docs",
+        "details": {
+          "expected": [
+            "68_2026_NDCP",
+            "18_2026_TTBTC",
+            "108_2025_QH15"
+          ],
+          "got": [
+            "108_2025_QH15"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Nghĩa vụ kê khai'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "mã số thuế của vợ"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 2 > Điều 13: Khai thuế, khoản thu khác; tính thuế, khoản thu khác; khấu trừ thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "108_2025_QH15"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 82,
+      "question": "Tháng sau tôi có việc bận muốn tạm ngừng kinh doanh 3 tháng thì nộp thông báo Mẫu số 01/TB-ĐĐKD cho Chi cục thuế hay Ủy ban nhân dân phường?",
+      "topic": "Nghĩa vụ kê khai",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Bộ trưởng Bộ Tài chính quy định các nội dung sau: ... các trường hợp ngừng, tạm ngừng sử dụng hóa đơn điện tử... *(Khoản 7 Điều 26, Luật 108/2025/QH15)*\n\n💬 Trả lời\nTheo Luật Quản lý thuế 108/2025/QH15, việc tạm ngừng kinh doanh và các thủ tục liên quan đến hóa đơn điện tử sẽ do Bộ trưởng Bộ Tài chính quy định chi tiết.\n\nHiện tại, các quy định về thủ tục tạm ngừng kinh doanh cho hộ kinh doanh thường được hướng dẫn cụ thể trong các Nghị định và Thông tư hướng dẫn Luật Quản lý thuế. Tuy nhiên, kết quả tra cứu từ Luật 108/2025/QH15 chưa cung cấp thông tin cụ thể về việc nộp Mẫu số 01/TB-ĐĐKD cho Chi cục thuế hay Ủy ban nhân dân phường.\n\nĐể có thông tin chính xác nhất về cơ quan tiếp nhận thông báo tạm ngừng kinh doanh và mẫu biểu cụ thể, bạn nên tham khảo các văn bản hướng dẫn chi tiết của Bộ Tài chính hoặc liên hệ trực tiếp với Chi cục Thuế nơi bạn đăng ký kinh doanh.\n\n📋 Tóm lại\n*   **Cơ quan tiếp nhận:** Luật Quản lý thuế 108/2025/QH15 chưa quy định cụ thể cơ quan tiếp nhận Mẫu số 01/TB-ĐĐKD.\n*   **Tham khảo thêm:** Bạn nên tìm hiểu các văn bản hướng dẫn của Bộ Tài chính hoặc liên hệ Chi cục Thuế để biết chính xác.\n*   **Căn cứ:** Khoản 7 Điều 26 Luật 108/2025/QH15.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "doc_filter": "108_2025_QH15",
+            "query": "thông báo tạm ngừng kinh doanh mẫu 01/TB-ĐĐKD nộp cho cơ quan nào"
+          },
+          "result": {
+            "query": "thông báo tạm ngừng kinh doanh mẫu 01/TB-ĐĐKD nộp cho cơ quan nào",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_14_khoan_7_diem_b_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 14: Nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt; gia hạn nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt > Khoản 7 > Điểm b",
+                "snippet": "[VB: 108/2025/QH15 | Đ14 (Nộp thuế, khoản thu khác, tiền) | K7 | Đ.b]\nNgười nộp thuế được gia hạn nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt trong các trường hợp sau:\nPhải ngừng hoạt động do di dời cơ sở sản xuất, kinh doanh theo yêu cầu của cơ quan nhà nước có thẩm quyền làm ảnh hưởng đến kết quả sản xuất, kinh doanh;",
+                "score": 0.01486,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 14: Nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt; gia hạn nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt > Khoản 7 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_III_dieu_26_khoan_7_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 7",
+                "snippet": "[VB: 108/2025/QH15 | Đ26 (Hóa đơn điện tử) | K7]\nBộ trưởng Bộ Tài chính quy định các nội dung sau: đăng ký sử dụng hóa đơn điện tử; định dạng hóa đơn điện tử; ủy nhiệm lập hóa đơn điện tử; xử lý hóa đơn điện tử đã lập; ký hiệu mẫu, ký hiệu và mẫu hóa đơn điện tử tham khảo; chuyển đổi áp dụng hóa đơn điện tử; tiêu chí xác định người nộp thuế có rủi ro cao trong đăng ký sử dụng hóa đơn điện tử; các trường hợp ngừng, tạm ngừng sử dụng hóa đơn điện tử; biện pháp khuyến khích người mua lấy hóa đơn khi mua hàng hóa, dịch vụ và thực hiện khen thưởng người tiêu dùng tố giác người bán không lập và giao hóa đơn điện tử được ngân sách nhà nước đảm bảo trong dự toán chi thường xuyên hằng năm theo quy định của pháp luật.",
+                "score": 0.014067,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 7"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_III_dieu_26_khoan_3_diem_b_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 3 > Điểm b",
+                "snippet": "[VB: 108/2025/QH15 | Đ26 (Hóa đơn điện tử) | K3 | Đ.b]\nĐối tượng sử dụng hóa đơn điện tử:\nHộ kinh doanh, cá nhân kinh doanh không thuộc trường hợp sử dụng hóa đơn điện tử theo quy định của Chính phủ và doanh ng hiệp, tổ chức kinh tế, tổ chức có nhu cầu sử dụng hóa đơn điện tử phải khai và nộp thuế trước khi được cơ quan thuế cấp hóa đơn điện tử có mã cho từng lần phát sinh giao dịch bán hàng hóa, cung cấp dịch vụ.",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 3 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_17_khoan_1_diem_e_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm e",
+                "snippet": "[VB: 108/2025/QH15 | Đ17 (Hoàn thành nghĩa vụ nộp thuế) | K1 | Đ.e]\nHoàn thành nghĩa vụ nộp thuế trong trường hợp giải thể, phá sản, chấm dứt hoạt động, không hoạt động tại địa chỉ đã đăng ký:\nChủ sở hữu doanh ng hiệp tư nhân, chủ sở hữu công ty trách nhiệm hữu hạn một thành viên, thành viên hợp danh, chủ hộ kinh doanh, cá nhân kinh doanh chịu trách nhiệm hoàn thành nghĩa vụ nộp thuế và các nghĩa vụ có liên quan đến hồ sơ thuế của doanh ng hiệp tư nhân, công ty trách nhiệm hữu hạn một thành viên, công ty hợp danh, hộ kinh doanh, cá nhân kinh doanh không hoạt động tại địa chỉ đã đăng ký.",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm e"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_17_khoan_1_diem_d_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm d",
+                "snippet": "[VB: 108/2025/QH15 | Đ17 (Hoàn thành nghĩa vụ nộp thuế) | K1 | Đ.d]\nHoàn thành nghĩa vụ nộp thuế trong trường hợp giải thể, phá sản, chấm dứt hoạt động, không hoạt động tại địa chỉ đã đăng ký:\nHộ kinh doanh, cá nhân kinh doanh chấm dứt hoạt động, không hoạt động tại địa chỉ đã đăng ký sản xuất, kinh doanh chưa hoàn thành nghĩa vụ nộp thuế thì phần tiền thuế nợ còn lại do chủ hộ kinh doanh, cá nhân chịu trách nhiệm hoàn thành nghĩa vụ nộp thuế;",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm d"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 9178,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.333,
+        "reason": "FAIL — overlap 1/3 docs",
+        "details": {
+          "expected": [
+            "68_2026_NDCP",
+            "18_2026_TTBTC",
+            "108_2025_QH15"
+          ],
+          "got": [
+            "108_2025_QH15"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Nghĩa vụ kê khai'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "01",
+            "01/TB"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 14: Nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt; gia hạn nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt > Khoản 7 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 7",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương III > Điều 26: Hóa đơn điện tử > Khoản 3 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm e",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 17: Hoàn thành nghĩa vụ nộp thuế > Khoản 1 > Điểm d",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "108_2025_QH15"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

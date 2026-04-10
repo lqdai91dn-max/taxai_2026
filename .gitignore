@@ -167,6 +167,31 @@ debug/
 
 # Backup files
 backup/
+
+# -------------------------------
+# TAXAI PROJECT-SPECIFIC
+# -------------------------------
+# Project instructions (local-only, not for repo)
+CLAUDE.md
+
+# ChromaDB runtime data (vector DB, regeneratable)
+data/chroma/
+
+# Chat history (runtime user data)
+data/chat_history/
+
+# Intermediate benchmark runs (keep only named r57/r58/r59 results)
+data/eval/results/benchmark_*
+data/eval/result/
+
+# Claude Code runtime files
+.claude/scheduled_tasks.lock
+
+# Editor temp files (Python file swap)
+*.py.tmp.*
+
+# Debug scripts
+debug_*.py
 *.backup
 
 # Testing artifacts

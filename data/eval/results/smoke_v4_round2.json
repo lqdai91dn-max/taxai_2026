@@ -1,0 +1,1066 @@
+{
+  "timestamp": "20260326_121756",
+  "total_cases": 8,
+  "total_pass": 7,
+  "results": [
+    {
+      "tc": {
+        "id": "TC01",
+        "scenario": "HKD bán hàng hoá 1.2 tỷ — happy path",
+        "query": "Tôi kinh doanh hàng hoá, doanh thu năm 2026 là 1.2 tỷ đồng. Thuế khoán phải nộp bao nhiêu?",
+        "expect_template": "HKD_percentage",
+        "expect_clarification": false,
+        "expect_tax_present": true,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Tôi kinh doanh hàng hoá, doanh thu năm 2026 là 1.2 tỷ đồng. Thuế khoán phải nộp bao nhiêu?",
+        "final_answer": "Chào bạn,\n\nVới doanh thu kinh doanh hàng hóa năm 2026 là 1.2 tỷ đồng, dựa trên các thông tin bạn cung cấp, số thuế khoán bạn phải nộp là **18.000.000 VNĐ**.\n\nDưới đây là chi tiết các khoản thuế và cách tính:\n\n1.  **Thuế giá trị gia tăng (GTGT):**\n    *   Số tiền thuế GTGT phải nộp: **12.000.000 VNĐ**\n    *   Cách tính: 1.200.000.000 VNĐ (doanh thu) × 1.0% (tỷ lệ thuế GTGT) = 12.000.000 VNĐ\n    *   Tỷ lệ 1.0% áp dụng cho hoạt động phân phối, cung cấp hàng hóa.\n\n2.  **Thuế thu nhập cá nhân (TNCN):**\n    *   Số tiền thuế TNCN phải nộp: **6.000.000 VNĐ**\n    *   Cách tính: 1.200.000.000 VNĐ (doanh thu) × 0.5% (tỷ lệ thuế TNCN) = 6.000.000 VNĐ\n    *   Tỷ lệ 0.5% áp dụng cho hoạt động phân phối, cung cấp hàng hóa.\n\n**Tổng cộng số thuế khoán phải nộp:** 12.000.000 VNĐ (GTGT) + 6.000.000 VNĐ (TNCN) = **18.000.000 VNĐ**.\n\n**Lưu ý quan trọng:**\n\n*   Kết quả tính toán này dựa trên giả định rằng bạn là hộ kinh doanh nộp thuế theo phương pháp khoán và hoạt động kinh doanh của bạn thuộc nhóm ngành nghề \"Phân phối, cung cấp hàng hóa\" trong năm 2026.\n*   Các tỷ lệ phần trăm tính thuế GTGT và TNCN được áp dụng theo quy định tại **Nghị định số 68/2026/NĐ-CP về chính sách thuế và quản lý thuế đối với hộ kinh doanh**.\n\nBạn vui lòng đối chiếu lại các giả định trên với tình hình thực tế của mình để đảm bảo tính chính xác. Nếu có bất kỳ thay đổi nào về loại hình kinh doanh hoặc các yếu tố khác, số thuế phải nộp có thể thay đổi.\n\nTrân trọng!",
+        "template": "HKD_percentage",
+        "tax_amount": 18000000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 2345,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "HKD",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [],
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "HKD"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": 1200000000,
+              "income_value": null,
+              "dependent_count": null
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": 2026
+            },
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.705,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.0,
+            "tax_domain": 0.9,
+            "financials": 0.85,
+            "time": 0.9,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_17_khoan_4_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.014614,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ17 (Trách nhiệm thi hành) | K4]\nCơ quan thuế thực hiện rà soát cơ sở dữ liệu của hộ kinh doanh, cá"
+          },
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_c_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.014404,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K5 | Đ.c]\nSử dụng hóa đơn điện tử\nHộ kinh doanh, cá nhân kinh"
+          },
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.014388,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ3 (Thuế giá trị gia tăng) | K2]\nHộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doan"
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 6816,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC02",
+        "scenario": "PIT lương 30 triệu 1 người phụ thuộc — happy path",
+        "query": "Lương tháng của tôi 30 triệu đồng, có 1 người phụ thuộc. Tôi phải đóng thuế TNCN bao nhiêu?",
+        "expect_template": "PIT_full",
+        "expect_clarification": false,
+        "expect_tax_present": true,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Lương tháng của tôi 30 triệu đồng, có 1 người phụ thuộc. Tôi phải đóng thuế TNCN bao nhiêu?",
+        "final_answer": "Chào bạn,\n\nVới thông tin bạn cung cấp, tôi xin trình bày kết quả tính thuế thu nhập cá nhân (TNCN) của bạn như sau:\n\n**Tổng thuế TNCN bạn phải nộp trong năm là: 4.980.000 VNĐ**\n\n**Chi tiết tính toán:**\n\nĐể bạn dễ hình dung, chúng ta sẽ xem xét các bước tính thuế dựa trên các giả định bạn đã đưa ra:\n\n1.  **Tổng thu nhập chịu thuế cả năm:**\n    *   Lương tháng của bạn là 30.000.000 VNĐ.\n    *   Tổng thu nhập chịu thuế cả năm của bạn là: 30.000.000 VNĐ/tháng x 12 tháng = **360.000.000 VNĐ.**\n\n2.  **Các khoản giảm trừ:**\n    *   **Giảm trừ gia cảnh cho bản thân:** Theo quy định, mức giảm trừ cho bản thân là 15.500.000 VNĐ/tháng.\n        *   Tổng giảm trừ cho bản thân cả năm: 15.500.000 VNĐ/tháng x 12 tháng = 186.000.000 VNĐ.\n    *   **Giảm trừ cho 1 người phụ thuộc:** Mức giảm trừ cho mỗi người phụ thuộc là 6.200.000 VNĐ/tháng.\n        *   Tổng giảm trừ cho 1 người phụ thuộc cả năm: 6.200.000 VNĐ/tháng x 12 tháng = 74.400.000 VNĐ.\n    *   **Tổng cộng các khoản giảm trừ cả năm:** 186.000.000 VNĐ (bản thân) + 74.400.000 VNĐ (người phụ thuộc) = **260.400.000 VNĐ.**\n\n3.  **Thu nhập tính thuế:**\n    *   Thu nhập tính thuế là phần thu nhập còn lại sau khi trừ đi các khoản giảm trừ.\n    *   Thu nhập tính thuế cả năm: 360.000.000 VNĐ (tổng thu nhập chịu thuế) - 260.400.000 VNĐ (tổng giảm trừ) = **99.600.000 VNĐ.**\n\n4.  **Số thuế TNCN phải nộp:**\n    *   Thu nhập tính thuế của bạn là 99.600.000 VNĐ, nằm trong bậc 1 của biểu thuế lũy tiến từng phần (thu nhập tính thuế đến 120.000.000 VNĐ/năm).\n    *   Mức thuế suất áp dụng cho bậc này là 5%.\n    *   Số thuế TNCN phải nộp: 99.600.000 VNĐ x 5% = **4.980.000 VNĐ.**\n\n**Thuế suất hiệu dụng:**\n*   Thuế suất hiệu dụng của bạn là 5.00%. Đây là tỷ lệ giữa tổng số thuế phải nộp và tổng thu nhập chịu thuế của bạn.\n\n**Các giả định quan trọng:**\n\nKết quả tính toán trên được thực hiện dựa trên các giả định sau:\n*   **Thời điểm áp dụng:** Năm 2026.\n*   **Tình trạng cư trú:** Bạn là cá nhân cư trú tại Việt Nam đủ 183 ngày trong năm tính thuế.\n*   **Thu nhập ổn định:** Mức lương 30.000.000 VNĐ/tháng là thu nhập duy nhất và ổn định trong suốt 12 tháng của năm.\n*   **Không có các khoản giảm trừ khác:** Ngoài giảm trừ gia cảnh cho bản thân và 1 người phụ thuộc, bạn không có các khoản giảm trừ khác như đóng góp bảo hiểm bắt buộc, quỹ hưu trí tự nguyện, đóng góp từ thiện, nhân đạo, khuyến học.\n\n**Cơ sở pháp lý:**\n\nViệc tính toán thuế TNCN được thực hiện dựa trên các quy định tại **Luật Thuế Thu nhập cá nhân số 109/2025/QH15**.\n\nNếu bạn có bất kỳ thắc mắc nào khác hoặc cần làm rõ thêm thông tin, đừng ngần ngại hỏi nhé.",
+        "template": "PIT_full",
+        "tax_amount": 4980000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [
+          "= 360 triệu"
+        ],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 1969,
+          "compute_violations": [
+            "= 360 triệu"
+          ]
+        },
+        "intent_summary": {
+          "who": {
+            "value": "individual",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "salary_wages"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "PIT"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": null,
+              "income_value": 30000000,
+              "dependent_count": 1
+            },
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.845,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.9,
+            "tax_domain": 0.9,
+            "financials": 0.9,
+            "time": 0.0,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_2_khoan_2_diem_đ_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.011475,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ2 (Các khoản thu nhập chịu thuế) | K2 | Đ.đ]\nThu nhập từ tiền lương, tiền công Thu nhập từ tiền "
+          },
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_2_khoan_2_diem_a_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.01129,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ2 (Các khoản thu nhập chịu thuế) | K2 | Đ.a]\nThu nhập từ tiền lương, tiền công Thu nhập từ tiền "
+          },
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_2_khoan_2_diem_e_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.011111,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ2 (Các khoản thu nhập chịu thuế) | K2 | Đ.e]\nThu nhập từ tiền lương, tiền công Thu nhập từ tiền "
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 7592,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": false,
+        "json_parse_ok": true
+      },
+      "pass": false
+    },
+    {
+      "tc": {
+        "id": "TC03",
+        "scenario": "HKD tiệm vàng 60 tỷ — high-value goods",
+        "query": "Tiệm vàng của tôi doanh thu 60 tỷ năm 2026, tính thuế thế nào?",
+        "expect_template": "HKD_percentage",
+        "expect_clarification": false,
+        "expect_tax_present": true,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Tiệm vàng của tôi doanh thu 60 tỷ năm 2026, tính thuế thế nào?",
+        "final_answer": "Chào bạn,\n\nTôi xin tư vấn về kết quả tính thuế cho tiệm vàng của bạn với doanh thu 60 tỷ đồng trong năm 2026 như sau:\n\n**Tổng số thuế bạn phải nộp là 900.000.000 VND.**\n\nCon số này được tính dựa trên các loại thuế và tỷ lệ thuế suất quy định cho hộ kinh doanh, cụ thể là:\n\n1.  **Thuế Giá trị gia tăng (GTGT): 600.000.000 VND**\n    *   Đây là thuế áp dụng cho hoạt động phân phối, cung cấp hàng hóa.\n    *   Mức thuế suất GTGT áp dụng là 1.0% trên doanh thu.\n    *   Cách tính: 60.000.000.000 VND (doanh thu) × 1.0% = 600.000.000 VND.\n\n2.  **Thuế Thu nhập cá nhân (TNCN): 300.000.000 VND**\n    *   Đây là thuế áp dụng cho thu nhập từ hoạt động kinh doanh của cá nhân.\n    *   Mức thuế suất TNCN áp dụng là 0.5% trên doanh thu.\n    *   Cách tính: 60.000.000.000 VND (doanh thu) × 0.5% = 300.000.000 VND.\n\n**Tổng cộng thuế phải nộp = 600.000.000 VND (GTGT) + 300.000.000 VND (TNCN) = 900.000.000 VND.**\n\n**Lưu ý quan trọng:**\n\n*   **Giả định:** Việc tính toán này được thực hiện dựa trên giả định tiệm vàng của bạn là hộ kinh doanh và áp dụng **phương pháp tính thuế khoán** (tức là tính thuế theo tỷ lệ % trên doanh thu). Giả định này được đưa ra do chúng tôi chưa có thông tin chi tiết về chi phí hoạt động của tiệm vàng.\n*   **Cơ sở pháp lý:** Các tỷ lệ thuế suất được áp dụng theo quy định tại **Nghị định số 68/2026/NĐ-CP** về chính sách thuế và quản lý thuế đối với hộ kinh doanh (đối với nhóm ngành nghề phân phối, cung cấp hàng hóa).\n\nBạn vui lòng đối chiếu lại các giả định trên với tình hình thực tế của tiệm vàng để đảm bảo kết quả tính thuế là chính xác nhất. Nếu bạn có bất kỳ thông tin bổ sung nào về chi phí hoặc hình thức kinh doanh khác, chúng tôi có thể xem xét lại để đưa ra kết quả tư vấn phù hợp hơn.\n\nTrân trọng,\nTư vấn viên thuế Việt Nam.",
+        "template": "HKD_percentage",
+        "tax_amount": 900000000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 1998,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "HKD",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "goods_distribution"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "HKD"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": 60000000000,
+              "income_value": null,
+              "dependent_count": null
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": 2026
+            },
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.885,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.9,
+            "tax_domain": 0.9,
+            "financials": 0.85,
+            "time": 0.9,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_khoan_1_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.013443,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ10 (Khai thuế, nộp thuế giá trị gia tăng, th) | K1]\nKhai thuế, nộp thuế giá trị gia tăng\na) Trường"
+          },
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_17_khoan_4_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.012949,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ17 (Trách nhiệm thi hành) | K4]\nCơ quan thuế thực hiện rà soát cơ sở dữ liệu của hộ kinh doanh, cá"
+          },
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_17_khoan_4_diem_a_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.012926,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ17 (Trách nhiệm thi hành) | K4 | Đ.a]\nCơ quan thuế thực hiện rà soát cơ sở dữ liệu của hộ kinh doa"
+          }
+        ],
+        "degrade_level": 2,
+        "latency_ms": 6533,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC04",
+        "scenario": "PIT xổ số 500 triệu — withholding tax",
+        "query": "Tôi trúng xổ số 500 triệu đồng. Thuế TNCN phải nộp là bao nhiêu?",
+        "expect_template": null,
+        "expect_clarification": false,
+        "expect_tax_present": false,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Tôi trúng xổ số 500 triệu đồng. Thuế TNCN phải nộp là bao nhiêu?",
+        "final_answer": "Chào bạn,\n\nVới trường hợp bạn trúng xổ số 500 triệu đồng, tôi xin trình bày kết quả tính thuế thu nhập cá nhân (TNCN) mà bạn phải nộp như sau:\n\n**1. Tổng thuế TNCN phải nộp:**\n\n*   **56.000.000 VND** (Năm mươi sáu triệu đồng)\n\n**2. Thuế suất hiệu dụng:**\n\n*   11.43%\n\n**3. Cơ sở tính toán:**\n\nKết quả tính toán này được thực hiện dựa trên các thông tin bạn cung cấp và áp dụng theo quy định của pháp luật hiện hành. Cụ thể:\n\n*   **Thu nhập chịu thuế từ trúng thưởng:** Theo quy định tại **Luật Thuế Thu nhập cá nhân số 109/2025/QH15**, thu nhập từ trúng thưởng xổ số là một khoản thu nhập chịu thuế TNCN.\n*   **Mức miễn thuế:** Luật 109/2025/QH15 có quy định mức miễn thuế là 10 triệu đồng cho mỗi lần trúng thưởng. Điều này có nghĩa là 10 triệu đồng đầu tiên trong khoản tiền trúng thưởng của bạn sẽ không phải chịu thuế.\n*   **Thuế suất:** Thuế suất áp dụng cho thu nhập từ trúng thưởng xổ số được tính theo biểu thuế lũy tiến từng phần, tuy nhiên, kết quả tính toán đã cho thấy tổng thuế phải nộp là 56.000.000 VND.\n\n**Lưu ý quan trọng:**\n\n*   Kết quả trên được tính toán dựa trên **giả định rằng bạn áp dụng mức miễn 10 triệu đồng/lần theo Luật 109/2025/QH15**. Bạn vui lòng đối chiếu lại với tình hình thực tế của mình để đảm bảo tính chính xác.\n*   Đây là kết quả tính toán dựa trên dữ liệu bạn cung cấp. Để có thông tin chi tiết và chính xác nhất cho trường hợp cụ thể của mình, bạn nên tham khảo thêm các văn bản hướng dẫn thi hành Luật Thuế TNCN hoặc liên hệ trực tiếp với cơ quan thuế địa phương.\n\nHy vọng thông tin này hữu ích cho bạn!",
+        "template": "PIT_progressive",
+        "tax_amount": 56000000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 2211,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "individual",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "lottery_prizes"
+            ],
+            "confidence": 0.95,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "PIT"
+            ],
+            "confidence": 0.95,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": 500000000,
+              "income_value": null,
+              "dependent_count": null
+            },
+            "confidence": 0.6,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.835,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.95,
+            "tax_domain": 0.95,
+            "financials": 0.6,
+            "time": 0.0,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_2_khoan_6_diem_a_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.014286,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ2 (Các khoản thu nhập chịu thuế) | K6 | Đ.a]\nThu nhập từ trúng thưởng Thu nhập từ trúng thưởng l"
+          },
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_15_khoan_1_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.014221,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ15 (Căn cứ tính thuế đối với thu nhập từ trú) | K1]\nThu nhập tính thuế Thu nhập tính thuế từ trú"
+          },
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_15_khoan_1_diem_c_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.013609,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ15 (Căn cứ tính thuế đối với thu n) | K1 | Đ.c]\nThu nhập tính thuế Thu nhập tính thuế từ trúng t"
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 6192,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC05",
+        "scenario": "Thiếu dữ liệu — clarification trigger (Shopee)",
+        "query": "Tôi bán hàng trên Shopee thì phải đóng thuế bao nhiêu?",
+        "expect_template": null,
+        "expect_clarification": true,
+        "expect_tax_present": false,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Tôi bán hàng trên Shopee thì phải đóng thuế bao nhiêu?",
+        "final_answer": "Thiếu giá trị cho: annual_revenue. Bạn có thể cung cấp thêm không?",
+        "template": "HKD_percentage",
+        "tax_amount": null,
+        "clarification": true,
+        "clarification_question": "Thiếu giá trị cho: annual_revenue. Bạn có thể cung cấp thêm không?",
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 2092,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "HKD",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "e_commerce_platform",
+              "goods_distribution"
+            ],
+            "confidence": 0.95,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "HKD"
+            ],
+            "confidence": 0.95,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": null,
+              "income_value": null,
+              "dependent_count": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": true
+            },
+            "confidence": 0.7,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.775,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.95,
+            "tax_domain": 0.95,
+            "financials": 0.0,
+            "time": 0.0,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_117_2025_NDCP_chuong_II_dieu_5_khoan_2_diem_a_chunk",
+            "doc_id": "117_2025_NDCP",
+            "score": 0.012756,
+            "snippet": "[VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, ) | K2 | Đ.a]\nSố thuế giá trị gia tăng, số thuế thu nhập cá nhân"
+          },
+          {
+            "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_khoan_2_chunk",
+            "doc_id": "68_2026_NDCP",
+            "score": 0.011111,
+            "snippet": "[VB: 68/2026/NĐ-CP | Đ3 (Thuế giá trị gia tăng) | K2]\nHộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doan"
+          },
+          {
+            "chunk_id": "doc_117_2025_NDCP_chuong_IV_dieu_11_khoan_1_chunk",
+            "doc_id": "117_2025_NDCP",
+            "score": 0.010937,
+            "snippet": "[VB: 117/2025/NĐ-CP | Đ11 (Trách nhiệm của hộ, cá nhân có hoạt động) | K1]\nHộ, cá nhân cư trú có hoạt động kinh doanh tr"
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 2593,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC06",
+        "scenario": "Domain mơ hồ — freelancer thiết kế",
+        "query": "Tôi làm freelance thiết kế đồ hoạ, thu nhập 15 triệu/tháng. Thuế tôi phải nộp là gì?",
+        "expect_template": null,
+        "expect_clarification": false,
+        "expect_tax_present": true,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Tôi làm freelance thiết kế đồ hoạ, thu nhập 15 triệu/tháng. Thuế tôi phải nộp là gì?",
+        "final_answer": "Chào bạn,\n\nVới thông tin bạn cung cấp về thu nhập 15 triệu đồng/tháng từ công việc freelance thiết kế đồ họa, và các giả định về năm 2026 cùng việc bạn là cá nhân kinh doanh dưới hình thức hộ kinh doanh, tôi xin trình bày kết quả tính thuế bạn phải nộp như sau:\n\n**Tổng số thuế bạn phải nộp là: 9.000.000 VND**\n\n**Chi tiết các loại thuế:**\n\n1.  **Thuế Giá trị gia tăng (GTGT): 9.000.000 VND**\n    *   Doanh thu tính thuế GTGT của bạn là 180.000.000 VND (15 triệu/tháng x 12 tháng).\n    *   Đối với hoạt động dịch vụ, xây dựng không bao thầu nguyên vật liệu, tỷ lệ % tính thuế GTGT là 5%.\n    *   Số thuế GTGT phải nộp = 180.000.000 VND x 5% = 9.000.000 VND.\n\n2.  **Thuế Thu nhập cá nhân (TNCN): 0 VND**\n    *   Theo quy định hiện hành, cá nhân kinh doanh có doanh thu từ hoạt động sản xuất, kinh doanh trong năm dương lịch từ 100 triệu đồng trở xuống thì không phải nộp thuế TNCN.\n    *   Doanh thu của bạn là 180.000.000 VND/năm, nhưng theo kết quả tính thuế đã cung cấp, bạn được miễn thuế TNCN vì doanh thu ≤ 500 triệu/năm.\n    *   Vì vậy, bạn không phải nộp thuế TNCN.\n\n**Tóm tắt:**\n\n*   **Tổng thuế phải nộp:** 9.000.000 VND\n*   **Thuế suất hiệu dụng:** 5.00% (tính trên tổng doanh thu)\n\n**Cơ sở pháp lý:**\n\nKết quả tính thuế này dựa trên các quy định tại **Nghị định số 68/2026/NĐ-CP** về chính sách thuế và quản lý thuế đối với hộ kinh doanh (Tỷ lệ % tính thuế GTGT theo nhóm ngành nghề).\n\n**Lưu ý quan trọng:**\n\n*   Kết quả này được tính toán dựa trên giả định bạn là **cá nhân kinh doanh dưới hình thức hộ kinh doanh** và áp dụng cho **năm 2026**.\n*   Nếu có bất kỳ thay đổi nào về hình thức kinh doanh hoặc các quy định pháp luật thuế trong tương lai, số thuế phải nộp có thể thay đổi.\n\nHy vọng thông tin này hữu ích cho bạn!",
+        "template": "HKD_percentage",
+        "tax_amount": 9000000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 2020,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "individual",
+            "confidence": 1.0,
+            "source": "llm"
+          },
+          "activity_group": {
+            "value": [
+              "services_without_materials"
+            ],
+            "confidence": 1.0,
+            "source": "llm"
+          },
+          "tax_domain": {
+            "value": [
+              "HKD"
+            ],
+            "confidence": 1.0,
+            "source": "llm"
+          },
+          "financials": {
+            "value": {
+              "revenue": 180000000,
+              "income_value": 15000000,
+              "dependent_count": null
+            },
+            "confidence": 1.0,
+            "source": "merged"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "merged"
+          },
+          "_overall_confidence": 0.92,
+          "_confidence": {
+            "who": 1.0,
+            "activity_group": 1.0,
+            "tax_domain": 1.0,
+            "financials": 1.0,
+            "time": 0.0,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "llm",
+            "activity_group": "llm",
+            "tax_domain": "llm",
+            "financials": "merged",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_6_chunk",
+            "doc_id": "108_2025_QH15",
+            "score": 0.011475,
+            "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K6]\nBộ trưởng Bộ Tài chính quy định hồ sơ, thủ tục"
+          },
+          {
+            "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_chunk",
+            "doc_id": "108_2025_QH15",
+            "score": 0.01129,
+            "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, khoản thu kh)]"
+          },
+          {
+            "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_12_chunk",
+            "doc_id": "108_2025_QH15",
+            "score": 0.011111,
+            "snippet": "[VB: 108/2025/QH15 | Đ12 (Khai thuế, khoản thu khác; tính thuế, khoản thu kh)]"
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 22412,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC07",
+        "scenario": "Threshold query — ngưỡng không phải nộp thuế",
+        "query": "Doanh thu bao nhiêu thì hộ kinh doanh không phải nộp thuế?",
+        "expect_template": null,
+        "expect_clarification": false,
+        "expect_tax_present": false,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Doanh thu bao nhiêu thì hộ kinh doanh không phải nộp thuế?",
+        "final_answer": "Tôi gặp khó khăn trong việc tính toán chính xác cho câu hỏi này. Vui lòng liên hệ tư vấn viên thuế để được hỗ trợ cụ thể. Thông tin tham khảo: \n\n[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê ) | K1 | Đ.a]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ kinh doanh, cá nhân kinh doanh\nHộ kinh doanh, cá nhân kinh doanh thuộc đối tượn\n\n[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K1]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nhân:\na) Trường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh\n\n[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tín) | K1 | Đ.a]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nhân:\nTrường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu hằ",
+        "template": null,
+        "tax_amount": null,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 3,
+          "parse_ok": true,
+          "schema_ok": false,
+          "latency_ms": 5276,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "HKD",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "other_activities"
+            ],
+            "confidence": 0.5,
+            "source": "llm"
+          },
+          "tax_domain": {
+            "value": [
+              "HKD"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": null,
+              "income_value": null,
+              "dependent_count": null
+            },
+            "confidence": 1.0,
+            "source": "merged"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "explain",
+              "secondary": null,
+              "requires_calculation": false,
+              "requires_conditions": true
+            },
+            "confidence": 0.8,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "merged"
+          },
+          "_overall_confidence": 0.765,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.5,
+            "tax_domain": 0.9,
+            "financials": 1.0,
+            "time": 0.0,
+            "intent": 0.8
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "llm",
+            "tax_domain": "rule",
+            "financials": "merged",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_1_diem_a_chunk",
+            "doc_id": "18_2026_TTBTC",
+            "score": 0.014777,
+            "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê ) | K1 | Đ.a]\nHồ sơ thông báo doanh thu, kê khai thuế đối với hộ"
+          },
+          {
+            "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_1_chunk",
+            "doc_id": "108_2025_QH15",
+            "score": 0.015225,
+            "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tính thuế, kh) | K1]\nĐối với thuế giá trị gia tăng, thuế thu nhập c"
+          },
+          {
+            "chunk_id": "doc_108_2025_QH15_chuong_II_muc_2_dieu_13_khoan_1_diem_a_chunk",
+            "doc_id": "108_2025_QH15",
+            "score": 0.015186,
+            "snippet": "[VB: 108/2025/QH15 | Đ13 (Khai thuế, khoản thu khác; tín) | K1 | Đ.a]\nĐối với thuế giá trị gia tăng, thuế thu nhập cá nh"
+          }
+        ],
+        "degrade_level": 4,
+        "latency_ms": 9963,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    },
+    {
+      "tc": {
+        "id": "TC08",
+        "scenario": "Math hallucination trap — LLM tự tính",
+        "query": "Lương 30 triệu, giảm trừ bản thân 11 triệu, 1 người phụ thuộc 4.4 triệu. Tôi tự tính ra phải đóng 2 triệu tiền thuế đúng không?",
+        "expect_template": "PIT_full",
+        "expect_clarification": null,
+        "expect_tax_present": false,
+        "expect_no_compute": true
+      },
+      "result": {
+        "query": "Lương 30 triệu, giảm trừ bản thân 11 triệu, 1 người phụ thuộc 4.4 triệu. Tôi tự tính ra phải đóng 2 triệu tiền thuế đúng không?",
+        "final_answer": "Chào bạn,\n\nVới thông tin bạn cung cấp và kết quả tính thuế đã có, tôi xin trình bày kết quả tính thuế thu nhập cá nhân của bạn như sau:\n\n**1. Thông tin cơ bản:**\n\n*   **Thu nhập chịu thuế (tổng lương gross hàng năm):** 30.000.000 VNĐ/tháng x 12 tháng = 360.000.000 VNĐ/năm\n*   **Giảm trừ gia cảnh:**\n    *   Bản thân: 15.500.000 VNĐ/tháng x 12 tháng = 186.000.000 VNĐ/năm\n    *   1 người phụ thuộc: 6.200.000 VNĐ/tháng x 12 tháng = 74.400.000 VNĐ/năm\n    *   **Tổng giảm trừ gia cảnh hàng năm:** 186.000.000 VNĐ + 74.400.000 VNĐ = 260.400.000 VNĐ/năm\n\n**2. Giả định:**\n\nĐể có kết quả tính thuế này, chúng tôi đã sử dụng các giả định sau:\n\n*   Bạn đang tính thuế cho **năm 2026**.\n*   Bạn là cá nhân cư trú tại Việt Nam đủ 183 ngày trong năm tính thuế.\n*   Mức lương 30.000.000 VNĐ/tháng là tổng thu nhập chịu thuế (gross income) hàng tháng của bạn.\n\n**3. Kết quả tính thuế thu nhập cá nhân:**\n\nDựa trên các thông tin và giả định trên, kết quả tính thuế của bạn như sau:\n\n*   **Thu nhập tính thuế (sau giảm trừ):** 360.000.000 VNĐ - 260.400.000 VNĐ = 99.600.000 VNĐ/năm\n*   **Số thuế phải nộp:**\n    *   Thu nhập tính thuế của bạn là 99.600.000 VNĐ/năm, nằm trong bậc 1 của biểu thuế lũy tiến từng phần (thu nhập tính thuế đến 120.000.000 VNĐ/năm).\n    *   Theo đó, số thuế phải nộp được tính như sau:\n        *   99.600.000 VNĐ x 5% = **4.980.000 VNĐ**\n*   **Thuế suất hiệu dụng:** 5.00%\n\n**Kết luận:**\n\nVới mức lương 30 triệu đồng/tháng và các khoản giảm trừ như trên, số thuế thu nhập cá nhân bạn phải nộp là **4.980.000 VNĐ** (Bốn triệu chín trăm tám mươi nghìn đồng).\n\nNhư vậy, số thuế bạn tự tính là 2 triệu đồng chưa chính xác so với kết quả tính toán này.\n\n**Cơ sở pháp lý:**\n\nKết quả tính thuế này được thực hiện dựa trên các quy định tại **Luật Thuế Thu nhập cá nhân số 109/2025/QH15**.\n\nNếu bạn có bất kỳ thắc mắc nào khác hoặc cần làm rõ thêm thông tin, xin vui lòng cho biết.",
+        "template": "PIT_full",
+        "tax_amount": 4980000,
+        "clarification": false,
+        "clarification_question": null,
+        "compute_violations": [],
+        "meta_reasoner": {
+          "attempts": 1,
+          "parse_ok": true,
+          "schema_ok": true,
+          "latency_ms": 2081,
+          "compute_violations": []
+        },
+        "intent_summary": {
+          "who": {
+            "value": "individual",
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "activity_group": {
+            "value": [
+              "salary_wages"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "tax_domain": {
+            "value": [
+              "PIT"
+            ],
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "financials": {
+            "value": {
+              "revenue": null,
+              "income_value": 11000000,
+              "dependent_count": 1
+            },
+            "confidence": 0.9,
+            "source": "rule"
+          },
+          "time": {
+            "value": {
+              "year": null
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "intent": {
+            "value": {
+              "primary": "calculate",
+              "secondary": null,
+              "requires_calculation": true,
+              "requires_conditions": false
+            },
+            "confidence": 0.85,
+            "source": "rule"
+          },
+          "flags": {
+            "value": {
+              "is_first_time": null,
+              "is_sole_property": null,
+              "is_online_platform": false
+            },
+            "confidence": 0.0,
+            "source": "rule"
+          },
+          "_overall_confidence": 0.845,
+          "_confidence": {
+            "who": 0.9,
+            "activity_group": 0.9,
+            "tax_domain": 0.9,
+            "financials": 0.9,
+            "time": 0.0,
+            "intent": 0.85
+          },
+          "_source": {
+            "who": "rule",
+            "activity_group": "rule",
+            "tax_domain": "rule",
+            "financials": "rule",
+            "time": "rule",
+            "intent": "rule"
+          }
+        },
+        "top_chunks": [
+          {
+            "chunk_id": "doc_109_2025_QH15_chuong_II_dieu_8_khoan_2_chunk",
+            "doc_id": "109_2025_QH15",
+            "score": 0.013863,
+            "snippet": "[VB: 109/2025/QH15 | Đ8 (Thuế thu nhập cá nhân đối với thu nhập t) | K2]\nThu nhập tính thuế đối với thu nhập từ tiền lươ"
+          },
+          {
+            "chunk_id": "doc_1296_CTNVT_phan_24_chunk",
+            "doc_id": "1296_CTNVT",
+            "score": 0.013093,
+            "snippet": "[VB: 1296/CTNVT | Phần  (2.4. Giảm trừ gia cảnh đối với người phụ thuộc)]\nĐể được tính giảm trừ cho người phụ thuộc thì "
+          },
+          {
+            "chunk_id": "doc_111_2013_TTBTC_dieu_2_khoan_2_diem_g_chunk",
+            "doc_id": "111_2013_TTBTC",
+            "score": 0.011475,
+            "snippet": "[VB: 111/2013/TT-BTC | Đ2 (Các khoản thu nhập chịu thuế) | K2 | Đ.g]\nThu nhập từ tiền lương, tiền công Thu nhập từ tiền "
+          }
+        ],
+        "degrade_level": 1,
+        "latency_ms": 6907,
+        "error": null
+      },
+      "checks": {
+        "no_crash": true,
+        "template_match": true,
+        "clarification_triggered": true,
+        "tax_amount_in_answer": true,
+        "no_llm_compute": true,
+        "json_parse_ok": true
+      },
+      "pass": true
+    }
+  ]
+}

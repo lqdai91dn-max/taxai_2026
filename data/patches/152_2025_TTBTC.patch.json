@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "doc_id": "152_2025_TTBTC",
+  "description": "BUG-010: Parser bỏ sót toàn bộ phần 'Phương pháp ghi sổ' cho 5 mẫu sổ kế toán (S1a, S2b, S2c, S2d, S2e-HKD). Patch inject vào 3 nodes để tránh chunk quá lớn: Điều 4 K1 (S1a), Điều 6 K2 (S2b+S2c), Điều 6 K1 (S2d+S2e). Ảnh hưởng: Q45, Q103, Q105, Q132, Q139, Q189.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_152_2025_TTBTC_chuong_II_muc_1_dieu_4_khoan_1",
+      "field": "content",
+      "value": "Trường hợp hộ kinh doanh, cá nhân kinh doanh thuộc đối tượng không chịu thuế giá trị gia tăng, không phải nộp thuế thu nhập cá nhân thì sử dụng Sổ doanh thu bán hàng hóa, dịch vụ (mẫu số S1a-HKD) sau đây để ghi chép doanh thu bán hàng hóa, dịch vụ, cụ thể:\n\nPhương pháp ghi sổ S1a-HKD:\na) Sổ này được mở để ghi doanh thu bán hàng hóa, dịch vụ làm căn cứ kê khai, xác định hộ kinh doanh, cá nhân kinh doanh có thuộc đối tượng chịu thuế GTGT, nộp thuế TNCN theo quy định của pháp luật về thuế hay không.\nb) Phương pháp ghi sổ\n- Cột A: Ghi ngày, tháng ghi sổ.\n- Cột B: Ghi diễn giải doanh thu từ việc bán hàng hóa, dịch vụ. Hộ kinh doanh, cá nhân kinh doanh có thể ghi theo từng nghiệp vụ phát sinh hoặc theo định kỳ.\n- Cột 1: Ghi số tiền bán hàng hóa, dịch vụ."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_1",
+      "field": "content",
+      "value": "Chứng từ kế toán: Hóa đơn, Bảng kê mua hàng hóa, dịch vụ (đối với trường hợp hộ kinh doanh, cá nhân kinh doanh mua hàng hóa, dịch vụ của người bán hàng không có hóa đơn GTGT hoặc hóa đơn bán hàng) và các chứng từ kế toán khác làm căn cứ để xác định doanh thu, thu nhập tính thuế theo quy định của pháp luật về thuế.\n\n2.2.3. Sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa (Mẫu số S2d-HKD)\nPhương pháp ghi sổ S2d-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh mở sổ chi tiết vật liệu, dụng cụ, sản phẩm, hàng hóa để theo dõi, quản lý về tình hình nhập, xuất, tồn cho từng vật liệu, dụng cụ, sản phẩm, hàng hóa.\nb) Phương pháp ghi sổ\n- Cột 1: Ghi đơn giá nhập, xuất, tồn. Đơn giá xuất kho tính theo phương pháp bình quân gia quyền cuối kỳ: Đơn giá xuất kho = (Giá trị hàng tồn đầu kỳ + Giá trị hàng nhập trong kỳ) / (Số lượng hàng tồn đầu kỳ + Số lượng hàng nhập trong kỳ).\n- Cột 2: Ghi số lượng nhập kho. Cột 3: thành tiền nhập (= Cột 1 x Cột 2).\n- Cột 4: Ghi số lượng xuất kho. Cột 5: thành tiền xuất (= Cột 1 x Cột 4).\n- Cột 6: Số lượng tồn. Cột 7: thành tiền tồn (= Cột 1 x Cột 6).\n\n2.2.4. Sổ chi tiết tiền (Mẫu số S2e-HKD)\nPhương pháp ghi sổ S2e-HKD:\na) Hộ kinh doanh, cá nhân kinh doanh phải mở sổ chi tiết tiền để theo dõi tình hình thu, chi bằng tiền mặt hoặc tiền gửi không kỳ hạn. Hộ kinh doanh, cá nhân kinh doanh phải theo dõi riêng biệt tiền mặt và tiền gửi không kỳ hạn; không được gộp chung tiền mặt với tiền gửi ngân hàng vào cùng một cột. Có thể mở sổ chi tiết theo từng ngân hàng.\nb) Phương pháp ghi sổ\n- Cột 1, 2: Ghi số tiền thu, chi tiền mặt hoặc số tiền gửi không kỳ hạn gửi vào, rút ra.\nCuối kỳ, tính ra số tiền mặt tồn quỹ và số tiền gửi không kỳ hạn dư cuối kỳ."
+    },
+    {
+      "op": "set_field",
+      "node_id": "doc_152_2025_TTBTC_chuong_II_muc_2_dieu_6_khoan_2",
+      "field": "content",
+      "value": "Sổ kế toán hộ kinh doanh nộp thuế theo lợi nhuận gồm: S2b-HKD (doanh thu), S2c-HKD (doanh thu + chi phí TNCN), S2d-HKD (vật liệu nhập xuất tồn), S2e-HKD (tiền mặt + tiền gửi).\n\n2.2.1. Sổ doanh thu bán hàng hóa, dịch vụ (Mẫu số S2b-HKD)\nPhương pháp ghi sổ S2b-HKD:\na) Sổ này ghi doanh thu theo từng nhóm ngành nghề kinh doanh có cùng tỷ lệ % để tính thuế GTGT. Sổ S2b-HKD có thể lưu trữ trên phương tiện điện tử hoặc bằng bản giấy theo quy định tại Điều 3 Thông tư này.\nb) Phương pháp ghi sổ\n- Cột A, B: Số hiệu, ngày tháng chứng từ. Cột C: diễn giải doanh thu. Cột 1: số tiền.\n\n2.2.2. Sổ chi tiết doanh thu, chi phí (Mẫu số S2c-HKD)\nPhương pháp ghi sổ S2c-HKD:\na) Hộ kinh doanh mở sổ này để xác định nghĩa vụ thuế TNCN theo phương pháp lợi nhuận.\nb) Phương pháp ghi sổ\n- Dòng 1: Tổng doanh thu bán hàng hóa, dịch vụ.\n- Dòng 2: Tổng chi phí hợp lý (nguyên liệu, lương, khấu hao, dịch vụ mua ngoài, lãi vay, chi phí khác).\n- Chênh lệch (Dòng 1 - Dòng 2) = thu nhập tính thuế TNCN."
+    }
+  ]
+}

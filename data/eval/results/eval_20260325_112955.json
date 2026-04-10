@@ -1,0 +1,291 @@
+{
+  "report": {
+    "summary": {
+      "total": 2,
+      "passed": 0,
+      "pass_rate": 0.0,
+      "avg_score": 0.2,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-03-25T11:29:55.852827"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 1,
+        "avg": 0.2,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 2,
+        "avg": 0.5,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 2,
+        "avg": 0.4,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 2,
+        "avg": 0.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Quyết toán thuế TNCN": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.0
+      },
+      "Thuế thương mại điện tử": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0,
+        "avg_score": 0.4
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 0.4
+      },
+      "medium": {
+        "count": 1,
+        "avg_score": 0.0
+      }
+    },
+    "latency_ms": {
+      "min": 4854,
+      "max": 5137,
+      "avg": 4996,
+      "p50": 4996,
+      "p95": 5123
+    },
+    "tool_compliance": {
+      "applicable": 1,
+      "compliant": 0,
+      "tool_skipped": 1,
+      "no_tool": 0,
+      "compliance_rate": 0.0,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 22,
+        "question": "Tôi bán quần áo, sàn Shopee sẽ trừ thuế của tôi theo tỷ lệ bao nhiêu % trên mỗi ",
+        "score": 0.4,
+        "t1": "FAIL — answer không khớp expected text '1.5% (1% GTGT + 0.5% TNCN)' [tool_skipped]",
+        "t2": "PASS — overlap 2/2 docs, precision=1.00",
+        "t3": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "error": null
+      },
+      {
+        "id": 214,
+        "question": "Chào anh chị, tôi có câu hỏi như sau: Khi thực hiện quyết toán thuế TNCN, tại do",
+        "score": 0.0,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "FAIL — overlap 0/1 docs",
+        "t3": "PASS — gọi 1 tools (topic không có mapping cụ thể)",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 22,
+      "question": "Tôi bán quần áo, sàn Shopee sẽ trừ thuế của tôi theo tỷ lệ bao nhiêu % trên mỗi đơn hàng?",
+      "topic": "Thuế thương mại điện tử",
+      "difficulty": "easy",
+      "user_type": "online_seller",
+      "needs_calculation": true,
+      "annotation_status": "verified",
+      "answer": "Theo quy định hiện hành, sàn Shopee sẽ thực hiện khấu trừ thuế thu nhập cá nhân (TNCN) theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ. Tuy nhiên, các chunks được cung cấp không nêu rõ tỷ lệ phần trăm cụ thể áp dụng cho thuế TNCN đối với hoạt động bán quần áo trên sàn thương mại điện tử. Nghị định 117/2025/NĐ-CP và Nghị định 68/2026/NĐ-CP đều quy định việc xác định số thuế TNCN phải khấu trừ theo tỷ lệ phần trăm trên doanh thu, nhưng không cung cấp con số tỷ lệ cụ thể.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "result": {
+            "results": [
+              {
+                "snippet": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ. Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:"
+              },
+              {
+                "snippet": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ. Doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ là số tiền bán hàng hóa, dịch vụ của hộ, cá nhân được hưởng mà tổ chức quản lý nền tảng thương mại điện tử thu hộ."
+              },
+              {
+                "snippet": "Hộ kinh doanh, cá nhân cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm tự kê khai, nộp thuế theo quy định tại Điều 8, Điều 9, Điều 10 Nghị định này."
+              },
+              {
+                "snippet": "Tờ khai khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số thuế đã khấu trừ của hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số tiền nộp thuế của chủ quản nền tảng thương mại điện tử, chứng từ khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử tiếp tục thực hiện theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân."
+              }
+            ]
+          },
+          "input": {}
+        }
+      ],
+      "latency_ms": 5137,
+      "error": null,
+      "tier1": {
+        "score": 0.2,
+        "reason": "FAIL — answer không khớp expected text '1.5% (1% GTGT + 0.5% TNCN)' [tool_skipped]",
+        "details": {
+          "ev_text": "1.5% (1% GTGT + 0.5% TNCN)",
+          "tool": "none",
+          "tool_compliance": "tool_skipped"
+        }
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=1.00",
+        "details": {
+          "matched": [
+            "117_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": []
+        }
+      },
+      "tier3": {
+        "score": 0.0,
+        "reason": "FAIL — câu hỏi cần tính toán nhưng không dùng calculator tool",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/2 key facts, thiếu: ['1%', '0,5%']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "1%",
+            "0,5%"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "doc_id": "117_2025_NDCP",
+          "article": "Đ5 K2 Đ.b",
+          "text": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ. Tỷ lệ % tính thuế thu nhập cá nhân thực hiện theo quy định của Luật Thuế thu nhập cá nhân như sau:",
+          "label": "VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, ) | K2 | Đ.b",
+          "chunk_id": ""
+        },
+        {
+          "doc_id": "117_2025_NDCP",
+          "article": "Đ5 K2 Đ.d",
+          "text": "Số thuế giá trị gia tăng, số thuế thu nhập cá nhân phải thực hiện khấu trừ được xác định theo tỷ lệ phần trăm (%) trên doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ. Doanh thu của mỗi giao dịch bán hàng hóa, cung cấp dịch vụ là số tiền bán hàng hóa, dịch vụ của hộ, cá nhân được hưởng mà tổ chức quản lý nền tảng thương mại điện tử thu hộ.",
+          "label": "VB: 117/2025/NĐ-CP | Đ5 (Thời điểm thực hiện khấu trừ, ) | K2 | Đ.d",
+          "chunk_id": ""
+        },
+        {
+          "doc_id": "68_2026_NDCP",
+          "article": "Đ11 K2",
+          "text": "Hộ kinh doanh, cá nhân cư trú có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số khác không có chức năng đặt hàng trực tuyến và chức năng thanh toán có trách nhiệm tự kê khai, nộp thuế theo quy định tại Điều 8, Điều 9, Điều 10 Nghị định này.",
+          "label": "VB: 68/2026/NĐ-CP | Đ11 (Khai thuế, khấu trừ thuế đối với hoạt độ) | K2",
+          "chunk_id": ""
+        },
+        {
+          "doc_id": "68_2026_NDCP",
+          "article": "Đ18 K2",
+          "text": "Tờ khai khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số thuế đã khấu trừ của hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử, Bảng kê chi tiết số tiền nộp thuế của chủ quản nền tảng thương mại điện tử, chứng từ khấu trừ thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử tiếp tục thực hiện theo quy định tại Nghị định số 117/2025/NĐ-CP ngày 09 tháng 6 năm 2025 của Chính phủ quy định quản lý thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ, cá nhân.",
+          "label": "VB: 68/2026/NĐ-CP | Đ18 (Điều khoản chuyển tiếp) | K2",
+          "chunk_id": ""
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "117_2025_NDCP",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 214,
+      "question": "Chào anh chị, tôi có câu hỏi như sau: Khi thực hiện quyết toán thuế TNCN, tại doanh nghiệp chúng tôi có một số trường hợp cá nhân có số thuế phải nộp thêm là 50.000 đồng hoặc thấp hơn. Vậy chúng tôi có phải kê khai những cá nhân này tại tờ khai quyết toán thuế TNCN hay không?",
+      "topic": "Quyết toán thuế TNCN",
+      "difficulty": "medium",
+      "user_type": "employer",
+      "needs_calculation": false,
+      "annotation_status": "pending",
+      "answer": "Theo Công văn 1296/CTNVT, cá nhân có số thuế thu nhập cá nhân phải nộp thêm sau quyết toán của từng năm từ 50.000 đồng trở xuống thì không phải quyết toán thuế thu nhập cá nhân. Cá nhân trong trường hợp này tự xác định số tiền thuế được miễn, không bắt buộc phải nộp hồ sơ quyết toán thuế thu nhập cá nhân và không phải nộp hồ sơ miễn thuế.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "result": {
+            "results": [
+              {
+                "snippet": "Cá nhân có thu nhập từ tiền lương tiền công trong các trường hợp sau đây không phải quyết toán thuế thu nhập cá nhân: + Cá nhân có số thuế thu nhập cá nhân phải nộp thêm sau quyết toán của từng năm từ 50.000 đồng trở xuống. Cá nhân được miễn thuế trong trường hợp này tự xác định số tiền thuế được miễn, không bắt buộc phải nộp hồ sơ quyết toán thuế thu nhập cá nhân và không phải nộp hồ sơ miễn thuế; + Cá nhân có số thuế thu nhập cá nhân phải nộp nhỏ hơn số thuế đã tạm nộp mà không có yêu cầu hoàn thuế hoặc bù trừ vào kỳ khai thuế tiếp theo; + Cá nhân có thu nhập từ tiền lương, tiền công ký hợp đồng lao động từ 03 tháng trở lên tại một đơn vị, đồng thời có thu nhập vãng lai ở các nơi khác bình quân tháng trong năm không quá 10 triệu đồng và đã được khấu trừ thuế TNCN theo tỷ lệ 10% và thực hiện ủy quyền quyết toán thuế TNCN cho tổ chức trả thu nhập tại nơi ký hợp đồng lao động; + Cá nhân được người sử dụng lao động mua bảo hiểm nhân thọ (trừ bảo hiểm hưu trí tự nguyện), bảo hiểm không bắt buộc khác có tích lũy về phí bảo hiểm mà người sử dụng lao động hoặc doanh ng hiệp bảo hiểm đã khấu trừ thuế TNCN theo tỷ lệ 10% trên khoản tiền phí bảo hiểm tương ứng với phần người sử dụng lao động mua hoặc đóng góp cho người lao động thì người lao động không phải quyết toán thuế TNCN đối với phần thu nhập này."
+              }
+            ]
+          },
+          "input": {}
+        }
+      ],
+      "latency_ms": 4854,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 0.0,
+        "reason": "FAIL — overlap 0/1 docs",
+        "details": {
+          "expected": [
+            "126_2020_NDCP"
+          ],
+          "got": [
+            "1296_CTNVT"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 0.8,
+        "reason": "PASS — gọi 1 tools (topic không có mapping cụ thể)",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/2 key facts, thiếu: ['có trách nhiệm kê khai quyết toán', 'không phân biệt']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "có trách nhiệm kê khai quyết toán",
+            "không phân biệt"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "doc_id": "1296_CTNVT",
+          "article": "Phần  (2.2. Đối với cá nhân có thu nhập từ tiền lương, ti)",
+          "text": "Cá nhân có thu nhập từ tiền lương tiền công trong các trường hợp sau đây không phải quyết toán thuế thu nhập cá nhân: + Cá nhân có số thuế thu nhập cá nhân phải nộp thêm sau quyết toán của từng năm từ 50.000 đồng trở xuống. Cá nhân được miễn thuế trong trường hợp này tự xác định số tiền thuế được miễn, không bắt buộc phải nộp hồ sơ quyết toán thuế thu nhập cá nhân và không phải nộp hồ sơ miễn thuế; + Cá nhân có số thuế thu nhập cá nhân phải nộp nhỏ hơn số thuế đã tạm nộp mà không có yêu cầu hoàn thuế hoặc bù trừ vào kỳ khai thuế tiếp theo; + Cá nhân có thu nhập từ tiền lương, tiền công ký hợp đồng lao động từ 03 tháng trở lên tại một đơn vị, đồng thời có thu nhập vãng lai ở các nơi khác bình quân tháng trong năm không quá 10 triệu đồng và đã được khấu trừ thuế TNCN theo tỷ lệ 10% và thực hiện ủy quyền quyết toán thuế TNCN cho tổ chức trả thu nhập tại nơi ký hợp đồng lao động; + Cá nhân được người sử dụng lao động mua bảo hiểm nhân thọ (trừ bảo hiểm hưu trí tự nguyện), bảo hiểm không bắt buộc khác có tích lũy về phí bảo hiểm mà người sử dụng lao động hoặc doanh ng hiệp bảo hiểm đã khấu trừ thuế TNCN theo tỷ lệ 10% trên khoản tiền phí bảo hiểm tương ứng với phần người sử dụng lao động mua hoặc đóng góp cho người lao động thì người lao động không phải quyết toán thuế TNCN đối với phần thu nhập này.",
+          "label": "7",
+          "chunk_id": ""
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "1296_CTNVT",
+        "111_2013_TTBTC",
+        "109_2025_QH15",
+        "126_2020_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

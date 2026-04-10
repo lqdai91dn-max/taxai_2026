@@ -1,0 +1,2014 @@
+{
+  "report": {
+    "summary": {
+      "total": 5,
+      "passed": 4,
+      "pass_rate": 0.8,
+      "avg_score": 0.9,
+      "errors": 0,
+      "annotated": 5,
+      "verified": 5,
+      "timestamp": "2026-04-02T19:39:31.320695"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 5,
+        "avg": 1.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 5,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 5,
+        "avg": 0.8,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Xử phạt vi phạm": {
+        "total": 5,
+        "passed": 4,
+        "pass_rate": 0.8,
+        "avg_score": 0.9
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 2,
+        "avg_score": 1.0
+      },
+      "hard": {
+        "count": 1,
+        "avg_score": 1.0
+      },
+      "medium": {
+        "count": 2,
+        "avg_score": 0.75
+      }
+    },
+    "latency_ms": {
+      "min": 9778,
+      "max": 26699,
+      "avg": 14777,
+      "p50": 12691,
+      "p95": 24067
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": [
+      {
+        "id": 84,
+        "question": "Cửa hàng tôi bị cháy làm mất máy tính chứa dữ liệu hóa đơn chưa gửi cơ quan thuế",
+        "score": 0.5,
+        "t1": "N/A — câu hỏi không cần tính toán",
+        "t2": "PASS — overlap 2/2 docs, precision=0.67",
+        "t3": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "error": null
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": 84,
+      "question": "Cửa hàng tôi bị cháy làm mất máy tính chứa dữ liệu hóa đơn chưa gửi cơ quan thuế, giờ tôi khai báo mất thì có bị phạt tiền không?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "medium",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Phạt cảnh cáo đối với một trong các hành vi sau đây: Làm mất, cháy, hỏng hóa đơn đã lập (trừ liên giao cho khách hàng) trong quá trình sử dụng, đã kê khai, nộp thuế, có hồ sơ chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ.\n*(Điều 26 Khoản 1 Điểm a, Nghị định 125/2020/NĐ-CP)*\n\n💬 Trả lời\nTrường hợp cửa hàng của bạn bị cháy làm mất máy tính chứa dữ liệu hóa đơn chưa gửi cơ quan thuế, việc xử phạt sẽ phụ thuộc vào một số yếu tố theo quy định tại Nghị định 125/2020/NĐ-CP về xử phạt vi phạm hành chính về thuế, hóa đơn.\n\nCụ thể:\n*   **Phạt cảnh cáo:** Nếu hóa đơn bị mất, cháy, hỏng là liên nội bộ (trừ liên giao cho khách hàng), bạn đã kê khai, nộp thuế, có hồ sơ chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ, bạn có thể chỉ bị phạt cảnh cáo theo Điều 26 Khoản 1 Điểm a Nghị định 125/2020/NĐ-CP.\n*   **Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng:** Nếu hóa đơn bị mất, cháy, hỏng là liên giao cho khách hàng, người bán đã kê khai, nộp thuế, có hồ sơ, tài liệu, chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ, bạn sẽ bị phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng theo Điều 26 Khoản 2 Nghị định 125/2020/NĐ-CP.\n*   **Phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng:** Nếu hóa đơn bị mất, cháy, hỏng là liên giao cho khách hàng, người bán đã kê khai, nộp thuế, có hồ sơ, tài liệu, chứng từ chứng minh việc mua bán hàng hóa, dịch vụ, bạn sẽ bị phạt tiền từ 4.000.000 đồng đến 8.000.000 đồng theo Điều 26 Khoản 3 Điểm b Nghị định 125/2020/NĐ-CP.\n\n**Lưu ý quan trọng:**\n*   Nghị định 310/2025/NĐ-CP có sửa đổi, bổ sung một số điều của Nghị định 125/2020/NĐ-CP, tuy nhiên các điều khoản liên quan đến hành vi làm mất, cháy, hỏng hóa đơn tại Điều 26 của Nghị định 125/2020/NĐ-CP không bị sửa đổi bởi Nghị định 310/2025/NĐ-CP. Do đó, các mức phạt nêu trên vẫn có hiệu lực.\n*   Bạn cần lập biên bản ghi nhận sự việc mất, cháy, hỏng hóa đơn và thông báo cho cơ quan thuế để được xem xét.\n\n📋 Tóm lại\n*   **Có thể bị phạt:** Việc mất dữ liệu hóa đơn do cháy có thể bị xử phạt hành chính về hóa đơn.\n*   **Mức phạt phụ thuộc vào loại hóa đơn:**\n    *   Phạt cảnh cáo nếu là liên nội bộ và có đủ chứng từ, tình tiết giảm nhẹ.\n    *   Phạt tiền từ 3.000.000 đồng đến 8.000.000 đồng nếu là liên giao cho khách hàng, tùy thuộc vào việc có tình tiết giảm nhẹ hay không.\n*   **Cần lập biên bản và thông báo:** Bạn cần lập biên bản ghi nhận sự việc và thông báo cho cơ quan thuế.\n*   **Căn cứ pháp lý:** Điều 26 Nghị định 125/2020/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "mất dữ liệu hóa đơn do cháy có bị phạt không",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "mất dữ liệu hóa đơn do cháy có bị phạt không",
+            "total_found": 11,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_14_diem_đ_2_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm đ",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K14 | Đ.đ]\nSửa đổi, bổ sung khoản 2, khoản 3 và khoản 6 Điều 24 như sau:\nPhạt tiền từ 30.000.000 đồng đến 50.000.000 đồng trong trường hợp không lập hóa đơn đối với các hàng hóa, dịch vụ dùng để khuyến mại, quảng cáo, hàng mẫu; hàng hóa, dịch vụ dùng để cho, biếu, tặng, trao đổi, trả thay lương cho người lao động và tiêu dùng nội bộ (trừ hàng hóa luân chuyển nội bộ để tiếp tục quá trình sản xuất); xuất hàng dưới các hình thức cho vay, cho mượn hoặc hoàn trả hàng hóa từ 100 số hóa đơn trở lên và trường hợp không lập hóa đơn khi bán hàng hóa, cung cấp dịch vụ theo quy định từ 20 số hóa đơn đến dưới 50 số hóa đơn;",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_a_chunk_1",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm a",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K3 | Đ.a]\nPhạt tiền từ 10.000.000 đồng đến 16.000.000 đồng đối với một trong các hành vi sau đây:\nKhông cung cấp thông tin liên quan đến tài sản, quyền, nghĩa vụ về tài sản của người nộp thuế do mình nắm giữ; thông tin, tài liệu liên quan đến xác định nghĩa vụ thuế của người nộp thuế theo quy định của pháp luật hoặc theo yêu cầu của cơ quan thuế;",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K5 | Đ.b]\nSử dụng hóa đơn điện tử\nHộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trên 500 triệu đồng và dưới 01 tỷ đồng không bắt buộc sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp đáp ứng điều kiện và có nhu cầu sử dụng hóa đơn điện tử thì đăng ký sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp hộ kinh doanh, cá nhân kinh doanh không đăng ký sử dụng hóa đơn điện tử, có nhu cầu sử dụng hóa đơn điện tử thì thực hiện khai và nộp thuế trước khi được cơ quan thuế cấp hóa đơn điện tử có mã của cơ quan thuế theo từng lần phát sinh giao dịch bán hàng hóa, cung cấp dịch vụ;",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_c_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K5 | Đ.c]\nSử dụng hóa đơn điện tử\nHộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh tại Điều 9 Nghị định này hoặc hộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trước chưa đến 01 tỷ đồng nhưng trong năm tính thuế có doanh thu tính thuế giá trị gia tăng từ 01 tỷ đồng trở lên thì phải áp dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Hộ kinh doanh, cá nhân kinh doanh đăng ký sử dụng hóa đơn điện tử trong thời gian 30 ngày kể từ ngày cuối cùng của kỳ tính thuế có doanh thu tính thuế giá trị gia tăng lũy kế từ 01 tỷ đồng trở lên.",
+                "score": 0.015294,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_9_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ9 (Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhậ)]",
+                "score": 0.010706,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_khoan_2_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 2",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy, hỏng hóa ) | K2]\nPhạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với hành vi làm mất, cháy, hỏng hóa đơn đã lập (liên giao cho khách hàng) trong quá trình sử dụng, người bán đã kê khai, nộp thuế, có hồ sơ, tài liệu, chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ. Trường hợp người mua làm mất, cháy, hỏng hóa đơn phải có biên bản của người bán và người mua ghi nhận sự việc.",
+                "score": 0.015873,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy,) | K1 | Đ.a]\nPhạt cảnh cáo đối với một trong các hành vi sau đây:\nLàm mất, cháy, hỏng hóa đơn đã lập (trừ liên giao cho khách hàng) trong quá trình sử dụng, đã kê khai, nộp thuế, có hồ sơ chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ;",
+                "score": 0.015701,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_khoan_5_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 5",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy, hỏng hóa ) | K5]\nTrường hợp mất, cháy, hỏng hóa đơn quy định tại khoản 2 và điểm b khoản 3 Điều này do lỗi của bên thứ ba, nếu bên thứ ba thực hiện giao dịch với người bán thì người bán là đối tượng bị xử phạt, nếu bên thứ ba thực hiện giao dịch với người mua thì người mua là đối tượng bị xử phạt. Người bán hoặc người mua và bên thứ ba lập biên bản ghi nhận sự việc mất, cháy, hỏng hóa đơn.",
+                "score": 0.015687,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_khoan_1_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy, hỏng hóa ) | K1]\nPhạt cảnh cáo đối với một trong các hành vi sau đây:\na) Làm mất, cháy, hỏng hóa đơn đã lập (trừ liên giao cho khách hàng) trong quá trình sử dụng, đã kê khai, nộp thuế, có hồ sơ chứng từ chứng minh việc mua bán hàng hóa, dịch vụ và có tình tiết giảm nhẹ;\nb) Làm mất, cháy, hỏng hóa đơn đã lập sai, đã xóa bỏ và người bán đã lập hóa đơn khác thay thế cho hóa đơn lập sai, xóa bỏ này.",
+                "score": 0.01476,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_khoan_3_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 3",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy, hỏng hóa ) | K3]\nPhạt tiền từ 4.000.000 đồng đến 8.000.000 đồng đối với một trong các hành vi sau đây:\na) Làm mất, cháy, hỏng hóa đơn đã phát hành, đã mua của cơ quan thuế nhưng chưa lập;\nb) Làm mất, cháy, hỏng hoá đơn đã lập (liên giao cho khách hàng) trong quá trình sử dụng, người bán đã kê khai, nộp thuế, có hồ sơ, tài liệu, chứng từ chứng minh việc mua bán hàng hóa, dịch vụ. Trường hợp người mua làm mất, cháy, hỏng hóa đơn phải có biên bản của người bán và người mua ghi nhận sự việc.",
+                "score": 0.014698,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_26_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ26 (Xử phạt hành vi làm mất, cháy, hỏng hóa đơn)]",
+                "score": 0.010981,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "mất dữ liệu hóa đơn do cháy có bị phạt không",
+            "doc_filter": "310_2025_NDCP"
+          },
+          "result": {
+            "query": "mất dữ liệu hóa đơn do cháy có bị phạt không",
+            "total_found": 5,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_14_diem_c_2_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm c",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K14 | Đ.c]\nSửa đổi, bổ sung khoản 2, khoản 3 và khoản 6 Điều 24 như sau:\nPhạt tiền từ 2.000.000 đồng đến 10.000.000 đồng trong trường hợp không lập hóa đơn đối với các hàng hóa, dịch vụ dùng để khuyến mại, quảng cáo, hàng mẫu; hàng hóa, dịch vụ dùng để cho, biếu, tặng, trao đổi, trả thay lương cho người lao động và tiêu dùng nội bộ (trừ hàng hóa luân chuyển nội bộ để tiếp tục quá trình sản xuất); xuất hàng dưới các hình thức cho vay, cho mượn hoặc hoàn trả hàng hóa từ 10 số hóa đơn đến dưới 50 số hóa đơn và trường hợp không lập hóa đơn khi bán hàng hóa, cung cấp dịch vụ theo quy định từ 02 số hóa đơn đến dưới 10 số hóa đơn;",
+                "score": 0.014,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm c"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_14_diem_đ_2_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm đ",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K14 | Đ.đ]\nSửa đổi, bổ sung khoản 2, khoản 3 và khoản 6 Điều 24 như sau:\nPhạt tiền từ 30.000.000 đồng đến 50.000.000 đồng trong trường hợp không lập hóa đơn đối với các hàng hóa, dịch vụ dùng để khuyến mại, quảng cáo, hàng mẫu; hàng hóa, dịch vụ dùng để cho, biếu, tặng, trao đổi, trả thay lương cho người lao động và tiêu dùng nội bộ (trừ hàng hóa luân chuyển nội bộ để tiếp tục quá trình sản xuất); xuất hàng dưới các hình thức cho vay, cho mượn hoặc hoàn trả hàng hóa từ 100 số hóa đơn trở lên và trường hợp không lập hóa đơn khi bán hàng hóa, cung cấp dịch vụ theo quy định từ 20 số hóa đơn đến dưới 50 số hóa đơn;",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_a_chunk_1",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm a",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K3 | Đ.a]\nPhạt tiền từ 10.000.000 đồng đến 16.000.000 đồng đối với một trong các hành vi sau đây:\nKhông cung cấp thông tin liên quan đến tài sản, quyền, nghĩa vụ về tài sản của người nộp thuế do mình nắm giữ; thông tin, tài liệu liên quan đến xác định nghĩa vụ thuế của người nộp thuế theo quy định của pháp luật hoặc theo yêu cầu của cơ quan thuế;",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_2_3_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K2]\nPhạt tiền từ 2.000.000 đồng đến 4.000.000 đồng đối với một trong các hành vi sau đây:\na) Tiêu hủy không đúng quy định hóa đơn đặt in mua của cơ quan thuế không tiếp tục sử dụng, không còn giá trị sử dụng theo thông báo của cơ quan thuế;\nb) Không tiêu hủy các hóa đơn đặt in mua của cơ quan thuế không tiếp tục sử dụng, không còn giá trị sử dụng theo thông báo của cơ quan thuế;\nc) Tiêu hủy hóa đơn quá thời hạn từ 01 ngày đến 10 ngày làm việc, kể từ ngày hết thời hạn phải tiêu hủy hóa đơn theo quy định, trừ trường hợp quy định tại khoản 1 Điều này.",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_14_diem_d_2_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm d",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K14 | Đ.d]\nSửa đổi, bổ sung khoản 2, khoản 3 và khoản 6 Điều 24 như sau:\nPhạt tiền từ 10.000.000 đồng đến 30.000.000 đồng trong trường hợp không lập hóa đơn đối với các hàng hóa, dịch vụ dùng để khuyến mại, quảng cáo, hàng mẫu; hàng hóa, dịch vụ dùng để cho, biếu, tặng, trao đổi, trả thay lương cho người lao động và tiêu dùng nội bộ (trừ hàng hóa luân chuyển nội bộ để tiếp tục quá trình sản xuất); xuất hàng dưới các hình thức cho vay, cho mượn hoặc hoàn trả hàng hóa từ 50 số hóa đơn đến dưới 100 số hóa đơn và trường hợp không lập hóa đơn khi bán hàng hóa, cung cấp dịch vụ theo quy định từ 10 số hóa đơn đến dưới 20 số hóa đơn;",
+                "score": 0.010937,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm d"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 26699,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.67",
+        "details": {
+          "matched": [
+            "310_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "125_2020_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 0.0,
+        "reason": "FAIL — chỉ 0/1 key facts, thiếu: ['miễn phạt']",
+        "details": {
+          "matched": [],
+          "missing": [
+            "miễn phạt"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 9: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh mới ra kinh doanh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 26: Xử phạt hành vi làm mất, cháy, hỏng hóa đơn",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm c",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 14 > Điểm d",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "310_2025_NDCP",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 85,
+      "question": "Tôi mới đổi thẻ Căn cước công dân mới (12 số) nhưng quên chưa cập nhật thay đổi thông tin trên mã số thuế cá nhân thì có bị cơ quan thuế phạt tiền không?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "easy",
+      "user_type": "individual",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Quy định tại Điều này không áp dụng đối với trường hợp sau đây: Cá nhân không kinh doanh đã được cấp mã số thuế thu nhập cá nhân chậm thay đổi thông tin theo thẻ căn cước, căn cước điện tử.\n*(Khoản 9 Điều 1, Nghị định 310/2025/NĐ-CP)*\n\n💬 Trả lời\nBạn sẽ **không bị phạt tiền** khi chậm cập nhật thông tin Căn cước công dân mới trên mã số thuế cá nhân.\n\nTheo Khoản 9 Điều 1 của Nghị định 310/2025/NĐ-CP (sửa đổi, bổ sung Nghị định 125/2020/NĐ-CP), quy định về xử phạt hành vi vi phạm thời hạn thông báo thay đổi thông tin trong đăng ký thuế **không áp dụng** đối với cá nhân không kinh doanh đã được cấp mã số thuế thu nhập cá nhân mà chậm thay đổi thông tin theo thẻ căn cước hoặc căn cước điện tử.\n\nVì vậy, bạn không cần lo lắng về việc bị phạt trong trường hợp này. Tuy nhiên, bạn nên sớm cập nhật thông tin để đảm bảo hồ sơ thuế của mình được chính xác.\n\n📋 Tóm lại\n*   **Không bị phạt:** Cá nhân không kinh doanh chậm cập nhật thông tin Căn cước công dân trên mã số thuế cá nhân sẽ không bị xử phạt vi phạm hành chính về thuế.\n*   **Căn cứ pháp lý:** Khoản 9 Điều 1 Nghị định 310/2025/NĐ-CP.\n*   **Khuyến nghị:** Nên cập nhật thông tin sớm để đảm bảo tính chính xác của hồ sơ thuế.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "quên cập nhật thông tin căn cước công dân mã số thuế cá nhân bị phạt không",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "quên cập nhật thông tin căn cước công dân mã số thuế cá nhân bị phạt không",
+            "total_found": 13,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_9_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K9]\nSửa đổi, bổ sung khoản 6 Điều 11 như sau:\n“6. Quy định tại Điều này không áp dụng đối với trường hợp sau đây:\na) Cá nhân không kinh doanh đã được cấp mã số thuế thu nhập cá nhân chậm thay đổi thông tin theo thẻ căn cước, căn cước điện tử;\nb) Cơ quan chi trả thu nhập chậm thông báo thay đổi thông tin khi người nộp thuế thu nhập cá nhân là các cá nhân ủy quyền quyết toán thuế thu nhập cá nhân có thay đổi thông tin theo thẻ căn cước, căn cước điện tử;\nc) Không thông báo hoặc thông báo thay đổi thông tin trên hồ sơ đăng ký thuế về địa chỉ người nộp thuế quá thời hạn quy định do thay đổi địa giới hành chính theo Nghị quyết của Ủy ban thường vụ Quốc hội hoặc Nghị quyết của Quốc hội.”.",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_9_diem_b_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9 > Điểm b",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K9 | Đ.b]\n“6. Quy định tại Điều này không áp dụng đối với trường hợp sau đây:\nCơ quan chi trả thu nhập chậm thông báo thay đổi thông tin khi người nộp thuế thu nhập cá nhân là các cá nhân ủy quyền quyết toán thuế thu nhập cá nhân có thay đổi thông tin theo thẻ căn cước, căn cước điện tử;",
+                "score": 0.016052,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị định số 125/)]",
+                "score": 0.01142,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ4 (Thuế thu nhập cá nhân) | K5 | Đ.b]\nPhương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_d_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm d",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K4 | Đ.d]\nĐịa điểm khai thuế, nộp thuế\nCá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê. Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_7_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ7 (Các khoản thuế khác)]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng chịu thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường theo quy định của pháp luật thuế thì việc xác định nghĩa vụ thuế được thực hiện theo quy định của pháp luật về từng loại thuế tương ứng.",
+                "score": 0.008032,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_11_khoan_6_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ11 (Xử phạt hành vi vi phạm về thời hạn thôn) | K6]\nQuy định tại Điều này không áp dụng đối với trường hợp sau đây:\na) Cá nhân không kinh doanh đã được cấp mã số thuế thu nhập cá nhân chậm thay đổi thông tin về chứng minh nhân dân khi được cấp thẻ căn cước công dân;\nb) Cơ quan chi trả thu nhập chậm thông báo thay đổi thông tin về chứng minh nhân dân khi người nộp thuế thu nhập cá nhân là các cá nhân ủy quyền quyết toán thuế thu nhập cá nhân được cấp thẻ căn cước công dân;\nc) Thông báo thay đổi thông tin trên hồ sơ đăng ký thuế về địa chỉ người nộp thuế quá thời hạn quy định do thay đổi địa giới hành chính theo Nghị quyết của Ủy ban thường vụ Quốc hội hoặc Nghị quyết của Quốc hội.",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_11_khoan_6_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ11 (Xử phạt hành vi vi phạm về thờ) | K6 | Đ.b]\nQuy định tại Điều này không áp dụng đối với trường hợp sau đây:\nCơ quan chi trả thu nhập chậm thông báo thay đổi thông tin về chứng minh nhân dân khi người nộp thuế thu nhập cá nhân là các cá nhân ủy quyền quyết toán thuế thu nhập cá nhân được cấp thẻ căn cước công dân;",
+                "score": 0.015873,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_11_khoan_6_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ11 (Xử phạt hành vi vi phạm về thờ) | K6 | Đ.a]\nQuy định tại Điều này không áp dụng đối với trường hợp sau đây:\nCá nhân không kinh doanh đã được cấp mã số thuế thu nhập cá nhân chậm thay đổi thông tin về chứng minh nhân dân khi được cấp thẻ căn cước công dân;",
+                "score": 0.015856,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_I_dieu_9_khoan_4_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 9: Những trường hợp không xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 4",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ9 (Những trường hợp không xử phạt vi phạm h) | K4]\nKhông xử phạt hành vi vi phạm thủ tục thuế đối với cá nhân trực tiếp quyết toán thuế thu nhập cá nhân chậm nộp hồ sơ quyết toán thuế thu nhập cá nhân mà có phát sinh số tiền thuế được hoàn; hộ kinh doanh, cá nhân kinh doanh đã bị ấn định thuế theo quy định tại Điều 51 Luật Quản lý thuế.",
+                "score": 0.015516,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 9: Những trường hợp không xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_36_khoan_2_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ36 (Lập biên bản vi phạm hành chín) | K2 | Đ.b]\nLập biên bản vi phạm hành chính\nLập biên bản vi phạm hành chính điện tử Trường hợp người nộp thuế chậm nộp hồ sơ đăng ký thuế, chậm thay đổi thông tin đăng ký thuế, chậm nộp hồ sơ khai thuế, hồ sơ khai quyết toán thuế bằng phương thức điện tử thì chậm nhất một ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ đăng ký thuế, hồ sơ thay đổi thông tin đăng ký thuế điện tử hoặc thông báo chấp nhận hồ sơ khai thuế, quyết toán thuế điện tử, cơ quan thuế lập và gửi 01 biên bản vi phạm hành chính điện tử cho người nộp thuế qua cổng thông tin điện tử của Tổng cục Thuế, kể cả trường hợp người nộp thuế nộp nhiều hồ sơ thuế. Biên bản vi phạm hành chính điện tử được lập và gửi đáp ứng yêu cầu về giao dịch điện tử trong lĩnh vực thuế là cơ sở để cơ quan thuế ban hành quyết định xử phạt vi phạm hành chính. Biên bản vi phạm hành chính điện tử phải ghi rõ ngày, tháng, năm, địa điểm lập biên bản; họ, tên, chức vụ người lập biên bản; chữ ký số của người lập biên bản; họ, tên, địa chỉ, mã số thuế, số chứng minh nhân dân hoặc số thẻ căn cước của người vi phạm hoặc tên, địa chỉ, mã số thuế của tổ chức vi phạm; giờ, ngày, tháng, năm thực hiện vi phạm; hành vi vi phạm hành chính; quyền và thời hạn giải trình về vi phạm hành chính của người vi phạm; cơ quan tiếp nhận giải trình. Biên bản vi phạm hành chính điện tử không bắt buộc phải có chữ ký của tổ chức, cá nhân vi phạm. Cơ quan thuế có trách nhiệm xây dựng hệ thống công nghệ thông tin đáp ứng việc lập và gửi biên bản vi phạm hành chính điện tử. Khi hệ thống công nghệ thông tin đáp ứng điều kiện lập, gửi biên bản vi phạm hành chính điện tử đối với các hành vi vi phạm về thủ tục thuế, hóa đơn khác, Bộ trưởng Bộ Tài chính quy định việc lập và gửi biên bản vi phạm hành chính điện tử.",
+                "score": 0.014982,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_11_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ11 (Xử phạt hành vi vi phạm về thời hạn thông báo thay)]",
+                "score": 0.01142,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_38_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 38: Những trường hợp không ra quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ38 (Những trường hợp không ra quyế) | K1 | Đ.a]\nKhông ra quyết định xử phạt vi phạm hành chính về thuế, hóa đơn trong các trường hợp sau đây:\nTrường hợp quy định tại Điều 9 Nghị định này;",
+                "score": 0.010085,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 38: Những trường hợp không ra quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 9778,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.67",
+        "details": {
+          "matched": [
+            "310_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "125_2020_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "bị xử phạt"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 9 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế > Khoản 6 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 9: Những trường hợp không xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 11: Xử phạt hành vi vi phạm về thời hạn thông báo thay đổi thông tin trong đăng ký thuế",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 38: Những trường hợp không ra quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "310_2025_NDCP",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 86,
+      "question": "Tôi nộp chậm hồ sơ khai thuế điện tử 2 ngày so với hạn chót, cơ quan thuế sẽ gửi Biên bản vi phạm hành chính điện tử cho tôi qua kênh nào?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "hard",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Trường hợp người nộp thuế chậm nộp hồ sơ đăng ký thuế, chậm thay đổi thông tin đăng ký thuế, chậm nộp hồ sơ khai thuế, hồ sơ khai quyết toán thuế, chậm nộp thông báo, báo cáo về hóa đơn bằng phương thức điện tử thì trong thời hạn 03 ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ đăng ký thuế, hồ sơ thay đổi thông tin đăng ký thuế điện tử hoặc thông báo chấp nhận hồ sơ khai thuế, quyết toán thuế điện tử, cơ quan thuế lập và gửi 01 biên bản vi phạm hành chính điện tử cho người nộp thuế qua cổng thông tin điện tử của cơ quan quản lý thuế, kể cả trường hợp người nộp thuế nộp nhiều hồ sơ thuế.\n*(Khoản 21 Điều 1, Nghị định 310/2025/NĐ-CP)*\n\n💬 Trả lời\nKhi bạn nộp chậm hồ sơ khai thuế điện tử, cơ quan thuế sẽ lập và gửi Biên bản vi phạm hành chính điện tử cho bạn. Biên bản này sẽ được gửi qua **cổng thông tin điện tử của cơ quan quản lý thuế**.\n\nThời hạn gửi biên bản là trong vòng 03 ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ khai thuế điện tử của bạn. Biên bản này là cơ sở để cơ quan thuế ban hành quyết định xử phạt vi phạm hành chính.\n\n📋 Tóm lại\n*   **Kênh gửi:** Cổng thông tin điện tử của cơ quan quản lý thuế.\n*   **Thời hạn:** Trong vòng 03 ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ khai thuế điện tử.\n*   **Căn cứ:** Khoản 21 Điều 1 Nghị định 310/2025/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "Biên bản vi phạm hành chính điện tử gửi qua kênh nào",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "Biên bản vi phạm hành chính điện tử gửi qua kênh nào",
+            "total_found": 10,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_21_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K21]\nSửa đổi, bổ sung điểm b khoản 2 Điều 36 như sau: “b) Lập biên bản vi phạm hành chính điện tử Trường hợp người nộp thuế chậm nộp hồ sơ đăng ký thuế, chậm thay đổi thông tin đăng ký thuế, chậm nộp hồ sơ khai thuế, hồ sơ khai quyết toán thuế, chậm nộp thông báo, báo cáo về hóa đơn bằng phương thức điện tử thì trong thời hạn 03 ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ đăng ký thuế, hồ sơ thay đổi thông tin đăng ký thuế điện tử hoặc thông báo chấp nhận hồ sơ khai thuế, quyết toán thuế điện tử, cơ quan thuế lập và gửi 01 biên bản vi phạm hành chính điện tử cho người nộp thuế qua cổng thông tin điện tử của cơ quan quản lý thuế, kể cả trường hợp người nộp thuế nộp nhiều hồ sơ thuế. Biên bản vi phạm hành chính điện tử được lập và gửi đáp ứng yêu cầu về giao dịch điện tử trong lĩnh vực thuế là cơ sở để cơ quan thuế ban hành quyết định xử phạt vi phạm hành chính. Biên bản vi phạm hành chính điện tử phải ghi rõ thời gian, địa điểm lập biên bản; thông tin về người lập biên bản; thông tin về cá nhân, tổ chức vi phạm; chữ ký số của người lập biên bản; thời gian, địa điểm thực hiện vi phạm; hành vi vi phạm hành chính; quyền và thời hạn giải trình về vi phạm hành chính của người vi phạm; cơ quan tiếp nhận giải trình. Cơ quan thuế có trách nhiệm xây dựng hệ thống công nghệ thông tin đáp ứng việc lập, gửi biên bản vi phạm hành chính điện tử và xử lý vi phạm hành chính trên môi trường điện tử theo quy định của pháp luật về xử lý vi phạm hành chính. Khi hệ thống công nghệ thông tin đáp ứng điều kiện lập, gửi biên bản vi phạm hành chính điện tử đối với các hành vi vi phạm về thủ tục thuế, hóa đơn khác thì thực hiện xử lý vi phạm hành chính trên môi trường điện tử theo quy định của pháp luật về xử lý vi phạm hành chính.”.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_23_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 23",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K23]\nSửa đổi, bổ sung điểm a khoản 2 Điều 41 như sau: “a) Cơ sở dữ liệu hộ tịch điện tử hoặc quyết định của tòa án tuyên bố một người là đã chết, mất tích (bản chính hoặc bản sao của văn bản giấy hoặc của văn bản điện tử theo quy định) đối với trường hợp cá nhân chết, mất tích;”.",
+                "score": 0.015836,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 23"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_5_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K5 | Đ.b]\nSử dụng hóa đơn điện tử\nHộ kinh doanh, cá nhân kinh doanh có doanh thu tính thuế giá trị gia tăng năm trên 500 triệu đồng và dưới 01 tỷ đồng không bắt buộc sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp đáp ứng điều kiện và có nhu cầu sử dụng hóa đơn điện tử thì đăng ký sử dụng hóa đơn điện tử có mã của cơ quan thuế hoặc hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế. Trường hợp hộ kinh doanh, cá nhân kinh doanh không đăng ký sử dụng hóa đơn điện tử, có nhu cầu sử dụng hóa đơn điện tử thì thực hiện khai và nộp thuế trước khi được cơ quan thuế cấp hóa đơn điện tử có mã của cơ quan thuế theo từng lần phát sinh giao dịch bán hàng hóa, cung cấp dịch vụ;",
+                "score": 0.016021,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_15_khoan_1_diem_d_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm d",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ15 (Trách nhiệm của Ủy ban nhân dâ) | K1 | Đ.d]\nTrách nhiệm của Ủy ban nhân dân cấp tỉnh\nBảo đảm nguồn lực, cơ sở hạ tầng kỹ thuật để triển khai hóa đơn điện tử, chứng từ điện tử đối với hộ kinh doanh, cá nhân kinh doanh trên địa bàn; chỉ đạo cơ quan chuyên môn hỗ trợ, hướng dẫn người nộp thuế sử dụng hóa đơn điện tử;",
+                "score": 0.01129,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_36_khoan_2_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ36 (Lập biên bản vi phạm hành chín) | K2 | Đ.b]\nLập biên bản vi phạm hành chính\nLập biên bản vi phạm hành chính điện tử Trường hợp người nộp thuế chậm nộp hồ sơ đăng ký thuế, chậm thay đổi thông tin đăng ký thuế, chậm nộp hồ sơ khai thuế, hồ sơ khai quyết toán thuế bằng phương thức điện tử thì chậm nhất một ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ đăng ký thuế, hồ sơ thay đổi thông tin đăng ký thuế điện tử hoặc thông báo chấp nhận hồ sơ khai thuế, quyết toán thuế điện tử, cơ quan thuế lập và gửi 01 biên bản vi phạm hành chính điện tử cho người nộp thuế qua cổng thông tin điện tử của Tổng cục Thuế, kể cả trường hợp người nộp thuế nộp nhiều hồ sơ thuế. Biên bản vi phạm hành chính điện tử được lập và gửi đáp ứng yêu cầu về giao dịch điện tử trong lĩnh vực thuế là cơ sở để cơ quan thuế ban hành quyết định xử phạt vi phạm hành chính. Biên bản vi phạm hành chính điện tử phải ghi rõ ngày, tháng, năm, địa điểm lập biên bản; họ, tên, chức vụ người lập biên bản; chữ ký số của người lập biên bản; họ, tên, địa chỉ, mã số thuế, số chứng minh nhân dân hoặc số thẻ căn cước của người vi phạm hoặc tên, địa chỉ, mã số thuế của tổ chức vi phạm; giờ, ngày, tháng, năm thực hiện vi phạm; hành vi vi phạm hành chính; quyền và thời hạn giải trình về vi phạm hành chính của người vi phạm; cơ quan tiếp nhận giải trình. Biên bản vi phạm hành chính điện tử không bắt buộc phải có chữ ký của tổ chức, cá nhân vi phạm. Cơ quan thuế có trách nhiệm xây dựng hệ thống công nghệ thông tin đáp ứng việc lập và gửi biên bản vi phạm hành chính điện tử. Khi hệ thống công nghệ thông tin đáp ứng điều kiện lập, gửi biên bản vi phạm hành chính điện tử đối với các hành vi vi phạm về thủ tục thuế, hóa đơn khác, Bộ trưởng Bộ Tài chính quy định việc lập và gửi biên bản vi phạm hành chính điện tử.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_39_khoan_2_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ39 (Giao, gửi quyết định xử phạt vi phạm hàn) | K2]\nQuyết định xử phạt được gửi bằng phương thức điện tử theo địa chỉ người nộp thuế đã đăng ký với cơ quan thuế đối với trường hợp cá nhân, tổ chức bị xử phạt đủ điều kiện thực hiện giao dịch điện tử trong lĩnh vực thuế, trường hợp chưa đủ điều kiện thực hiện giao dịch điện tử trong lĩnh vực thuế thì quyết định xử phạt được giao trực tiếp hoặc gửi bằng thư bảo đảm qua đường bưu chính theo khoản 3 khoản 4 Điều này.",
+                "score": 0.015415,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_36_khoan_2_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ36 (Lập biên bản vi phạm hành chính về thuế,) | K2]\nLập biên bản vi phạm hành chính\na) Việc lập biên bản vi phạm hành chính được thực hiện theo quy định của pháp luật về xử lý vi phạm hành chính. Trường hợp xác định rõ hành vi vi phạm hành chính tại biên bản thanh tra thuế, kiểm tra thuế thì biên bản thanh tra, kiểm tra thuế được xác định là biên bản vi phạm hành chính theo quy định tại khoản 1 Điều 108 Luật Quản lý thuế.\n[... còn 1 điểm nữa]",
+                "score": 0.01491,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_36_khoan_2_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ36 (Lập biên bản vi phạm hành chín) | K2 | Đ.a]\nLập biên bản vi phạm hành chính\nViệc lập biên bản vi phạm hành chính được thực hiện theo quy định của pháp luật về xử lý vi phạm hành chính. Trường hợp xác định rõ hành vi vi phạm hành chính tại biên bản thanh tra thuế, kiểm tra thuế thì biên bản thanh tra, kiểm tra thuế được xác định là biên bản vi phạm hành chính theo quy định tại khoản 1 Điều 108 Luật Quản lý thuế.",
+                "score": 0.014832,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_I_dieu_2_khoan_9_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 2: Giải thích từ ngữ > Khoản 9",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ2 (Giải thích từ ngữ) | K9]\nNgày phát hiện hành vi vi phạm là ngày người có thẩm quyền đang thi hành công vụ lập biên bản ghi nhận hành vi vi phạm hành chính của đối tượng bị xử phạt vi phạm hành chính về thuế, hóa đơn.",
+                "score": 0.014673,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 2: Giải thích từ ngữ > Khoản 9"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_39_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ39 (Giao, gửi quyết định xử phạt vi phạm hành chính về)]",
+                "score": 0.01079,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 12691,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.67",
+        "details": {
+          "matched": [
+            "310_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "125_2020_NDCP"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "Cổng thông tin điện tử"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 23",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 5 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 15: Trách nhiệm của Ủy ban nhân dân các cấp > Khoản 1 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 36: Lập biên bản vi phạm hành chính về thuế, hóa đơn > Khoản 2 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương I > Điều 2: Giải thích từ ngữ > Khoản 9",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 39: Giao, gửi quyết định xử phạt vi phạm hành chính về thuế, hóa đơn",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "310_2025_NDCP",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 87,
+      "question": "Hộ kinh doanh tính sai doanh thu vào tờ khai dẫn đến nộp thiếu số tiền thuế, nếu bị phát hiện tự nguyện nộp bù thì có bị quy vào tội trốn thuế không?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "easy",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Phạt 20% số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn so với quy định đối với một trong các hành vi sau đây: Khai sai làm giảm số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, số tiền thuế được miễn, giảm không thuộc trường hợp quy định tại điểm a khoản này nhưng người nộp thuế đã tự giác kê khai bổ sung và nộp đủ số tiền thuế thiếu vào ngân sách nhà nước trước thời điểm cơ quan thuế kết thúc thời hạn thanh tra, kiểm tra thuế tại trụ sở người nộp thuế.\n*(Điểm b Khoản 1 Điều 16, Nghị định 125/2020/NĐ-CP)*\n\n> Sửa đổi điểm c khoản 1 Điều 16 như sau: “c) Khai sai làm giảm số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, số thuế được miễn, giảm đã bị cơ quan có thẩm quyền lập biên bản vi phạm hành chính xác định là hành vi trốn thuế nhưng người nộp thuế vi phạm hành chính lần đầu về hành vi trốn thuế, đã khai bổ sung và nộp đủ số tiền thuế vào ngân sách nhà nước trước thời điểm cơ quan có thẩm quyền ra quyết định xử phạt và cơ quan thuế đã lập biên bản ghi nhận để xác định là hành vi khai sai dẫn đến thiếu thuế;”\n*(Khoản 11 Điều 1, Nghị định 310/2025/NĐ-CP)*\n\n💬 Trả lời\nViệc hộ kinh doanh tính sai doanh thu dẫn đến nộp thiếu số tiền thuế, nếu tự nguyện nộp bù trước khi cơ quan thuế phát hiện hoặc trước khi cơ quan thuế kết thúc thời hạn thanh tra, kiểm tra tại trụ sở, sẽ không bị quy vào tội trốn thuế mà được xem là hành vi khai sai dẫn đến thiếu thuế.\n\nCụ thể:\n*   **Không bị coi là trốn thuế nếu tự nguyện nộp bù:** Theo Điểm b Khoản 1 Điều 16 Nghị định 125/2020/NĐ-CP, nếu hộ kinh doanh tự giác kê khai bổ sung và nộp đủ số tiền thuế thiếu vào ngân sách nhà nước trước thời điểm cơ quan thuế kết thúc thời hạn thanh tra, kiểm tra thuế tại trụ sở người nộp thuế, thì hành vi này sẽ bị xử phạt hành vi khai sai dẫn đến thiếu thuế, không phải hành vi trốn thuế.\n*   **Xử phạt hành vi khai sai:** Hộ kinh doanh sẽ bị phạt 20% số tiền thuế khai thiếu. Ngoài ra, hộ kinh doanh vẫn phải nộp đủ số tiền thuế thiếu và tiền chậm nộp tính từ ngày hết hạn nộp thuế đến ngày thực nộp.\n*   **Trường hợp đặc biệt về trốn thuế lần đầu:** Khoản 11 Điều 1 Nghị định 310/2025/NĐ-CP (sửa đổi Nghị định 125/2020/NĐ-CP) quy định rằng ngay cả khi hành vi khai sai làm giảm số tiền thuế phải nộp đã bị cơ quan có thẩm quyền xác định là hành vi trốn thuế, nhưng nếu người nộp thuế vi phạm hành chính lần đầu về hành vi trốn thuế, đã khai bổ sung và nộp đủ số tiền thuế vào ngân sách nhà nước trước thời điểm cơ quan có thẩm quyền ra quyết định xử phạt, và cơ quan thuế đã lập biên bản ghi nhận, thì hành vi đó sẽ được xác định là hành vi khai sai dẫn đến thiếu thuế.\n\n📋 Tóm lại:\n*   **Không bị quy vào tội trốn thuế:** Nếu hộ kinh doanh tự nguyện kê khai bổ sung và nộp đủ số tiền thuế thiếu trước khi cơ quan thuế kết thúc thanh tra, kiểm tra.\n*   **Bị xử phạt hành vi khai sai:** Mức phạt là 20% số tiền thuế khai thiếu.\n*   **Phải nộp tiền chậm nộp:** Ngoài số thuế thiếu và tiền phạt, hộ kinh doanh còn phải nộp tiền chậm nộp tính từ ngày hết hạn nộp thuế đến ngày thực nộp.\n*   **Căn cứ pháp lý:** Điều 16 Nghị định 125/2020/NĐ-CP và Khoản 11 Điều 1 Nghị định 310/2025/NĐ-CP.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hộ kinh doanh tính sai doanh thu nộp thiếu thuế tự nguyện nộp bù trốn thuế",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "hộ kinh doanh tính sai doanh thu nộp thiếu thuế tự nguyện nộp bù trốn thuế",
+            "total_found": 14,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_11_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 11",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K11]\nSửa đổi điểm c khoản 1 Điều 16 như sau: “c) Khai sai làm giảm số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, số thuế được miễn, giảm đã bị cơ quan có thẩm quyền lập biên bản vi phạm hành chính xác định là hành vi trốn thuế nhưng người nộp thuế vi phạm hành chính lần đầu về hành vi trốn thuế, đã khai bổ sung và nộp đủ số tiền thuế vào ngân sách nhà nước trước thời điểm cơ quan có thẩm quyền ra quyết định xử phạt và cơ quan thuế đã lập biên bản ghi nhận để xác định là hành vi khai sai dẫn đến thiếu thuế;”.",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 11"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_5_diem_a_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 5 > Điểm a",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K5 | Đ.a]\nSửa đổi, bổ sung điểm b khoản 1; sửa đổi, bổ sung điểm d, e khoản 3; sửa đổi, bổ sung điểm d khoản 4 Điều 7 như sau:\nSửa đổi, bổ sung điểm b khoản 1 như sau: “b) Phạt tiền Mức phạt tiền tối đa đối với một hành vi vi phạm hành chính về thủ tục thuế và hóa đơn thực hiện theo quy định của pháp luật về xử lý vi phạm hành chính. Phạt 20% số tiền thuế thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn quy định đối với hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn. Phạt từ 01 đến 03 lần số tiền thuế trốn đối với hành vi trốn thuế. Phạt tiền tương ứng với số tiền không trích vào tài khoản của ngân sách nhà nước đối với hành vi vi phạm theo quy định tại khoản 1 Điều 18 Nghị định này.”;",
+                "score": 0.016052,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 5 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_12_khoan_2_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 2",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ12 (Xử lý tiền thuế, tiền chậm nộp, tiền phạ) | K2]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh đã nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hoạt động kinh doanh nhưng có doanh thu thực tế phát sinh của năm từ 500 triệu đồng trở xuống thì thực hiện xử lý bù trừ, hoàn trả, hoàn trả kiêm bù trừ thu ngân sách theo quy định của pháp luật quản lý thuế đối với số thuế nộp thừa.",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_1_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K1 | Đ.b]\nKhai thuế, tính thuế giá trị gia tăng, thuế thu nhập cá nhân\nTrường hợp hộ kinh doanh, cá nhân kinh doanh tự xác định có mức doanh thu năm từ hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ trên 500 triệu đồng bao gồm cả doanh thu đã được tổ chức, cá nhân khấu trừ, khai thay, nộp thay thì tính thuế giá trị gia tăng, thuế thu nhập cá nhân theo quy định tại Điều 3, Điều 4 Nghị định này. Việc kê khai, nộp thuế thực hiện theo quy định tại Điều 10 Nghị định này. Trường hợp hộ kinh doanh, cá nhân kinh doanh sử dụng hóa đơn điện tử có mã của cơ quan thuế, hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối dữ liệu với cơ quan thuế, Hệ thống thông tin quản lý thuế tự động tạo lập tờ khai thuế để hỗ trợ hộ kinh doanh, cá nhân kinh doanh trong việc khai thuế, tính thuế giá trị gia tăng, thuế thu nhập cá nhân trên cơ sở dữ liệu hóa đơn điện tử, cơ sở dữ liệu quản lý thuế và các nguồn cơ sở dữ liệu khác mà cơ quan thuế có được từ cơ quan nhà nước khác, tổ chức, cá nhân cung cấp. Việc hỗ trợ của cơ quan thuế không thay thế trách nhiệm khai thuế và xác định số thuế phải nộp của hộ kinh doanh, cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh chịu trách nhiệm trước pháp luật về tính trung thực, chính xác của hồ sơ khai thuế.",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ3 (Thuế giá trị gia tăng)]",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ4 (Thuế thu nhập cá nhân)]",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_10_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ10 (Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhậ)]",
+                "score": 0.010926,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_16_khoan_1_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ16 (Xử phạt hành vi khai sai dẫn đến thiếu s) | K1]\nPhạt 20% số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn so với quy định đối với một trong các hành vi sau đây:\na) Khai sai căn cứ tính thuế hoặc số tiền thuế được khấu trừ hoặc xác định sai trường hợp được miễn, giảm, hoàn thuế dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn nhưng các nghiệp vụ kinh tế đã được phản ánh đầy đủ trên hệ thống sổ kế toán, hóa đơn, chứng từ hợp pháp;\nb) Khai sai làm giảm số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, số tiền thuế được miễn, giảm không thuộc trường hợp quy định tại điểm a khoản này nhưng người nộp thuế đã tự giác kê khai bổ sung và nộp đủ số tiền thuế thiếu vào ngân sách nhà nước trước thời điểm cơ quan thuế kết thúc thời hạn thanh tra, kiểm tra thuế tại trụ sở người nộp thuế;\n[... còn 3 điểm nữa]",
+                "score": 0.016314,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_16_khoan_1_diem_d_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm d",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ16 (Xử phạt hành vi khai sai dẫn đ) | K1 | Đ.d]\nPhạt 20% số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn so với quy định đối với một trong các hành vi sau đây:\nKhai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn đối với giao dịch liên kết nhưng người nộp thuế đã lập hồ sơ xác định giá thị trường hoặc đã lập và gửi cơ quan thuế các phụ lục theo quy định về quản lý thuế đối với doanh nghiệp có giao dịch liên kết;",
+                "score": 0.015638,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm d"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_16_khoan_1_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ16 (Xử phạt hành vi khai sai dẫn đ) | K1 | Đ.b]\nPhạt 20% số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn so với quy định đối với một trong các hành vi sau đây:\nKhai sai làm giảm số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, số tiền thuế được miễn, giảm không thuộc trường hợp quy định tại điểm a khoản này nhưng người nộp thuế đã tự giác kê khai bổ sung và nộp đủ số tiền thuế thiếu vào ngân sách nhà nước trước thời điểm cơ quan thuế kết thúc thời hạn thanh tra, kiểm tra thuế tại trụ sở người nộp thuế;",
+                "score": 0.015589,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_16_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ16 (Xử phạt hành vi khai sai dẫn đ) | K1 | Đ.a]\nPhạt 20% số tiền thuế khai thiếu hoặc số tiền thuế đã được miễn, giảm, hoàn cao hơn so với quy định đối với một trong các hành vi sau đây:\nKhai sai căn cứ tính thuế hoặc số tiền thuế được khấu trừ hoặc xác định sai trường hợp được miễn, giảm, hoàn thuế dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn nhưng các nghiệp vụ kinh tế đã được phản ánh đầy đủ trên hệ thống sổ kế toán, hóa đơn, chứng từ hợp pháp;",
+                "score": 0.015553,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_17_khoan_1_diem_b_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm b",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ17 (Xử phạt hành vi trốn thuế) | K1 | Đ.b]\nPhạt tiền 1 lần số thuế trốn đối với người nộp thuế có từ một tình tiết giảm nhẹ trở lên khi thực hiện một trong các hành vi vi phạm sau đây:\nKhông ghi chép trong sổ kế toán các khoản thu liên quan đến việc xác định số tiền thuế phải nộp, không khai, khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được hoàn, được miễn, giảm thuế, trừ hành vi quy định tại Điều 16 Nghị định này;",
+                "score": 0.015315,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_16_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ16 (Xử phạt hành vi khai sai dẫn đến thiếu số tiền thu)]",
+                "score": 0.01072,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_III_dieu_28_khoan_1_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 28: Xử phạt đối với hành vi sử dụng hóa đơn không hợp pháp, sử dụng không hợp pháp hóa đơn > Khoản 1",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ28 (Xử phạt đối với hành vi sử dụng hóa đơn ) | K1]\nPhạt tiền từ 20.000.000 đồng đến 50.000.000 đồng đối với hành vi sử dụng hóa đơn không hợp pháp, sử dụng không hợp pháp hóa đơn quy định tại Điều 4 Nghị định này, trừ trường hợp được quy định tại điểm đ khoản 1 Điều 16 và điểm d khoản 1 Điều 17 Nghị định này.",
+                "score": 0.010604,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 28: Xử phạt đối với hành vi sử dụng hóa đơn không hợp pháp, sử dụng không hợp pháp hóa đơn > Khoản 1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "hành vi trốn thuế",
+            "doc_filter": "108_2025_QH15"
+          },
+          "result": {
+            "query": "hành vi trốn thuế",
+            "total_found": 10,
+            "results": [
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_8_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 8",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hành chính về) | K8]\nQuá thời hiệu xử phạt vi phạm hành chính về quản lý thuế thì người nộp thuế không bị xử phạt nhưng vẫn phải nộp đủ số tiền thuế thiếu, số tiền thuế trốn, số tiền thuế được miễn, giảm, hoàn, không thu không đúng, tiền chậm nộp vào ngân sách nhà nước trong thời hạn 10 năm trở về trước kể từ ngày phát hiện hành vi vi phạm. Trường hợp người nộp thuế không đăng ký thuế thì phải nộp đủ số tiền thuế thiếu, số tiền thuế trốn, tiền chậm nộp cho toàn bộ thời gian trở về trước kể từ ngày phát hiện hành vi vi phạm.",
+                "score": 0.015978,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 8"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_4_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 4",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hành chính về) | K4]\nĐối với cùng một hành vi vi phạm hành chính về quản lý thuế thì mức phạt tiền đối với tổ chức bằng 02 lần mức phạt tiền đối với cá nhân. Riêng đối với hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn, không thu và hành vi trốn thuế thì mức phạt tiền không phân biệt giữa tổ chức và cá nhân.",
+                "score": 0.014879,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_khoan_4_diem_g_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 4 > Điểm g",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực) | K4 | Đ.g]\nHành vi trốn thuế:\nCố ý không kê khai hoặc khai sai về thuế đối với hàng hóa xuất khẩu, nhập khẩu;",
+                "score": 0.014221,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 4 > Điểm g"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_3_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hành chính về) | K3]\nViệc áp dụng mức phạt tiền trong xử phạt vi phạm hành chính về quản lý thuế được thực hiện như sau:\na) Phạt 10% tính trên số tiền thuế khai thiếu số tiền thuế phải nộp hoặc số tiền thuế khai tăng trong trường hợp được miễn, giảm, hoàn, không thu thuế về hành vi quy định tại điểm a khoản 3 Điều 45 của Luật này;\nb) Phạt 20% tính trên số tiền thuế khai thiếu số tiền thuế phải nộp hoặc số tiền thuế khai tăng trong trường hợp được miễn, giảm, hoàn, không thu thuế đối với hành vi quy định tại khoản 2 và điểm b, điểm c khoản 3 Điều 45 của Luật này;\nc) Phạt từ 01 lần đến 03 lần số tiền thuế trốn đối với hành vi quy định tại khoản 4 Điều 45 của Luật này.",
+                "score": 0.011475,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_44_khoan_3_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ44 (Nguyên tắc xử phạt vi phạm hàn) | K3 | Đ.a]\nViệc áp dụng mức phạt tiền trong xử phạt vi phạm hành chính về quản lý thuế được thực hiện như sau:\nPhạt 10% tính trên số tiền thuế khai thiếu số tiền thuế phải nộp hoặc số tiền thuế khai tăng trong trường hợp được miễn, giảm, hoàn, không thu thuế về hành vi quy định tại điểm a khoản 3 Điều 45 của Luật này;",
+                "score": 0.011111,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_1_diem_đ_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm đ",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K1 | Đ.đ]\nCác trường hợp phải nộp tiền chậm nộp bao gồm:\nTrường hợp quy định tại khoản 8 Điều 44 của Luật này;",
+                "score": 0.010386,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm đ"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_1_diem_e_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm e",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K1 | Đ.e]\nCác trường hợp phải nộp tiền chậm nộp bao gồm:\nTrường hợp không bị xử phạt vi phạm hành chính về quản lý thuế theo quy định tại điểm a khoản 2 Điều 44 đối với hành vi quy định tại khoản 2 Điều 45 của Luật này và trường hợp quy định tại điểm b khoản 2 Điều 44 của Luật này;",
+                "score": 0.010386,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm e"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điều",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực quản lý thuế)]",
+                "score": 0.007778,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_khoan_3_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực quản lý t) | K3]\nNgười nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn, không thu đối với hàng hóa xuất khẩu, nhập khẩu nhưng không thuộc các trường hợp quy định tại điểm e, điểm g khoản 4 Điều này và điểm b khoản 2 Điều 44 của Luật này thì ngoài việc nộp đủ số tiền thuế, tiền chậm nộp, người nộp thuế còn bị xử phạt vi phạm hành chính về quản lý thuế trong trường hợp sau đây:\na) Người nộp thuế tự phát hiện và khai bổ sung sau thời điểm cơ quan hải quan thông báo việc kiểm tra trực tiếp hồ sơ hải quan đối với hàng hóa đang làm thủ tục hải quan hoặc sau thời hạn 60 ngày kể từ ngày thông quan và trước thời điểm quyết định kiểm tra sau thông quan, thanh tra, kiểm tra đối với hàng hóa đã ",
+                "score": 0.007778,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_VIII_muc_1_dieu_45_khoan_3_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ45 (Hành vi vi phạm trong lĩnh vực) | K3 | Đ.a]\nNgười nộp thuế khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn, không thu đối với hàng hóa xuất khẩu, nhập khẩu nhưng không thuộc các trường hợp quy định tại\nNgười nộp thuế tự phát hiện và khai bổ sung sau thời điểm cơ quan hải quan thông báo việc kiểm tra trực tiếp hồ sơ hải quan đối với hàng hóa đang làm thủ tục hải quan hoặc sau thời hạn 60 ngày kể từ ngày thông quan và trước thời điểm quyết định kiểm tra sau thông quan, thanh tra, kiểm tra đối với hàng hóa đã thông quan;",
+                "score": 0.007778,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 13538,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.50",
+        "details": {
+          "matched": [
+            "310_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "125_2020_NDCP",
+            "108_2025_QH15"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 1/1 key facts có trong answer",
+        "details": {
+          "matched": [
+            "khai sai"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 11",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 5 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 3: Thuế giá trị gia tăng",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 10: Khai thuế, nộp thuế giá trị gia tăng, thuế thu nhập cá nhân đối với hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm d",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 16: Xử phạt hành vi khai sai dẫn đến thiếu số tiền thuế phải nộp hoặc tăng số tiền thuế được miễn, giảm, hoàn",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương III > Điều 28: Xử phạt đối với hành vi sử dụng hóa đơn không hợp pháp, sử dụng không hợp pháp hóa đơn > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 8",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 4 > Điểm g",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 44: Nguyên tắc xử phạt vi phạm hành chính về quản lý thuế > Khoản 3 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm đ",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 1 > Điểm e",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương VIII > Mục 1 > Điều 45: Hành vi vi phạm trong lĩnh vực quản lý thuế > Khoản 3 > Điểm a",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "310_2025_NDCP",
+        "108_2025_QH15",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    },
+    {
+      "question_id": 88,
+      "question": "Tôi vừa bị phạt vì lỗi chậm nộp hồ sơ khai thuế, dẫn đến tiền thuế nộp chậm luôn. Vậy tôi bị phạt cả 2 lỗi (chậm hồ sơ + tính tiền chậm nộp) đúng không?",
+      "topic": "Xử phạt vi phạm",
+      "difficulty": "medium",
+      "user_type": "accountant",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 Trích dẫn\n> Buộc nộp đủ số tiền chậm nộp tiền thuế vào ngân sách nhà nước đối với hành vi vi phạm quy định tại các khoản 1, 2, 3, 4 và 5 Điều này trong trường hợp người nộp thuế chậm nộp hồ sơ khai thuế dẫn đến chậm nộp tiền thuế;\n*(Điểm a Khoản 6 Điều 13, Nghị định 125/2020/NĐ-CP)*\n\n💬 Trả lời\nBạn sẽ bị xử phạt về hành vi chậm nộp hồ sơ khai thuế và đồng thời phải nộp tiền chậm nộp tiền thuế. Đây là hai khoản riêng biệt:\n\n1.  **Xử phạt hành vi chậm nộp hồ sơ khai thuế:** Bạn sẽ bị phạt tiền theo các mức quy định tại Điều 13 của Nghị định 125/2020/NĐ-CP, tùy thuộc vào thời gian chậm nộp.\n2.  **Tiền chậm nộp tiền thuế:** Ngoài khoản phạt trên, bạn còn phải nộp tiền chậm nộp tính trên số tiền thuế chậm nộp. Đây là biện pháp khắc phục hậu quả, buộc bạn phải nộp đủ số tiền chậm nộp tiền thuế vào ngân sách nhà nước khi hành vi chậm nộp hồ sơ khai thuế dẫn đến chậm nộp tiền thuế (theo Điểm a Khoản 6 Điều 13 Nghị định 125/2020/NĐ-CP). Mức tính tiền chậm nộp là 0,03%/ngày trên số tiền thuế chậm nộp (theo Điểm a Khoản 2 Điều 16 Luật Quản lý thuế 108/2025/QH15).\n\n**Lưu ý:** Nghị định 310/2025/NĐ-CP có sửa đổi một số điều của Nghị định 125/2020/NĐ-CP, nhưng nguyên tắc về việc xử phạt hành vi chậm nộp hồ sơ và tính tiền chậm nộp tiền thuế vẫn được duy trì.\n\n📋 Tóm lại\n*   Bạn bị phạt tiền cho hành vi chậm nộp hồ sơ khai thuế.\n*   Bạn phải nộp tiền chậm nộp tiền thuế do việc chậm nộp hồ sơ dẫn đến chậm nộp tiền thuế.\n*   Tiền chậm nộp được tính 0,03%/ngày trên số tiền thuế chậm nộp.\n*   Căn cứ: Điều 13 Nghị định 125/2020/NĐ-CP và Điều 16 Luật 108/2025/QH15.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "xử phạt chậm nộp hồ sơ khai thuế tiền chậm nộp",
+            "doc_filter": "125_2020_NDCP"
+          },
+          "result": {
+            "query": "xử phạt chậm nộp hồ sơ khai thuế tiền chậm nộp",
+            "total_found": 13,
+            "results": [
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_3_diem_b_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm b",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều c) | K3 | Đ.b]\nSửa đổi điểm a, b, c khoản 3; bổ sung điểm đ, e, g vào khoản 3 Điều 5 như sau:\nTrường hợp cùng một ngày người nộp thuế chậm nộp nhiều hồ sơ khai thuế của cùng một sắc thuế thì chỉ bị xử phạt về một hành vi chậm nộp hồ sơ khai thuế có khung phạt tiền cao nhất trong số các hành vi đã thực hiện theo quy định tại Nghị định này. Trường hợp trong số hồ sơ khai thuế chậm nộp có hồ sơ khai thuế chậm nộp thuộc trường hợp trốn thuế thì tách riêng để xử phạt về hành vi trốn thuế;",
+                "score": 0.016208,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_310_2025_NDCP_dieu_1_khoan_21_chunk",
+                "doc_id": "310_2025_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21",
+                "snippet": "[VB: 310/2025/NĐ-CP | Đ1 (Sửa đổi, bổ sung một số điều của Nghị đị) | K21]\nSửa đổi, bổ sung điểm b khoản 2 Điều 36 như sau: “b) Lập biên bản vi phạm hành chính điện tử Trường hợp người nộp thuế chậm nộp hồ sơ đăng ký thuế, chậm thay đổi thông tin đăng ký thuế, chậm nộp hồ sơ khai thuế, hồ sơ khai quyết toán thuế, chậm nộp thông báo, báo cáo về hóa đơn bằng phương thức điện tử thì trong thời hạn 03 ngày làm việc kể từ ngày cơ quan thuế gửi thông báo tiếp nhận hồ sơ đăng ký thuế, hồ sơ thay đổi thông tin đăng ký thuế điện tử hoặc thông báo chấp nhận hồ sơ khai thuế, quyết toán thuế điện tử, cơ quan thuế lập và gửi 01 biên bản vi phạm hành chính điện tử cho người nộp thuế qua cổng thông tin điện tử của cơ quan quản lý thuế, kể cả trường hợp người nộp thuế nộp nhiều hồ sơ thuế. Biên bản vi phạm hành chính điện tử được lập và gửi đáp ứng yêu cầu về giao dịch điện tử trong lĩnh vực thuế là cơ sở để cơ quan thuế ban hành quyết định xử phạt vi phạm hành chính. Biên bản vi phạm hành chính điện tử phải ghi rõ thời gian, địa điểm lập biên bản; thông tin về người lập biên bản; thông tin về cá nhân, tổ chức vi phạm; chữ ký số của người lập biên bản; thời gian, địa điểm thực hiện vi phạm; hành vi vi phạm hành chính; quyền và thời hạn giải trình về vi phạm hành chính của người vi phạm; cơ quan tiếp nhận giải trình. Cơ quan thuế có trách nhiệm xây dựng hệ thống công nghệ thông tin đáp ứng việc lập, gửi biên bản vi phạm hành chính điện tử và xử lý vi phạm hành chính trên môi trường điện tử theo quy định của pháp luật về xử lý vi phạm hành chính. Khi hệ thống công nghệ thông tin đáp ứng điều kiện lập, gửi biên bản vi phạm hành chính điện tử đối với các hành vi vi phạm về thủ tục thuế, hóa đơn khác thì thực hiện xử lý vi phạm hành chính trên môi trường điện tử theo quy định của pháp luật về xử lý vi phạm hành chính.”.",
+                "score": 0.016091,
+                "citation": {
+                  "doc_id": "310_2025_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_12_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 3",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ12 (Xử lý tiền thuế, tiền chậm nộp, tiền phạ) | K3]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh có số tiền thuế, tiền chậm nộp, tiền phạt đã nộp hoặc được các tổ chức, cá nhân đã khấu trừ, nộp thay lớn hơn số tiền thuế, tiền chậm nộp, tiền phạt phải nộp thì thực hiện xử lý bù trừ, hoàn trả, hoàn trả kiêm bù trừ thu ngân sách theo quy định của pháp luật quản lý thuế đối với số thuế nộp thừa.",
+                "score": 0.016052,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thuế và sử dụ) | K3]\nThời hạn nộp hồ sơ khai thuế, nộp thuế\na) Trường hợp khai thuế theo quý thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày cuối cùng của tháng đầu tiên của quý tiếp theo;\nb) Trường hợp khai thuế theo tháng thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày thứ 20 của tháng tiếp theo tháng phát sinh nghĩa vụ thuế trừ trường hợp khai thuế theo quy định tại khoản 1 Điều 18 Nghị định này;\nc) Trường hợp khai quyết toán thuế thu nhập cá nhân theo năm thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày 31 tháng 3 của năm dương lịch tiếp theo;\n[... còn 3 điểm nữa]",
+                "score": 0.015799,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_2_diem_a_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Điểm",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp ti) | K2 | Đ.a]\nMức tính tiền chậm nộp và thời gian tính tiền chậm nộp được quy định như sau:\nMức tính tiền chậm nộp bằng 0,03%/ ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ ngày tính trên số tiền thuế chậm nộp do cơ quan hải quan quản lý thu;",
+                "score": 0.016393,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_108_2025_QH15_chuong_II_muc_3_dieu_16_khoan_2_chunk",
+                "doc_id": "108_2025_QH15",
+                "node_type": "Khoản",
+                "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2",
+                "snippet": "[VB: 108/2025/QH15 | Đ16 (Xử lý đối với việc chậm nộp tiền thuế, k) | K2]\nMức tính tiền chậm nộp và thời gian tính tiền chậm nộp được quy định như sau:\na) Mức tính tiền chậm nộp bằng 0,03%/ ngày tính trên số tiền thuế, khoản thu khác chậm nộp do cơ quan thuế quản lý thu và 0,03%/ ngày tính trên số tiền thuế chậm nộp do cơ quan hải quan quản lý thu;\nb) Thời gian tính tiền chậm nộp thực hiện theo quy định của Chính phủ.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "108_2025_QH15",
+                  "doc_number": "",
+                  "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_6_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp ) | K6]\nBiện pháp khắc phục hậu quả:\na) Buộc nộp đủ số tiền chậm nộp tiền thuế vào ngân sách nhà nước đối với hành vi vi phạm quy định tại các khoản 1, 2, 3, 4 và 5 Điều này trong trường hợp người nộp thuế chậm nộp hồ sơ khai thuế dẫn đến chậm nộp tiền thuế;\nb) Buộc nộp hồ sơ khai thuế, phụ lục kèm theo hồ sơ khai thuế đối với hành vi quy định tại điểm c, d khoản 4 Điều này.",
+                "score": 0.016129,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_IV_dieu_42_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ42 (Tiền chậm nộp tiền phạt vi phạ) | K1 | Đ.a]\nTính tiền chậm nộp tiền phạt\nTổ chức, cá nhân chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn thì bị tính tiền chậm nộp tiền phạt theo mức 0,05%/ngày tính trên số tiền phạt chậm nộp.",
+                "score": 0.015953,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_2_dieu_18_khoan_2_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 2 > Điều 18: Xử phạt vi phạm hành chính về thuế đối với ngân hàng thương mại, người bảo lãnh nộp tiền thuế > Khoản 2",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ18 (Xử phạt vi phạm hành chính về thuế đối v) | K2]\nNgười bảo lãnh phải nộp thay tiền thuế, tiền chậm nộp tiền thuế, tiền phạt, tiền chậm nộp tiền phạt (nếu có) cho người nộp thuế theo nội dung cam kết tại văn bản bảo lãnh trong trường hợp người nộp thuế không nộp vào ngân sách nhà nước. Nếu quá thời hạn bảo lãnh mà người nộp thuế chưa nộp hoặc chưa nộp đủ tiền thuế nợ, tiền chậm nộp tiền thuế, tiền phạt, tiền chậm nộp tiền phạt mà người bảo lãnh chưa thực hiện nghĩa vụ bảo lãnh thì người bảo lãnh bị tính tiền chậm nộp do chậm nộp tiền thuế, tiền phạt và bị cưỡng chế theo quy định của Luật Quản lý thuế.",
+                "score": 0.015726,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 2 > Điều 18: Xử phạt vi phạm hành chính về thuế đối với ngân hàng thương mại, người bảo lãnh nộp tiền thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_6_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thờ) | K6 | Đ.a]\nBiện pháp khắc phục hậu quả:\nBuộc nộp đủ số tiền chậm nộp tiền thuế vào ngân sách nhà nước đối với hành vi vi phạm quy định tại các khoản 1, 2, 3, 4 và 5 Điều này trong trường hợp người nộp thuế chậm nộp hồ sơ khai thuế dẫn đến chậm nộp tiền thuế;",
+                "score": 0.015531,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6 > Điểm a"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_khoan_5_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp ) | K5]\nPhạt tiền từ 15.000.000 đồng đến 25.000.000 đồng đối với hành vi nộp hồ sơ khai thuế quá thời hạn trên 90 ngày kể từ ngày hết hạn nộp hồ sơ khai thuế, có phát sinh số thuế phải nộp và người nộp thuế đã nộp đủ số tiền thuế, tiền chậm nộp vào ngân sách nhà nước trước thời điểm cơ quan thuế công bố quyết định kiểm tra thuế, thanh tra thuế hoặc trước thời điểm cơ quan thuế lập biên bản về hành vi chậm nộp hồ sơ khai thuế theo quy định tại khoản 11 Điều 143 Luật Quản lý thuế. Trường hợp số tiền phạt nếu áp dụng theo khoản này lớn hơn số tiền thuế phát sinh trên hồ sơ khai thuế thì số tiền phạt tối đa đối với trường hợp này bằng số tiền thuế phát sinh phải nộp trên hồ sơ khai thuế nhưng không thấp hơn mức trung bình của khung phạt tiền quy định tại khoản 4 Điều này.",
+                "score": 0.015294,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_13_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ13 (Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai)]",
+                "score": 0.010872,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế"
+                }
+              },
+              {
+                "chunk_id": "doc_125_2020_NDCP_chuong_II_muc_1_dieu_17_khoan_1_diem_a_chunk",
+                "doc_id": "125_2020_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a",
+                "snippet": "[VB: 125/2020/NĐ-CP | Đ17 (Xử phạt hành vi trốn thuế) | K1 | Đ.a]\nPhạt tiền 1 lần số thuế trốn đối với người nộp thuế có từ một tình tiết giảm nhẹ trở lên khi thực hiện một trong các hành vi vi phạm sau đây:\nKhông nộp hồ sơ đăng ký thuế; không nộp hồ sơ khai thuế hoặc nộp hồ sơ khai thuế sau 90 ngày, kể từ ngày hết thời hạn nộp hồ sơ khai thuế hoặc kể từ ngày hết thời hạn gia hạn nộp hồ sơ khai thuế, trừ trường hợp quy định tại điểm b, c khoản 4 và khoản 5 Điều 13 Nghị định này;",
+                "score": 0.010484,
+                "citation": {
+                  "doc_id": "125_2020_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 11181,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 2/2 docs, precision=0.50",
+        "details": {
+          "matched": [
+            "310_2025_NDCP",
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "125_2020_NDCP",
+            "108_2025_QH15"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Xử phạt vi phạm'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "chậm nộp hồ sơ",
+            "tiền chậm nộp"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 3 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "310_2025_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 310/2025/NĐ-CP > Điều 1: Sửa đổi, bổ sung một số điều của Nghị định số 125/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính về thuế, hóa đơn > Khoản 21",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 12: Xử lý tiền thuế, tiền chậm nộp, tiền phạt nộp thừa > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "108_2025_QH15",
+          "doc_number": "",
+          "breadcrumb": "Luật 108/2025/QH15 > Chương II > Mục 3 > Điều 16: Xử lý đối với việc chậm nộp tiền thuế, khoản thu khác > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương IV > Điều 42: Tiền chậm nộp tiền phạt vi phạm hành chính về thuế, hóa đơn > Khoản 1 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 2 > Điều 18: Xử phạt vi phạm hành chính về thuế đối với ngân hàng thương mại, người bảo lãnh nộp tiền thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 6 > Điểm a",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 13: Xử phạt hành vi vi phạm về thời hạn nộp hồ sơ khai thuế",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "125_2020_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 125/2020/NĐ-CP > Chương II > Mục 1 > Điều 17: Xử phạt hành vi trốn thuế > Khoản 1 > Điểm a",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "125_2020_NDCP",
+        "310_2025_NDCP",
+        "108_2025_QH15",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}

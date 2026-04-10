@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "doc_id": "117_2025_NDCP",
+  "description": "BUG-010: OCR typo Điều 8 K3 Đa '02/CNKD-TĐMT' → '02/CNKD-TMĐT'. BUG-011 (reverted 2026-03-31): Chunk enrichment had zero net T4 effect (improvements cancelled by regressions) and caused -4 TMDT pass via T2 regressions from K2 semantic shift.",
+  "ops": [
+    {
+      "op": "set_field",
+      "node_id": "doc_117_2025_NDCP_chuong_III_dieu_8_khoan_3_diem_a",
+      "field": "content",
+      "value": "Hồ sơ khai thuế Tờ khai thuế đối với hộ, cá nhân có hoạt động kinh doanh trên nền tảng thương mại điện tử theo Mẫu số 02/CNKD-TMĐT ban hành kèm theo Nghị định này."
+    }
+  ]
+}

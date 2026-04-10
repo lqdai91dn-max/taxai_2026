@@ -1,0 +1,418 @@
+{
+  "report": {
+    "summary": {
+      "total": 1,
+      "passed": 1,
+      "pass_rate": 1.0,
+      "avg_score": 1.0,
+      "errors": 0,
+      "annotated": 1,
+      "verified": 1,
+      "timestamp": "2026-04-03T07:52:43.599826"
+    },
+    "tier_scores": {
+      "tier1_deterministic": {
+        "applicable": 0,
+        "avg": null,
+        "note": "Answer correctness primary; tool compliance diagnostic only"
+      },
+      "tier2_citation": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Answer phải có tham chiếu pháp luật cụ thể"
+      },
+      "tier3_tool_selection": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Agent gọi đúng loại tool cho topic/loại câu hỏi"
+      },
+      "tier4_key_facts": {
+        "applicable": 1,
+        "avg": 1.0,
+        "note": "Key facts check (N/A cho 0 câu chưa annotate)"
+      }
+    },
+    "by_topic": {
+      "Thuế hộ kinh doanh": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0,
+        "avg_score": 1.0
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "count": 1,
+        "avg_score": 1.0
+      }
+    },
+    "latency_ms": {
+      "min": 22840,
+      "max": 22840,
+      "avg": 22840,
+      "p50": 22840,
+      "p95": 22840
+    },
+    "tool_compliance": {
+      "applicable": 0,
+      "compliant": 0,
+      "tool_skipped": 0,
+      "no_tool": 0,
+      "compliance_rate": null,
+      "note": "Diagnostic only — does not affect T1 score when answer is correct"
+    },
+    "failed_questions": []
+  },
+  "results": [
+    {
+      "question_id": 1,
+      "question": "Từ năm 2026, tôi bán tạp hóa nghe nói bỏ thuế khoán rồi, vậy phải tính thuế kiểu gì?",
+      "topic": "Thuế hộ kinh doanh",
+      "difficulty": "easy",
+      "user_type": "household_business",
+      "needs_calculation": false,
+      "annotation_status": "verified",
+      "answer": "📌 **Trích dẫn**\n> \"Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế.\" *(Điều 4 Khoản 5 Điểm b, Nghị định 68/2026/NĐ-CP)*\n\n💬 **Trả lời**\nĐúng như bạn nghe nói, từ ngày **01/01/2026**, hình thức \"thuế khoán\" (ấn định thuế hàng năm) chính thức được bãi bỏ. Thay vào đó, việc tính thuế cho cửa hàng tạp hóa của bạn sẽ phụ thuộc vào mức doanh thu năm 2026 của bạn, cụ thể có hai phương pháp chính:\n\n1.  **Phương pháp Tỷ lệ % trên doanh thu (Áp dụng cho doanh thu từ 500 triệu đến 3 tỷ đồng/năm):**\n    *   Đây là cách tính đơn giản nhất: Bạn lấy **Doanh thu thực tế x Tỷ lệ % thuế**.\n    *   Đối với ngành bán lẻ tạp hóa (phân phối, cung cấp hàng hóa), tỷ lệ thuế thường là **0,5% thuế TNCN** và **1% thuế GTGT** (tổng cộng 1,5% trên doanh thu).\n    *   Bạn thực hiện kê khai theo tháng hoặc quý dựa trên hóa đơn, chứng từ bán hàng thực tế.\n\n2.  **Phương pháp Lợi nhuận (Bắt buộc nếu doanh thu trên 3 tỷ đồng/năm hoặc tự nguyện lựa chọn):**\n    *   Cách tính: **(Doanh thu - Chi phí hợp lý) x Thuế suất**.\n    *   Phương pháp này cho phép bạn trừ đi các chi phí như: giá vốn nhập hàng, tiền thuê mặt bằng, lương nhân viên, điện nước... để ra lợi nhuận thực tế rồi mới tính thuế.\n    *   Thuế suất TNCN sẽ áp dụng theo biểu thuế lũy tiến (tương tự như người làm công ăn lương).\n\n**Lưu ý quan trọng cho giai đoạn chuyển tiếp đầu năm 2026:**\n*   **Bảng kê hàng tồn kho (Mẫu 01/BK-HTK):** Nếu bạn thuộc diện bắt buộc hoặc lựa chọn nộp thuế theo phương pháp lợi nhuận, bạn **phải** lập Bảng kê hàng tồn kho tại thời điểm 31/12/2025. Bản kê này phải nộp cho cơ quan thuế chậm nhất là ngày **20/04/2026** (nếu khai tháng) hoặc cùng tờ khai Quý I/2026 để làm căn cứ trừ chi phí cho năm sau (theo Điều 18 Khoản 4 Nghị định 68/2026/NĐ-CP).\n*   **Ngưỡng miễn thuế:** Nếu doanh thu năm của bạn **dưới 500 triệu đồng**, bạn sẽ được **miễn** cả thuế GTGT và thuế TNCN (theo Điều 4 Nghị định 68/2026/NĐ-CP).\n\n📋 **Tóm lại**\n*   **Bỏ thuế khoán:** Từ 2026, tất cả HKD chuyển sang tự kê khai theo doanh thu thực tế.\n*   **Dưới 500 triệu/năm:** Miễn thuế hoàn toàn.\n*   **Từ 500 triệu - 3 tỷ/năm:** Tính thuế theo tỷ lệ % (thường là 1,5% cho tạp hóa) hoặc chọn tính theo lợi nhuận.\n*   **Trên 3 tỷ/năm:** Bắt buộc tính thuế theo lợi nhuận (Doanh thu - Chi phí).\n*   **Việc cần làm ngay:** Theo dõi sát doanh thu và chuẩn bị kiểm kê hàng hóa vào cuối năm 2025 để nộp mẫu 01/BK-HTK nếu muốn trừ chi phí vào năm 2026.\n*   **Căn cứ:** Nghị định 68/2026/NĐ-CP và Thông tư 18/2026/TT-BTC.",
+      "tool_calls": [
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "phương pháp tính thuế hộ kinh doanh cá nhân kinh doanh từ năm 2026 bỏ thuế khoán",
+            "doc_filter": "68_2026_NDCP"
+          },
+          "result": {
+            "query": "phương pháp tính thuế hộ kinh doanh cá nhân kinh doanh từ năm 2026 bỏ thuế khoán",
+            "total_found": 7,
+            "results": [
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_4_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K4 | Đ.b]\nĐịa điểm khai thuế, nộp thuế\nHộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;",
+                "score": 0.015887,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_V_dieu_18_khoan_4_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương V > Điều 18: Điều khoản chuyển tiếp > Khoản 4",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ18 (Điều khoản chuyển tiếp) | K4]\nĐối với hộ kinh doanh, cá nhân kinh doanh trong năm 2025 nộp thuế theo phương pháp khoán hoặc phương pháp kê khai, có mức doanh thu từ 03 tỷ đồng trở lên hoặc từ năm 2026 lựa chọn nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh thực hiện xác định, ghi nhận giá trị hàng tồn kho, máy móc, thiết bị đang phục vụ hoạt động sản xuất, kinh doanh tại thời điểm ngày 31 tháng 12 năm 2025 để làm căn cứ xác định chi phí được trừ khi tính thuế thu nhập cá nhân cho kỳ tính thuế năm 2026. Hộ kinh doanh, cá nhân kinh doanh lập Bảng kê hàng tồn kho, máy móc, thiết bị theo mẫu do Bộ trưởng Bộ Tài chính quy định, lưu giữ tại hộ kinh doanh, cá nhân kinh doanh và gửi 01 bản cho cơ quan thuế quản lý trực tiếp bằng phương thức điện tử cùng hồ sơ khai thuế quý I năm 2026 đối với trường hợp khai thuế theo quý hoặc chậm nhất là ngày 20 tháng 4 năm 2026 đối với trường hợp khai thuế theo tháng. Cơ quan thuế tiếp nhận thông tin để phục vụ công tác quản lý thuế. Việc tiếp nhận bảng kê của cơ quan thuế không có giá trị pháp lý trong việc xác nhận hoặc hợp thức hóa nguồn gốc, xuất xứ hàng hóa. Hộ kinh doanh, cá nhân kinh doanh chịu trách nhiệm trước pháp luật về tính trung thực, chính xác và đầy đủ của thông tin tại Bảng kê, trường hợp phát hiện vi phạm pháp luật thì xử lý theo quy định của pháp luật có liên quan.",
+                "score": 0.015873,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương V > Điều 18: Điều khoản chuyển tiếp > Khoản 4"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_4_khoan_5_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ4 (Thuế thu nhập cá nhân) | K5 | Đ.b]\nPhương pháp tính thuế\nPhương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 500 triệu đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 Luật Thuế thu nhập cá nhân số 109/2025/QH15;",
+                "score": 0.015768,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_IV_dieu_17_khoan_5_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 17: Trách nhiệm thi hành > Khoản 5",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ17 (Trách nhiệm thi hành) | K5]\nĐối với hộ kinh doanh, cá nhân kinh doanh nộp thuế theo phương pháp khoán từ năm 2025 trở về trước và đã được xác định mức thuế khoán (bao gồm cả trường hợp hộ kinh doanh, cá nhân kinh doanh có thay đổi về quy mô sản xuất kinh doanh dẫn đến doanh thu khoán thuế thay đổi từ 50% trở lên) theo quy định của Luật Quản lý thuế số 38/2019/QH14 và các văn bản hướng dẫn thi hành, khi chuyển sang thực hiện kê khai thuế kể từ ngày 01 tháng 01 năm 2026, cơ quan thuế không sử dụng doanh thu khai thuế năm 2026 để xác định lại nghĩa vụ thuế các năm trước, không xử phạt vi phạm hành chính đối với các nghĩa vụ thuế đã thực hiện theo phương pháp khoán, trừ trường hợp cơ quan thuế, cơ quan nhà nước có thẩm quyền phát hiện hộ kinh doanh, cá nhân kinh doanh có hành vi che giấu doanh thu dẫn đến thiếu số thuế phải nộp.",
+                "score": 0.015608,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 17: Trách nhiệm thi hành > Khoản 5"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_11_khoan_3_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Khoản",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ11 (Khai thuế, khấu trừ thuế đối với hoạt độ) | K3]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số hoặc vừa có hoạt động kinh doanh tại địa điểm kinh doanh cố định vừa có kinh doanh trên nền tảng thương mại điện tử, nền tảng số nếu có doanh thu năm tổng hợp trên 03 tỷ đồng hoặc có doanh thu năm trên 500 triệu đồng và lựa chọn khai thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh thực hiện tổng hợp doanh thu để khai quyết toán thuế thu nhập cá nhân theo năm. Số thuế thu nhập cá nhân đã được chủ quản nền tảng thương mại điện tử, nền tảng số khấu trừ, nộp thay được trừ khi xác định số thuế thu nhập cá nhân phải nộp.",
+                "score": 0.014831,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 3"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_II_dieu_7_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điều",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ7 (Các khoản thuế khác)]\nTrường hợp hộ kinh doanh, cá nhân kinh doanh có hoạt động sản xuất, kinh doanh hàng hóa, dịch vụ thuộc đối tượng chịu thuế tiêu thụ đặc biệt, thuế tài nguyên, thuế bảo vệ môi trường theo quy định của pháp luật thuế thì việc xác định nghĩa vụ thuế được thực hiện theo quy định của pháp luật về từng loại thuế tương ứng.",
+                "score": 0.011038,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác"
+                }
+              },
+              {
+                "chunk_id": "doc_68_2026_NDCP_chuong_III_dieu_8_khoan_3_diem_b_chunk",
+                "doc_id": "68_2026_NDCP",
+                "node_type": "Điểm",
+                "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm b",
+                "snippet": "[VB: 68/2026/NĐ-CP | Đ8 (Nguyên tắc khai thuế, tính thu) | K3 | Đ.b]\nThời hạn nộp hồ sơ khai thuế, nộp thuế\nTrường hợp khai thuế theo tháng thì thời hạn nộp hồ sơ khai thuế chậm nhất là ngày thứ 20 của tháng tiếp theo tháng phát sinh nghĩa vụ thuế trừ trường hợp khai thuế theo quy định tại khoản 1 Điều 18 Nghị định này;",
+                "score": 0.010317,
+                "citation": {
+                  "doc_id": "68_2026_NDCP",
+                  "doc_number": "",
+                  "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm b"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_legal_docs",
+          "args": {
+            "query": "thủ tục chuyển đổi phương pháp tính thuế hộ kinh doanh từ năm 2026 mẫu 01/BK-HTK",
+            "doc_filter": "18_2026_TTBTC"
+          },
+          "result": {
+            "query": "thủ tục chuyển đổi phương pháp tính thuế hộ kinh doanh từ năm 2026 mẫu 01/BK-HTK",
+            "total_found": 6,
+            "results": [
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_8_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ8 (Điều khoản chuyển tiếp) | K1]\nĐối với trường hợp quy định tại khoản 3 Điều 18 Nghị định số 68/2026/NĐ-CP ngày 05/03/2026 của Chính phủ thì được khai điều chỉnh theo Tờ khai thuế đối với hoạt động cho thuê tài sản Mẫu số 01/TTS ban hành kèm theo Thông tư số 40/2021/TT-BTC ngày 01 tháng 6 năm 2021 của Bộ trưởng Bộ Tài chính hướng dẫn thuế giá trị gia tăng, thuế thu nhập cá nhân và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh theo doanh thu chịu thuế thực tế phát sinh trong năm 2025 và khai doanh thu năm 2026 theo Tờ khai thuế đối với hoạt động cho thuê bất động sản Mẫu số 01/BĐS ban hành kèm theo Thông tư này.",
+                "score": 0.015887,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_5_khoan_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa > Khoản 1",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ5 (Hồ sơ đề nghị hoàn thuế nộp thừa) | K1]\nHồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.",
+                "score": 0.015531,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa > Khoản 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_1_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 1: Phạm vi điều chỉnh",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ1 (Phạm vi điều chỉnh)]\nThông tư này quy định chi tiết về hồ sơ, thủ tục thông báo doanh thu, kê khai thuế, nộp thuế, hoàn thuế, thông báo địa điểm kinh doanh, tạm ngừng, chấm dứt hoạt động kinh doanh đối với hộ kinh doanh, cá nhân kinh doanh tại khoản 4 Điều 13 Luật Quản lý thuế, Điều 8, Điều 11, Điều 12 Nghị định số 68/2026/NĐ-CP ngày 05 tháng 3 năm 2026 của Chính phủ quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.",
+                "score": 0.0154,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 1: Phạm vi điều chỉnh"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_4_khoan_2_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Khoản",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ4 (Hồ sơ thông báo doanh thu, kê khai thuế) | K2]\nHồ sơ khai thuế giá trị gia tăng, thuế thu nhập cá nhân đối với trường hợp tổ chức, cá nhân khấu trừ khai thuế thay, nộp thuế thay\na) Đối với tổ chức khai thuế thay, nộp thuế thay cho cá nhân hợp tác kinh doanh với tổ chức là Tờ khai theo Mẫu số 01/TCKT và Phụ lục Bảng kê chi tiết hộ kinh doanh, cá nhân kinh doanh theo Mẫu số 01/BK-KTHTKD ban hành kèm theo Thông tư này.\nb) Đối với tổ chức khai thuế thay, nộp thuế thay cho cá nhân cho thuê bất động sản, trừ hoạt động kinh doanh lưu trú là Tờ khai theo Mẫu số 01/TCKT và Phụ lục Bảng kê chi tiết cá nhân cho thuê bất động sản theo Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.\n[... còn 1 điểm nữa]",
+                "score": 0.015221,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_phu_luc_1_chunk_3",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Phụ lục",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Phụ lục 1: Phụ lục 1",
+                "snippet": "[VB: 18/2026/TT-BTC | Phụ lục 1 (Phụ lục 1)]\nBẢNG KÊ CHI TIẾT BẤT ĐỘNG SẢN CHO THUÊ (Kèm theo tờ khai 01/BĐS áp dụng đối với trường hợp cá nhân khai thuế đối với hoạt động cho thuê bất động sản) [01] Người nộp thuế:.............................................................................................................................................................................................. [02] Mã số thuế:....................................................................................................................................................................................................... Đơn vị tiền: Đồng Việt Nam Tôi cam đoan những nội dung kê khai trên là đúng và chịu trách nhiệm trước pháp luật về những nội dung đã khai./. BẢNG KÊ HÀNG TỒN KHO, MÁY MÓC, THIẾT BỊ CỦA HỘ KINH DOANH, CÁ NHÂN KINH DOANH (Áp dụng đối với hộ kinh doanh, cá nhân kinh doanh trong năm 2025 có mức doanh thu từ 3 tỷ đồng trở lên hoặc từ năm 2026 lựa chọn nộp thuế thu nhập cá nhân trên thu nhập tính thuế) [01] Tên người nộp thuế: ………………………………………………………………… [02] Mã số thuế: ……………………………………………………………………………. Đơn vị tiền: Đồng Việt Nam Tôi cam đoan những nội dung kê khai trên là đúng và chịu trách nhiệm trước pháp luật về những nội dung đã khai./.",
+                "score": 0.014992,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Phụ lục 1: Phụ lục 1"
+                }
+              },
+              {
+                "chunk_id": "doc_18_2026_TTBTC_dieu_8_chunk",
+                "doc_id": "18_2026_TTBTC",
+                "node_type": "Điều",
+                "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp",
+                "snippet": "[VB: 18/2026/TT-BTC | Đ8 (Điều khoản chuyển tiếp)]",
+                "score": 0.01078,
+                "citation": {
+                  "doc_id": "18_2026_TTBTC",
+                  "doc_number": "",
+                  "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "latency_ms": 22840,
+      "error": null,
+      "tier1": {
+        "score": null,
+        "reason": "N/A — câu hỏi không cần tính toán",
+        "details": {}
+      },
+      "tier2": {
+        "score": 1.0,
+        "reason": "PASS — overlap 1/1 docs, precision=0.50",
+        "details": {
+          "matched": [
+            "68_2026_NDCP"
+          ],
+          "missing": [],
+          "extra": [
+            "18_2026_TTBTC"
+          ]
+        }
+      },
+      "tier3": {
+        "score": 1.0,
+        "reason": "PASS — dùng {'search_legal_docs'} phù hợp với topic 'Thuế hộ kinh doanh'",
+        "details": {
+          "tools_used": [
+            "search_legal_docs"
+          ],
+          "matching": [
+            "search_legal_docs"
+          ]
+        }
+      },
+      "tier4": {
+        "score": 1.0,
+        "reason": "PASS — 2/2 key facts có trong answer",
+        "details": {
+          "matched": [
+            "tỷ lệ",
+            "lợi nhuận"
+          ],
+          "t4b_rescued": []
+        }
+      },
+      "sources": [
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 4 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương V > Điều 18: Điều khoản chuyển tiếp > Khoản 4",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 4: Thuế thu nhập cá nhân > Khoản 5 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương IV > Điều 17: Trách nhiệm thi hành > Khoản 5",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 11: Khai thuế, khấu trừ thuế đối với hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số của hộ kinh doanh, cá nhân kinh doanh > Khoản 3",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương II > Điều 7: Các khoản thuế khác",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "68_2026_NDCP",
+          "doc_number": "",
+          "breadcrumb": "Nghị định 68/2026/NĐ-CP > Chương III > Điều 8: Nguyên tắc khai thuế, tính thuế và sử dụng hóa đơn > Khoản 3 > Điểm b",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 5: Hồ sơ đề nghị hoàn thuế nộp thừa > Khoản 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 1: Phạm vi điều chỉnh",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 4: Hồ sơ thông báo doanh thu, kê khai thuế > Khoản 2",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Phụ lục 1: Phụ lục 1",
+          "type": "search"
+        },
+        {
+          "tool": "search_legal_docs",
+          "doc_id": "18_2026_TTBTC",
+          "doc_number": "",
+          "breadcrumb": "Thông tư 18/2026/TT-BTC > Điều 8: Điều khoản chuyển tiếp",
+          "type": "search"
+        }
+      ],
+      "degrade_level": 1,
+      "fm_breakdown": {},
+      "retrieved_doc_ids": [
+        "18_2026_TTBTC",
+        "68_2026_NDCP"
+      ],
+      "false_refusal": false
+    }
+  ]
+}
