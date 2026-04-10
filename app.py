@@ -216,6 +216,12 @@ def _history_path(session_id: str) -> Path:
     return HISTORY_DIR / f"{session_id}.json"
 
 
+def delete_session(session_id: str) -> None:
+    path = _history_path(session_id)
+    if path.exists():
+        path.unlink()
+
+
 def save_session(session_id: str, messages: list) -> None:
     if not messages:
         return
@@ -536,11 +542,27 @@ with st.sidebar:
             title = s["title"] or "(Không có tiêu đề)"
             ts    = s["updated_at"][:16] if s["updated_at"] else ""
             label = f"{title[:28]}…" if len(title) > 30 else title
-            if st.button(f"💬 {label}", key=f"hist_{sid}", help=f"{ts}  |  ID: {sid}",
-                         use_container_width=True):
-                st.session_state.session_id = sid
-                st.session_state.messages   = load_session(sid)
-                st.rerun()
+            col_btn, col_del = st.columns([5, 1])
+            with col_btn:
+                if st.button(f"💬 {label}", key=f"hist_{sid}", help=f"{ts}  |  ID: {sid}",
+                             use_container_width=True):
+                    st.session_state.session_id = sid
+                    st.session_state.messages   = load_session(sid)
+                    st.rerun()
+            with col_del:
+                if st.button("🗑️", key=f"del_{sid}", help="Xóa cuộc hội thoại này"):
+                    delete_session(sid)
+                    if st.session_state.session_id == sid:
+                        st.session_state.messages   = []
+                        st.session_state.session_id = str(uuid.uuid4())[:8]
+                    st.rerun()
+
+        if st.button("🗑️ Xóa tất cả lịch sử", use_container_width=True):
+            for s in sessions:
+                delete_session(s["session_id"])
+            st.session_state.messages   = []
+            st.session_state.session_id = str(uuid.uuid4())[:8]
+            st.rerun()
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
