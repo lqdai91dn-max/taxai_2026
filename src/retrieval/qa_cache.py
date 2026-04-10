@@ -122,6 +122,19 @@ class QACache:
             f"QACache initialized — {self._col.count()} entries in '{QA_COLLECTION}'"
         )
 
+    # ── Internal helpers ──────────────────────────────────────────────────────
+
+    def _ensure_collection(self) -> None:
+        """Tự phục hồi nếu collection bị xóa ngoài (e.g. flush() từ script khác)."""
+        try:
+            self._col.count()  # probe — raises nếu collection không tồn tại
+        except Exception:
+            logger.warning("[QACache] Collection missing — recreating...")
+            self._col = self._client.get_or_create_collection(
+                name=QA_COLLECTION,
+                metadata={"hnsw:space": "cosine"},
+            )
+
     # ── Public API ────────────────────────────────────────────────────────────
 
     def lookup(self, question: str) -> CacheHit | None:
@@ -129,6 +142,7 @@ class QACache:
         Tìm cached answer cho câu hỏi.
         Trả về CacheHit nếu similarity >= threshold, None nếu miss.
         """
+        self._ensure_collection()
         if self._col.count() == 0:
             return None
 
@@ -192,6 +206,7 @@ class QACache:
 
         Return CacheHit nếu tồn tại entry với cùng hash, None nếu miss.
         """
+        self._ensure_collection()
         qid = _question_id(question, top_doc_ids)
         try:
             result = self._col.get(ids=[qid], include=["documents", "metadatas"])
@@ -258,6 +273,7 @@ class QACache:
 
         Trả về question_id.
         """
+        self._ensure_collection()
         question_id = _question_id(question, top_doc_ids)
         emb         = self._embed(question)
 
