@@ -127,7 +127,10 @@ class QACache:
     def _ensure_collection(self) -> None:
         """Tự phục hồi nếu collection bị xóa ngoài (e.g. flush() từ script khác)."""
         try:
-            self._col.count()  # probe — raises nếu collection không tồn tại
+            existing = [c.name for c in self._client.list_collections()]
+            if QA_COLLECTION not in existing:
+                raise ValueError("missing")
+            self._col.count()  # second probe — verify object still valid
         except Exception:
             logger.warning("[QACache] Collection missing — recreating...")
             self._col = self._client.get_or_create_collection(
