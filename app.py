@@ -578,8 +578,91 @@ st.caption(
 for msg in st.session_state.messages:
     _render_message(msg, show_sources, show_iters)
 
-# Gợi ý câu hỏi
+# ── Static answers (không gọi API) ───────────────────────────────────────────
+_STATIC_KEY_SCOPE   = "__scope__"
+_STATIC_KEY_GUIDE   = "__guide__"
+
+_STATIC_ANSWERS: dict[str, str] = {
+    _STATIC_KEY_SCOPE: """## 📋 Phạm vi tư vấn của TaxAI
+
+TaxAI tư vấn pháp luật thuế Việt Nam dựa trên các văn bản pháp luật hiện hành. Dưới đây là phạm vi cụ thể:
+
+### ✅ Đối tượng được hỗ trợ
+- **Cá nhân cư trú** có thu nhập từ tiền lương, tiền công
+- **Hộ kinh doanh (HKD)** — nộp thuế khoán hoặc theo doanh thu thực tế
+- **Cá nhân kinh doanh (CNKD)** — bao gồm bán hàng online, sàn TMĐT
+- **Tổ chức, doanh nghiệp** có nghĩa vụ khấu trừ và quyết toán thuế TNCN thay người lao động
+- **Cá nhân không cư trú** có thu nhập phát sinh tại Việt Nam
+
+### 📚 Văn bản pháp luật được tích hợp
+| Văn bản | Nội dung |
+|---|---|
+| Luật TNCN 109/2025/QH15 | Luật thuế TNCN mới, hiệu lực 01/01/2026 (biểu thuế 5 bậc) |
+| NĐ 68/2026/NĐ-CP | Hướng dẫn Luật TNCN 109 — giảm trừ, khấu trừ, quyết toán |
+| NĐ 117/2025/NĐ-CP | Thuế HKD, CNKD, sàn TMĐT |
+| TT 152/2025/TT-BTC | Thủ tục hành chính thuế HKD |
+| NĐ 125/2020/NĐ-CP | Xử phạt vi phạm hành chính về thuế |
+| NĐ 126/2020/NĐ-CP | Quản lý thuế, kê khai, quyết toán |
+| Nghị quyết 110/2025/UBTVQH15 | Mức giảm trừ gia cảnh 2026 (15,5tr/người, 6,2tr/NPT) |
+| Công văn 1296/CTNVT | Hướng dẫn quyết toán thuế TNCN kỳ 2025 |
+
+### ❌ Ngoài phạm vi tư vấn
+- Thuế thu nhập doanh nghiệp (TNDN)
+- Thuế giá trị gia tăng (GTGT) cho doanh nghiệp lớn
+- Thuế xuất nhập khẩu, thuế tiêu thụ đặc biệt
+- Tư vấn kế toán, kiểm toán nội bộ
+
+> ⚠️ Thông tin chỉ mang tính tham khảo. Các trường hợp phức tạp nên tham vấn thêm cơ quan thuế hoặc chuyên gia.""",
+
+    _STATIC_KEY_GUIDE: """## 📖 Hướng dẫn sử dụng TaxAI
+
+### 🎯 Cách đặt câu hỏi hiệu quả
+
+**Cung cấp đủ thông tin:**
+- Thu nhập, doanh thu cụ thể (nếu cần tính thuế)
+- Loại hình: cá nhân / HKD / doanh nghiệp
+- Năm tính thuế (2025 hay 2026 áp dụng luật khác nhau)
+- Số người phụ thuộc (nếu liên quan giảm trừ gia cảnh)
+
+**Ví dụ câu hỏi tốt:**
+> "Tôi có lương 25 triệu/tháng, 1 con nhỏ, thuế TNCN 2026 là bao nhiêu?"
+> "HKD doanh thu 800 triệu/năm kinh doanh quần áo, thuế khoán tính thế nào?"
+> "Shopee có tự khấu trừ 1,5% thuế TNCN thay tôi không?"
+
+### 🔧 Các tính năng chính
+| Tính năng | Mô tả |
+|---|---|
+| **Tra cứu pháp luật** | Tìm điều khoản, nghị định liên quan đến câu hỏi |
+| **Tính thuế** | Ước tính thuế TNCN, thuế HKD dựa trên số liệu bạn cung cấp |
+| **Hỏi tiếp nối** | Hỏi thêm dựa trên câu trả lời trước (chatbot nhớ ngữ cảnh) |
+| **Xem nguồn** | Bật "Hiển thị nguồn trích dẫn" để xem điều khoản cụ thể |
+| **Lọc văn bản** | Sidebar → chọn văn bản cụ thể để tra cứu trong đó |
+
+### ⚙️ Cài đặt hữu ích (Sidebar)
+- **Hiển thị nguồn trích dẫn** — xem điều khoản, khoản, mục cụ thể được trích dẫn
+- **Dùng cache câu hỏi** — câu hỏi tương tự trả lời ngay, không cần gọi AI lại
+- **Lọc theo văn bản** — tra cứu trong 1 văn bản pháp luật cụ thể
+
+### ⚠️ Lưu ý khi sử dụng
+- Luật TNCN mới (109/2025) có hiệu lực từ **01/01/2026** — hãy ghi rõ năm khi hỏi
+- Chatbot **không thay thế** tư vấn từ cơ quan thuế cho trường hợp đặc thù
+- Câu hỏi càng cụ thể, câu trả lời càng chính xác""",
+}
+
+# ── Gợi ý câu hỏi
 if not st.session_state.messages:
+    # Onboarding buttons
+    st.markdown("**🚀 Bắt đầu từ đây:**")
+    ob_col1, ob_col2 = st.columns(2)
+    if ob_col1.button("📋 Chatbot có thể tư vấn gì? Cho đối tượng nào?",
+                      key="ob_scope", use_container_width=True):
+        st.session_state._pending_question = _STATIC_KEY_SCOPE
+        st.rerun()
+    if ob_col2.button("📖 Hướng dẫn sử dụng & cách đặt câu hỏi hiệu quả",
+                      key="ob_guide", use_container_width=True):
+        st.session_state._pending_question = _STATIC_KEY_GUIDE
+        st.rerun()
+
     st.markdown("**Câu hỏi gợi ý:**")
     suggestions = [
         "Mức giảm trừ gia cảnh cho bản thân và người phụ thuộc năm 2026 là bao nhiêu?",
@@ -611,10 +694,30 @@ if question:
     now_str = datetime.now(TZ_VN).strftime("%H:%M:%S %d/%m/%Y")
     msg_id  = str(uuid.uuid4())[:8]
 
-    # Lưu tin nhắn user
-    user_msg = {"role": "user", "content": question, "time": now_str, "_id": msg_id + "_u"}
+    # Lưu tin nhắn user (map static key → label đẹp)
+    _STATIC_LABELS = {
+        _STATIC_KEY_SCOPE: "📋 Chatbot có thể tư vấn gì? Cho đối tượng nào?",
+        _STATIC_KEY_GUIDE: "📖 Hướng dẫn sử dụng & cách đặt câu hỏi hiệu quả",
+    }
+    display_question = _STATIC_LABELS.get(question, question)
+    user_msg = {"role": "user", "content": display_question, "time": now_str, "_id": msg_id + "_u"}
     st.session_state.messages.append(user_msg)
     _render_message(user_msg, show_sources, show_iters)
+
+    # Static answers — không gọi API
+    if question in _STATIC_ANSWERS:
+        now_str2 = datetime.now(TZ_VN).strftime("%H:%M:%S %d/%m/%Y")
+        static_content = _STATIC_ANSWERS[question]
+        ai_msg = {
+            "role": "assistant", "content": static_content,
+            "time": now_str2, "_id": msg_id + "_a",
+            "sources": [], "citations": [], "iterations": 0,
+            "from_cache": False, "latency_ms": 0,
+        }
+        st.session_state.messages.append(ai_msg)
+        save_session(st.session_state.session_id, st.session_state.messages)
+        _render_message(ai_msg, show_sources, show_iters)
+        st.stop()
 
     # Gọi agent
     with st.spinner("🔍 Đang tra cứu điều khoản..."):
