@@ -585,68 +585,109 @@ _STATIC_KEY_GUIDE   = "__guide__"
 _STATIC_ANSWERS: dict[str, str] = {
     _STATIC_KEY_SCOPE: """## 📋 Phạm vi tư vấn của TaxAI
 
-TaxAI tư vấn pháp luật thuế Việt Nam dựa trên các văn bản pháp luật hiện hành. Dưới đây là phạm vi cụ thể:
+### 👥 Đối tượng được hỗ trợ
 
-### ✅ Đối tượng được hỗ trợ
-- **Cá nhân cư trú** có thu nhập từ tiền lương, tiền công
-- **Hộ kinh doanh (HKD)** — nộp thuế khoán hoặc theo doanh thu thực tế
-- **Cá nhân kinh doanh (CNKD)** — bao gồm bán hàng online, sàn TMĐT
-- **Tổ chức, doanh nghiệp** có nghĩa vụ khấu trừ và quyết toán thuế TNCN thay người lao động
-- **Cá nhân không cư trú** có thu nhập phát sinh tại Việt Nam
+| Đối tượng | Ví dụ cụ thể |
+|---|---|
+| **Cá nhân có thu nhập lương/tiền công** | Người đi làm, người lao động hưởng lương |
+| **Hộ kinh doanh (HKD)** | Cửa hàng tạp hóa, quán ăn, shop thời trang có đăng ký HKD |
+| **Cá nhân kinh doanh (CNKD)** | Bán hàng online, livestream, freelancer |
+| **Người bán trên sàn TMĐT** | Shopee, Lazada, TikTok Shop, Tiki |
+| **Tổ chức/DN khấu trừ thuế TNCN** | Doanh nghiệp trả lương và thực hiện quyết toán thay NLĐ |
+| **Cá nhân không cư trú** | Người nước ngoài có thu nhập phát sinh tại Việt Nam |
+| **Cá nhân có thu nhập khác** | Cho thuê nhà, chuyển nhượng bất động sản, đầu tư vốn |
 
 ### 📚 Văn bản pháp luật được tích hợp
+
+**Luật và Nghị quyết:**
+| Văn bản | Nội dung | Hiệu lực |
+|---|---|---|
+| Luật 109/2025/QH15 | Luật Thuế TNCN (biểu thuế 5 bậc mới) | 01/01/2026 |
+| Luật 108/2025/QH15 | Luật Quản lý thuế (sửa đổi) | 01/01/2026 |
+| Luật 149/2025/QH15 | Luật Thuế GTGT (sửa đổi) | 01/07/2025 |
+| NQ 198/2025/QH15 | Cơ chế ưu đãi thuế phát triển kinh tế tư nhân | 2025 |
+| NQ 110/2025/UBTVQH15 | Mức giảm trừ gia cảnh: 15,5 tr/người, 6,2 tr/NPT | 01/01/2026 |
+
+**Nghị định:**
 | Văn bản | Nội dung |
 |---|---|
-| Luật TNCN 109/2025/QH15 | Luật thuế TNCN mới, hiệu lực 01/01/2026 (biểu thuế 5 bậc) |
-| NĐ 68/2026/NĐ-CP | Hướng dẫn Luật TNCN 109 — giảm trừ, khấu trừ, quyết toán |
-| NĐ 117/2025/NĐ-CP | Thuế HKD, CNKD, sàn TMĐT |
-| TT 152/2025/TT-BTC | Thủ tục hành chính thuế HKD |
-| NĐ 125/2020/NĐ-CP | Xử phạt vi phạm hành chính về thuế |
-| NĐ 126/2020/NĐ-CP | Quản lý thuế, kê khai, quyết toán |
-| Nghị quyết 110/2025/UBTVQH15 | Mức giảm trừ gia cảnh 2026 (15,5tr/người, 6,2tr/NPT) |
-| Công văn 1296/CTNVT | Hướng dẫn quyết toán thuế TNCN kỳ 2025 |
+| NĐ 68/2026/NĐ-CP | Hướng dẫn chi tiết Luật TNCN 109 — tính thuế, khấu trừ, quyết toán |
+| NĐ 117/2025/NĐ-CP | Quản lý thuế TMĐT, HKD, CNKD bán hàng online |
+| NĐ 373/2025/NĐ-CP | Sửa đổi quy định quyết toán thuế TNCN |
+| NĐ 20/2026/NĐ-CP | Hướng dẫn ưu đãi thuế theo NQ 198 |
+| NĐ 310/2025/NĐ-CP | Xử phạt vi phạm hành chính về thuế (mức phạt mới) |
+| NĐ 125/2020/NĐ-CP | Xử phạt vi phạm hành chính về thuế, hóa đơn (gốc) |
+| NĐ 126/2020/NĐ-CP | Quản lý thuế, kê khai, nộp thuế |
+
+**Thông tư và hướng dẫn:**
+| Văn bản | Nội dung |
+|---|---|
+| TT 152/2025/TT-BTC | Chế độ kế toán và sổ sách cho hộ kinh doanh |
+| TT 18/2026/TT-BTC | Hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh |
+| TT 86/2024/TT-BTC | Đăng ký thuế, mã số thuế |
+| CV 1296/CTNVT | Hướng dẫn quyết toán thuế TNCN kỳ tính thuế 2025 |
 
 ### ❌ Ngoài phạm vi tư vấn
 - Thuế thu nhập doanh nghiệp (TNDN)
-- Thuế giá trị gia tăng (GTGT) cho doanh nghiệp lớn
-- Thuế xuất nhập khẩu, thuế tiêu thụ đặc biệt
-- Tư vấn kế toán, kiểm toán nội bộ
+- Thuế xuất nhập khẩu, thuế tiêu thụ đặc biệt (TTĐB)
+- Tư vấn kế toán, kiểm toán, lập báo cáo tài chính doanh nghiệp
+- Tranh chấp pháp lý, khiếu nại hành chính cụ thể
 
-> ⚠️ Thông tin chỉ mang tính tham khảo. Các trường hợp phức tạp nên tham vấn thêm cơ quan thuế hoặc chuyên gia.""",
+> ⚠️ Thông tin mang tính tham khảo dựa trên văn bản pháp luật. Trường hợp đặc thù nên tham vấn cơ quan thuế hoặc chuyên gia tư vấn thuế.""",
 
-    _STATIC_KEY_GUIDE: """## 📖 Hướng dẫn sử dụng TaxAI
+    _STATIC_KEY_GUIDE: """## 📖 Hướng dẫn sử dụng TaxAI hiệu quả
 
-### 🎯 Cách đặt câu hỏi hiệu quả
+### 🎯 Nguyên tắc đặt câu hỏi
 
-**Cung cấp đủ thông tin:**
-- Thu nhập, doanh thu cụ thể (nếu cần tính thuế)
-- Loại hình: cá nhân / HKD / doanh nghiệp
-- Năm tính thuế (2025 hay 2026 áp dụng luật khác nhau)
-- Số người phụ thuộc (nếu liên quan giảm trừ gia cảnh)
+**1. Xác định rõ đối tượng của bạn**
 
-**Ví dụ câu hỏi tốt:**
-> "Tôi có lương 25 triệu/tháng, 1 con nhỏ, thuế TNCN 2026 là bao nhiêu?"
-> "HKD doanh thu 800 triệu/năm kinh doanh quần áo, thuế khoán tính thế nào?"
-> "Shopee có tự khấu trừ 1,5% thuế TNCN thay tôi không?"
+Chatbot phân biệt rõ các trường hợp khác nhau — hãy nêu rõ bạn là ai:
+- ✅ *"Tôi là nhân viên văn phòng hưởng lương..."*
+- ✅ *"Tôi có hộ kinh doanh bán quần áo..."*
+- ✅ *"Tôi bán hàng trên Shopee, không có đăng ký kinh doanh..."*
+- ❌ ~~"Tôi cần đóng thuế bao nhiêu?"~~ (quá mơ hồ)
 
-### 🔧 Các tính năng chính
-| Tính năng | Mô tả |
+**2. Nêu số liệu cụ thể khi hỏi về tính thuế**
+
+| Thay vì hỏi | Hỏi cụ thể hơn |
 |---|---|
-| **Tra cứu pháp luật** | Tìm điều khoản, nghị định liên quan đến câu hỏi |
-| **Tính thuế** | Ước tính thuế TNCN, thuế HKD dựa trên số liệu bạn cung cấp |
-| **Hỏi tiếp nối** | Hỏi thêm dựa trên câu trả lời trước (chatbot nhớ ngữ cảnh) |
-| **Xem nguồn** | Bật "Hiển thị nguồn trích dẫn" để xem điều khoản cụ thể |
-| **Lọc văn bản** | Sidebar → chọn văn bản cụ thể để tra cứu trong đó |
+| "Thuế TNCN tôi bao nhiêu?" | "Lương 22 triệu/tháng, 1 con nhỏ, đóng BHXH 8%, thuế TNCN 2026 là bao nhiêu?" |
+| "HKD đóng thuế thế nào?" | "HKD bán thực phẩm, doanh thu 600 triệu/năm, tỉnh Bình Dương, thuế khoán tính sao?" |
+| "Bán Shopee có đóng thuế không?" | "Tôi bán Shopee doanh thu 200 triệu/năm, cá nhân không đăng ký kinh doanh, phải khai thuế gì?" |
 
-### ⚙️ Cài đặt hữu ích (Sidebar)
-- **Hiển thị nguồn trích dẫn** — xem điều khoản, khoản, mục cụ thể được trích dẫn
-- **Dùng cache câu hỏi** — câu hỏi tương tự trả lời ngay, không cần gọi AI lại
-- **Lọc theo văn bản** — tra cứu trong 1 văn bản pháp luật cụ thể
+**3. Ghi rõ năm áp dụng**
 
-### ⚠️ Lưu ý khi sử dụng
-- Luật TNCN mới (109/2025) có hiệu lực từ **01/01/2026** — hãy ghi rõ năm khi hỏi
-- Chatbot **không thay thế** tư vấn từ cơ quan thuế cho trường hợp đặc thù
-- Câu hỏi càng cụ thể, câu trả lời càng chính xác""",
+Luật TNCN thay đổi lớn từ 01/01/2026 — cùng một câu hỏi có thể có 2 đáp án khác nhau:
+- *"Thuế TNCN năm 2025"* → áp dụng Luật cũ (7 bậc)
+- *"Thuế TNCN năm 2026"* → áp dụng Luật 109/2025 (5 bậc, ngưỡng miễn thuế cao hơn)
+
+**4. Hỏi tiếp nối để đào sâu**
+
+Chatbot nhớ ngữ cảnh trong cùng cuộc hội thoại — bạn không cần lặp lại thông tin:
+> Câu 1: "Tôi lương 20 triệu, 2 con, thuế TNCN 2026 bao nhiêu?"
+> Câu 2: "Nếu tăng lương lên 25 triệu thì sao?" ← chatbot hiểu ngữ cảnh từ câu trước
+
+### 🔧 Các loại câu hỏi được hỗ trợ tốt nhất
+
+| Loại câu hỏi | Ví dụ |
+|---|---|
+| **Tính thuế cụ thể** | "Lương X triệu, Y người phụ thuộc, thuế bao nhiêu?" |
+| **Tra cứu quy định** | "Mức giảm trừ gia cảnh 2026 là bao nhiêu?" |
+| **Thủ tục hành chính** | "Hạn nộp quyết toán thuế TNCN năm 2025 là khi nào?" |
+| **Hỏi về quyền/nghĩa vụ** | "Shopee có khấu trừ thuế thay tôi không?" |
+| **Xử phạt vi phạm** | "Nộp chậm thuế bị phạt bao nhiêu %?" |
+| **So sánh trường hợp** | "HKD và CNKD khác nhau thế nào về thuế?" |
+
+### ⚙️ Tính năng hữu ích trong Sidebar
+- **Hiển thị nguồn trích dẫn** — xem chính xác Điều, Khoản, Nghị định nào được trích dẫn
+- **Dùng cache câu hỏi** — câu hỏi tương tự được trả lời ngay lập tức (không tốn thời gian gọi AI)
+- **Lọc theo văn bản** — khi muốn tra cứu trong một văn bản pháp luật cụ thể
+- **Số bước suy luận** — hiển thị chatbot đã tra cứu qua bao nhiêu bước
+
+### ⚠️ Giới hạn cần lưu ý
+- Kết quả tính thuế là **ước tính** — con số thực tế phụ thuộc vào hồ sơ đầy đủ
+- Không thay thế được **tư vấn cá nhân hóa** từ cơ quan thuế hoặc đại lý thuế
+- Dữ liệu cập nhật đến **tháng 4/2026** — văn bản mới hơn có thể chưa được tích hợp""",
 }
 
 # ── Gợi ý câu hỏi
