@@ -69,18 +69,23 @@ class DocumentEmbedder:
             self._load_model()
 
     def _load_model(self):
+        from sentence_transformers import SentenceTransformer
+        logger.info(f"⏳ Loading model: {self.model_name}")
+        # Thử load offline trước (tránh HuggingFace network call khi đã cache)
         try:
-            from sentence_transformers import SentenceTransformer
-            logger.info(f"⏳ Loading model: {self.model_name}")
-            self.model = SentenceTransformer(self.model_name)
-            logger.info(f"✅ Model loaded: {self.model_name}")
-        except Exception as e:
-            logger.warning(f"⚠️ Failed to load {self.model_name}: {e}")
-            logger.info(f"🔄 Trying fallback: {FALLBACK_MODEL}")
-            from sentence_transformers import SentenceTransformer
-            self.model = SentenceTransformer(FALLBACK_MODEL)
-            self.model_name = FALLBACK_MODEL
-            logger.info(f"✅ Fallback model loaded")
+            self.model = SentenceTransformer(self.model_name, local_files_only=True)
+            logger.info(f"✅ Model loaded (offline cache): {self.model_name}")
+        except Exception:
+            # Cache chưa có → download lần đầu
+            try:
+                self.model = SentenceTransformer(self.model_name)
+                logger.info(f"✅ Model loaded (downloaded): {self.model_name}")
+            except Exception as e:
+                logger.warning(f"⚠️ Failed to load {self.model_name}: {e}")
+                logger.info(f"🔄 Trying fallback: {FALLBACK_MODEL}")
+                self.model = SentenceTransformer(FALLBACK_MODEL)
+                self.model_name = FALLBACK_MODEL
+                logger.info(f"✅ Fallback model loaded")
         _MODEL_CACHE[self.model_name] = self.model
 
     # ── Header builder ────────────────────────────────────────────────────
