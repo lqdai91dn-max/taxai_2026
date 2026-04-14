@@ -140,13 +140,14 @@ class QACache:
         if self.count() == 0:
             return None
 
-        emb  = self._embed(question)
-        hits = self._client.search(
+        emb    = self._embed(question)
+        result = self._client.query_points(
             collection_name = QA_COLLECTION,
-            query_vector    = emb,
+            query           = emb,
             limit           = 1,
             with_payload    = True,
         )
+        hits = result.points
 
         if not hits:
             return None

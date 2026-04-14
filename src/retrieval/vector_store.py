@@ -18,6 +18,7 @@ from qdrant_client.models import (
     Distance, VectorParams, PointStruct,
     Filter, FieldCondition, MatchValue,
     FilterSelector, ScrollRequest,
+    PayloadSchemaType,
 )
 
 from src.retrieval.embedder import Chunk, DocumentEmbedder
@@ -66,6 +67,19 @@ class VectorStore:
                 vectors_config=VectorParams(size=VECTOR_DIM, distance=Distance.COSINE),
             )
             logger.info(f"Created collection '{COLLECTION_NAME}'")
+        # Tạo payload indexes cho các field dùng để filter (bắt buộc với Qdrant Cloud)
+        for field, schema_type in [
+            ("doc_id",    PayloadSchemaType.KEYWORD),
+            ("node_type", PayloadSchemaType.KEYWORD),
+        ]:
+            try:
+                self.client.create_payload_index(
+                    collection_name = COLLECTION_NAME,
+                    field_name      = field,
+                    field_schema    = schema_type,
+                )
+            except Exception:
+                pass  # Index đã tồn tại → no-op
 
     # ── Upsert ────────────────────────────────────────────────────────────────
 
@@ -106,12 +120,11 @@ class VectorStore:
         if filter_node_type:
             conditions.append(FieldCondition(key="node_type", match=MatchValue(value=filter_node_type)))
         if conditions:
-            from qdrant_client.models import Filter as QFilter, Must
-            qfilter = QFilter(must=conditions)
+            qfilter = Filter(must=conditions)
 
-        hits = self.client.search(
+        result = self.client.query_points(
             collection_name = COLLECTION_NAME,
-            query_vector    = query_embedding,
+            query           = query_embedding,
             limit           = n_results,
             query_filter    = qfilter,
             with_payload    = True,
@@ -124,7 +137,7 @@ class VectorStore:
                 "metadata": {k: v for k, v in h.payload.items() if k not in ("chunk_id", "text")},
                 "score":    h.score,
             }
-            for h in hits
+            for h in result.points
         ]
 
     # ── Fetch helpers ─────────────────────────────────────────────────────────

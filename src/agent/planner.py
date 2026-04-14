@@ -805,7 +805,7 @@ class TaxAIAgent:
                         f"[RPD {rpd}/{_rpd_counter.RPD_LIMIT}]"
                     )
                 return response
-            except genai_errors.ClientError as e:
+            except (genai_errors.ClientError, genai_errors.ServerError) as e:
                 msg = str(e)
                 if "API_KEY_INVALID" in msg or "API key expired" in msg:
                     raise RuntimeError("❌ GOOGLE_API_KEY không hợp lệ hoặc hết hạn.") from None
