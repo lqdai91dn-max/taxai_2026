@@ -24,6 +24,7 @@ import re
 import threading
 import time
 from datetime import date
+from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
@@ -37,7 +38,7 @@ from src.utils.answer_logger import log_answer
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-GEMINI_MODEL   = "gemini-3-flash-preview"
+GEMINI_MODEL   = "gemini-2.5-flash"
 MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
 
 # ── Pre-router: lightweight OOD / tax-domain check ───────────────────────────
@@ -86,7 +87,7 @@ EST_TOKENS_PER_CALL = 11_000  # ước lượng: system prompt + chunks + output
 
 # Tắt thinking để tiết kiệm token — gemini-2.5-flash mặc định bật thinking
 # thinkingBudget=0 = không dùng thinking tokens → giảm chi phí ~3-5x
-_NO_THINKING = types.ThinkingConfig(thinkingBudget=0)
+_NO_THINKING = types.ThinkingConfig(thinking_budget=0)
 
 
 # ── Token Bucket Rate Limiter (TPM-based) ─────────────────────────────────────
@@ -905,7 +906,7 @@ class TaxAIAgent:
             system_instruction=system_prompt,
             tools=self._gemini_tools,
             temperature=0.0,   # deterministic — giảm noise benchmark
-            thinkingConfig=_NO_THINKING,
+            thinking_config=_NO_THINKING,
         )
 
         tool_calls_log: list[dict] = []
@@ -930,7 +931,7 @@ class TaxAIAgent:
                 fallback_config = types.GenerateContentConfig(
                     system_instruction=system_prompt,
                     temperature=0.0,
-                    thinkingConfig=_NO_THINKING,
+                    thinking_config=_NO_THINKING,
                 )
                 fb_response = self._call_with_retry(
                     model=self.model, contents=contents, config=fallback_config
@@ -1026,7 +1027,7 @@ class TaxAIAgent:
                         system_instruction=system_prompt,
                         tools=self._gemini_tools,
                         temperature=0.0,
-                        thinkingConfig=_NO_THINKING,
+                        thinking_config=_NO_THINKING,
                     ),
                 )
                 answer_text = "\n".join(
@@ -1050,7 +1051,7 @@ class TaxAIAgent:
                         system_instruction=system_prompt,
                         tools=self._gemini_tools,
                         temperature=0.0,
-                        thinkingConfig=_NO_THINKING,
+                        thinking_config=_NO_THINKING,
                     ),
                 )
                 answer_text = "\n".join(
@@ -1089,7 +1090,7 @@ class TaxAIAgent:
                         config=types.GenerateContentConfig(
                             system_instruction=system_prompt,
                             temperature=0.0,
-                            thinkingConfig=_NO_THINKING,
+                            thinking_config=_NO_THINKING,
                         ),
                     )
                     _rg_text = "\n".join(
