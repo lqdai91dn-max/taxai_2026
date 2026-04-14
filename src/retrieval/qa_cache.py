@@ -47,19 +47,23 @@ import json
 import logging
 import re
 import time
+import uuid
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 from typing import Any
 
-import chromadb
-from chromadb.config import Settings
+from qdrant_client import QdrantClient
+from qdrant_client.models import (
+    Distance, VectorParams, PointStruct,
+    Filter, FieldCondition, MatchValue, FilterSelector,
+)
 
 from src.retrieval.embedder import DocumentEmbedder
+from src.retrieval.vector_store import _make_client, _NAMESPACE, VECTOR_DIM
 
 logger = logging.getLogger(__name__)
 
-CHROMA_DIR        = "data/chroma"
 QA_COLLECTION     = "taxai_qa_cache"
 DEFAULT_THRESHOLD = 0.88   # cosine similarity >= 0.88 → cache hit
 # Note: vietnamese-sbert cho paraphrase ~0.72-0.73, exact = 1.0
@@ -91,7 +95,7 @@ class CacheHit:
 
 class QACache:
     """
-    Semantic Q&A Cache dùng ChromaDB + vietnamese-sbert.
+    Semantic Q&A Cache dùng Qdrant + vietnamese-sbert.
 
     Cơ chế:
       - Embed câu hỏi → search collection → trả về CacheHit nếu similarity đủ cao
@@ -101,41 +105,28 @@ class QACache:
 
     def __init__(
         self,
-        chroma_dir: str = CHROMA_DIR,
         model_name: str = DEFAULT_MODEL,
         threshold: float = DEFAULT_THRESHOLD,
     ):
         self.threshold = threshold
         self.embedder  = DocumentEmbedder(model_name)
-
-        # ChromaDB — dùng cùng persistent client nhưng collection riêng
-        Path(chroma_dir).mkdir(parents=True, exist_ok=True)
-        self._client = chromadb.PersistentClient(
-            path=chroma_dir,
-            settings=Settings(anonymized_telemetry=False),
-        )
-        self._col = self._client.get_or_create_collection(
-            name=QA_COLLECTION,
-            metadata={"hnsw:space": "cosine"},
-        )
-        logger.info(
-            f"QACache initialized — {self._col.count()} entries in '{QA_COLLECTION}'"
-        )
+        self._client   = _make_client()
+        self._ensure_collection()
+        logger.info(f"QACache initialized — {self.count()} entries")
 
     # ── Internal helpers ──────────────────────────────────────────────────────
 
     def _ensure_collection(self) -> None:
-        """Tự phục hồi nếu collection bị xóa ngoài (e.g. flush() từ script khác)."""
+        """Tự phục hồi nếu collection bị xóa ngoài."""
         try:
-            existing = [c.name for c in self._client.list_collections()]
+            existing = [c.name for c in self._client.get_collections().collections]
             if QA_COLLECTION not in existing:
                 raise ValueError("missing")
-            self._col.count()  # second probe — verify object still valid
         except Exception:
             logger.warning("[QACache] Collection missing — recreating...")
-            self._col = self._client.get_or_create_collection(
-                name=QA_COLLECTION,
-                metadata={"hnsw:space": "cosine"},
+            self._client.create_collection(
+                collection_name = QA_COLLECTION,
+                vectors_config  = VectorParams(size=VECTOR_DIM, distance=Distance.COSINE),
             )
 
     # ── Public API ────────────────────────────────────────────────────────────
@@ -146,27 +137,27 @@ class QACache:
         Trả về CacheHit nếu similarity >= threshold, None nếu miss.
         """
         self._ensure_collection()
-        if self._col.count() == 0:
+        if self.count() == 0:
             return None
 
-        emb = self._embed(question)
-        results = self._col.query(
-            query_embeddings=[emb],
-            n_results=1,
-            include=["documents", "metadatas", "distances"],
+        emb  = self._embed(question)
+        hits = self._client.search(
+            collection_name = QA_COLLECTION,
+            query_vector    = emb,
+            limit           = 1,
+            with_payload    = True,
         )
 
-        if not results["ids"] or not results["ids"][0]:
+        if not hits:
             return None
 
-        distance   = results["distances"][0][0]   # ChromaDB cosine: distance = 1 - similarity
-        similarity = 1.0 - distance
+        similarity = hits[0].score   # Qdrant cosine: score = similarity directly
         if similarity < self.threshold:
             logger.debug(f"[QACache] MISS (sim={similarity:.3f} < {self.threshold})")
             return None
 
-        meta            = results["metadatas"][0][0]
-        cached_question = results["documents"][0][0]
+        meta            = hits[0].payload
+        cached_question = meta.get("question", "")
 
         # Version check — skip nếu entry từ pipeline version cũ
         entry_version = meta.get("cache_version", "")
@@ -210,19 +201,24 @@ class QACache:
         Return CacheHit nếu tồn tại entry với cùng hash, None nếu miss.
         """
         self._ensure_collection()
-        qid = _question_id(question, top_doc_ids)
+        qid     = _question_id(question, top_doc_ids)
+        pt_id   = str(uuid.uuid5(_NAMESPACE, qid))
         try:
-            result = self._col.get(ids=[qid], include=["documents", "metadatas"])
+            pts = self._client.retrieve(
+                collection_name = QA_COLLECTION,
+                ids             = [pt_id],
+                with_payload    = True,
+            )
         except Exception as e:
             logger.debug(f"[QACache] lookup_exact error: {e}")
             return None
 
-        if not result["ids"]:
+        if not pts:
             logger.debug(f"[QACache] EXACT MISS (id={qid[:8]})")
             return None
 
-        meta            = result["metadatas"][0]
-        cached_question = result["documents"][0]
+        meta            = pts[0].payload
+        cached_question = meta.get("question", "")
 
         entry_version = meta.get("cache_version", "")
         if entry_version != CACHE_VERSION:
@@ -278,23 +274,23 @@ class QACache:
         """
         self._ensure_collection()
         question_id = _question_id(question, top_doc_ids)
+        pt_id       = str(uuid.uuid5(_NAMESPACE, question_id))
         emb         = self._embed(question)
 
-        metadata: dict[str, Any] = {
-            "answer":        answer,                 # full answer, không cắt
+        payload: dict[str, Any] = {
+            "question":      question,
+            "answer":        answer,
             "key_facts":     json.dumps(key_facts or [], ensure_ascii=False),
             "topic":         topic,
             "source_round":  source_round,
             "cache_version": CACHE_VERSION,
             "top_doc_ids":   json.dumps(sorted(top_doc_ids) if top_doc_ids else []),
-            "created_at":    time.time(),            # P3 — soft TTL 24h
+            "created_at":    time.time(),
         }
 
-        self._col.upsert(
-            ids=[question_id],
-            embeddings=[emb],
-            documents=[question],
-            metadatas=[metadata],
+        self._client.upsert(
+            collection_name = QA_COLLECTION,
+            points          = [PointStruct(id=pt_id, vector=emb, payload=payload)],
         )
         logger.debug(
             f"[QACache] Stored '{question[:60]}' (id={question_id[:8]}, "
@@ -303,23 +299,22 @@ class QACache:
         return question_id
 
     def count(self) -> int:
-        return self._col.count()
+        try:
+            return self._client.count(collection_name=QA_COLLECTION).count
+        except Exception:
+            return 0
 
     def flush(self) -> int:
-        """
-        Xóa toàn bộ entries trong collection.
-        Dùng khi cần reset cache sau khi nâng CACHE_VERSION.
-        Trả về số entries đã xóa.
-        """
-        n = self._col.count()
+        """Xóa toàn bộ entries. Dùng khi nâng CACHE_VERSION."""
+        n = self.count()
         if n == 0:
             return 0
         self._client.delete_collection(QA_COLLECTION)
-        self._col = self._client.get_or_create_collection(
-            name=QA_COLLECTION,
-            metadata={"hnsw:space": "cosine"},
+        self._client.create_collection(
+            collection_name = QA_COLLECTION,
+            vectors_config  = VectorParams(size=VECTOR_DIM, distance=Distance.COSINE),
         )
-        logger.info(f"[QACache] Flushed {n} entries (version bump to {CACHE_VERSION})")
+        logger.info(f"[QACache] Flushed {n} entries (version={CACHE_VERSION})")
         return n
 
 
@@ -371,8 +366,11 @@ class QACache:
 
             # Kiểm tra đã tồn tại chưa
             if not overwrite:
-                existing = self._col.get(ids=[qid], include=[])
-                if existing["ids"]:
+                pt_id   = str(uuid.uuid5(_NAMESPACE, qid))
+                existing = self._client.retrieve(
+                    collection_name=QA_COLLECTION, ids=[pt_id], with_payload=False
+                )
+                if existing:
                     skipped += 1
                     continue
 

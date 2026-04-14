@@ -393,6 +393,9 @@ class DocumentEmbedder:
                 "title":           title_short,
                 "depth":           0,
                 "effective_date":  doc_meta.get("effective_date", ""),
+                "effective_to":    doc_meta.get("effective_to", ""),
+                "status":          doc_meta.get("status", ""),
+                "superseded_by":   doc_meta.get("superseded_by", ""),
                 "parent_dieu_index":  "",
                 "parent_khoan_index": "",
             }
@@ -544,6 +547,10 @@ class DocumentEmbedder:
                     "referenced_node_ids":  json.dumps(ref_ids),
                     # B3 — Amendment expansion
                     "amended_by_doc_ids":   json.dumps(AMENDED_BY.get(doc_id, [])),
+                    # Validity window
+                    "effective_to":         doc_meta.get("effective_to", ""),
+                    "status":               doc_meta.get("status", ""),
+                    "superseded_by":        doc_meta.get("superseded_by", ""),
                 }
             )
             chunks.append(chunk)

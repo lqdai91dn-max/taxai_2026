@@ -225,7 +225,7 @@ _HKD_INJECT_GATE = re.compile(
 from rank_bm25 import BM25Okapi
 
 from src.retrieval.embedder import Chunk, DocumentEmbedder
-from src.retrieval.vector_store import VectorStore, CHROMA_DIR
+from src.retrieval.vector_store import VectorStore
 from src.retrieval.scope_classifier import classify_scope, apply_scope_boost
 from src.retrieval.build_exception_index import EXCEPTION_INDEX_PATH
 
@@ -285,14 +285,10 @@ class HybridSearch:
 
     def __init__(
         self,
-        chroma_dir: str = CHROMA_DIR,
         model_name: str = "keepitreal/vietnamese-sbert",
     ):
-        # Load embedder và vector store
         self.embedder = DocumentEmbedder(model_name)
-        self.store    = VectorStore(chroma_dir)
-
-        # Build BM25 index từ ChromaDB
+        self.store    = VectorStore()
         self._build_bm25_index()
 
         # Load exception index (C2) — O(1) lookup at runtime
@@ -310,24 +306,21 @@ class HybridSearch:
     # ── BM25 Index ───────────────────────────────────────────────────────
 
     def _build_bm25_index(self):
-        """Load tất cả chunks từ ChromaDB → build BM25 index"""
+        """Load tất cả chunks từ Qdrant → build BM25 index"""
         logger.info("🔨 Building BM25 index...")
 
-        # Lấy tất cả documents từ ChromaDB
         total = self.store.count()
         if total == 0:
-            logger.warning("⚠️ ChromaDB trống — chưa index documents!")
-            self.bm25       = None
+            logger.warning("⚠️ Qdrant trống — chưa index documents!")
+            self.bm25        = None
             self.bm25_chunks = []
             return
 
-        results = self.store.collection.get(
-            include=["documents", "metadatas"]
-        )
+        results = self.store.get_all()
 
-        self.bm25_ids      = results["ids"]
-        self.bm25_texts    = results["documents"]
-        self.bm25_metas    = results["metadatas"]
+        self.bm25_ids   = results["ids"]
+        self.bm25_texts = results["documents"]
+        self.bm25_metas = results["metadatas"]
 
         # Tokenize và build BM25
         tokenized = [tokenize_vi(text) for text in self.bm25_texts]

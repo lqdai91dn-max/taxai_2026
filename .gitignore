@@ -174,8 +174,9 @@ backup/
 # Project instructions (local-only, not for repo)
 CLAUDE.md
 
-# ChromaDB runtime data (vector DB, regeneratable)
+# Vector DB runtime data (regeneratable)
 data/chroma/
+data/qdrant/
 
 # Chat history (runtime user data)
 data/chat_history/

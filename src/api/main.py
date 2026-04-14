@@ -3,8 +3,8 @@ src/api/main.py — FastAPI backend cho TaxAI Legal Chatbot.
 
 Endpoints:
   POST /chat          — trả lời câu hỏi pháp luật thuế
-  GET  /health        — health check (ChromaDB + Neo4j + Gemini)
-  GET  /docs_list     — danh sách văn bản đã index
+  GET  /health        — health check (ChromaDB + Gemini)
+  GET  /docs_list     — danh sách văn bản đã index (từ data/parsed/)
 """
 
 from __future__ import annotations
@@ -39,11 +39,6 @@ async def lifespan(app: FastAPI):
     _agent     = TaxAIAgent()
     logger.info("✅ TaxAI ready (pipeline + agent)")
     yield
-    if _generator and hasattr(_generator, "_neo4j"):
-        try:
-            _generator._neo4j.close()
-        except Exception:
-            pass
     logger.info("👋 TaxAI shutdown")
 
 
@@ -124,7 +119,6 @@ class AgentResponse(BaseModel):
 class HealthResponse(BaseModel):
     status:    str
     chroma_ok: bool
-    neo4j_ok:  bool
     gemini_ok: bool
     chunks:    int
 
@@ -235,7 +229,6 @@ async def agent_chat(req: AgentRequest):
 async def health():
     """Kiểm tra trạng thái hệ thống."""
     chroma_ok = False
-    neo4j_ok  = False
     gemini_ok = False
     chunks    = 0
 
@@ -248,22 +241,13 @@ async def health():
     except Exception:
         pass
 
-    # Neo4j
-    try:
-        from src.graph.neo4j_client import Neo4jClient
-        with Neo4jClient() as c:
-            neo4j_ok = c.ping()
-    except Exception:
-        pass
-
     # Gemini — lightweight check (chỉ verify API key present)
     gemini_ok = bool(os.environ.get("GOOGLE_API_KEY"))
 
-    overall = "ok" if (chroma_ok and neo4j_ok and gemini_ok) else "degraded"
+    overall = "ok" if (chroma_ok and gemini_ok) else "degraded"
     return HealthResponse(
         status    = overall,
         chroma_ok = chroma_ok,
-        neo4j_ok  = neo4j_ok,
         gemini_ok = gemini_ok,
         chunks    = chunks,
     )
@@ -271,31 +255,25 @@ async def health():
 
 @app.get("/docs_list", response_model=list[DocItem])
 async def docs_list():
-    """Danh sách văn bản pháp luật đã index trong Neo4j."""
-    try:
-        from src.graph.neo4j_client import Neo4jClient
-        with Neo4jClient() as c:
-            rows = c.run("""
-MATCH (d)
-WHERE d:Document OR d:GuidanceDocument
-RETURN d.doc_id AS doc_id, d.doc_number AS doc_number,
-       d.doc_type AS doc_type, d.title AS title,
-       d.status AS status, d.valid_from AS valid_from
-ORDER BY d.hierarchy_rank, d.doc_id
-""")
-        return [
-            DocItem(
-                doc_id          = r["doc_id"] or "",
-                document_number = r["doc_number"] or "",
-                document_type   = r["doc_type"] or "",
-                title           = r["title"] or "",
-                status          = r["status"] or "",
-                valid_from      = r["valid_from"],
-            )
-            for r in rows
-        ]
-    except Exception as e:
-        raise HTTPException(500, f"Neo4j error: {e}")
+    """Danh sách văn bản pháp luật đã parse (từ data/parsed/)."""
+    import json
+    from pathlib import Path
+    parsed_dir = Path("data/parsed")
+    items = []
+    for f in sorted(parsed_dir.glob("*.json")):
+        try:
+            meta = json.loads(f.read_text(encoding="utf-8"))
+            items.append(DocItem(
+                doc_id          = meta.get("doc_id", f.stem),
+                document_number = meta.get("doc_number", ""),
+                document_type   = meta.get("doc_type", ""),
+                title           = meta.get("title", "")[:100],
+                status          = meta.get("status", "active"),
+                valid_from      = meta.get("valid_from"),
+            ))
+        except Exception:
+            continue
+    return items
 
 
 # ── Dev runner ────────────────────────────────────────────────────────────────

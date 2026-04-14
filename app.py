@@ -486,6 +486,32 @@ def _render_message(msg: dict, show_sources: bool, show_iters: bool) -> None:
 with st.spinner("⏳ Đang khởi động TaxAI (lần đầu ~15s)..."):
     _prewarm_resources()
 
+# ── Auth gate ────────────────────────────────────────────────────────────────
+
+def _check_auth() -> bool:
+    """Password gate for beta. Set APP_PASSWORD in .env or st.secrets."""
+    try:
+        app_pw = os.getenv("APP_PASSWORD", "") or st.secrets.get("APP_PASSWORD", "")
+    except Exception:
+        app_pw = os.getenv("APP_PASSWORD", "")
+    if not app_pw:
+        return True  # No password configured → open access (local dev)
+    if st.session_state.get("_authenticated"):
+        return True
+    st.title("⚖️ TaxAI — Beta Access")
+    st.caption("Vui lòng nhập mật khẩu để tiếp tục.")
+    pw = st.text_input("Mật khẩu:", type="password", key="_auth_input")
+    if st.button("Đăng nhập", key="_auth_btn"):
+        if pw == app_pw:
+            st.session_state["_authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Mật khẩu không đúng.")
+    st.stop()
+    return False
+
+_check_auth()
+
 # ── Session state init ────────────────────────────────────────────────────────
 
 if "session_id" not in st.session_state:

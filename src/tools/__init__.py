@@ -1,5 +1,5 @@
 """
-Tool registry cho Tax AI — 8 tools active.
+Tool registry cho TaxAI — 6 tools active.
 
 Phase A (deterministic calculators):
   1. calculate_tax_hkd              — GTGT + TNCN cho HKD (phương pháp doanh thu)
@@ -7,19 +7,11 @@ Phase A (deterministic calculators):
   3. calculate_deduction            — Giảm trừ gia cảnh TNCN
   4. calculate_tax_hkd_profit       — GTGT + TNCN cho HKD (phương pháp lợi nhuận)
 
-Phase B (retrieval + lookup wrappers):
+Phase B (retrieval):
   5. search_legal_docs              — hybrid BM25 + vector search
-  6. check_doc_validity             — hiệu lực văn bản tại một ngày
-  7. resolve_legal_reference        — parse citation text → doc_id + article_id
 
 Phase B+ (rule engine):
-  8. evaluate_tax_obligation        — Rule engine: miễn thuế, kỳ kê khai, HĐĐT, TMĐT
-
-DISABLED (Neo4j offline — silent fail, burns iterations):
-  - get_article                    → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
-  - get_article_with_amendments    → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
-  - get_impl_chain                 → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
-  - get_guidance                   → TOOL_REGISTRY only, NOT in TOOL_DEFINITIONS
+  6. evaluate_tax_obligation        — Rule engine: miễn thuế, kỳ kê khai, HĐĐT, TMĐT
 
 Usage:
     from src.tools import TOOL_DEFINITIONS, TOOL_REGISTRY
@@ -36,37 +28,21 @@ from src.tools.calculator_tools import (
     TAX_HKD_TNCN_PROFIT_BRACKETS,
     TAX_TNCN_PROGRESSIVE_BRACKETS,
 )
-from src.tools.retrieval_tools import (
-    search_legal_docs,
-    get_article,
-    get_guidance,
-    get_impl_chain,
-)
-from src.tools.lookup_tools import (
-    check_doc_validity,
-    resolve_legal_reference,
-    get_article_with_amendments,
-)
+from src.tools.retrieval_tools import search_legal_docs
 from src.tools.rule_engine import evaluate_tax_obligation
 
-# ── Tool registry — dùng trong Phase C planner ───────────────────────────────
+# ── Tool registry — dùng trong planner ──────────────────────────────────────
 
 TOOL_REGISTRY: dict = {
     # Phase A — calculators
-    "calculate_tax_hkd":           calculate_tax_hkd,
-    "calculate_tncn_progressive":  calculate_tncn_progressive,
-    "calculate_deduction":         calculate_deduction,
-    "calculate_tax_hkd_profit":    calculate_tax_hkd_profit,
+    "calculate_tax_hkd":          calculate_tax_hkd,
+    "calculate_tncn_progressive": calculate_tncn_progressive,
+    "calculate_deduction":        calculate_deduction,
+    "calculate_tax_hkd_profit":   calculate_tax_hkd_profit,
     # Phase B — retrieval
-    "search_legal_docs":           search_legal_docs,
-    "get_article":                 get_article,
-    "check_doc_validity":          check_doc_validity,
-    "get_guidance":                get_guidance,
-    "get_impl_chain":              get_impl_chain,
-    "resolve_legal_reference":     resolve_legal_reference,
-    "get_article_with_amendments": get_article_with_amendments,
+    "search_legal_docs":          search_legal_docs,
     # Phase B+ — rule engine
-    "evaluate_tax_obligation":     evaluate_tax_obligation,
+    "evaluate_tax_obligation":    evaluate_tax_obligation,
 }
 
 # ── Gemini function calling definitions ──────────────────────────────────────
@@ -206,7 +182,6 @@ TOOL_DEFINITIONS = [
             "required": ["query"],
         },
     },
-    # get_article — DISABLED: Neo4j offline, silent fail burns iterations
     {
         "name": "check_doc_validity",
         "description": (
@@ -229,8 +204,6 @@ TOOL_DEFINITIONS = [
             "required": ["doc_id"],
         },
     },
-    # get_guidance  — DISABLED: Neo4j offline, silent fail burns iterations
-    # get_impl_chain — DISABLED: Neo4j offline, silent fail burns iterations
     {
         "name": "resolve_legal_reference",
         "description": (
@@ -252,8 +225,6 @@ TOOL_DEFINITIONS = [
             "required": ["reference_text"],
         },
     },
-    # get_article_with_amendments — DISABLED: Neo4j offline, silent fail burns iterations
-
     # ── Phase B+ — Rule engine ────────────────────────────────────────────────
     {
         "name": "evaluate_tax_obligation",
@@ -295,12 +266,6 @@ __all__ = [
     "calculate_tax_hkd_profit",
     # Phase B
     "search_legal_docs",
-    "get_article",
-    "check_doc_validity",
-    "get_guidance",
-    "get_impl_chain",
-    "resolve_legal_reference",
-    "get_article_with_amendments",
     # Phase B+
     "evaluate_tax_obligation",
     # Registry

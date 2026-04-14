@@ -14,8 +14,6 @@ from google.genai import errors as genai_errors
 
 from src.retrieval.hybrid_search import HybridSearch
 from src.retrieval.query_classifier import classify, QueryIntent
-from src.graph.graph_retriever import GraphRetriever
-from src.graph.neo4j_client import Neo4jClient
 
 load_dotenv()
 
@@ -79,17 +77,6 @@ class AnswerGenerator:
             chroma_dir   = chroma_dir,
             model_name   = embedding_model,
         )
-
-        # Graph retriever
-        self.grapher: Optional[GraphRetriever] = None
-        try:
-            self._neo4j  = Neo4jClient()
-            self.grapher = GraphRetriever(self._neo4j)
-            self._graph_ok = True
-            logger.info("✅ GraphRetriever connected")
-        except Exception as e:
-            self._graph_ok = False
-            logger.warning(f"⚠️ Neo4j not available — graph features disabled: {e}")
 
         logger.info(f"✅ AnswerGenerator initialized — model: {model}")
 
