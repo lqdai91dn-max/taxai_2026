@@ -73,7 +73,7 @@ class VectorStore:
         if not chunks:
             return 0
 
-        batch_size = 100
+        batch_size = 50
         total = 0
         for i in range(0, len(chunks), batch_size):
             points = [
@@ -84,7 +84,7 @@ class VectorStore:
                 )
                 for j, c in enumerate(chunks[i:i + batch_size])
             ]
-            self.client.upsert(collection_name=COLLECTION_NAME, points=points)
+            self.client.upsert(collection_name=COLLECTION_NAME, points=points, timeout=60)
             total += len(points)
 
         logger.info(f"Upserted {total} chunks — total: {self.count()}")
