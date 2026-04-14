@@ -38,7 +38,7 @@ from src.utils.answer_logger import log_answer
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-GEMINI_MODEL   = "gemini-3-flash-preview"
+GEMINI_MODEL   = "gemini-2.5-flash"
 MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
 
 # ── Pre-router: lightweight OOD / tax-domain check ───────────────────────────
@@ -772,7 +772,7 @@ class TaxAIAgent:
 
     # ── Gemini API call with retry ────────────────────────────────────────────
 
-    def _call_with_retry(self, model: str, contents, config, max_retries: int = 2):
+    def _call_with_retry(self, model: str, contents, config, max_retries: int = 4):
         """
         Gọi Gemini generate_content với rate limiting proactive + retry 429.
 
