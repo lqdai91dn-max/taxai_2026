@@ -38,7 +38,7 @@ from src.utils.answer_logger import log_answer
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-GEMINI_MODEL   = "gemini-2.5-flash"
+GEMINI_MODEL   = "gemini-3-flash-preview"
 MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
 
 # ── Pre-router: lightweight OOD / tax-domain check ───────────────────────────
