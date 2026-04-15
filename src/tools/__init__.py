@@ -53,9 +53,10 @@ TOOL_DEFINITIONS = [
         "name": "calculate_tax_hkd",
         "description": (
             "Tính thuế GTGT và thuế TNCN cho hộ kinh doanh / cá nhân kinh doanh "
-            "theo Nghị định 68/2026/NĐ-CP. "
-            "Trả về breakdown từng loại thuế kèm citation điều luật. "
-            "Dùng khi user hỏi về số tiền thuế phải đóng của HKD."
+            "theo Nghị định 68/2026/NĐ-CP — phương pháp tỷ lệ % doanh thu (mặc định). "
+            "Công thức: GTGT = doanh thu × tỷ lệ%; TNCN = TOÀN BỘ doanh thu × tỷ lệ% ngành. "
+            "Dùng cho HKD doanh thu ≤3 tỷ khi không biết chi phí, hoặc doanh thu ≤500M (miễn thuế). "
+            "Trả về breakdown từng loại thuế kèm citation điều luật."
         ),
         "parameters": {
             "type": "object",
@@ -125,10 +126,12 @@ TOOL_DEFINITIONS = [
     {
         "name": "calculate_tax_hkd_profit",
         "description": (
-            "Tính thuế GTGT + TNCN cho HKD theo phương pháp lợi nhuận. "
-            "Dùng cho HKD doanh thu > 3 tỷ (bắt buộc) hoặc 500M–3B (tự chọn). "
-            "Công thức TNCN: (Doanh thu − Chi phí hợp lý) × Thuế suất. "
-            "KHÁC với calculate_tax_hkd (phương pháp doanh thu: DT − 500M)."
+            "Tính thuế GTGT + TNCN cho HKD theo phương pháp lợi nhuận (thu nhập tính thuế). "
+            "Dùng khi: (1) HKD doanh thu > 3 tỷ — BẮT BUỘC; "
+            "(2) HKD doanh thu 500M–3B — TỰ CHỌN, phải ổn định ≥2 năm. "
+            "Yêu cầu biết chi phí hợp lý hợp lệ. "
+            "Công thức TNCN: (Doanh thu − Chi phí hợp lý) × Thuế suất bậc. "
+            "KHÔNG dùng tool này khi user không cung cấp chi phí — dùng calculate_tax_hkd thay thế."
         ),
         "parameters": {
             "type": "object",
