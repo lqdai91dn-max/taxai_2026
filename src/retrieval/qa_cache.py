@@ -42,6 +42,8 @@ Seed từ benchmark:
 
 from __future__ import annotations
 
+import calendar
+import functools
 import hashlib
 import json
 import logging
@@ -167,6 +169,18 @@ class QACache:
                 f"[QACache] VERSION MISMATCH — entry={entry_version} current={CACHE_VERSION}, skip"
             )
             return None
+
+        # S-007: Staleness guard — invalidate entries predating major law changes.
+        # Ví dụ: entry seeded trước 02/04/2026 (NĐ68) có thể dùng sai ngưỡng 100M/TT40.
+        _created_at = meta.get("created_at")
+        if _created_at is not None:
+            _stale_date = _check_law_staleness(float(_created_at))
+            if _stale_date:
+                logger.info(
+                    "[QACache/S-007] STALE — entry created %.0f predates law change %s, miss",
+                    float(_created_at), _stale_date,
+                )
+                return None
 
         answer        = meta.get("answer", "")
         key_facts_raw = meta.get("key_facts", "[]")
@@ -404,6 +418,62 @@ class QACache:
         return self.embedder.model.encode(
             text, normalize_embeddings=True
         ).tolist()
+
+
+# ── S-007: Law Staleness Guard ────────────────────────────────────────────────
+
+_LAW_VALIDITY_PATH    = Path(__file__).parents[2] / "data/law_validity.json"
+_RECENT_LAW_CUTOFF    = date(2025, 1, 1)   # chỉ xét luật hiệu lực từ 2025 trở đi
+
+
+@functools.lru_cache(maxsize=1)
+def _load_law_change_timestamps() -> tuple[tuple[float, str], ...]:
+    """
+    Đọc law_validity.json, trả về tuple sorted (unix_ts, date_str)
+    cho các luật có status active/active_until_superseded, effective_from >= 2025-01-01.
+
+    lru_cache(1) → chỉ đọc file 1 lần, không re-parse mỗi request.
+    """
+    try:
+        data = json.loads(_LAW_VALIDITY_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        logger.debug("[QACache/S-007] Không đọc được law_validity.json — staleness guard tắt")
+        return ()
+
+    today  = date.today()
+    result: list[tuple[float, str]] = []
+
+    for info in data.get("documents", {}).values():
+        if info.get("status") not in ("active", "active_until_superseded"):
+            continue
+        eff_str = info.get("effective_from", "")
+        if not eff_str:
+            continue
+        try:
+            eff_date = date.fromisoformat(eff_str)
+        except ValueError:
+            continue
+        if eff_date < _RECENT_LAW_CUTOFF:   # bỏ qua luật cũ trước 2025
+            continue
+        if eff_date > today:                 # bỏ qua luật chưa có hiệu lực
+            continue
+        ts = float(calendar.timegm(eff_date.timetuple()))
+        result.append((ts, eff_str))
+
+    return tuple(sorted(result))
+
+
+def _check_law_staleness(created_at: float) -> str | None:
+    """
+    Trả về effective_from date string của luật đầu tiên có hiệu lực SAU created_at.
+    None nếu entry vẫn còn phù hợp với corpus luật hiện tại.
+
+    Ví dụ: entry created 2026-03-01 < NĐ68 effective 2026-04-02 → stale, trả "2026-04-02".
+    """
+    for law_ts, date_str in _load_law_change_timestamps():
+        if created_at < law_ts:
+            return date_str
+    return None
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

@@ -1,0 +1,122 @@
+{
+  "_comment": "Manifest hiệu lực văn bản pháp luật trong TaxAI database. Update khi thêm văn bản mới hoặc khi luật thay đổi.",
+  "_last_updated": "2026-04-15",
+  "documents": {
+    "68_2026_NDCP": {
+      "name": "Nghị định 68/2026/NĐ-CP về thuế GTGT, TNCN đối với HKD và cá nhân KD",
+      "effective_from": "2026-04-02",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": ["TT40_2021_TTBTC"],
+      "note": "Văn bản chính về HKD từ 05/03/2026 (ký) / 02/04/2026 (hiệu lực thực tế một số điều)"
+    },
+    "18_2026_TTBTC": {
+      "name": "Thông tư 18/2026/TT-BTC hướng dẫn khai thuế HKD",
+      "effective_from": "2026-04-02",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Hướng dẫn mẫu biểu tờ khai HKD/CNKD"
+    },
+    "109_2025_QH15": {
+      "name": "Luật Thuế TNCN 109/2025/QH15",
+      "effective_from": "2026-07-01",
+      "effective_to": null,
+      "status": "pending",
+      "supersedes": ["111_2013_TTBTC", "92_2015_TTBTC"],
+      "note": "CHƯA có hiệu lực đến 01/07/2026. Không dùng làm luật hiện hành khi tư vấn trước ngày này."
+    },
+    "108_2025_QH15": {
+      "name": "Luật Quản lý Thuế 108/2025/QH15",
+      "effective_from": "2026-07-01",
+      "effective_to": null,
+      "status": "pending",
+      "supersedes": ["LQT_38_2019"],
+      "note": "CHƯA có hiệu lực đến 01/07/2026. Điều 13+26 về HKD/CNKD có hiệu lực từ 01/01/2026."
+    },
+    "110_2025_UBTVQH15": {
+      "name": "Nghị quyết 110/2025/UBTVQH15 về mức giảm trừ gia cảnh",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": ["NQ954_2020_UBTVQH14"],
+      "note": "Mức mới: bản thân 15,5 triệu/tháng, người phụ thuộc 6,2 triệu/tháng. Hiệu lực từ 01/01/2026."
+    },
+    "111_2013_TTBTC": {
+      "name": "Thông tư 111/2013/TT-BTC hướng dẫn Luật Thuế TNCN",
+      "effective_from": "2013-10-01",
+      "effective_to": "2026-06-30",
+      "status": "active_until_superseded",
+      "superseded_by": "109_2025_QH15",
+      "note": "Còn hiệu lực đến 30/06/2026. Từ 01/07/2026 bị thay thế bởi Luật 109."
+    },
+    "92_2015_TTBTC": {
+      "name": "Thông tư 92/2015/TT-BTC sửa đổi hướng dẫn TNCN",
+      "effective_from": "2015-07-30",
+      "effective_to": "2026-06-30",
+      "status": "active_until_superseded",
+      "superseded_by": "109_2025_QH15",
+      "note": "Còn hiệu lực đến 30/06/2026."
+    },
+    "LQT_38_2019": {
+      "name": "Luật Quản lý Thuế 38/2019/QH14",
+      "effective_from": "2020-07-01",
+      "effective_to": "2026-06-30",
+      "status": "active_until_superseded",
+      "superseded_by": "108_2025_QH15",
+      "note": "Còn hiệu lực đến 30/06/2026."
+    },
+    "117_2025_NDCP": {
+      "name": "Nghị định 117/2025/NĐ-CP về quản lý thuế TMĐT",
+      "effective_from": "2025-07-01",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Quy định quản lý thuế với hoạt động TMĐT, nền tảng số"
+    },
+    "126_2020_NDCP": {
+      "name": "Nghị định 126/2020/NĐ-CP hướng dẫn Luật Quản lý Thuế",
+      "effective_from": "2020-12-05",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Thủ tục khai thuế, quyết toán TNCN, ngoại lệ, điều kiện miễn khai"
+    },
+    "125_2020_NDCP": {
+      "name": "Nghị định 125/2020/NĐ-CP về xử phạt vi phạm thuế",
+      "effective_from": "2020-12-05",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Mức phạt, điều kiện không bị phạt, tiền chậm nộp"
+    },
+    "152_2025_TTBTC": {
+      "name": "Thông tư 152/2025/TT-BTC về chế độ kế toán HKD",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Sổ sách kế toán HKD, mẫu sổ S1a/S2a/S3a-HKD"
+    },
+    "20_2026_NDCP": {
+      "name": "Nghị định 20/2026/NĐ-CP về chuyển đổi số HKD",
+      "effective_from": "2026-04-02",
+      "effective_to": null,
+      "status": "active",
+      "supersedes": [],
+      "note": "Cung cấp miễn phí phần mềm kế toán, nền tảng số cho HKD"
+    }
+  },
+  "not_in_database": {
+    "139_2016_NDCP": {
+      "name": "Nghị định 139/2016/NĐ-CP về lệ phí môn bài",
+      "note": "KHÔNG có trong database. Không cite số tiền cụ thể từ văn bản này.",
+      "amended_by": "22_2020_NDCP"
+    },
+    "TT40_2021_TTBTC": {
+      "name": "Thông tư 40/2021/TT-BTC về thuế HKD (cũ)",
+      "note": "ĐÃ BỊ THAY THẾ bởi NĐ68/2026 từ 02/04/2026. Không dùng làm căn cứ.",
+      "superseded_by": "68_2026_NDCP"
+    }
+  }
+}

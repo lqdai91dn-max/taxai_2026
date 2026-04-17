@@ -16,6 +16,7 @@ Rules được enforce qua system prompt:
 
 from __future__ import annotations
 
+import functools
 import json
 import logging
 import os
@@ -428,6 +429,40 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
      - Dịch vụ (services): GTGT 5% + TNCN 2%
      - Sản xuất/vận tải/xây dựng: GTGT 3% + TNCN 1.5%
    - 15%/17%/20% là thuế suất của **phương pháp lợi nhuận** — KHÔNG áp dụng khi user không có chi phí hợp lệ.
+
+⚠️ **CÔNG THỨC TNCN — CẤM TUYỆT ĐỐI các dạng sai sau (đây là hallucination phổ biến):**
+   - **SAI**: `(doanh thu − 500 triệu) × 15%` — 500M là ngưỡng miễn, KHÔNG phải khoản trừ. Không có công thức này.
+   - **SAI**: `(doanh thu − 500 triệu) × 0.5%` — tương tự, KHÔNG trừ 500M.
+   - **SAI**: `doanh thu × 15%` — 15% là thuế suất PP lợi nhuận, KHÔNG phải PP doanh thu.
+   - **ĐÚNG (PP tỷ lệ % doanh thu)**: `doanh thu × 0.5%` (hàng hóa), tính trên TOÀN BỘ doanh thu.
+   - **ĐÚNG (PP lợi nhuận)**: `(doanh thu − chi phí hợp lý) × 15%` — CHỈ dùng khi user cung cấp chi phí.
+   - 500 triệu chỉ là **ngưỡng để xác định có phải nộp thuế không**. Nếu DT > 500M → tính trên TOÀN BỘ DT.
+
+⚠️ **TRÌNH BÀY KẾT QUẢ CALCULATOR — BẮT BUỘC DÙNG NGUYÊN VĂN TỪ TOOL OUTPUT:**
+   - Khi trình bày công thức tính thuế, PHẢI dùng đúng chuỗi `formula` trong field `breakdown` của tool output.
+   - KHÔNG được tự diễn giải lại hoặc viết lại công thức bằng ngôn ngữ khác.
+   - Ví dụ **ĐÚNG** (copy từ tool output): `1,200,000,000 × 0.5% = 6,000,000 VND`
+   - Field `summary` trong tool output là chuỗi tóm tắt đã được format sẵn — ưu tiên dùng nguyên văn hoặc trích lại.
+
+⚠️ **KHI USER CÓ CẢ LƯƠNG + THU NHẬP KINH DOANH — BẮT BUỘC làm rõ ngay đầu câu trả lời:**
+   - Thu nhập kinh doanh HKD/cá nhân KD: chịu thuế GTGT + TNCN theo PP tỷ lệ % (flat rate × doanh thu)
+   - Thu nhập từ tiền lương: chịu TNCN lũy tiến theo biểu 5 bậc
+   - HAI KHOẢN NÀY TÍNH THUẾ ĐỘC LẬP — KHÔNG gộp chung để tính lũy tiến
+   - BẮT BUỘC nêu rõ điều này trong câu trả lời khi user đề cập đến cả hai nguồn thu nhập
+
+⚠️ **DEADLINE KÊ KHAI VÀ NỘP THUẾ — ĐÃ VERIFY từ NĐ68/2026 Điều 8 Khoản 3:**
+   - Khai + nộp thuế cùng deadline (Điểm đ K3 Điều 8 NĐ68/2026):
+     - **Khai theo quý** (HKD doanh thu >500M): hạn = ngày cuối tháng đầu tiên của quý tiếp theo
+       - Q1 (T1-T3): hạn **30/04**; Q2 (T4-T6): hạn **31/07**; Q3 (T7-T9): hạn **31/10**; Q4 (T10-T12): hạn **31/01 năm sau**
+     - **Khai theo tháng**: hạn = ngày **20** của tháng tiếp theo (Điểm b K3 Điều 8 NĐ68)
+     - **Quyết toán năm TNCN**: hạn = **31/03** của năm tiếp theo (Điểm c K3 Điều 8 NĐ68)
+   - Khi user đề cập đã vượt 500M và hỏi về thời hạn → tính deadline cụ thể dựa vào ngày hôm nay ({{today}}) và quý đang xét
+   - Nếu deadline còn ≤ 30 ngày → **cảnh báo rõ ràng** bằng chữ in đậm
+
+⚠️ **THÔNG TIN NGOÀI DATABASE — RULE BẮT BUỘC:**
+   - Lệ phí môn bài là nghĩa vụ có thật của HKD/cá nhân KD nhưng văn bản quy định **không có trong database**.
+   - Khi câu hỏi liên quan → nhắc đến bằng tên nhưng KHÔNG nêu số tiền cụ thể, không cite điều khoản: *"ngoài ra còn có lệ phí môn bài theo NĐ139/2016 — tra cứu mức cụ thể tại cơ quan thuế"*
+   - Nguyên tắc tổng quát: **không cite số tiền / điều khoản từ văn bản không có trong database**, dù biết từ training data.
 
 **HKD — kiểm tra nghĩa vụ tổng hợp (kê khai, HĐĐT, sàn TMĐT):**
 1. `evaluate_tax_obligation(annual_revenue, has_online_sales, platform_has_payment)`
@@ -899,6 +934,38 @@ class TaxAIAgent:
                 "_pre_routed": True,
             }
 
+        # S-002: Multi-Income Detector — inject context khi phát hiện câu hỏi đa nguồn thu nhập.
+        # Lương và KD phải tính TNCN độc lập, không gộp — đây là lỗi thực tế từ field critique.
+        if _detect_multi_income(question):
+            logger.info("[S-002] Multi-income detected — injecting separation reminder")
+            system_prompt += (
+                "\n\n⚠️ PHÁT HIỆN ĐA NGUỒN THU NHẬP: Câu hỏi này liên quan đến cả "
+                "thu nhập từ tiền lương/tiền công VÀ thu nhập từ kinh doanh. "
+                "QUAN TRỌNG — tính thuế TNCN hoàn toàn độc lập cho từng nguồn:\n"
+                "  • Thu nhập lương → biểu lũy tiến sau giảm trừ gia cảnh "
+                "(calculate_tncn_progressive sau calculate_deduction)\n"
+                "  • Thu nhập KD → tỷ lệ % doanh thu, không giảm trừ gia cảnh "
+                "(calculate_tax_hkd hoặc calculate_tax_hkd_profit)\n"
+                "  • KHÔNG gộp 2 nguồn để tính chung — quyết toán cuối năm mới tổng hợp.\n"
+                "Hãy tính và trình bày riêng từng nguồn thu nhập."
+            )
+
+        # S-004: TMĐT Obligation Detector — inject khi phát hiện bán hàng qua sàn.
+        if _detect_tmdt(question):
+            logger.info("[S-004] TMĐT detected — injecting platform withholding reminder")
+            system_prompt += (
+                "\n\n⚠️ PHÁT HIỆN HOẠT ĐỘNG TMĐT: Câu hỏi liên quan đến bán hàng qua sàn "
+                "thương mại điện tử. Phân biệt 2 loại:\n"
+                "  • Sàn CÓ chức năng đặt hàng + thanh toán trực tuyến "
+                "(Shopee, Lazada, TikTok Shop → platform_has_payment=True):\n"
+                "    - Sàn tự khấu trừ và nộp thay: 1% GTGT + 0.5% TNCN (hàng hóa/DV)\n"
+                "    - Người bán không nộp riêng phần này, nhưng vẫn quyết toán cuối năm\n"
+                "  • Sàn CHỈ đặt hàng, KHÔNG thanh toán trực tuyến (platform_has_payment=False):\n"
+                "    - Người bán tự kê khai và nộp thuế như HKD thông thường\n"
+                "Dùng evaluate_tax_obligation(has_online_sales=True, platform_has_payment=...) "
+                "để xác định nghĩa vụ cụ thể."
+            )
+
         # Nếu có filter_doc_id → thêm vào system prompt
         if filter_doc_id:
             system_prompt += f"\n\nLưu ý: Người dùng muốn tìm trong văn bản '{filter_doc_id}'."
@@ -992,6 +1059,13 @@ class TaxAIAgent:
                 args = dict(fc.args) if fc.args else {}
 
                 result = self._execute_tool(name, args)
+
+                # S-003 + S-005: Annotate search results trước khi trả về Gemini.
+                # LLM thấy _confidence và _hierarchy_conflicts trong function response
+                # → calibrate trích dẫn và ưu tiên văn bản đúng.
+                if name == "search_legal_docs" and isinstance(result, dict):
+                    result = _annotate_search_confidence(result)
+                    result = _annotate_hierarchy_conflicts(result)
 
                 # Thu thập retrieved_doc_ids từ search_legal_docs results
                 if name == "search_legal_docs" and isinstance(result, dict):
@@ -1169,9 +1243,40 @@ class TaxAIAgent:
             logger.warning(
                 f"⚠️ Fact check FAIL — {'; '.join(fact_check_result.issues)}"
             )
+            # S-006: Act only on high-confidence contradictions (ít false positive).
+            # Comparator flip: "trên 500M" vs chunk "dưới 500M" — rõ ràng, không thể nhầm.
+            # Polarity: "miễn thuế" vs chunk "phải nộp" — rõ ràng, không thể nhầm.
+            # Numeric miss: bỏ qua — số LLM tính toán hợp lệ thường không có trong chunk.
+            _high_conf = [
+                i for i in fact_check_result.issues
+                if "Comparator flip" in i or "Polarity" in i
+            ]
+            if _high_conf:
+                _fc_summary = "; ".join(_high_conf[:2])
+                answer_text += (
+                    "\n\n⚠️ **Lưu ý kiểm tra:** Hệ thống phát hiện thông tin có thể "
+                    f"mâu thuẫn với văn bản pháp luật ({_fc_summary}). "
+                    "Vui lòng xác nhận lại với cơ quan thuế trước khi áp dụng."
+                )
         elif fact_check_result.level == "warning":
             logger.info(
                 f"ℹ️ Fact check WARNING — {'; '.join(fact_check_result.issues)}"
+            )
+
+        # ── S-008: Pending Law Citation Guard ─────────────────────────────────
+        # Phát hiện citation của luật chưa có hiệu lực trong answer text.
+        # Deterministic pattern match — không có false positive.
+        _pending_cites = _check_pending_law_citations(answer_text)
+        if _pending_cites:
+            _pending_desc = "; ".join(
+                f"Luật {d.replace('_', '/', 2)} (hiệu lực từ {e})"
+                for d, e in _pending_cites
+            )
+            logger.warning("[S-008] Pending law citation: %s", _pending_cites)
+            answer_text += (
+                f"\n\n📌 **Lưu ý hiệu lực:** Câu trả lời tham chiếu {_pending_desc} "
+                "— văn bản này CHƯA có hiệu lực. Quy định áp dụng hiện tại có thể khác. "
+                "Vui lòng xác nhận với cơ quan thuế trước khi áp dụng."
             )
 
         # ── Structured logging ─────────────────────────────────────────────────
@@ -1338,6 +1443,179 @@ def _check_numeric_alignment(answer: str, tool_calls: list[dict]) -> list[str]:
     all_chunk_text = " ".join(chunk_texts)
     mismatches = [n for n in numbers_in_answer if n not in all_chunk_text]
     return mismatches
+
+
+# ── S-002: Multi-Income Detector ──────────────────────────────────────────────
+
+# Thu nhập từ tiền lương / tiền công
+_SALARY_SIGNALS: frozenset[str] = frozenset([
+    "lương", "tiền lương", "tiền công", "thu nhập từ lương", "thu nhập từ tiền lương",
+    "hợp đồng lao động", "người lao động", "làm công", "làm thuê",
+    "nhân viên", "nhân công", "công ty trả", "cơ quan trả",
+])
+
+# Thu nhập từ kinh doanh
+_BUSINESS_SIGNALS: frozenset[str] = frozenset([
+    "hộ kinh doanh", "hkd", "kinh doanh", "cá nhân kinh doanh",
+    "doanh thu", "bán hàng", "buôn bán", "mở cửa hàng", "cửa hàng",
+    "shop", "tiệm", "thu nhập kinh doanh",
+])
+
+
+def _detect_multi_income(question: str) -> bool:
+    """
+    Trả về True nếu câu hỏi có dấu hiệu cả thu nhập lương VÀ thu nhập kinh doanh.
+
+    Điều kiện: ít nhất 1 từ khóa trong _SALARY_SIGNALS VÀ ít nhất 1 trong _BUSINESS_SIGNALS.
+    Nguyên tắc: FP (inject note thừa) ít hại hơn FN (bỏ sót, LLM gộp sai).
+    """
+    q = question.lower()
+    return (
+        any(s in q for s in _SALARY_SIGNALS)
+        and any(b in q for b in _BUSINESS_SIGNALS)
+    )
+
+
+# ── S-004: TMĐT Obligation Detector ───────────────────────────────────────────
+
+_TMDT_SIGNALS: frozenset[str] = frozenset([
+    "shopee", "lazada", "tiktok", "tiki", "sendo", "sendo.vn",
+    "sàn tmđt", "sàn thương mại điện tử", "thương mại điện tử",
+    "bán online", "bán qua sàn", "bán trên sàn", "bán hàng online",
+    "kinh doanh online", "tmđt", "tme",
+])
+
+
+def _detect_tmdt(question: str) -> bool:
+    """Trả về True nếu câu hỏi liên quan đến bán hàng qua sàn TMĐT."""
+    q = question.lower()
+    return any(s in q for s in _TMDT_SIGNALS)
+
+
+# ── S-003: Search Confidence Annotator ────────────────────────────────────────
+
+# Ngưỡng score RRF (hybrid BM25 + vector, range ~0.005–0.030)
+_SCORE_HIGH   = 0.018   # kết quả rõ ràng khớp chủ đề
+_SCORE_MEDIUM = 0.010   # khớp một phần, cần cẩn thận
+
+
+def _annotate_search_confidence(result: dict) -> dict:
+    """
+    Thêm trường `_confidence` vào từng kết quả tìm kiếm và `_search_quality` tổng quan.
+    LLM đọc được để calibrate mức độ tin cậy của từng chunk.
+    """
+    items = result.get("results", [])
+    if not items:
+        result["_search_quality"] = "NO_RESULTS"
+        return result
+
+    for r in items:
+        score = float(r.get("score", 0))
+        if score >= _SCORE_HIGH:
+            r["_confidence"] = "HIGH"
+        elif score >= _SCORE_MEDIUM:
+            r["_confidence"] = "MEDIUM"
+        else:
+            r["_confidence"] = "LOW — tham khảo thêm"
+
+    top_score = float(items[0].get("score", 0))
+    if top_score >= _SCORE_HIGH:
+        result["_search_quality"] = "HIGH"
+    elif top_score >= _SCORE_MEDIUM:
+        result["_search_quality"] = "MEDIUM"
+    else:
+        result["_search_quality"] = "LOW"
+
+    return result
+
+
+# ── S-005: Hierarchy Conflict Annotator ───────────────────────────────────────
+
+@functools.lru_cache(maxsize=1)
+def _load_validity_index() -> dict[str, dict]:
+    """
+    Trả về dict doc_id → info từ law_validity.json["documents"].
+    lru_cache → chỉ đọc file 1 lần.
+    """
+    try:
+        data = json.loads(_LAW_VALIDITY_PATH_PLANNER.read_text(encoding="utf-8"))
+        return data.get("documents", {})
+    except Exception:
+        logger.debug("[S-005] Không đọc được law_validity.json — hierarchy check tắt")
+        return {}
+
+
+def _annotate_hierarchy_conflicts(result: dict) -> dict:
+    """
+    Kiểm tra nếu có văn bản đã bị thay thế xuất hiện cùng văn bản mới trong cùng search call.
+    Thêm `_hierarchy_conflicts` vào result để LLM biết nên ưu tiên văn bản nào.
+
+    Ví dụ: TT40/2021 (superseded) và NĐ68/2026 cùng được retrieved
+    → flag: "TT40 đã bị thay thế bởi NĐ68 — dùng NĐ68 làm căn cứ chính"
+    """
+    items = result.get("results", [])
+    if len(items) < 2:
+        return result
+
+    retrieved_ids = {r.get("doc_id") for r in items if r.get("doc_id")}
+    validity_index = _load_validity_index()
+    conflicts: list[dict] = []
+
+    for doc_id in retrieved_ids:
+        info = validity_index.get(doc_id, {})
+        superseded_by = info.get("superseded_by")
+        if superseded_by and superseded_by in retrieved_ids:
+            conflicts.append({
+                "old": doc_id,
+                "new": superseded_by,
+                "note": (
+                    f"{doc_id} đã bị thay thế bởi {superseded_by} "
+                    f"— ưu tiên dùng {superseded_by} làm căn cứ pháp lý chính."
+                ),
+            })
+
+    if conflicts:
+        result["_hierarchy_conflicts"] = conflicts
+
+    return result
+
+
+# ── S-008: Pending Law Citation Guard ─────────────────────────────────────────
+
+_LAW_VALIDITY_PATH_PLANNER = Path(__file__).parents[2] / "data/law_validity.json"
+
+
+@functools.lru_cache(maxsize=1)
+def _load_pending_law_patterns() -> tuple[tuple[re.Pattern, str, str], ...]:
+    """
+    Đọc law_validity.json, trả về (pattern, doc_id, effective_from)
+    cho tất cả văn bản status='pending'. lru_cache → đọc file 1 lần.
+    """
+    try:
+        data = json.loads(_LAW_VALIDITY_PATH_PLANNER.read_text(encoding="utf-8"))
+    except Exception:
+        logger.debug("[S-008] Không đọc được law_validity.json — pending guard tắt")
+        return ()
+    result: list[tuple[re.Pattern, str, str]] = []
+    for doc_id, info in data.get("documents", {}).items():
+        if info.get("status") != "pending":
+            continue
+        eff = info.get("effective_from", "")
+        # doc_id "109_2025_QH15" → citation pattern "109/2025"
+        parts = doc_id.split("_")
+        if len(parts) >= 2:
+            pat = re.compile(rf"\b{re.escape(parts[0])}/{re.escape(parts[1])}\b")
+            result.append((pat, doc_id, eff))
+    return tuple(result)
+
+
+def _check_pending_law_citations(answer: str) -> list[tuple[str, str]]:
+    """Trả về [(doc_id, effective_from)] cho các luật pending được cite trong answer."""
+    found = []
+    for pat, doc_id, eff in _load_pending_law_patterns():
+        if pat.search(answer):
+            found.append((doc_id, eff))
+    return found
 
 
 def _extract_sources_from_tool_log(tool_calls: list[dict]) -> list[dict]:

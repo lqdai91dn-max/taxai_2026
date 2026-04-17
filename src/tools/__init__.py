@@ -1,5 +1,5 @@
 """
-Tool registry cho TaxAI — 6 tools active.
+Tool registry cho TaxAI — 7 tools active.
 
 Phase A (deterministic calculators):
   1. calculate_tax_hkd              — GTGT + TNCN cho HKD (phương pháp doanh thu)
@@ -12,6 +12,9 @@ Phase B (retrieval):
 
 Phase B+ (rule engine):
   6. evaluate_tax_obligation        — Rule engine: miễn thuế, kỳ kê khai, HĐĐT, TMĐT
+
+Phase B+ (validity — S-001):
+  7. check_doc_validity             — Kiểm tra hiệu lực văn bản từ law_validity.json
 
 Usage:
     from src.tools import TOOL_DEFINITIONS, TOOL_REGISTRY
@@ -30,6 +33,7 @@ from src.tools.calculator_tools import (
 )
 from src.tools.retrieval_tools import search_legal_docs
 from src.tools.rule_engine import evaluate_tax_obligation
+from src.tools.doc_validity_tool import check_doc_validity
 
 # ── Tool registry — dùng trong planner ──────────────────────────────────────
 
@@ -43,6 +47,8 @@ TOOL_REGISTRY: dict = {
     "search_legal_docs":          search_legal_docs,
     # Phase B+ — rule engine
     "evaluate_tax_obligation":    evaluate_tax_obligation,
+    # Phase B+ — validity (S-001)
+    "check_doc_validity":         check_doc_validity,
 }
 
 # ── Gemini function calling definitions ──────────────────────────────────────
@@ -185,49 +191,6 @@ TOOL_DEFINITIONS = [
             "required": ["query"],
         },
     },
-    {
-        "name": "check_doc_validity",
-        "description": (
-            "Kiểm tra hiệu lực pháp lý của một văn bản tại một ngày. "
-            "Trả về status: valid / pending / expired và danh sách văn bản sửa đổi nó. "
-            "Dùng trước khi trích dẫn luật để đảm bảo văn bản còn hiệu lực."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "doc_id": {
-                    "type": "string",
-                    "description": "ID văn bản. Ví dụ: '109_2025_QH15', '68_2026_NDCP'.",
-                },
-                "query_date": {
-                    "type": "string",
-                    "description": "Ngày kiểm tra (YYYY-MM-DD). Mặc định: hôm nay.",
-                },
-            },
-            "required": ["doc_id"],
-        },
-    },
-    {
-        "name": "resolve_legal_reference",
-        "description": (
-            "Chuyển đổi tham chiếu pháp luật dạng text sang doc_id và article_id. "
-            "Ví dụ: 'Điều 5 Nghị định 68/2026/NĐ-CP' → doc_id + article_id. "
-            "Dùng khi user hoặc LLM đề cập đến một điều luật cụ thể bằng tên."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "reference_text": {
-                    "type": "string",
-                    "description": (
-                        "Chuỗi tham chiếu tự nhiên. "
-                        "Ví dụ: 'Điều 5 NĐ 68/2026/NĐ-CP', 'khoản 2 Điều 9 Luật 109/2025/QH15'."
-                    ),
-                },
-            },
-            "required": ["reference_text"],
-        },
-    },
     # ── Phase B+ — Rule engine ────────────────────────────────────────────────
     {
         "name": "evaluate_tax_obligation",
@@ -259,6 +222,31 @@ TOOL_DEFINITIONS = [
             "required": ["annual_revenue"],
         },
     },
+    # ── Phase B+ — Validity (S-001) ───────────────────────────────────────────
+    {
+        "name": "check_doc_validity",
+        "description": (
+            "Kiểm tra hiệu lực của một văn bản pháp luật cụ thể. "
+            "Dùng khi cần xác nhận: văn bản có đang hiệu lực không, đã bị thay thế chưa, "
+            "có trong cơ sở dữ liệu không. "
+            "Ví dụ: kiểm tra TT40/2021 trước khi cite (đã bị NĐ68/2026 thay thế), "
+            "kiểm tra Luật 109/2025 (chưa có hiệu lực đến 01/07/2026)."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "doc_id": {
+                    "type": "string",
+                    "description": (
+                        "ID văn bản theo format hệ thống (underscore thay slash). "
+                        "Ví dụ: '68_2026_NDCP', '109_2025_QH15', '111_2013_TTBTC', "
+                        "'TT40_2021_TTBTC'."
+                    ),
+                },
+            },
+            "required": ["doc_id"],
+        },
+    },
 ]
 
 __all__ = [
@@ -271,6 +259,7 @@ __all__ = [
     "search_legal_docs",
     # Phase B+
     "evaluate_tax_obligation",
+    "check_doc_validity",
     # Registry
     "TOOL_REGISTRY",
     "TOOL_DEFINITIONS",

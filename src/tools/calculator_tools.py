@@ -265,13 +265,14 @@ def _format_hkd_summary(r: TaxHKDResult) -> str:
         return (
             f"Doanh thu {r.annual_revenue/1e6:.0f} triệu đồng ≤ 500 triệu → "
             f"miễn thuế TNCN. Chỉ nộp GTGT: {r.gtgt_payable/1e6:.2f} triệu đồng "
-            f"({r.gtgt_rate:.1%} × doanh thu)."
+            f"({r.annual_revenue:,.0f} × {r.gtgt_rate:.1%} = {r.gtgt_payable:,.0f} VND)."
         )
     return (
-        f"Doanh thu {r.annual_revenue/1e6:.0f} triệu đồng | "
-        f"GTGT: {r.gtgt_payable/1e6:.2f} triệu ({r.gtgt_rate:.1%}) | "
-        f"TNCN: {r.tncn_payable/1e6:.2f} triệu ({r.tncn_rate:.1%} × toàn bộ doanh thu) | "
-        f"Tổng: {r.total_tax/1e6:.2f} triệu đồng."
+        f"Doanh thu {r.annual_revenue/1e6:.0f} triệu đồng.\n"
+        f"GTGT: {r.annual_revenue:,.0f} × {r.gtgt_rate:.1%} = {r.gtgt_payable:,.0f} VND\n"
+        f"TNCN: {r.annual_revenue:,.0f} × {r.tncn_rate:.1%} = {r.tncn_payable:,.0f} VND "
+        f"(tính trên TOÀN BỘ doanh thu, không trừ ngưỡng 500 triệu)\n"
+        f"Tổng thuế phải nộp: {r.total_tax:,.0f} VND ({r.total_tax/1e6:.2f} triệu đồng)."
     )
 
 
