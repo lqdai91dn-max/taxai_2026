@@ -38,3 +38,8 @@ def pytest_configure(config):
         "snapshot: marks tests that compare full JSON output against golden snapshots. "
         "Run with: pytest -m snapshot tests/test_parser_regression.py",
     )
+    config.addinivalue_line(
+        "markers",
+        "integration: marks tests that call real Gemini API (requires GEMINI_API_KEY). "
+        "Run with: pytest -m integration tests/test_regression_30.py",
+    )
