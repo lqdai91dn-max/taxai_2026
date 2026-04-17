@@ -2,7 +2,8 @@
 src/api/main.py — FastAPI backend cho TaxAI Legal Chatbot.
 
 Endpoints:
-  POST /chat          — trả lời câu hỏi pháp luật thuế
+  POST /chat          — trả lời câu hỏi pháp luật thuế (alias /agent, dùng TaxAIAgent)
+  POST /agent         — trả lời với full tool call log
   GET  /health        — health check (ChromaDB + Gemini)
   GET  /docs_list     — danh sách văn bản đã index (từ data/parsed/)
 """
@@ -25,19 +26,16 @@ logger = logging.getLogger(__name__)
 
 # ── Startup/shutdown ──────────────────────────────────────────────────────────
 
-_generator = None
-_agent     = None
+_agent = None
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global _generator, _agent
+    global _agent
     logger.info("⏳ Loading TaxAI components...")
-    from src.generation.answer_generator import AnswerGenerator
     from src.agent.planner import TaxAIAgent
-    _generator = AnswerGenerator()
-    _agent     = TaxAIAgent()
-    logger.info("✅ TaxAI ready (pipeline + agent)")
+    _agent = TaxAIAgent()
+    logger.info("✅ TaxAI ready")
     yield
     logger.info("👋 TaxAI shutdown")
 
@@ -136,8 +134,8 @@ class DocItem(BaseModel):
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
-    """Trả lời câu hỏi pháp luật thuế."""
-    if _generator is None:
+    """Trả lời câu hỏi pháp luật thuế — dùng TaxAIAgent (Gemini function calling)."""
+    if _agent is None:
         raise HTTPException(503, "TaxAI chưa sẵn sàng — đang khởi động")
 
     t0 = time.perf_counter()
@@ -145,7 +143,7 @@ async def chat(req: ChatRequest):
         from src.retrieval.query_classifier import classify
         cq = classify(req.question)
 
-        result = _generator.answer(
+        result = _agent.answer(
             question      = req.question,
             filter_doc_id = req.filter_doc_id,
             show_sources  = req.show_sources,
@@ -158,8 +156,8 @@ async def chat(req: ChatRequest):
     sources = [
         SourceItem(
             breadcrumb      = s.get("breadcrumb", ""),
-            document_number = s.get("document_number", ""),
-            score           = round(s.get("score", 0), 4),
+            document_number = s.get("doc_number", s.get("document_number", "")),
+            score           = round(s.get("score", 0.0), 4),
         )
         for s in result.get("sources", [])
     ]
