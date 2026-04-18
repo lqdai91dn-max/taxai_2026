@@ -12,6 +12,7 @@
 *.pem
 secrets/
 credentials.json
+.streamlit/secrets.toml
 
 # -------------------------------
 # PYTHON

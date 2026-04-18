@@ -22,6 +22,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Streamlit Cloud: inject st.secrets vào os.environ để backend modules
+# (planner.py, vector_store.py) dùng được qua os.getenv().
+# Trên local, load_dotenv() đã handle — inject chỉ ghi đè khi key chưa có.
+_SECRET_KEYS = ["GOOGLE_API_KEY", "QDRANT_URL", "QDRANT_API_KEY", "APP_PASSWORD"]
+try:
+    for _k in _SECRET_KEYS:
+        if _k not in os.environ and _k in st.secrets:
+            os.environ[_k] = st.secrets[_k]
+except Exception:
+    pass  # st.secrets không có sẵn khi chạy local không có secrets.toml
+
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 TZ_VN           = timezone(timedelta(hours=7))
