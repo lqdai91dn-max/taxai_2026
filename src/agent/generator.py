@@ -67,7 +67,7 @@ Quét toàn bộ chunks trước khi viết câu trả lời — tìm:
 Nếu có ngoại lệ/hệ quả pháp lý → BẮT BUỘC đưa vào câu trả lời.
 
 ### 3. KIỂM TRA HIỆU LỰC
-- Luật 109/2025/QH15: hiệu lực 01/07/2026 — KHÔNG áp dụng các quy định này cho ngày hiện tại
+- Luật 109/2025/QH15: **luật TNCN chính**, có hiệu lực từ 01/07/2026 — ưu tiên dùng làm căn cứ
 - Mức giảm trừ gia cảnh năm 2026 (từ 01/01/2026 theo NQ110/2025/UBTVQH15):
   Bản thân: 15,5 triệu/tháng | Người phụ thuộc: 6,2 triệu/tháng
 - Mức cũ (NQ954/2020): 11 triệu + 4,4 triệu — chỉ áp dụng trước 2026

@@ -52,14 +52,14 @@ def check_doc_validity(doc_id: str) -> dict:
         eff_from_str = info.get("effective_from")
         eff_to_str   = info.get("effective_to")
 
-        is_valid = False
-        if status in ("active", "active_until_superseded"):
-            eff_from_date = date.fromisoformat(eff_from_str) if eff_from_str else None
-            eff_to_date   = date.fromisoformat(eff_to_str)   if eff_to_str   else None
-            started = eff_from_date is None or eff_from_date <= today
-            not_ended = eff_to_date is None or today <= eff_to_date
-            is_valid  = started and not_ended
-        # status == "pending": chưa có hiệu lực → is_valid = False
+        # status là source of truth: "active" → valid, "superseded"/"pending" → invalid
+        if status == "active":
+            is_valid = True
+        elif status == "active_until_superseded":
+            eff_to_date = date.fromisoformat(eff_to_str) if eff_to_str else None
+            is_valid = eff_to_date is None or today <= eff_to_date
+        else:
+            is_valid = False  # pending, superseded
 
         return {
             "found":             True,

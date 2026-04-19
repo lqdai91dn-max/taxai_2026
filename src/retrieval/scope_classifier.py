@@ -30,8 +30,7 @@ SCOPE_DOCS: Dict[str, List[str]] = {
         "149_2025_QH15",      # Luật sửa đổi bổ sung Luật TNCN
         "108_2025_QH15",      # Luật 108
         "126_2020_NDCP",      # Nghị định quản lý thuế — thủ tục QT, ngoại lệ, khai nộp TNCN
-        "111_2013_TTBTC",     # Thông tư hướng dẫn Luật TNCN — giảm trừ NPT, thời điểm tính thuế
-        "92_2015_TTBTC",      # Thông tư sửa đổi TT111 — NPT hồi tố, giảm trừ gia cảnh mới
+        # 111_2013_TTBTC và 92_2015_TTBTC đã bị thay thế bởi Luật 109 từ 01/07/2026 — không boost
         "1296_CTNVT",         # Công văn hướng dẫn quyết toán TNCN
     ],
     "HKD": [
@@ -57,7 +56,7 @@ SCOPE_DOCS: Dict[str, List[str]] = {
 _ALL_SCOPE_DOCS = {
     "198_2025_QH15",
     "20_2026_NDCP",
-    "LQT_38_2019",
+    # LQT_38_2019 đã bị thay thế bởi Luật 108 từ 01/07/2026
 }
 
 # ── Keyword signals ───────────────────────────────────────────────────────

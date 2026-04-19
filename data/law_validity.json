@@ -1,6 +1,6 @@
 {
   "_comment": "Manifest hiệu lực văn bản pháp luật trong TaxAI database. Update khi thêm văn bản mới hoặc khi luật thay đổi.",
-  "_last_updated": "2026-04-15",
+  "_last_updated": "2026-04-19",
   "documents": {
     "68_2026_NDCP": {
       "name": "Nghị định 68/2026/NĐ-CP về thuế GTGT, TNCN đối với HKD và cá nhân KD",
@@ -22,17 +22,17 @@
       "name": "Luật Thuế TNCN 109/2025/QH15",
       "effective_from": "2026-07-01",
       "effective_to": null,
-      "status": "pending",
+      "status": "active",
       "supersedes": ["111_2013_TTBTC", "92_2015_TTBTC"],
-      "note": "CHƯA có hiệu lực đến 01/07/2026. Không dùng làm luật hiện hành khi tư vấn trước ngày này."
+      "note": "Luật TNCN chính, có hiệu lực từ 01/07/2026. Đây là luật primary cho mọi câu hỏi TNCN."
     },
     "108_2025_QH15": {
       "name": "Luật Quản lý Thuế 108/2025/QH15",
       "effective_from": "2026-07-01",
       "effective_to": null,
-      "status": "pending",
+      "status": "active",
       "supersedes": ["LQT_38_2019"],
-      "note": "CHƯA có hiệu lực đến 01/07/2026. Điều 13+26 về HKD/CNKD có hiệu lực từ 01/01/2026."
+      "note": "Luật Quản lý thuế chính, có hiệu lực từ 01/07/2026. Điều 13+26 về HKD/CNKD có hiệu lực từ 01/01/2026."
     },
     "110_2025_UBTVQH15": {
       "name": "Nghị quyết 110/2025/UBTVQH15 về mức giảm trừ gia cảnh",
@@ -46,25 +46,25 @@
       "name": "Thông tư 111/2013/TT-BTC hướng dẫn Luật Thuế TNCN",
       "effective_from": "2013-10-01",
       "effective_to": "2026-06-30",
-      "status": "active_until_superseded",
+      "status": "superseded",
       "superseded_by": "109_2025_QH15",
-      "note": "Còn hiệu lực đến 30/06/2026. Từ 01/07/2026 bị thay thế bởi Luật 109."
+      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026. Chỉ tham khảo cho câu hỏi hồi tố hoặc implementation detail chưa có trong 109."
     },
     "92_2015_TTBTC": {
       "name": "Thông tư 92/2015/TT-BTC sửa đổi hướng dẫn TNCN",
       "effective_from": "2015-07-30",
       "effective_to": "2026-06-30",
-      "status": "active_until_superseded",
+      "status": "superseded",
       "superseded_by": "109_2025_QH15",
-      "note": "Còn hiệu lực đến 30/06/2026."
+      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026."
     },
     "LQT_38_2019": {
       "name": "Luật Quản lý Thuế 38/2019/QH14",
       "effective_from": "2020-07-01",
       "effective_to": "2026-06-30",
-      "status": "active_until_superseded",
+      "status": "superseded",
       "superseded_by": "108_2025_QH15",
-      "note": "Còn hiệu lực đến 30/06/2026."
+      "note": "Đã bị thay thế bởi Luật 108/2025/QH15 từ 01/07/2026."
     },
     "117_2025_NDCP": {
       "name": "Nghị định 117/2025/NĐ-CP về quản lý thuế TMĐT",

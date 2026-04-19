@@ -6,8 +6,8 @@ Chạy: pytest tests/test_lookup_tools.py -v
 """
 
 import pytest
+from src.tools.doc_validity_tool import check_doc_validity
 from src.tools.lookup_tools import (
-    check_doc_validity,
     resolve_legal_reference,
     get_article_with_amendments,
 )
@@ -26,12 +26,12 @@ class TestCheckDocValidity:
         assert r["status"] == "valid"
         assert r["doc_number"] == "68/2026/NĐ-CP"
 
-    def test_pending_doc(self):
-        """109_2025_QH15 chưa có hiệu lực (effective 2026-07-01, hôm nay 2026-03-14)."""
-        r = check_doc_validity("109_2025_QH15", query_date="2026-03-14")
+    def test_active_109(self):
+        """109_2025_QH15 status active — luật TNCN chính từ 01/07/2026."""
+        r = check_doc_validity("109_2025_QH15")
         assert r["found"] is True
-        assert r["status"] == "pending"
-        assert "2026-07-01" in r["message"]
+        assert r["status"] == "active"
+        assert r["is_currently_valid"] is True
 
     def test_doc_becomes_valid_after_date(self):
         """109 sẽ valid ở ngày 2026-07-01."""

@@ -173,22 +173,22 @@ class TestSkillDetectors:
         assert r["status"] == "active"
         assert r["is_currently_valid"] is True
 
-    def test_S001_doc_validity_active_until_superseded(self):
-        """S-001: TT111/2013 còn hiệu lực đến 30/06/2026."""
+    def test_S001_doc_validity_superseded(self):
+        """S-001: TT111/2013 đã bị thay thế bởi Luật 109 từ 01/07/2026."""
         from src.tools.doc_validity_tool import check_doc_validity
         r = check_doc_validity("111_2013_TTBTC")
         assert r["found"] is True
-        assert r["status"] == "active_until_superseded"
+        assert r["status"] == "superseded"
         assert r["effective_to"] == "2026-06-30"
         assert r["superseded_by"] == "109_2025_QH15"
 
-    def test_S001_doc_validity_pending(self):
-        """S-001: Luật 109/2025 status pending, chưa có hiệu lực."""
+    def test_S001_doc_validity_active_109(self):
+        """S-001: Luật 109/2025 status active — luật TNCN chính từ 01/07/2026."""
         from src.tools.doc_validity_tool import check_doc_validity
         r = check_doc_validity("109_2025_QH15")
         assert r["found"] is True
-        assert r["status"] == "pending"
-        assert r["is_currently_valid"] is False
+        assert r["status"] == "active"
+        assert r["is_currently_valid"] is True
 
     def test_S001_doc_not_in_db(self):
         """S-001: TT40/2021 không có trong DB."""
@@ -291,13 +291,13 @@ class TestSkillDetectors:
 
     # ── S-008: Pending law citation guard ────────────────────────────────────
 
-    def test_S008_detect_pending_law_cite(self):
-        """S-008: answer cite '109/2025' → phát hiện pending."""
+    def test_S008_no_flag_active_109(self):
+        """S-008: Luật 109 đã active → KHÔNG flag khi cite."""
         from src.agent.planner import _check_pending_law_citations
         answer = "Theo Luật 109/2025/QH15, mức thuế suất mới áp dụng từ 01/07/2026."
         found = _check_pending_law_citations(answer)
         doc_ids = [f[0] for f in found]
-        assert "109_2025_QH15" in doc_ids, "Phải detect cite Luật 109 (pending)"
+        assert "109_2025_QH15" not in doc_ids, "Luật 109 đã active → không flag"
 
     def test_S008_no_cite_active_doc(self):
         """S-008: cite NĐ68 (active) → không flag."""

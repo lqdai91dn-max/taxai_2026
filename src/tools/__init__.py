@@ -87,7 +87,7 @@ TOOL_DEFINITIONS = [
         "name": "calculate_tncn_progressive",
         "description": (
             "Tính thuế TNCN theo biểu lũy tiến 5 bậc "
-            "(Luật 109/2025/QH15, hiệu lực 01/07/2026). "
+            "(Luật 109/2025/QH15). "
             "Dùng cho cá nhân có thu nhập từ lương/tiền công. "
             "KHÔNG dùng cho hộ kinh doanh."
         ),
@@ -230,7 +230,7 @@ TOOL_DEFINITIONS = [
             "Dùng khi cần xác nhận: văn bản có đang hiệu lực không, đã bị thay thế chưa, "
             "có trong cơ sở dữ liệu không. "
             "Ví dụ: kiểm tra TT40/2021 trước khi cite (đã bị NĐ68/2026 thay thế), "
-            "kiểm tra Luật 109/2025 (chưa có hiệu lực đến 01/07/2026)."
+            "kiểm tra TT111/2013 (đã bị Luật 109/2025 thay thế từ 01/07/2026)."
         ),
         "parameters": {
             "type": "object",
