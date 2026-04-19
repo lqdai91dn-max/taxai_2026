@@ -86,7 +86,8 @@
     ],
     "additionalDirectories": [
       "c:\\Users\\LENOVO\\Desktop\\Project\\Code\\src",
-      "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\taxai"
+      "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\taxai",
+      "c:\\Users\\LENOVO\\Desktop\\Project\\Code\\src\\generation"
     ]
   }
 }
