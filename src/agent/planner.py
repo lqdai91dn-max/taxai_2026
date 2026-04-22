@@ -35,11 +35,12 @@ from google.genai import types, errors as genai_errors
 from src.tools import TOOL_DEFINITIONS, TOOL_REGISTRY
 from src.retrieval.fact_checker import check_facts
 from src.utils.answer_logger import log_answer
+from src.utils.prompt_builder import _LAW_SECTION
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-GEMINI_MODEL   = "gemini-3-flash-preview"
+GEMINI_MODEL   = "gemini-2.5-flash"
 MAX_ITERATIONS = 4  # max vòng lặp tool calling (tăng từ 3 sau khi remove 4 dead Neo4j tools)
 
 # ── Pre-router: lightweight OOD / tax-domain check ───────────────────────────
@@ -84,11 +85,14 @@ def _pre_route(question: str) -> str:
 # Paid tier 1 Gemini 3 Flash: 1000 RPM, 2,000,000 TPM, 10,000 RPD
 # Đặt 1,800,000 TPM (buffer 10%)
 TPM_SAFE_LIMIT      = 1_800_000
-EST_TOKENS_PER_CALL = 11_000  # ước lượng: system prompt + chunks + output
+EST_TOKENS_PER_CALL = 22_000  # ước lượng: system prompt + chunks + output
 
-# Tắt thinking để tiết kiệm token — gemini-2.5-flash mặc định bật thinking
-# thinkingBudget=0 = không dùng thinking tokens → giảm chi phí ~3-5x
-_NO_THINKING = types.ThinkingConfig(thinking_budget=0)
+# thinking_budget=1024: cải thiện T4 Key Facts (+0.45 trên 16 câu fail vs budget=0)
+_THINKING_CONFIG = types.ThinkingConfig(thinking_budget=1024)
+
+# Content gap handler: nếu top retrieval score < threshold → corpus thiếu văn bản liên quan
+# Cần calibrate dựa trên phân phối thực tế của rrf_score / final_score
+MIN_RETRIEVAL_CONFIDENCE = 0.42
 
 
 # ── Token Bucket Rate Limiter (TPM-based) ─────────────────────────────────────
@@ -350,15 +354,7 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
 - Nếu câu hỏi hỏi "điều kiện gì?" / "phương pháp nào?" / "tỷ lệ bao nhiêu?" → GỌI TOOL và trả lời ngay với quy định chung, KHÔNG yêu cầu thêm doanh thu/thông tin cá nhân
 - Câu trả lời rỗng (không có nội dung) là FAIL tuyệt đối — luôn phải có ít nhất một câu trả lời dựa trên luật
 
-### 3. LUẬT ÁP DỤNG — MỐC 01/07/2026
-- **Luật 109/2025/QH15 là luật TNCN chính** — áp dụng cho mọi câu hỏi về thuế TNCN
-- **Luật 108/2025/QH15 là luật Quản lý Thuế chính** — áp dụng cho mọi câu hỏi về thủ tục hành chính thuế
-- **TT111/2013 và TT92/2015 đã bị thay thế** — chỉ tham khảo cho câu hỏi về giai đoạn TRƯỚC 01/07/2026 hoặc implementation detail chưa có trong Luật 109
-- **Mức giảm trừ gia cảnh** (theo NQ110/2025/UBTVQH15, hiệu lực từ 01/01/2026):
-  - Bản thân: **15,5 triệu đồng/tháng**
-  - Người phụ thuộc: **6,2 triệu đồng/tháng**
-- **Ngưỡng trúng thưởng miễn thuế** (Luật 109): **20 triệu đồng**
-- Nghị định 68/2026/NĐ-CP: hiệu lực từ 05/03/2026 — văn bản chính về HKD
+{_LAW_SECTION}
 
 ### 4. CITATION ĐẦY ĐỦ
 - Mọi số liệu phải có nguồn từ tool output
@@ -366,6 +362,12 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
 - Với nội dung từ Sổ tay HKD: "Theo Sổ tay Hướng dẫn Hộ kinh doanh (ban hành kèm Thông tư 18/2026/TT-BTC)..."
 - **XÁC MINH TRƯỚC KHI TRÍCH DẪN**: Trước khi viết "theo Điều X Khoản Y Điểm Z" → đọc lại nội dung điểm đó trong tool output, đảm bảo nội dung khớp với điều muốn nói
 - **Khi kết luận "không tìm thấy quy định cụ thể"**: vẫn phải cite nguồn đã kiểm tra, ví dụ: "Theo Nghị định 125/2020/NĐ-CP về xử phạt vi phạm hành chính thuế đã tra cứu, không có quy định cụ thể về [hành vi X]..." — không được nói "không có quy định" mà không nêu tên văn bản đã tìm
+- **KHÔNG TRÍCH DẪN THỪA VĂN BẢN (tránh precision penalty)**: Quy tắc này áp dụng cho **citation trong câu trả lời**, KHÔNG giới hạn số lượng search_legal_docs được gọi — vẫn phải search đủ để tìm đúng nguồn.
+  - Nếu nhiều doc cùng đề cập một nội dung → ưu tiên doc `active` / doc primary (ví dụ: 109_2025_QH15 thay vì 111_2013_TTBTC vì 111 đã superseded)
+  - **KHÔNG cite văn bản superseded** trừ khi nó có điều khoản cụ thể mà văn bản hiện hành chưa có (exception_use)
+  - Nếu một văn bản retrieved không có nội dung trực tiếp trả lời câu hỏi → KHÔNG cite nó trong câu trả lời
+  - Mục tiêu: **cite 1-2 văn bản** là đủ cho hầu hết câu hỏi; chỉ thêm văn bản thứ 3+ khi câu hỏi thực sự trải dài qua nhiều nguồn luật khác nhau
+  - ⚠️ Không dừng search sớm chỉ vì đã có 1-2 doc — phải đảm bảo đã search đúng nguồn luật cho câu hỏi trước khi viết câu trả lời
 
 ### 5. KIỂM TRA NGOẠI LỆ VÀ PHẠM VI ÁP DỤNG (BẮT BUỘC)
 
@@ -521,7 +523,6 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
 
 **TNCN cổ tức, lãi vay:**
 1. `search_legal_docs` → tìm quy định thuế suất áp dụng
-2. `get_article` → lấy toàn văn điều khoản nếu cần
 → Luôn dùng tool để lấy căn cứ pháp lý — KHÔNG tự áp thuế suất từ memory
 
 **TNCN — thời điểm xác định thu nhập từ tiền lương, tiền công:**
@@ -550,13 +551,8 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
   - Bảng kê 05-3/BK-TNCN: cần điền đúng số CCCD/MST mới cho NPT trên cột "Số định danh cá nhân"
   - Câu trả lời PHẢI trích dẫn 86_2024_TTBTC (không chỉ 111_2013_TTBTC)
 
-**Tra cứu điều luật:**
-1. `resolve_legal_reference` → parse tên văn bản
-2. `get_article` hoặc `get_article_with_amendments` → toàn văn
-
 **Kiểm tra hiệu lực:**
-1. `check_doc_validity` → status + amended_by
-2. `get_impl_chain` → hierarchy pháp lý
+1. `check_doc_validity` → status + superseded_by
 
 **HKD — Nghĩa vụ kê khai, kỳ hạn nộp thuế, ngưỡng doanh thu từ 2026 (QUAN TRỌNG):**
 - Câu hỏi dạng: "nghĩa vụ kê khai HKD", "kỳ hạn kê khai theo tháng/quý", "doanh thu dưới 500 triệu có cần khai", "tạm ngừng kinh doanh có cần khai", "mới mở cửa hàng thì khai khi nào", "có bao nhiêu cửa hàng thì khai ở đâu", "phần mềm kê khai HKD", "máy tính tiền có gửi dữ liệu không"
@@ -660,6 +656,13 @@ Xin lỗi, tôi là TaxAI — trợ lý chuyên về pháp luật thuế Việt 
 4. **Trích dẫn nguồn** — Điều/Khoản cụ thể
 - Khi hỏi về các mặt hàng này: gọi `search_legal_docs` trước để tìm quy định, sau đó kết luận **không được giảm** và nêu lý do (không thuộc nhóm được áp dụng chính sách)
 
+**TNCN — hoàn thuế / quyết toán năm cho cá nhân có thu nhập bị khấu trừ (shipper, lao động tự do, tiền công):**
+- Câu hỏi dạng: "shipper bị trừ thuế mỗi đơn có được hoàn thuế không?", "tổng thu nhập năm 100 triệu có được hoàn lại tiền thuế đã khấu trừ không?", "thu nhập dưới ngưỡng chịu thuế có được hoàn thuế không?", "bị khấu trừ 10% có đòi lại không?"
+- → **BẮT BUỘC search `109_2025_QH15`** — luật TNCN quy định ngưỡng chịu thuế, quyết toán, và hoàn thuế cho cá nhân:
+  - `search_legal_docs(query='hoàn thuế TNCN quyết toán năm cá nhân thu nhập dưới ngưỡng khấu trừ tại nguồn', doc_filter='109_2025_QH15')`
+- **Quan trọng**: Đây là câu hỏi về nghĩa vụ TNCN của **cá nhân người lao động/người nhận thu nhập** (KHÔNG phải HKD) → KHÔNG search 92_2015 hay 68_2026 (dành cho HKD/cá nhân kinh doanh)
+- Thu nhập từ tiền công ≤ ngưỡng chịu thuế → được hoàn lại số thuế đã bị khấu trừ thừa qua quyết toán TNCN
+
 **TNCN — thu nhập miễn thuế: tiền ăn giữa ca, phụ cấp ăn trưa (BẮT BUỘC search 111_2013_TTBTC):**
 - Câu hỏi dạng: "tiền ăn giữa ca có phải đóng thuế TNCN không?", "phụ cấp bữa ăn trưa có chịu thuế không?", "mức trần tiền ăn giữa ca", "730.000/tháng có tính thuế không?"
 - → **CHỈ search `111_2013_TTBTC`** — đây là nguồn duy nhất quy định các khoản thu nhập không tính vào thu nhập chịu thuế TNCN:
@@ -752,6 +755,14 @@ Trước khi viết câu trả lời, quét lại toàn bộ tài liệu retriev
 - Có hệ quả pháp lý đi kèm không? (từ khóa: "bị phạt", "không bị phạt", "tiền chậm nộp", "truy thu", "xử phạt")
 
 Nếu có → bắt buộc đưa vào câu trả lời.
+
+**KẾT LUẬN PHÁP LÝ PHẢI TƯỜNG MINH — BẮT BUỘC:**
+- Khi câu hỏi có kết cục dạng có/không, được/không được, vẫn còn/không còn, phải/không phải → **câu đầu tiên của phần "💬 Trả lời" PHẢI nêu kết luận dứt khoát bằng ngôn ngữ tường minh.**
+  - ✅ Đúng: "Hộ kinh doanh **vẫn bị truy thu** đầy đủ số thuế còn thiếu dù đã nộp theo sàn TMĐT."
+  - ✅ Đúng: "Người bán **không phải kê khai lại** phần thuế mà sàn đã khai thay và nộp thay."
+  - ❌ Sai: Chỉ giải thích cơ chế ("Sàn TMĐT có nghĩa vụ khấu trừ và nộp thay...") mà không nêu kết luận áp dụng cho người hỏi
+- Từ khóa PHẢI xuất hiện trong câu trả lời khi relevant: "vẫn bị truy thu", "không phải kê khai lại", "không bị phạt tiền chậm nộp", "được miễn", "không chịu thuế"
+- Nếu tài liệu retrieved có từ "truy thu", "phạt", "không phải khai" → **bắt buộc dùng đúng từ đó** trong câu trả lời, không paraphrase mờ nhạt
 
 **Cấu trúc câu trả lời 3 phần — BẮT BUỘC theo thứ tự:**
 
@@ -986,7 +997,7 @@ class TaxAIAgent:
             system_instruction=system_prompt,
             tools=self._gemini_tools,
             temperature=0.0,   # deterministic — giảm noise benchmark
-            thinking_config=_NO_THINKING,
+            thinking_config=_THINKING_CONFIG,
         )
 
         tool_calls_log: list[dict] = []
@@ -1011,7 +1022,7 @@ class TaxAIAgent:
                 fallback_config = types.GenerateContentConfig(
                     system_instruction=system_prompt,
                     temperature=0.0,
-                    thinking_config=_NO_THINKING,
+                    thinking_config=_THINKING_CONFIG,
                 )
                 fb_response = self._call_with_retry(
                     model=self.model, contents=contents, config=fallback_config
@@ -1114,7 +1125,7 @@ class TaxAIAgent:
                         system_instruction=system_prompt,
                         tools=self._gemini_tools,
                         temperature=0.0,
-                        thinking_config=_NO_THINKING,
+                        thinking_config=_THINKING_CONFIG,
                     ),
                 )
                 answer_text = "\n".join(
@@ -1138,7 +1149,7 @@ class TaxAIAgent:
                         system_instruction=system_prompt,
                         tools=self._gemini_tools,
                         temperature=0.0,
-                        thinking_config=_NO_THINKING,
+                        thinking_config=_THINKING_CONFIG,
                     ),
                 )
                 answer_text = "\n".join(
@@ -1177,7 +1188,7 @@ class TaxAIAgent:
                         config=types.GenerateContentConfig(
                             system_instruction=system_prompt,
                             temperature=0.0,
-                            thinking_config=_NO_THINKING,
+                            thinking_config=_THINKING_CONFIG,
                         ),
                     )
                     _rg_text = "\n".join(
@@ -1197,12 +1208,25 @@ class TaxAIAgent:
                 "để được hỗ trợ chính xác."
             )
         elif confidence["level"] == "no_results":
-            answer_text = (
-                "Câu hỏi của bạn có thể nằm ngoài phạm vi các văn bản pháp luật hiện có "
-                "trong hệ thống. Tôi không tìm thấy điều khoản cụ thể nào liên quan. "
-                "Vui lòng tham khảo trực tiếp cơ quan thuế hoặc Cổng thông tin thuế điện tử "
-                "(https://thuedientu.gdt.gov.vn)."
-            )
+            # Content gap check: phân biệt "corpus thiếu doc" vs "truly OOD"
+            top_score = _get_top_retrieval_score(tool_calls_log)
+            if top_score is not None and top_score > 0 and top_score < MIN_RETRIEVAL_CONFIDENCE:
+                logger.warning(
+                    "[ContentGap] top_score=%.3f < MIN_RETRIEVAL_CONFIDENCE=%.2f — corpus có thể thiếu văn bản",
+                    top_score, MIN_RETRIEVAL_CONFIDENCE,
+                )
+                answer_text = (
+                    "Tôi không tìm thấy quy định pháp lý cụ thể nào trong cơ sở dữ liệu "
+                    "cho câu hỏi này. Có thể văn bản pháp luật liên quan chưa có trong hệ thống. "
+                    "Vui lòng tra cứu trực tiếp tại Cổng thông tin thuế điện tử "
+                    "hoặc liên hệ cơ quan thuế để được hỗ trợ chính xác."
+                )
+            else:
+                answer_text = (
+                    "Câu hỏi của bạn có thể nằm ngoài phạm vi các văn bản pháp luật hiện có "
+                    "trong hệ thống. Tôi không tìm thấy điều khoản cụ thể nào liên quan. "
+                    "Vui lòng tham khảo trực tiếp cơ quan thuế hoặc Cổng thông tin thuế điện tử."
+                )
         elif confidence["level"] == "no_citation":
             # P0 Citation Guardrail: tìm được kết quả nhưng câu trả lời thiếu
             # trích dẫn pháp lý VÀ quá ngắn → không đủ tin cậy để trả ra ngoài
@@ -1330,10 +1354,21 @@ _GROUNDING_TOOLS = {
     "calculate_deduction",
     "calculate_tncn_progressive",
     "evaluate_tax_obligation",
-    "get_article",
-    "get_article_with_amendments",
-    "get_table",
 }
+
+
+def _get_top_retrieval_score(tool_calls: list[dict]) -> float | None:
+    """Trả về final_score cao nhất từ tất cả search_legal_docs calls, hoặc None."""
+    best: float | None = None
+    for tc in tool_calls:
+        if tc.get("tool") != "search_legal_docs":
+            continue
+        result = tc.get("result") or {}
+        for hit in result.get("results", []):
+            score = hit.get("score") or hit.get("final_score") or hit.get("rrf_score")
+            if score is not None:
+                best = max(best, float(score)) if best is not None else float(score)
+    return best
 
 
 def _compute_confidence(answer: str, tool_calls: list[dict]) -> dict:
