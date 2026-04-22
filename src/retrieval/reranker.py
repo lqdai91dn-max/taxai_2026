@@ -168,6 +168,30 @@ def rerank_with_intent(
     return results
 
 
+def rerank_with_exception_penalty(
+    results: List[Dict[str, Any]],
+    query_intent,
+    query: str,
+) -> List[Dict[str, Any]]:
+    """
+    Full reranking pipeline:
+      1. NodeMetadata bonus pass (rerank_with_intent)
+      2. ExceptionRouter penalty pass (superseded doc penalty)
+
+    Dùng hàm này thay vì gọi trực tiếp rerank_with_intent.
+    """
+    results = rerank_with_intent(results, query_intent)
+
+    try:
+        from src.retrieval.exception_router import get_router
+        router = get_router()
+        results = router.apply_penalty(results, query)
+    except Exception as exc:
+        logger.warning("[Reranker] ExceptionRouter failed (non-fatal): %s", exc)
+
+    return results
+
+
 # ─── Helpers để đọc QueryIntent fields ────────────────────────────────────────
 
 def _get_fv_list(query_intent, field: str) -> List[str]:

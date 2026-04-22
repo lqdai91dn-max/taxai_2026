@@ -444,21 +444,24 @@ def _load_law_change_timestamps() -> tuple[tuple[float, str], ...]:
     result: list[tuple[float, str]] = []
 
     for info in data.get("documents", {}).values():
-        if info.get("status") not in ("active", "active_until_superseded"):
+        if info.get("status") not in ("active", "active_until_superseded", "superseded"):
             continue
-        eff_str = info.get("effective_from", "")
-        if not eff_str:
+        # S-007 fix: dùng status_changed_date (khi văn bản được thêm/thay đổi trong corpus)
+        # thay vì effective_from (ngày có hiệu lực pháp lý — có thể là ngày tương lai).
+        # Ví dụ: Luật 109 effective_from=2026-07-01 (tương lai) nhưng status_changed_date=2025-11-29 (đã có trong corpus).
+        changed_str = info.get("status_changed_date") or info.get("effective_from", "")
+        if not changed_str:
             continue
         try:
-            eff_date = date.fromisoformat(eff_str)
+            changed_date = date.fromisoformat(changed_str)
         except ValueError:
             continue
-        if eff_date < _RECENT_LAW_CUTOFF:   # bỏ qua luật cũ trước 2025
+        if changed_date < _RECENT_LAW_CUTOFF:   # bỏ qua thay đổi trước 2025
             continue
-        if eff_date > today:                 # bỏ qua luật chưa có hiệu lực
+        if changed_date > today:                 # bỏ qua ngày trong tương lai
             continue
-        ts = float(calendar.timegm(eff_date.timetuple()))
-        result.append((ts, eff_str))
+        ts = float(calendar.timegm(changed_date.timetuple()))
+        result.append((ts, changed_str))
 
     return tuple(sorted(result))
 

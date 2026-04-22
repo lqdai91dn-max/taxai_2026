@@ -1,119 +1,208 @@
 {
   "_comment": "Manifest hiệu lực văn bản pháp luật trong TaxAI database. Update khi thêm văn bản mới hoặc khi luật thay đổi.",
-  "_last_updated": "2026-04-19",
+  "_last_updated": "2026-04-20",
+  "_schema_version": 2,
   "documents": {
     "68_2026_NDCP": {
+      "doc_number": "68/2026/NĐ-CP",
       "name": "Nghị định 68/2026/NĐ-CP về thuế GTGT, TNCN đối với HKD và cá nhân KD",
       "effective_from": "2026-04-02",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2026-04-02",
+      "role": "primary",
       "supersedes": ["TT40_2021_TTBTC"],
       "note": "Văn bản chính về HKD từ 05/03/2026 (ký) / 02/04/2026 (hiệu lực thực tế một số điều)"
     },
     "18_2026_TTBTC": {
+      "doc_number": "18/2026/TT-BTC",
       "name": "Thông tư 18/2026/TT-BTC hướng dẫn khai thuế HKD",
       "effective_from": "2026-04-02",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2026-04-02",
+      "role": "guidance",
       "supersedes": [],
       "note": "Hướng dẫn mẫu biểu tờ khai HKD/CNKD"
     },
     "109_2025_QH15": {
+      "doc_number": "109/2025/QH15",
       "name": "Luật Thuế TNCN 109/2025/QH15",
       "effective_from": "2026-07-01",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2025-11-29",
+      "role": "primary",
       "supersedes": ["111_2013_TTBTC", "92_2015_TTBTC"],
       "note": "Luật TNCN chính, có hiệu lực từ 01/07/2026. Đây là luật primary cho mọi câu hỏi TNCN."
     },
     "108_2025_QH15": {
+      "doc_number": "108/2025/QH15",
       "name": "Luật Quản lý Thuế 108/2025/QH15",
       "effective_from": "2026-07-01",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2025-11-29",
+      "role": "primary",
       "supersedes": ["LQT_38_2019"],
       "note": "Luật Quản lý thuế chính, có hiệu lực từ 01/07/2026. Điều 13+26 về HKD/CNKD có hiệu lực từ 01/01/2026."
     },
     "110_2025_UBTVQH15": {
+      "doc_number": "110/2025/UBTVQH15",
       "name": "Nghị quyết 110/2025/UBTVQH15 về mức giảm trừ gia cảnh",
       "effective_from": "2026-01-01",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2025-11-26",
+      "role": "primary",
       "supersedes": ["NQ954_2020_UBTVQH14"],
       "note": "Mức mới: bản thân 15,5 triệu/tháng, người phụ thuộc 6,2 triệu/tháng. Hiệu lực từ 01/01/2026."
     },
     "111_2013_TTBTC": {
+      "doc_number": "111/2013/TT-BTC",
       "name": "Thông tư 111/2013/TT-BTC hướng dẫn Luật Thuế TNCN",
       "effective_from": "2013-10-01",
       "effective_to": "2026-06-30",
       "status": "superseded",
+      "status_changed_date": "2025-11-29",
+      "role": "superseded",
       "superseded_by": "109_2025_QH15",
-      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026. Chỉ tham khảo cho câu hỏi hồi tố hoặc implementation detail chưa có trong 109."
+      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026. Chỉ tham khảo cho câu hỏi hồi tố hoặc implementation detail chưa có trong 109.",
+      "exception_use": {
+        "allowed": true,
+        "reason": "Thông tư 111 quy định chi tiết các khoản thu nhập miễn thuế (phụ cấp, trợ cấp) mà Luật 109 chưa có hướng dẫn thực thi chi tiết đến 01/07/2026.",
+        "expires_condition": "Khi Bộ Tài chính ban hành Thông tư hướng dẫn Luật 109 thay thế hoàn toàn",
+        "semantic_intent_description": "Câu hỏi về giới hạn miễn thuế TNCN cho các khoản phụ cấp bữa ăn, tiền ăn giữa ca, phụ cấp điện thoại, trang phục, phụ cấp làm ca, phụ cấp độc hại, khoản trợ cấp thôi việc, trợ cấp mất việc, mức miễn thuế cụ thể cho từng loại thu nhập không chịu thuế hoặc miễn thuế theo danh mục chi tiết.",
+        "test_should_match": [
+          "tiền ăn giữa ca bao nhiêu thì không phải đóng thuế TNCN",
+          "phụ cấp bữa ăn tối đa bao nhiêu được miễn thuế",
+          "phụ cấp điện thoại miễn thuế TNCN tối đa bao nhiêu",
+          "trợ cấp thôi việc được miễn thuế không",
+          "khoản phụ cấp độc hại có chịu thuế TNCN không",
+          "trang phục bằng tiền mặt miễn thuế mức nào",
+          "tiền ăn trưa của nhân viên có thuế TNCN không",
+          "phụ cấp xăng xe thuế TNCN như thế nào"
+        ],
+        "test_should_not_match": [
+          "đăng ký hộ kinh doanh như thế nào",
+          "thuế TMĐT tính thế nào",
+          "quyết toán TNCN năm 2026 nộp khi nào",
+          "mức giảm trừ gia cảnh năm 2026 là bao nhiêu",
+          "thuế suất cổ tức bao nhiêu phần trăm",
+          "mẫu tờ khai HKD 2026",
+          "xử phạt chậm nộp thuế bao nhiêu"
+        ]
+      }
     },
     "92_2015_TTBTC": {
+      "doc_number": "92/2015/TT-BTC",
       "name": "Thông tư 92/2015/TT-BTC sửa đổi hướng dẫn TNCN",
       "effective_from": "2015-07-30",
       "effective_to": "2026-06-30",
       "status": "superseded",
+      "status_changed_date": "2025-11-29",
+      "role": "superseded",
       "superseded_by": "109_2025_QH15",
-      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026."
+      "note": "Đã bị thay thế bởi Luật 109/2025/QH15 từ 01/07/2026.",
+      "exception_use": {
+        "allowed": true,
+        "reason": "Thông tư 92 quy định quy tắc miễn giảm thuế cho HKD tạm ngừng kinh doanh (do bệnh, hỏa hoạn, thiên tai) theo chế độ thuế khoán — quy định này chưa được thay thế hoàn toàn bởi NĐ68/2026.",
+        "expires_condition": "Khi toàn bộ HKD chuyển sang chế độ kê khai theo NĐ68/2026 hoặc có văn bản thay thế rõ ràng",
+        "semantic_intent_description": "Câu hỏi về việc hộ kinh doanh tạm ngừng hoạt động do chủ hộ bị ốm, bệnh viện, hỏa hoạn, thiên tai hoặc đóng cửa tạm thời và muốn xin miễn giảm thuế khoán cho thời gian tạm ngừng đó.",
+        "test_should_match": [
+          "chủ hộ kinh doanh bị ốm nằm viện có được miễn thuế khoán không",
+          "cửa hàng đóng cửa 1 tháng vì bệnh có phải nộp thuế không",
+          "HKD tạm ngừng kinh doanh do hỏa hoạn có được giảm thuế",
+          "chủ hộ vào bệnh viện mấy tháng thì được miễn thuế khoán mấy tháng",
+          "tạm ngừng kinh doanh do thiên tai lũ lụt được miễn thuế không",
+          "hộ khoán đóng cửa nghỉ hè có được không nộp thuế tháng đó"
+        ],
+        "test_should_not_match": [
+          "đăng ký hộ kinh doanh cần giấy tờ gì",
+          "thuế TNCN tiền lương tháng 12 tính thế nào",
+          "mức giảm trừ gia cảnh năm 2026",
+          "kê khai thuế HKD theo tháng hay quý",
+          "phụ cấp ăn trưa miễn thuế tối đa bao nhiêu",
+          "xử phạt chậm nộp thuế 2026"
+        ]
+      }
     },
     "LQT_38_2019": {
+      "doc_number": "38/2019/QH14",
       "name": "Luật Quản lý Thuế 38/2019/QH14",
       "effective_from": "2020-07-01",
       "effective_to": "2026-06-30",
       "status": "superseded",
+      "status_changed_date": "2025-11-29",
+      "role": "superseded",
       "superseded_by": "108_2025_QH15",
       "note": "Đã bị thay thế bởi Luật 108/2025/QH15 từ 01/07/2026."
     },
     "117_2025_NDCP": {
+      "doc_number": "117/2025/NĐ-CP",
       "name": "Nghị định 117/2025/NĐ-CP về quản lý thuế TMĐT",
       "effective_from": "2025-07-01",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2025-07-01",
+      "role": "primary",
       "supersedes": [],
       "note": "Quy định quản lý thuế với hoạt động TMĐT, nền tảng số"
     },
     "126_2020_NDCP": {
+      "doc_number": "126/2020/NĐ-CP",
       "name": "Nghị định 126/2020/NĐ-CP hướng dẫn Luật Quản lý Thuế",
       "effective_from": "2020-12-05",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2020-12-05",
+      "role": "guidance",
       "supersedes": [],
       "note": "Thủ tục khai thuế, quyết toán TNCN, ngoại lệ, điều kiện miễn khai"
     },
     "125_2020_NDCP": {
+      "doc_number": "125/2020/NĐ-CP",
       "name": "Nghị định 125/2020/NĐ-CP về xử phạt vi phạm thuế",
       "effective_from": "2020-12-05",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2020-12-05",
+      "role": "primary",
       "supersedes": [],
       "note": "Mức phạt, điều kiện không bị phạt, tiền chậm nộp"
     },
     "152_2025_TTBTC": {
+      "doc_number": "152/2025/TT-BTC",
       "name": "Thông tư 152/2025/TT-BTC về chế độ kế toán HKD",
       "effective_from": "2026-01-01",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2026-01-01",
+      "role": "guidance",
       "supersedes": [],
       "note": "Sổ sách kế toán HKD, mẫu sổ S1a/S2a/S3a-HKD"
     },
     "20_2026_NDCP": {
+      "doc_number": "20/2026/NĐ-CP",
       "name": "Nghị định 20/2026/NĐ-CP về chuyển đổi số HKD",
       "effective_from": "2026-04-02",
       "effective_to": null,
       "status": "active",
+      "status_changed_date": "2026-04-02",
+      "role": "guidance",
       "supersedes": [],
       "note": "Cung cấp miễn phí phần mềm kế toán, nền tảng số cho HKD"
     }
   },
   "not_in_database": {
     "139_2016_NDCP": {
+      "doc_number": "139/2016/NĐ-CP",
       "name": "Nghị định 139/2016/NĐ-CP về lệ phí môn bài",
       "note": "KHÔNG có trong database. Không cite số tiền cụ thể từ văn bản này.",
       "amended_by": "22_2020_NDCP"
     },
     "TT40_2021_TTBTC": {
+      "doc_number": "40/2021/TT-BTC",
       "name": "Thông tư 40/2021/TT-BTC về thuế HKD (cũ)",
       "note": "ĐÃ BỊ THAY THẾ bởi NĐ68/2026 từ 02/04/2026. Không dùng làm căn cứ.",
       "superseded_by": "68_2026_NDCP"

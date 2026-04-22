@@ -63,6 +63,7 @@ def check_doc_validity(doc_id: str) -> dict:
 
         return {
             "found":             True,
+            "doc_id":            doc_id,
             "status":            status,
             "is_currently_valid": is_valid,
             "effective_from":    eff_from_str,
@@ -78,6 +79,7 @@ def check_doc_validity(doc_id: str) -> dict:
         info = not_in_db[doc_id]
         return {
             "found":             False,
+            "doc_id":            doc_id,
             "status":            "not_in_database",
             "is_currently_valid": False,
             "effective_from":    None,
@@ -94,6 +96,7 @@ def check_doc_validity(doc_id: str) -> dict:
 def _unknown(doc_id: str, note: str) -> dict:
     return {
         "found":             False,
+        "doc_id":            doc_id,
         "status":            "unknown",
         "is_currently_valid": False,
         "effective_from":    None,

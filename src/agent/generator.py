@@ -1,4 +1,8 @@
 """
+LEGACY: src/agent/generator.py — Stage 3: Generator (không dùng trong production)
+Production pipeline: src/agent/planner.py (TaxAIAgent với Gemini function calling).
+Giữ lại vì test_pipeline_smoke.py import _build_context từ đây.
+
 src/agent/generator.py — Stage 3: Generator
 
 Nhận PipelineState với retrieval chunks + calc result đã sẵn sàng,
