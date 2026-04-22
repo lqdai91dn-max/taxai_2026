@@ -185,7 +185,8 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP"
+      "68_2026_NDCP",
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Tỷ lệ thuế cho thuê tài sản"
@@ -214,7 +215,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Thuế suất phân phối, cung cấp hàng hóa"
@@ -224,8 +225,8 @@
       "get_article"
     ],
     "key_facts": [
-      "lợi nhuận",
-      "3 tỷ"
+      "20%",
+      "50 tỷ"
     ],
     "expected_value": {
       "text": "0.5% TNCN",
@@ -366,7 +367,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "111_2013_TTBTC"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Điều kiện xác định người phụ thuộc"
@@ -578,7 +579,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Quyết toán và hoàn thuế TNCN"
@@ -1028,8 +1029,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "68_2026_NDCP"
     ],
     "expected_articles": [
       "Xử lý khai sai kỳ"
@@ -1240,7 +1240,7 @@
     "needs_law_retrieval": true,
     "expected_docs": [
       "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "108_2025_QH15"
     ],
     "expected_articles": [
       "Quyền ủy quyền thủ tục thuế"
@@ -1269,8 +1269,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "109_2025_QH15",
-      "198_2025_QH15"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Ưu đãi thuế TNCN chuyên gia"
@@ -1280,8 +1279,9 @@
       "get_article"
     ],
     "key_facts": [
-      "50%",
-      "50"
+      "miễn",
+      "chuyên gia",
+      "khởi nghiệp sáng tạo"
     ],
     "expected_value": {
       "text": "Được giảm 50% hoặc miễn",
@@ -1403,8 +1403,7 @@
       "get_article_with_amendments"
     ],
     "key_facts": [
-      "Tự khai chuyển đổi",
-      "01/BK-HTK"
+      "tự kê khai"
     ],
     "expected_value": {
       "text": "Tự khai chuyển đổi Mẫu 01/BK-HTK",
@@ -2477,7 +2476,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
+      "125_2020_NDCP",
       "310_2025_NDCP"
     ],
     "expected_articles": [
@@ -2659,8 +2658,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "68_2026_NDCP",
-      "18_2026_TTBTC"
+      "108_2025_QH15"
     ],
     "expected_articles": [
       "Cấn trừ thuế nộp thừa"
@@ -2794,7 +2792,7 @@
       "get_guidance"
     ],
     "key_facts": [
-      "Luật có lợi hơn"
+      "thời điểm thực hiện hành vi vi phạm"
     ],
     "expected_value": {
       "text": "Luật có lợi hơn (Luật mới)",
@@ -5685,7 +5683,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "111_2013_TTBTC"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Điều 9 khoản 1 điểm c.1 TT111/2013"
@@ -5708,7 +5706,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "111_2013_TTBTC"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Điều 25 TT111/2013"
@@ -5825,7 +5823,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "126_2020_NDCP"
+      "108_2025_QH15"
     ],
     "expected_articles": [
       "Điều 141 Luật quản lý thuế 38/2019"
@@ -6082,7 +6080,7 @@
     "needs_calculation": false,
     "needs_law_retrieval": true,
     "expected_docs": [
-      "111_2013_TTBTC"
+      "109_2025_QH15"
     ],
     "expected_articles": [
       "Điều 9 khoản 1 điểm c.2.4 TT111/2013"

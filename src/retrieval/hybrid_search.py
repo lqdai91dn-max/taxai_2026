@@ -114,7 +114,25 @@ _TOPIC_RULES: List[Dict] = [
             "hồ sơ quyết toán",
             "tự quyết toán",
         ],
-        "docs": ["126_2020_NDCP"],
+        # Q207: 108_2025_QH15 (current QL Thuế) có hoàn thuế/nộp thừa sections
+        # 126_2020_NDCP giữ lại vì vẫn là guidance cho nhiều quyết toán thủ tục
+        "docs": ["126_2020_NDCP", "108_2025_QH15"],
+        "top_k": 3,
+    },
+    {
+        # Q83: "không lập hóa đơn khi bán hàng" 10M-20M ở 125 khoản 5 (không bị 310 amend)
+        # 310 là amendment decree → được retrieve tự nhiên, nhưng 125 cần inject thêm
+        "name": "xu_phat_hoa_don_125",
+        "keywords": [
+            "mức phạt hóa đơn",
+            "phạt không xuất hóa đơn",
+            "phạt không lập hóa đơn",
+            "xử phạt hóa đơn",
+            "vi phạm hóa đơn",
+            "không xuất hóa đơn bị phạt",
+            "cố tình không xuất hóa đơn",
+        ],
+        "docs": ["125_2020_NDCP"],
         "top_k": 3,
     },
     {
@@ -125,6 +143,19 @@ _TOPIC_RULES: List[Dict] = [
             "mẫu s2b",
             "s2b-hkd",
             "mẫu kê khai hộ kinh doanh",
+            # Q64: tài khoản ngân hàng HKD → 18 có mẫu 01/BK-STK
+            "tài khoản ngân hàng",
+            "thông báo số tài khoản",
+            "01/bk-stk",
+            "bk-stk",
+            "tài khoản cá nhân chủ hộ",
+            # Q35: sai kỳ khai (quý vs tháng) → 18 có form sửa kỳ
+            "khai theo tháng",
+            "khai theo quý",
+            "sai kỳ khai",
+            # Q42: ủy quyền đại lý thuế làm thủ tục → 18 có mục "Thông tin đại lý thuế"
+            "đại lý thuế",
+            "ủy quyền thủ tục thuế",
         ],
         "docs": ["18_2026_TTBTC"],
         "top_k": 3,
@@ -199,6 +230,50 @@ _TOPIC_RULES: List[Dict] = [
             "xe công nghệ",
         ],
         "docs": ["68_2026_NDCP"],
+        "top_k": 3,
+    },
+    {
+        # Q30: sàn TMĐT trừ lố → cần 117 (platform withholding rules) + 68 (refund)
+        # 117_2025_NDCP bị outcompete bởi 68 khi "trừ lố" trigger, cần inject thêm
+        "name": "tmdt_hoan_thue_117",
+        "keywords": [
+            "trừ lố",
+            "trừ thừa tiền thuế",
+            "hoàn thuế sàn tmđt",
+            "hoàn thuế thương mại điện tử",
+            "sàn tmđt hoàn",
+            "hoàn lại tiền thuế sàn",
+        ],
+        "docs": ["117_2025_NDCP"],
+        "top_k": 3,
+    },
+    {
+        # Q41: vũ trường/karaoke → tiêu thụ đặc biệt (373 có Mẫu 01/TTĐB) + 68 (HKD)
+        # Query không có "hộ kinh doanh" nên HKD gate không trigger → cần topic rule
+        "name": "ttdb_hkd_373",
+        "keywords": [
+            "tiêu thụ đặc biệt",
+            "thuế ttđb",
+            "vũ trường",
+            "karaoke",
+            "01/ttđb",
+            "mẫu ttđb",
+        ],
+        "docs": ["68_2026_NDCP", "373_2025_NDCP"],
+        "top_k": 3,
+    },
+    {
+        # Q43: chuyên gia AI trong DNKN sáng tạo → 198_2025_QH15 có miễn/giảm TNDN 50%
+        "name": "khoi_nghiep_sang_tao_198",
+        "keywords": [
+            "khởi nghiệp sáng tạo",
+            "doanh nghiệp đổi mới sáng tạo",
+            "startup sáng tạo",
+            "đổi mới sáng tạo",
+            "198/2025",
+            "luật 198",
+        ],
+        "docs": ["198_2025_QH15"],
         "top_k": 3,
     },
 ]
@@ -424,9 +499,9 @@ class HybridSearch:
         # 3.5. NodeMetadata Reranker (P5.3) — sau RRF, trước expansions
         # Dùng QueryIntent × NodeMetadata bonus để reorder trước khi expand
         if query_intent is not None:
-            from src.retrieval.reranker import rerank_with_intent
-            results = rerank_with_intent(results, query_intent)
-            logger.debug("[P5.3] NodeMetadata reranker applied")
+            from src.retrieval.reranker import rerank_with_exception_penalty
+            results = rerank_with_exception_penalty(results, query_intent, query)
+            logger.debug("[P5.3] NodeMetadata reranker + exception penalty applied")
 
         # 4. Scope boost/penalty (C1) — after RRF, before A2 expand
         # sc đã được classify ở bước 2.4 — reuse để tránh tính lại.
